@@ -19,9 +19,23 @@ Below are simple steps to use this portal:
 
 {% embed url="https://www.youtube.com/playlist?list=PLJH-POb_55z8YYS_qAk_QNBQeiQ2VrtZD" %}
 
+## Compliance Toolkit Landing Page
+
+On the CTK landing page, partners can view the introduction of the CTK portal and watch a video about CTK. Additionally, they can login or register by clicking the respective buttons. The landing page also provides links to other resources such as the GitHub repository, documentation, and partner details.
+
+![CTK Landing Page1](\_images/ctk-landing-page1.png)
+
+Additionally, it showcases several robust features of CTK, including its pre-defined test cases, validation mechanisms, and comprehensive reporting.
+
+![CTK Landing Page2](\_images/ctk-landing-page2.png)
+
+The landing page offers details about the SBI, Android SBI, SDK, and ABIS specifications. Furthermore, partners have the option to download the compliance toolkit APK by choosing the download button.
+
+![CTK Landing Page3](\_images/ctk-landing-page3.png)
+
 ## Login
 
-The partners using the compliance tool kit should be registered in the system. Registered partners can log in to the compliance tool kit with the same credentials as they used to register themselves into the [Partner Management Portal](https://docs.mosip.io/1.2.0/modules/partner-management-services/partner-management-portal).
+Partners utilizing the compliance toolkit must be registered in the system. Once registered, partners can log in to the compliance toolkit using the same credentials they used for registration in the [Partner Management Portal](https://docs.mosip.io/1.2.0/modules/partner-management-services/partner-management-portal).
 
 The partner needs to enter the registered username or e-mail and password to log in.
 
@@ -31,11 +45,22 @@ The partner can select the language of their preference from the dropdown in the
 * French
 * Arabic
 
+_Note_: After registering, partners need to login the partner management portal to retrieve partner details.
+
+
 ![CTK login page](\_images/ctk-toolkit-login.png)
+
+## Terms and Conditions Consent
+
+After logging in, partners will encounter a Terms & Conditions popup window. Partner must accept these terms; otherwise, they will be logged out.
+
+Also, upon logging in, partners will be prompted with a popup if there have been any changes to the Terms & Conditions since their last consent.
+
+ ![CTK consent window](\_images/ctk-consent-popup.png)
 
 ## Dashboards
 
-Once the partner logs into the compliance tool kit, they can view the `Project Dashboard` by default and would have the option to view the `Biometric Data Dashboard` and `My Reports Dashboard` as well.
+After accepting the Terms & Conditions, partners gain access to the `Project Dashboard` by default. Additionally, they have the option to explore the `Biometric Data Dashboard` and `My Reports Dashboard`.
 
 * `Project`: A project is a module that the partner wants to test. For example, if a device partner has developed a new version of their SBI for the fingerprint slap device, then, they can create a project in the compliance tool kit to verify this version of SBI.
 
@@ -213,6 +238,8 @@ Filter in the dashboard should be able to perform filter based on the name of th
   * Test Data: The test data is to be uploaded as a ZIP
 * When the project type ABIS is selected, the partner needs to provide the below details:
   * Test Data: The test data is to be uploaded as a ZIP
+  
+  _Note_: ABIS partner can only upload an ABIS biometric test data.
 
 The Test Data section has two options `Browse` and `Download Sample File`.
 
@@ -489,6 +516,38 @@ The partner can only generate a Draft Report after running `Compliance Collectio
 
 ![](\_images/ctk-report-submitted.png)
 
+### Generate Quality Assessment Draft Report for Quality Assessment Collection
+
+The partner can only generate a QA Draft Report after running `Quality Assessment Collection`.
+
+* By default, `Quality Assessment Collection` will be added when the SBI project was created.
+
+![](\_images/ctk-qa-collection-created.png)
+
+* Click the `Run` button of the Quality Assessment Collection.
+
+![](\_images/ctk-qa-collection-run.png)
+
+* After completing the test execution, the partner will be able to view the below mentioned results
+  * A high-level result with the number of test cases executed- with the number of test cases failed and the number of test cases passed in the run.
+  * They also have the option to view the detailed `Test Run` report.
+
+![](\_images/ctk-qa-collection-testrun.png)
+
+* Partner can create a Quality Assessment Draft Report by clicking the `Generate Draft Report` button.
+* Once the report is downloaded, the partner can view:
+  * The downloaded QA draft report, which uses the project name as its filename.
+  * A popup will appear to submit the report for review.
+
+![](\_images/ctk-download-qa-report.png)
+
+* After downloading the report, partners can review the QA Draft Report. This report includes their details, project specifics, test cases, and a comprehensive summary of the test run results, including the number of test cases executed, passed, and failed.
+* This report also includes the biometric scores classification for each **SDK** and **SBI**.
+* After reviewing the downloaded report, the partner can submit it for review by checking the checkbox in the popup window. Following that, they can click the `Send For Review` button to finalize the submission.
+* Once the report has been submitted, the ability to re-execute the `Quality Assessment Collection` for the project is no longer available. Partners can retrieve the submitted report by clicking on the download icon.
+
+![](\_images/ctk-qa-report-submitted.png)
+
 ## Partner Reports Dashboard
 
 When users with the special CTK Admin role access the application, they are granted access to the Partner Reports Dashboard. This dashboard serves as a centralized hub, offering a comprehensive overview of partner reports.
@@ -574,3 +633,11 @@ After reviewing the downloaded report and verifying its content, the admin can c
 * After selecting the checkbox, the admin will be presented with a comment box to add mandatory comments, specifying the reason for rejection. After providing the required comments, the admin can proceed by clicking the `Reject` button to officially reject the report.
 
 ![CTK Partner Report Dashboard](\_images/ctk-partnerReports-reject.png)
+
+### Test Runs Archival Batch Job
+
+Compliance Toolkit has a batch job process that archives X number of test runs for each collection.
+
+Consider this scenario: If there are 15 test runs, with an offset of 10, the most recent 10 will be retained, while the remaining 5 will be moved to an archival table. In the test-run-history, only the last 10 test run records are visible to partners.
+
+![](\_images/ctk-archivaljob.png)

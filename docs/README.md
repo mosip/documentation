@@ -30,12 +30,6 @@ The diagram below illustrates the architecture of Compliance Tool Kit.
 * When a new project is created, two new collections will be automatically added to the project.&#x20;
 * The first collection is the **Compliance Collection**, which is applicable for all project types. The second collection is the **Quality Assessment Collection**, specifically for SBI projects.
 
-### Quality Assessment Process (only for SBI)
-
-* The Quality Assessment Collection can be run to collect biometric scores for various groups of individuals (age wise, gender wise, occupation wise etc.).
-* The biometric scores will be given using BQAT SDK.
-* The scores will be used to perform quality assessment of the SBI partner.
-
 ### Compliance Collection Reporting Process (for all project types)
 
 * Partners can run the Compliance Collection and they can generate `Draft Report` for the same.
@@ -49,6 +43,18 @@ Summarizing as below:
 * `CTK Admin > View Draft Report / View Test Run > Approve / Reject Report`
 
 <figure><img src=".gitbook/assets/report_review_process.jpg" alt=""><figcaption></figcaption></figure>
+
+### Quality Assessment Collection Reporting Process (only for SBI)
+
+* The Quality Assessment Collection reporting procedure is very similar to the Compliance Collection process.
+* Using this collection,  partner can collect biometric scores for various groups of individuals (age wise, gender wise, occupation wise etc.).
+* BQAT SDK provides biometric score.
+* This biometric score serves as the basis for evaluating the quality of the SBI partner..
+
+Summarizing as below:
+
+* `Partner > Add Project > Quality Assessment Collection > Run Collection (Test Run) > View Test Run > Download Quality Assessment Draft Report > Submit for Review`
+* `CTK Admin > View Quality Assessment Draft Report / View Test Run > Approve / Reject Report`
 
 ### Compliance Tool Kit Portal
 
