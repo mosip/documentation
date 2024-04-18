@@ -61,7 +61,7 @@ The `Android CTK app v1.3.0` with `MOSIP Android Mock SBI` has been tested for c
 
 #### For Android Registration Devices using MOSIP's Android mock SBI
 
-The `Android CTK app v1.2.0` with `MOSIP Android Mock SBI` has been tested for compliance with the specifications across 64 test cases. Test cases specific to quality and user interactions have been tested with MOSIP Android mock SBI and real registration face SBI.
+The `Android CTK app v1.3.0` with `MOSIP Android Mock SBI` has been tested for compliance with the specifications across 64 test cases. Test cases specific to quality and user interactions have been tested with MOSIP Android mock SBI and real registration face SBI.
 
 | **Scenarios**     | **Finger** | **Iris** | **Face** |
 | ----------------- | ---------- | -------- | -------- |
