@@ -69,7 +69,7 @@ The 1.4.0 version of CTK includes the following new features:
 * ClamAV: clamav/clamav: latest
 * MinIO
 
-Post installation, follow the setup steps available [here](../../setup-steps-1.4.0.md).
+Post installation, follow the setup steps available [here](https://docs.mosip.io/compliance-tool-kit/how-to-guides/how-to-set-up-ctk/setup-steps-1.4.0).
 
 ### Documentation
 
