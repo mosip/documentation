@@ -57,7 +57,7 @@ The 1.4.0 version of CTK includes the following new features:
 
 ### Dependency
 
-* **Artifactory: mosipid/artifactory-ref-impl: 1.2.0.1**
+* Artifactory: mosipid/artifactory-ref-impl: 1.2.0.1
 * Audit manager: mosipid/kernel-auditmanager-service: 1.2.0.1-B1
 * Auth Manager: mosipid/kernel-authmanager: 1.2.0.1-B1
 * Key Manager: modipid/kernel-keymanager-service: 1.2.0.1-B1
