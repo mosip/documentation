@@ -1,6 +1,6 @@
 # 🈴 Upgrade Runbook
 
-MOSIP has recently announced the release of its latest version, [1.2.0.1-B4](release/1.2.0.1/release-notes-1.2.0.1-b4.md). This new release brings about an architectural upgrade and addresses multiple bugs. To assist users in migrating from the MOSIP version 1.1.5.x to the latest version 1.2.0.1, a detailed Runbook has been provided, offering comprehensive guidance.
+MOSIP has recently announced the release of its latest version, [1.2.0.1](https://docs.mosip.io/1.2.0/releases/release-notes-1.2.0.1). This new release brings about an architectural upgrade and addresses multiple bugs. To assist users in migrating from the MOSIP version 1.1.5.x to the latest version 1.2.0.1, a detailed Runbook has been provided, offering comprehensive guidance.
 
 To set up the new environment and deploy the upgraded version of MOSIP, carefully follow the procedures outlined below step-by-step.
 
