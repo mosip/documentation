@@ -76,5 +76,5 @@ Post installation, follow the setup steps available [here](https://docs.mosip.io
 * [Feature Documentation](../../)
 * [Compliance Tool Kit User Guide](../../user-guide.md)
 * [Android CTK App user Guide](../../android-user-guide.md)
-* [QA Report](../../test-report-1.4.0.md)
+* [QA Report](https://docs.mosip.io/compliance-tool-kit/versions/version-1.4.0/test-report)
 * [Videos](https://www.youtube.com/playlist?list=PLJH-POb\_55z8YYS\_qAk\_QNBQeiQ2VrtZD)
