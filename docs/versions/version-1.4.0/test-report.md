@@ -127,9 +127,9 @@ mosipqa/postgres-init:develop
 
 mosipid/config-server:1.1.2
 
-mosipid/kernel-auditmanager-service:1.2.0.1-B1 
+mosipid/kernel-auditmanager-service:1.2.0.1-B1
 
-mosipid/kernel-auth-service:1.2.0.1-B2 
+mosipid/kernel-auth-service:1.2.0.1-B2
 
 mosipqa/authentication-internal-service:release-1.2.0.1
 
@@ -139,20 +139,20 @@ mosipqa/authentication-service:release-1.2.0.1
 
 mosipid/kernel-keymanager-service:1.2.0.1-B2
 
-mosipqa/keycloak-init:develop 
+mosipqa/keycloak-init:develop
 
 mosipid/partner-management-service:1.2.0.1-B3
 
-mosipqa/partner-onboarder:develop 
+mosipqa/partner-onboarder:develop
 
 mosipid/kernel-notification-service:1.2.0.1-B1
-
 
 ### Sonar Report
 
 #### MOSIP - Compliance-toolkit-service
 
+<figure><img src="../../.gitbook/assets/1.png" alt=""><figcaption></figcaption></figure>
 
 #### MOSIP - compliance-toolkit-ui
 
-
+<figure><img src="../../.gitbook/assets/2.png" alt=""><figcaption></figcaption></figure>
