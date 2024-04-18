@@ -6,7 +6,9 @@
 
 **Release Date**: 19th March, 2024
 
-The **1.2.0.1** release incorporates all features previously released in beta, along with several significant fixes requested by the countries. This release prioritizes enhancements in testability, usability, and security.
+The **1.2.0.1** release incorporates all features previously released in beta, including upgrade of platform to V3 architecture along with several significant fixes requested by the countries. It prioritizes enhancements in testability, usability, and security.
+
+To know more about upgrade, please refer [here](https://docs.mosip.io/1.2.0/upgrade-runbook).
 
 Also included in this release are Domain Specific Language (DSL) automation scripts, which facilitate platform testing. Additionally, several security-related issues have been addressed. Click [here](https://docs.mosip.io/1.2.0/test-automation) for more information on test automation.
 
