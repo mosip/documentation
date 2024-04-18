@@ -23,10 +23,10 @@ The admin module provides the following functions:
 ## Activate/deactivate/decommission resources
 
 ### What is deactivation of a resource?
-Deactivation refers to a temporary shutdown. This means that the resource will not be available for use unless and until it is activated later through the admin portal as required by the country.
+Deactivation refers to a reversible action in which the isActive value for a resouce is database is set to "False". This means that the resource will not be available for use unless and until it is activated later through the admin portal as required by the country.
 
 ### What is decommissioning a resource?
-* Decommission refers to a permanent shut down of the resource. This also automatically deactivates it. 
+* Decommission refers to a permanent/irreversible action of the resource. This also automatically deactivates it and the isDeleted value for the resource is set to "True".
 * The primary difference being that a decommissioned resource cannot be bought into commission again as decommission refers to a permanent shutdown.
 * Also, in cases where a center has some resources mapped to it (e.g. machines, devices or users), the portal will not allow the admin to decommission such a center.
 
