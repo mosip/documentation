@@ -43,8 +43,6 @@ To know more about the feature, refer here.
 
 ## Documentation
 
-* [Feature documentation](https://docs.mosip.io/inji/inji-mobile-wallet/overview/features)
-* [Integration Guides](https://docs.mosip.io/inji/inji-mobile-wallet/integration-guide)
-* [User guide](https://docs.mosip.io/inji/inji-mobile-wallet/end-user-guide)
-* [QA Report]()
-* [API Documentation](https://github.com/mosip/mimoto/tree/release-0.10.0/docs/postman-collections)
+* User guide
+* QA Report
+* API Documentation
