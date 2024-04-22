@@ -1,2 +1,0 @@
-# Mimoto (APIs used)
-
