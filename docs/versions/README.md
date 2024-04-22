@@ -4,13 +4,13 @@
 
 * Name: eSignet (Password based authentication)
 * Date: 23rd February, 2024
-* [Release Notes](v1.3.0/)
+* [Release Notes](https://docs.esignet.io/versions/v1.3.0)
 
 ## Version: 1.2.0
 
 * Name: eSignet (VCI)
 * Date: 11th December, 2023
-* [Release Notes](v1.2.0/)
+* [Release Notes](https://docs.esignet.io/versions/v1.2.0)
 
 ## Version: 1.1.0
 
