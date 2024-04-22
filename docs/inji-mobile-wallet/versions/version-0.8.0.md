@@ -24,7 +24,7 @@ Please find below the details for the **Inji Version 0.8.0** release:
 
 Inji web seamlessly connects with Mimoto and eSignet to fetch the credentials from the issuer and download the VCs in PDF format.
 
-To know more about the feature refer here.
+To know more about the feature, refer here.
 
 ## Repository Released
 
