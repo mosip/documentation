@@ -56,4 +56,6 @@
 
 ## Group 1
 
-* [INJI WEB](group-1/inji-web.md)
+* [INJI WEB](group-1/inji-web/README.md)
+  * [Releases](group-1/inji-web/releases/README.md)
+    * [Page 1](group-1/inji-web/releases/page-1.md)
