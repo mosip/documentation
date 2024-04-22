@@ -56,5 +56,4 @@
 ## INJI WEB
 
 * [Releases](inji-web/inji-web/README.md)
-  * [Releases](inji-web/inji-web/releases/README.md)
-    * [Version 0.8.0](inji-web/inji-web/releases/version-0.8.0.md)
+  * [Version 0.8.0](inji-web/inji-web/version-0.8.0.md)
