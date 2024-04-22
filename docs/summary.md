@@ -53,3 +53,7 @@
 * [Supported Integrations](supported-integrations/README.md)
   * [MOSIP](https://docs.mosip.io)
 * [License](license.md)
+
+## Group 1
+
+* [INJI WEB](group-1/inji-web.md)
