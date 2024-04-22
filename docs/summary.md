@@ -53,8 +53,8 @@
   * [MOSIP](https://docs.mosip.io)
 * [License](license.md)
 
-## Group 1
+## INJI WEB
 
-* [INJI WEB](group-1/inji-web/README.md)
-  * [Releases](group-1/inji-web/releases/README.md)
-    * [Version 0.8.0](group-1/inji-web/releases/version-0.8.0.md)
+* [Releases](inji-web/inji-web/README.md)
+  * [Releases](inji-web/inji-web/releases/README.md)
+    * [Version 0.8.0](inji-web/inji-web/releases/version-0.8.0.md)
