@@ -28,18 +28,13 @@ To know more about the feature, refer here.
 
 ## Repository Released
 
-| **Repositories** | **Tags Released**                                                       |
-| ---------------- | ----------------------------------------------------------------------- |
-| Inji             |                                                                         |
-| mimoto           |                                                                         |
-| tuvali           |                                                                         |
-| mosip-config     |                                                                         |
-| Secure-Keystore  |                                                                         |
-| mosip-onboarder  |                                                                         |
-
+| **Repositories** | **Tags Released** |
+| ---------------- | ----------------- |
+| Inji Web         |                   |
+| mimoto           |                   |
+| mosip-config     |                   |
 
 ## Known Issues
-
 
 ## Documentation
 
