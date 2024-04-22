@@ -147,6 +147,12 @@ mosipqa/partner-onboarder:develop
 
 mosipid/kernel-notification-service:1.2.0.1-B1
 
+### Known Issues
+
+**ABIS Partner Can Create SBI and SDK Projects**
+
+* Currently, ABIS partners can successfully create SBI and SDK projects in CTK 1.4.0, although role-based constraints to restrict this functionality is planned for future release.
+
 ### Sonar Report
 
 #### MOSIP - Compliance-toolkit-service
