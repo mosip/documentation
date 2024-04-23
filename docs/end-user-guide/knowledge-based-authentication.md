@@ -27,4 +27,4 @@ The below mentioned scenario describes a user attempting to download a VC (Verif
 
 <figure><img src="../.gitbook/assets/eSignet_KBA1.drawio.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/eSignet_KAB_2.drawio.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/eSignet_KBA_3.drawio.png" alt=""><figcaption></figcaption></figure>
