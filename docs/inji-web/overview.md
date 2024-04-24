@@ -33,7 +33,7 @@ Inji Web interacts with:
 
 To learn more about the **Features** provided by Inji Web, click [here](https://docs.mosip.io/inji/inji-web/functional-overview/features) 
 
-For information on the **Roadmap** for Inji Web, click here
+For information on the **Roadmap** for Inji Web, click [here](../../docs/roadmap-2024.md)
 
 
 
