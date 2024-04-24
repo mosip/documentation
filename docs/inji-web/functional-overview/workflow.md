@@ -19,21 +19,21 @@ _**Reference Implementation**: Download of Insurance VC using **Sunbird Credenti
 
 1. **User accesses Inji Web portal in browser**:
 
-   i. Users navigate to the Inji Web portal from their web browser
+    i. Users navigate to the Inji Web portal from their web browser
    
-   ii. The portal features a user-friendly interface accessible to all
+    ii. The portal features a user-friendly interface accessible to all
 2. **Selection of Issuer and credential type**:
 
-   i. Users can select an Issuer from the list of trusted issuers
+    i. Users can select an Issuer from the list of trusted issuers
 
-   ii. Users can choose a credential type from the available options provided by the issuers
+    ii. Users can choose a credential type from the available options provided by the issuers
 3. **Verification**:
    
-   i. In this reference implementation, the Insurance use case is demonstrated using Sunbird Credentials
+    i. In this reference implementation, the Insurance use case is demonstrated using Sunbird Credentials
 
-   ii. Users are required to provide their Policy Number, Date of Birth, and Name for verification
+    ii. Users are required to provide their Policy Number, Date of Birth, and Name for verification
 
-   iii. The provided information is then verified against the issuer's records
+    iii. The provided information is then verified against the issuer's records
 4. **Credentials Download**: Upon successful verification, the verifiable credential is downloaded in PDF format and stored in the “Downloads” folder of the user's system
    
 
