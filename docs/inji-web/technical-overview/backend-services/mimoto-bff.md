@@ -36,6 +36,7 @@ This API provides data to populate the list of supported issuers in Inji Web, wh
 3. Search Issuer:
 
 This API filters the issuers based on the search criteria entered in the search bar on the Home page of Inji Web.
+
 4. Fetch Credential Types:
 
 This API fetches the list of Credential Types offered by the issuer, sourced from the well-known configuration of the issuer.   
