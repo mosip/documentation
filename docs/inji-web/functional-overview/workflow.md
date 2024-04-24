@@ -2,12 +2,13 @@
 
 This document outlines the workflow for key functionalities of Inji Web.
 
- **Download Verifiable Credentials as PDF**:
-   
-   The image below illustrates the workflow for the VC download process and explains the various components involved in this 
-   flow.
-   
-_**Reference Implementation**: Download of Insurance VC using **Sunbird Credentials** service with [eSignet KBA (Knowledge Based Authentication)](https://docs.esignet.io/end-user-guide/knowledge-based-authentication) as authentication partner_
+**Download Verifiable Credentials as PDF**:
+
+The image below illustrates the workflow for the VC download process and explains the various components involved in this flow.
+
+<figure><img src="../../.gitbook/assets/line dia.png" alt=""><figcaption></figcaption></figure>
+
+_**Reference Implementation**: Download of Insurance VC using **Sunbird Credentials** service with_ [_eSignet KBA (Knowledge Based Authentication)_](https://docs.esignet.io/end-user-guide/knowledge-based-authentication) _as authentication partner_
 
 **Components**:
 
@@ -17,25 +18,21 @@ _**Reference Implementation**: Download of Insurance VC using **Sunbird Credenti
 
 ### Understanding the workflow
 
-1. **User accesses Inji Web portal in browser**:
+1.  **User accesses Inji Web portal in browser**:
 
     i. Users navigate to the Inji Web portal from their web browser
-   
+
     ii. The portal features a user-friendly interface accessible to all
-2. **Selection of Issuer and credential type**:
+2.  **Selection of Issuer and credential type**:
 
     i. Users can select an Issuer from the list of trusted issuers
 
     ii. Users can choose a credential type from the available options provided by the issuers
-3. **Verification**:
-   
+3.  **Verification**:
+
     i. In this reference implementation, the Insurance use case is demonstrated using Sunbird Credentials
 
     ii. Users are required to provide their Policy Number, Date of Birth, and Name for verification
 
     iii. The provided information is then verified against the issuer's records
 4. **Credentials Download**: Upon successful verification, the verifiable credential is downloaded in PDF format and stored in the “Downloads” folder of the user's system
-   
-
-
-
