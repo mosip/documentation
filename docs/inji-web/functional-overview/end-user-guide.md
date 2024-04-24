@@ -26,6 +26,20 @@ To download a VC using eSignet as an authentication layer, please follow the bel
 
 **Note**: All the fields are mandatory.
 
+<figure><img src="../../.gitbook/assets/Step5_1.png" alt=""><figcaption><p>Authentication page</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/Step5_2.png" alt=""><figcaption><p>Enter details page</p></figcaption></figure>
+
 **Step6**: Credential is downloaded in the background and PDF will be generated and stored in the Downloads folder of the system.
 
+<figure><img src="../../.gitbook/assets/Step6_1.png" alt=""><figcaption><p>Verification in background</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/Step6_2.png" alt=""><figcaption><p>PDF generation</p></figcaption></figure>
+
 **Step7**: Upon successful PDF generation, application displays the below mentioned page.
+
+
+
+<figure><img src="../../.gitbook/assets/Step7.png" alt=""><figcaption><p>Success screen</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/Step8.png" alt=""><figcaption><p>Downloaded PDF of VC</p></figcaption></figure>
