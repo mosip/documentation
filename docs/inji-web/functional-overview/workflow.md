@@ -6,7 +6,7 @@ This document outlines the workflow for key functionalities of Inji Web.
 
 The image below illustrates the workflow for the VC download process and explains the various components involved in this flow.
 
-<figure><img src="../../.gitbook/assets/line dia.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/line dia.png" alt=""><figcaption><p>VC Download as PDF</p></figcaption></figure>
 
 _**Reference Implementation**: Download of Insurance VC using **Sunbird Credentials** service with_ [_eSignet KBA (Knowledge Based Authentication)_](https://docs.esignet.io/end-user-guide/knowledge-based-authentication) _as authentication partner_
 
