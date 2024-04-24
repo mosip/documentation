@@ -65,7 +65,7 @@
   * [Architecture](inji-web/technical-overview/architecture.md)
   * [Supported browsers](inji-web/technical-overview/supported-browsers.md)
   * [Backend services](inji-web/technical-overview/backend-services/README.md)
-    * [Mimoto - BFF](inji-web/technical-overview/backend-services/mimoto-bff.md)
+    * [Mimoto - BFF](inji-web/technical-overview/backend-services/mimoto.md)
     * [eSignet - Authentication Layer](inji-web/technical-overview/backend-services/esignet-authentication-layer.md)
 * [Releases](inji-web/inji-web/README.md)
   * [Version 0.8.0](inji-web/inji-web/version-0.8.0.md)
