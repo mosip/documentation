@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Inji](README.md)
-* [Roadmap 2024](roadmap-2024.md)
+  
 
 ## Inji Mobile Wallet
 
