@@ -38,6 +38,7 @@ To know more about the feature, refer here.
 
 ## Documentation
 
+* [Feature documentation](https://docs.mosip.io/inji/inji-web/functional-overview/features)
 * User guide
 * QA Report
 * API Documentation
