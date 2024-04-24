@@ -38,8 +38,6 @@ To download a VC using eSignet as an authentication layer, please follow the bel
 
 **Step7**: Upon successful PDF generation, application displays the below mentioned page.
 
-
-
 <figure><img src="../../.gitbook/assets/Step7.png" alt=""><figcaption><p>Success screen</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/Step8.png" alt=""><figcaption><p>Downloaded PDF of VC</p></figcaption></figure>
@@ -47,3 +45,5 @@ To download a VC using eSignet as an authentication layer, please follow the bel
 ## Help
 
 Help section can be accessed from any page of the application. You can find some FAQs as mentioned here.
+
+<figure><img src="../../.gitbook/assets/Help.png" alt=""><figcaption></figcaption></figure>
