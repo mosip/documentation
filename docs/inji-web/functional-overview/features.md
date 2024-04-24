@@ -2,7 +2,7 @@
 
 Here is a comprehensive summary of the features offered by Inji Web.
 
-**Download Verifiable Credentials (VC)**:
+## Download Verifiable Credentials (VC):
 
 Inji Web's user-friendly interface simplifies the process of downloading your VCs as PDF files in four simple steps. Here’s how it works:
 
