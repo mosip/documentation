@@ -61,7 +61,7 @@
   * [Workflow](inji-web/functional-overview/workflow.md)
   * [End User Guide](inji-web/functional-overview/end-user-guide.md)
 * [Technical Overview](inji-web/technical-overview/README.md)
-  * [Technical Stack](inji-web/technical-overview/technical-stack.md)
+  * [Technology Stack](inji-web/technical-overview/technical-stack.md)
   * [Architecture](inji-web/technical-overview/architecture.md)
   * [Supported browsers](inji-web/technical-overview/supported-browsers.md)
   * [Backend services](inji-web/technical-overview/backend-services/README.md)
