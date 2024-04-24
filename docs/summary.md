@@ -56,6 +56,9 @@
 ## INJI WEB
 
 * [Overview](inji-web/overview.md)
-* [Functional Overview](inji-web/functional-overview.md)
+* [Functional Overview](inji-web/functional-overview/README.md)
+  * [Features](inji-web/functional-overview/features.md)
+  * [Workflow](inji-web/functional-overview/workflow.md)
+  * [End User Guide](inji-web/functional-overview/end-user-guide.md)
 * [Releases](inji-web/inji-web/README.md)
   * [Version 0.8.0](inji-web/inji-web/version-0.8.0.md)
