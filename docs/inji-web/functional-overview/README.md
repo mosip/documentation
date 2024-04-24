@@ -4,7 +4,7 @@ Verifiable Credentials (VCs) are digital equivalents of physical documents such 
 
 Below are the key features provided by Inji Web:
 
-Download
+[Download](https://docs.mosip.io/inji/inji-web/functional-overview/features#download-verifiable-credentials-vc)
 
 Users can simply select an issuer from the trusted list of issuers and credential types, verify themselves with their information, and download the Verifiable Credential as a PDF file.
 
