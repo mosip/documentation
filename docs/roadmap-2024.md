@@ -15,3 +15,7 @@ Q3: Jul24 - Sep24
 Q4: Oct24 - Dec24
 
 ## Inji Web
+
+
+
+<table><thead><tr><th>Quarter</th><th width="151">Feature</th><th>Status</th><th>Feature Details</th><th>Release Details</th></tr></thead><tbody><tr><td>Q1</td><td><ul><li>Ability to fetch &#x26; download credentials in PDF format </li><li>Issuer and credential type selection</li></ul></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
