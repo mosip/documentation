@@ -1,0 +1,3044 @@
+{
+    "openapi": "3.0.1",
+    "x-stoplight": {
+        "id": "5bf5a1n68g4tq"
+    },
+    "info": {
+        "title": "mimoto",
+        "description": "mimoto",
+        "license": {
+            "name": "Mosip",
+            "url": "https://docs.mosip.io/platform/license"
+        },
+        "version": "1.0"
+    },
+    "servers": [
+        {
+            "url": "https://api.mosip.io/residentmobileapp",
+            "description": "For Swagger"
+        }
+    ],
+    "paths": {
+        "/binding-otp": {
+            "post": {
+                "operationId": "bindingOtpGenerate",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "x-examples": {
+                                    "Example 1": {
+                                        "requestTime": "2023-01-17T05:38:41.869Z",
+                                        "request": {
+                                            "individualId": "3816083254",
+                                            "otpChannels": [
+                                                "EMAIL"
+                                            ]
+                                        }
+                                    }
+                                },
+                                "properties": {
+                                    "requestTime": {
+                                        "type": "string"
+                                    },
+                                    "request": {
+                                        "type": "object",
+                                        "properties": {
+                                            "individualId": {
+                                                "type": "string",
+                                                "description": "The individual id - UIN or VID."
+                                            },
+                                            "otpChannels": {
+                                                "type": "array",
+                                                "description": "Otp channels using which user will be notified, for example - EMAIL, PHONE",
+                                                "items": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "examples": {
+                                "Wallet binding otp request example": {
+                                    "value": {
+                                        "requestTime": "{{$isoTimestamp}}",
+                                        "request": {
+                                            "individualId": "3816083254",
+                                            "otpChannels": [
+                                                "EMAIL"
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "individualId": {
+                                        "type": "string"
+                                    },
+                                    "individualIdType": {
+                                        "type": "string"
+                                    },
+                                    "otp": {
+                                        "type": "string"
+                                    },
+                                    "vidType": {
+                                        "type": "string"
+                                    },
+                                    "transactionID": {
+                                        "type": "string"
+                                    }
+                                },
+                                "x-examples": {
+                                    "Example 1": {
+                                        "individualId": "2057135194",
+                                        "individualIdType": "UIN",
+                                        "otp": "111111",
+                                        "vidType": "PERPETUAL",
+                                        "transactionID": "1234567890"
+                                    }
+                                }
+                            },
+                            "examples": {
+                                "example-1": {
+                                    "value": {
+                                        "individualId": "2057135194",
+                                        "individualIdType": "UIN",
+                                        "otp": "111111",
+                                        "vidType": "PERPETUAL",
+                                        "transactionID": "1234567890"
+                                    }
+                                }
+                            }
+                        },
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "requestTime": {
+                                        "type": "string"
+                                    },
+                                    "request": {
+                                        "type": "object",
+                                        "properties": {
+                                            "individualId": {
+                                                "type": "string"
+                                            },
+                                            "otpChannels": {
+                                                "type": "array",
+                                                "items": {}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": true,
+                    "description": ""
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "x-examples": {
+                                        "Example 1": {
+                                            "id": null,
+                                            "version": null,
+                                            "str": null,
+                                            "responsetime": null,
+                                            "metadata": null,
+                                            "response": {
+                                                "maskedEmail": "mock",
+                                                "maskedMobile": "mock"
+                                            },
+                                            "errors": []
+                                        }
+                                    },
+                                    "properties": {
+                                        "id": {
+                                            "type": "string"
+                                        },
+                                        "version": {
+                                            "type": "string"
+                                        },
+                                        "str": {
+                                            "type": "string"
+                                        },
+                                        "responsetime": {
+                                            "type": "string"
+                                        },
+                                        "metadata": {
+                                            "type": "object"
+                                        },
+                                        "response": {
+                                            "type": "object",
+                                            "properties": {
+                                                "transactionId": {
+                                                    "type": "string",
+                                                    "description": "The transaction id of the request"
+                                                },
+                                                "maskedEmail": {
+                                                    "type": "string",
+                                                    "description": "The masked email of user"
+                                                },
+                                                "maskedMobile": {
+                                                    "type": "string",
+                                                    "description": "the masked mobile of user."
+                                                }
+                                            }
+                                        },
+                                        "errors": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "errorCode": {
+                                                        "type": "string",
+                                                        "description": "The error code"
+                                                    },
+                                                    "errorMessage": {
+                                                        "type": "string",
+                                                        "description": "The error message"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "Success response": {
+                                        "value": {
+                                            "id": null,
+                                            "version": null,
+                                            "str": null,
+                                            "responsetime": null,
+                                            "metadata": null,
+                                            "response": {
+                                                "maskedEmail": "XXyXXt@mail.com",
+                                                "maskedMobile": "XXXXXX9087"
+                                            },
+                                            "errors": []
+                                        }
+                                    },
+                                    "Failure response": {
+                                        "value": {
+                                            "id": "mosip.mimoto.idp",
+                                            "version": "1.0",
+                                            "str": null,
+                                            "responsetime": "2022-10-31T04:57:10.792Z",
+                                            "metadata": null,
+                                            "response": null,
+                                            "errors": [
+                                                {
+                                                    "errorCode": "RES-SER-422",
+                                                    "errorMessage": "Invalid UIN"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Generate Otp for wallet binding",
+                "description": "This api is used to generate otp for wallet binding.\nThis api is used as a proxy to call [Identity Provider - Send Binding OTP Endpoint](https://mosip.stoplight.io/docs/identity-provider/mk9xsyt7rvnez-send-binding-otp-endpoint) api internally."
+            }
+        },
+        "/wallet-binding": {
+            "post": {
+                "operationId": "walletBinding",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "x-examples": {
+                                    "Example 1": {
+                                        "requestTime": "{{$isoTimestamp}}",
+                                        "request": {
+                                            "authFactorType": "WLA",
+                                            "format": "jwt",
+                                            "individualId": "3816083254",
+                                            "publicKey": "-----BEGIN RSA PUBLIC KEY-----\nMIICCgKCAgEAxo8hdrLl6nXyPSeSJu8xgmBBwVutacZS57rmIlHeKJfjYhKLT51v\n0k2IQqN2v6A3HOZqzKXh41p3RrxdSndkqqHwS0BLEVPNpKqYoEbe0tUICDpDSFaa\n7w87Z/OSGrw8bKpxmUT0xZ70+DGPhnWlMvPV5xenG1bVtf/vEq7cwQei1iNbNQRb\nqw/57e9LgmXdmbh/v5XOllT7rlUFmVFm4V4J3u6NH9iOPGlIKTplBlYyxlx6ayaR\n09Z6z4RJICG1MIipCv5qJwuzzXXpBja6gEG4xsN5K4W6b5GLt3IuzMMaQmReseRR\n46s53vBp7aqq1wrjs/CZ1SZqZ5ZG/nUchjTv+Nir0vPR9acvPB5j5qDgfdVz2sT/\nYL1HoeFPOIgcY1ydz+tUBm9F4AMCMZa7GbEmtAIWvxlQp6emo50/opdb51B3Teh3\neVQ+JqYYhOpuTEv0uHfhonXEsNfpGyttjR0FSAH2c6mI6UULi/PfLgcvKuqkhE+7\nlB0SFd852C993GqsY7qfxW1GvJpXYRvo6oRoFO8sj+St36MkmzJbm56AQn/9KWd5\nRLh13xrIUVRnW48y/Blchw/C68Ez1bmCyDeVe1WBPwel0zPl62jCtKawzCQiZcTL\n/ejmlKFHKQd980MwWN18OVakKU52CkO0NT+9ovgi0TRfLKvG6PQ1qGECAwEAAQ==\n-----END RSA PUBLIC KEY-----\n",
+                                            "challengeList": [
+                                                {
+                                                    "authFactorType": "OTP",
+                                                    "challenge": "111111",
+                                                    "format": "alpha-numeric"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                "properties": {
+                                    "requestTime": {
+                                        "type": "string",
+                                        "description": "The request time"
+                                    },
+                                    "request": {
+                                        "type": "object",
+                                        "properties": {
+                                            "authFactorType": {
+                                                "type": "string",
+                                                "description": "Auth factor type to be binded for the provided key."
+                                            },
+                                            "format": {
+                                                "type": "string",
+                                                "description": "Format of the auth factor type supported in the wallet app. Right now Inji supports only jwt."
+                                            },
+                                            "individualId": {
+                                                "type": "string",
+                                                "description": "The individual id. UIN or VID.\n"
+                                            },
+                                            "publicKey": {
+                                                "type": "string",
+                                                "description": "The public key of the wallet app."
+                                            },
+                                            "challengeList": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "authFactorType": {
+                                                            "type": "string",
+                                                            "description": "Defines the type of auth challenge. It should be same as authfactor.type (oauth-details response)."
+                                                        },
+                                                        "challenge": {
+                                                            "type": "string",
+                                                            "description": "Actual challenge as string."
+                                                        },
+                                                        "format": {
+                                                            "type": "string",
+                                                            "description": "Format of the challenge provided."
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "examples": {
+                                "Wallet binding otp request example": {
+                                    "value": {
+                                        "requestTime": "2023-01-17T05:38:41.869Z",
+                                        "request": {
+                                            "authFactorType": "WLA",
+                                            "format": "jwt",
+                                            "individualId": "3816083254",
+                                            "publicKey": "-----BEGIN RSA PUBLIC KEY-----\nMIICCgKCAgEAxo8hdrLl6nXyPSeSJu8xgmBBwVutacZS57rmIlHeKJfjYhKLT51v\n0k2IQqN2v6A3HOZqzKXh41p3RrxdSndkqqHwS0BLEVPNpKqYoEbe0tUICDpDSFaa\n7w87Z/OSGrw8bKpxmUT0xZ70+DGPhnWlMvPV5xenG1bVtf/vEq7cwQei1iNbNQRb\nqw/57e9LgmXdmbh/v5XOllT7rlUFmVFm4V4J3u6NH9iOPGlIKTplBlYyxlx6ayaR\n09Z6z4RJICG1MIipCv5qJwuzzXXpBja6gEG4xsN5K4W6b5GLt3IuzMMaQmReseRR\n46s53vBp7aqq1wrjs/CZ1SZqZ5ZG/nUchjTv+Nir0vPR9acvPB5j5qDgfdVz2sT/\nYL1HoeFPOIgcY1ydz+tUBm9F4AMCMZa7GbEmtAIWvxlQp6emo50/opdb51B3Teh3\neVQ+JqYYhOpuTEv0uHfhonXEsNfpGyttjR0FSAH2c6mI6UULi/PfLgcvKuqkhE+7\nlB0SFd852C993GqsY7qfxW1GvJpXYRvo6oRoFO8sj+St36MkmzJbm56AQn/9KWd5\nRLh13xrIUVRnW48y/Blchw/C68Ez1bmCyDeVe1WBPwel0zPl62jCtKawzCQiZcTL\n/ejmlKFHKQd980MwWN18OVakKU52CkO0NT+9ovgi0TRfLKvG6PQ1qGECAwEAAQ==\n-----END RSA PUBLIC KEY-----\n",
+                                            "challengeList": [
+                                                {
+                                                    "authFactorType": "OTP",
+                                                    "challenge": "111111",
+                                                    "format": "alpha-numeric"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "individualId": {
+                                        "type": "string"
+                                    },
+                                    "individualIdType": {
+                                        "type": "string"
+                                    },
+                                    "otp": {
+                                        "type": "string"
+                                    },
+                                    "vidType": {
+                                        "type": "string"
+                                    },
+                                    "transactionID": {
+                                        "type": "string"
+                                    }
+                                },
+                                "x-examples": {
+                                    "Example 1": {
+                                        "individualId": "2057135194",
+                                        "individualIdType": "UIN",
+                                        "otp": "111111",
+                                        "vidType": "PERPETUAL",
+                                        "transactionID": "1234567890"
+                                    }
+                                }
+                            },
+                            "examples": {
+                                "example-1": {
+                                    "value": {
+                                        "individualId": "2057135194",
+                                        "individualIdType": "UIN",
+                                        "otp": "111111",
+                                        "vidType": "PERPETUAL",
+                                        "transactionID": "1234567890"
+                                    }
+                                }
+                            }
+                        },
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "requestTime": {
+                                        "type": "string"
+                                    },
+                                    "request": {
+                                        "type": "object",
+                                        "properties": {
+                                            "individualId": {
+                                                "type": "string"
+                                            },
+                                            "otpChannels": {
+                                                "type": "array",
+                                                "items": {}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": true,
+                    "description": ""
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "x-examples": {
+                                        "Example 1": {
+                                            "id": null,
+                                            "version": null,
+                                            "str": null,
+                                            "responsetime": null,
+                                            "metadata": null,
+                                            "response": {
+                                                "certificate": "-----BEGIN CERTIFICATE-----\nMIIDqjCCApKgAwIBAgIGAYW+PCLUMA0GCSqGSIb3DQEBCwUAMBMxETAPBgNVBAMT\nCE1vY2stSURBMB4XDTIzMDExNzA1MzgxMFoXDTIzMDEyNzA1MzgxMFowGTEXMBUG\nA1UEAxMOTW9jay11c2VyLW5hbWUwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIK\nAoICAQDGjyF2suXqdfI9J5Im7zGCYEHBW61pxlLnuuYiUd4ol+NiEotPnW/STYhC\no3a/oDcc5mrMpeHjWndGvF1Kd2SqofBLQEsRU82kqpigRt7S1QgIOkNIVprvDztn\n85IavDxsqnGZRPTFnvT4MY+GdaUy89XnF6cbVtW1/+8SrtzBB6LWI1s1BFurD/nt\n70uCZd2ZuH+/lc6WVPuuVQWZUWbhXgne7o0f2I48aUgpOmUGVjLGXHprJpHT1nrP\nhEkgIbUwiKkK/monC7PNdekGNrqAQbjGw3krhbpvkYu3ci7MwxpCZF6x5FHjqzne\n8GntqqrXCuOz8JnVJmpnlkb+dRyGNO/42KvS89H1py88HmPmoOB91XPaxP9gvUeh\n4U84iBxjXJ3P61QGb0XgAwIxlrsZsSa0Aha/GVCnp6ajnT+il1vnUHdN6Hd5VD4m\nphiE6m5MS/S4d+GidcSw1+kbK22NHQVIAfZzqYjpRQuL898uBy8q6qSET7uUHRIV\n3znYL33caqxjup/FbUa8mldhG+jqhGgU7yyP5K3foySbMlubnoBCf/0pZ3lEuHXf\nGshRVGdbjzL8GVyHD8LrwTPVuYLIN5V7VYE/B6XTM+XraMK0prDMJCJlxMv96OaU\noUcpB33zQzBY3Xw5VqQpTnYKQ7Q1P72i+CLRNF8sq8bo9DWoYQIDAQABMA0GCSqG\nSIb3DQEBCwUAA4IBAQAmbgQcW22AnrP/GH5lzt+Fy6t20lxqpMDIc3rCO6dzXMCR\n9ocjwLj7E243jGFbhHzC8637qOC8b5bYLZL2ND9ZehSu0qdz/0U0Kwt81rj/lihk\nvhD6xgx8g966AMZcZ0iQncyTzbdEukq6jMAtYfWvAu41rL0H5qvIFvxLHGOoxOYV\n0XZslWTC8B8TB3hzQ+HHexxSZbLSbB+sHFShubOlqqxE/zMj2O+c2FGYSOKlbTXi\nTd4m1WY/eJ4+0XjvEAAMZqLSLtnF5U1POz2onnk0u/lzsRnpxiqJY2++1WmCnuAT\nwDIwNEeAPotfm6tM1TjWuwakYrbSY7Ru0YjaFC1S\n-----END CERTIFICATE-----\n",
+                                                "encryptedWalletBindingId": "qeCUuKEjRDUiDHfbYAsHv5L4RCiHe_KE7eKKjpw7jIo",
+                                                "expireDateTime": "2023-01-27T05:38:10.000Z",
+                                                "thumbprint": "rOe3ifBa0uIuKfArURKRKK5psE8YVdWxXbQoDXAvntk",
+                                                "keyId": "1673933890260"
+                                            },
+                                            "errors": []
+                                        }
+                                    },
+                                    "properties": {
+                                        "version": {
+                                            "type": "string",
+                                            "nullable": true
+                                        },
+                                        "id": {
+                                            "type": "string",
+                                            "nullable": true
+                                        },
+                                        "str": {
+                                            "type": "string",
+                                            "nullable": true
+                                        },
+                                        "responsetime": {
+                                            "type": "string",
+                                            "nullable": true
+                                        },
+                                        "metadata": {
+                                            "type": "string",
+                                            "nullable": true
+                                        },
+                                        "response": {
+                                            "type": "object",
+                                            "properties": {
+                                                "certificate": {
+                                                    "type": "string",
+                                                    "description": "Server certificate after successful binding. This certificate will be stored in wallet app."
+                                                },
+                                                "encryptedWalletBindingId": {
+                                                    "type": "string",
+                                                    "description": "the wallet binding id in encrypted format. The wallet app will associate the requested credential with this id."
+                                                },
+                                                "expireDateTime": {
+                                                    "type": "string",
+                                                    "description": "expiry date time of the binding."
+                                                },
+                                                "thumbprint": {
+                                                    "type": "string",
+                                                    "description": "the certificate thumbprint."
+                                                },
+                                                "keyId": {
+                                                    "type": "string",
+                                                    "description": "the certificate key id."
+                                                }
+                                            }
+                                        },
+                                        "errors": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "errorCode": {
+                                                        "type": "string",
+                                                        "description": "The error code"
+                                                    },
+                                                    "errorMessage": {
+                                                        "type": "string",
+                                                        "description": "The error message"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "Success response": {
+                                        "value": {
+                                            "id": null,
+                                            "version": null,
+                                            "str": null,
+                                            "responsetime": null,
+                                            "metadata": null,
+                                            "response": {
+                                                "certificate": "-----BEGIN CERTIFICATE-----\nMIIDqjCCApKgAwIBAgIGAYW+PCLUMA0GCSqGSIb3DQEBCwUAMBMxETAPBgNVBAMT\nCE1vY2stSURBMB4XDTIzMDExNzA1MzgxMFoXDTIzMDEyNzA1MzgxMFowGTEXMBUG\nA1UEAxMOTW9jay11c2VyLW5hbWUwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIK\nAoICAQDGjyF2suXqdfI9J5Im7zGCYEHBW61pxlLnuuYiUd4ol+NiEotPnW/STYhC\no3a/oDcc5mrMpeHjWndGvF1Kd2SqofBLQEsRU82kqpigRt7S1QgIOkNIVprvDztn\n85IavDxsqnGZRPTFnvT4MY+GdaUy89XnF6cbVtW1/+8SrtzBB6LWI1s1BFurD/nt\n70uCZd2ZuH+/lc6WVPuuVQWZUWbhXgne7o0f2I48aUgpOmUGVjLGXHprJpHT1nrP\nhEkgIbUwiKkK/monC7PNdekGNrqAQbjGw3krhbpvkYu3ci7MwxpCZF6x5FHjqzne\n8GntqqrXCuOz8JnVJmpnlkb+dRyGNO/42KvS89H1py88HmPmoOB91XPaxP9gvUeh\n4U84iBxjXJ3P61QGb0XgAwIxlrsZsSa0Aha/GVCnp6ajnT+il1vnUHdN6Hd5VD4m\nphiE6m5MS/S4d+GidcSw1+kbK22NHQVIAfZzqYjpRQuL898uBy8q6qSET7uUHRIV\n3znYL33caqxjup/FbUa8mldhG+jqhGgU7yyP5K3foySbMlubnoBCf/0pZ3lEuHXf\nGshRVGdbjzL8GVyHD8LrwTPVuYLIN5V7VYE/B6XTM+XraMK0prDMJCJlxMv96OaU\noUcpB33zQzBY3Xw5VqQpTnYKQ7Q1P72i+CLRNF8sq8bo9DWoYQIDAQABMA0GCSqG\nSIb3DQEBCwUAA4IBAQAmbgQcW22AnrP/GH5lzt+Fy6t20lxqpMDIc3rCO6dzXMCR\n9ocjwLj7E243jGFbhHzC8637qOC8b5bYLZL2ND9ZehSu0qdz/0U0Kwt81rj/lihk\nvhD6xgx8g966AMZcZ0iQncyTzbdEukq6jMAtYfWvAu41rL0H5qvIFvxLHGOoxOYV\n0XZslWTC8B8TB3hzQ+HHexxSZbLSbB+sHFShubOlqqxE/zMj2O+c2FGYSOKlbTXi\nTd4m1WY/eJ4+0XjvEAAMZqLSLtnF5U1POz2onnk0u/lzsRnpxiqJY2++1WmCnuAT\nwDIwNEeAPotfm6tM1TjWuwakYrbSY7Ru0YjaFC1S\n-----END CERTIFICATE-----\n",
+                                                "encryptedWalletBindingId": "qeCUuKEjRDUiDHfbYAsHv5L4RCiHe_KE7eKKjpw7jIo",
+                                                "expireDateTime": "2023-01-27T05:38:10.000Z",
+                                                "thumbprint": "rOe3ifBa0uIuKfArURKRKK5psE8YVdWxXbQoDXAvntk",
+                                                "keyId": "1673933890260"
+                                            },
+                                            "errors": []
+                                        }
+                                    },
+                                    "Failure response": {
+                                        "value": {
+                                            "id": "mosip.mimoto.idp",
+                                            "version": null,
+                                            "str": null,
+                                            "responsetime": "2022-10-31T04:57:10.792Z",
+                                            "metadata": null,
+                                            "response": null,
+                                            "errors": [
+                                                {
+                                                    "errorCode": "binding_auth_failed",
+                                                    "errorMessage": "binding_auth_failed"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Bind Credential with wallet",
+                "description": "This api is used to bind the credential   with wallet.\nThis api is used as a proxy to call [Identity Provider - Wallet binding Endpoint](https://mosip.stoplight.io/docs/identity-provider/j4rvet323vah4-wallet-binding-endpoint) api internally."
+            }
+        },
+        "/vid": {
+            "post": {
+                "operationId": "vidGenerate",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "individualId": {
+                                        "type": "string"
+                                    },
+                                    "individualIdType": {
+                                        "type": "string"
+                                    },
+                                    "otp": {
+                                        "type": "string"
+                                    },
+                                    "vidType": {
+                                        "type": "string"
+                                    },
+                                    "transactionID": {
+                                        "type": "string"
+                                    }
+                                },
+                                "x-examples": {
+                                    "Example 1": {
+                                        "individualId": "2057135194",
+                                        "individualIdType": "UIN",
+                                        "otp": "111111",
+                                        "vidType": "PERPETUAL",
+                                        "transactionID": "1234567890"
+                                    }
+                                }
+                            },
+                            "examples": {
+                                "VID REQUEST": {
+                                    "value": {
+                                        "individualId": "2057135194",
+                                        "individualIdType": "UIN",
+                                        "otp": "111111",
+                                        "vidType": "PERPETUAL",
+                                        "transactionID": "1234567890"
+                                    }
+                                }
+                            }
+                        },
+                        "application/xml": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "individualId": {
+                                        "type": "string"
+                                    },
+                                    "individualIdType": {
+                                        "type": "string"
+                                    },
+                                    "otp": {
+                                        "type": "string"
+                                    },
+                                    "vidType": {
+                                        "type": "string"
+                                    },
+                                    "transactionID": {
+                                        "type": "string"
+                                    }
+                                },
+                                "x-examples": {
+                                    "Example 1": {
+                                        "individualId": "2057135194",
+                                        "individualIdType": "UIN",
+                                        "otp": "111111",
+                                        "vidType": "PERPETUAL",
+                                        "transactionID": "1234567890"
+                                    }
+                                }
+                            },
+                            "examples": {
+                                "example-1": {
+                                    "value": {
+                                        "individualId": "2057135194",
+                                        "individualIdType": "UIN",
+                                        "otp": "111111",
+                                        "vidType": "PERPETUAL",
+                                        "transactionID": "1234567890"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": true,
+                    "description": ""
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "string"
+                                        },
+                                        "version": {
+                                            "type": "string"
+                                        },
+                                        "str": {
+                                            "type": "string"
+                                        },
+                                        "responsetime": {
+                                            "type": "string"
+                                        },
+                                        "metadata": {
+                                            "type": "string"
+                                        },
+                                        "response": {
+                                            "type": "object",
+                                            "properties": {
+                                                "vid": {
+                                                    "type": "string"
+                                                },
+                                                "message": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "errors": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "errorCode": {
+                                                        "type": "string",
+                                                        "description": "The error code"
+                                                    },
+                                                    "errorMessage": {
+                                                        "type": "string",
+                                                        "description": "The error message"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "x-examples": {
+                                        "Example 1": {
+                                            "id": "mosip.resident.vid",
+                                            "version": "v1",
+                                            "str": null,
+                                            "responsetime": "2022-10-31T04:49:43.085Z",
+                                            "metadata": null,
+                                            "response": {
+                                                "vid": "6924813502849610",
+                                                "message": "Notification has been sent to the provided email "
+                                            },
+                                            "errors": []
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "Success response": {
+                                        "value": {
+                                            "id": "mosip.resident.vid",
+                                            "version": "v1",
+                                            "str": null,
+                                            "responsetime": "2022-10-31T04:49:43.085Z",
+                                            "metadata": null,
+                                            "response": {
+                                                "vid": "6924813502849610",
+                                                "message": "Notification has been sent to the provided email "
+                                            },
+                                            "errors": []
+                                        }
+                                    },
+                                    "Failure response": {
+                                        "value": {
+                                            "id": "mosip.resident.vid",
+                                            "version": "v1",
+                                            "str": null,
+                                            "responsetime": "2022-10-31T04:57:10.792Z",
+                                            "metadata": null,
+                                            "response": null,
+                                            "errors": [
+                                                {
+                                                    "errorCode": "RES-SER-422",
+                                                    "errorMessage": "OTP is invalid"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Generate VID",
+                "description": "Generate new VID"
+            }
+        },
+        "/safetynet/online/verify": {
+            "post": {
+                "operationId": "processOnline",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "nonce": {
+                                            "type": "string",
+                                            "description": "Embedded nonce sent as part of the request."
+                                        },
+                                        "timestampMs": {
+                                            "type": "string",
+                                            "description": "Timestamp of the request."
+                                        },
+                                        "apkPackageName": {
+                                            "type": "string",
+                                            "description": "Package name of the APK that submitted this request."
+                                        },
+                                        "apkCertificateDigestSha256": {
+                                            "type": "array",
+                                            "description": "Digest of certificate of the APK that submitted this request.",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "apkDigestSha256": {
+                                            "type": "string",
+                                            "description": "Digest of the APK that submitted this request."
+                                        },
+                                        "ctsProfileMatch": {
+                                            "type": "boolean",
+                                            "description": "The device passed CTS and matches a known profile."
+                                        },
+                                        "basicIntegrity": {
+                                            "type": "boolean",
+                                            "description": "The device has passed a basic integrity test, but the CTS profile could not be verified."
+                                        },
+                                        "evaluationType": {
+                                            "type": "string",
+                                            "description": "Types of measurements that contributed to this response."
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "Success response": {
+                                        "value": {
+                                            "nonce": "R2Rra24fVm5xa2Mg",
+                                            "timestampMs": 9860437986543,
+                                            "apkPackageName": "com.package.name.of.requesting.app",
+                                            "apkCertificateDigestSha256": ["base64 encoded, SHA-256 hash of the certificate used to sign requesting app"],
+                                            "apkDigestSha256": "base64 encoded, SHA-256 hash of the app's APK",
+                                            "ctsProfileMatch": true,
+                                            "basicIntegrity": true
+                                        }
+                                    },
+                                    "Failure response": {
+                                        "value": {
+                                            "status": "Error",
+                                            "message": "Failed to parse the data portion of the JWS as valid JSON"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Safetynet Verify Online",
+                "description": ""
+            }
+        },
+        "/safetynet/offline/verify": {
+            "post": {
+                "operationId": "processOffline",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "nonce": {
+                                            "type": "string",
+                                            "description": "Embedded nonce sent as part of the request."
+                                        },
+                                        "timestampMs": {
+                                            "type": "string",
+                                            "description": "Timestamp of the request."
+                                        },
+                                        "apkPackageName": {
+                                            "type": "string",
+                                            "description": "Package name of the APK that submitted this request."
+                                        },
+                                        "apkCertificateDigestSha256": {
+                                            "type": "array",
+                                            "description": "Digest of certificate of the APK that submitted this request.",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "apkDigestSha256": {
+                                            "type": "string",
+                                            "description": "Digest of the APK that submitted this request."
+                                        },
+                                        "ctsProfileMatch": {
+                                            "type": "boolean",
+                                            "description": "The device passed CTS and matches a known profile."
+                                        },
+                                        "basicIntegrity": {
+                                            "type": "boolean",
+                                            "description": "The device has passed a basic integrity test, but the CTS profile could not be verified."
+                                        },
+                                        "evaluationType": {
+                                            "type": "string",
+                                            "description": "Types of measurements that contributed to this response."
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "Success response": {
+                                        "value": {
+                                            "nonce": "R2Rra24fVm5xa2Mg",
+                                            "timestampMs": 9860437986543,
+                                            "apkPackageName": "com.package.name.of.requesting.app",
+                                            "apkCertificateDigestSha256": ["base64 encoded, SHA-256 hash of the certificate used to sign requesting app"],
+                                            "apkDigestSha256": "base64 encoded, SHA-256 hash of the app's APK",
+                                            "ctsProfileMatch": true,
+                                            "basicIntegrity": true
+                                        }
+                                    },
+                                    "Failure response": {
+                                        "value": {
+                                            "status": "Error",
+                                            "message": "Signature verification failed."
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Safetynet Verify Offline"
+            }
+        },
+        "/req/otp": {
+            "post": {
+                "operationId": "otpRequest",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AppOTPRequestDTO"
+                            },
+                            "example": {
+                                "individualId": "1289358704",
+                                "individualIdType": "UIN",
+                                "otpChannel": [
+                                    "EMAIL",
+                                    "PHONE"
+                                ],
+                                "transactionID": "1234567890"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "string"
+                                        },
+                                        "version": {
+                                            "type": "string"
+                                        },
+                                        "str": {
+                                            "type": "null"
+                                        },
+                                        "responsetime": {
+                                            "type": "null"
+                                        },
+                                        "metadata": {
+                                            "type": "null"
+                                        },
+                                        "response": {
+                                            "type": "object",
+                                            "properties": {
+                                                "maskedMobile": {
+                                                    "type": "string"
+                                                },
+                                                "maskedEmail": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "errors": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "errorCode": {
+                                                        "type": "string",
+                                                        "description": "The error code"
+                                                    },
+                                                    "errorMessage": {
+                                                        "type": "string",
+                                                        "description": "The error message"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "x-examples": {
+                                        "Example 1": {
+                                            "id": "mosip.identity.otp.internal",
+                                            "version": "1.0",
+                                            "str": null,
+                                            "responsetime": null,
+                                            "metadata": null,
+                                            "response": {
+                                                "maskedMobile": "XXXXXX6677",
+                                                "maskedEmail": "XXuXXrXX5XX9@gmail.com"
+                                            },
+                                            "errors": null
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "Success response": {
+                                        "value": {
+                                            "id": "mosip.identity.otp.internal",
+                                            "version": "1.0",
+                                            "str": null,
+                                            "responsetime": null,
+                                            "metadata": null,
+                                            "response": {
+                                                "maskedMobile": "XXXXXX6677",
+                                                "maskedEmail": "XXuXXrXX5XX9@gmail.com"
+                                            },
+                                            "errors": null
+                                        }
+                                    },
+                                    "Failure response": {
+                                        "value": {
+                                            "id": "mosip.identity.otp.internal",
+                                            "version": "1.0",
+                                            "str": null,
+                                            "responsetime": null,
+                                            "metadata": null,
+                                            "response": null,
+                                            "errors": [
+                                                {
+                                                    "errorCode": "IDA-MLC-018",
+                                                    "errorMessage": "UIN not available in database"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "description": "Request new otp",
+                "summary": "Request New Otp"
+            }
+        },
+        "/req/individualId/otp": {
+            "post": {
+                "operationId": "individualIdOtpRequest",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "string"
+                                        },
+                                        "version": {
+                                            "type": "string"
+                                        },
+                                        "transactionID": {
+                                            "type": "string"
+                                        },
+                                        "responseTime": {
+                                            "type": "string"
+                                        },
+                                        "errors": {
+                                            "type": "null"
+                                        },
+                                        "response": {
+                                            "type": "object",
+                                            "properties": {
+                                                "maskedMobile": {
+                                                    "type": "string"
+                                                },
+                                                "maskedEmail": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "metadata": {
+                                            "type": "null"
+                                        }
+                                    },
+                                    "x-examples": {
+                                        "Example 1": {
+                                            "id": "mosip.identity.otp.internal",
+                                            "version": "1.0",
+                                            "transactionID": "1234567890",
+                                            "responseTime": "2022-10-31T05:02:29.001Z",
+                                            "errors": null,
+                                            "response": {
+                                                "maskedMobile": "XXXXXXX187599",
+                                                "maskedEmail": "XXqXXgXXyXXpXXgXXbXXtXXhXXfXXeXXzXXtXXfXXkXXwXXsXXuXXsXXfXX8XX@mailinator.com"
+                                            },
+                                            "metadata": null
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "Success response": {
+                                        "value": {
+                                            "id": "mosip.identity.otp.internal",
+                                            "version": "1.0",
+                                            "transactionID": "1234567890",
+                                            "responseTime": "2022-10-31T05:02:29.001Z",
+                                            "errors": null,
+                                            "response": {
+                                                "maskedMobile": "XXXXXXX187599",
+                                                "maskedEmail": "XXqXXgXXyXXpXXgXXbXXtXXhXXfXXeXXzXXtXXfXXkXXwXXsXXuXXsXXfXX8XX@mailinator.com"
+                                            },
+                                            "metadata": null
+                                        }
+                                    },
+                                    "Failure response": {
+                                        "value": {
+                                            "id": "mosip.identity.otp.internal",
+                                            "version": "1.0",
+                                            "transactionID": "1234567890",
+                                            "responseTime": "2022-10-31T05:02:29.001Z",
+                                            "errors": [
+                                                {
+                                                    "errorCode": "RES-SER-449",
+                                                    "errorMessage": "AID is not ready"
+                                                }
+                                            ],
+                                            "response": null,
+                                            "metadata": null
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "description": "request otp using individual id",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "aid": {
+                                        "type": "string"
+                                    },
+                                    "otpChannel": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "transactionID": {
+                                        "type": "string"
+                                    }
+                                },
+                                "x-examples": {
+                                    "Example 1": {
+                                        "aid": "10257101921007120221029201608",
+                                        "otpChannel": [
+                                            "EMAIL",
+                                            "PHONE"
+                                        ],
+                                        "transactionID": "1234567890"
+                                    }
+                                }
+                            },
+                            "example": {
+                                "aid": "10257101921007120221029201608",
+                                "otpChannel": [
+                                    "EMAIL",
+                                    "PHONE"
+                                ],
+                                "transactionID": "1234567890"
+                            }
+                        }
+                    }
+                },
+                "summary": "Request Otp for Application Id"
+            }
+        },
+        "/req/auth/unlock": {
+            "post": {
+                "operationId": "authUnlock",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AuthUnlockRequestDTO"
+                            },
+                            "example": {
+                                "transactionID": "9197798191",
+                                "individualId": "2048637364273134",
+                                "individualIdType": "VID",
+                                "unlockForSeconds": "1",
+                                "otp": "11111",
+                                "authType": [
+                                    "bio-Iris",
+                                    "demo",
+                                    "bio-FACE"
+                                ]
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "string"
+                                        },
+                                        "version": {
+                                            "type": "string"
+                                        },
+                                        "str": {
+                                            "type": "string"
+                                        },
+                                        "responsetime": {
+                                            "type": "string"
+                                        },
+                                        "metadata": {
+                                            "type": "string"
+                                        },
+                                        "response": {
+                                            "type": "object",
+                                            "properties": {
+                                                "status": {
+                                                    "type": "string"
+                                                },
+                                                "message": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "errors": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "errorCode": {
+                                                        "type": "string",
+                                                        "description": "The error code"
+                                                    },
+                                                    "errorMessage": {
+                                                        "type": "string",
+                                                        "description": "The error message"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "Success response": {
+                                        "value": {
+                                            "id": "mosip.resident.authunlock",
+                                            "version": "v1",
+                                            "responsetime": "2023-11-02T20:04:35.661Z",
+                                            "str": null,
+                                            "metadata": null,
+                                            "response": {
+                                                "message": "Notification has been sent to the provided contact detail(s)"
+                                            },
+                                            "errors": []
+                                        }
+                                    },
+                                    "Failure response": {
+                                        "value": {
+                                            "id": "mosip.resident.authunlock",
+                                            "version": "v1",
+                                            "responsetime": "2023-11-02T20:04:49.100Z",
+                                            "str": null,
+                                            "metadata": null,
+                                            "response": null,
+                                            "errors": [
+                                                {
+                                                    "errorCode": "RES-SER-422",
+                                                    "errorMessage": "OTP is invalid"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Auth Unlock",
+                "description": "Auth unlock"
+            }
+        },
+        "/req/auth/lock": {
+            "post": {
+                "operationId": "authLock",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AuthLockRequestDTO"
+                            },
+                            "example": {
+                                "transactionID": "9197490171",
+                                "individualId": "7619023872",
+                                "individualIdType": "UIN",
+                                "otp": "111sss@@1",
+                                "authType": [
+                                    "bio-Iris",
+                                    "demo",
+                                    "bio-FACE"
+                                ]
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "string"
+                                        },
+                                        "version": {
+                                            "type": "string"
+                                        },
+                                        "str": {
+                                            "type": "string"
+                                        },
+                                        "responsetime": {
+                                            "type": "string"
+                                        },
+                                        "metadata": {
+                                            "type": "string"
+                                        },
+                                        "response": {
+                                            "type": "object",
+                                            "properties": {
+                                                "status": {
+                                                    "type": "string"
+                                                },
+                                                "message": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "errors": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "errorCode": {
+                                                        "type": "string",
+                                                        "description": "The error code"
+                                                    },
+                                                    "errorMessage": {
+                                                        "type": "string",
+                                                        "description": "The error message"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "Success response": {
+                                        "value": {
+                                            "id": "mosip.resident.authlock",
+                                            "version": "v1",
+                                            "responsetime": "2023-11-02T20:04:35.661Z",
+                                            "str": null,
+                                            "metadata": null,
+                                            "response": {
+                                                "message": "Notification has been sent to the provided contact detail(s)"
+                                            },
+                                            "errors": []
+                                        }
+                                    },
+                                    "Failure response": {
+                                        "value": {
+                                            "id": "mosip.resident.authlock",
+                                            "version": "v1",
+                                            "responsetime": "2023-11-02T20:04:49.100Z",
+                                            "str": null,
+                                            "metadata": null,
+                                            "response": null,
+                                            "errors": [
+                                                {
+                                                    "errorCode": "RES-SER-422",
+                                                    "errorMessage": "OTP is invalid"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "description": "Auth lock",
+                "summary": "Auth Lock"
+            }
+        },
+        "/credentialshare/request": {
+            "post": {
+                "operationId": "request",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "individualId": {
+                                        "type": "string"
+                                    },
+                                    "otp": {
+                                        "type": "string"
+                                    },
+                                    "transactionID": {
+                                        "type": "string"
+                                    },
+                                    "issuer": {
+                                        "type": "string"
+                                    },
+                                    "credentialType": {
+                                        "type": "string"
+                                    },
+                                    "user": {
+                                        "type": "string"
+                                    }
+                                },
+                                "x-examples": {
+                                    "Example 1": {
+                                        "individualId": "2057135194",
+                                        "otp": "111111",
+                                        "transactionID": "1234567890",
+                                        "user": "mono"
+                                    }
+                                }
+                            },
+                            "examples": {
+                                "example-1": {
+                                    "value": {
+                                        "individualId": "2057135194",
+                                        "otp": "111111",
+                                        "transactionID": "1234567890",
+                                        "user": "user1"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "string"
+                                        },
+                                        "version": {
+                                            "type": "string"
+                                        },
+                                        "str": {
+                                            "type": "null"
+                                        },
+                                        "responsetime": {
+                                            "type": "string"
+                                        },
+                                        "metadata": {
+                                            "type": "null"
+                                        },
+                                        "response": {
+                                            "type": "object",
+                                            "properties": {
+                                                "id": {
+                                                    "type": "string"
+                                                },
+                                                "requestId": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "errors": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "errorCode": {
+                                                        "type": "string",
+                                                        "description": "The error code"
+                                                    },
+                                                    "errorMessage": {
+                                                        "type": "string",
+                                                        "description": "The error message"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "x-examples": {
+                                        "Example 1": {
+                                            "id": "mosip.resident.vid",
+                                            "version": "v1",
+                                            "str": null,
+                                            "responsetime": "2022-10-31T05:08:14.846Z",
+                                            "metadata": null,
+                                            "response": {
+                                                "id": "2057135194",
+                                                "requestId": "2bc3bb7f-6156-46d1-ae03-bf7b76e0c257"
+                                            },
+                                            "errors": null
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "Success response": {
+                                        "value": {
+                                            "id": "mosip.resident.vid",
+                                            "version": "v1",
+                                            "str": null,
+                                            "responsetime": "2022-10-31T05:08:14.846Z",
+                                            "metadata": null,
+                                            "response": {
+                                                "id": "2057135194",
+                                                "requestId": "2bc3bb7f-6156-46d1-ae03-bf7b76e0c257"
+                                            },
+                                            "errors": null
+                                        }
+                                    },
+                                    "Failure response": {
+                                        "value": {
+                                            "id": null,
+                                            "version": "v1",
+                                            "str": null,
+                                            "responsetime": "2022-10-31T05:07:34.789Z",
+                                            "metadata": null,
+                                            "response": null,
+                                            "errors": [
+                                                {
+                                                    "errorCode": "RES-SER-422",
+                                                    "errorMessage": "Input transactionID does not match transactionID of OTP Request"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "description": "Credential request",
+                "summary": "This is used to initiate download VC request"
+            }
+        },
+        "/credentialshare/request/status/{requestId}": {
+            "get": {
+                "operationId": "requestStatus",
+                "parameters": [
+                    {
+                        "name": "requestId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "null"
+                                        },
+                                        "version": {
+                                            "type": "null"
+                                        },
+                                        "str": {
+                                            "type": "null"
+                                        },
+                                        "responsetime": {
+                                            "type": "string"
+                                        },
+                                        "metadata": {
+                                            "type": "null"
+                                        },
+                                        "response": {
+                                            "type": "object",
+                                            "properties": {
+                                                "id": {
+                                                    "type": "string"
+                                                },
+                                                "requestId": {
+                                                    "type": "string"
+                                                },
+                                                "statusCode": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "errors": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "errorCode": {
+                                                        "type": "string",
+                                                        "description": "The error code"
+                                                    },
+                                                    "errorMessage": {
+                                                        "type": "string",
+                                                        "description": "The error message"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "x-examples": {
+                                        "Example 1": {
+                                            "id": null,
+                                            "version": null,
+                                            "str": null,
+                                            "responsetime": "2022-10-31T05:10:58.337Z",
+                                            "metadata": null,
+                                            "response": {
+                                                "id": "2057135194",
+                                                "requestId": "2bc3bb7f-6156-46d1-ae03-bf7b76e0c257",
+                                                "statusCode": "ISSUED"
+                                            },
+                                            "errors": []
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "Success response": {
+                                        "value": {
+                                            "id": null,
+                                            "version": null,
+                                            "str": null,
+                                            "responsetime": "2022-10-31T05:10:58.337Z",
+                                            "metadata": null,
+                                            "response": {
+                                                "id": "2057135194",
+                                                "requestId": "2bc3bb7f-6156-46d1-ae03-bf7b76e0c257",
+                                                "statusCode": "ISSUED"
+                                            },
+                                            "errors": []
+                                        }
+                                    },
+                                    "Failure response": {
+                                        "value": {
+                                            "id": null,
+                                            "version": null,
+                                            "str": null,
+                                            "responsetime": "2022-10-31T05:10:58.337Z",
+                                            "metadata": null,
+                                            "response": null,
+                                            "errors": [
+                                                {
+                                                    "errorCode": "RES-SER-29",
+                                                    "errorMessage": "Invalid id"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "description": "Credential request status",
+                "summary": "Check status for download request whether it's issued"
+            },
+            "parameters": [
+                {
+                    "schema": {
+                        "type": "string"
+                    },
+                    "name": "requestId",
+                    "in": "path",
+                    "required": true,
+                    "description": "The credential request id"
+                }
+            ]
+        },
+        "/credentialshare/download": {
+            "post": {
+                "operationId": "download",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CredentialDownloadResponseDTO"
+                                },
+                                "examples": {
+                                    "Success response": {
+                                        "value": {
+                                            "credential": {
+                                                "biometrics": {
+                                                    "face": "<face data>"
+                                                },
+                                                "province": [
+                                                    {
+                                                        "language": "eng",
+                                                        "value": "Kenitra"
+                                                    },
+                                                    {
+                                                        "language": "kan",
+                                                        "value": "ಕೆನಿತ್ರಾ"
+                                                    }
+                                                ],
+                                                "phone": "4567897654",
+                                                "city": [
+                                                    {
+                                                        "language": "eng",
+                                                        "value": "Kenitra"
+                                                    },
+                                                    {
+                                                        "language": "kan",
+                                                        "value": "ಕೆನಿತ್ರಾ"
+                                                    }
+                                                ],
+                                                "postalCode": "14022",
+                                                "fullName": [
+                                                    {
+                                                        "language": "eng",
+                                                        "value": "kimgḻbb"
+                                                    },
+                                                    {
+                                                        "language": "kan",
+                                                        "value": "ಕಿಮ್ಗ್ೞ್ಬ್ಬ್"
+                                                    }
+                                                ],
+                                                "region": [
+                                                    {
+                                                        "language": "eng",
+                                                        "value": "Rabat Sale Kenitra"
+                                                    },
+                                                    {
+                                                        "language": "kan",
+                                                        "value": "ರಬತ್ ಸಲೆ ಕೆನಿತ್ರ"
+                                                    }
+                                                ]
+                                            },
+                                            "verifiableCredential": {
+                                                "@context": [
+                                                    "https://www.w3.org/2018/credentials/v1",
+                                                    "http://localhost:8088/.well-known/mosip-context.json",
+                                                    {
+                                                        "sec": "https://w3id.org/security#"
+                                                    }
+                                                ],
+                                                "credentialSubject": {
+                                                    "biometrics": "<biometrics>",
+                                                    "province": [
+                                                        {
+                                                            "language": "eng",
+                                                            "value": "Kenitra"
+                                                        },
+                                                        {
+                                                            "language": "kan",
+                                                            "value": "ಕೆನಿತ್ರಾ"
+                                                        }
+                                                    ],
+                                                    "city": [
+                                                        {
+                                                            "language": "eng",
+                                                            "value": "Kenitra"
+                                                        },
+                                                        {
+                                                            "language": "kan",
+                                                            "value": "ಕೆನಿತ್ರಾ"
+                                                        }
+                                                    ],
+                                                    "phone": "4567897654",
+                                                    "postalCode": "14022",
+                                                    "fullName": [
+                                                        {
+                                                            "language": "eng",
+                                                            "value": "kimgḻbb"
+                                                        },
+                                                        {
+                                                            "language": "kan",
+                                                            "value": "ಕಿಮ್ಗ್ೞ್ಬ್ಬ್"
+                                                        }
+                                                    ],
+                                                    "dateOfBirth": "1990/01/01",
+                                                    "id": "http://credential.idrepo/credentials/2057135194",
+                                                    "vcVer": "VC-V1",
+                                                    "UIN": "2057135194",
+                                                    "region": [
+                                                        {
+                                                            "language": "eng",
+                                                            "value": "Rabat Sale Kenitra"
+                                                        },
+                                                        {
+                                                            "language": "kan",
+                                                            "value": "ರಬತ್ ಸಲೆ ಕೆನಿತ್ರ"
+                                                        }
+                                                    ],
+                                                    "email": "santhosdss14@gmail.com"
+                                                },
+                                                "id": "http://credential.idrepo/credentials/a3afcf8c-e5a6-4782-9ce5-84740ec2f332",
+                                                "issuanceDate": "2022-10-31T05:08:26.980Z",
+                                                "issuer": "http://localhost:8088/.well-known/controller.json",
+                                                "proof": {
+                                                    "type": "RsaSignature2018",
+                                                    "created": "2022-10-31T05:08:26Z",
+                                                    "proofPurpose": "assertionMethod",
+                                                    "verificationMethod": "http://localhost:8088/.well-known/public-key.json",
+                                                    "jws": "<The jws signature>"
+                                                },
+                                                "type": [
+                                                    "VerifiableCredential",
+                                                    "MOSIPVerifiableCredential"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "null"
+                                },
+                                "examples": {
+                                    "Failure response": {
+                                        "value": null
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "description": "download VC",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "individualId": {
+                                        "type": "string"
+                                    },
+                                    "requestId": {
+                                        "type": "string"
+                                    }
+                                },
+                                "x-examples": {
+                                    "Example 1": {
+                                        "individualId": "2057135194",
+                                        "requestId": "2bc3bb7f-6156-46d1-ae03-bf7b76e0c257"
+                                    }
+                                }
+                            },
+                            "example": {
+                                "individualId": "2057135194",
+                                "requestId": "2bc3bb7f-6156-46d1-ae03-bf7b76e0c257"
+                            }
+                        }
+                    }
+                },
+                "summary": "Download Credential"
+            },
+            "description": "Download VC which is issued"
+        },
+        "/credentialshare/callback/notify": {
+            "post": {
+                "operationId": "handleSubscribeEvent",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/EventModel"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GenericResponseDTO"
+                                }
+                            }
+                        }
+                    }
+                },
+                "description": "callback uri used by websub to notify",
+                "summary": "Callback API for Credential share"
+            }
+        },
+        "/allProperties": {
+            "get": {
+                "operationId": "getAllProperties",
+                "description": "get all configurable properties for inji.",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "string"
+                                        },
+                                        "version": {
+                                            "type": "string"
+                                        },
+                                        "str": {
+                                            "type": "null"
+                                        },
+                                        "responsetime": {
+                                            "type": "string"
+                                        },
+                                        "metadata": {
+                                            "type": "null"
+                                        },
+                                        "response": {
+                                            "type": "object",
+                                            "properties": {
+                                                "vcDownloadMaxRetry": {
+                                                    "type": "string"
+                                                },
+                                                "minStorageRequiredForAuditEntry": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "errors": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "errorCode": {
+                                                        "type": "string",
+                                                        "description": "The error code"
+                                                    },
+                                                    "errorMessage": {
+                                                        "type": "string",
+                                                        "description": "The error message"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "x-examples": {
+                                        "Example 1": {
+                                            "id": "mosip.inji.properties",
+                                            "version": "v1",
+                                            "str": null,
+                                            "responsetime": "2022-10-31T05:22:21.009Z",
+                                            "metadata": null,
+                                            "response": {
+                                                "internal.auth.types.allowed": "otp,bio-Finger,bio-Iris,bio-Face",
+                                                "auth.types.allowed": "demo,otp,bio-Finger,bio-Iris,bio-Face",
+                                                "ekyc.auth.types.allowed": "demo,otp,bio-Finger,bio-Iris,bio-Face"
+                                            },
+                                            "errors": []
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "Success response": {
+                                        "value": {
+                                            "id": "mosip.inji.properties",
+                                            "version": "v1",
+                                            "str": null,
+                                            "responsetime": "2022-10-31T05:22:21.009Z",
+                                            "metadata": null,
+                                            "response": {
+                                                "modelDownloadMaxRetry": "10",
+                                                "audience": "ida-binding",
+                                                "allowedInternalAuthType": "otp,bio-Finger,bio-Iris,bio-Face",
+                                                "openId4VCIDownloadVCTimeout": "30000",
+                                                "vcDownloadMaxRetry": "10",
+                                                "minStorageRequiredForAuditEntry": "2",
+                                                "minStorageRequired": "2",
+                                                "vcDownloadPoolInterval": "6000",
+                                                "issuer": "residentapp",
+                                                "allowedAuthType": "demo,otp,bio-Finger,bio-Iris,bio-Face",
+                                                "allowedEkycAuthType": "demo,otp,bio-Finger,bio-Iris,bio-Face",
+                                                "warningDomainName": "https://api.env.mosip.net",
+                                                "aboutInjiUrl": "https://docs.mosip.io/inji",
+                                                "faceSdkModelUrl": "https://api.env.mosip.net/inji"
+                                            },
+                                            "errors": []
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Get all Inji app properties"
+            }
+        },
+        "/aid/get-individual-id": {
+            "post": {
+                "operationId": "aidGetIndividualId",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AidStatusRequestDTO"
+                            },
+                            "example": {
+                                "aid": "10257101921007120221029201609",
+                                "otp": "111111",
+                                "transactionID": "1234567890"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "string"
+                                        },
+                                        "version": {
+                                            "type": "string"
+                                        },
+                                        "str": {
+                                            "type": "null"
+                                        },
+                                        "responsetime": {
+                                            "type": "string"
+                                        },
+                                        "metadata": {
+                                            "type": "object"
+                                        },
+                                        "response": {
+                                            "type": "object",
+                                            "properties": {
+                                                "individualId": {
+                                                    "type": "string"
+                                                },
+                                                "individualIdType": {
+                                                    "type": "string"
+                                                },
+                                                "transactionID": {
+                                                    "type": "string"
+                                                },
+                                                "aidStatus": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "errors": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "errorCode": {
+                                                        "type": "string",
+                                                        "description": "The error code"
+                                                    },
+                                                    "errorMessage": {
+                                                        "type": "string",
+                                                        "description": "The error message"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "x-examples": {
+                                        "Example 1": {
+                                            "id": "mosip.resident.checkstatus",
+                                            "version": "1.0",
+                                            "str": null,
+                                            "responsetime": "2022-10-31T05:29:08.687Z",
+                                            "metadata": null,
+                                            "response": null,
+                                            "errors": [
+                                                {
+                                                    "errorCode": "RES-SER-422",
+                                                    "errorMessage": "Unsupported Authentication Type for child - otp"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "Success response": {
+                                        "value": {
+                                            "id": "mosip.resident.checkstatus",
+                                            "version": "1.0",
+                                            "str": null,
+                                            "responsetime": "2022-10-31T05:29:08.687Z",
+                                            "metadata": null,
+                                            "response": {
+                                                "individualId": "2948607364972132",
+                                                "transactionId": "9197490171",
+                                                "aidStatus": "PROCESSED"
+                                            },
+                                            "errors": []
+                                        }
+                                    },
+                                    "Failure response": {
+                                        "value": {
+                                            "id": "mosip.resident.checkstatus",
+                                            "version": "1.0",
+                                            "str": null,
+                                            "responsetime": "2022-10-31T05:27:38.546Z",
+                                            "metadata": null,
+                                            "response": null,
+                                            "errors": [
+                                                {
+                                                    "errorCode": "RES-SER-457",
+                                                    "errorMessage": "AID not found"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "description": "get individual id using application id",
+                "summary": "Request Id for an application Id"
+            }
+        },
+        "/issuers": {
+            "get": {
+                "operationId": "getIssuers",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "string"
+                                        },
+                                        "version": {
+                                            "type": "string"
+                                        },
+                                        "str": {
+                                            "type": "string"
+                                        },
+                                        "responsetime": {
+                                            "type": "string"
+                                        },
+                                        "metadata": {
+                                            "type": "object"
+                                        },
+                                        "response": {
+                                            "type": "object",
+                                            "properties": {
+                                                "issuers": {
+                                                    "type": "array",
+                                                    "description": "The list of issuers",
+                                                    "items": {
+                                                      "properties": {
+                                                        "credential_issuer": {
+                                                          "type": "string",
+                                                          "description": "The issuer of the credential"
+                                                        },
+                                                        "display": {
+                                                          "type": "array",
+                                                          "items": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "name": {
+                                                                  "type": "string"
+                                                                },
+                                                              "logo": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                  "url": {
+                                                                    "type": "string"
+                                                                  },
+                                                                  "alt_text": {
+                                                                    "type": "string"
+                                                                  }
+                                                                }
+                                                              },
+                                                              "language": {
+                                                                "type": "string"
+                                                              }
+                                                            }
+                                                          },
+                                                          "description": "The issuer details that is displayed to the user"
+                                                        },
+                                                        "protocol": {
+                                                          "type": "string"
+                                                        },
+                                                        "client_id": {
+                                                          "type": "string",
+                                                          "description": "The identifier of the client"
+                                                        },
+                                                        ".well-known": {
+                                                          "type": "string",
+                                                          "description": "The well-known endpoint of the client"
+                                                        }
+                                                      }
+                                                  }
+                                                }
+                                            }
+                                        },
+                                        "errors": {
+                                            "type": "array",
+                                            "maxItems": 0
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                  "Success response": {
+                                    "value": {
+                                      "id": "mosip.mimoto.issuers",
+                                      "version": "v1",
+                                      "str": null,
+                                      "responsetime": "2023-11-26T15:43:51.030Z",
+                                      "metadata": null,
+                                      "response": {
+                                        "issuers": [
+                                          {
+                                            "credential_issuer": "Issuer",
+                                            "display": [
+                                              {
+                                                "name": "issuer",
+                                                "logo": {
+                                                  "url": "https://../logo.png",
+                                                  "alt_text": "issuer-logo"
+                                                },
+                                                "language": "en"
+                                              }
+                                            ],
+                                            "protocol": "OpenId4VCI",
+                                            "client_id": "uwebweuuwe-whqrjewherhwnqfdiqwM",
+                                            ".well-known": null
+                                          }
+                                        ]
+                                      },
+                                      "errors": []
+                                    }
+                                  }
+                                }
+                            }
+                        }
+                    },
+                  "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "string"
+                                        },
+                                        "version": {
+                                            "type": "string"
+                                        },
+                                        "str": {
+                                            "type": "string"
+                                        },
+                                        "responsetime": {
+                                            "type": "string"
+                                        },
+                                        "metadata": {
+                                            "type": "object"
+                                        },
+                                        "response": {
+                                          "type": "null"
+                                        },
+                                        "errors": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "errorCode": {
+                                                        "type": "string",
+                                                        "description": "The error code"
+                                                    },
+                                                    "errorMessage": {
+                                                        "type": "string",
+                                                        "description": "The error message"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "Failure response": {
+                                        "value": {
+                                          "id": "mosip.mimoto.issuers",
+                                          "version": "v1",
+                                          "str": null,
+                                          "responsetime": "2023-11-26T15:43:51.030Z",
+                                          "metadata": null,
+                                          "response": null,
+                                          "errors": [{
+                                            "errorCode": "RESIDENT-APP-026",
+                                            "errorMessage": "Api not accessible failure"
+                                          }]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Get the list of existing issuers",
+                "description": "This api is used to get the list of issuers who issue credential to Inji"
+            }
+        },
+      "/issuers/{issuer-id}": {
+            "get": {
+                "operationId": "getIssuerDetails",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "issuer-id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "The issuer id"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "string"
+                                        },
+                                        "version": {
+                                            "type": "string"
+                                        },
+                                        "str": {
+                                            "type": "string"
+                                        },
+                                        "responsetime": {
+                                            "type": "string"
+                                        },
+                                        "metadata": {
+                                            "type": "object"
+                                        },
+                                        "response": {
+                                            "type": "object",
+                                            "properties": {
+                                                "issuers": {
+                                                    "type": "array",
+                                                    "description": "The list of issuers",
+                                                    "items": {
+                                                      "properties": {
+                                                        "credential_issuer": {
+                                                          "type": "string",
+                                                          "description": "The issuer of the credential"
+                                                        },
+                                                        "display": {
+                                                          "type": "array",
+                                                          "items": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "name": {
+                                                                  "type": "string"
+                                                                },
+                                                              "logo": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                  "url": {
+                                                                    "type": "string"
+                                                                  },
+                                                                  "alt_text": {
+                                                                    "type": "string"
+                                                                  }
+                                                                }
+                                                              },
+                                                              "language": {
+                                                                "type": "string"
+                                                              }
+                                                            }
+                                                          },
+                                                          "description": "The issuer details that is displayed to the user"
+                                                        },
+                                                        "protocol": {
+                                                          "type": "string"
+                                                        },
+                                                        "client_id": {
+                                                          "type": "string",
+                                                          "description": "The identifier of the client"
+                                                        },
+                                                        "redirect_uri": {
+                                                          "type": "string",
+                                                          "description": "The redirection uri, in our case Inji"
+                                                        },
+                                                          "scopes_supported": {
+                                                              "type": "array",
+                                                              "items": {
+                                                                  "type": "string"
+                                                              }
+                                                          },
+                                                          "authorization_endpoint": {
+                                                              "type": "string",
+                                                              "description": "The url where the authorization is performed"
+                                                          },
+                                                          "token_endpoint": {
+                                                              "type": "string",
+                                                              "description": "The url which issues the token for the given code"
+                                                          },
+                                                          "credential_endpoint": {
+                                                              "type": "string",
+                                                              "description": "The url to download the credential"
+                                                          },
+                                                          "credential_audience": {
+                                                              "type": "string"
+                                                          },
+                                                          "additional_headers": {
+                                                              "type": "object",
+                                                              "properties": {
+                                                                  "Accept": {
+                                                                      "type": "string"
+                                                                  }
+                                                              }
+                                                          },
+                                                          ".well-known": {
+                                                            "type": "string",
+                                                            "description": "The well-known endpoint of the client"
+                                                        }
+                                                      }
+                                                  }
+                                                }
+                                            }
+                                        },
+                                        "errors": {
+                                            "type": "array",
+                                            "maxItems": 0
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                  "Success response": {
+                                    "value": {
+                                      "id": "mosip.mimoto.issuers",
+                                      "version": "v1",
+                                      "str": null,
+                                      "responsetime": "2023-11-26T15:43:51.030Z",
+                                      "metadata": null,
+                                        "response": {
+                                            "credential_issuer": "Issuer",
+                                            "display": [
+                                                {
+                                                    "name": "issuer",
+                                                    "logo": {
+                                                        "url": "https://../logo.png",
+                                                        "alt_text": "issuer-logo"
+                                                    },
+                                                    "language": "en"
+                                                }
+                                            ],
+                                            "protocol": "OpenId4VCI",
+                                            "client_id": "uwebweuuwe-whqrjewherhwnqfdiqwM",
+                                            "redirect_uri": "io.mosip.residentapp.inji://oauthredirect",
+                                            "scopes_supported": [
+                                                "mosip_identity_vc_ldp"
+                                            ],
+                                            "authorization_endpoint": "https://issuer.mosip.net/authorize",
+                                            "token_endpoint": "https://api.env.mosip.net/residentmobileapp/get-token",
+                                            "credential_endpoint": "https://api.issuer/vci/credential",
+                                            "credential_audience": "https://issuer.net/v1/esignet",
+                                            "additional_headers": {
+                                                "Accept": "application/json"
+                                            },
+                                            ".well-known": null
+                                        },
+                                      "errors": []
+                                    }
+                                  }
+                                }
+                            }
+                        }
+                    },
+                  "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "string"
+                                        },
+                                        "version": {
+                                            "type": "string"
+                                        },
+                                        "str": {
+                                            "type": "string"
+                                        },
+                                        "responsetime": {
+                                            "type": "string"
+                                        },
+                                        "metadata": {
+                                            "type": "object"
+                                        },
+                                        "response": {
+                                          "type": "null"
+                                        },
+                                        "errors": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "errorCode": {
+                                                        "type": "string",
+                                                        "description": "The error code"
+                                                    },
+                                                    "errorMessage": {
+                                                        "type": "string",
+                                                        "description": "The error message"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "Failure response": {
+                                        "value": {
+                                          "id": "mosip.mimoto.issuers",
+                                          "version": "v1",
+                                          "str": null,
+                                          "responsetime": "2023-11-26T15:43:51.030Z",
+                                          "metadata": null,
+                                          "response": null,
+                                          "errors": [{
+                                            "errorCode": "RESIDENT-APP-026",
+                                            "errorMessage": "Api not accessible failure"
+                                          }]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "string"
+                                        },
+                                        "version": {
+                                            "type": "string"
+                                        },
+                                        "str": {
+                                            "type": "string"
+                                        },
+                                        "responsetime": {
+                                            "type": "string"
+                                        },
+                                        "metadata": {
+                                            "type": "object"
+                                        },
+                                        "response": {
+                                            "type": "null"
+                                        },
+                                        "errors": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "errorCode": {
+                                                        "type": "string",
+                                                        "description": "The error code"
+                                                    },
+                                                    "errorMessage": {
+                                                        "type": "string",
+                                                        "description": "The error message"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "Failure response": {
+                                        "value": {
+                                            "id": "mosip.mimoto.issuers",
+                                            "version": "v1",
+                                            "str": null,
+                                            "responsetime": "2023-11-26T15:43:51.030Z",
+                                            "metadata": null,
+                                            "response": null,
+                                            "errors": [{
+                                                "errorCode": "RESIDENT-APP-035",
+                                                "errorMessage": "Invalid issuer ID"
+                                            }]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "summary": "Get details of an issuer",
+                "description": "This api is used to get the of an issuer who issue credential to Inji"
+            }
+        },
+        "/get-token":{
+          "post": {
+            "operationId": "getTokenEndpoint",
+            "requestBody": {
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                        "code": {
+                            "type": "string"
+                        },
+                        "grant_type": {
+                            "type": "string",
+                            "description": "specifies which OAuth 2.0 grant types client will use."
+                        },"redirect_uri": {
+                            "type": "string"
+                        },"code_verifier": {
+                            "type": "string"
+                        }
+                    }
+                  },
+                  "example": {
+                      "code": "XXXXXXXXXXXXXXXXXXXXXXXXX",
+                      "grant_type": "authorization_code",
+                      "redirect_uri": "io.mosip.residentapp://oauth",
+                      "code_verifier": "7-XXXXXXXXXXNgSGvO_cD8UijH3AIWRDAg1x-M"
+                  }
+                }
+              },
+              "required": true,
+              "description": ""
+            },
+            "responses": {
+              "200": {
+                "description": "OK",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "object",
+                      "properties": {
+                          "id_token": {
+                              "type": "string"
+                          },
+                          "token_type": {
+                              "type": "string"
+                          },
+                          "access_token": {
+                              "type": "string"
+                          },
+                          "expires_in": {
+                              "type": "integer"
+                          },
+                          "scope": {
+                              "type": "string"
+                          }
+                      }
+                    },
+                    "examples": {
+                      "Success response": {
+                        "value": {
+                            "accessTokenExpirationDate": "2023-08-28T07:09:46Z",
+                            "refreshToken": null,
+                            "scopes": [],
+                            "accessToken": "XXXXX",
+                            "idToken": "XXXXXXXXXX",
+                            "tokenAdditionalParameters": {},
+                            "tokenType": "Bearer",
+                            "authorizeAdditionalParameters": {
+                                "nonce": "dsfdfXXXXX"
+                            }
+                        }
+
+                      }
+                    }
+                  }
+                }
+              },
+                "400": {
+                    "description": "Internal Server Error",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "string"
+                                    },
+                                    "version": {
+                                        "type": "string"
+                                    },
+                                    "str": {
+                                        "type": "string"
+                                    },
+                                    "responsetime": {
+                                        "type": "string"
+                                    },
+                                    "metadata": {
+                                        "type": "object"
+                                    },
+                                    "response": {
+                                        "type": "null"
+                                    },
+                                    "errors": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                "errorCode": {
+                                                    "type": "string",
+                                                    "description": "The error code"
+                                                },
+                                                "errorMessage": {
+                                                    "type": "string",
+                                                    "description": "The error message"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "examples": {
+                                "Failure response": {
+                                    "value": {
+                                        "id": "mosip.mimoto.idp",
+                                        "version": "v1",
+                                        "str": null,
+                                        "responsetime": "2023-08-14T11:55:55.017Z",
+                                        "metadata": null,
+                                        "response": null,
+                                        "errors": [
+                                            {
+                                                "errorCode": "RESIDENT-APP-034",
+                                                "errorMessage": "Could not get response from server"
+                                            }
+                                        ]
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "summary": "Get token for the auth code",
+            "description": "This endpoint should facilitate communication with the OIDC authorization server to obtain an access token."
+          }
+        }
+    },
+    "components": {
+        "schemas": {
+            "AppVIDGenerateRequestDTO": {
+                "type": "object",
+                "properties": {
+                    "individualId": {
+                        "type": "string"
+                    },
+                    "individualIdType": {
+                        "type": "string"
+                    },
+                    "otp": {
+                        "type": "string"
+                    },
+                    "vidType": {
+                        "type": "string"
+                    },
+                    "transactionID": {
+                        "type": "string"
+                    }
+                }
+            },
+            "AppOTPRequestDTO": {
+                "type": "object",
+                "properties": {
+                    "individualId": {
+                        "type": "string"
+                    },
+                    "individualIdType": {
+                        "type": "string",
+                        "description": "Type of the individual id. Only UIN or VID is allowed"
+                    },
+                    "otpChannel": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "transactionID": {
+                        "type": "string"
+                    }
+                }
+            },
+            "IndividualIdOtpRequestDTO": {
+                "type": "object",
+                "properties": {
+                    "aid": {
+                        "type": "string"
+                    },
+                    "otpChannel": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "transactionID": {
+                        "type": "string"
+                    }
+                }
+            },
+            "AuthUnlockRequestDTO": {
+                "type": "object",
+                "properties": {
+                    "transactionID": {
+                        "type": "string"
+                    },
+                    "individualIdType": {
+                        "type": "string",
+                        "default": "UIN"
+                    },
+                    "individualId": {
+                        "type": "string"
+                    },
+                    "otp": {
+                        "type": "string"
+                    },
+                    "authType": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "description": "Available authTypes are demo, bio-Finger, bio-Iris, bio-FACE"
+                    },
+                    "unlockForSeconds": {
+                        "type": "string",
+                        "default": "0"
+                    }
+                }
+            },
+            "AuthLockRequestDTO": {
+                "type": "object",
+                "properties": {
+                    "transactionID": {
+                        "type": "string"
+                    },
+                    "individualIdType": {
+                        "type": "string",
+                        "default": "UIN"
+                    },
+                    "individualId": {
+                        "type": "string"
+                    },
+                    "otp": {
+                        "type": "string"
+                    },
+                    "authType": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "description": "Available authTypes are demo, bio-Finger, bio-Iris, bio-FACE"
+                    }
+                }
+            },
+            "AppCredentialRequestDTO": {
+                "type": "object",
+                "properties": {
+                    "individualId": {
+                        "type": "string"
+                    },
+                    "otp": {
+                        "type": "string"
+                    },
+                    "transactionID": {
+                        "type": "string"
+                    },
+                    "issuer": {
+                        "type": "string"
+                    },
+                    "credentialType": {
+                        "type": "string"
+                    },
+                    "user": {
+                        "type": "string"
+                    }
+                }
+            },
+            "CredentialDownloadRequestDTO": {
+                "type": "object",
+                "properties": {
+                    "individualId": {
+                        "type": "string"
+                    },
+                    "requestId": {
+                        "type": "string"
+                    }
+                }
+            },
+            "CredentialDownloadResponseDTO": {
+                "type": "object",
+                "properties": {
+                    "credential": {
+                        "$ref": "#/components/schemas/JsonNode"
+                    },
+                    "verifiableCredential": {
+                        "$ref": "#/components/schemas/JsonNode"
+                    }
+                }
+            },
+            "JsonNode": {
+                "type": "object"
+            },
+            "Event": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "transactionId": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "$ref": "#/components/schemas/Type"
+                    },
+                    "timestamp": {
+                        "type": "string"
+                    },
+                    "dataShareUri": {
+                        "type": "string"
+                    },
+                    "data": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "EventModel": {
+                "type": "object",
+                "properties": {
+                    "publisher": {
+                        "type": "string"
+                    },
+                    "topic": {
+                        "type": "string"
+                    },
+                    "publishedOn": {
+                        "type": "string"
+                    },
+                    "event": {
+                        "$ref": "#/components/schemas/Event"
+                    }
+                }
+            },
+            "Type": {
+                "type": "object",
+                "properties": {
+                    "namespace": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    }
+                }
+            },
+            "GenericResponseDTO": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "string"
+                    },
+                    "message": {
+                        "type": "string"
+                    }
+                }
+            },
+            "AidStatusRequestDTO": {
+                "type": "object",
+                "properties": {
+                    "aid": {
+                        "type": "string"
+                    },
+                    "otp": {
+                        "type": "string"
+                    },
+                    "transactionID": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
