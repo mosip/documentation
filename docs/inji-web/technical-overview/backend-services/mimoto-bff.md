@@ -22,27 +22,19 @@ This API provides data to populate the list of supported issuers in Inji Web, wh
 
 **Note:** Upon passing search issuer, API returns filtered list.
 
-{% swagger src="../../../.gitbook/assets/mimoto.json" path="/issuers" method="get" %}
-[mimoto.json](../../../.gitbook/assets/mimoto.json)
-{% endswagger %}
-
 2.  Fetch Issuer's Configuration:
 
     This API provides issuer configurations such as well-known, token, and authorization endpoints of the issuer.
 
-{% swagger src="../../../.gitbook/assets/mimoto.json" path="/issuers/{issuer-id}/credentialTypes" method="get" %}
-[mimoto.json](../../../.gitbook/assets/mimoto.json)
-{% endswagger %}
-3. Search Issuer:
+3\. Search Issuer:
 
 This API filters the issuers based on the search criteria entered in the search bar on the Home page of Inji Web.
 
 4. Fetch Credential Types:
 
-This API fetches the list of Credential Types offered by the issuer, sourced from the well-known configuration of the issuer.   
-5. Search Credential types:
+This API fetches the list of Credential Types offered by the issuer, sourced from the well-known configuration of the issuer.\
+5\. Search Credential types:
 
-This API filters Credential Types based on the search criteria entered on the Credential Type page in Inji Web.
-6. Download PDF:
+This API filters Credential Types based on the search criteria entered on the Credential Type page in Inji Web. 6. Download PDF:
 
 This API is responsible for generating PDFs for the received VC content. It fetches display properties from the well-known configuration of the issuer and incorporates them into the predefined template of the PDF file.
