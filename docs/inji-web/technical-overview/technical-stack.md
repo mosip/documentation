@@ -13,6 +13,9 @@ The table below outlines the frameworks, tools, and technologies employed by Inj
 | [@testing-library/react](https://www.npmjs.com/package/@testing-library/react) | 14.2.1  | The `React Testing Library` is a very lightweight solution for testing React components                  |                                                                    |
 | [Jest](https://jestjs.io/docs/tutorial-react)                                  | 29.7.0  | Jest is **a well-known JavaScript testing framework** and is extensively used to test React applications |                                                                    |
 
+## Deployment
+
+The table below specifies the tools to deploy Inji Web:
 
 
 | Tool / Technology                                         | Version                     | Description                                                                                                                                                                                                                                 | License                                                             |
