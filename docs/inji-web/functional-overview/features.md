@@ -11,7 +11,7 @@ Inji Web's user-friendly interface simplifies the process of downloading your VC
 * **Verification Process**: _Verification ensures that only authorized individuals can access and download the requested VCs. This adds an extra layer of security, preventing unauthorized access and ensuring that credentials are obtained only by the rightful owner_
 * **Download Credential**: _Users can securely download and store their digital VCs in PDF format_
 
-For more detailed information on each step and the underlying systems, click here
+For more detailed information on each step and the underlying systems, click [here](https://docs.mosip.io/inji/inji-web/functional-overview/workflow).
 
 
 
