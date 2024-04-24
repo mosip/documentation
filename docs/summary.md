@@ -69,3 +69,5 @@
     * [eSignet - Authentication Layer](inji-web/technical-overview/backend-services/esignet-authentication-layer.md)
 * [Releases](inji-web/inji-web/README.md)
   * [Version 0.8.0](inji-web/inji-web/version-0.8.0.md)
+* [Build & deploy](inji-web/build-and-deploy/README.md)
+  * [Local setup](inji-web/build-and-deploy/local-setup.md)
