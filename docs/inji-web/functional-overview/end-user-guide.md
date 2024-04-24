@@ -43,3 +43,7 @@ To download a VC using eSignet as an authentication layer, please follow the bel
 <figure><img src="../../.gitbook/assets/Step7.png" alt=""><figcaption><p>Success screen</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/Step8.png" alt=""><figcaption><p>Downloaded PDF of VC</p></figcaption></figure>
+
+## Help
+
+Help section can be accessed from any page of the application. You can find some FAQs as mentioned here.
