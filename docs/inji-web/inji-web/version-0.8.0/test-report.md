@@ -46,15 +46,13 @@ Verification is performed on various configurations as mentioned below&#x20;
 
 ## Feature Health
 
-\<Image>
+<figure><img src="../../../.gitbook/assets/report-image-1.jpg" alt=""><figcaption></figcaption></figure>
 
 ## Test execution statistics&#x20;
 
 ### Functional test results <a href="#id-2s8eyo1" id="id-2s8eyo1"></a>
 
 Below are the test metrics by performing functional testing. The process followed was black box testing which based its test cases on the specifications of the software component under test. Functional test was performed in combination of individual module testing as well as integration testing. Test data were prepared in line with the user stories. Expected results were monitored by examining the user interface. The coverage includes GUI testing, System testing, End-To-End flows across multiple configurations. The testing cycle included simulation of multiple identity schema and respective UI schema configurations.
-
-\<Table - 1>
 
 | Total                               | Passed | Failed | Skipped |
 | ----------------------------------- | ------ | ------ | ------- |
@@ -63,14 +61,12 @@ Below are the test metrics by performing functional testing. The process followe
 
 Here is the detailed breakdown of metrics for each module:
 
-\<Table - 2>
-
-|                                                         | Test cases |    |
-| ------------------------------------------------------- | ---------- | -- |
-| <p> </p><p> </p><p> </p><p>INJI Web Ui Verification</p> | Total      | 89 |
-|                                                         | Passed     | 57 |
-|                                                         | Failed     | 21 |
-|                                                         | Skipped    | 11 |
+|                                                         |         | Test cases |
+| ------------------------------------------------------- | ------- | ---------- |
+| <p> </p><p> </p><p> </p><p>INJI Web Ui Verification</p> | Total   | 89         |
+|                                                         | Passed  | 57         |
+|                                                         | Failed  | 21         |
+|                                                         | Skipped | 11         |
 
 
 
@@ -83,6 +79,6 @@ The various metrics that assist in test tracking and efficiency are as follows:
 * Passed Test Cases Coverage: It measures the percentage of passed test cases. (Number of passed tests / Total number of tests executed) x 100
 * Failed Test Case Coverage: It measures the percentage of all the failed test cases. (Number of failed tests / Total number of test cases executed) x 100
 
-Git hub link for the xls file:
+Git hub link for Test-Report files (MS Word and Excel):
 
-\<TBD>
+[INJI-Web 0.8.0 - Verification - Report](https://github.com/mosip/test-management/tree/master/inji-web)
