@@ -4,19 +4,11 @@
 
 The table below outlines the frameworks, tools, and technologies employed by Inji Web:
 
-
-
-| Tool / Technology                                                              | Version | Description                                                                                              | License                                                            |
-| ------------------------------------------------------------------------------ | ------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| [React JS](https://react.dev/)                                                 | 18.2v   | React enables building user interfaces from individual units called components.                          | [MIT License](https://github.com/facebook/react/blob/main/LICENSE) |
-| [Material UI](https://mui.com/material-ui/)                                    | 5.15.9  | Material UI is **an open-source React component library that implements Google's Material Design**.      |                                                                    |
-| [@testing-library/react](https://www.npmjs.com/package/@testing-library/react) | 14.2.1  | The `React Testing Library` is a very lightweight solution for testing React components                  |                                                                    |
-| [Jest](https://jestjs.io/docs/tutorial-react)                                  | 29.7.0  | Jest is **a well-known JavaScript testing framework** and is extensively used to test React applications |                                                                    |
+<table><thead><tr><th>Tool / Technology</th><th>Version</th><th width="603">Description</th><th>License</th></tr></thead><tbody><tr><td><a href="https://react.dev/">React JS</a></td><td>18.2v</td><td>React enables building user interfaces from individual units called components.</td><td><a href="https://github.com/facebook/react/blob/main/LICENSE">MIT License</a></td></tr><tr><td><a href="https://mui.com/material-ui/">Material UI</a></td><td>5.15.9</td><td>Material UI is <strong>an open-source React component library that implements Google's Material Design</strong>.</td><td></td></tr><tr><td><a href="https://www.npmjs.com/package/@testing-library/react">@testing-library/react</a></td><td>14.2.1</td><td>The <code>React Testing Library</code> is a very lightweight solution for testing React components</td><td></td></tr><tr><td><a href="https://jestjs.io/docs/tutorial-react">Jest</a></td><td>29.7.0</td><td>Jest is <strong>a well-known JavaScript testing framework</strong> and is extensively used to test React applications</td><td></td></tr></tbody></table>
 
 ## Deployment
 
 The table below specifies the tools to deploy Inji Web:
-
 
 | Tool / Technology                                         | Version                     | Description                                                                                                                                                                                                                                 | License                                                             |
 | --------------------------------------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
