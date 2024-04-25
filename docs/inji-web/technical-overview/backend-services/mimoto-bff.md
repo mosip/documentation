@@ -13,3 +13,28 @@ In `mimoto-issuers-config.json`, new providers can be added as per the well-know
 {% endhint %}
 
 
+Issuers Listing
+When the user lands on the home page of injiweb, he can see the list of issuers, with all the issuers supported, Below issuers list API gives out all the issuers list
+
+user is also provided with the text box to search the issuers, which is passed as query param to filter the issuers
+
+List Issuers : 
+{% swagger src="../.gitbook/assets/mimoto (1).json" path="/issuers" method="get" %} mimoto (1).json {% endswagger %}
+
+
+Fetch Issuers Specific Config : 
+{% swagger src="../.gitbook/assets/mimoto (1).json" path="/issuers/{issuer-id}" method="get" %} mimoto (1).json {% endswagger %}
+
+Credential Listing 
+When the user clicks on any one of the issuer, he will be redirected to a new page , where he can see all the credentials supported by that specific issuer, Below credential list API gives out all the credentials supported by the issuer 
+
+user is also provided with the text box to search the credentials, which is passed as query param to filter the credentials
+
+List Credentials : 
+{% swagger src="../.gitbook/assets/mimoto (1).json" path="/issuers/{issuer-id}/credentialTypes" method="get" %} mimoto (1).json {% endswagger %}
+
+
+Download Credential as PDF : 
+Once the user has authenticated himself, user can invoke the credential download endpoint, which will construct a pdf of the credential and downloads it.
+
+{% swagger src="../.gitbook/assets/mimoto (1).json" path="/issuers/{issuer-id}/credentialTypes/{credentialType}/download" method="get" %} mimoto (1).json {% endswagger %}
