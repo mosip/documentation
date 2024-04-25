@@ -4,7 +4,7 @@
 _Inji, originally conceived as a mobile wallet for identity & credential, is evolving into a digital credential stack (over the next few releases). This is a natural evolution from a user-centric wallet to a digital credential stack, enabling an ecosystem with high trust at low-cost._
 {% endhint %}
 
-In the current dynamic and globalized world, it is crucial to enhance residents' access to vital services such as healthcare, financial equality, global travel, and assistance. An essential requirement for accessing these services is the authentication of individuals' identity and sharing data to prove eligibility. At present, individuals often manage multiple physical identification documents and certificates, each necessary for different rights and services.
+In the current dynamic and globalized world, it is crucial to enhance residents' access to vital services such as healthcare, financial equality, global travel, and assistance. An essential requirement for accessing these services is the authentication of individuals' identity and sharing data to prove eligibility. At present, individuals often manage multiple physical identification documents and certificates, each necessary for different rights and services..
 
 Inji is evolving as a user-centric **digital credential stack** for all types of credentials and identification solutions. It enables:
 
@@ -21,7 +21,7 @@ In Korean, Inji means `knowing` or `recognizance`. Hence, the word _Inji_ resona
 
 Inji provides a digital credential stack for creating, issuing, managing, sharing, verifying, and consuming credentials. Key components of Inji include:
 
-* [**Inji Mobile Wallet**](overview.md): A secure, trustworthy, dependable, and decentralized mobile Verifiable Credentials wallet. It allows users to download, manage, share, and verify verifiable credentials.&#x20;
+* [**Inji Mobile Wallet**](overview.md): A secure, trustworthy, dependable, and decentralized mobile Verifiable Credentials wallet. It allows users to download, manage, share, and verify verifiable credentials.
 * **Inji Web**: An easy-to-use web portal that makes credentials accessible to everyone. It enables users to download, print, store, and share verifiable credentials physically. \[_Available starting April 2024 release_]
 * **Inji Certify (issuance)**: A platform to issue credentials of any type in multiple formats. It allows issuers to create, sign, issue, bind, and store/hold verifiable credentials. \[_Available starting April 2024 release_]
 * **Inji Verify**: Tools and utilities for consuming and verifying credentials. \[_Available starting April 2024 release_]
@@ -29,6 +29,3 @@ Inji provides a digital credential stack for creating, issuing, managing, sharin
 * **Inji Govern**: Frameworks to define policies, schemas, assurance, and parties in the context of verifiable credentials. \[_Future Wishlist_]
 
 _Note: The above components are envisioned to evolve in the next few releases. For more details, refer to the_ [_Roadmap_](https://docs.mosip.io/1.2.0/roadmap)_._
-
-
-
