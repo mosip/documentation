@@ -4,7 +4,7 @@
 _Inji, originally conceived as a mobile wallet for identity & credential, is evolving into a digital credential stack (over the next few releases). This is a natural evolution from a user-centric wallet to a digital credential stack, enabling an ecosystem with high trust at low-cost._
 {% endhint %}
 
-In the current dynamic and globalized world, it is crucial to enhance residents' access to vital services such as healthcare, financial equality, global travel, and assistance. An essential requirement for accessing these services is the authentication of individuals' identity and sharing data to prove eligibility. At present, individuals often manage multiple physical identification documents and certificates, each necessary for different rights and services.
+In the current dynamic and globalized world, it is crucial to enhance residents' access to vital services such as healthcare, financial equality, global travel, and assistance. An essential requirement for accessing these services is the authentication of individuals' identity and sharing data to prove eligibility. At present, individuals often manage multiple physical identification documents and certificates, each necessary for different rights and services..
 
 Inji is evolving as a user-centric **digital credential stack** for all types of credentials and identification solutions. It enables:
 
