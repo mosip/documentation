@@ -6,25 +6,17 @@
 
 **Release Date**: _Coming Soon_
 
-## Overview
+### **Overview**
 
-We are excited to announce the launch of our first release of the Inji web application, offering seamless download of verifiable credentials in PDF format. Key feature of this version 0.8.0 release is:
+We are extremely delighted to announce the launch of the **first release of the Inji Web** application, introducing seamless download of Verifiable Credentials in PDF format as the key feature of Version **0.8.0**.
 
-* Download VC as .pdf file
+**Summary**
 
-Complementing our existing Inji mobile app, Inji Web platform offers a user-friendly interface with enhanced accessibility and convenience for our users to securely download credentials with ease, anytime, and anywhere.
+Below are the details for the **Inji Version 0.8.0** release:\
+\
+**Download VC as PDF**
 
-Stay tuned for more updates as we continue to improve and expand our platform. You can refer to our Roadmap here.
-
-## Summary
-
-Please find below the details for the **Inji Version 0.8.0** release:
-
-### Download VC as .pdf file
-
-Inji web seamlessly connects with Mimoto and eSignet to fetch the credentials from the issuer and download the VCs in PDF format.
-
-To know more about the feature, refer here.
+Complementing our existing Inji mobile app, the Inji Web platform provides users with a user-friendly web interface for securely downloading credentials with ease, anytime and anywhere. Further, Inji web seamlessly integrates with Mimoto and eSignet to fetch the credentials from the issuer and download the Verifiable Credential in PDF format. To know more about the feature refer[ ](https://docs.esignet.io/end-user-guide/knowledge-based-authentication)_**here<**Link**>**_.
 
 ## Repository Released
 
@@ -35,8 +27,6 @@ To know more about the feature, refer here.
 | mosip-config     |                   |
 
 ## Known Issues
-
-
 
 | Jira ID                                                           | Description                                                                                                     |
 | ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
@@ -51,5 +41,5 @@ To know more about the feature, refer here.
 
 * [Feature documentation](https://docs.mosip.io/inji/inji-web/functional-overview/features)
 * User guide
-* QA Report
+* [QA Report](https://github.com/mosip/test-management/tree/master/inji-web)
 * API Documentation
