@@ -1,7 +1,6 @@
 # Table of contents
 
 * [Inji](README.md)
-  
 
 ## Inji Mobile Wallet
 
@@ -64,7 +63,7 @@
 * [Technical Overview](inji-web/technical-overview/README.md)
   * [Technology Stack](inji-web/technical-overview/technical-stack.md)
   * [Architecture](inji-web/technical-overview/architecture.md)
-  * [Supported browsers](inji-web/technical-overview/supported-browsers.md)
+  * [Supported Browsers](inji-web/technical-overview/supported-browsers.md)
   * [Backend services](inji-web/technical-overview/backend-services/README.md)
     * [Mimoto - BFF](inji-web/technical-overview/backend-services/mimoto-bff.md)
     * [eSignet - Authentication Layer](inji-web/technical-overview/backend-services/esignet-authentication-layer.md)
