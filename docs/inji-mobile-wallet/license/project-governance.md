@@ -43,8 +43,9 @@ Scope of ContributionsThe whole of the project is open to contributions. The kin
 
 #### Process to Contribute
 
-● Code, Documentation & Design ○ All artefacts including the code are maintained in the github repository.Contributions can be made by raising a Pull Request. ● Reporting Issues & Feature Request
-
-* ○ Issues and backlog are maintained in Jira and members of the project team will have access to Jira to add feature requests and report bugs
-* ○ One off users will not have access for bug reports and feature requests. They can report the same in the community pages
-* ○ Regular users who do not have access, can request the same and the maintainers can provide access after considerationWe use Jira to track the work associated with the project (account required). That is where issues open for community contribution can be found.Pull Request Review ProcessThe process to contribute the code is present here. Once code is submitted, it is reviewed through the following process:
+* Code, Documentation & Design&#x20;
+  * All artefacts including the code are maintained in the github repository.Contributions can be made by raising a Pull Request.
+* Reporting Issues & Feature Request
+  * Issues and backlog are maintained in Jira and members of the project team will have access to Jira to add feature requests and report bugs
+  * One off users will not have access for bug reports and feature requests. They can report the same in the community pages
+  * Regular users who do not have access, can request the same and the maintainers can provide access after considerationWe use Jira to track the work associated with the project (account required). That is where issues open for community contribution can be found.Pull Request Review ProcessThe process to contribute the code is present here. Once code is submitted, it is reviewed through the following process:
