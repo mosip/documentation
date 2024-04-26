@@ -9,9 +9,16 @@ Detailed API documentation for Mimoto is accessible [here](https://mosip.stoplig
 {% hint style="info" %}
 Configuration details to set up a new provider that can issue VC, can be found in the `mimoto-issuers-config.json` property file. Refer to [mimoto-issuers-config.json](https://github.com/mosip/mosip-config/blob/collab-old/mimoto-issuers-config.json) of Collab environment.
 
+### Mimoto endpoints used by Inji Web:
+
+1. **Fetch Issuers**:
+
 In `mimoto-issuers-config.json`, new providers can be added as per the well-known schema.
 {% endhint %}
 
 {% swagger src="../../../.gitbook/assets/mimoto_latest.json" path="/issuers" method="get" %}
 [mimoto_latest.json](../../../.gitbook/assets/mimoto_latest.json)
 {% endswagger %}
+
+2. **Fetch Issuer's Configuration**:
+
