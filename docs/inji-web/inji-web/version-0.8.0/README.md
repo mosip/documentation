@@ -42,4 +42,4 @@ Complementing our existing Inji mobile app, the Inji Web platform provides users
 * [Feature documentation](https://docs.mosip.io/inji/inji-web/functional-overview/features)
 * [User guide](https://docs.mosip.io/inji/inji-web/functional-overview/end-user-guide)
 * [QA Report](https://docs.mosip.io/inji/inji-web/inji-web/version-0.8.0/test-report)
-* API Documentation
+* [API Documentation](https://docs.mosip.io/inji/inji-web/technical-overview/backend-services/mimoto-bff)
