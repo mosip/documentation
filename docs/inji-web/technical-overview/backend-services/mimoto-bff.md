@@ -12,9 +12,7 @@ Configuration details to set up a new provider that can issue VC, can be found i
 In `mimoto-issuers-config.json`, new providers can be added as per the well-known schema.
 {% endhint %}
 
-### Mimoto endpoints used by Inji Web:
 
-1. **Fetch Issuers**:
    
 {% swagger src="../../../.gitbook/assets/mimoto_latest.json" path="/issuers" method="get" %}
 [mimoto_latest.json](../../../.gitbook/assets/mimoto_latest.json)
