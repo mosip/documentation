@@ -2,14 +2,14 @@
 
 ### Open Source Governance Process at MOSIP <a href="#open-source-governance-process-at-mosip" id="open-source-governance-process-at-mosip"></a>
 
-#### 1. Overview <a href="#id-1.-overview" id="id-1.-overview"></a>
+## 1. Overview <a href="#id-1.-overview" id="id-1.-overview"></a>
 
 Open source projects can have a variety of contributors. This can potentially lead to confusion or conflict. This document sets forth a simple transparent set of guidelines to describe the roles and process to be followed. As part of that it covers:
 
 * Process of open source contributions and review of code in this project.
 * Decision-making process on backlogs and including contributions.
 
-#### 2. GovernanceStructure <a href="#id-2.-governancestructure" id="id-2.-governancestructure"></a>
+### 2. GovernanceStructure <a href="#id-2.-governancestructure" id="id-2.-governancestructure"></a>
 
 The MOSIP project follows a simple structure with 3 levels.
 
@@ -29,7 +29,7 @@ Given below is a list of specific roles and their responsibilities.&#x20;
 * Members are either individuals or persons affiliated with contributing organisations. All contributions are bound by the licensing of the project.
 * Product Owner is responsible for the analysis, design, development, and implementation of business solutions to meet the needs of the organisation. He/She must have a strong understanding of the business domain, processes, and software development lifecycle Agile development methodologies).
 
-#### 3. Contributions <a href="#id-3.-contributions" id="id-3.-contributions"></a>
+## 3. Contributions <a href="#id-3.-contributions" id="id-3.-contributions"></a>
 
 Scope of ContributionsThe whole of the project is open to contributions. The kind of contributions that are welcome include:
 
@@ -74,7 +74,7 @@ Project Lead initiates the release process. The process can be found here.
 
 Attribution is in accordance with the relevant licence. Individual and affiliated contributors will be listed.
 
-### 4. Decision-Making
+## 4. Decision-Making
 
 The key decisions to be taken are for the following activities
 
