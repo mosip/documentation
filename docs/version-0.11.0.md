@@ -31,7 +31,7 @@ Please find below the details for the 0.11.0 release:
 
 ## Documentation
 
-* [Feature documentation](architecture/features.md)
+* [Feature Documentation](architecture/features.md)
 * [Integration Guides](integration-guide/)
-* [User guide](end-user-guide.md)
+* [User Guide](end-user-guide.md)
 * [API Documentation](https://github.com/mosip/mimoto/tree/release-0.10.0/docs/postman-collections)

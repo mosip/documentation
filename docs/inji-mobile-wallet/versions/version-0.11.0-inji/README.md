@@ -14,7 +14,7 @@ We are excited to announce the release of **Inji Version 0.11.0** . This release
 * Data backup and restore
 * Improved UI / UX
 
-In the recent past, Inji mobile app had undergone GenderMag analysis which addresses gender / inclusivity bias in software. In this release, we have incorporated GenderMag features for UI / UX in inclusivity space. 
+In the recent past, Inji mobile app had undergone GenderMag analysis which addresses gender / inclusivity bias in software. In this release, we have incorporated GenderMag features for UI / UX in inclusivity space.
 
 To know more about the GenderMag UI/UX changes in the application, please refer [here](https://docs.mosip.io/inji/inji-mobile-wallet/overview/features/gendermag).
 
@@ -73,8 +73,8 @@ Mentioned below is the list of other known issues.
 
 ## Documentation
 
-* [Feature documentation](https://docs.mosip.io/inji/inji-mobile-wallet/overview/features)
+* [Feature Documentation](https://docs.mosip.io/inji/inji-mobile-wallet/overview/features)
 * [Integration Guides](https://docs.mosip.io/inji/inji-mobile-wallet/integration-guide)
-* [User guide](https://docs.mosip.io/inji/inji-mobile-wallet/end-user-guide)
+* [User Guide](https://docs.mosip.io/inji/inji-mobile-wallet/end-user-guide)
 * [QA Report](https://docs.mosip.io/inji/inji-mobile-wallet/versions/version-0.11.0-inji/test-report)
 * [API Documentation](https://github.com/mosip/mimoto/tree/release-0.10.0/docs/postman-collections)
