@@ -40,6 +40,6 @@ Complementing our existing Inji mobile app, the Inji Web platform provides users
 ## Documentation
 
 * [Feature documentation](https://docs.mosip.io/inji/inji-web/functional-overview/features)
-* User guide
-* [QA Report](https://github.com/mosip/test-management/tree/master/inji-web)
+* [User guide](https://docs.mosip.io/inji/inji-web/functional-overview/end-user-guide)
+* [QA Report](https://docs.mosip.io/inji/inji-web/inji-web/version-0.8.0/test-report)
 * API Documentation
