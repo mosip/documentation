@@ -68,28 +68,24 @@ The decision by the maintainer is communicated to the contributor via Jira as we
 
 In exceptional cases such as an emergency or an urgent requirement or a very trivial but time-sensitive correction, a maintainer may - at their discretion - choose to directly review the submitted pull request and take a decision on the commit.
 
-
-
-
-
-Release process
+#### Release process
 
 Project Lead initiates the release process. The process can be found here.
 
-Attribution
+#### Attribution
 
 Attribution is in accordance with the relevant licence. Individual and affiliated contributors will be listed.
 
-4\. Decision-Making
+### 4. Decision-Making
 
 The key decisions to be taken are for the following activities
 
-* ●  Roadmap and backlog priority
-* ●  Triaging of bugs and requirements
-* ●  Accepting a contribution Pull Request)
-*   ●  Releases
+* Roadmap and backlog priority
+* Triaging of bugs and requirements
+* Accepting a contribution Pull Request)
+* Releases
 
-    Most decisions will be made in periodical meetings where owners of the relevant aspect of work present a case for a decision and the decision will be made either by consensus, or by majority where a quorum exists. The maintainers of the project will be the decision makers. The project lead will have veto power on decisions due to their expertise and commitment to the vision of the project. Contributors can share their views in these meetings for consideration.
+Most decisions will be made in periodical meetings where owners of the relevant aspect of work present a case for a decision and the decision will be made either by consensus, or by majority where a quorum exists. The maintainers of the project will be the decision makers. The project lead will have veto power on decisions due to their expertise and commitment to the vision of the project. Contributors can share their views in these meetings for consideration.
 
 
 
