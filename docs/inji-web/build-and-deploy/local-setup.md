@@ -21,7 +21,7 @@ $ nvm install 18
 
 * **helm:** folder contains helm charts required to deploy on K8S
 * **inji-web:** contains the source code and Dockerfile
-* README link
+* [README link](https://github.com/mosip/inji-web/blob/release-0.8.0/README.md)
 
 ***
 
