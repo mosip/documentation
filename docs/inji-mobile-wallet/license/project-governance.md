@@ -49,3 +49,59 @@ Scope of ContributionsThe whole of the project is open to contributions. The kin
   * Issues and backlog are maintained in Jira and members of the project team will have access to Jira to add feature requests and report bugs
   * One off users will not have access for bug reports and feature requests. They can report the same in the community pages
   * Regular users who do not have access, can request the same and the maintainers can provide access after considerationWe use Jira to track the work associated with the project (account required). That is where issues open for community contribution can be found.Pull Request Review ProcessThe process to contribute the code is present here. Once code is submitted, it is reviewed through the following process:
+
+We use Jira to track the work associated with the project (account required). That is where issues open for community contribution can be found.
+
+#### Pull Request Review Process
+
+The process to contribute the code is present here. Once code is submitted, it is reviewed through the following process:
+
+
+
+At least two members should have reviewed the submitted contribution for the pull request to be accepted. The maintainers may request for more reviews of the code from other relevant members.
+
+If the members deem the submitted code to be critical to overall product development, they can seek the inputs of the relevant product owners for the review process.
+
+The maintainers review the two (or more) sets of comments received from the tech leads and the submitted code before taking a decision regarding committing the code to the appropriate branch.
+
+The decision by the maintainer is communicated to the contributor via Jira as well as Pull Request.
+
+In exceptional cases such as an emergency or an urgent requirement or a very trivial but time-sensitive correction, a maintainer may - at their discretion - choose to directly review the submitted pull request and take a decision on the commit.
+
+
+
+
+
+Release process
+
+Project Lead initiates the release process. The process can be found here.
+
+Attribution
+
+Attribution is in accordance with the relevant licence. Individual and affiliated contributors will be listed.
+
+4\. Decision-Making
+
+The key decisions to be taken are for the following activities
+
+* ●  Roadmap and backlog priority
+* ●  Triaging of bugs and requirements
+* ●  Accepting a contribution Pull Request)
+*   ●  Releases
+
+    Most decisions will be made in periodical meetings where owners of the relevant aspect of work present a case for a decision and the decision will be made either by consensus, or by majority where a quorum exists. The maintainers of the project will be the decision makers. The project lead will have veto power on decisions due to their expertise and commitment to the vision of the project. Contributors can share their views in these meetings for consideration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
