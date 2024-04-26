@@ -50,11 +50,11 @@ The whole of the project is open to contributions. The kind of contributions tha
   * One off users will not have access for bug reports and feature requests. They can report the same in the community pages
   * Regular users who do not have access, can request the same and the maintainers can provide access after considerationWe use Jira to track the work associated with the project (account required). That is where issues open for community contribution can be found.Pull Request Review ProcessThe process to contribute the code is present here. Once code is submitted, it is reviewed through the following process:
 
-We use Jira to track the work associated with the project (account required). That is where issues open for community contribution can be found.
+We use [Jira](https://mosip.atlassian.net/issues/?jql=labels%20%3D%20%22BLE%22) to track the work associated with the project (account required). That is where issues open for community contribution can be found.
 
 ### Pull Request Review Process
 
-The process to contribute the code is present here. Once code is submitted, it is reviewed through the following process:
+The process to contribute the code is present [here](https://github.com/mosip/tuvali/blob/master/CONTRIBUTING.md). Once code is submitted, it is reviewed through the following process:
 
 * At least two members should have reviewed the submitted contribution for the pull request to be accepted. The maintainers may request for more reviews of the code from other relevant members.
 * If the members deem the submitted code to be critical to overall product development, they can seek the inputs of the relevant product owners for the review process.
@@ -64,7 +64,7 @@ The process to contribute the code is present here. Once code is submitted, it i
 
 ### Release process
 
-Project Lead initiates the release process. The process can be found here.
+Project Lead initiates the release process. The process can be found [here](https://docs.mosip.io/1.2.0/community/release-process).
 
 #### Attribution
 
