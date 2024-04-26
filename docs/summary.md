@@ -70,5 +70,5 @@
 * [Releases](inji-web/inji-web/README.md)
   * [Version 0.8.0](inji-web/inji-web/version-0.8.0/README.md)
     * [Test Report](inji-web/inji-web/version-0.8.0/test-report.md)
-* [Build & deploy](inji-web/build-and-deploy/README.md)
+* [Build & Deploy](inji-web/build-and-deploy/README.md)
   * [Local setup](inji-web/build-and-deploy/local-setup.md)
