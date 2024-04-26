@@ -26,7 +26,7 @@ In `mimoto-issuers-config.json`, new providers can be added as per the well-know
 [mimoto_latest.json](../../../.gitbook/assets/mimoto_latest.json)
 {% endswagger %}
 
-
+3. **Download PDF**: 
 
 {% swagger src="../../../.gitbook/assets/mimoto (2) (1).json" path="/issuers/{issuer-id}/credentials/{credentialType}/download" method="get" %}
 [mimoto (2) (1).json](<../../../.gitbook/assets/mimoto (2) (1).json>)
