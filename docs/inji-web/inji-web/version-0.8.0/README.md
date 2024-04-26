@@ -16,15 +16,15 @@ Below are the details for the **Inji Version 0.8.0** release:\
 \
 **Download VC as PDF**
 
-Complementing our existing Inji mobile app, the Inji Web platform provides users with a user-friendly web interface for securely downloading credentials with ease, anytime and anywhere. Further, Inji web seamlessly integrates with Mimoto and eSignet to fetch the credentials from the issuer and download the Verifiable Credential in PDF format. To know more about the feature refer[ ](https://docs.esignet.io/end-user-guide/knowledge-based-authentication)_**here<**Link**>**_.
+Complementing our existing Inji mobile app, the Inji Web platform provides users with a user-friendly web interface for securely downloading credentials with ease, anytime and anywhere. Further, Inji web seamlessly integrates with Mimoto and eSignet to fetch the credentials from the issuer and download the Verifiable Credential in PDF format. To know more about the feature refer[ ](https://docs.esignet.io/end-user-guide/knowledge-based-authentication)_**here\<Link>**_.
 
 ## Repository Released
 
-| **Repositories** | **Tags Released** |
-| ---------------- | ----------------- |
-| Inji Web         | **v0.8.0**        |
-| mimoto           | **v0.12.0**       |
-| mosip-config     | **v0.12.0-INJI**  |
+| **Repositories** | **Tags Released**                                                      |
+| ---------------- | ---------------------------------------------------------------------- |
+| Inji Web         | [**v0.8.0**](https://github.com/mosip/inji-web/tree/release-0.8.0)     |
+| mimoto           | [**v0.12.0**](https://github.com/mosip/mimoto/tree/release-0.12.0)     |
+| mosip-config     | [**v0.12.0-INJI**](https://github.com/mosip/mosip-config/tree/qa-inji) |
 
 ## Known Issues
 
