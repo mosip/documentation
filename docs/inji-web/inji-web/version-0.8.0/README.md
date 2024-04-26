@@ -22,9 +22,9 @@ Complementing our existing Inji mobile app, the Inji Web platform provides users
 
 | **Repositories** | **Tags Released** |
 | ---------------- | ----------------- |
-| Inji Web         |                   |
-| mimoto           |                   |
-| mosip-config     |                   |
+| Inji Web         | **v0.8.0**        |
+| mimoto           | **v0.12.0**       |
+| mosip-config     | **v0.12.0-INJI**  |
 
 ## Known Issues
 
