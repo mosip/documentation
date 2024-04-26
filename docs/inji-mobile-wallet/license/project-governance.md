@@ -13,24 +13,35 @@ Open source projects can have a variety of contributors. This can potentially le
 
 #### 2. GovernanceStructure <a href="#id-2.-governancestructure" id="id-2.-governancestructure"></a>
 
-The MOSIP project follows a simple structure with 3 levels.Level 1 - MOSIP Technology Committee. This committee is responsible for high level roadmap and policy decisions such as licensing, and technology stack.Level 2 - Project leadership. This is the executive leadership at MOSIP that includes key project roles within MOSIP such as product owner, engineering lead, and architects. These members will be appointed as maintainers and lead in the project by MOSIP.Level 3 - Members. This is a set of people who are working on the project. Given below is a list of specific roles and their responsibilities. Roles and Responsibilities
+The MOSIP project follows a simple structure with 3 levels.
 
-* ● Maintainers are individuals who have “Commit” rights; And are the primary caretakers of the code and the strategic vision of the project. They are empowered to make decisions and resolve disputes for all contributions. They are appointed by MOSIP.
-* ● Project Lead is the chair of the committee of maintainers. They are appointed by MOSIP.
-* ● Contributors are the people or organisations who take part actively in the project and its meetings, code, design, and test and are recognized for their contributions. The contributors are part of the GitHub Members and would be actively involved in the discussion of a PR and review. Members strongly influence the Maintainer's decision.
-* ● Members are either individuals or persons affiliated with contributing organisations. All contributions are bound by the licensing of the project.
+Level 1 - MOSIP Technology Committee. This committee is responsible for high level roadmap and policy decisions such as licensing, and technology stack.
 
-● Product Owner is responsible for the analysis, design, development, and implementation of business solutions to meet the needs of the organisation. He/She must have a strong understanding of the business domain, processes, and software development lifecycle Agile development methodologies).
+Level 2 - Project leadership. This is the executive leadership at MOSIP that includes key project roles within MOSIP such as product owner, engineering lead, and architects. These members will be appointed as maintainers and lead in the project by MOSIP.
+
+Level 3 - Members. This is a set of people who are working on the project.&#x20;
+
+Given below is a list of specific roles and their responsibilities.&#x20;
+
+#### Roles and Responsibilities
+
+* Maintainers are individuals who have “Commit” rights; And are the primary caretakers of the code and the strategic vision of the project. They are empowered to make decisions and resolve disputes for all contributions. They are appointed by MOSIP.
+* Project Lead is the chair of the committee of maintainers. They are appointed by MOSIP.
+* Contributors are the people or organisations who take part actively in the project and its meetings, code, design, and test and are recognized for their contributions. The contributors are part of the GitHub Members and would be actively involved in the discussion of a PR and review. Members strongly influence the Maintainer's decision.
+* Members are either individuals or persons affiliated with contributing organisations. All contributions are bound by the licensing of the project.
+* Product Owner is responsible for the analysis, design, development, and implementation of business solutions to meet the needs of the organisation. He/She must have a strong understanding of the business domain, processes, and software development lifecycle Agile development methodologies).
 
 #### 3. Contributions <a href="#id-3.-contributions" id="id-3.-contributions"></a>
 
 Scope of ContributionsThe whole of the project is open to contributions. The kind of contributions that are welcome include:
 
-* ● Code
-* ● Documentation
-* ● Design
-* ● Raising Bugs
-* ● Feature RequestProcess to Contribute
+* Code
+* Documentation
+* Design
+* Raising Bugs
+* Feature Request
+
+#### Process to Contribute
 
 ● Code, Documentation & Design ○ All artefacts including the code are maintained in the github repository.Contributions can be made by raising a Pull Request. ● Reporting Issues & Feature Request
 
