@@ -2,7 +2,7 @@
 
 ## Unified Login
 
-eSignet offers a convenient feature called Unified Login, which allows users to access applications and various services through a single interface. This feature provides a single sign-on (SSO) experience, eliminating the need for multiple logins. Additionally, eSignet enables seamless login to any government service by utilizing a single credential through the existing ID repository.
+eSignet offers a convenient feature called Unified Login, which allows users to access applications and various services through a single interface and thus eliminating the need for multiple logins. Additionally, eSignet enables seamless login to any government service by utilizing a single credential through the existing ID repository.
 
 ## Password-less Authentication
 
