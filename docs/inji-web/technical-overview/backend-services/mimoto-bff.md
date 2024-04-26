@@ -38,7 +38,7 @@ This API fetches the list of Credential Types offered by the issuer, sourced fro
 
 `https://api.collab.mosip.net/residentmobileapp/issuers/{issuerid}/credentialTypes?search={credentials}`
 
-### Method Type: GET
+**Method Type: GET**
 
 ### Parameter: 
 
