@@ -22,6 +22,3 @@ In `mimoto-issuers-config.json`, new providers can be added as per the well-know
 
 2. **Fetch Issuer's Configuration**:
 
-3. **Search Issuer**:
-
-4. **Download PDF**:

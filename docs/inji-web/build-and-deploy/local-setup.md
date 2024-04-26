@@ -1,5 +1,7 @@
 # Local setup
 
+This document aims to assist users in setting up Inji Web on their local environment, offering step-by-step instructions to replicate the platform's functionality on their machine for development or testing purposes.
+
 ### Repositories:
 
 Clone the repositories in the local to bring up your own setup. Repository information can be fetched from [here](https://docs.mosip.io/inji/inji-web/inji-web/version-0.8.0#repository-released).
