@@ -33,7 +33,7 @@ Complementing our existing Inji mobile app, the Inji Web platform provides users
 | [**INJIWEB-291**](https://mosip.atlassian.net/browse/INJIWEB-291) | Inji-web: Multi languages support is not working at Authentication window                                       |
 | [**INJIWEB-290**](https://mosip.atlassian.net/browse/INJIWEB-290) | Inji-web: QR code is not working on VC card                                                                     |
 | [**INJIWEB-243**](https://mosip.atlassian.net/browse/INJIWEB-243) | Inji-web: Observed drop down box in search bar at issuer selection page as well as at credential download pages |
-| [**INJIWEB-180**](https://mosip.atlassian.net/browse/INJIWEB-180) | Inji-web: :Not getting proper error message when the website is down                                            |
+| [**INJIWEB-180**](https://mosip.atlassian.net/browse/INJIWEB-180) | Inji-web: Not getting proper error message when the website is down                                             |
 | [**INJIWEB-132**](https://mosip.atlassian.net/browse/INJIWEB-132) | Inji-web: Data in VC(PDF) are not properly aligned                                                              |
 | [**INJIWEB-131**](https://mosip.atlassian.net/browse/INJIWEB-131) | Inji-web: attributes are missing compared to the VC on inji mobile                                              |
 
