@@ -12,20 +12,3 @@ Configuration details to set up a new provider that can issue VC, can be found i
 In `mimoto-issuers-config.json`, new providers can be added as per the well-known schema.
 {% endhint %}
 
-
-
-{% swagger src="../../../.gitbook/assets/mimoto (1).json" path="/issuers" method="get" %}
-[mimoto (1).json](<../../../.gitbook/assets/mimoto (1).json>)
-{% endswagger %}
-
-{% swagger src="../../../.gitbook/assets/mimoto (1).json" path="/issuers/{issuer-id}" method="get" %}
-[mimoto (1).json](<../../../.gitbook/assets/mimoto (1).json>)
-{% endswagger %}
-
-{% swagger src="../../../.gitbook/assets/mimoto (1).json" path="/issuers/{issuer-id}/credentialTypes" method="get" %}
-[mimoto (1).json](<../../../.gitbook/assets/mimoto (1).json>)
-{% endswagger %}
-
-{% swagger src="../../../.gitbook/assets/mimoto (1).json" path="/issuers/{issuer-id}/credentials/{credentialType}/download" method="get" %}
-[mimoto (1).json](<../../../.gitbook/assets/mimoto (1).json>)
-{% endswagger %}
