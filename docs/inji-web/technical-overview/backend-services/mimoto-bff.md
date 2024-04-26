@@ -40,15 +40,15 @@ This API fetches the list of Credential Types offered by the issuer, sourced fro
 
 **Method Type: GET**
 
-### Parameter: 
+**Parameter**: 
 
 issuerid: ID of the issuer in string type.
 
-### Query parameter
+**Query parameter**
 
 credentials: Search parameter for credential display name in string type.
 
-### Response
+**Response**
 
 Response code 200
 ```
