@@ -51,6 +51,7 @@
 * [End User Guide](end-user-guide.md)
 * [Supported Integrations](supported-integrations/README.md)
   * [MOSIP](https://docs.mosip.io)
+* [License](inji-mobile-wallet/license.md)
 * [Project Governance](inji-mobile-wallet/project-governance.md)
 
 ## INJI WEB
