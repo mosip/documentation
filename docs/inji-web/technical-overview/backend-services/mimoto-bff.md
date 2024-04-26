@@ -25,3 +25,9 @@ In `mimoto-issuers-config.json`, new providers can be added as per the well-know
 {% swagger src="../../../.gitbook/assets/mimoto_latest.json" path="/issuers/{issuer-id}" method="get" %}
 [mimoto_latest.json](../../../.gitbook/assets/mimoto_latest.json)
 {% endswagger %}
+
+
+
+{% swagger src="../../../.gitbook/assets/mimoto (2) (1).json" path="/issuers/{issuer-id}/credentialTypes" method="get" %}
+[mimoto (2) (1).json](<../../../.gitbook/assets/mimoto (2) (1).json>)
+{% endswagger %}
