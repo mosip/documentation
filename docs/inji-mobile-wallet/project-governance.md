@@ -9,7 +9,7 @@ Open source projects can have a variety of contributors. This can potentially le
 * Process of open source contributions and review of code in this project.
 * Decision-making process on backlogs and including contributions.
 
-## 2. GovernanceStructure <a href="#id-2.-governancestructure" id="id-2.-governancestructure"></a>
+## 2. Governance Structure <a href="#id-2.-governancestructure" id="id-2.-governancestructure"></a>
 
 The MOSIP project follows a simple structure with 3 levels.
 
