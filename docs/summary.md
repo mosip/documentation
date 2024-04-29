@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Inji](README.md)
+  * [Use case](readme/use-case.md)
 
 ## Inji Mobile Wallet
 
