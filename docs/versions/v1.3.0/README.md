@@ -4,6 +4,8 @@
 
 **Release Date**: 14th March, 2024
 
+**Note**: Please be informed that the `esignet-signup` tag has been updated from **v1.0.0** to **v1.0.1** on 23rd April 2024 to address a bug in the helm installation script, which was causing `esignet-signup` service to fail to initialize.
+
 ## Overview
 
 The 1.3.0 version of eSignet focuses on launching new features in authentication modes and support for Sign-up service:
@@ -36,7 +38,7 @@ Below are the features available in the release:
 | esignet                | [1.3.0](https://github.com/mosip/esignet/tree/v1.3.0)                                 |
 | esignet-mock-services  | [0.9.2](https://github.com/mosip/esignet-mock-services/tree/v0.9.2)                   |
 | id-repo                | [1.2.0.1-B3](https://github.com/mosip/id-repository/tree/v1.2.0.1-B3)                 |
-| esignet-signup         | [1.0.0](https://github.com/mosip/esignet-signup/tree/v1.0.0)                          |
+| esignet-signup         | [1.0.1](https://github.com/mosip/esignet-signup/tree/v1.0.1)                          |
 | mosip-openid-bridge    | [1.2.0.1-B4](https://github.com/mosip/mosip-openid-bridge/tree/v1.2.0.1-B4)           |
 | mosip-openid-bridge    | [1.2.0.1-B4-lite](https://github.com/mosip/mosip-openid-bridge/tree/v1.2.0.1-B4-lite) |
 
