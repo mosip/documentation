@@ -77,7 +77,8 @@
 
 ## INJI CERTIFY
 
-* [Overview](inji-certify/overview.md)
+* [Overview](inji-certify/overview/README.md)
+  * [Release Notes](inji-certify/overview/release-notes.md)
 * [Functional Overview](inji-certify/functional-overview.md)
 * [Technical Overview](inji-certify/technical-overview.md)
 * [Releases](inji-certify/releases.md)
