@@ -58,6 +58,39 @@ Below is the sample authentication demo UI image.
 
 ![](\_images/sample-auth-demo-ui.png)
 
+## Authentication Error Eventing
+
+The ID Authentication service now offers an 'Authentication Error Eventing' feature. When an authentication related error occurs, a message will prompt to the user to retry after a few minutes. In the meantime, Kafka event will be triggered to publish the data to the designated topic, allowing subscribers to receive a message for further processing.
+
+This feature can be utilized for different use cases such as on demand template extraction, report generations, to identify any fraudulent occurrence etc.
+
+One of the use case is on demand template extraction. In an instance where an user has successfully registered and obtained a valid UIN / VID, but encounters an error during authentication due to unavailability of the entered UIN / VID in the IDA DB, this feature attempts to resolve. This issue tends to occur particularly during periods of high registration and UIN generation volumes, where additional time is needed for data transmission from the ID Repository to the IDA DB. This authentication error eventing feature will help in capturing the errors related to this issue and event will be created. subscribers can capture this event and process them accordingly to enable the template extraction to proceed with the authentication / verification process.
+
+This feature is designed to be a plugin feature in IDA, which can be configured based on the requirement. To enable the feature below property should be marked as `True`:
+
+`mosip.ida.authentication.error.eventing.enabled=true`
+
+Once this property is enabled, related kafka property setup should be installed to utilize the feature.
+
+For further guidance on this feature, you can refer to the documentation provided here.
+
+Subscribers who will be subscribing to the event should be onboarded as authentication partners. To on board subscribers below steps needed to be followed: 
+
+**Steps to onboard the partners**:
+
+1. Refer this [link](https://docs.mosip.io/1.2.0/partners#authentication-partner-ap) to onboard the subscribers as authentication partners
+2. Partners should be onboarded with partner id as `mpartner-default-tempextraction`
+3. Once the partner is onboarded, create a policygroup by the name `mpolicygroup-default-tempextraction` and policy and policy group should be published
+4. The policy should be configured to disallow any authentication to be carryout but the partner except reading the kafka event. To attain this, `allowedAuthTypes` should be marked as 'null'.
+
+For example:
+
+```
+{"authTokenType":"partner","allowedKycAttributes":[{"attributeName":"fullName"},{"attributeName":"gender"},{"attributeName":"residenceStatus"},{"attributeName":"dateOfBirth"},{"attributeName":"photo"}],"kycLanguages":["ara","eng"],"allowedAuthTypes":[]}
+```
+
+**Note**: This feature is exclusively available in ID Authentication version 1.2.1.0 only. To configure the latest version of IDA and access this new feature, please refer to this link here. 
+
 ## Configuration
 
 Refer to [ID Authentication Configuration Guide](https://github.com/mosip/id-authentication/blob/release-1.2.0/docs/configuration.md).
