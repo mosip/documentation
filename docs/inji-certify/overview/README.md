@@ -1,6 +1,6 @@
 # Overview
 
-**Empowering Users with Verifiable Credentials**
+## **Empowering Users with Verifiable Credentials**
 
 Traditionally, institutes and organizations expend considerable time and effort maintaining user data, yet users often encounter challenges accessing services and benefits requiring information about themselves, their assets, and achievements. Inji Certify addresses this gap by enabling organizations to issue verifiable credentials and empowering users to securely store, share, and manage their data based on open standards and specifications.
 
@@ -28,4 +28,10 @@ Inji Certify empowers organizations to issue verifiable credentials across a wid
 
 **Conclusion:**
 
-Inji Certify revolutionizes the way organizations issue and manage verifiable credentials, empowering users with greater control over their data and access to services. With its configurable schema, seamless generation and signing of VCs, and integration with robust microservices, Inji Certify sets a new standard for secure and efficient credentialing. Explore the possibilities with Inji Certify and unlock the potential of verifiable credentials for your organization.&#x20;
+Inji Certify revolutionizes the way organizations issue and manage verifiable credentials, empowering users with greater control over their data and access to services. With its configurable schema, seamless generation and signing of VCs, and integration with robust microservices, Inji Certify sets a new standard for secure and efficient credentialing. Explore the possibilities with Inji Certify and unlock the potential of verifiable credentials for your organization.
+
+{% hint style="info" %}
+Inji Certify uses [**eSignet VCI**](https://docs.esignet.io/integration) and [**Sunbird C**](https://rc.sunbird.org/v/v2.0.0/learn/technical-overview/credentialling)[ ](https://rc.sunbird.org/)(credentialling microservices)
+{% endhint %}
+
+&#x20;
