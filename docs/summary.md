@@ -77,7 +77,7 @@
 
 ## INJI CERTIFY
 
-* [Overview](inji-certify/overview.md)
+* [Overview](inji-certify/overview/README.md)
 * [Functional Overview](inji-certify/functional-overview.md)
   * [Features](inji-certify/functional-overview/features.md)
   * [Workflow](inji-certify/functional-overview/workflow.md)
@@ -86,7 +86,6 @@
   * [Architecture](inji-certify/technical-overview/architecture.md)
   * [Supported Browsers](inji-certify/technical-overview/supported-browsers.md)
 * [Releases](inji-certify/releases.md)
-  * [Release Notes](inji-certify/releases/release-notes.md)
-  * [Release Notes](inji-certify/releases/release-notes-1.md)
+  * [Release Notes](inji-certify/overview/release-notes.md)
 * [Build & Deploy](inji-certify/build-and-deploy/README.md)
   * [Local Setup](inji-certify/build-and-deploy/local-setup.md)
