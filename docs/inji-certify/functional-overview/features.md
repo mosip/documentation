@@ -15,4 +15,6 @@ Here is a comprehensive summary of the features offered by Inji Certify.
    * Installing Inji Certify is made simple and hassle-free with its streamlined setup process. A single shell serves as the startup script, seamlessly connecting two Docker-compose scripts.
    * This approach simplifies the installation procedure, reducing complexity and minimizing the time required to deploy Inji Certify. With an emphasis on ease of use, Inji Certify ensures a smooth installation experience for users, enabling swift deployment and integration into existing systems.
 
+{% hint style="info" %}
 **Note: We have published an** [**installation guide**](https://github.com/mosip/inji-certify/tree/develop?tab=readme-ov-file#inji-certify) **as the first step to use Inji Certify**
+{% endhint %}
