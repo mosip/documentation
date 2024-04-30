@@ -74,3 +74,11 @@
     * [Test Report](inji-web/inji-web/version-0.8.0/test-report.md)
 * [Build & Deploy](inji-web/build-and-deploy/README.md)
   * [Local setup](inji-web/build-and-deploy/local-setup.md)
+
+## INJI CERTIFY
+
+* [Overview](inji-certify/overview.md)
+* [Functional Overview](inji-certify/functional-overview.md)
+* [Technical Overview](inji-certify/technical-overview.md)
+* [Releases](inji-certify/releases.md)
+* [Build and Deploy](inji-certify/build-and-deploy.md)
