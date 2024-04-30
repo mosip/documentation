@@ -86,5 +86,6 @@
   * [Technology Stack](inji-certify/technical-overview/technology-stack.md)
   * [Architecture](inji-certify/technical-overview/architecture.md)
   * [Supported Browsers](inji-certify/technical-overview/supported-browsers.md)
-* [Releases](inji-certify/releases.md)
-* [Build and Deploy](inji-certify/build-and-deploy.md)
+* [Releases](inji-certify/releases/README.md)
+  * [Release Notes](inji-certify/releases/release-notes.md)
+* [Build & Deploy](inji-certify/build-and-deploy.md)
