@@ -1,5 +1,9 @@
 # Workflow
 
+
+
+<figure><img src="../../.gitbook/assets/workflow.png" alt=""><figcaption></figcaption></figure>
+
 \
 **Understanding the workflow:**
 
