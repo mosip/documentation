@@ -79,7 +79,9 @@
 
 * [Overview](inji-certify/overview/README.md)
   * [Release Notes](inji-certify/overview/release-notes.md)
-* [Functional Overview](inji-certify/functional-overview.md)
+* [Functional Overview](inji-certify/functional-overview/README.md)
+  * [Features](inji-certify/functional-overview/features.md)
+  * [Workflow](inji-certify/functional-overview/workflow.md)
 * [Technical Overview](inji-certify/technical-overview.md)
 * [Releases](inji-certify/releases.md)
 * [Build and Deploy](inji-certify/build-and-deploy.md)
