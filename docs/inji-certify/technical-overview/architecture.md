@@ -1,5 +1,7 @@
 # Architecture
 
+<figure><img src="../../.gitbook/assets/Architecture-2.png" alt=""><figcaption></figcaption></figure>
+
 \
 Inji Certify leverages the following components (from existing building blocks/products):
 
