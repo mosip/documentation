@@ -17,6 +17,8 @@
      * Professionals providing certifications or endorsements for specific skills or achievements.
    * Inji Certify empowers individuals to generate and manage verifiable credentials for various purposes, enhancing trust and credibility in their interactions.
 
+<figure><img src="../.gitbook/assets/functional-overview.png" alt=""><figcaption></figcaption></figure>
+
 **Below are the key features provided by Inji Certify:**
 
 1. **Credential Issuance:**
