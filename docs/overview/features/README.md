@@ -28,11 +28,11 @@ eSignet also offers password authentication as one of its authentication factors
 
 [How to enable password-based authentication in eSignet?](../../faq/#how-to-configure-password-authentication-in-e-signet)
 
-### Knowledge Based Authentication
+### Knowledge Based Identification
 
-eSignet has expanded its authentication options to include Knowledge-Based Authentication (KBA) as one of its factors. With eSignet's integration capabilities, existing ID repositories storing user-specific details can now be easily integrated with eSignet and thereby enabling service providers to authenticate users. 
+eSignet has expanded its authentication options to include Knowledge-Based Identification (KBI) as one of its factors. With eSignet's integration capabilities, existing ID repositories storing user-specific details can now be easily integrated with eSignet and thereby enabling service providers to authenticate users. 
 
-To know more about Knowledge Based Authentication, click [here](https://docs.esignet.io/end-user-guide/knowledge-based-authentication).
+To know more about Knowledge Based Identification, click [here](https://docs.esignet.io/end-user-guide/knowledge-based-authentication).
 
 ## Verifiable Credentials Issuance
 
