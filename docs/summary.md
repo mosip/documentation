@@ -83,7 +83,7 @@
   * [Workflow](inji-certify/functional-overview/workflow.md)
 * [Technical Overview](inji-certify/technical-overview/README.md)
   * [Technology Stack](inji-certify/technical-overview/technology-stack.md)
-  * [Architecture](inji-certify/technical-overview/architecture.md)
+  * [Components](inji-certify/technical-overview/components.md)
   * [Supported Browsers](inji-certify/technical-overview/supported-browsers.md)
 * [Releases](inji-certify/releases.md)
   * [Release Notes](inji-certify/overview/release-notes.md)
