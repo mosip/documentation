@@ -37,4 +37,4 @@
 6. **Revocation Mechanism**_**(Coming Soon)**_
 7. **Vault Integration **_**(Coming Soon)**_
 
-**Inji** **Certify** simplifies the issuance of verifiable credentials by seamlessly integrating with existing databases and providing configurable credential schemas. With support for JSON-LD format, it ensures compatibility and compliance with industry standards. To follow the detailed installation guide to set up Inji Certify please click [**here** ](https://mosip.atlassian.net/wiki/spaces/PROD/pages/1297285302/Inji+Certify+Local+Setup)and start issuing credentials with ease.
+**Inji** **Certify** simplifies the issuance of verifiable credentials by seamlessly integrating with existing databases and providing configurable credential schemas. With support for JSON-LD format, it ensures compatibility and compliance with industry standards. To follow the detailed installation guide to set up Inji Certify please click [**here**](https://docs.mosip.io/inji/inji-certify/build-and-deploy/local-setup) and start issuing credentials with ease.
