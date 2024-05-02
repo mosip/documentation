@@ -38,7 +38,7 @@
   * [Login with OTP](end-user-guide/login-with-otp/README.md)
   * [Login with Biometrics](end-user-guide/login-with-biometrics/README.md)
   * [Login with QR code (Inji)](end-user-guide/login-with-qr-code/README.md)
-  * [Knowledge Based Authentication](end-user-guide/knowledge-based-authentication.md)
+  * [Knowledge Based Identification](end-user-guide/knowledge-based-authentication.md)
 * [Use Cases](use-cases/README.md)
   * [Sign Up Service](use-cases/sign-up-service.md)
   * [Adding Prefix and Suffix to Handle](use-cases/adding-prefix-and-suffix-to-handle.md)
