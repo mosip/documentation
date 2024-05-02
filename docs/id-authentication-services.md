@@ -72,7 +72,7 @@ This feature is designed to be a plugin feature in IDA, which can be configured 
 
 Once this property is enabled, related kafka property setup should be installed to utilize the feature.
 
-For further guidance on this feature, you can refer to the documentation provided in the following link [here](https://id-authentication/docs/authentication_error_eventing.md)
+For further guidance on this feature, you can refer to the documentation provided in the following link [here](https://github.com/mosip/id-authentication/blob/release-1.2.1.x/docs/authentication_error_eventing.md)
 
 Subscribers who will be subscribing to the event should be onboarded as authentication partners. To on board subscribers below steps needed to be followed: 
 
