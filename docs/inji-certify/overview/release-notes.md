@@ -6,7 +6,7 @@
 
 **Support**: Developer Release
 
-**Release Date**: _\<Coming Soon>_
+**Release Date**: 30th April, 2024
 
 ### **Overview**
 
@@ -23,11 +23,11 @@ Inji Certify introduces seamless integration with microservices eSignet VCI and 
 
 **Repository Released**
 
-| **Repositories** | **Tags Released** |
-| ---------------- | ----------------- |
-| Inji Certify     |                   |
-| eSignet          |                   |
-| Sunbird C        |                   |
+| **Repositories** | **Tags Released**                                                                   |
+| ---------------- | ----------------------------------------------------------------------------------- |
+| Inji Certify     | [**v0.8.0**](https://github.com/mosip/inji-certify/tree/v0.8.0)                     |
+| eSignet          | [**v1.4.0**](https://github.com/mosip/esignet/releases/tag/v1.4.0)                  |
+| Sunbird C        | [**v2.0.0**](https://github.com/Sunbird-RC/sunbird-rc-core/releases/tag/v2.0.0-rc3) |
 
 ### **Known Issues**
 
