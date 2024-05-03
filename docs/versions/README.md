@@ -1,5 +1,11 @@
 # Versions
 
+## Version: 1.4.0
+
+* Name: eSignet 
+* Date: 23rd April, 2024
+* [Release Notes](https://docs.esignet.io/versions/v1.4.0)
+
 ## Version: 1.3.0
 
 * Name: eSignet (Password based authentication)
