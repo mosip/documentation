@@ -8,8 +8,6 @@ This document serves as a concise guide for end users, providing comprehensive s
 
 * Begin by accessing the Inji Verify portal and selecting the option to scan a QR code by clicking on **“Scan QR Code”**.
 
-\<Image>
-
 <figure><img src="../../.gitbook/assets/image-20240503-134218.png" alt=""><figcaption></figcaption></figure>
 
 
@@ -18,10 +16,6 @@ This document serves as a concise guide for end users, providing comprehensive s
 
 If prompted, grant the necessary camera permissions to the Inji Verify portal to allow access to your device's camera by clicking on the “Allow” button.
 
-
-
-\<Image>
-
 <figure><img src="../../.gitbook/assets/image-20240503-134547.png" alt=""><figcaption></figcaption></figure>
 
 **Step 3: Scan QR Code:**
@@ -29,13 +23,7 @@ If prompted, grant the necessary camera permissions to the Inji Verify portal to
 * Position the device's camera in front of the QR code you wish to scan.
 * Capture the QR code by aligning it within the frame displayed on your device's screen.
 
-
-
-\<Image>
-
 <figure><img src="../../.gitbook/assets/image-20240503-135054.png" alt=""><figcaption></figcaption></figure>
-
-
 
 **Step 4: QR Code Processing:**
 
@@ -47,11 +35,7 @@ If prompted, grant the necessary camera permissions to the Inji Verify portal to
 
 
 
-\<Image>
-
 <figure><img src="../../.gitbook/assets/image-20240503-135233 (1).png" alt=""><figcaption></figcaption></figure>
-
-
 
 **Step 5: Display Credential Details:**
 
@@ -60,8 +44,6 @@ If prompted, grant the necessary camera permissions to the Inji Verify portal to
 
 
 
-\<Image>
-
 <figure><img src="../../.gitbook/assets/image-20240503-135440 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### **Feature 2 Flow: Upload QR Flow:**
@@ -69,8 +51,6 @@ If prompted, grant the necessary camera permissions to the Inji Verify portal to
 **Step 1: Upload QR Code:**
 
 * Click on the **“Upload QR Code”** button as you select the option to upload a file containing the QR code or credential document you wish to verify from your device's file explorer. Simply click on the file to proceed.
-
-\<Image>
 
 <figure><img src="../../.gitbook/assets/image-20240503-140402.png" alt=""><figcaption></figcaption></figure>
 
@@ -84,8 +64,6 @@ If prompted, grant the necessary camera permissions to the Inji Verify portal to
   * Pixel Pass returns the decoded data to Inji Verify for further processing.
   * Inji Verify then verifies the decoded data using the Verification SDK.
 
-\<Image>
-
 
 
 <figure><img src="../../.gitbook/assets/image-20240503-135233.png" alt=""><figcaption></figcaption></figure>
@@ -98,11 +76,7 @@ If prompted, grant the necessary camera permissions to the Inji Verify portal to
 
 
 
-\<Image>
-
 <figure><img src="../../.gitbook/assets/image-20240503-135440 (1) (1).png" alt=""><figcaption></figcaption></figure>
-
-
 
 ### **Error Handling:**
 
@@ -112,8 +86,6 @@ If prompted, grant the necessary camera permissions to the Inji Verify portal to
 
 
 
-\<Image>
-
 <figure><img src="../../.gitbook/assets/image-20240503-135701.png" alt=""><figcaption></figcaption></figure>
 
 
@@ -121,10 +93,6 @@ If prompted, grant the necessary camera permissions to the Inji Verify portal to
 **Scenario 2:** If the QR code size or file size exceeds the permissible limit where the maximum size is 5MB, Inji Verify returns to the home screen.
 
 * An error message stating "**QR code size is not supported. Please use a QR code within the specified limit.**"
-
-
-
-\<Image>
 
 
 
@@ -138,10 +106,6 @@ If prompted, grant the necessary camera permissions to the Inji Verify portal to
 
 
 
-\<Image>
-
-
-
 <figure><img src="../../.gitbook/assets/image-20240503-141755.png" alt=""><figcaption></figcaption></figure>
 
 
@@ -149,8 +113,6 @@ If prompted, grant the necessary camera permissions to the Inji Verify portal to
 **Scenario 4:** If the user fails to scan the QR code within the 60-second timeframe then Inji Verify returns to the home screen.
 
 * An error message stating "**The scan session has expired due to inactivity. Please initiate a new scan**."
-
-\<Image>
 
 
 
