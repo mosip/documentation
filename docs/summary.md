@@ -89,3 +89,7 @@
   * [Release Notes](inji-certify/overview/release-notes.md)
 * [Build & Deploy](inji-certify/build-and-deploy/README.md)
   * [Local Setup](inji-certify/build-and-deploy/local-setup.md)
+
+## INJI VERIFY
+
+* [Inji Verify: Overview](inji-verify/inji-verify-overview.md)
