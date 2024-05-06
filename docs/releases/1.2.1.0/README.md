@@ -20,7 +20,7 @@ We're excited to announce a significant enhancement geared towards refining the 
 
 ### Bug fix
 
-* During the authentication process, if the `authStatus` is false, the `authToken` should not be shared. However, there was an issue where the system was sending the authToken value even when the `authStatus` was false. This issue has been addressed and fixed. Now, when the `authStatus` is `false`, the `authToken` will no longer be shared. [##MOSIP-30293](https://mosip.atlassian.net/browse/MOSIP-30293).
+* During the authentication process, if the `authStatus` is false, the `authToken` should not be shared. However, there was an issue where the system was sending the authToken value even when the `authStatus` was false. This issue has been addressed and fixed. Now, when the `authStatus` is `false`, the `authToken` will no longer be shared. [#MOSIP-30293](https://mosip.atlassian.net/browse/MOSIP-30293).
 
 ## Repository Released
 
