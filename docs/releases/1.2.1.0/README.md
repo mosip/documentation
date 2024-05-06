@@ -35,4 +35,4 @@ NA
 ## Documentation
 
 * [Feature Documentation](https://docs.mosip.io/1.2.0/modules/id-authentication-services#authentication-error-eventing)
-* [QA Report](https://docs.mosip.io/1.2.0/releases/1.2.1.0/test-report)
+* [Functional Test Report](https://docs.mosip.io/1.2.0/releases/1.2.1.0/test-report)
