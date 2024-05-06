@@ -1,8 +1,14 @@
 # Workflow
 
+#### **Sequence Diagram**
+
+<figure><img src="../../.gitbook/assets/injiverify_sequence.png" alt=""><figcaption></figcaption></figure>
+
+Visit [https://www.plantuml.com/plantuml/uml](https://www.plantuml.com/plantuml/uml) and import the following file to edit the above sequence diagram as UML
 
 
-\<Content and Image>
+
+\<UML File Spec>
 
 
 
