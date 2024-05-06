@@ -1,4 +1,4 @@
-# Inji Verify: Overview
+# Overview
 
 ## **Pioneering Verifiable Credential Validation with Inji Verify**
 
@@ -25,7 +25,7 @@
 
 **Device Requirements:** To ensure successful authentication and verification, devices used for scanning QR codes must meet specific requirements:
 
-* Camera with a minimum photo quality of 720p and image resolution of 8 to 16 megapixels.
+* Camera with a minimum resolution of 8 mega pixels and higher.
 * Disabling of visual effects and enhancements during scanning.
 * Compatibility with Internet browsers supporting the use of the device's camera.
 * Scanning is to be performed in a well-lit environment without any filters or dark mode settings.
