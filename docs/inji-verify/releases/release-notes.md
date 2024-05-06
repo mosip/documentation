@@ -18,6 +18,16 @@ We are excited to announce the release of **Inji Verify version 0.8.0**! This re
 2. **QR Code Upload:** In addition to QR code scanning, users have the option to upload QR code files from their devices for verification. This provides flexibility for users who may have QR codes saved as digital files.
 3. **Error Handling:** Error messages and prompts have been added to provide clearer guidance to users in case of issues such as unsupported QR code formats, unreadable QR codes, or scan session timeouts.
 
+**Scan Feature Acceptance for Release v0.8.0:**
+
+* **QR Code Compatibility**:
+  * Version 21 and 22 of the QR code are compatible with v0.8.0 of Inji Verify.
+* **Camera Resolution Requirement**:
+  * The device's front camera or web camera resolution should be above 8 megapixels.
+  * The camera should be used in a well-lit environment without filters, ensuring proper alignment for optimal scanning.
+* **Upload Feature QR Code Compatibility**:
+  * QR code versions supported for the upload feature range from v21 to v32.
+
 **Repository Released**
 
 | **Repositories**   | **Tags Released**                                                     |
