@@ -89,11 +89,19 @@ In January 2020, CyberPWN partnered with IIIT Bangalore to offer development ass
 
 IIIT Bangalore has been home to MOSIP since its inception in 2018 and the students of the institute have been at the forefront of the MOSIP’s community-led development. The students have on an ongoing basis contributed to solving engineering problems in MOSIP for real-world applications. Their major ongoing contributions include:
 
-**Project 1:** Synthetic IRIS Data generation using ML algorithms
+**Project 1:** Reporting framework for real-time streaming of data and visualization. The dashboards give a visual display of metrics and important data to track the status of various pre and post-enrollment processes. Reporting framework involves setting up the data pipeline for populating data from the database to ElasticSearch. 
+
+A set of reference dashboards were also created as a part of this work.
+
+**Project 2:** Registration officers/operators use the registration client application to enroll residents into the ID system. It is a thick client which works on machines with Windows OS. 
+
+Students have contributed to the development of Android equivalent of the Registration Client, which can be installed on Android tablets.
+
+**Project 3:** Synthetic IRIS Data generation using ML algorithms
 
 MOSIP test automation suite requires large set of synthetic biometric data such as IRIS. This project attempts to generate larger set of IRIS images from the given set of sample IRIS images. The solution is built using Guided-Diffusion with pre-trained models MOSIP USSD Proxy feature enhancements.
 
-**Project 2:** MOSIP USSD Proxy feature enhancements
+**Project 4:** MOSIP USSD Proxy feature enhancements
 
 MOSIP USSD Proxy is a bridge between Telco SDP and MOSIP Instance. This allows to build custom USSD workflows.
 
