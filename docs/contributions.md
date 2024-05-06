@@ -71,7 +71,7 @@ Infosys began collaborating with MOSIP in Early 2023 as part of its Technology f
 
 **About Infosys**: Infosys, a global leader in next-generation digital services and consulting, headquartered in Bengaluru, India, is a multinational corporation that provides business consulting, information technology, and outsourcing services to clients across the globe.
 
-## [Cyberpwn](https://cyberpwn.com/)
+## [Cyber PWN](https://cyberpwn.com/)
 
 <div align="left">
 
