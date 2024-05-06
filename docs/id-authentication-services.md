@@ -72,21 +72,22 @@ This feature is designed to be a plugin feature in IDA, which can be configured 
 
 Once this property is enabled, related kafka property setup should be installed to utilize the feature.
 
-For further guidance on this feature, you can refer to the documentation provided in the following link [here](https://github.com/mosip/id-authentication/blob/release-1.2.1.x/docs/authentication_error_eventing.md)
+For further guidance on this feature, you can refer [here](https://github.com/mosip/id-authentication/blob/release-1.2.1.x/docs/authentication_error_eventing.md)
 
 Subscribers who will be subscribing to the event should be onboarded as authentication partners. To on board subscribers below steps needed to be followed: 
 
-**Steps to onboard the partners**:
+**Steps to onboard the subscribers**:
 
 1. Create a policygroup by the name `mpolicygroup-default-tempextraction`
 2. The policy should be configured to not allow any authentication to be carryout but the partner except reading the kafka event. To attain this, `allowedAuthTypes` should be marked as `null`
 
 For example:
 
-```
-{"authTokenType":"partner","allowedKycAttributes":[{"attributeName":"fullName"},{"attributeName":"gender"},{"attributeName":"residenceStatus"},{"attributeName":"dateOfBirth"},{"attributeName":"photo"}],"kycLanguages":["ara","eng"],"allowedAuthTypes":[]}
-```
-3. Now publish the policygroup and policy
+`
+{"authTokenType":"partner","allowedKycAttributes":[{"attributeName":"fullName"},{"attributeName":"gender"},
+{"attributeName":"residenceStatus"},{"attributeName":"dateOfBirth"},{"attributeName":"photo"}],"kycLanguages":["ara","eng"],"allowedAuthTypes":[]}`
+
+3. Publish the policygroup and policy
 4. Refer this [link](https://docs.mosip.io/1.2.0/partners#authentication-partner-ap) to onboard the subscribers as authentication partners. The name of the partner should be `mpartner-default-tempextraction`
 
 **Note**: This feature is exclusively available in ID Authentication version 1.2.1.0 only. To configure the latest version of IDA and access this new feature, please refer to this link [here](https://github.com/mosip/id-authentication/blob/release-1.2.1.x/docs/authentication_error_eventing.md) 
