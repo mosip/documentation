@@ -25,8 +25,10 @@ Inji Verify is a powerful tool designed to facilitate the validation and verific
      * Tablets **(Coming Soon)**&#x20;
    * Users can access the Inji Verify portal from anywhere with an internet connection, making it convenient for on-the-go verification.
 
+{% hint style="info" %}
 * **Version 21** of the QR code will be compatible with v0.8.0 Inji Verify.
 * **Version 22** of the QR code will be compatible with v0.8.0 Inji Verify.
 * The device Camera should be between 720p resolution and 8 megapixel to 16 megapixel
+{% endhint %}
 
 In summary, Inji Verify offers a reliable and efficient solution for validating and verifying verifiable credentials through QR codes. With its user-friendly interface, robust security features, and cross-platform compatibility, Inji Verify empowers users to confidently authenticate credentials anytime, anywhere.
