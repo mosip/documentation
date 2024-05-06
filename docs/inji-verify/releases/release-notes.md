@@ -35,6 +35,6 @@ We are excited to announce the release of **Inji Verify version 0.8.0**! This re
 
 ### **Documentation**
 
-* Feature documentation \<Link>
-* User guide \<Link>
-* QA Report \<Link>
+* [Feature Documentation](https://docs.mosip.io/inji/inji-verify/functional-overview/features)
+* [User Guide](https://docs.mosip.io/inji/inji-verify/functional-overview/end-user-guide)
+* QA Report
