@@ -43,6 +43,7 @@ Newlogic's contribution to MOSIP include:
 Singapore based Newlogic is a software consultancy company providing innovative software solutions to companies, organizations, and governments.
 
 
+## [Thoughtworks](https://www.thoughtworks.com/)
 
 <div align="left">
 
@@ -58,6 +59,8 @@ The organization has broadened its contributions to other essential components o
 
 **About Thoughtworks**: Thoughtworks is a global technology consultancy renowned for integrating strategy, design, and engineering to foster digital innovation. With over 10,500 skilled professionals across 48 offices in 19 countries, the organization has a legacy of delivering impactful solutions for our clients over the past three decades. We pride ourselves on leveraging technology to address complex business challenges and drive meaningful change.
 
+## [Infosys](https://www.infosys.com/)
+
 <div align="left">
 
 <figure><img src=".gitbook/assets/infy.png" alt=""><figcaption></figcaption></figure>
@@ -68,7 +71,7 @@ Infosys began collaborating with MOSIP in Early 2023 as part of its Technology f
 
 **About Infosys**: Infosys, a global leader in next-generation digital services and consulting, headquartered in Bengaluru, India, is a multinational corporation that provides business consulting, information technology, and outsourcing services to clients across the globe.
 
-
+## [Cyberpwn](https://cyberpwn.com/)
 
 <div align="left">
 
@@ -88,7 +91,7 @@ IIIT Bangalore has been home to MOSIP since its inception in 2018 and the studen
 
 **Project 1:** Synthetic IRIS Data generation using ML algorithms
 
-MOSIP test automation suite requires large set of synthetic biometric data such as IRIS for. This project attempts to generate larger set of IRIS images from the given set of sample IRIS images. The solution is built using Guided-Diffusion with pre-trained models MOSIP USSD Proxy feature enhancements.
+MOSIP test automation suite requires large set of synthetic biometric data such as IRIS. This project attempts to generate larger set of IRIS images from the given set of sample IRIS images. The solution is built using Guided-Diffusion with pre-trained models MOSIP USSD Proxy feature enhancements.
 
 **Project 2:** MOSIP USSD Proxy feature enhancements
 
