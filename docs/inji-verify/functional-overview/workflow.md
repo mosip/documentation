@@ -43,4 +43,6 @@ Visit [https://www.plantuml.com/plantuml/uml](https://www.plantuml.com/plantuml/
 * However, if [**Pixel Pass**](https://www.npmjs.com/package/@mosip/pixelpass/v/0.1.5) fails to decode the data:
   * Inji Verify navigates back to the home screen and displays the "QR code format not supported" error.
 
+{% hint style="info" %}
 **Note**: To understand the Inji Verify components in detail please refer to the topic **Components** under **Technical Overview** section.
+{% endhint %}
