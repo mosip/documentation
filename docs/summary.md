@@ -92,7 +92,8 @@
 
 ## INJI VERIFY
 
-* [Inji Verify: Overview](inji-verify/inji-verify-overview.md)
+* [Overview](inji-verify/overview.md)
+* [Functional Overview](inji-verify/functional-overview.md)
 * [Technical Overview](inji-verify/technical-overview.md)
 * [Releases](inji-verify/releases.md)
 * [Build & Deploy](inji-verify/build-and-deploy.md)
