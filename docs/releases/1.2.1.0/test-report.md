@@ -44,17 +44,19 @@ Below are the test metrics by performing functional testing using mock MDS, mock
 
 Here is the detailed breakdown:
 
-|                     | Total | Passed | Failed | Skipped |
-| --------------------------| ----- | ------ | ------ | ------- |
-| On Demand Template Extraction - UI Based testing              | 58    | 58     |   0    | 0       |
-| API Based Testing         | 517    | 424     |  9 0    | 3       |
+|                                                  | Total | Passed | Failed | Skipped |
+| ------------------------------------------------ | ----- | ------ | ------ | ------- |
+| On Demand Template Extraction - UI Based testing | 58    | 58     | 0      | 0       |
+| API Based Testing                                | 517   | 424    | 9 0    | 3       |
 
 **Note**: In API Based testing, 3 test cases are marked as skipped as they were not automated
 
 ### DSL - End to end scenarios results
 
-|                           | Total | Passed | Failed | Skipped |
-| --------------------------| ----- | ------ | ------ | ------- |
-| End to end scenarios      | 163   | 113    |   48   | 2       |
+|                      | Total | Passed | Failed | Skipped |
+| -------------------- | ----- | ------ | ------ | ------- |
+| End to end scenarios | 163   | 113    | 48     | 2       |
 
 ## Sonar report
+
+<figure><img src="../../.gitbook/assets/Picture1.png" alt=""><figcaption></figcaption></figure>
