@@ -2,7 +2,7 @@
 
 This document serves as a concise guide for end users, providing comprehensive step-by-step information on the features and functionalities offered by Inji Verify.
 
-### **Feature 2 Flow: Scan QR Code**
+### **Feature 1 Flow: Scan QR Code**
 
 **Step 1: Initiate Scan Request:**
 
