@@ -10,7 +10,7 @@
 
 We are excited to announce the release of **Inji Version 0.11.0** . This release is compatible with v0.11.0 Mimoto release. As part of 0.11.0, Inji introduces below mentioned key features:
 
-* VC download using KBA
+* VC download using KBI
 * Data backup and restore
 * Improved UI / UX
 
@@ -22,11 +22,11 @@ To know more about the GenderMag UI/UX changes in the application, please refer 
 
 Please find below the details for the **Inji Version 0.11.0** release:
 
-### VC download using KBA method
+### VC download using KBI method
 
-Inji Mobile wallet has proven capability to integrate with any credential issuer supporting **OpenID** protocol and issues Verifiable Credentials (VCs) based on **OpenID4VCI** standards. To demonstrate the implementation of VC download using KBA (Knowledge Based Authentication), Inji mobile wallet when integrated with [eSignet 1.4.0](https://docs.esignet.io/versions/v1.4.0), can connect with any issuer preferring KBA-based authentication.
+  Inji Mobile wallet has proven capability to integrate with any credential issuer supporting **OpenID** protocol and issues Verifiable Credentials (VCs) based on **OpenID4VCI** standards. To demonstrate the implementation of VC download using KBI (Knowledge Based Identification), Inji mobile wallet when integrated with [eSignet 1.4.0](https://docs.esignet.io/versions/v1.4.0), can connect with any issuer preferring KBA-based identification.
 
-To know more about, KBA, refer [here](https://docs.esignet.io/end-user-guide/knowledge-based-authentication).
+To know more about, KBI, refer [here](https://docs.esignet.io/end-user-guide/knowledge-based-authentication).
 
 ### Data backup and restore
 
