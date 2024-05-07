@@ -1,6 +1,6 @@
 # Functional Overview
 
-**Inji Certify** is a powerful tool that enables issuers to seamlessly connect with existing data sources to issue verifiable credentials. This Functional Overview Page provides an understanding of the key functionalities of Inji Certify’s first version. Overall, Inji Certify serves as a versatile solution for both organizations and individuals looking to issue and manage digitally verifiable credentials efficiently. By connecting with existing databases and offering configurable credential schemas, it caters to diverse use cases across different sectors and industries.
+**Inji Certify** is a powerful tool that enables issuers to seamlessly connect with existing data sources to issue verifiable credentials. This section provides an understanding of the key functionalities of Inji Certify. Overall, Inji Certify serves as a versatile solution for both organizations and individuals looking to issue and manage digitally verifiable credentials efficiently. By connecting with existing databases and offering configurable credential schemas, it caters to diverse use cases across different sectors and industries.
 
 **Inji Certify is designed for two main user groups:**
 
