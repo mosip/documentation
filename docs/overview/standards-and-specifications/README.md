@@ -6,6 +6,6 @@ description: This page lists the different standards and specifications publishe
 
 
 
-{% content-ref url="16.9-qr-code-spec.md" %}
-[16.9-qr-code-spec.md](16.9-qr-code-spec.md)
+{% content-ref url="169-qr-code-specification.md" %}
+[169-qr-code-specification.md](169-qr-code-specification.md)
 {% endcontent-ref %}
