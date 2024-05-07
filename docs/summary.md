@@ -3,6 +3,8 @@
 * [🍁 Home](README.md)
 * [🔍 Overview](overview/README.md)
   * [Architecture](overview/architecture.md)
+  * [Standards & Specifications](overview/standards-and-specifications/README.md)
+    * [16.9 - QR Code Spec](overview/standards-and-specifications/16.9-qr-code-spec.md)
 * [🆔 ID Lifecycle Management](id-lifecycle-management.md)
   * [ID Schema](id-schema.md)
   * [Identifiers](identifiers.md)
