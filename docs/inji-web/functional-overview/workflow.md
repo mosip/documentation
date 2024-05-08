@@ -8,7 +8,7 @@ The image below illustrates the workflow for the VC download process and explain
 
 <figure><img src="../../.gitbook/assets/line dia.png" alt=""><figcaption><p>VC Download as PDF</p></figcaption></figure>
 
-_**Reference Implementation**: Download of Insurance VC using **Sunbird Credentials** service with_ [_eSignet KBA (Knowledge Based Authentication)_](https://docs.esignet.io/end-user-guide/knowledge-based-authentication) _as authentication partner_
+_**Reference Implementation**: Download of Insurance VC using **Sunbird Credentials** service with_ [_eSignet KBI (Knowledge Based Identification)_](https://docs.esignet.io/end-user-guide/knowledge-based-authentication) _as identification partner_
 
 **Components**:
 
