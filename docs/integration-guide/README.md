@@ -1,6 +1,6 @@
 # Integration Guides
 
-Below are the guidelines and specifications for integrating any software development kit (SDK) with Inji:
+Below are the guidelines and specifications for integrating any software development kit (SDK) with Inji Mobile:
 
 1.  The SDK should be implemented as a npm module that supports the React Native framework.
 
