@@ -11,7 +11,7 @@ The scope of testing is to verify fitment to the specification from the perspect
 
 Verification is performed not only from the end-user perspective but also from the System Integrator (SI) point of view. Hence, the configurability and extensibility of the software is also assessed. This ensures readiness of software for use in multiple countries. Since MOSIP is an “API First” product platform, verification scope required comprehensive automation testing for all the MOSIP APIs. An automation Test Rig is created for the same. 
 
-The `Inji` testing scope revolves around the following flows:
+The `Inji Mobile` testing scope revolves around the following flows:
 
 * Biometric Unlock
 * Passcode Unlock
@@ -49,7 +49,7 @@ For regression check, `MOSIP Test Rig`, an automation testing suite is indigenou
 
 ### Functional test results
 
-Below are the test metrics for Inji by performing functional testing using `mockMDS` and `mockABIS`. The process followed was black box testing which based its test cases on the specifications of the software component under test. Functional test was performed in combination of individual module testing as well as integration testing. Test data were prepared inline with the user stories. Expected results were monitored by examining the user interface. The coverage includes GUI testing, System testing, End-To-End flows across multiple languages and configurations. The testing cycle included simulation of multiple identity schema and respective UI schema configurations.
+Below are the test metrics for Inji Mobile by performing functional testing using `mockMDS` and `mockABIS`. The process followed was black box testing which based its test cases on the specifications of the software component under test. Functional test was performed in combination of individual module testing as well as integration testing. Test data were prepared inline with the user stories. Expected results were monitored by examining the user interface. The coverage includes GUI testing, System testing, End-To-End flows across multiple languages and configurations. The testing cycle included simulation of multiple identity schema and respective UI schema configurations.
 
 
 | **Total**     | **Passed**   |  **Failed**    | **Skipped**   |
@@ -75,7 +75,7 @@ Here is the detailed breakdown of metrics:
   * Skipped: 0
 
 
-### External API verification results for Inji
+### External API verification results for Inji Mobile
 
 Below section provides details on API test metrics by executing MOSIP functional automation Framework. The external API test executions were performed at module level isolation. Each end point is tested with the test data and expectations of each test data are mapped to assert the test case.
 
