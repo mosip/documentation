@@ -13,7 +13,7 @@
 2. [react-i18next](https://react.i18next.com/)
 3. [expo-localization](https://docs.expo.dev/versions/latest/sdk/localization/)
 
-* Inji has the capability to support multiple languages.
+* Inji Mobile has the capability to support multiple languages.
 * `i18next` is an internationalization framework. It provides the standard i18n features such as [plurals](https://www.i18next.com/translation-function/plurals), [context](https://www.i18next.com/translation-function/context), [interpolation](https://www.i18next.com/translation-function/interpolation), and [format](https://www.i18next.com/translation-function/formatting). It provides a complete solution to localize products from the web to mobile and desktop.
 * `react-i18next` is a set of components, hooks, and plugins that sit on top of i18next, and is specifically designed for React.
 * `expo-localization` allows you to localize the app, customizing the experience for specific regions, and languages. It also provides access to the locale data on the native device.
