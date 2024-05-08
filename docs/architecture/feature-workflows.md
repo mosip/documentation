@@ -50,7 +50,7 @@ This method of VC download illustrates the **OpenID4VCI** method of download usi
   * **Login With OTP**: Credential download using OTP Based authentication to authorize the user
     
     **Illustrated Implementation**: National ID credentials download
-  * **Login With KBA**: Credential download using KBA to authorize the user. The knowledge (as described by the credential 
+  * **Login With KBI**: Credential download using KBI to authorize the user. The knowledge (as described by the credential 
     issuer to authorize) is exposed to eSignet from Registry (Issuer) through eSignet Issuance Plugins
   
     **Illustrated Implementation**: Insurance ID credentials download 
