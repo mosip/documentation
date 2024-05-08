@@ -8,7 +8,7 @@ Inji Verify is a powerful tool designed to facilitate the validation and verific
    * Users can scan QR codes using their smartphones and computers with a front camera capability.
 2. **Validation and Verification:**
    * Upon scanning a QR code or uploading the QR Code, Inji Verify validates the authenticity and integrity of the credential data.
-   * Advanced algorithms and cryptographic methods ensure that the QR code has not been tampered with and it consumes [**pixel pass library v0.1.5**](https://www.npmjs.com/package/@mosip/pixelpass/v/0.1.5)**.**
+   * Advanced algorithms and cryptographic methods ensure that the QR code has not been tampered with and it consumes [**pixel pass library v0.1.4**](https://www.npmjs.com/package/@mosip/pixelpass/v/0.1.4)**.**
    * Real-time verification provides instant feedback on the validity of the credential, giving users confidence in its authenticity.
 3. **Credential Display:**
    * Valid credentials retrieved through QR code scanning or uploading QR codes are displayed securely within the Inji Verify portal.

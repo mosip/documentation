@@ -6,11 +6,7 @@
 
 Visit [https://www.plantuml.com/plantuml/uml](https://www.plantuml.com/plantuml/uml) and import the following file to edit the above sequence diagram as UML
 
-
-
 \<UML File Spec>
-
-
 
 ### **Understanding the workflow**:
 
@@ -27,7 +23,7 @@ Visit [https://www.plantuml.com/plantuml/uml](https://www.plantuml.com/plantuml/
     * The status is returned to the Inji Verify portal from the Verification SDK.
     * Inji Verify retrieves the display properties of the credential from the issuer’s well-known configuration.
     * Finally, Inji Verify displays the credential details using the fetched display properties.
-  * The[ **pixel-pass library** ](https://www.npmjs.com/package/@mosip/pixelpass/v/0.1.5)fails to decode the data
+  * The [**pixel-pass library**](https://www.npmjs.com/package/@mosip/pixelpass/v/0.1.4) fails to decode the data
     * Inji verify goes back to the home screen and displays the _QR code format not supported_ error
 * The user denies the camera permissions and the _Camera permissions denied_ screen appears on the Inji verify portal
 
@@ -40,7 +36,7 @@ Visit [https://www.plantuml.com/plantuml/uml](https://www.plantuml.com/plantuml/
   * The status is returned to the Inji Verify portal from the Verification SDK.
   * Inji Verify retrieves the display properties of the credential from the issuer’s well-known configuration.
   * Finally, Inji Verify displays the credential details using the fetched display properties.
-* However, if [**Pixel Pass**](https://www.npmjs.com/package/@mosip/pixelpass/v/0.1.5) fails to decode the data:
+* However, if [**Pixel Pass**](https://www.npmjs.com/package/@mosip/pixelpass/v/0.1.4) fails to decode the data:
   * Inji Verify navigates back to the home screen and displays the "QR code format not supported" error.
 
 {% hint style="info" %}
