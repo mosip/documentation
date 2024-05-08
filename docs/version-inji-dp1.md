@@ -10,7 +10,7 @@
 
 ## Overview
 
-The developer preview version of Inji is the release on top of Inji 0.9.1. Key highlights of the release are:
+The developer preview version of Inji Mobile is the release on top of Inji 0.9.1. Key highlights of the release are:
 
 * Enhanced UI
 * Additional functional flows in Inji
@@ -23,21 +23,21 @@ Below is the detailed summary of the release.
 
 ### Change in UI implementation
 
-* New UI for Inji:
+* New UI for Inji Mobile:
   * This redesign promises an enriched user experience.
   * Introduction sliders have been introduced.
   * Helpful FAQ screens are provided.
   * VC pinning is now available.
     * Currently, the pinning feature supports a single VC.
-  * Easy VC removal from Inji.
+  * Easy VC removal from Inji Mobile.
   * Improved audit log filtering based on VC.
 
 ### Change in functional implementation
 
-* Branding the App as `Inji`:
-  * We've rebranded the application, transitioning from `Resident App` to the more streamlined and recognisable `Inji`.
+* Branding the App as `Inji Mobile`:
+  * We've rebranded the application, transitioning from `Resident App` to the more streamlined and recognisable `Inji Mobile`.
 * Ability to Choose Language During App Setup:
-  * Inji app users can configure the application in six distinct languages:
+  * Inji Mobile app users can configure the application in six distinct languages:
     * English
     * Filipino
     * Arabic
@@ -45,9 +45,9 @@ Below is the detailed summary of the release.
     * Kannada
     * Tamil
 * Warning When Device Storage is Beyond the Threshold:
-  * Inji now offers customisable storage limits:
-    * For VC downloads, the threshold is set to 5MB. When the device's remaining storage space falls below this limit, Inji displays a warning message. However, users can still continue to verify and share VCs.
-    * For Inji audit logs, the threshold is set to 1MB. Once the device reaches this limit, Inji users will be restricted to viewing VCs, unable to perform additional actions.
+  * Inji Mobile now offers customisable storage limits:
+    * For VC downloads, the threshold is set to 5MB. When the device's remaining storage space falls below this limit, Inji Mobile displays a warning message. However, users can still continue to verify and share VCs.
+    * For Inji Mobile audit logs, the threshold is set to 1MB. Once the device reaches this limit, Inji users will be restricted to viewing VCs, unable to perform additional actions.
 * Traceability with Unique ID for Customer Support:
   * We've implemented a unique identification called as an Application ID for customer support interactions. Each support request is now assigned a traceable and distinct ID, allowing our support teams to efficiently track, manage, and resolve customer issues.
 
@@ -79,4 +79,4 @@ Below is the detailed summary of the release.
 * [Feature Documentation](./)
 * [User Guide](https://docs.mosip.io/1.2.0/modules/inji-user-guide)
 * [QA Report](https://github.com/mosip/test-management/tree/master/inji/Inji%20VDP1)
-* To know more about Inji, watch the [video](https://www.youtube.com/watch?v=9Z1WuTd8q0M)!
+* To know more about Inji Mobile, watch the [video](https://www.youtube.com/watch?v=9Z1WuTd8q0M)!
