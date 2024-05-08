@@ -6,7 +6,7 @@
 
 ## Overview
 
-The 0.9.0 version of Inji is the beta release which covers essential features such as Downloading and sharing the VC, Wallet binding, face authentication on resident' phone, etc.
+The 0.9.0 version of Inji Mobile is the beta release which covers essential features such as Downloading and sharing the VC, Wallet binding, face authentication on resident' phone, etc.
 
 ## Features Covered
 
