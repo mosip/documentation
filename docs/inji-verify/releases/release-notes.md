@@ -38,7 +38,7 @@ As of the current release, Inji Verify supports QR code scanning from laptops/de
 
 | **Repositories**   | **Tags Released**                                                     |
 | ------------------ | --------------------------------------------------------------------- |
-| Inji Verify        |  **v0.8.0**                                                           |
+| Inji Verify        |  [**v0.8.0**](https://github.com/mosip/inji-verify/tree/v0.8.0)       |
 | Pixel-Pass Library |  [**v0.1.4**](https://www.npmjs.com/package/@mosip/pixelpass/v/0.1.4) |
 
 
