@@ -1,23 +1,23 @@
 # End User Guide
 
-This document serves as a concise user guide for end users, providing comprehensive information on the features and functionalities offered by Inji.
+This document serves as a concise user guide for end users, providing comprehensive information on the features and functionalities offered by Inji Mobile.
 
-## Installing Inji
+## Installing Inji Mobile
 
 Please navigate to the Play Store or App Store for iOS, select the **Install** option, and kindly wait for the installation process to complete.
 
 #### On Android device
 
-<figure><img src=".gitbook/assets/inji-install-android.png" alt=""><figcaption><p>Installation of Inji on Android mobile device</p></figcaption></figure>
+<figure><img src=".gitbook/assets/inji-install-android.png" alt=""><figcaption><p>Installation of Inji Mobile on Android mobile device</p></figcaption></figure>
 
 #### On iOS device
 
-<figure><img src=".gitbook/assets/inji-install-ios (1).png" alt=""><figcaption><p>Installation of Inji on iOS device</p></figcaption></figure>
+<figure><img src=".gitbook/assets/inji-install-ios (1).png" alt=""><figcaption><p>Installation of Inji Mobile on iOS device</p></figcaption></figure>
 
 ### First launch of the app
 
 * Upon launching the app, the MOSIP logo will be displayed before the language filter appears.
-* The chosen language will be reflected within the app interface. Subsequently, a four-page tutorial for the Inji will be presented, followed by the option to secure the app.
+* The chosen language will be reflected within the app interface. Subsequently, a four-page tutorial for the Inji Mobile will be presented, followed by the option to secure the app.
 * This can be achieved through either a PIN or utilizing the device's Biometrics (such as fingerprint or facial recognition). Once the setting is done, users will be directed to the app's home page.
 
 **On Android device**
@@ -81,7 +81,7 @@ After we have completed several scenarios, when we navigate to the history page,
 
 Prerequisites:
 
-* Two or more devices with Inji installed are required for sharing credentials.
+* Two or more devices with Inji Mobile installed are required for sharing credentials.
 * All required permissions like Bluetooth, location and camera access are enabled on both the devices.
 * The parties involved are usually a Resident (sharing party) who wishes to share their credentials with a Relying party (receiving party), which could be a banker, health worker, or other professional service.
 
