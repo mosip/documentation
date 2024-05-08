@@ -1,39 +1,39 @@
-# Inji Setup Guide
+# Inji Mobile Setup Guide
 
-Welcome to the Inji Setup Guide tailored specifically for our Collab Environment! This guide is designed to assist you in setting up and configuring the [**Inji**](https://docs.mosip.io/inji) mobile wallet app in our sandbox Collab environment. By following the steps outlined in this guide, you will be able to smoothly install and utilize the Inji app, empowering you to explore its features and functionalities effectively. Whether you're a Developer, System Integrator, or an enthusiast eager to dive into the world of digital identity, this guide will provide you with the necessary information to get started with Inji in our [**Collab**](https://collab.mosip.net/) environment. Let's begin this journey of seamless setup and exploration!
+Welcome to the Inji Mobile Setup Guide tailored specifically for our Collab Environment! This guide is designed to assist you in setting up and configuring the [**Inji Mobile**](https://docs.mosip.io/inji) mobile wallet app in our sandbox Collab environment. By following the steps outlined in this guide, you will be able to smoothly install and utilize the Inji Mobile app, empowering you to explore its features and functionalities effectively. Whether you're a Developer, System Integrator, or an enthusiast eager to dive into the world of digital identity, this guide will provide you with the necessary information to get started with Inji Mobile in our [**Collab**](https://collab.mosip.net/) environment. Let's begin this journey of seamless setup and exploration!
 
 ### Pre-requisites
 
-Before you start with setting up Inji, ensure you have the following in place.
+Before you start with setting up Inji Mobile, ensure you have the following in place.
 
-1. Inji APK File: For Android devices,
-   * If you are using an Android smartphone, click [here](https://drive.google.com/drive/folders/1SRHhFxQBNfOc-cdPU8VlKecIdc-WkuGZ) to get the Inji `apk` file for installation.
+1. Inji Mobile APK File: For Android devices,
+   * If you are using an Android smartphone, click [here](https://drive.google.com/drive/folders/1SRHhFxQBNfOc-cdPU8VlKecIdc-WkuGZ) to get the Inji Mobile `apk` file for installation.
    * Transfer the `apk` file onto the smartphone on which it is to be installed.
-2. Inji Test Flight Access: For iOS devices,
-   * If you are using an iOS device, fill out the [form](https://docs.google.com/forms/d/e/1FAIpQLSd\_P4OMwimjTxGlJ2bfLob2TIt9UaaZDQF3sBO74e9TBST-vQ/viewform) here to get access to the Inji app on test flight.
+2. Inji Mobile Test Flight Access: For iOS devices,
+   * If you are using an iOS device, fill out the [form](https://docs.google.com/forms/d/e/1FAIpQLSd\_P4OMwimjTxGlJ2bfLob2TIt9UaaZDQF3sBO74e9TBST-vQ/viewform) here to get access to the Inji Mobile app on test flight.
      * Ensure you have downloaded the test flight application from your app store
    * You will receive an email on the email ID (Apple ID) provided in the form.
-   * Follow the instructions in the email and access Inji from the iOS device on which it is to be installed.
+   * Follow the instructions in the email and access Inji Mobile from the iOS device on which it is to be installed.
 3.  UIN Credentials:
 
-    * Issuance of UIN (Unique identification number) as a demo credential will allow you to explore Inji’s capabilities and experience seamless VC sharing firsthand.
-    * Fill out the [form ](https://docs.google.com/forms/d/e/1FAIpQLSc2I0CQqlYRIrEmcJ3J3tKlYOVNcYNj88YZe4MMwU2RZTrjOA/viewform)here and we will generate the demo credentials, which you can use subsequently on the Inji app to download and share Verifiable Credentials (VCs).
+    * Issuance of UIN (Unique identification number) as a demo credential will allow you to explore Inji Mobile’s capabilities and experience seamless VC sharing firsthand.
+    * Fill out the [form ](https://docs.google.com/forms/d/e/1FAIpQLSc2I0CQqlYRIrEmcJ3J3tKlYOVNcYNj88YZe4MMwU2RZTrjOA/viewform)here and we will generate the demo credentials, which you can use subsequently on the Inji Mobile app to download and share Verifiable Credentials (VCs).
 
     _Note_: Please use 111111 as the OTP, for any OTP based feature in Collab environment.
 
 ### Step-by-Step Process
 
-To effectively set up the Inji app and manage Verifiable Credentials (VCs), follow these detailed steps:
+To effectively set up the Inji Mobile app and manage Verifiable Credentials (VCs), follow these detailed steps:
 
-**Step 1: Install the Inji Resident App**
+**Step 1: Install the Inji Mobile Resident App**
 
 1. For a step-by-step guide on how to install the Inji mobile application, click [here](../end-user-guide.md).
 2. You can visit the section titled `Installing the MOSIP Resident Mobile Application` for more detailed instructions in the guide.
 
-**Step 2: Install the Inji App - To be used as Verifier App**
+**Step 2: Install the Inji Mobile App - To be used as Verifier App**
 
 1. Follow the same installation process mentioned above in step 1.
-2. Setup another instance of the Inji app on another smartphone, which can serve as the Verifier app.
+2. Setup another instance of the Inji Mobile app on another smartphone, which can serve as the Verifier app.
 
 **Step 3: Download VC Using UIN**
 
@@ -51,11 +51,11 @@ To effectively set up the Inji app and manage Verifiable Credentials (VCs), foll
 
 ### Additional Resources
 
-Watch this informative video titled [**Inji Product Demo to Download and Share VC**](https://youtu.be/JWxJfHMVMFI?si=\_VtK4\_MaIcs0f\_Yh) for a visual walkthrough of the features.
+Watch this informative video titled [**Inji Mobile Product Demo to Download and Share VC**](https://youtu.be/JWxJfHMVMFI?si=\_VtK4\_MaIcs0f\_Yh) for a visual walkthrough of the features.
 
-Click [here](https://docs.mosip.io/inji) for detailed information about Inji.
+Click [here](https://docs.mosip.io/inji) for detailed information about Inji Mobile.
 
-> By following these instructions, you will be equipped to seamlessly set up the Inji application and effectively share your Verifiable Credentials.
+> By following these instructions, you will be equipped to seamlessly set up the Inji Mobile application and effectively share your Verifiable Credentials.
 
 ### Get In Touch
 
