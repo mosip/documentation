@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a draft specification that is used to implement the face match in the Inji wallet or any similar wallets.
+This is a draft specification that is used to implement the face match in the Inji Mobile wallet or any similar wallets.
 
 ### Configure API
 
@@ -33,7 +33,7 @@ This API is asynchronous and can be used for initializing the implementer's SDK.
 | -------- | --------------------------------------------------- | ---------- |
 | config   | Configuration with model file and matcher threshold | Any object |
 
-Inji would initialize the config as a JSON. The JSON would contain the following items
+Inji Mobile would initialize the config as a JSON. The JSON would contain the following items
 
 | **Attribute Name** | **Description**                                                                           |
 | ------------------ | ----------------------------------------------------------------------------------------- |
@@ -52,7 +52,7 @@ _Standard Return Codes (true or false)_
 An asynchronous API that compares two images, allowing for different image formats such as PNG, JPG, HEIC or Template. Upon completion returns a boolean value. The API has an expected timeout and it is expected that the implementors clear the memory and processing upon timeout.
 
 * To ensure fraud prevention in compliance with [ISO/IEC 30101](https://www.iso.org/standard/83828.html), the faceAuth verification should include passive liveness checks, such as picture-in-picture.
-* To enhance logging and traceability, the implementors should send telemetry using `traceabilityId`. The id is set during the configure API call, It is expected that the same is used here. In Inji, `AppId` is used as `traceabilityId`.
+* To enhance logging and traceability, the implementors should send telemetry using `traceabilityId`. The id is set during the configure API call, It is expected that the same is used here. In Inji Mobile, `AppId` is used as `traceabilityId`.
 * Timeout is set in seconds.
 
 **Signature**
@@ -90,6 +90,6 @@ _Standard Return Codes (match or no match)_
 The following guidelines apply to individuals who are developing the face SDK:
 
 * It is prohibited to collect any personally identifiable information (PII) or phone details.
-* Inji includes built-in telemetry, and all telemetry data must be transmitted to the designated system. Telemetry enhances Inji's observability features by capturing specific events, creating measures, and monitoring various user actions and events.
+* Inji Mobile includes built-in telemetry, and all telemetry data must be transmitted to the designated system. Telemetry enhances Inji Mobile's observability features by capturing specific events, creating measures, and monitoring various user actions and events.
 * Recording or transmitting IP addresses, user details, Phone IMEI, phone numbers, or user photos in telemetry or logs is strictly prohibited
 * The use of device fingerprints should be limited to managing the SDK license.
