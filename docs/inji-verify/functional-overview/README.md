@@ -16,7 +16,6 @@ Inji Verify is a powerful tool designed to facilitate the validation and verific
    * The user-friendly interface provides a clear and concise presentation of the credential data for easy verification.
 4. **Secure Access and Data Privacy:**
    * Inji Verify prioritizes security and data privacy, employing encryption techniques to protect sensitive credential information.
-   * Access to credential data is restricted to authorized users, ensuring that only trusted parties can verify credentials.
    * Compliance with privacy regulations such as GDPR ensures that user data is handled responsibly and ethically.
 5. **Cross-Platform Compatibility:**
    * Inji Verify is compatible with a wide range of devices and operating systems, including desktops, and laptops for the first version.
