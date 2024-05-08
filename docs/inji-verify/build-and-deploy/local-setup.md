@@ -22,7 +22,7 @@ $ nvm install 18
 * **Helm:** The folder contains helm charts required to deploy on K8S
 * **Inji Verify:** This contains the source code and Dockerfile
 
-Click on the [**ReadMe file**](https://github.com/mosip/inji-verify/blob/develop/README.md) to explore more!
+Click on the [**ReadMe file**](https://github.com/mosip/inji-verify/blob/v0.8.0/README.md) to explore more!
 
 ### **Running the application:**
 
