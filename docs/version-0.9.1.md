@@ -10,7 +10,7 @@
 
 ## Overview
 
-The 0.9.1 version of Inji is the first patch release on top of Inji 0.9.0. This release has bug fixes for features like Downloading and sharing the VC, Wallet binding, face authentication on resident’s phone, etc.
+The 0.9.1 version of Inji Mobile is the first patch release on top of Inji 0.9.0. This release has bug fixes for features like Downloading and sharing the VC, Wallet binding, face authentication on resident’s phone, etc.
 
 ## Summary
 
@@ -20,7 +20,7 @@ Below is a summary of some of the important bug fixes made in this version.
 
 * **Introduction of error codes** in case the transfer of VC fails.
 
-* Based on the android devices, Inji now asks for only the required Bluetooth permissions.
+* Based on the android devices, Inji Mobile now asks for only the required Bluetooth permissions.
 
 * Migrated to **MMKV storage from Async storage**. With this, the devices can now store more number of VCs.
 
@@ -37,7 +37,7 @@ Below is a summary of some of the important bug fixes made in this version.
 
 ### Internal Improvements 
 
-The 0.9.1 version of Inji mainly focuses on bug fixes along with some internal improvements like:
+The 0.9.1 version of Inji Mobile mainly focuses on bug fixes along with some internal improvements like:
 
 * Ability to build on Windows
 
@@ -45,7 +45,7 @@ The 0.9.1 version of Inji mainly focuses on bug fixes along with some internal i
 
 ### Change in implementation
 
-The older version of Inji app (0.9.0) will not be compatible with the newer version of Inji, due to the following reasons:
+The older version of Inji Mobile app (0.9.0) will not be compatible with the newer version of Inji, due to the following reasons:
 
 * The storage has been changed from _Async Storage_ to _mmkv_ storage, which are two different storage mechanisms.
 
@@ -67,7 +67,7 @@ The older version of Inji app (0.9.0) will not be compatible with the newer vers
 
 * **Bug fix**: During wallet binding when the auth token is expired, the first call made for wallet binding will be used for refreshing the auth token, which then makes the current call to fail and subsequent calls to succeed. As a fix, the wallet binding call will refresh the token and complete the binding process. #[INJI-41](https://mosip.atlassian.net/browse/INJI-41)
 
-* **Bug fix**: Inji had a restriction to the overall storage size, in that, we were not able to download more than 29 VCs. As a fix, we migrated from Async storage to MMKV which does not have any upper limit on the storage size. #[INJI-38](https://mosip.atlassian.net/browse/INJI-38)
+* **Bug fix**: Inji Mobile had a restriction to the overall storage size, in that, we were not able to download more than 29 VCs. As a fix, we migrated from Async storage to MMKV which does not have any upper limit on the storage size. #[INJI-38](https://mosip.atlassian.net/browse/INJI-38)
 
 * **Bug fix**: In the Home Screen, the tab indicators were not properly working in RTL. After the fix, RTL is being rendered properly. #[INJI-36](https://mosip.atlassian.net/browse/INJI-36)
 
@@ -75,7 +75,7 @@ The older version of Inji app (0.9.0) will not be compatible with the newer vers
 
 * **Bug fix**: A few texts were not being rendered in Arabic. The Arabic translations were added to make sure when the resident has chosen Arabic language, all the data is being rendered in Arabic. #[INJI-34](https://mosip.atlassian.net/browse/INJI-34)
 
-* **Bug fix**: Inji application was not consistent in different locales, and some literals were not properly translated in the native languages. As a fix, all the missed out translations were added. #[INJI-33](https://mosip.atlassian.net/browse/INJI-80) #[INJI-32](https://mosip.atlassian.net/browse/INJI-80)
+* **Bug fix**: Inji Mobile application was not consistent in different locales, and some literals were not properly translated in the native languages. As a fix, all the missed out translations were added. #[INJI-33](https://mosip.atlassian.net/browse/INJI-80) #[INJI-32](https://mosip.atlassian.net/browse/INJI-80)
 
 * **Bug fix**: The error popup shown during the BLE transfer is updated, the popup will now contain few error codes which depicts different stages where the failure has happened in the BLE layer. #[INJI-28](https://mosip.atlassian.net/browse/INJI-28)
 
@@ -91,4 +91,4 @@ The older version of Inji app (0.9.0) will not be compatible with the newer vers
 * [Feature Documentation](./)
 * [User Guide](https://docs.mosip.io/1.2.0/modules/mobile-application/inji-mobile-app-beta)
 * [QA Report](https://docs.mosip.io/inji/versions/version-0.9.1/test-report-0.9.1)
-* To know more about Inji, watch the [video](https://www.youtube.com/watch?v=JWxJfHMVMFI)!
+* To know more about Inji Mobile, watch the [video](https://www.youtube.com/watch?v=JWxJfHMVMFI)!
