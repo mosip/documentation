@@ -13,7 +13,7 @@ It offers a secure, trustworthy, and dependable mobile Verifiable Credentials wa
 
 The application is constructed using the [React Native framework](https://reactnative.dev/), ensuring compatibility with both Android and iOS mobile operating systems. It leverages [Xstate state machines](https://xstate.js.org/docs/) for efficient application state management. The digital credentials produced by the mobile app adhere to the [Verifiable Credentials (VC) Data Model](https://www.w3.org/TR/vc-data-model/).
 
-**How does Inji mobile work?**
+**How does Inji Mobile work?**
 
 * Inji Mobile users can obtain their Verifiable credential by utilizing their unique ID (e.g., UIN or VID issued by the government).
 * Users are required to authenticate their request through an OTP sent to their registered mobile number or email address.
