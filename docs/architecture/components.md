@@ -1,6 +1,6 @@
 # Components
 
-Inji utilizes multiple libraries to provide a seamless experience.
+Inji Mobile utilizes multiple libraries to provide a seamless experience.
 
 These libraries are accessible as NPM modules, allowing seamless integration with other mobile wallets.
 
@@ -28,22 +28,22 @@ The libraries are as follows:
 
 * To learn more about Tuvali's implementation, refer [here](https://docs.mosip.io/inji/integration-guide/tuvali).
 * For information on Tuvali's permissions and requirements, refer [here](https://docs.mosip.io/inji/integration-guide/tuvali/tuvali-requirements).
-* To understand Tuvali and Inji integration, along with API documentation, refer[ here](https://docs.mosip.io/inji/integration-guide/tuvali/tuvali-inji).
+* To understand Tuvali and Inji Mobile integration, along with API documentation, refer[ here](https://docs.mosip.io/inji/integration-guide/tuvali/tuvali-inji).
 * To check the NPM module, click [here](https://www.npmjs.com/package/@mosip/tuvali).
 
 #### **2. Face Match**
 
 The face matcher SDK internally implements native functionalities for Android and iOS, utilizing [Tensorflow](https://www.tensorflow.org/) and [Google ML Kit](https://developers.google.com/ml-kit) to identify faces.
 
-This SDK internally employs a `tflite` model, which must be created by the integrating party. The model, trained using resident faces, is stored on the MOSIP file server. Inji currently utilizes the face matcher SDK (soon to be replaced by the NPM module) for offline face authentication.
+This SDK internally employs a `tflite` model, which must be created by the integrating party. The model, trained using resident faces, is stored on the MOSIP file server. Inji Mobile currently utilizes the face matcher SDK (soon to be replaced by the NPM module) for offline face authentication.
 
 The SDK is employed in two scenarios:
 
 **During Offline VC Sharing**: Residents can perform selfie authentication before sharing the VC with the relying party. The app opens the camera, allowing residents to take a selfie, which is then validated against the VC image to verify the resident's presence.\
 \
-**During Online Login**: Residents can scan the QR code from the relying party portal and opt to log in using Inji for services. In this process, residents undergo selfie authentication against the VC to confirm their presence.
+**During Online Login**: Residents can scan the QR code from the relying party portal and opt to log in using Inji Mobile for services. In this process, residents undergo selfie authentication against the VC to confirm their presence.
 
-Upon the initial launch of Inji, the model is downloaded in the background and stored in the cache. Refer [here](../integration-guide/face-match.md) to check the API specifications for the face matcher model.
+Upon the initial launch of Inji Mobile, the model is downloaded in the background and stored in the cache. Refer [here](../integration-guide/face-match.md) to check the API specifications for the face matcher model.
 
 ### **3. Secure Keystore**
 
