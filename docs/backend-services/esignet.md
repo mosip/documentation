@@ -1,6 +1,6 @@
 # eSignet
 
-The eSignet service is utilized by Inji for online login and downloading the VC.  Users have the ability to log in to any service provider portal that is integrated with eSignet.
+The eSignet service is utilized by Inji Mobile for online login and downloading the VC.  Users have the ability to log in to any service provider portal that is integrated with eSignet.
 
 ## Online login
 
@@ -8,7 +8,7 @@ The eSignet service is utilized by Inji for online login and downloading the VC.
 
 The user is required to open the portal integrated with eSignet and utilize the app scanner to scan the QR code. 
 
-After successfully scanning the QR code, Inji will access the API below and transmit the link code.
+After successfully scanning the QR code, Inji Mobile will access the API below and transmit the link code.
 
 {% swagger src="../.gitbook/assets/Identity-Provider.yaml" path="/linked-authorization/link-transaction" method="post" %}
 [Identity-Provider.yaml](../.gitbook/assets/Identity-Provider.yaml)
@@ -28,9 +28,9 @@ After successfully scanning the QR code, Inji will access the API below and tran
 
 The user is currently on the `Add new card` screen and chooses the option to `Download via eSignet`.
 
-* Inji utilizes the `react-native-app-auth` library to authorize and redirect the user to the eSignet user interface. The configuration for redirection is retrieved as part of the issuer's configuration.
+* Inji Mobile utilizes the `react-native-app-auth` library to authorize and redirect the user to the eSignet user interface. The configuration for redirection is retrieved as part of the issuer's configuration.
 
-* Once the user is on the eSignet user interface, they input the necessary information such as a unique ID and OTP (One-time Password). After entering the OTP, the user is redirected back to Inji in order to generate a key pair and initiate the request to download the credential.
+* Once the user is on the eSignet user interface, they input the necessary information such as a unique ID and OTP (One-time Password). After entering the OTP, the user is redirected back to Inji Mobile in order to generate a key pair and initiate the request to download the credential.
 
 For credential request, refer credential_endpoint attribute in issuer's configuration response.
 
