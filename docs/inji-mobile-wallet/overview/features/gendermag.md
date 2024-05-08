@@ -11,9 +11,9 @@ The **GenderMag Methodology** aims to analyze and mitigate gender biases in user
    * Tim, who is either Timothy or Timara, a 24-year-old financial consultant, is literate, tech-savvy, and boasts excellent internet connectivity. Additionally, he owns the latest phone.
 2. Examine the feature, systematically walk through the process, assess their information handling, and pinpoint any problems.
 
-During the walkthrough, we pinpointed inclusivity concerns in the Inji mobile app’s user interface and experience. Subsequently, we took steps to mitigate these issues, aiming to eliminate digital entry barriers.
+During the walkthrough, we pinpointed inclusivity concerns in the Inji Mobile app’s user interface and experience. Subsequently, we took steps to mitigate these issues, aiming to eliminate digital entry barriers.
 
-As part of Phase1, below P1 items are fixed in the v0.11.0-Inji release:
+As part of Phase1, below P1 items are fixed in the v0.11.0-Inji Mobile release:
 
 
 
