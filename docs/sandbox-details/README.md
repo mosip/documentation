@@ -1,6 +1,6 @@
 # Try it out
 
-If you're a partner interested in integrating with Inji, we encourage you to initiate the process by completing the form available [here](https://forms.gle/WvKajxxZ6Jy2K5TM6). This step is crucial for ensuring a smooth integration with our designated sandbox environments.
+If you're a partner interested in integrating with Inji Mobile, we encourage you to initiate the process by completing the form available [here](https://forms.gle/WvKajxxZ6Jy2K5TM6). This step is crucial for ensuring a smooth integration with our designated sandbox environments.
 
 #### Collab: Development Integration Environment
 
