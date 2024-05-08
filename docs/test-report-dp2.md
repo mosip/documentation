@@ -98,7 +98,7 @@ Below section provides details on API test metrics by executing MOSIP functional
 
 Here is the detailed breakdown of metrics:
 
-#### Inji
+#### Inji Mobile
 
 | **Total** | **Passed** | **Failed** | **Skipped** |
 | --------- | ---------- | ---------- | ----------- |
