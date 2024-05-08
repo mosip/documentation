@@ -18,7 +18,7 @@
   * [Configuration](customisation/configuration.md)
   * [Credential Providers](customisation/credential\_providers.md)
 * [Try it out](sandbox-details/README.md)
-  * [Inji Setup Guide](sandbox-details/inji-setup-guide.md)
+  * [Inji Mobile Setup Guide](sandbox-details/inji-setup-guide.md)
 * [Contribution](contribution/README.md)
   * [Code Contribution](contribution/code-contribution.md)
   * [Code of Conduct](contribution/code-of-conduct.md)
