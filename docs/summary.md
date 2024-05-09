@@ -86,7 +86,7 @@
   * [Components](inji-certify/technical-overview/components.md)
   * [Supported Browsers](inji-certify/technical-overview/supported-browsers.md)
 * [Releases](inji-certify/releases.md)
-  * [Release Notes](inji-certify/overview/release-notes.md)
+  * [Version 0.8.0](inji-certify/overview/release-notes.md)
 * [Build & Deploy](inji-certify/build-and-deploy/README.md)
   * [Local Setup](inji-certify/build-and-deploy/local-setup.md)
 
