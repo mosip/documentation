@@ -1,8 +1,6 @@
 # Technology Stack
 
-This section intends to provide an overview of the technologies and frameworks utilized to build Inji Verify.
-
-**UI**
+**UI & Rest end points**
 
 The table below outlines the frameworks, tools, and technologies employed by Inji Verify:
 
@@ -12,8 +10,4 @@ The table below outlines the frameworks, tools, and technologies employed by Inj
 
 The table below specifies the tools needed to deploy Inji Verify:
 
-| **Tool/Technology**                                       | **Version**                 | **Description**                                                                                                                                                                                                                            | **License**                                                         |
-| --------------------------------------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------- |
-| [Docker](https://www.docker.com/)                         | 20.4 and above              | Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers.                                                                                               | [OpenSource License](https://www.docker.com/community/open-source/) |
-| [npm](https://www.npmjs.com/)                             |                             | npm is the package manager for the Node JavaScript platform. It puts modules in place so that node can find them, and manages dependency conflicts intelligently.                                                                          | [Artistic License 2.0](https://docs.npmjs.com/policies/npm-license) |
-| [Helm Chart (MOSIP)](https://github.com/mosip/mosip-helm) | depends on Inji-web version | Helm helps you manage Kubernetes applications - helps define, install, and upgrade even the most complex Kubernetes application. Charts are easy to create, version, share, and publish — so start using Helm and stop the copy-and-paste. |                                                                     |
+<table data-header-hidden><thead><tr><th width="174"></th><th></th><th></th><th></th></tr></thead><tbody><tr><td><strong>Tool/Technology</strong></td><td><strong>Version</strong></td><td><strong>Description</strong></td><td><strong>License</strong></td></tr><tr><td><a href="https://www.docker.com/">Docker</a></td><td>20.4 and above</td><td>Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers.</td><td><a href="https://www.docker.com/community/open-source/">OpenSource License</a></td></tr><tr><td><a href="https://www.npmjs.com/">npm</a></td><td> </td><td>npm is the package manager for the Node JavaScript platform. It puts modules in place so that node can find them, and manages dependency conflicts intelligently.</td><td><a href="https://docs.npmjs.com/policies/npm-license">Artistic License 2.0</a></td></tr><tr><td><a href="https://github.com/mosip/mosip-helm">Helm Chart (MOSIP)</a></td><td>depends on Inji-web version</td><td>Helm helps you manage Kubernetes applications - helps define, install, and upgrade even the most complex Kubernetes application. Charts are easy to create, version, share, and publish — so start using Helm and stop the copy-and-paste.</td><td></td></tr></tbody></table>

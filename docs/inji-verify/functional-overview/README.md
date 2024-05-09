@@ -13,10 +13,7 @@ Inji Verify is a powerful tool designed to facilitate the validation and verific
    * Valid credentials retrieved through QR code scanning or uploading QR codes are displayed securely within the Inji Verify portal.
    * Users can view detailed information about the credential, including name, DOB, gender, expiration date, and any associated claims.
    * The user-friendly interface facilitates a clear and concise data representation of the credential data for easy verification.
-4. **Secure Access and Data Privacy:**
-   * Inji Verify prioritizes security and data privacy, employing encryption techniques to protect sensitive credential information.
-   * Compliance with privacy regulations such as GDPR ensures that user data is handled responsibly and ethically.
-5. **Cross-Platform Compatibility:**
+4. **Cross-Platform Compatibility:**
    * Inji Verify is compatible with a wide range of devices and operating systems, including desktops, tablets, smartphones and laptops to begin with.
      * Well-designed a Mobile responsive version with back camera capability **(Coming Soon)**
      * The responsive design ensures optimal performance and usability across different screen sizes and resolutions. **(Coming Soon)**
