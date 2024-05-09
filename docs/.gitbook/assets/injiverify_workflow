@@ -1,0 +1,42 @@
+@startuml
+participant User
+participant InjiVerify
+participant DeviceCamera
+participant PixelPass
+participant VerificationSDK
+participant Issuer
+
+
+User -> InjiVerify: Scan Request
+InjiVerify -> DeviceCamera: Scan Request
+DeviceCamera --> User: Camera permissions
+User -> DeviceCamera: Granted Camera Permissions
+User -[#red]-> DeviceCamera: <color:red>Deny Camera Permissions
+DeviceCamera -> InjiVerify: QR Read Data
+InjiVerify -> PixelPass: Unzip and Decode QR Data
+PixelPass --> InjiVerify: Decoded Data
+PixelPass -[#red]-> InjiVerify: <color:red>Invalid Data
+InjiVerify -[#red]-> User: <color:red>Error Display
+InjiVerify -> VerificationSDK: Verify Data
+VerificationSDK --> InjiVerify: Verified status
+InjiVerify -> Issuer: Get Display properties
+Issuer --> InjiVerify: Display Properties
+InjiVerify --> User: Credential DIsplayed
+|||
+|||
+|||
+|||
+|||
+User -> InjiVerify: Upload File with QR
+InjiVerify -> PixelPass: Unzip and Decode QR Data
+PixelPass --> InjiVerify: Decoded Data
+PixelPass -[#red]-> InjiVerify: <color:red>Invalid Data
+InjiVerify -[#red]-> User: <color:red>Error Display
+InjiVerify -> VerificationSDK: Verify Data
+VerificationSDK --> InjiVerify: Verified status
+InjiVerify -> Issuer: Get Display properties
+Issuer --> InjiVerify: Display Properties
+InjiVerify --> User: Credential DIsplayed
+
+
+@enduml

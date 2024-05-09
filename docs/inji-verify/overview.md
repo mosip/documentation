@@ -32,6 +32,4 @@ Verifiable Credentials represent a digital and cryptographically secured version
 * Compatibility with Internet browsers supporting the use of the device's camera.
 * Scanning is to be performed in a well-lit environment without any filters or dark mode settings.
 
-**QR Code Version Compatibility:** To ensure successful verification specifically for the scan feature the VC should be encoded in QR code version 21 and version 22 with a VC character limit of 1500.
-
-**Conclusion:** Inji Verify empowers users with a reliable and secure means of verifying verifiable credentials embedded within QR codes, ensuring data integrity and trustworthiness across diverse use cases and industries. By adhering to standardized formats and leveraging cryptographic methods, Inji Verify sets a new standard for digital credential verification.
+Inji Verify empowers users with a reliable and secure means of verifying verifiable credentials embedded within QR codes, ensuring data integrity and trustworthiness across diverse use cases and industries. By adhering to standardized formats and leveraging cryptographic methods, Inji Verify sets a new standard for digital credential verification.

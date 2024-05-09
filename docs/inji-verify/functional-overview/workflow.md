@@ -6,7 +6,48 @@
 
 Visit [https://www.plantuml.com/plantuml/uml](https://www.plantuml.com/plantuml/uml) and import the following file to edit the above sequence diagram as UML
 
-\<UML File Spec>
+```
+@startuml
+participant User
+participant InjiVerify
+participant DeviceCamera
+participant PixelPass
+participant VerificationSDK
+participant Issuer
+
+User -> InjiVerify: Scan Request
+InjiVerify -> DeviceCamera: Scan Request
+DeviceCamera --> User: Camera permissions
+User -> DeviceCamera: Granted Camera Permissions
+User -[#red]-> DeviceCamera: <color:red>Deny Camera Permissions
+DeviceCamera -> InjiVerify: QR Read Data
+InjiVerify -> PixelPass: Unzip and Decode QR Data
+PixelPass --> InjiVerify: Decoded Data
+PixelPass -[#red]-> InjiVerify: <color:red>Invalid Data
+InjiVerify -[#red]-> User: <color:red>Error Display
+InjiVerify -> VerificationSDK: Verify Data
+VerificationSDK --> InjiVerify: Verified status
+InjiVerify -> Issuer: Get Display properties
+Issuer --> InjiVerify: Display Properties
+InjiVerify --> User: Credential DIsplayed
+|||
+|||
+|||
+|||
+|||
+User -> InjiVerify: Upload File with QR
+InjiVerify -> PixelPass: Unzip and Decode QR Data
+PixelPass --> InjiVerify: Decoded Data
+PixelPass -[#red]-> InjiVerify: <color:red>Invalid Data
+InjiVerify -[#red]-> User: <color:red>Error Display
+InjiVerify -> VerificationSDK: Verify Data
+VerificationSDK --> InjiVerify: Verified status
+InjiVerify -> Issuer: Get Display properties
+Issuer --> InjiVerify: Display Properties
+InjiVerify --> User: Credential DIsplayed
+
+@enduml
+```
 
 ### **Understanding the workflow**:
 
@@ -40,5 +81,5 @@ Visit [https://www.plantuml.com/plantuml/uml](https://www.plantuml.com/plantuml/
   * Inji Verify navigates back to the home screen and displays the "QR code format not supported" error.
 
 {% hint style="info" %}
-**Note**: To understand the Inji Verify components in detail please refer to the topic **Components** under **Technical Overview** section.
+**Note**: To understand the Inji Verify components in detail please refer to the topic [**Components**](../technical-overview/components.md) under [**Technical Overview**](../technical-overview/) section.
 {% endhint %}

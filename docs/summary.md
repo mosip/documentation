@@ -98,7 +98,7 @@
   * [Workflow](inji-verify/functional-overview/workflow.md)
   * [End User Guide](inji-verify/functional-overview/end-user-guide.md)
 * [Technical Overview](inji-verify/technical-overview/README.md)
-  * [Tech Stack](inji-verify/technical-overview/tech-stack.md)
+  * [Technology Stack](inji-verify/technical-overview/tech-stack.md)
   * [Components](inji-verify/technical-overview/components.md)
   * [Supported Browsers](inji-verify/technical-overview/supported-browsers.md)
 * [Releases](inji-verify/releases/README.md)
