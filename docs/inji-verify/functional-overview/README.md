@@ -23,16 +23,16 @@ Inji Verify is a powerful tool designed to facilitate the validation and verific
    * Users can access the Inji Verify portal from anywhere with an internet connection, making it convenient for on-the-go verification.
 
 {% hint style="info" %}
-Scan Feature QR Code Compatibility:
+**Scan Feature QR Code Compatibility**:
 
 * QR code versions supported for the scan feature range from v22 and below.
 
-Camera Resolution Requirement:
+**Camera Resolution Requirement**:
 
 * The device's front or web camera resolution must exceed 8 megapixels.
 * Cameras should be used in well-lit environments without filters, ensuring proper alignment for optimal scanning.
 
-Upload Feature QR Code Compatibility:
+**Upload Feature QR Code Compatibility**:
 
 * QR code versions supported for the upload feature range from v32 and below.
 {% endhint %}
