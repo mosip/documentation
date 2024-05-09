@@ -17,7 +17,7 @@ Inji Verify is a powerful tool designed to facilitate the validation and verific
    * Inji Verify prioritizes security and data privacy, employing encryption techniques to protect sensitive credential information.
    * Compliance with privacy regulations such as GDPR ensures that user data is handled responsibly and ethically.
 5. **Cross-Platform Compatibility:**
-   * Inji Verify is compatible with a wide range of devices and operating systems, including desktops,tablets,smartphones and laptops for the first version.
+   * Inji Verify is compatible with a wide range of devices and operating systems, including desktops, tablets, smartphones and laptops to begin with.
      * Well-designed a Mobile responsive version with back camera capability **(Coming Soon)**
      * The responsive design ensures optimal performance and usability across different screen sizes and resolutions. **(Coming Soon)**
    * Users can access the Inji Verify portal from anywhere with an internet connection, making it convenient for on-the-go verification.
