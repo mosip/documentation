@@ -24,6 +24,7 @@
   * [Code of Conduct](contribution/code-of-conduct.md)
 * [Build & Deployment](build-&-deployment.md)
 * [Releases](versions.md)
+  * [Version 0.12.0](inji-mobile-wallet/versions/version-0.12.0.md)
   * [Version 0.11.0-Inji](inji-mobile-wallet/versions/version-0.11.0-inji/README.md)
     * [Test Report](inji-mobile-wallet/versions/version-0.11.0-inji/test-report.md)
   * [Version 0.11.0](version-0.11.0.md)
