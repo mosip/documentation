@@ -56,7 +56,7 @@ Furthermore, the organization played a pivotal role in developing Inji Mobile, a
 
 The organization has broadened its contributions to other essential components of the digital credentialing stack - Inji.
 
-**About Thoughtworks**: Thoughtworks is a global technology consultancy renowned for integrating strategy, design, and engineering to foster digital innovation. With over 10,500 skilled professionals across 48 offices in 19 countries, the organization has a legacy of delivering impactful solutions for our clients over the past three decades. We pride ourselves on leveraging technology to address complex business challenges and drive meaningful change.
+**About Thoughtworks**: Thoughtworks is a global technology consultancy renowned for integrating strategy, design, and engineering to foster digital innovation. With over 10,500 skilled professionals across 48 offices in 19 countries, the organization has a legacy of delivering impactful solutions for our clients over the past three decades. The company prides itself on leveraging technology to address complex business challenges and drive meaningful change.
 
 ## [Infosys](https://www.infosys.com/)
 
