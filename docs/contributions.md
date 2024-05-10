@@ -103,6 +103,8 @@ MOSIP test automation suite requires large set of synthetic biometric data such 
 
 **Project 4:** MOSIP USSD Proxy feature enhancements
 
+
+
 MOSIP USSD Proxy is a bridge between Telco SDP and MOSIP Instance. This allows to build custom USSD workflows.
 
 The following workflows were developed under this project:
@@ -110,3 +112,11 @@ The following workflows were developed under this project:
 * Check registration status for a given RID
 * Retrieve UIN Lock/Unlock status
 * Lock or Unlock a given UIN
+
+## [Protean](https://www.proteantech.in/)
+
+Protean partnered with MOSIP in September 2018 and since then the company has actively contributed in development and testing of various modules of MOSIP like Pre-Registration, Registration, Registration Processor, and other related modules.
+
+So far, Protean has contributed approximately 1905 person per days of development effort, which roughly translates to more than 15000 person hours of work.
+
+**About Protean**: Protean (NSDL e-Governance) offers digital ecosystem, curated to cater to billions. With over 25+ years providing unparalleled experience in creating population scale e-governance solutions, the company has empowered billions of lives across the country. Protean is building a digitised ecosystem for 1.4 billion people transforming citizen services for a better future.
