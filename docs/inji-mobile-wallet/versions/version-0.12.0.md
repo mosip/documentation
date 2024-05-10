@@ -43,49 +43,50 @@ To know more about QR code verification, read about Inji Verify here.
 
 As part of the 0.12.0 release, the following enhancements have been made to the Data Backup feature:
 
-* Cloud as the Primary Source:
+1. **Cloud as the Primary Source**:
+
 * The backup file stored in the cloud will be the primary source of truth.
 * Once the backup file is downloaded and restored, it is automatically removed from the local app storage to ensure that the latest backup file is always restored.
-* iCloud Section Visibility:
+
+2. **iCloud Section Visibility**:
+
 * The iCloud Section is now visible in the Backup & Restore settings screen, allowing users to easily manage their backups.
-* User Notification:
+
+3. **User Notification**:
+
 * When the user initiates a Backup or Restore process, a banner will be displayed to inform users about the ongoing process.
 
-VC Verification:
+#### VC Verification:
 
 Inji mobile wallet provides the functionality to verify Verifiable Credentials using the Digital Bazaar library. The issuer's signature is verified based on the proof type provided by the issuer. Currently, we support the RSA signature type, and we will soon add support for the Ed25519 proof type.
 
 To prevent failures during download caused by verification of Verifiable Credentials with any other signature type, this step needs to be bypassed. Learn more about the steps here.
 
-UI/UX enhancements:
+#### UI/UX enhancements:
 
 Inji Mobile version 0.12.0 introduces enhanced UI to deliver a seamless user experience with an intuitive design. The UI modifications included in this release are:
 
-Card View UI Changes:
+**Card View UI Changes**:
 
 * Users can now view the card in two ways:
-*
   * A mini view on the Home Page with a quick access menu.
   * A detailed view.
 * Additionally, the Settings menu has been moved to the NavBar for easier access.
 
-VC Share Optimization:
+**VC Share Optimization**:
 
 * With the quick access menu in the mini view of the card:
-*
   * Users can quickly initiate a Share or Share with Selfie action from the card to be shared.
 
-GenderMag P2 items: \<List comes here>
+**GenderMag P2 items: \<List comes here>**
 
-\
-\
-Repository Released
+### Repository Released
 
-| Repositories | Tags Released |
-| ------------ | ------------- |
-| Inji         | <p><br></p>   |
-| mimoto       | <p><br></p>   |
-| mosip-config | <p><br></p>   |
+| **Repositories** | **Tags Released** |
+| ---------------- | ----------------- |
+| Inji             | <p><br></p>       |
+| mimoto           | <p><br></p>       |
+| mosip-config     | <p><br></p>       |
 
 
 
@@ -114,10 +115,10 @@ Mentioned below is the list of other known issues.
 | [INJIMOB-1239](https://mosip.atlassian.net/browse/INJIMOB-1239) | [Inji - Screen header and back button are overlapping](https://mosip.atlassian.net/browse/INJIMOB-1239)                                                               |
 | [INJIMOB-1192](https://mosip.atlassian.net/browse/INJIMOB-1192) | [INJI - onboarding of new issuer is affecting the existing issuers](https://mosip.atlassian.net/browse/INJIMOB-1192)                                                  |
 | [INJIMOB-1002](https://mosip.atlassian.net/browse/INJIMOB-1002) | Inji- In specific devices, the Pin and Unpin feature is not working.                                                                                                  |
-| [INJIMOB-968](https://mosip.atlassian.net/browse/INJIMOB-968)   | Android- Occasionally, unable to activate the restored VC                                                                                                             |
-| [INJIMOB-875](https://mosip.atlassian.net/browse/INJIMOB-875)   | IOS - Upon sharing sunbird VC twice and then upon sharing Mosip VC, app crashes                                                                                       |
-| [INJIMOB-872](https://mosip.atlassian.net/browse/INJIMOB-872)   | Android - During face authentication, app crashes on a specific device                                                                                                |
-| [INJIMOB-868](https://mosip.atlassian.net/browse/INJIMOB-868)   | INJI - Backup doesn't append the new data, but replaces the data                                                                                                      |
+| [INJIMOB-968](https://mosip.atlassian.net/browse/INJIMOB-968)   | **Android**- Occasionally, unable to activate the restored VC                                                                                                         |
+| [INJIMOB-875](https://mosip.atlassian.net/browse/INJIMOB-875)   | **IOS** - Upon sharing sunbird VC twice and then upon sharing Mosip VC, app crashes                                                                                   |
+| [INJIMOB-872](https://mosip.atlassian.net/browse/INJIMOB-872)   | **Android** - During face authentication, app crashes on a specific device                                                                                            |
+| [INJIMOB-868](https://mosip.atlassian.net/browse/INJIMOB-868)   | **INJI** - Backup doesn't append the new data, but replaces the data                                                                                                  |
 | [INJIMOB-689](https://mosip.atlassian.net/browse/INJIMOB-689)   | Upon changing the finger authentication in the device, application does not display the error pop up for biometrics change                                            |
 
 ### Bug Fixes
