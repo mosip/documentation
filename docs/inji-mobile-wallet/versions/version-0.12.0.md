@@ -1,10 +1,10 @@
 # Version 0.12.0
 
-Release Name: Inji 0.12.0
+**Release Nam**e: Inji 0.12.0
 
-Support: Developer Release
+**Support**: Developer Release
 
-Release Date: 13th May, 2024
+**Release Date**: 13th May, 2024
 
 ### Overview
 
@@ -15,7 +15,6 @@ We are delighted to announce the release of Inji Mobile Version 0.12.0 . This re
 3. Data backup enhancements
 4. VC Verification
 5. UI/UX enhancements
-6.
    * Card view UI changes
    * VC share optimization
    * GenderMag P2 items
@@ -26,16 +25,13 @@ To know more about the GenderMag UI/UI changes in the Inji mobile application, p
 
 ### Summary
 
-Please find below the details for the Inji Version 0.12.0 release:
+Please find below the details for the **Inji Version 0.12.0** release:
 
-Credential Type Selection:
+#### Credential Type Selection:
 
 Inji mobile wallet now allows users to select the type of credential they need, giving them the option to choose from a list of Credential Types issued by the ID provider. This enables users to download Verifiable Credentials that match their selection.&#x20;
 
-QR code generation for VC:
-
-\
-
+#### QR code generation for VC:
 
 PixelPass, part of the Inji Credentialing stack, generates QR codes for Verifiable Credentials within the Inji mobile wallet. It's specifically designed for smaller data sets when the ID provider doesn't send a QR code along with the Verifiable Credential. Users can view and use this QR code for verification purposes by the relying party or service provider.
 
@@ -43,20 +39,17 @@ To read more about PixelPass library refer here.
 
 To know more about QR code verification, read about Inji Verify here.
 
-Data backup enhancements:
+#### Data backup enhancements:
 
 As part of the 0.12.0 release, the following enhancements have been made to the Data Backup feature:
 
-1. Cloud as the Primary Source:
-2.
-   * The backup file stored in the cloud will be the primary source of truth.
-   * Once the backup file is downloaded and restored, it is automatically removed from the local app storage to ensure that the latest backup file is always restored.
-3. iCloud Section Visibility:
-4.
-   * The iCloud Section is now visible in the Backup & Restore settings screen, allowing users to easily manage their backups.
-5. User Notification:
-6.
-   * When the user initiates a Backup or Restore process, a banner will be displayed to inform users about the ongoing process.
+* Cloud as the Primary Source:
+* The backup file stored in the cloud will be the primary source of truth.
+* Once the backup file is downloaded and restored, it is automatically removed from the local app storage to ensure that the latest backup file is always restored.
+* iCloud Section Visibility:
+* The iCloud Section is now visible in the Backup & Restore settings screen, allowing users to easily manage their backups.
+* User Notification:
+* When the user initiates a Backup or Restore process, a banner will be displayed to inform users about the ongoing process.
 
 VC Verification:
 
