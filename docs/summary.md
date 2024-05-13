@@ -44,6 +44,7 @@
     * [Permissions & Requirements](integration-guide/tuvali-requirements.md)
     * [Tuvali API Documentation](integration-guide/tuvali-inji.md)
   * [BLE Verifier](integration-guide/ble-verifier.md)
+  * [PixelPass](inji-mobile-wallet/integration-guide/pixelpass.md)
   * [Telemetry](architecture/telemetry.md)
 * [Specifications](specifications/README.md)
   * [Face SDK Specifications](specifications/face-sdk-specifications.md)
