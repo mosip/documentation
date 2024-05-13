@@ -63,13 +63,13 @@ The API returns a base45 decoded and zlib decompressed string.
 
 Shall you encounter any errors while using the APIs, please refer to the below:
 
-1. Cannot read properties of null (reading 'length') This error denotes that the string passed to encode is null.&#x20;
-2. Cannot read properties of undefined (reading 'length') - This error denotes that the string passed to encode is undefined.&#x20;
-3. byteArrayArg is null or undefined. - This error denotes that the string passed to encode is null or undefined.&#x20;
-4. utf8StringArg is null or undefined. - This error denotes that the string passed to decode is null or undefined.&#x20;
-5. utf8StringArg has incorrect length. - This error denotes that the string passed to decode is of invalid length.&#x20;
-6. Invalid character at position X. - This error denotes that the string passed to decode is invalid with an unknown character then base45 character set. Also denotes the invalid character position.&#x20;
-7. incorrect data check - This error denotes that the string passed to decode is invalid.
+1. **Cannot read properties of null (reading 'length')** - This error denotes that the string passed to encode is null.&#x20;
+2. **Cannot read properties of undefined (reading 'length')** - This error denotes that the string passed to encode is undefined.&#x20;
+3. **byteArrayArg is null or undefined.** - This error denotes that the string passed to encode is null or undefined.&#x20;
+4. **utf8StringArg is null or undefined**. - This error denotes that the string passed to decode is null or undefined.&#x20;
+5. **utf8StringArg has incorrect length**. - This error denotes that the string passed to decode is of invalid length.&#x20;
+6. **Invalid character at position X**. - This error denotes that the string passed to decode is invalid with an unknown character then base45 character set. Also denotes the invalid character position.&#x20;
+7. **incorrect data check** - This error denotes that the string passed to decode is invalid.
 
 ## PixelPass & Inji Mobile Integration:
 
