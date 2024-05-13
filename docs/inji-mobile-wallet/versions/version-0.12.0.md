@@ -92,11 +92,11 @@ The audit logs have been enhanced to elevate the user experience. Now, they incl
 
 ### Repository Released
 
-| **Repositories** | **Tags Released** |
-| ---------------- | ----------------- |
-| Inji             | <p><br></p>       |
-| mimoto           | <p><br></p>       |
-| mosip-config     | <p><br></p>       |
+| **Repositories** | **Tags Released**                                                                                |
+| ---------------- | ------------------------------------------------------------------------------------------------ |
+| Inji             | <p><br></p>                                                                                      |
+| mimoto           | <p><a href="https://github.com/mosip/mimoto/releases/tag/v0.12.0">v0.12.0</a><br></p>            |
+| mosip-config     | <p><a href="https://github.com/mosip/mosip-config/releases/tag/v0.12.0-INJI">v0.12.0</a><br></p> |
 
 
 
