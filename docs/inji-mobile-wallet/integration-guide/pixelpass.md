@@ -22,31 +22,40 @@ Below are the APIs provided by the PixelPass library:
 
 #### To Generate QR Data:
 
+```
+
 generateQRData( data, header )
 
-data - Data needs to be compressed and encoded
+    data - Data needs to be compressed and encoded
 
-header - Data header needs to be prepended to identify the encoded data. defaults to ""
+    header - Data header needs to be prepended to identify the encoded data. defaults to ""
+```
 
 The API returns a zlib compressed and base45 encoded string with header prepended if provided.
 
 #### To Generate QR Code:
 
+
+
+```
 generateQRCode( data, ecc , header )
 
-data - Data needs to be compressed and encoded
+    data - Data needs to be compressed and encoded
 
-ecc - Error Correction Level for the QR generated. defaults to "L"
+    ecc - Error Correction Level for the QR generated. defaults to "L"
 
-header - Data header needs to be prepended to identify the encoded data. defaults to ""
+    header - Data header needs to be prepended to identify the encoded data. defaults to ""
+```
 
 The API returns a base64 encoded PNG image with header prepended if provided.
 
 #### To Decode the QR Code:
 
+```
 decode(data)
 
-data - Data needs to be decoded and decompressed without header
+    data - Data needs to be decoded and decompressed without header
+```
 
 The API returns a base45 decoded and zlib decompressed string.
 
