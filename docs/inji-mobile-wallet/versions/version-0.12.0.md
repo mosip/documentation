@@ -4,7 +4,7 @@
 
 **Support**: Developer Release
 
-**Release Date**: 13th May, 2024
+**Release Date**: Coming Soon
 
 ### Overview
 
@@ -17,6 +17,7 @@ We are delighted to announce the release of Inji Mobile Version 0.12.0 . This re
 5. UI/UX enhancements
    * Card view UI changes
    * VC share optimization
+   * Activity log enhancements
    * GenderMag P2 items
 
 Inji mobile app addresses gender / inclusivity bias in software through GenderMag analysis. In this release, we have incorporated GenderMag fixes for UI / UX in inclusivity space.
@@ -78,7 +79,16 @@ Inji Mobile version 0.12.0 introduces enhanced UI to deliver a seamless user exp
 * With the quick access menu in the mini view of the card:
   * Users can quickly initiate a Share or Share with Selfie action from the card to be shared.
 
-**GenderMag P2 items: \<List comes here>**
+#### Activity Log enhancements:
+
+The audit logs have been enhanced to elevate the user experience. Now, they include the card type, along with the card number and the action performed, for better readability.
+
+
+
+**GenderMag P2 items:**
+
+* Enhanced text to clarify the next steps and reasons for permission requests.
+* Improved user experience by providing clear notifications for success or failure, including a success screen or error banner with the reason for failure during VC sharing and face verification.
 
 ### Repository Released
 
