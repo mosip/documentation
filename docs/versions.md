@@ -1,5 +1,11 @@
 # Releases
 
+## Version: 0.12.0
+
+* Name: Inji 0.12.0
+* Date: Coming Soon
+* Release Notes
+
 ## Version: Inji 0.11.0-Inji
 
 * Name: Inji 0.11.0-Inji
@@ -20,7 +26,7 @@
 
 ## Version: 0.10.0
 
-* Name: Inji 0.10.0&#x20;
+* Name: Inji 0.10.0
 * Date: 19th December, 2023
 * [Release Notes](version-0.10.0.md)
 
@@ -45,4 +51,4 @@
 ## Version: 0.8.0
 
 * Name: Inji 0.8.0 (Alpha)
-* Date:  20th October, 2022
+* Date: 20th October, 2022
