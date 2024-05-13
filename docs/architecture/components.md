@@ -10,7 +10,8 @@ The libraries are as follows:
 2. Face Match
 3. Secure Keystore
 4. BLE Verifier
-5. Telemetry (coming soon)
+5. PixelPass
+6. Telemetry (coming soon)
 
 #### **1. Tuvali - Sharing via BLE**
 
@@ -71,7 +72,18 @@ To know more about API and how to integrate, refer [here](../integration-guide/b
 
 * To check the NPM module, click [here](https://www.npmjs.com/package/@mosip/ble-verifier-sdk).
 
-### **5. Telemetry**
+### 5. PixelPass
+
+PixelPass library creates a QR code for the given Verifiable Credentials data which is of smaller size. The library uses zlib compression and base45 encoding. In addition, PixelPass can also Decode QR data encoded by the library. The library is actively developed and maintained by MOSIP.
+
+**Note**:&#x20;
+
+* Refer to the PixelPass repository [here](https://github.com/mosip/pixelpass/tree/develop/js#readme).
+* To understand about the installation and the API documentation, refer here. \<the here link should point to PixelPass page under the Integration Guide.>
+* For a hands-on experience of Generate a VC, Generate QR Code for the VC and Verify the same using Inji Verify, please click [here](https://docs.mosip.io/inji/inji-verify/build-and-deploy/creating-verifiable-credentials-and-generating-qr-codes).
+* To check the NPM module, click[ here](https://www.npmjs.com/package/@mosip/pixelpass).
+
+### **6. Telemetry**
 
 The [telemetry](https://github.com/mosip/sunbird-telemetry-sdk) module is derived from the [sunbird telemetry](https://github.com/project-sunbird/sunbird-telemetry-sdk) module. It is responsible for generating events that can provide valuable analytics.
 
