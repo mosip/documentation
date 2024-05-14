@@ -3,7 +3,8 @@
 * [Inji](README.md)
   * [Use case](readme/use-case.md)
   * [Try Out](readme/try-out/README.md)
-    * [Inji Mobile Wallet](readme/try-out/inji-mobile-wallet.md)
+    * [Inji Mobile Wallet](readme/try-out/inji-mobile-wallet/README.md)
+      * [Explore with Mock Data](readme/try-out/inji-mobile-wallet/explore-with-mock-data.md)
 
 ## Inji Mobile Wallet
 
