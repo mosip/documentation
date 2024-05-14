@@ -4,7 +4,7 @@
 * [🔍 Overview](overview/README.md)
   * [Architecture](overview/architecture.md)
   * [Standards & Specifications](overview/standards-and-specifications/README.md)
-    * [169 - QR Code Specification](overview/standards-and-specifications/169-qr-code-specification.md)
+    * [169 - QR Code Specifications](overview/standards-and-specifications/169-qr-code-specification.md)
 * [🆔 ID Lifecycle Management](id-lifecycle-management.md)
   * [ID Schema](id-schema.md)
   * [Identifiers](identifiers.md)
