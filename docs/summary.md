@@ -6,7 +6,9 @@
     * [Inji Mobile Wallet](readme/try-out/inji-mobile-wallet/README.md)
       * [Explore with Mock Data](readme/try-out/inji-mobile-wallet/explore-with-mock-data.md)
       * [Create your own credentials](readme/try-out/inji-mobile-wallet/create-your-own-credentials.md)
-    * [Inji Web](readme/try-out/inji-web.md)
+    * [Inji Web](readme/try-out/inji-web/README.md)
+      * [Explore with mock data](readme/try-out/inji-web/explore-with-mock-data.md)
+      * [Create your own credentials](readme/try-out/inji-web/create-your-own-credentials.md)
 
 ## Inji Mobile Wallet
 
