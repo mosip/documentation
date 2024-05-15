@@ -2,7 +2,7 @@
 
 This section outlines the process of creating your own insurance credentials:
 
-Step 1: Creation:&#x20;
+**Step 1: Creation**:&#x20;
 
 Inji Certify also offers to generate your own credentials which can be used for testing / development purposes.
 

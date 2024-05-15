@@ -1,13 +1,13 @@
 # Table of contents
 
 * [Inji](README.md)
-  * [Try Out](readme/try-out/README.md)
-    * [Try Out Inji Mobile Wallet](readme/try-out/try-out-inji-mobile-wallet/README.md)
-      * [Explore with Mock Data](readme/try-out/try-out-inji-mobile-wallet/explore-with-mock-data.md)
-      * [Create your own credentials](readme/try-out/try-out-inji-mobile-wallet/create-your-own-credentials.md)
-    * [Try Out Inji Web](readme/try-out/try-out-inji-web/README.md)
-      * [Explore with mock data](readme/try-out/try-out-inji-web/explore-with-mock-data.md)
-      * [Create your own credentials](readme/try-out/try-out-inji-web/create-your-own-credentials.md)
+  * [Try it out](readme/try-it-out/README.md)
+    * [Try it out - Inji Mobile Wallet](readme/try-it-out/try-it-out-inji-mobile-wallet/README.md)
+      * [Explore with mock data](readme/try-it-out/try-it-out-inji-mobile-wallet/explore-with-mock-data.md)
+      * [Create your own credentials](readme/try-it-out/try-it-out-inji-mobile-wallet/create-your-own-credentials.md)
+    * [Try it out - Inji Web](readme/try-it-out/try-it-out-inji-web/README.md)
+      * [Explore with mock data](readme/try-it-out/try-it-out-inji-web/explore-with-mock-data.md)
+      * [Create your own credentials](readme/try-it-out/try-it-out-inji-web/create-your-own-credentials.md)
   * [Use case](readme/use-case.md)
 
 ## Inji Mobile Wallet

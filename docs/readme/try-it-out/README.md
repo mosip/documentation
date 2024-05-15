@@ -1,6 +1,6 @@
-# Try Out
+# Try it out
 
-Welcome to the "Try It Out" section! Here, we offer you hands-on experience to better understand how our product works and how you can leverage its features. This section will guide you through some simple steps to get started.
+Welcome to the "**Try It Out**" section! Here, we offer you hands-on experience to better understand how our product works and how you can leverage its features. This section will guide you through some simple steps to get started.
 
 If you're a developer or a partner interested in experiencing or integrating with Inji Web, we invite you to explore our designated sandbox environments.
 
@@ -30,7 +30,7 @@ Explore the Try it Out sections of Inji Modules from below:
 
 Link to Inji Mobile Wallet Try it Out section
 
-Link to Inji WebTry it Out section
+Link to Inji Web Try it Out section
 
 Link to Inji Verify Try it Out section
 
