@@ -20,6 +20,10 @@ Before you start with setting up Inji Mobile, ensure you have the following in p
     * Fill out the [form ](https://docs.google.com/forms/d/e/1FAIpQLSc2I0CQqlYRIrEmcJ3J3tKlYOVNcYNj88YZe4MMwU2RZTrjOA/viewform)here and we will generate the demo credentials, which you can use subsequently on the Inji Mobile app to download and share Verifiable Credentials (VCs).
 
     _Note_: Please use 111111 as the OTP, for any OTP based feature in Collab environment.
+4. For sample Insurance Credentials (Sunbird), please provide the below details in the eSignet authentication page:
+   * Policy Number: 55555
+   * Name: TGSStudio
+   * DoB: 26/01/2000
 
 ### Step-by-Step Process
 
@@ -35,12 +39,18 @@ To effectively set up the Inji Mobile app and manage Verifiable Credentials (VCs
 1. Follow the same installation process mentioned above in step 1.
 2. Setup another instance of the Inji Mobile app on another smartphone, which can serve as the Verifier app.
 
-**Step 3: Download VC Using UIN**
+**Step 3: Download MOSIP VC Using UIN**
 
 1. Download your credential (VC) onto the app by using your demo UIN.
 2. To learn how to download VCs using the Unique Identification Number (UIN) or Virtual ID (VID) feature, click [here](https://docs.mosip.io/1.2.0/modules/inji-user-guide#downloading-vc-using-the-uin-vid-feature). Refer to the section titled `Downloading VC using the UIN/VID feature` in the guide .
 
-**Step 4: Start Sharing the Credentials**
+**Step 4**: **Download Sunbird Credentials Using Policy Details**
+
+* Provide the above credentials in the eSignet page to download the credentials.
+* Refer [here](https://docs.mosip.io/inji/inji-web/functional-overview/end-user-guide) for step-wise download.
+* QR Code for Sunbird credentials is present in the detailed view.
+
+**Step 5: Start Sharing the Credentials**
 
 1. **Quick Share**
    * To understand the process of sharing credentials from the Resident app to the Verifier app, click [here](https://docs.mosip.io/1.2.0/modules/inji-user-guide#sharing-credentials).

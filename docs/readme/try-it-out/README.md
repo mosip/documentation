@@ -24,7 +24,12 @@ For quick access to environment related resources, please visit the provided[ li
 
 **Feedback and Support**
 
-If you encounter any difficulties or have questions, reach out to our community [here](https://community.mosip.io/). Your feedback is invaluable to us as we strive to improve our product and documentation.
+If you require any assistance or encounter any issues during the testing and integration process, kindly reach out to us through the support mechanism provided below.
+
+* Navigate to [Community](http://community.mosip.io/).
+* Provide a detailed description about the support you require or provide detailed information about the issue you have encountered, including steps to reproduce, error messages, logs and any other relevant details.
+
+
 
 Explore the Try it Out sections of Inji Modules from below:
 
@@ -40,5 +45,5 @@ Link to Inji Certify Try it Out section
 
 <table data-view="cards"><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td>try</td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></tbody></table>
 
-\
+_Thank you. Wishing you a pleasant experience!_\
 \
