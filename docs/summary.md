@@ -2,12 +2,7 @@
 
 * [Inji](README.md)
   * [Try it out](readme/try-it-out/README.md)
-    * [Try it out - Inji Mobile Wallet](readme/try-it-out/try-it-out-inji-mobile-wallet/README.md)
-      * [Explore with mock data](readme/try-it-out/try-it-out-inji-mobile-wallet/explore-with-mock-data.md)
-      * [Create your own credentials](readme/try-it-out/try-it-out-inji-mobile-wallet/create-your-own-credentials.md)
-    * [Try it out - Inji Web](readme/try-it-out/try-it-out-inji-web/README.md)
-      * [Explore with mock data](readme/try-it-out/try-it-out-inji-web/explore-with-mock-data.md)
-      * [Create your own credentials](readme/try-it-out/try-it-out-inji-web/create-your-own-credentials.md)
+    * [Try it out - Inji Mobile Wallet](readme/try-it-out/try-it-out-inji-mobile-wallet.md)
   * [Use case](readme/use-case.md)
 
 ## Inji Mobile Wallet
@@ -83,6 +78,9 @@
     * [Test Report](inji-web/inji-web/version-0.8.0/test-report.md)
 * [Build & Deploy](inji-web/build-and-deploy/README.md)
   * [Local setup](inji-web/build-and-deploy/local-setup.md)
+* [Try it out - Inji Web](inji-web/try-it-out-inji-web/README.md)
+  * [Explore with mock data](inji-web/try-it-out-inji-web/explore-with-mock-data.md)
+  * [Create your own credentials](inji-web/try-it-out-inji-web/create-your-own-credentials.md)
 
 ## INJI CERTIFY
 
