@@ -43,7 +43,7 @@ Link to Inji Certify Try it Out section
 
 
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td>try</td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Inji Mobile Wallet</td><td></td><td></td><td><a href="../../.gitbook/assets/to_inji_mobile_wallet.png">to_inji_mobile_wallet.png</a></td><td><a href="../../sandbox-details/">sandbox-details</a></td></tr><tr><td>Inji Web</td><td></td><td></td><td><a href="../../.gitbook/assets/to_inji_web.png">to_inji_web.png</a></td><td></td></tr><tr><td>Inji Certify</td><td></td><td></td><td><a href="../../.gitbook/assets/to_inji_certify.png">to_inji_certify.png</a></td><td></td></tr><tr><td>Inji Verify</td><td></td><td></td><td><a href="../../.gitbook/assets/to_inji_verify.png">to_inji_verify.png</a></td><td></td></tr></tbody></table>
 
 _Thank you. Wishing you a pleasant experience!_\
 \
