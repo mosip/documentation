@@ -67,7 +67,7 @@ Note: All the fields here are optional.
 }
 ```
 
-### 4. CBOR Identity Data in QR-Code Claims Registration
+### 4. IANA Considerations
 
 #### 4.1 Registry Contents
 
@@ -81,7 +81,7 @@ Claim Value Type(s): map
 
 Change Controller: MOSIP
 
-Specification Document(s): [Section 1](https://github.com/mosip/open-spec/tree/main/claim-169#1introduction)
+Specification Document(s): Section 3, Section 4
 
 ### References
 
