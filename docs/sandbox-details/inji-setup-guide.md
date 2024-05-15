@@ -46,9 +46,9 @@ To effectively set up the Inji Mobile app and manage Verifiable Credentials (VCs
 
 **Step 4**: **Download Sunbird Credentials Using Policy Details**
 
-* Provide the above credentials in the eSignet page to download the credentials.
+* Refer to the sample Sunbird credentials under 'Prerequisites' section.
 * Refer [here](https://docs.mosip.io/inji/inji-web/functional-overview/end-user-guide) for step-wise download.
-* QR Code for Sunbird credentials is present in the detailed view.
+* You can view the QR Code for Sunbird credentials in the detailed view.
 
 **Step 5: Start Sharing the Credentials**
 
