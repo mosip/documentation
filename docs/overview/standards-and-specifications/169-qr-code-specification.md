@@ -81,7 +81,7 @@ Claim Value Type(s): map
 
 Change Controller: MOSIP
 
-Specification Document(s): Section 3, Section 4
+Specification Document(s): [Section 3](https://docs.mosip.io/1.2.0/overview/standards-and-specifications/169-qr-code-specification#id-3.-semantics), [Section 4](https://docs.mosip.io/1.2.0/overview/standards-and-specifications/169-qr-code-specification#id-4.-iana-considerations)
 
 ### References
 
