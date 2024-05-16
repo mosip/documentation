@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Inji](README.md)
-  * [Try it out](readme/try-it-out.md)
+  * [Try It Out](readme/try-it-out.md)
   * [Use case](readme/use-case.md)
 
 ## Inji Mobile Wallet
@@ -18,7 +18,7 @@
   * [Locale customization](customisation/locale-customization.md)
   * [Configuration](customisation/configuration.md)
   * [Credential Providers](customisation/credential\_providers.md)
-* [Try it out](sandbox-details/README.md)
+* [Try It Out](sandbox-details/README.md)
   * [Inji Mobile Setup Guide](sandbox-details/inji-setup-guide.md)
 * [Contribution](contribution/README.md)
   * [Code Contribution](contribution/code-contribution.md)
@@ -75,8 +75,8 @@
 * [Releases](inji-web/inji-web/README.md)
   * [Version 0.8.0](inji-web/inji-web/version-0.8.0/README.md)
     * [Test Report](inji-web/inji-web/version-0.8.0/test-report.md)
-* [Try it out - Inji Web](inji-web/try-it-out-inji-web/README.md)
-  * [Try out  - Inji Web](inji-web/try-it-out-inji-web/try-out-inji-web.md)
+* [Try It Out](inji-web/try-it-out/README.md)
+  * [Inji Web](inji-web/try-it-out/inji-web.md)
 * [Build & Deploy](inji-web/build-and-deploy/README.md)
   * [Local setup](inji-web/build-and-deploy/local-setup.md)
 
