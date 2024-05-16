@@ -75,10 +75,10 @@
 * [Releases](inji-web/inji-web/README.md)
   * [Version 0.8.0](inji-web/inji-web/version-0.8.0/README.md)
     * [Test Report](inji-web/inji-web/version-0.8.0/test-report.md)
-* [Build & Deploy](inji-web/build-and-deploy/README.md)
-  * [Local setup](inji-web/build-and-deploy/local-setup.md)
 * [Try it out - Inji Web](inji-web/try-it-out-inji-web/README.md)
   * [Try out  - Inji Web](inji-web/try-it-out-inji-web/try-out-inji-web.md)
+* [Build & Deploy](inji-web/build-and-deploy/README.md)
+  * [Local setup](inji-web/build-and-deploy/local-setup.md)
 
 ## INJI CERTIFY
 
