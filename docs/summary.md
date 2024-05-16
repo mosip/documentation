@@ -78,7 +78,7 @@
 * [Build & Deploy](inji-web/build-and-deploy/README.md)
   * [Local setup](inji-web/build-and-deploy/local-setup.md)
 * [Try it out - Inji Web](inji-web/try-it-out-inji-web/README.md)
-  * [Explore with mock data](inji-web/try-it-out-inji-web/explore-with-mock-data.md)
+  * [Try out  - Inji Web](inji-web/try-it-out-inji-web/try-out-inji-web.md)
   * [Create your own credentials](inji-web/try-it-out-inji-web/create-your-own-credentials.md)
 
 ## INJI CERTIFY
