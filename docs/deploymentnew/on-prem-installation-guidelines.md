@@ -656,9 +656,9 @@ The following storage classes can be used:
 * [ceph-csi](TODO Implementation in progress)
 * [NFS client provisioner storage class](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/mosip/nfs/README.md).
 
-we are considering `NFS` as a storage class
+We are considering `NFS` as a storage class
 
-## The NFS is used to store the Kubernetes pod's persistence data.
+### The NFS is used to store the Kubernetes pod's persistence data.
 
 *  [NFS client provisioner storage class](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/mosip/nfs/README.md).
 
