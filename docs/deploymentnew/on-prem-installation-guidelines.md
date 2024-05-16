@@ -348,42 +348,14 @@ this will install ingress in ingress-nginx namespace of rancher cluster.
 ## Storage classes
 The following storage classes can be used:
 * [Vsphere storage class](https://github.com/vmware-archive/vsphere-storage-for-kubernetes): If you are already using VMware virtual machines, you can proceed with the vSphere storage class.
-* [NFS client provisioner storage class](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/mosip/nfs/README.md).
 * [ceph-csi](TODO Implementation in progress)
 * [Longhorn](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/longhorn/README.md)
+* [NFS client provisioner storage class](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/mosip/nfs/README.md).
 
-* Storage class setup: [Longhorn](https://longhorn.io/) creates a storage class in the cluster for creating pv (persistence volume) and pvc (persistence volume claim).
+We are using NFS as a staorage class
 
-Pre-requisites:
+* [NFS client provisioner storage class](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/mosip/nfs/README.md).
 
-```
-cd $K8_ROOT/longhorn
-./pre_install.sh
-```
-
-Install Longhorn via helm
-
-* `./install.sh`
-*   Note: Values of below mentioned parametrs are set as by default Longhorn installation script:
-
-    *   PV replica count is set to 1. Set the replicas for the storage class appropriately.
-
-        ```
-        persistence.defaultClassReplicaCount=1
-        defaultSettings.defaultReplicaCount=1
-        ```
-    * Total available node CPU allocated to **each** `instance-manager` pod in the `longhorn-system` namespace.
-
-    ```
-    guaranteedEngineManagerCPU: 5
-    guaranteedReplicaManagerCPU: 5   
-    ```
-
-    * The value "5" means 5% of the total available node CPU.
-    * This value should be fine for sandbox and pilot but you may have to increase the default to "12" for production.
-    * The value can be updated on Longhorn UI after installation.
-* Access the Longhorn dashboard from Rancher UI once installed.
-* Setup Backup : In case you want to bacup the pv data from longhorn to s3 periodically follow [instructions](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/docs/longhorn-backupstore-and-tests.md). (Optional, ignore if not required)
 
 ### Setting up nginx server for Observation K8s Cluster
 
