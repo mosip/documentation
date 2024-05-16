@@ -24,9 +24,7 @@ For more information on how to get started with integrations, read through:
 2. Face Match
 3. Secure Keystore
 4. BLE Verifier
-5. Telemetry (details coming up soon)
+5. PixelPass
+6. Telemetry (details coming up soon)
 
-
-
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td></td><td></td><td><a href="../.gitbook/assets/Tuvali (2).png">Tuvali (2).png</a></td><td><a href="tuvali.md">tuvali.md</a></td></tr><tr><td></td><td></td><td></td><td><a href="../.gitbook/assets/Face Match.png">Face Match.png</a></td><td><a href="face-match.md">face-match.md</a></td></tr><tr><td></td><td></td><td></td><td><a href="../.gitbook/assets/ble-verifier.png">ble-verifier.png</a></td><td><a href="ble-verifier.md">ble-verifier.md</a></td></tr><tr><td></td><td></td><td></td><td><a href="../.gitbook/assets/background - Copy (3).png">background - Copy (3).png</a></td><td><a href="secure-keystore.md">secure-keystore.md</a></td></tr><tr><td></td><td></td><td></td><td><a href="../.gitbook/assets/Telemetry.png">Telemetry.png</a></td><td><a href="../architecture/telemetry.md">telemetry.md</a></td></tr></tbody></table>
-
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td></td><td></td><td><a href="../.gitbook/assets/Tuvali (2).png">Tuvali (2).png</a></td><td><a href="tuvali.md">tuvali.md</a></td></tr><tr><td></td><td></td><td></td><td><a href="../.gitbook/assets/Face Match.png">Face Match.png</a></td><td><a href="face-match.md">face-match.md</a></td></tr><tr><td></td><td></td><td></td><td><a href="../.gitbook/assets/ble-verifier.png">ble-verifier.png</a></td><td><a href="ble-verifier.md">ble-verifier.md</a></td></tr><tr><td></td><td></td><td></td><td><a href="../.gitbook/assets/background - Copy (3).png">background - Copy (3).png</a></td><td><a href="secure-keystore.md">secure-keystore.md</a></td></tr><tr><td></td><td></td><td></td><td><a href="../.gitbook/assets/PixelPass.png">PixelPass.png</a></td><td><a href="../inji-mobile-wallet/integration-guide/pixelpass.md">pixelpass.md</a></td></tr><tr><td></td><td></td><td></td><td><a href="../.gitbook/assets/Telemetry.png">Telemetry.png</a></td><td><a href="../architecture/telemetry.md">telemetry.md</a></td></tr></tbody></table>
