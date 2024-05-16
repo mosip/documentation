@@ -4,8 +4,6 @@ Welcome to the "**Try It Out**" section! Here, we offer you hands-on experience 
 
 If you're a developer or a partner interested in experiencing or integrating with Inji Web, we invite you to explore our designated sandbox environments.
 
-
-
 **Collab: Development Integration Environment**
 
 Collab serves as our development integration environment, featuring QA-tested dockers. It's a dedicated space where our partners and contributors can build on the platform or integrate with the latest QA-tested version of the code.
@@ -31,9 +29,7 @@ If you require any assistance or encounter any issues during the testing and int
 
 Explore the Try it Out sections of Inji Modules from below:
 
-
-
 <table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Inji Mobile Wallet</td><td></td><td></td><td><a href="../.gitbook/assets/to_inji_mobile_wallet.png">to_inji_mobile_wallet.png</a></td><td><a href="../sandbox-details/">sandbox-details</a></td></tr><tr><td>Inji Web</td><td></td><td></td><td><a href="../.gitbook/assets/to_inji_web.png">to_inji_web.png</a></td><td><a href="../inji-web/try-it-out-inji-web/">try-it-out-inji-web</a></td></tr><tr><td>Inji Certify</td><td></td><td></td><td><a href="../.gitbook/assets/to_inji_certify.png">to_inji_certify.png</a></td><td></td></tr><tr><td>Inji Verify</td><td></td><td></td><td><a href="../.gitbook/assets/to_inji_verify.png">to_inji_verify.png</a></td><td></td></tr></tbody></table>
 
-_Thank you. Wishing you a pleasant experience!_\
+\
 \
