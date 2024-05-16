@@ -214,12 +214,12 @@ Feel free to scan or upload these QR codes to experience the functionality first
   * Use the provided mock data above:
     * Utilize the given QR codes to explore the scan feature of the Inji Verify portal as per the given instructions in the [**end-user guide**](https://docs.mosip.io/inji/inji-verify/functional-overview/end-user-guide).
     * These QR codes contain sample verifiable credentials for testing purposes.
-  * **Upload QR Code Feature:**
-    * Use the provided steps to generate a QR code as mentioned above:
-      * Utilize this “[**Generate QR Code**](https://docs.mosip.io/inji/inji-verify/build-and-deploy/creating-verifiable-credentials-and-generating-qr-codes)” page to get the QR code to explore the upload feature as per the given instructions in the [**end-user guide**](https://docs.mosip.io/inji/inji-verify/functional-overview/end-user-guide).
-    * Use the provided mock data above:
-      * Utilize the given QR codes to explore the upload feature of the Inji Verify portal as per the given instructions in the [**end-user guide**](https://docs.mosip.io/inji/inji-verify/functional-overview/end-user-guide).
-      * These QR codes contain sample verifiable credentials for testing purposes.
+* **Upload QR Code Feature:**
+  * Use the provided steps to generate a QR code as mentioned above:
+    * Utilize this “[**Generate QR Code**](https://docs.mosip.io/inji/inji-verify/build-and-deploy/creating-verifiable-credentials-and-generating-qr-codes)” page to get the QR code to explore the upload feature as per the given instructions in the [**end-user guide**](https://docs.mosip.io/inji/inji-verify/functional-overview/end-user-guide).
+  * Use the provided mock data above:
+    * Utilize the given QR codes to explore the upload feature of the Inji Verify portal as per the given instructions in the [**end-user guide**](https://docs.mosip.io/inji/inji-verify/functional-overview/end-user-guide).
+    * These QR codes contain sample verifiable credentials for testing purposes.
 
 ### **Additional Resources** <a href="#additional-resources" id="additional-resources"></a>
 
@@ -230,4 +230,3 @@ Click [**here**](https://docs.mosip.io/inji/inji-verify/functional-overview/end-
 An informative video of Inji Verify for a visual walk-through of the features will be available soon.
 
 _Thank you. Wishing you a pleasant experience!_
-
