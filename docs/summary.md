@@ -1,8 +1,7 @@
 # Table of contents
 
 * [Inji](README.md)
-  * [Try it out](readme/try-it-out/README.md)
-    * [Try it out - Inji Mobile Wallet](readme/try-it-out/try-it-out-inji-mobile-wallet.md)
+  * [Try it out](readme/try-it-out.md)
   * [Use case](readme/use-case.md)
 
 ## Inji Mobile Wallet
