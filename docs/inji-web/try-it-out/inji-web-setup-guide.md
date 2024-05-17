@@ -1,4 +1,10 @@
-# Try out  - Inji Web
+# Inji Web Setup Guide
+
+Welcome to the Inji Web Setup Guide tailored specifically to our Collab Environment!&#x20;
+
+Follow through the steps outlined in this guide and explore the Inji Web in our sandbox Collab environment for its features and functionalities.
+
+Whether you're a Developer, System Integrator, or an enthusiast eager to dive into the world of digital identity, the guide is going to provide you with the necessary information to get started with Inji Web in our [Collab](https://collab.mosip.net/) environment.
 
 ### Explore with mock data
 
