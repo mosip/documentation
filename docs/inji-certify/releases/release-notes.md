@@ -6,7 +6,7 @@
 
 **Support**: Developer Release
 
-**Release Date**: _Coming Soon_
+**Release Date**: 17th June, 2024
 
 ### **Overview**  <a href="#overview" id="overview"></a>
 
@@ -34,7 +34,7 @@ Version 0.8.1 introduces significant enhancements to streamline the management a
 
 | **Repositories** | **Tags Released**                                                                   |
 | ---------------- | ----------------------------------------------------------------------------------- |
-| Inji Certify     | **v0.8.1**                                                                          |
+| Inji Certify     | [**v0.8.1**](https://github.com/mosip/inji-certify/tree/v0.8.1)                     |
 | eSignet          | [**v1.4.0**](https://github.com/mosip/esignet/releases/tag/v1.4.0)                  |
 | Sunbird C        | [**v2.0.0**](https://github.com/Sunbird-RC/sunbird-rc-core/releases/tag/v2.0.0-rc3) |
 
