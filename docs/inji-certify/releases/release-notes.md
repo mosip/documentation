@@ -6,7 +6,7 @@
 
 **Support**: Developer Release
 
-**Release Date**: 17th June, 2024
+**Release Date**: 17th May, 2024
 
 ### **Overview**  <a href="#overview" id="overview"></a>
 
