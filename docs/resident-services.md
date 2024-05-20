@@ -29,19 +29,19 @@ The key features provided on the Resident portal are:
 
 Below is an image summarizing the features provided in Resident portal.
 
-
-
-\<Image>
+<figure><img src=".gitbook/assets/rp-1.png" alt=""><figcaption></figcaption></figure>
 
 
 
 The relationship of Resident services with other services is listed below.
 
-_Note: The numbers do not signify sequence of operations or the control flow._
+{% hint style="info" %}
+**Note**: The numbers do not signify sequence of operations or the control flow.
+{% endhint %}
 
 
 
-\<Image>&#x20;
+<figure><img src=".gitbook/assets/rp-2.png" alt=""><figcaption></figcaption></figure>
 
 
 
