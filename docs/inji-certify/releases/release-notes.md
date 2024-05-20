@@ -2,8 +2,6 @@
 
 **Release Name**: Inji Certify 0.8.1 (Patch)
 
-**Upgrade From**: Inji Certify 0.8.0
-
 **Support**: Developer Release
 
 **Release Date**: 17th May, 2024

@@ -2,8 +2,6 @@
 
 **Release Name**: Inji Verify 0.8.1 (Patch)
 
-**Upgrade From**: Inji Verify 0.8.0
-
 **Support**: Developer Release
 
 **Release Date**: Coming Soon
