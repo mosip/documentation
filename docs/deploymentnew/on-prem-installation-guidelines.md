@@ -348,13 +348,11 @@ this will install ingress in ingress-nginx namespace of rancher cluster.
 ## Storage classes
 The following storage classes can be used:
 * [Vsphere storage class](https://github.com/vmware-archive/vsphere-storage-for-kubernetes): If you are already using VMware virtual machines, you can proceed with the vSphere storage class.
-* [ceph-csi](TODO Implementation in progress)
+* [ceph-csi](https://github.com/mosip/k8s-infra/blob/main/ceph/README.md)
 * [Longhorn](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/longhorn/README.md)
 * [NFS client provisioner storage class](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/mosip/nfs/README.md).
-
-We are using NFS as a staorage class
-
-* [NFS client provisioner storage class](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/mosip/nfs/README.md).
+* MOSIP using NFS as a staorage class for Reference architecture
+  * [NFS client provisioner storage class](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/mosip/nfs/README.md).
 
 
 ### Setting up nginx server for Observation K8s Cluster
@@ -624,11 +622,11 @@ helm repo add mosip https://mosip.github.io/mosip-helm
 ## Storage classes
 The following storage classes can be used:
 * [Vsphere storage class](https://github.com/vmware-archive/vsphere-storage-for-kubernetes): If you are already using VMware virtual machines, you can proceed with the vSphere storage class.
-* [Longhorn](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/longhorn/README.md)
-* [ceph-csi](TODO Implementation in progress)
+* [Longhorn](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/longhorn/README)
+* [ceph-csi](https://github.com/mosip/k8s-infra/blob/main/ceph/README.md)
 * [NFS client provisioner storage class](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/mosip/nfs/README.md).
-
-We are considering `NFS` as a storage class
+* MOSIP using NFS as a staorage class for Reference architecture
+  * [NFS client provisioner storage class](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/mosip/nfs/README.md)
 
 ### The NFS is used to store the Kubernetes pod's persistence data.
 
