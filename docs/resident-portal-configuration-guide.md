@@ -981,3 +981,212 @@ subscriptions-delay-on-startup_millisecs=120000
 re-subscription-interval-in-seconds=43200
 resident.websub.request.decorator.filter.enabled=true
 ```
+
+
+
+
+
+
+
+..........................................
+
+### Other service calls(Below content Added newly)
+
+{% code overflow="wrap" lineNumbers="true" %}
+```
+MIDSCHEMAURL=${mosip.kernel.syncdata.url}/v1/syncdata/latestidschema
+DIGITAL_CARD_STATUS_URL=${mosip.digitalcard.service.url}/v1/digitalcard/
+RIDGENERATION=${mosip.kernel.ridgenerator.url}/v1/ridgenerator/generate/rid
+otp-generate.rest.uri=${mosip.kernel.otpmanager.url}/v1/otpmanager/otp/generate
+mosip.resident.service.mock.pdf.url=https://uidai.gov.in/images/New_eAadhaar1.pdf
+mosip.kernel.masterdata.audit-url=${mosip.kernel.auditmanager.url}/v1/auditmanager/audits
+```
+{% endcode %}
+
+### Identity Mapping json (Below content added newly)
+
+Below config is used to get identity mapping and get remaining update count for the Identity Attributes .&#x20;
+
+This is used in Resident in Update UIN feature to show remaining update count for the Identity Attribute.
+
+{% code overflow="wrap" lineNumbers="true" %}
+```
+{
+	"identity": {
+		"IDSchemaVersion": {
+			"value": "IDSchemaVersion"
+		},
+		"selectedHandles" : {
+			"value" : "selectedHandles"
+		},
+		"name": {
+			"value": "fullName"
+		},
+		"gender": {
+			"value": "gender"
+		},
+		"dob": {
+			"value": "dateOfBirth"
+		},
+		"age": {
+			"value": "age"
+		},
+		"introducerRID": {
+			"value": "introducerRID"
+		},
+		"introducerUIN": {
+			"value": "introducerUIN"
+		},
+		"introducerVID": {
+			"value": "introducerVID"
+		},
+		"introducerName": {
+			"value": "introducerName"
+		},
+		"phone": {
+			"value": "phone"
+		},
+		"phoneNumber": {
+			"value": "phone"
+		},
+		"email": {
+			"value": "email"
+		},
+		"emailId": {
+			"value": "email"
+		},
+		"uin": {
+			"value": "UIN"
+		},
+		"vid": {
+			"value": "VID"
+		},
+		"individualBiometrics": {
+			"value": "individualBiometrics"
+		},
+		"introducerBiometrics": {
+			"value": "introducerBiometrics"
+		},
+		"individualAuthBiometrics": {
+			"value": "individualAuthBiometrics"
+		},
+		"officerBiometricFileName": {
+			"value": "officerBiometricFileName"
+		},
+		"supervisorBiometricFileName": {
+			"value": "supervisorBiometricFileName"
+		},
+		"residenceStatus": {
+			"value": "residenceStatus"
+		},
+		"preferredLanguage": {
+			"value": "preferredLang"
+		},
+		"locationHierarchyForProfiling": {
+			"value": "zone,postalCode"
+		},
+		"addressLine1": {
+			"value": "addressLine1"
+		},
+		"addressLine2": {
+			"value": "addressLine2"
+		},
+		"addressLine3": {
+			"value": "addressLine3"
+		},
+		"location1": {
+			"value": "city"
+		},
+		"location2": {
+			"value": "region"
+		},
+		"location3": {
+			"value": "province"
+		},
+		"postalCode": {
+			"value": "postalCode"
+		},
+		"location4": {
+			"value": "zone"
+		},
+		"fullAddress": {
+			"value": "addressLine1,addressLine2,addressLine3,city,region,province,postalCode"
+		},
+		"bestTwoFingers": {
+			"value": "bestTwoFingers"
+		},
+		"birthdate": {
+			"value": "dateOfBirth"
+		},
+		"picture": {
+			"value": "face"
+		},
+		"phone_number": {
+			"value": "phone"
+		},
+		"address": {
+			"value": "addressLine1,addressLine2,addressLine3,city,region,province,postalCode"
+		},
+
+		"individual_id": {
+			"value": "individual_id"
+		},
+		"attributes": {
+		   "value": "fln,ad1,ad2,ad3,cit,reg,pro,poc,cph,em,ph,gen,dob"
+		},  
+		"street_address": {
+			"value": "addressLine1,addressLine2,addressLine3"
+		},
+		"locality": {
+			"value": "city"
+		},
+		"region": {
+			"value": "region"
+		},
+		"postal_code": {
+			"value": "postalCode"
+		},
+		"country": {
+			"value": "province"
+		},
+		"password": {
+			"value": "password"
+		}
+	},
+	"metaInfo": {
+		"value": "metaInfo"
+	},
+	"audits": {
+		"value": "audits"
+	},
+	"documents": {
+		"poa": {
+			"value": "proofOfAddress"
+		},
+		"poi": {
+			"value": "proofOfIdentity"
+		},
+		"por": {
+			"value": "proofOfRelationship"
+		},
+		"pob": {
+			"value": "proofOfDateOfBirth"
+		},
+		"poe": {
+			"value": "proofOfException"
+		}
+	},
+	"attributeUpdateCountLimit": {
+		"fullName": 2,
+		"gender": 4,
+		"dateOfBirth": 3
+
+		
+		
+	}
+}
+```
+{% endcode %}
+
+
+
