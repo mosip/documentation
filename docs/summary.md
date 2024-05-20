@@ -95,6 +95,7 @@
     * [Resident Services Deployment Guide](resident-services-deployment-guide.md)
     * [Configuring Resident OIDC Client](resident-services-configure-resident-OIDC-client.md)
     * [Resident Portal User Guide](resident-portal-user-guide.md)
+    * [Resident Portal UI Specifications](modules/resident-services/resident-portal-ui-specifications.md)
   * [Persistence](persistence.md)
     * [Postgres DB](postgres-db.md)
     * [Object Store](object-store.md)
