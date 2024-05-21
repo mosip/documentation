@@ -8,7 +8,7 @@
 
 ### **Overview**
 
-Inji Verify 0.8.1 addresses critical installation issues by fine-tuning the installation script with minor corrections. Additionally, the update to the Helm chart name `helm -n $NS install inji-verify mosip/injiverify` in the `install.sh` script ensures proper deployment.
+Inji Verify 0.8.1 addresses critical installation issues by fine-tuning the installation script with minor corrections. Additionally, the update to the Helm chart name `helm -n $NS install inji-verify mosip/injiverify` in the `install.sh` script ensures seamless deployment.
 
 ### Repositories: Released/Dependent
 
