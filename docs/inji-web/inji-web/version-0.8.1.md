@@ -8,7 +8,7 @@
 
 ### **Overview** <a href="#overview" id="overview"></a>
 
-Inji Web 0.8.1 addresses key installation issues by fixing some typo mistakes and command errors in the `install.sh` script. The Helm chart name has also been corrected, ensuring a smoother and more reliable deployment process.
+Inji Web 0.8.1 addresses key installation issues by fixing some typographical mistakes and command errors in the `install.sh` script. Additionally The Helm chart name has been corrected, ensuring a smoother and more reliable deployment process.
 
 1. **Install Script Corrections:**
    * Fixed a few typo mistakes in the `install.sh` script.

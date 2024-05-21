@@ -8,7 +8,7 @@
 
 ### **Overview**
 
-Inji Verify 0.8.1 addresses key installation issues by fixing some typo mistakes and command errors in the `install.sh` script. Additionally, the Helm chart name has been corrected, ensuring a smoother and more reliable deployment process.
+Inji Verify 0.8.1 addresses key installation issues by fixing some typographical mistakes and command errors in the `install.sh` script. Additionally, the Helm chart name has been corrected, ensuring a smoother and more reliable deployment process.
 
 1. **Install Script Corrections:**
    * Fixed a few typo mistakes in the `install.sh` script.
