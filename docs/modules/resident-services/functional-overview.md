@@ -328,13 +328,24 @@ The residents can use this feature for one of the following:
 
 1. **POST /individualId/otp**: This API is used to send the OTP prior to get the AID status/ download the UIN card for the given AID/VID/UIN. If the UIN is card is not ready it will return the current status of the AID.
 2. **POST /aid/status:** This API is used to get the status of the AID. If the UIN is processed, this will return the UIN/VID for the given AID, otherwise it will return the current status of the AID.
-3. **POST /download-card**: This API is to download the default UIN card using AID/VID/UIN. If the UIN is processed, this will return the PDF card, otherwise it will return the current status of the AID.
-4. **GET /aid-stage/{aid}:** This API is used to get the latest status of AID, based on its status in reg-proc.&#x20;
-5. **GET /rid/{individual-id}**: This is ID-repo API is to get the RID for a given UIN/VID. This is used internally in resident service.
+
+<figure><img src="../../.gitbook/assets/rp-19.png" alt=""><figcaption></figcaption></figure>
+
+1. **POST /download-card**: This API is to download the default UIN card using AID/VID/UIN. If the UIN is processed, this will return the PDF card, otherwise it will return the current status of the AID.
+
+<figure><img src="../../.gitbook/assets/rp-20.png" alt=""><figcaption></figcaption></figure>
+
+1. **GET /aid-stage/{aid}:** This API is used to get the latest status of AID, based on its status in reg-proc.&#x20;
+
+<figure><img src="../../.gitbook/assets/rp-21.png" alt=""><figcaption></figcaption></figure>
+
+1. **GET /rid/{individual-id}**: This is ID-repo API is to get the RID for a given UIN/VID. This is used internally in resident service.
 
 ***
 
 **Login With E-Signet (OpenID Connect):**
+
+<figure><img src="../../.gitbook/assets/rp-21.png" alt=""><figcaption></figcaption></figure>
 
 1. **GET​/login​/{redirectURI}:** API that is used to initiate the login with E-Signet using the OpenID Connect protocol.
    1. [https://mosip.stoplight.io/docs/resident/d63e06fd24774-login-redirect-uri](https://mosip.stoplight.io/docs/resident/d63e06fd24774-login-redirect-uri)
@@ -375,18 +386,32 @@ The residents can use this feature to verify their registered email ID or phone 
    1. **GET /download/supporting-documents?langcode={language-code}**: This API is to convert the List of supporting documents request as a downloadable PDF\
       [https://mosip.stoplight.io/docs/resident/32c31a9b693aa-download-supporting-documents-langcode-language-code](https://mosip.stoplight.io/docs/resident/32c31a9b693aa-download-supporting-documents-langcode-language-code)\
 
-2. **Get Registration Centers:**
-   1. **GET​/proxy​/masterdata​/getcoordinatespecificregistrationcenters​/{langcode}​/{longitude}​/{latitude}​/{proximitydistance}**
-   2. **GET​/proxy​/masterdata​/registrationcenters​/{langcode}​/{hierarchylevel}​/names**
-   3. **GET​/proxy​/masterdata​/registrationcenters​/page​/{langcode}​/{hierarchylevel}​/{name}**\
 
-3. **GET​/proxy​/masterdata​/locationHierarchyLevels​/{langcode}**
-4. **GET​/proxy​/masterdata​/locations​/immediatechildren​/{locationcode}​/{langcode}**
-5. **GET​/proxy​/masterdata​/locations​/info​/{locationcode}​/{langcode}**
-6. **GET​/proxy​/masterdata​/validdocuments​/{langCode}**
-7. **GET​/proxy​/masterdata​/applicanttype​/{applicantId}​/languages**
+<figure><img src="../../.gitbook/assets/rp-22.png" alt=""><figcaption></figcaption></figure>
+
+1.  **Get Registration Centers:**
+
+    1. **GET​/proxy​/masterdata​/getcoordinatespecificregistrationcenters​/{langcode}​/{longitude}​/{latitude}​/{proximitydistance}**
+    2. **GET​/proxy​/masterdata​/registrationcenters​/{langcode}​/{hierarchylevel}​/names**
+    3. **GET​/proxy​/masterdata​/registrationcenters​/page​/{langcode}​/{hierarchylevel}​/{name}**
+
+    \
+
+
+    <figure><img src="../../.gitbook/assets/rp-23.png" alt=""><figcaption></figcaption></figure>
+2. **GET​/proxy​/masterdata​/locationHierarchyLevels​/{langcode}**
+3. **GET​/proxy​/masterdata​/locations​/immediatechildren​/{locationcode}​/{langcode}**
+4. **GET​/proxy​/masterdata​/locations​/info​/{locationcode}​/{langcode}**
+5. **GET​/proxy​/masterdata​/validdocuments​/{langCode}**
+6. **GET​/proxy​/masterdata​/applicanttype​/{applicantId}​/languages**
 
 **Order a physical card:\[DESCOPED]**
+
+
+
+<figure><img src="../../.gitbook/assets/rp-24.jpeg" alt=""><figcaption></figcaption></figure>
+
+
 
 **Attachements**:\
 &#x20;&#x20;
