@@ -1,12 +1,5 @@
 # Resident Portal Configuration Guide
 
-This space is created to document the configuration guide of Resident Portal.
-
-**Reference document:**
-
-1. [https://docs.mosip.io/1.2.0/modules/module-configuration](https://docs.mosip.io/1.2.0/modules/module-configuration)
-2. [https://docs.mosip.io/1.2.0/modules/registration-client/registration-client-configuration](https://docs.mosip.io/1.2.0/modules/registration-client/registration-client-configuration)
-
 ### Overview
 
 The guide here lists down some of the important properties that may be customized for a given installation. Note that the listing here is not exhaustive, but a checklist to review properties that are likely to be different from default. If you would like to see all the properties, then refer to the files listed below.
@@ -435,7 +428,7 @@ resident.websub.callback.credential-status.relative.url=${server.servlet.context
 resident.websub.callback.credential-status.url=${mosip.api.internal.url}${resident.websub.callback.credential-status.relative.url}
 ```
 
-### WebSub Topic and callback properties for regproc complete workflow event (Below content added newly)
+### WebSub Topic and callback properties for regproc complete workflow event
 
 Below websub properties used for regproc complete workflow event
 
@@ -446,7 +439,7 @@ resident.websub.callback.regproc.workflow.complete.relative.url=${server.servlet
 resident.websub.callback.regproc.workflow.complete.url=${mosip.api.internal.url}${resident.websub.callback.regproc.workflow.complete.relative.url}
 ```
 
-### TokenId generator (Below content added newly)
+### TokenId generator
 
 ```
 mosip.kernel.tokenid.uin.salt=******
@@ -472,7 +465,7 @@ mosip.resident.update.service.status.job.initial-delay=60000
 mosip.resident.update.service.status.job.interval.millisecs=600000
 ```
 
-### Template type codes for email subject(20)
+### Template type codes for email subject
 
 ```
 resident.template.email.subject.request-received.DOWNLOAD_PERSONALIZED_CARD=cust-and-down-my-card-request-received-email-subject
@@ -521,7 +514,7 @@ resident.template.email.subject.failure.VALIDATE_OTP=verify-my-phone-email-failu
 resident.template.email.subject.success.SEND_OTP=receive-otp-mail-subject
 ```
 
-### Template type codes for email content(20,21,22)
+### Template type codes for email content
 
 ```
 resident.template.email.content.request-received.DOWNLOAD_PERSONALIZED_CARD=cust-and-down-my-card-request-received-email-content
@@ -570,7 +563,7 @@ resident.template.email.content.failure.VALIDATE_OTP=verify-my-phone-email-failu
 resident.template.email.content.success.SEND_OTP=receive-otp-mail-content
 ```
 
-### Template type codes for SMS content(20,21,22)
+### Template type codes for SMS content
 
 ```
 resident.template.sms.request-received.DOWNLOAD_PERSONALIZED_CARD=cust-and-down-my-card-request-received_SMS
@@ -649,13 +642,13 @@ resident.template.purpose.failure.VALIDATE_OTP=verify-my-phone-email-negative-pu
 resident.template.purpose.failure.VID_CARD_DOWNLOAD=vid-card-download-negative-purpose
 ```
 
-## Template type codes for purpose (Cancelled) content (Below content Added newly)
+## Template type codes for purpose (Cancelled) content
 
 ```
 resident.template.purpose.cancelled.UPDATE_MY_UIN=update-demo-data-cancelled-purpose
 ```
 
-## Template type codes for purpose(Identity updated) content (Below content Added newly)
+## Template type codes for purpose(Identity updated) content
 
 ```
 resident.template.purpose.regproc-success.UPDATE_MY_UIN=update-demo-data-regproc-success-purpose
@@ -676,13 +669,13 @@ resident.template.summary.success.VALIDATE_OTP=verify-my-phone-email-success-sum
 resident.template.summary.success.VID_CARD_DOWNLOAD=vid-card-download-positive-summary
 ```
 
-## Template type code for summary (cancelled) content(Below content Added newly)
+## Template type code for summary (cancelled) content
 
 ```
 resident.template.summary.cancelled.UPDATE_MY_UIN=update-demo-data-cancelled-summary
 ```
 
-## Template type code for summary (regproc-success) content(Below content Added newly)
+## Template type code for summary (regproc-success) content
 
 ```
 resident.template.summary.regproc-success.UPDATE_MY_UIN=update-demo-data-regproc-success-summary
@@ -873,7 +866,7 @@ resident.CARD_READY_TO_DOWNLOAD.packet-transaction-type-code.list=PRINT_SERVICE,
 sequence-order=Request received, Validation stage, Verification stage, Uin generation stage, Card ready to download
 ```
 
-### Synchronous events(3,8,14,19,24,29,34,39,44)
+### Synchronous events
 
 ```
 resident.request.success.status.list.AUTHENTICATION_REQUEST=AUTHENTICATION_SUCCESSFUL,Y
@@ -974,7 +967,7 @@ resident.GENERATE_VID.template.property.attribute.list=mosip.generated.template.
 resident.REVOKE_VID.template.property.attribute.list=mosip.revoked.template.property
 ```
 
-### Template type codes for event status code(3)
+### Template type codes for event status code
 
 ```
 resident.event.status.SUCCESS.template.property=mosip.event.status.success.template
@@ -1196,7 +1189,7 @@ resident-transliteration-workaround-for-eng-fra=eng-hin,hin-fra
 resident-transliteration-workaround-for-eng-spa=eng-hin,hin-spa
 ```
 
-## Reg-processer-credential-partner-policy-url(Below content Added newly)
+## Reg-processer-credential-partner-policy-url
 
 This is a policy url to fetch delimeter to download card after updating uin.
 
@@ -1204,7 +1197,7 @@ This is a policy url to fetch delimeter to download card after updating uin.
 mosip.resident.reg-processer-credential-partner-policy-url=${config.server.file.storage.uri}registration-processor-credential-partners.json
 ```
 
-### The request IDs used in Resident REST APIs(Below content Added newly)
+### The request IDs used in Resident REST APIs
 
 ```
 mosip.resident.api.id.otp.request=mosip.identity.otp.internal
@@ -1276,7 +1269,7 @@ mosip.resident.get.pending.drafts=mosip.resident.get.pending.drafts
 mosip.resident.discard.pending.drafts=mosip.resident.discard.pending.drafts
 ```
 
-## The request versions used in Resident REST APIs(Below content Added newly)
+## The request versions used in Resident REST APIs
 
 ```
 mosip.resident.api.version.otp.request=1.0
@@ -1314,7 +1307,7 @@ mosip.resident.get.pending.drafts.version=1.0
 mosip.resident.discard.pending.drafts.version=1.0
 ```
 
-### Auth Services API calls(Below content Added newly)
+### Auth Services API calls
 
 ```
 IDA_INTERNAL=${mosip.ida.internal.url}/idauthentication/v1/internal
@@ -1325,7 +1318,7 @@ OTP_GEN_URL=${IDA_INTERNAL}/otp
 KERNELAUTHMANAGER=${mosip.kernel.authmanager.url}/v1/authmanager/authenticate/clientidsecretkey
 ```
 
-### Credential Req & service calls(Below content Added newly)
+### Credential Req & service calls
 
 ```
 CREDENTIAL_STATUS_URL=${mosip.idrepo.credrequest.generator.url}/v1/credentialrequest/get/
@@ -1334,7 +1327,7 @@ CREDENTIAL_CANCELREQ_URL=${mosip.idrepo.credrequest.generator.url}/v1/credential
 CREDENTIAL_TYPES_URL=${mosip.idrepo.credential.service.url}/v1/credentialservice/types
 ```
 
-### IdRepo identity Service calls(Below content Added newly)
+### IdRepo identity Service calls
 
 ```
 IDREPO_IDENTITY=${mosip.idrepo.identity.url}/idrepository/v1/identity
@@ -1349,7 +1342,7 @@ IDREPO_IDENTITY_GET_DRAFT_UIN=${IDREPO_IDENTITY}/draft/uin/{UIN}
 IDREPO_IDENTITY_DISCARD_DRAFT=${IDREPO_IDENTITY}/draft/discard/
 ```
 
-### IdRepo vid Service calls(Below content Added newly)
+### IdRepo vid Service calls
 
 ```
 IDREPO_VID=${mosip.idrepo.vid.url}/idrepository/v1/vid
@@ -1360,7 +1353,7 @@ IDAUTHREVOKEVID=${IDREPO_VID}
 RETRIEVE_VIDS=${IDREPO_VID}/uin/
 ```
 
-### Key manager API calls(Below content Added newly)
+### Key manager API calls
 
 ```
 KEYMANAGER=${mosip.kernel.keymanager.url}/v1/keymanager
@@ -1373,7 +1366,7 @@ mosip.keymanager.jwt.sign.end.point=${KEYMANAGER}/jwtSign
 PDFSIGN=${KEYMANAGER}/pdf/sign
 ```
 
-### Master Data api calls(Below content Added newly)
+### Master Data api calls
 
 ```
 MASTER=${mosip.kernel.masterdata.url}/v1/masterdata
@@ -1400,7 +1393,7 @@ DYNAMIC_FIELD_BASED_ON_FIELD_NAME=${MASTER}/dynamicfields/{fieldName}
 DOCUMENT_TYPE_BY_DOCUMENT_CATEGORY_AND_LANG_CODE=${MASTER}/documenttypes/{documentcategorycode}/{langcode}
 ```
 
-### Notification service(Below content Added newly)
+### Notification service
 
 ```
 SMSNOTIFIER=${mosip.kernel.notification.url}/v1/notifier/sms/send
@@ -1409,7 +1402,7 @@ resident.notification.emails=mosiptestuser@gmail.com
 resident.notification.message=Notification has been sent to the provided contact detail(s)
 ```
 
-### Partner manager service URLs(Below content Added newly)
+### Partner manager service URLs
 
 ```
 PMS_PARTNER_MANAGER=${mosip.pms.partnermanager.url}/v1/partnermanager
@@ -1419,7 +1412,7 @@ PARTNER_DETAILS_NEW_URL=${PMS_PARTNER_MANAGER}/partners/v2
 mosip.pms.pmp.partner.rest.uri=${PMS_PARTNER_MANAGER}/partners?partnerType=${mosip.ida.partner.type}
 ```
 
-### Reg-proc service calls(Below content Added newly)
+### Reg-proc service calls
 
 ```
 REGPROCPRINT=http://regproc-group7.regproc/registrationprocessor/v1/print/uincard
@@ -1429,7 +1422,7 @@ GET_RID_STATUS=${mosip.regproc.transaction.service.url}/registrationprocessor/v1
 REGISTRATIONSTATUSSEARCH=${mosip.regproc.status.service.url}/registrationprocessor/v1/registrationstatus/externalstatus/search
 ```
 
-### Resident API calls(Below content Added newly)
+### Resident API calls
 
 ```
 mosip.service-context=${server.servlet.context-path}
@@ -1440,7 +1433,7 @@ mosip.resident.download-card.url=${mosip.api.public.url}${mosip.service-context}
 mosip.resident.grievance.url=${mosip.api.public.url}${mosip.service-context}/mock/external/grievance/redressel?name={name}&emailId={email}&phoneNo={phone}&eventId={eventId}
 ```
 
-### Other service calls(Below content Added newly)
+### Other service calls
 
 ```
 MIDSCHEMAURL=${mosip.kernel.syncdata.url}/v1/syncdata/latestidschema
@@ -1451,7 +1444,7 @@ mosip.resident.service.mock.pdf.url=https://uidai.gov.in/images/New_eAadhaar1.pd
 mosip.kernel.masterdata.audit-url=${mosip.kernel.auditmanager.url}/v1/auditmanager/audits
 ```
 
-### Identity Mapping json (Below content added newly)
+### Identity Mapping json
 
 Below config is used to get identity mapping and get remaining update count for the Identity Attributes .&#x20;
 
@@ -1634,7 +1627,7 @@ This is used in Resident in Update UIN feature to show remaining update count fo
 }
 ```
 
-### Mvel File config (Below content added newly)
+### Mvel File config
 
 This file contains Mvel method definitions for masking attributes, getting password and formatting attributes.
 
