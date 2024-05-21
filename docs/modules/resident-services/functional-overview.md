@@ -18,6 +18,14 @@
 
 Below is the detailed explanation of each of the features along with the list of relevant APIs.&#x20;
 
+
+
+<figure><img src="../../.gitbook/assets/fo-1.png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
 **Fig:** Modules/services that Resident services depends on
 
 ***
@@ -32,6 +40,10 @@ The residents can view the history of all the transactions associated with their
    1. [https://mosip.stoplight.io/docs/resident/0b88c7fac6a1c-get-service-history-of-the-resident](https://mosip.stoplight.io/docs/resident/0b88c7fac6a1c-get-service-history-of-the-resident)
 2. **GET /download/service-history**: This API is to download the View History Tables as a PDF
    1. [https://mosip.stoplight.io/docs/resident/f3ca383640b73-download-service-history](https://mosip.stoplight.io/docs/resident/f3ca383640b73-download-service-history)
+
+<figure><img src="../../.gitbook/assets/fo-2.jpeg" alt=""><figcaption></figcaption></figure>
+
+
 
 ***
 
@@ -50,18 +62,36 @@ The following types of VIDs can be seen based on the VID policy:
 1. **GET​/vid​/policy:** This API is to get the VID policy. This is an authenticated API.
    1. [https://mosip.stoplight.io/docs/resident/76c0bbbec07ef-vid-policy](https://mosip.stoplight.io/docs/resident/76c0bbbec07ef-vid-policy)
 2. **GET /vids**: This is an authenticated API that will retrieve the list of active VIDs of the UIN/VID of the logged in session.
-   1. [https://mosip.stoplight.io/docs/resident/7c8694c3fa4ba-get-vi-ds-of-the-resident](https://mosip.stoplight.io/docs/resident/7c8694c3fa4ba-get-vi-ds-of-the-resident)\
+   1.  [https://mosip.stoplight.io/docs/resident/7c8694c3fa4ba-get-vi-ds-of-the-resident](https://mosip.stoplight.io/docs/resident/7c8694c3fa4ba-get-vi-ds-of-the-resident)
 
-3. **POST​/generate-vid:** This API generates the VID for the given VID type for the logged in user.
-   1. [https://mosip.stoplight.io/docs/resident/b61a4bf8f3117-generate-vid](https://mosip.stoplight.io/docs/resident/b61a4bf8f3117-generate-vid)\
 
-4. **PATCH​/revoke-vid​/{vid}:** VID Revoke API that is authenticated used to revoke a VID of the logged in user. It also needs to verify the individual ID in the request belongs to the same user who has logged in.
-   1. [https://mosip.stoplight.io/docs/resident/e7c01df57c4d3-revoke-vid-vid](https://mosip.stoplight.io/docs/resident/e7c01df57c4d3-revoke-vid-vid)
-5. **GET/request-card/vid/{VID}:** This API is to request the PDF card generation for a specific VID of the logged in user. This will give back a event ID for tracking purpose and to use it to download the VID card from the notifications.
-6. **POST /callback/credentialStatusUpdate:** The websub callback API that will be used to notify the status of the credential upon the PDF card generation is done. This will notify the resident with phone/email message or Resident UI bell notification icon.
-7. **GET /download-card/event/{event-id}**: This API is to download the UIN card using URL sent over email/SMS/track event/notification section.
+
+<figure><img src="../../.gitbook/assets/rp-3.jpeg" alt=""><figcaption></figcaption></figure>
+
+1.  **POST​/generate-vid:** This API generates the VID for the given VID type for the logged in user.
+
+    1. [https://mosip.stoplight.io/docs/resident/b61a4bf8f3117-generate-vid](https://mosip.stoplight.io/docs/resident/b61a4bf8f3117-generate-vid)\
+
+
+    <figure><img src="../../.gitbook/assets/rp-4.jpeg" alt=""><figcaption></figcaption></figure>
+2.  **PATCH​/revoke-vid​/{vid}:** VID Revoke API that is authenticated used to revoke a VID of the logged in user. It also needs to verify the individual ID in the request belongs to the same user who has logged in.
+
+    1. [https://mosip.stoplight.io/docs/resident/e7c01df57c4d3-revoke-vid-vid](https://mosip.stoplight.io/docs/resident/e7c01df57c4d3-revoke-vid-vid)
+
+    ![](../../.gitbook/assets/rp-5.jpeg)
+3. **GET/request-card/vid/{VID}:** This API is to request the PDF card generation for a specific VID of the logged in user. This will give back a event ID for tracking purpose and to use it to download the VID card from the notifications.
+
+<figure><img src="../../.gitbook/assets/rp-6.png" alt=""><figcaption></figcaption></figure>
+
+1. **POST /callback/credentialStatusUpdate:** The websub callback API that will be used to notify the status of the credential upon the PDF card generation is done. This will notify the resident with phone/email message or Resident UI bell notification icon.
+
+<figure><img src="../../.gitbook/assets/rp-7.png" alt=""><figcaption></figcaption></figure>
+
+1. **GET /download-card/event/{event-id}**: This API is to download the UIN card using URL sent over email/SMS/track event/notification section.
    1. [https://mosip.stoplight.io/docs/resident/3672a8452d62a-download-card-event-event-id](https://mosip.stoplight.io/docs/resident/3672a8452d62a-download-card-event-event-id)
    2. [https://mosip.stoplight.io/docs/resident/683e194d61190-request-card-vid-vid](https://mosip.stoplight.io/docs/resident/683e194d61190-request-card-vid-vid)
+
+<figure><img src="../../.gitbook/assets/rp-8.png" alt=""><figcaption></figcaption></figure>
 
 ***
 
