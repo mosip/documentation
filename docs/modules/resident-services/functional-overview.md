@@ -200,42 +200,61 @@ On clicking “Share My Data”, the residents can choose the data to be shared 
    1. [https://mosip.stoplight.io/docs/resident/24c36650d44e0-identity-info-type-schema-type](https://mosip.stoplight.io/docs/resident/24c36650d44e0-identity-info-type-schema-type)
 5. **GET /identity/get-pending-drafts/{langcode}:** API to get any pending draft for the logged in user.&#x20;
    1. [https://mosip.stoplight.io/docs/resident/branches/main/f9lauga5jwpf2-get-pending-drafts-for-residents](https://mosip.stoplight.io/docs/resident/branches/main/f9lauga5jwpf2-get-pending-drafts-for-residents)
-6. **POST /identity/discardPendingDraft/{eid}:** API to discard any pending draft to allow any further updated needed.
-   1. [https://mosip.stoplight.io/docs/resident/branches/main/ndgz15ymcnzbz-discard-a-pending-draft](https://mosip.stoplight.io/docs/resident/branches/main/ndgz15ymcnzbz-discard-a-pending-draft)\
-      \
+6.  **POST /identity/discardPendingDraft/{eid}:** API to discard any pending draft to allow any further updated needed.
 
+    1. [https://mosip.stoplight.io/docs/resident/branches/main/ndgz15ymcnzbz-discard-a-pending-draft](https://mosip.stoplight.io/docs/resident/branches/main/ndgz15ymcnzbz-discard-a-pending-draft)
+
+    \
+    \
+
+
+    <figure><img src="../../.gitbook/assets/rp-14.png" alt=""><figcaption></figcaption></figure>
 7. **PATCH​ /update-uin:** This API is to update the UIN. Resident Service gets the RID (AID) from the update response and stores the status in resident\_transaction details with a summary of what got updated.
    1. [https://mosip.stoplight.io/docs/resident/162fb3ab69b5f-update-uin](https://mosip.stoplight.io/docs/resident/162fb3ab69b5f-update-uin)
-8. **GET /download-card/event/{event-id}**: This API is to download the UIN card using URL sent over email/SMS/track event/notification section.
-   1. [https://mosip.stoplight.io/docs/resident/3672a8452d62a-download-card-event-event-id](https://mosip.stoplight.io/docs/resident/3672a8452d62a-download-card-event-event-id)
-9. **GET /document/{document-id}:** This API is to download the document based on Document Id.\
-   [https://mosip.stoplight.io/docs/resident/364e564226003-get-document-for-document-id-encoded-bytes](https://mosip.stoplight.io/docs/resident/364e564226003-get-document-for-document-id-encoded-bytes)
-10. **DELETE /documents/{document-id}:** This API is to delete an uploaded document based on the document ID.
-    1. [https://mosip.stoplight.io/docs/resident/4a5751cd6defe-delete-file-uploaded-with-the-document-id](https://mosip.stoplight.io/docs/resident/4a5751cd6defe-delete-file-uploaded-with-the-document-id)
-11. **POST /resident/v1/transliteration/transliterate:** This API is to transliterate text from one language to another.
-    1. [https://mosip.stoplight.io/docs/resident/3240dbb494654-transliterate](https://mosip.stoplight.io/docs/resident/3240dbb494654-transliterate)
-12. **GET​/auth-proxy​/masterdata​/templates/{langcode}/{templatetypecode}:** This API is to return terms and conditions for different use cases for different languages such as eng, fra, and ara. This will be invoked by UI for the specific language. This is a Proxy API of master data service for getting templates for template type code and language code . This should be an authenticated proxy API.
-    1. [https://mosip.stoplight.io/docs/resident/94f785201e613-auth-proxy-masterdata-templates-langcode-templatetypecode](https://mosip.stoplight.io/docs/resident/94f785201e613-auth-proxy-masterdata-templates-langcode-templatetypecode)
-13. **POST /contact-details/send-otp**: This API is to send OTP to new email Id/phone number.
-    1. [https://mosip.stoplight.io/docs/resident/d9f57e653e648-contact-details-send-otp](https://mosip.stoplight.io/docs/resident/d9f57e653e648-contact-details-send-otp)
-14. **POST /contact-details/update-data:** This API is to verify OTP and update the new email/phone number.
-    1. [https://mosip.stoplight.io/docs/resident/173ec2929857b-contact-details-update-data](https://mosip.stoplight.io/docs/resident/173ec2929857b-contact-details-update-data)
-15. **GET /identity/update-count:** Create Proxy API Proxy API for ID Repo's API to retrieve remaining update counts for each id attributes for a UIN/VID.
-16. **GET /identity/{individualId}/update-counts**: Create API to retrieve remaining counts for each attributes for a UIN/VID.
-17. **POST /callback/credentialStatusUpdate:** The websub callback API that will be used to notify the status of the credential upon the PDF card generation is done. This will notify the resident with phone/email message or Resident UI bell notification icon.
-18. **POST /callback/regprocworkflow:** The websub callback URL to update the status of the regproc packet if failed which is used to update the event status and notify user.\
-    [https://mosip.stoplight.io/docs/resident/branches/main/w6znqxvb4wpwl-callback-for-registration-process-workflow-completion](https://mosip.stoplight.io/docs/resident/branches/main/w6znqxvb4wpwl-callback-for-registration-process-workflow-completion)\
 
-19. Other Master data APIs used for this feature:
-    1. **GET​/proxy​/masterdata​/locationHierarchyLevels​/{langcode}**
-    2. **GET​/proxy​/masterdata​/locations​/immediatechildren​/{locationcode}​/{langcode}**
-    3. **GET​/proxy​/masterdata​/locations​/info​/{locationcode}​/{langcode}**
-    4. **GET​/proxy​/masterdata​/validdocuments​/{langCode}**
-    5. **GET​/proxy​/masterdata​/applicanttype​/{applicantId}​/languages**
-    6. **GET /auth-proxy/masterdata/dynamicfields/{fieldName}/{langCode}?withValue={true/false}**
-    7. **GET /auth-proxy/masterdata/locations/immediatechildren/{locationCode}?languageCodes={comma-separated-language-codes}**
-    8. **GET/proxy/masterdata/dynamicfields/all/{fieldName}**
-    9. **GET /proxy/masterdata/locationHierarchyLevels**
+<figure><img src="../../.gitbook/assets/rp-15.png" alt=""><figcaption></figcaption></figure>
+
+1. **GET /download-card/event/{event-id}**: This API is to download the UIN card using URL sent over email/SMS/track event/notification section.
+   1. [https://mosip.stoplight.io/docs/resident/3672a8452d62a-download-card-event-event-id](https://mosip.stoplight.io/docs/resident/3672a8452d62a-download-card-event-event-id)
+
+<figure><img src="../../.gitbook/assets/rp-16.png" alt=""><figcaption></figcaption></figure>
+
+1. **GET /document/{document-id}:** This API is to download the document based on Document Id.\
+   [https://mosip.stoplight.io/docs/resident/364e564226003-get-document-for-document-id-encoded-bytes](https://mosip.stoplight.io/docs/resident/364e564226003-get-document-for-document-id-encoded-bytes)
+2. **DELETE /documents/{document-id}:** This API is to delete an uploaded document based on the document ID.
+   1. [https://mosip.stoplight.io/docs/resident/4a5751cd6defe-delete-file-uploaded-with-the-document-id](https://mosip.stoplight.io/docs/resident/4a5751cd6defe-delete-file-uploaded-with-the-document-id)
+3. **POST /resident/v1/transliteration/transliterate:** This API is to transliterate text from one language to another.
+   1. [https://mosip.stoplight.io/docs/resident/3240dbb494654-transliterate](https://mosip.stoplight.io/docs/resident/3240dbb494654-transliterate)
+4. **GET​/auth-proxy​/masterdata​/templates/{langcode}/{templatetypecode}:** This API is to return terms and conditions for different use cases for different languages such as eng, fra, and ara. This will be invoked by UI for the specific language. This is a Proxy API of master data service for getting templates for template type code and language code . This should be an authenticated proxy API.
+   1. [https://mosip.stoplight.io/docs/resident/94f785201e613-auth-proxy-masterdata-templates-langcode-templatetypecode](https://mosip.stoplight.io/docs/resident/94f785201e613-auth-proxy-masterdata-templates-langcode-templatetypecode)
+5. **POST /contact-details/send-otp**: This API is to send OTP to new email Id/phone number.
+   1. [https://mosip.stoplight.io/docs/resident/d9f57e653e648-contact-details-send-otp](https://mosip.stoplight.io/docs/resident/d9f57e653e648-contact-details-send-otp)
+6. **POST /contact-details/update-data:** This API is to verify OTP and update the new email/phone number.
+   1. [https://mosip.stoplight.io/docs/resident/173ec2929857b-contact-details-update-data](https://mosip.stoplight.io/docs/resident/173ec2929857b-contact-details-update-data)
+7. **GET /identity/update-count:** Create Proxy API Proxy API for ID Repo's API to retrieve remaining update counts for each id attributes for a UIN/VID.
+8. **GET /identity/{individualId}/update-counts**: Create API to retrieve remaining counts for each attributes for a UIN/VID.
+9. **POST /callback/credentialStatusUpdate:** The websub callback API that will be used to notify the status of the credential upon the PDF card generation is done. This will notify the resident with phone/email message or Resident UI bell notification icon.
+
+<figure><img src="../../.gitbook/assets/rp-17.png" alt=""><figcaption></figcaption></figure>
+
+1. **POST /callback/regprocworkflow:** The websub callback URL to update the status of the regproc packet if failed which is used to update the event status and notify user.\
+   [https://mosip.stoplight.io/docs/resident/branches/main/w6znqxvb4wpwl-callback-for-registration-process-workflow-completion](https://mosip.stoplight.io/docs/resident/branches/main/w6znqxvb4wpwl-callback-for-registration-process-workflow-completion)
+
+\
+
+
+<figure><img src="../../.gitbook/assets/rp-18.png" alt=""><figcaption></figcaption></figure>
+
+1. Other Master data APIs used for this feature:
+   1. **GET​/proxy​/masterdata​/locationHierarchyLevels​/{langcode}**
+   2. **GET​/proxy​/masterdata​/locations​/immediatechildren​/{locationcode}​/{langcode}**
+   3. **GET​/proxy​/masterdata​/locations​/info​/{locationcode}​/{langcode}**
+   4. **GET​/proxy​/masterdata​/validdocuments​/{langCode}**
+   5. **GET​/proxy​/masterdata​/applicanttype​/{applicantId}​/languages**
+   6. **GET /auth-proxy/masterdata/dynamicfields/{fieldName}/{langCode}?withValue={true/false}**
+   7. **GET /auth-proxy/masterdata/locations/immediatechildren/{locationCode}?languageCodes={comma-separated-language-codes}**
+   8. **GET/proxy/masterdata/dynamicfields/all/{fieldName}**
+   9. **GET /proxy/masterdata/locationHierarchyLevels**
 
 ***
 
