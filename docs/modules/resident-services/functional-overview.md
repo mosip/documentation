@@ -108,12 +108,22 @@ On clicking “Secure My ID”, the residents can view the status of all the aut
 
 **Below is the list of APIs:**
 
-1. **GET​/auth-lock-status:** This API returns the lock/unlock status of Auth Types for a given UIN/VID. The individual ID is obtained from the logged in session.
-   1. [https://mosip.stoplight.io/docs/resident/2229d1317ece0-auth-lock-status](https://mosip.stoplight.io/docs/resident/2229d1317ece0-auth-lock-status)\
+1.  **GET​/auth-lock-status:** This API returns the lock/unlock status of Auth Types for a given UIN/VID. The individual ID is obtained from the logged in session.
 
-2. **POST​/auth-lock-unlock:** Resident service to store the Auth type lock/unlock status with status\_comment containing summary of what is locked /unlocked.&#x20;
-   1. [https://mosip.stoplight.io/docs/resident/0c178333f2164-auth-lock-unlock](https://mosip.stoplight.io/docs/resident/0c178333f2164-auth-lock-unlock)\
+    1. [https://mosip.stoplight.io/docs/resident/2229d1317ece0-auth-lock-status](https://mosip.stoplight.io/docs/resident/2229d1317ece0-auth-lock-status)
 
+    \
+
+
+    <figure><img src="../../.gitbook/assets/rp-9.jpeg" alt=""><figcaption></figcaption></figure>
+2.  **POST​/auth-lock-unlock:** Resident service to store the Auth type lock/unlock status with status\_comment containing summary of what is locked /unlocked.&#x20;
+
+    1. [https://mosip.stoplight.io/docs/resident/0c178333f2164-auth-lock-unlock](https://mosip.stoplight.io/docs/resident/0c178333f2164-auth-lock-unlock)
+
+    \
+
+
+    <figure><img src="../../.gitbook/assets/rp-10.jpeg" alt=""><figcaption></figcaption></figure>
 3. **POST​/callback​/authTypeCallback:** This is a Websub callback for Auth Type Lock/Unlock acknowledgement from IDA. Resident Service subscribes to the websub topic AUTH\_TYPE\_STATUS\_UPDATE\_ACK and update the Auth type lock/unlock status into resident\_transaction Table for the request ID (AID) as COMPLETED/FAILED. The table will have multiple entries in for each online verification Partners and the status will be updated for the online verification specific partner id mentioned in the websub notification.
    1. [https://mosip.stoplight.io/docs/resident/bd55a60bedd28-websub-callback-for-auth-type-lock-unlock-acknowledgement](https://mosip.stoplight.io/docs/resident/bd55a60bedd28-websub-callback-for-auth-type-lock-unlock-acknowledgement)
 
@@ -147,6 +157,8 @@ On clicking “Get Personalized Card”, the residents can select the data to be
 4. **POST /download/personalized-card:** This API is to download the personalized PDF card. This is a synchronous call where the personalized card is downloaded immediately. The input for this is the HTML content used in the preview card in the Resident UI. This is an authenticated API.
    1. [https://mosip.stoplight.io/docs/resident/ff21b71c08730-download-personalized-card](https://mosip.stoplight.io/docs/resident/ff21b71c08730-download-personalized-card)
 
+<figure><img src="../../.gitbook/assets/rp-11.png" alt=""><figcaption></figcaption></figure>
+
 ***
 
 **Share My Data**
@@ -164,8 +176,13 @@ On clicking “Share My Data”, the residents can choose the data to be shared 
 4. **GET​/auth-proxy​/masterdata​/templates/{langcode}/{templatetypecode}:** This API is to return terms and conditions for different use cases for different languages such as eng, fra, and ara. This will be invoked by UI for the specific language. This is a Proxy API of master data service for getting templates for template type code and language code . This should be an authenticated proxy API.
    1. [https://mosip.stoplight.io/docs/resident/94f785201e613-auth-proxy-masterdata-templates-langcode-templatetypecode](https://mosip.stoplight.io/docs/resident/94f785201e613-auth-proxy-masterdata-templates-langcode-templatetypecode)
 5. **POST /share-credential:** This API is to share the user specified attributes to selected partner in the selected formats along with a purpose.
-6. **POST /callback/credentialStatusUpdate:** The websub callback API that will be used to notify the status of the credential sharing done by the Auth partner. This will notify the resident with phone/email message or Resident UI bell notification icon.
+
+<figure><img src="../../.gitbook/assets/rp-12.png" alt=""><figcaption></figcaption></figure>
+
+1. **POST /callback/credentialStatusUpdate:** The websub callback API that will be used to notify the status of the credential sharing done by the Auth partner. This will notify the resident with phone/email message or Resident UI bell notification icon.
    1. [https://mosip.stoplight.io/docs/resident/5f8ac1903d659-share-credential](https://mosip.stoplight.io/docs/resident/5f8ac1903d659-share-credential)
+
+<figure><img src="../../.gitbook/assets/rp-13.png" alt=""><figcaption></figcaption></figure>
 
 ***
 
