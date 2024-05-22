@@ -26,7 +26,7 @@ Below is the detailed explanation of each of the features along with the list of
 
 
 
-### **UIN Services**
+## **UIN Services**
 
 #### **View My History:**
 
@@ -175,19 +175,19 @@ The Resident Portal menu bar contains the following:
 
 
 
-### **Book an appointment**
+## **Book an appointment**
 
 The residents can book an appointment for registration using the pre-registration portal. To do so, they can click on “Book an appointment” tile which will redirect them to the pre-registration portal. To know more about pre-registration portal, refer to this link \[[https://docs.mosip.io/1.2.0/modules/pre-registration](https://docs.mosip.io/1.2.0/modules/pre-registration) ]
 
 
 
-### **Verify Email ID/ Phone number**
+## **Verify Email ID/ Phone number**
 
 The residents can use this feature to verify their registered email ID or phone number.
 
 
 
-### **Get My UIN**
+## **Get My UIN**
 
 The residents can use this feature for one of the following:
 
@@ -243,7 +243,7 @@ The residents can use this feature to verify their registered email ID or phone 
 2. **GET/channel/verification-status/**: This API is to check if OTP is verified for a channel for an individual (UIN/VID).
    1. [https://mosip.stoplight.io/docs/resident/dae10ad85c0a9-get-channel-verified-status](https://mosip.stoplight.io/docs/resident/dae10ad85c0a9-get-channel-verified-status)
 
-### **Get Information**
+## **Get Information**
 
 * Fetch Supporting Documents PDF\
 
