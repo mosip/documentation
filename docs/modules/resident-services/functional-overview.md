@@ -56,7 +56,7 @@ On clicking “Secure My ID”, the residents can view the status of all the aut
 
 
 
-*   Applies the Authentication Types Lock/Unlock request in IDA
+*   **Applies the Authentication Types Lock/Unlock request in IDA**
 
     \
 
@@ -73,7 +73,7 @@ The following types of VIDs can be seen based on the VID policy:
 2. Temporary VID
 3. One-time VID
 
-* Fetch Active VIDs of the Individual
+* **Fetch Active VIDs of the Individual**
 
 <figure><img src="../../.gitbook/assets/rp-4.jpeg" alt=""><figcaption></figcaption></figure>
 
@@ -91,7 +91,7 @@ The following types of VIDs can be seen based on the VID policy:
 
 
 
-* Download PDF Card
+* **Download PDF Card**
 
 <figure><img src="../../.gitbook/assets/rp-8.png" alt=""><figcaption></figcaption></figure>
 
@@ -105,7 +105,7 @@ On clicking “Track My Requests”, the residents can track the status of an Ev
 
 On clicking “Get Personalized Card”, the residents can select the data to be added to their credential. They can preview the chosen data and download it. Residents should select at least 3 attributes.
 
-* Creates the personalized card and signs it
+* **Creates the personalized card and signs it**
 
 <figure><img src="../../.gitbook/assets/rp-11.png" alt=""><figcaption></figcaption></figure>
 
@@ -117,17 +117,17 @@ On clicking “Share My Data”, the residents can choose the data to be shared 
 
 <figure><img src="../../.gitbook/assets/rp-12.png" alt=""><figcaption></figcaption></figure>
 
-* Notifies resident about the credential shared status for the event ID
+* **Notifies resident about the credential shared status for the event ID**
 
 <figure><img src="../../.gitbook/assets/rp-13.png" alt=""><figcaption></figcaption></figure>
 
 ### **Update My Data** 
 
-* Fetch existing AID in progress
+* **Fetch existing AID in progress**
 
 <figure><img src="../../.gitbook/assets/rp-14.png" alt=""><figcaption></figcaption></figure>
 
-* Submits the update request
+* **Submits the update request**
 
 <figure><img src="../../.gitbook/assets/rp-15.png" alt=""><figcaption></figcaption></figure>
 
@@ -135,11 +135,11 @@ On clicking “Share My Data”, the residents can choose the data to be shared 
 
 <figure><img src="../../.gitbook/assets/rp-16.png" alt=""><figcaption></figcaption></figure>
 
-* Notify for IDENTITY\_UPDATED for the Event Id
+* **Notify for IDENTITY\_UPDATED for the Event Id**
 
 <figure><img src="../../.gitbook/assets/rp-17.png" alt=""><figcaption></figcaption></figure>
 
-* Get the Status for the AID
+* **Get the Status for the AID**
 
 <figure><img src="../../.gitbook/assets/rp-18.png" alt=""><figcaption></figcaption></figure>
 
@@ -161,11 +161,9 @@ The Resident Portal menu bar contains the following:
 
 ## **Login With E-Signet (OpenID Connect)**
 
-* Validate the Access token and ID token
+* **Validate the Access token and ID token**
 
 <figure><img src="../../.gitbook/assets/rp-21.png" alt=""><figcaption></figcaption></figure>
-
-
 
 ## **Get Information**
 
@@ -194,7 +192,7 @@ The residents can use this feature for one of the following:
 1. Download their UIN card
 2. Check the status of their Application ID (AID)
 
-* Get PDF card for AID if ready
+* **Get PDF card for AID if ready**
 
 <figure><img src="../../.gitbook/assets/rp-19.png" alt=""><figcaption></figcaption></figure>
 
@@ -205,8 +203,6 @@ The residents can use this feature for one of the following:
 * **Validates the Action token and ID token**.&#x20;
 
 <figure><img src="../../.gitbook/assets/rp-21.png" alt=""><figcaption></figcaption></figure>
-
-
 
 ## **Book an appointment**
 
