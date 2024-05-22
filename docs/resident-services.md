@@ -10,10 +10,10 @@ The key features provided on the Resident portal are:
    * **View My History**: This feature enables the Resident to view the history of transactions associated to their UIN.
    * **Manage My VID**: Residents can create, delete and download VID card based on requirement.
    * **Secure My ID**: Residents can lock or unlock their authentication modalities such as fingerprint authentication, iris authentication, email OTP authentication, SMS OTP authentication, thumb print authentication, face authentication.
-   * **Track My Requests**: This feature enables the Residents to enter an Event ID associated to the logged in useR’s UIN in order to track the status of the event.
-   * **Get Personalised Card**: The residents can download a personalised card which essentially means that they can choose the attributes that they would want to be added to their cards.
+   * **Track My Requests**: This feature enables the Residents to enter an Event ID associated to the logged in user’s UIN in order to track the status of the event.
+   * **Get Personalized Card**: The residents can download a personalized card which essentially means that they can choose the attributes that they would want to be added to their cards.
    * **Share My Data**: This feature enables Resident to choose the data that they want to share with a MOSIP registered partner.
-   * **Update My Data**: This feature enables the Resident to update their identity data, addess, email ID, phone number, and notification language preference.
+   * **Update My Data**: This feature enables the Resident to update their identity data, address, email ID, phone number, and notification language preference.
    * **Logout**: Once the Resident is done with the activities that he wanted to perform, he can end the active session by logging out from the portal.
 2. **Get Information**
    * About Registration Centers: Residents can get the list of Registration Centers near them or Registration Centers based on the location heirarchy.
