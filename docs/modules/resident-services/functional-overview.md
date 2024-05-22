@@ -81,11 +81,11 @@ The following types of VIDs can be seen based on the VID policy:
 
 <figure><img src="../../.gitbook/assets/rp-5.jpeg" alt=""><figcaption></figcaption></figure>
 
-* **GET/request-card/vid/{VID}:** This API is to request the PDF card generation for a specific VID of the logged in user. This will give back a event ID for tracking purpose and to use it to download the VID card from the notifications.
+* **Store the Credential Request ID and a new Event ID**
 
 <figure><img src="../../.gitbook/assets/rp-6.png" alt=""><figcaption></figcaption></figure>
 
-* **POST /callback/credentialStatusUpdate:** The websub callback API that will be used to notify the status of the credential upon the PDF card generation is done. This will notify the resident with phone/email message or Resident UI bell notification icon.
+* **Notify that the VID card is Ready to Download status**.
 
 <figure><img src="../../.gitbook/assets/rp-7.png" alt=""><figcaption></figcaption></figure>
 
@@ -131,7 +131,7 @@ On clicking “Share My Data”, the residents can choose the data to be shared 
 
 <figure><img src="../../.gitbook/assets/rp-15.png" alt=""><figcaption></figcaption></figure>
 
-* **GNotifies that the UIN card is ready to Download status**
+* **Notifies that the UIN card is ready to Download status**
 
 <figure><img src="../../.gitbook/assets/rp-16.png" alt=""><figcaption></figcaption></figure>
 
@@ -139,9 +139,7 @@ On clicking “Share My Data”, the residents can choose the data to be shared 
 
 <figure><img src="../../.gitbook/assets/rp-17.png" alt=""><figcaption></figcaption></figure>
 
-1. Get the Status for the AID
-
-
+* Get the Status for the AID
 
 <figure><img src="../../.gitbook/assets/rp-18.png" alt=""><figcaption></figcaption></figure>
 
@@ -160,8 +158,6 @@ The Resident Portal menu bar contains the following:
    2. Photo of the logged in user
    3. Last login details
    4. Logout option
-
-
 
 ## **Login With E-Signet (OpenID Connect)**
 
