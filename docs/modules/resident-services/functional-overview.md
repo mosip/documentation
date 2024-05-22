@@ -1,21 +1,24 @@
 # Functional Overview
 
-**Overview**: Resident Portal is a self-help web-b portal that can be used by the residents of a country to avail the services related to their Unique Identification Number (UIN). The key services provided are:
+**Overview**: Resident Portal is a self-help web-b portal that can be used by the residents of a country to avail the services related to their Unique Identification Number (UIN). The architecture, interface overview and key services provided are discussed as below:
 
-1. UIN services
-   1. View My History
-   2. Secure My ID
-   3. Manage My VID
-   4. Track My Request
-   5. Download My Personalized Card
-   6. Update My Data
-   7. Share My Credential
-2. Get Information
-   1. Supporting Document
-   2. Registration Center
-3. Verify Email ID/Phone number
-4. Get My UIN
-5. Booking an Appointment
+1. Architecture
+2. Interface overview
+3. Key Services
+   1. UIN services
+      1. View My History
+      2. Secure My ID
+      3. Manage My VID
+      4. Track My Request
+      5. Download My Personalized Card
+      6. Update My Data
+      7. Share My Credential
+   2. Get Information
+      1. Supporting Document
+      2. Registration Center
+   3. Verify Email ID/Phone number
+   4. Get My UIN
+   5. Booking an Appointment
 
 Below is the detailed explanation of each of the features along with the list of relevant APIs.&#x20;
 
@@ -23,7 +26,11 @@ Below is the detailed explanation of each of the features along with the list of
 
 <figure><img src="../../.gitbook/assets/fo-1.png" alt=""><figcaption><p>Modules/services that Resident services depends on</p></figcaption></figure>
 
-## Interface
+## Architecture
+
+<figure><img src="../../.gitbook/assets/rp-architecture.png" alt=""><figcaption></figcaption></figure>
+
+## Interface Overview
 
 ### Menu Bar
 
@@ -41,7 +48,11 @@ The Resident Portal menu bar contains the following:
    3. Last login details
    4. Logout option
 
+### Workspace
 
+A dashboard view to quicly locate the 'Key Services'
+
+## **Key Services**
 
 ## **UIN Services**
 
