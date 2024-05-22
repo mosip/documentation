@@ -2,6 +2,18 @@
 
 **Overview**: Resident Portal is a self-help web-b portal that can be used by the residents of a country to avail the services related to their Unique Identification Number (UIN). The key services provided are:
 
+<details>
+
+<summary>My service</summary>
+
+![](../../.gitbook/assets/ara.png)
+
+</details>
+
+
+
+
+
 1. UIN services
    1. View My History
    2. Secure My ID
