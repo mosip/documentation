@@ -163,20 +163,6 @@ The Resident Portal menu bar contains the following:
 
 
 
-## **Book an appointment**
-
-The residents can book an appointment for registration using the pre-registration portal. To do so, they can click on “Book an appointment” tile which will redirect them to the pre-registration portal. To know more about pre-registration portal, refer to this link \[[https://docs.mosip.io/1.2.0/modules/pre-registration](https://docs.mosip.io/1.2.0/modules/pre-registration) ]
-
-
-
-## **Verify Email ID/ Phone number**
-
-The residents can use this feature to verify their registered email ID or phone number.
-
-
-
-
-
 ## **Login With E-Signet (OpenID Connect)**
 
 * Validate the Access token and ID token
@@ -224,8 +210,9 @@ The residents can use this feature for one of the following:
 
 <figure><img src="../../.gitbook/assets/rp-21.png" alt=""><figcaption></figcaption></figure>
 
+
+
 ## **Book an appointment**
 
 The residents can book an appointment for registration using the pre-registration portal. To do so, they can click on “Book an appointment” tile which will redirect them to the pre-registration portal. To know more about pre-registration portal, refer to this link \[[https://docs.mosip.io/1.2.0/modules/pre-registration](https://docs.mosip.io/1.2.0/modules/pre-registration) ]
 
-APIs: [https://github.com/mosip/documentation/blob/1.1.5/docs/Pre-Registration-APIs.md#login-service-public](https://github.com/mosip/documentation/blob/1.1.5/docs/Pre-Registration-APIs.md#login-service-public)
