@@ -28,19 +28,15 @@ Below is the detailed explanation of each of the features along with the list of
 
 ## **UIN Services**
 
-#### **View My History:**
+### **View My History**
 
 The residents can view the history of all the transactions associated with their logged-in UIN/ AID/ VID. They can also view their details and if any unaccounted entry is found, a report can be raised against the same.
 
 
 
+<figure><img src="../../.gitbook/assets/fo-2.jpeg" alt=""><figcaption></figcaption></figure>
 
-
-<figure><img src="../../.gitbook/assets/fo-2.jpeg" alt=""><figcaption><p>1</p></figcaption></figure>
-
-
-
-#### **Manage My VID:**
+### **Manage My VID**
 
 On clicking “Manage My VID”, the resident will be taken to a page where they can view details of the existing VIDs, generate new VID, revoke existing VID or download a VID card.
 
@@ -50,34 +46,29 @@ The following types of VIDs can be seen based on the VID policy:
 2. Temporary VID
 3. One-time VID
 
-
-
 * Fetch Active VIDs of the Individual
 
-\
-
-
-<figure><img src="../../.gitbook/assets/rp-4.jpeg" alt=""><figcaption><p>3</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/rp-4.jpeg" alt=""><figcaption></figcaption></figure>
 
 * **Revoke the VID of the Individual**
 
-<figure><img src="../../.gitbook/assets/rp-5.jpeg" alt=""><figcaption><p>4</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/rp-5.jpeg" alt=""><figcaption></figcaption></figure>
 
 * **GET/request-card/vid/{VID}:** This API is to request the PDF card generation for a specific VID of the logged in user. This will give back a event ID for tracking purpose and to use it to download the VID card from the notifications.
 
-<figure><img src="../../.gitbook/assets/rp-6.png" alt=""><figcaption><p>5</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/rp-6.png" alt=""><figcaption></figcaption></figure>
 
 * **POST /callback/credentialStatusUpdate:** The websub callback API that will be used to notify the status of the credential upon the PDF card generation is done. This will notify the resident with phone/email message or Resident UI bell notification icon.
 
-<figure><img src="../../.gitbook/assets/rp-7.png" alt=""><figcaption><p>6</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/rp-7.png" alt=""><figcaption></figcaption></figure>
 
 
 
 * Download PDF Card
 
-<figure><img src="../../.gitbook/assets/rp-8.png" alt=""><figcaption><p>7</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/rp-8.png" alt=""><figcaption></figcaption></figure>
 
-#### **Secure My ID**
+### **Secure My ID**
 
 On clicking “Secure My ID”, the residents can view the status of all the authentication types. They can choose to lock or unlock authentication types like the following:
 
@@ -88,15 +79,11 @@ On clicking “Secure My ID”, the residents can view the status of all the aut
 5. Iris authentication
 6. Face authentication
 
-
-
-**Below is the list of APIs:**
-
 *   **Fetch Authentication Types - Lock status of the individual**
 
 
 
-    <figure><img src="../../.gitbook/assets/rp-9.jpeg" alt=""><figcaption><p>8</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/rp-9.jpeg" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -107,13 +94,11 @@ On clicking “Secure My ID”, the residents can view the status of all the aut
 
     <figure><img src="../../.gitbook/assets/rp-10.jpeg" alt=""><figcaption></figcaption></figure>
 
-
-
-#### **Track My Requests**
+### **Track My Requests**
 
 On clicking “Track My Requests”, the residents can track the status of an Event ID (EID) associated with the logged-in UIN/ VID. They can also **view and download** the detailed information about the entered EID.
 
-#### **Get Personalized Card:**
+### **Get Personalized Card**
 
 On clicking “Get Personalized Card”, the residents can select the data to be added to their credential. They can preview the chosen data and download it. Residents should select at least 3 attributes.
 
@@ -121,7 +106,7 @@ On clicking “Get Personalized Card”, the residents can select the data to be
 
 <figure><img src="../../.gitbook/assets/rp-11.png" alt=""><figcaption></figcaption></figure>
 
-#### **Share My Data**
+### **Share My Data**
 
 On clicking “Share My Data”, the residents can choose the data to be shared with any of the registered partners to avail various third party services.
 
@@ -133,7 +118,7 @@ On clicking “Share My Data”, the residents can choose the data to be shared 
 
 <figure><img src="../../.gitbook/assets/rp-13.png" alt=""><figcaption></figcaption></figure>
 
-#### **Update My Data** 
+### **Update My Data** 
 
 * Fetch existing AID in progress
 
@@ -198,8 +183,6 @@ The residents can use this feature for one of the following:
 
 <figure><img src="../../.gitbook/assets/rp-19.png" alt=""><figcaption></figcaption></figure>
 
-
-
 * **Check if PDF card URL is notified by Digital card service**.
 
 <figure><img src="../../.gitbook/assets/rp-20.png" alt=""><figcaption></figcaption></figure>
@@ -208,23 +191,15 @@ The residents can use this feature for one of the following:
 
 <figure><img src="../../.gitbook/assets/rp-21.png" alt=""><figcaption></figcaption></figure>
 
+## **Login With E-Signet (OpenID Connect)**
 
-
-## **Login With E-Signet (OpenID Connect):**
+* Validate the Access token and ID token
 
 <figure><img src="../../.gitbook/assets/rp-21.png" alt=""><figcaption></figcaption></figure>
 
-1. **GET​/login​/{redirectURI}:** API that is used to initiate the login with E-Signet using the OpenID Connect protocol.
-   1. [https://mosip.stoplight.io/docs/resident/d63e06fd24774-login-redirect-uri](https://mosip.stoplight.io/docs/resident/d63e06fd24774-login-redirect-uri)
-2. **GET​/login/v2​/{redirectURI}:** API that is used to initiate the login with E-Signet using the OpenID Connect protocol. This additionally supports ui\_locales query parameter to accept the language in -which the E-Signet needs to be launched with. If not specified the E-Signet will load with the default language.
-3. **GET /login-redirect/redirectURI?state={state}\&session\_state={session\_state}\&code={code} :** This is the redirect-url supplied to the E-Signet. After the successful login, this retrieves the access token and ID token for the given authorization code. and validate them and then redirects to the given redirect URL with the tokens in the response cookie.
-   1. [https://mosip.stoplight.io/docs/resident/a4d6068e70a17-login-redirect](https://mosip.stoplight.io/docs/resident/a4d6068e70a17-login-redirect)
-4. **GET /authorize/admin/validateToken:** API used to validate the token attached to the cookie. It will also extends the cookie expiry time to the configured duration.
-5. **GET /logout/user?redirecturi={redirectURI}**: API used to logout the session attached to the cookie.
 
-***
 
-### **Book an appointment**
+## **Book an appointment**
 
 The residents can book an appointment for registration using the pre-registration portal. To do so, they can click on “Book an appointment” tile which will redirect them to the pre-registration portal. To know more about pre-registration portal, refer to this link \[[https://docs.mosip.io/1.2.0/modules/pre-registration](https://docs.mosip.io/1.2.0/modules/pre-registration) ]
 
@@ -232,16 +207,9 @@ APIs: [https://github.com/mosip/documentation/blob/1.1.5/docs/Pre-Registration-A
 
 ***
 
-#### **Verify Email ID/ Phone number**
+## **Verify Email ID/ Phone number**
 
 The residents can use this feature to verify their registered email ID or phone number.
-
-**Below is the list of APIs:**
-
-1. **POST /validate-otp**: This API will be used to validate OTP when the resident is trying to verify his phone number or email Id.
-   1. [https://mosip.stoplight.io/docs/resident/ffb06d52ba4e7-validate-otp-for-given-uin-vid-using-ida-to-verify-phone-email](https://mosip.stoplight.io/docs/resident/ffb06d52ba4e7-validate-otp-for-given-uin-vid-using-ida-to-verify-phone-email)
-2. **GET/channel/verification-status/**: This API is to check if OTP is verified for a channel for an individual (UIN/VID).
-   1. [https://mosip.stoplight.io/docs/resident/dae10ad85c0a9-get-channel-verified-status](https://mosip.stoplight.io/docs/resident/dae10ad85c0a9-get-channel-verified-status)
 
 ## **Get Information**
 
