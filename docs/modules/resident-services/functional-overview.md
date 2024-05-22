@@ -23,7 +23,23 @@ Below is the detailed explanation of each of the features along with the list of
 
 <figure><img src="../../.gitbook/assets/fo-1.png" alt=""><figcaption><p>Modules/services that Resident services depends on</p></figcaption></figure>
 
+## **Menu**
 
+### Menu Bar
+
+The Resident Portal menu bar contains the following:
+
+1. **Font Size**- Residents can alter the size of the font based on their preferences.
+2. **Language**- Residents can select the language of preference.
+3. **Bell icon Notification**- Residents can view the notifications of all the asynchronous events in chronological order.
+
+### **Profile Icon:**
+
+1. **Profile Icon**- Residents can view the following:
+   1. Name of the logged in user
+   2. Photo of the logged in user
+   3. Last login details
+   4. Logout option
 
 
 
@@ -143,21 +159,7 @@ On clicking “Share My Data”, the residents can choose the data to be shared 
 
 <figure><img src="../../.gitbook/assets/rp-18.png" alt=""><figcaption></figcaption></figure>
 
-### **Menu Bar**
 
-The Resident Portal menu bar contains the following:
-
-1. **Font Size**- Residents can alter the size of the font based on their preferences.
-2. **Language**- Residents can select the language of preference.
-3. **Bell icon Notification**- Residents can view the notifications of all the asynchronous events in chronological order.
-
-#### **Profile Icon:**
-
-1. **Profile Icon**- Residents can view the following:
-   1. Name of the logged in user
-   2. Photo of the logged in user
-   3. Last login details
-   4. Logout option
 
 ## **Login With E-Signet (OpenID Connect)**
 
