@@ -2,18 +2,6 @@
 
 **Overview**: Resident Portal is a self-help web-b portal that can be used by the residents of a country to avail the services related to their Unique Identification Number (UIN). The key services provided are:
 
-<details>
-
-<summary>My service</summary>
-
-![](../../.gitbook/assets/ara.png)
-
-</details>
-
-
-
-
-
 1. UIN services
    1. View My History
    2. Secure My ID
@@ -32,34 +20,27 @@ Below is the detailed explanation of each of the features along with the list of
 
 
 
-<figure><img src="../../.gitbook/assets/fo-1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/fo-1.png" alt=""><figcaption><p>Modules/services that Resident services depends on</p></figcaption></figure>
 
 
 
 
 
-**Fig:** Modules/services that Resident services depends on
+### **UIN Services**
 
-***
-
-**View My History:**
+#### **View My History:**
 
 The residents can view the history of all the transactions associated with their logged-in UIN/ AID/ VID. They can also view their details and if any unaccounted entry is found, a report can be raised against the same.
 
-**Below is the list of APIs :**
-
-1. **GET /service-history/{lang-code}**: This API is to get the service history of one or more service types. These entries can be fetched for a certain period (start date and end date). The result will be paginated. This is an authenticated API.
-   1. [https://mosip.stoplight.io/docs/resident/0b88c7fac6a1c-get-service-history-of-the-resident](https://mosip.stoplight.io/docs/resident/0b88c7fac6a1c-get-service-history-of-the-resident)
-2. **GET /download/service-history**: This API is to download the View History Tables as a PDF
-   1. [https://mosip.stoplight.io/docs/resident/f3ca383640b73-download-service-history](https://mosip.stoplight.io/docs/resident/f3ca383640b73-download-service-history)
-
-<figure><img src="../../.gitbook/assets/fo-2.jpeg" alt=""><figcaption></figcaption></figure>
 
 
 
-***
 
-**Manage My VID:**
+<figure><img src="../../.gitbook/assets/fo-2.jpeg" alt=""><figcaption><p>1</p></figcaption></figure>
+
+
+
+#### **Manage My VID:**
 
 On clicking “Manage My VID”, the resident will be taken to a page where they can view details of the existing VIDs, generate new VID, revoke existing VID or download a VID card.
 
@@ -78,36 +59,38 @@ The following types of VIDs can be seen based on the VID policy:
 
 
 
-<figure><img src="../../.gitbook/assets/rp-3.jpeg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/rp-3.jpeg" alt=""><figcaption><p>2</p></figcaption></figure>
 
 1.  **POST​/generate-vid:** This API generates the VID for the given VID type for the logged in user.
 
     1. [https://mosip.stoplight.io/docs/resident/b61a4bf8f3117-generate-vid](https://mosip.stoplight.io/docs/resident/b61a4bf8f3117-generate-vid)\
 
 
-    <figure><img src="../../.gitbook/assets/rp-4.jpeg" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/rp-4.jpeg" alt=""><figcaption><p>3</p></figcaption></figure>
 2.  **PATCH​/revoke-vid​/{vid}:** VID Revoke API that is authenticated used to revoke a VID of the logged in user. It also needs to verify the individual ID in the request belongs to the same user who has logged in.
 
     1. [https://mosip.stoplight.io/docs/resident/e7c01df57c4d3-revoke-vid-vid](https://mosip.stoplight.io/docs/resident/e7c01df57c4d3-revoke-vid-vid)
 
-    ![](../../.gitbook/assets/rp-5.jpeg)
+
+
+    <figure><img src="../../.gitbook/assets/rp-5.jpeg" alt=""><figcaption><p>4</p></figcaption></figure>
 3. **GET/request-card/vid/{VID}:** This API is to request the PDF card generation for a specific VID of the logged in user. This will give back a event ID for tracking purpose and to use it to download the VID card from the notifications.
 
-<figure><img src="../../.gitbook/assets/rp-6.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/rp-6.png" alt=""><figcaption><p>5</p></figcaption></figure>
 
 1. **POST /callback/credentialStatusUpdate:** The websub callback API that will be used to notify the status of the credential upon the PDF card generation is done. This will notify the resident with phone/email message or Resident UI bell notification icon.
 
-<figure><img src="../../.gitbook/assets/rp-7.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/rp-7.png" alt=""><figcaption><p>6</p></figcaption></figure>
 
 1. **GET /download-card/event/{event-id}**: This API is to download the UIN card using URL sent over email/SMS/track event/notification section.
    1. [https://mosip.stoplight.io/docs/resident/3672a8452d62a-download-card-event-event-id](https://mosip.stoplight.io/docs/resident/3672a8452d62a-download-card-event-event-id)
    2. [https://mosip.stoplight.io/docs/resident/683e194d61190-request-card-vid-vid](https://mosip.stoplight.io/docs/resident/683e194d61190-request-card-vid-vid)
 
-<figure><img src="../../.gitbook/assets/rp-8.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/rp-8.png" alt=""><figcaption><p>7</p></figcaption></figure>
 
 ***
 
-**Secure My ID**
+#### **Secure My ID**
 
 On clicking “Secure My ID”, the residents can view the status of all the authentication types. They can choose to lock or unlock authentication types like the following:
 
@@ -127,7 +110,7 @@ On clicking “Secure My ID”, the residents can view the status of all the aut
     \
 
 
-    <figure><img src="../../.gitbook/assets/rp-9.jpeg" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/rp-9.jpeg" alt=""><figcaption><p>8</p></figcaption></figure>
 2.  **POST​/auth-lock-unlock:** Resident service to store the Auth type lock/unlock status with status\_comment containing summary of what is locked /unlocked.&#x20;
 
     1. [https://mosip.stoplight.io/docs/resident/0c178333f2164-auth-lock-unlock](https://mosip.stoplight.io/docs/resident/0c178333f2164-auth-lock-unlock)
@@ -139,9 +122,7 @@ On clicking “Secure My ID”, the residents can view the status of all the aut
 3. **POST​/callback​/authTypeCallback:** This is a Websub callback for Auth Type Lock/Unlock acknowledgement from IDA. Resident Service subscribes to the websub topic AUTH\_TYPE\_STATUS\_UPDATE\_ACK and update the Auth type lock/unlock status into resident\_transaction Table for the request ID (AID) as COMPLETED/FAILED. The table will have multiple entries in for each online verification Partners and the status will be updated for the online verification specific partner id mentioned in the websub notification.
    1. [https://mosip.stoplight.io/docs/resident/bd55a60bedd28-websub-callback-for-auth-type-lock-unlock-acknowledgement](https://mosip.stoplight.io/docs/resident/bd55a60bedd28-websub-callback-for-auth-type-lock-unlock-acknowledgement)
 
-***
-
-**Track My Requests**
+#### **Track My Requests**
 
 On clicking “Track My Requests”, the residents can track the status of an Event ID (EID) associated with the logged-in UIN/ VID. They can also **view and download** the detailed information about the entered EID.
 
@@ -152,9 +133,7 @@ On clicking “Track My Requests”, the residents can track the status of an Ev
 2. **GET /ack/download/pdf/event/{eventId}/language/{languageCode}:** This API is to convert the acknowledgement of any service request Event ID as a downloadable PDF. This is an authenticated endpoint.
    1. [https://mosip.stoplight.io/docs/resident/752a9090b564e-ack-download-pdf-event-event-id-language-language-code](https://mosip.stoplight.io/docs/resident/752a9090b564e-ack-download-pdf-event-event-id-language-language-code)
 
-***
-
-**Get Personalized Card:**
+#### **Get Personalized Card:**
 
 On clicking “Get Personalized Card”, the residents can select the data to be added to their credential. They can preview the chosen data and download it. Residents should select at least 3 attributes.
 
@@ -173,7 +152,7 @@ On clicking “Get Personalized Card”, the residents can select the data to be
 
 ***
 
-**Share My Data**
+#### **Share My Data**
 
 On clicking “Share My Data”, the residents can choose the data to be shared with any of the registered partners to avail various third party services.
 
@@ -198,7 +177,7 @@ On clicking “Share My Data”, the residents can choose the data to be shared 
 
 ***
 
-**Update My Data**
+#### **Update My Data**
 
 **Below is the list of APIs:**
 
@@ -268,9 +247,7 @@ On clicking “Share My Data”, the residents can choose the data to be shared 
    8. **GET/proxy/masterdata/dynamicfields/all/{fieldName}**
    9. **GET /proxy/masterdata/locationHierarchyLevels**
 
-***
-
-**Menu Bar**
+### **Menu Bar**
 
 The Resident Portal menu bar contains the following:
 
@@ -308,15 +285,13 @@ The Resident Portal menu bar contains the following:
 
 ***
 
-#### **Book an appointment**
+### **Book an appointment**
 
 The residents can book an appointment for registration using the pre-registration portal. To do so, they can click on “Book an appointment” tile which will redirect them to the pre-registration portal. To know more about pre-registration portal, refer to this link \[[https://docs.mosip.io/1.2.0/modules/pre-registration](https://docs.mosip.io/1.2.0/modules/pre-registration) ]
 
 APIs: [https://github.com/mosip/documentation/blob/1.1.5/docs/Pre-Registration-APIs.md#login-service-public](https://github.com/mosip/documentation/blob/1.1.5/docs/Pre-Registration-APIs.md#login-service-public)
 
-***
-
-#### **Verify Email ID/ Phone number**
+### **Verify Email ID/ Phone number**
 
 The residents can use this feature to verify their registered email ID or phone number.
 
@@ -327,9 +302,7 @@ The residents can use this feature to verify their registered email ID or phone 
 2. **GET/channel/verification-status/**: This API is to check if OTP is verified for a channel for an individual (UIN/VID).
    1. [https://mosip.stoplight.io/docs/resident/dae10ad85c0a9-get-channel-verified-status](https://mosip.stoplight.io/docs/resident/dae10ad85c0a9-get-channel-verified-status)
 
-***
-
-#### **Get My UIN**
+### **Get My UIN**
 
 The residents can use this feature for one of the following:
 
@@ -355,7 +328,7 @@ The residents can use this feature for one of the following:
 
 ***
 
-**Login With E-Signet (OpenID Connect):**
+## **Login With E-Signet (OpenID Connect):**
 
 <figure><img src="../../.gitbook/assets/rp-21.png" alt=""><figcaption></figcaption></figure>
 
@@ -369,7 +342,7 @@ The residents can use this feature for one of the following:
 
 ***
 
-#### **Book an appointment**
+### **Book an appointment**
 
 The residents can book an appointment for registration using the pre-registration portal. To do so, they can click on “Book an appointment” tile which will redirect them to the pre-registration portal. To know more about pre-registration portal, refer to this link \[[https://docs.mosip.io/1.2.0/modules/pre-registration](https://docs.mosip.io/1.2.0/modules/pre-registration) ]
 
@@ -388,9 +361,7 @@ The residents can use this feature to verify their registered email ID or phone 
 2. **GET/channel/verification-status/**: This API is to check if OTP is verified for a channel for an individual (UIN/VID).
    1. [https://mosip.stoplight.io/docs/resident/dae10ad85c0a9-get-channel-verified-status](https://mosip.stoplight.io/docs/resident/dae10ad85c0a9-get-channel-verified-status)
 
-***
-
-#### **Get Information**
+### **Get Information**
 
 &#x20;**Below is the list of APIs:**
 
