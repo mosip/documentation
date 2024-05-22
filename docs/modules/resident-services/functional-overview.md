@@ -50,12 +50,7 @@ The following types of VIDs can be seen based on the VID policy:
 2. Temporary VID
 3. One-time VID
 
-**Below is the list of APIs:**
 
-1. **GET​/vid​/policy:** This API is to get the VID policy. This is an authenticated API.
-   1. [https://mosip.stoplight.io/docs/resident/76c0bbbec07ef-vid-policy](https://mosip.stoplight.io/docs/resident/76c0bbbec07ef-vid-policy)
-2. **GET /vids**: This is an authenticated API that will retrieve the list of active VIDs of the UIN/VID of the logged in session.
-   1.  [https://mosip.stoplight.io/docs/resident/7c8694c3fa4ba-get-vi-ds-of-the-resident](https://mosip.stoplight.io/docs/resident/7c8694c3fa4ba-get-vi-ds-of-the-resident)
 
 
 
@@ -88,8 +83,6 @@ The following types of VIDs can be seen based on the VID policy:
 
 <figure><img src="../../.gitbook/assets/rp-8.png" alt=""><figcaption><p>7</p></figcaption></figure>
 
-***
-
 #### **Secure My ID**
 
 On clicking “Secure My ID”, the residents can view the status of all the authentication types. They can choose to lock or unlock authentication types like the following:
@@ -100,6 +93,8 @@ On clicking “Secure My ID”, the residents can view the status of all the aut
 4. Fingerprint authentication
 5. Iris authentication
 6. Face authentication
+
+
 
 **Below is the list of APIs:**
 
@@ -150,8 +145,6 @@ On clicking “Get Personalized Card”, the residents can select the data to be
 
 <figure><img src="../../.gitbook/assets/rp-11.png" alt=""><figcaption></figcaption></figure>
 
-***
-
 #### **Share My Data**
 
 On clicking “Share My Data”, the residents can choose the data to be shared with any of the registered partners to avail various third party services.
@@ -174,8 +167,6 @@ On clicking “Share My Data”, the residents can choose the data to be shared 
    1. [https://mosip.stoplight.io/docs/resident/5f8ac1903d659-share-credential](https://mosip.stoplight.io/docs/resident/5f8ac1903d659-share-credential)
 
 <figure><img src="../../.gitbook/assets/rp-13.png" alt=""><figcaption></figcaption></figure>
-
-***
 
 #### **Update My Data**
 
@@ -283,8 +274,6 @@ The Resident Portal menu bar contains the following:
 1. **GET /profile:** This API is to get User details for the current session
    1. [https://mosip.stoplight.io/docs/resident/41d27b4cdfff9-profile](https://mosip.stoplight.io/docs/resident/41d27b4cdfff9-profile)
 
-***
-
 ### **Book an appointment**
 
 The residents can book an appointment for registration using the pre-registration portal. To do so, they can click on “Book an appointment” tile which will redirect them to the pre-registration portal. To know more about pre-registration portal, refer to this link \[[https://docs.mosip.io/1.2.0/modules/pre-registration](https://docs.mosip.io/1.2.0/modules/pre-registration) ]
@@ -325,8 +314,6 @@ The residents can use this feature for one of the following:
 <figure><img src="../../.gitbook/assets/rp-21.png" alt=""><figcaption></figcaption></figure>
 
 1. **GET /rid/{individual-id}**: This is ID-repo API is to get the RID for a given UIN/VID. This is used internally in resident service.
-
-***
 
 ## **Login With E-Signet (OpenID Connect):**
 
