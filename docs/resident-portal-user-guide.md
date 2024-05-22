@@ -570,3 +570,7 @@ The Residents can view the entire portal in the language that they prefer using 
 6. Menu option in Arabic
 
 <figure><img src=".gitbook/assets/ara.png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="info" %}
+**Note:** Only one Update request can be raised at once. The second update request can only be initiated when there are no existing requests in progress. If the user still wants to request for another Update of Data, they can also discard the Request in progress and then raise another Data Update Request.
+{% endhint %}
