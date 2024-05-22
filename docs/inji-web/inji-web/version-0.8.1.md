@@ -4,7 +4,7 @@
 
 **Support**: Developer Release
 
-**Release Date**: Coming Soon
+**Release Date**: 22nd May 2024
 
 ### **Overview** <a href="#overview" id="overview"></a>
 
@@ -14,7 +14,7 @@ Inji Web 0.8.1 addresses critical installation issues by fine-tuning the install
 
 | **Repositories** | **Tags Released**                                                           |
 | ---------------- | --------------------------------------------------------------------------- |
-| Inji Web         | **v0.8.1**                                                                  |
+| Inji Web         | [**v0.8.1**](https://github.com/mosip/inji-web/tree/v0.8.1)                 |
 | mimoto           | [**v0.12.0**](https://github.com/mosip/mimoto/tree/release-0.12.0)          |
 | mosip-config     | [**v0.12.0-INJI**](https://github.com/mosip/mosip-config/tree/v0.12.0-INJI) |
 

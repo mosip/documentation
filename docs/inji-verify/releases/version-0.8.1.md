@@ -4,7 +4,7 @@
 
 **Support**: Developer Release
 
-**Release Date**: Coming Soon
+**Release Date**: 22nd May 2024
 
 ### **Overview**
 
@@ -14,7 +14,7 @@ Inji Verify 0.8.1 addresses critical installation issues by fine-tuning the inst
 
 | **Repositories**   | **Tags: Released/Dependent**                                         |
 | ------------------ | -------------------------------------------------------------------- |
-| Inji Verify        | **v0.8.1**                                                           |
+| Inji Verify        | [**v0.8.1** ](https://github.com/mosip/inji-verify/tree/v0.8.1)      |
 | Pixel-Pass Library | [**v0.1.4**](https://www.npmjs.com/package/@mosip/pixelpass/v/0.1.4) |
 
 ### Documentation
