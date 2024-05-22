@@ -37,6 +37,32 @@ The residents can view the history of all the transactions associated with their
 
 <figure><img src="../../.gitbook/assets/fo-2.jpeg" alt=""><figcaption></figcaption></figure>
 
+### **Secure My ID**
+
+On clicking “Secure My ID”, the residents can view the status of all the authentication types. They can choose to lock or unlock authentication types like the following:
+
+1. Email OTP authentication
+2. Phone OTP authentication
+3. Demographic authentication
+4. Fingerprint authentication
+5. Iris authentication
+6. Face authentication
+
+*   **Fetch Authentication Types - Lock status of the individual**
+
+
+
+    <figure><img src="../../.gitbook/assets/rp-9.jpeg" alt=""><figcaption></figcaption></figure>
+
+
+
+*   Applies the Authentication Types Lock/Unlock request in IDA
+
+    \
+
+
+    <figure><img src="../../.gitbook/assets/rp-10.jpeg" alt=""><figcaption></figcaption></figure>
+
 ### **Manage My VID**
 
 On clicking “Manage My VID”, the resident will be taken to a page where they can view details of the existing VIDs, generate new VID, revoke existing VID or download a VID card.
@@ -69,37 +95,13 @@ The following types of VIDs can be seen based on the VID policy:
 
 <figure><img src="../../.gitbook/assets/rp-8.png" alt=""><figcaption></figcaption></figure>
 
-### **Secure My ID**
 
-On clicking “Secure My ID”, the residents can view the status of all the authentication types. They can choose to lock or unlock authentication types like the following:
-
-1. Email OTP authentication
-2. Phone OTP authentication
-3. Demographic authentication
-4. Fingerprint authentication
-5. Iris authentication
-6. Face authentication
-
-*   **Fetch Authentication Types - Lock status of the individual**
-
-
-
-    <figure><img src="../../.gitbook/assets/rp-9.jpeg" alt=""><figcaption></figcaption></figure>
-
-
-
-*   Applies the Authentication Types Lock/Unlock request in IDA
-
-    \
-
-
-    <figure><img src="../../.gitbook/assets/rp-10.jpeg" alt=""><figcaption></figcaption></figure>
 
 ### **Track My Requests**
 
 On clicking “Track My Requests”, the residents can track the status of an Event ID (EID) associated with the logged-in UIN/ VID. They can also **view and download** the detailed information about the entered EID.
 
-### **Get Personalized Card**
+### **Download My Personalized Card**
 
 On clicking “Get Personalized Card”, the residents can select the data to be added to their credential. They can preview the chosen data and download it. Residents should select at least 3 attributes.
 
