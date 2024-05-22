@@ -8,7 +8,8 @@
    3. Manage My VID
    4. Track My Request
    5. Download My Personalized Card
-   6. Share My Credential
+   6. Update My Data
+   7. Share My Credential
 2. Get Information
    1. Supporting Document
    2. Registration Center
