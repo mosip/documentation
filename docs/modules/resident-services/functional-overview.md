@@ -23,7 +23,7 @@ Below is the detailed explanation of each of the features along with the list of
 
 <figure><img src="../../.gitbook/assets/fo-1.png" alt=""><figcaption><p>Modules/services that Resident services depends on</p></figcaption></figure>
 
-## **Menu**
+## Interface
 
 ### Menu Bar
 
