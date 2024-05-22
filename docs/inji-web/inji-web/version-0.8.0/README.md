@@ -20,11 +20,11 @@ Complementing our existing Inji mobile app, the Inji Web platform provides users
 
 ## Repository Released
 
-| **Repositories** | **Tags Released**                                                      |
-| ---------------- | ---------------------------------------------------------------------- |
-| Inji Web         | [**v0.8.0**](https://github.com/mosip/inji-web/tree/release-0.8.0)     |
-| mimoto           | [**v0.12.0**](https://github.com/mosip/mimoto/tree/release-0.12.0)     |
-| mosip-config     | [**v0.12.0-INJI**](https://github.com/mosip/mosip-config/tree/qa-inji) |
+| **Repositories** | **Tags Released**                                                           |
+| ---------------- | --------------------------------------------------------------------------- |
+| Inji Web         | [**v0.8.0**](https://github.com/mosip/inji-web/tree/release-0.8.0)          |
+| mimoto           | [**v0.12.0**](https://github.com/mosip/mimoto/tree/release-0.12.0)          |
+| mosip-config     | [**v0.12.0-INJI**](https://github.com/mosip/mosip-config/tree/v0.12.0-INJI) |
 
 ## Known Issues
 
