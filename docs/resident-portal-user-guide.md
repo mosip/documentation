@@ -572,5 +572,5 @@ The Residents can view the entire portal in the language that they prefer using 
 <figure><img src=".gitbook/assets/ara.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-**Note:** Only one update request can be raised at a time. A second update request can only be initiated when there are no existing requests in progress. If the user still wants to request another data update, they can discard the request in progress and then raise a new data update request.
+**Note:** Only one update request can be raised at a time. A second update request can only be initiated when there are no existing requests in progress. If the user still wants to request another data update, they can discard the request in progress (only the requests that are in "Draft" stage in ID Repository can be discarded) and then raise a new data update request.
 {% endhint %}
