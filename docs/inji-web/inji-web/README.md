@@ -3,7 +3,7 @@
 ## Version: 0.8.1
 
 * Name: Inji Web 0.8.1 (Patch)
-* Date: 22nd May 2024
+* Date: 22nd May, 2024
 * [Release Notes](version-0.8.1.md)
 
 ## Version: 0.8.0
