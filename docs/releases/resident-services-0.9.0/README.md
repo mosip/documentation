@@ -39,10 +39,10 @@ For a quick overview of the design principles and to understand the relationship
 
 ### Repository Released
 
-| **Repositories**  | **Tags Released**                                                                      |
-| ----------------- | -------------------------------------------------------------------------------------- |
-| Resident Services | [Resident Services vDP1](https://github.com/mosip/resident-services/releases/tag/vDP1) |
-| Resident UI       | [Resident UI vDP1](https://github.com/mosip/resident-ui/releases/tag/vDP1)             |
+| **Repositories**  | **Tags Released**      |
+| ----------------- | ---------------------- |
+| Resident Services | Resident Services vDP1 |
+| Resident UI       | Resident UI vDP1       |
 
 ### Services
 
