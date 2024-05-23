@@ -151,4 +151,44 @@ Below section provides details on UI Automation by executing MOSIP functional au
 
 &#x20;
 
+Functional and test rig code base branch which is used for the above metrics is:
+
+Hash Tag:&#x20;
+
+&#x20;
+
+\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+
+mosipqa/automationtests@sha256:b4545fbd7647eacd4bc3040d9f89d7638bb385cdd9372cc90382534e0fb85c99
+
+&#x20;
+
+### Detailed Test metrics <a href="#lnxbz9" id="lnxbz9"></a>
+
+Below are the detailed test metrics by performing manual/automation testing. The project metrics are derived from Defect density, Test coverage, Test execution coverage, test tracking and efficiency.&#x20;
+
+&#x20;
+
+The various metrics that assist in test tracking and efficiency are as follows:
+
+&#x20;
+
+●     Passed Test Cases Coverage: It measures the percentage of passed test cases. (Number of passed tests / Total number of tests executed) x 100
+
+●     Failed Test Case Coverage: It measures the percentage of all the failed test cases. (Number of failed tests / Total number of test cases executed) x 100
+
+&#x20;
+
+Github link for the xls file:
+
+\<TBD>
+
+&#x20;
+
+Sonar Report&#x20;
+
+&#x20;
+
+<figure><img src="../../.gitbook/assets/rp-0.9.0-sonar-report.png" alt=""><figcaption></figcaption></figure>
+
 &#x20;
