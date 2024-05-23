@@ -111,14 +111,12 @@ The various metrics that assist in test tracking and efficiency are as follows:
 
 
 
-Github link for the xls file:
-
-\<TBD>
-
 ## Sonar Report&#x20;
 
 &#x20;
 
 <figure><img src="../../.gitbook/assets/rp-0.9.0-sonar-report.png" alt=""><figcaption></figcaption></figure>
 
-&#x20;
+&#x20;Github link for the xls file:
+
+\<TBD>
