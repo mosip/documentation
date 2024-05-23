@@ -75,8 +75,8 @@ Refer [API Documentation](https://mosip.stoplight.io/docs/resident/9a5192571fc51
 
 ### Known Bug
 
-To get the list of known bugs, click [here](https://mosip.atlassian.net/issues/MOSIP-33073?jql=parent%3Dmosip-20342%20and%20labels%3DRP\_Knownbug\_0.9.0) or pull this query on Jira **parent=mosip-20342 and labels=RP\_Knownbug\_0.9.0**
+Click [here](https://mosip.atlassian.net/issues/MOSIP-33078?filter=-4\&jql=parent%3Dmosip-20342%20and%20status%20not%20in%20%28closed%2C%20canceled%2C%20fixed%2C%20testing%2C%20%22On%20Hold%20-%20Dev%22%29%20and%20issuetype%3Dbug) to To get the list of known bugs.
 
 ### Test Report
 
-For details on the test results, refer [here](https://github.com/mosip/test-management/tree/master/).
+For details on the test results, refer [here](https://docs.mosip.io/1.2.0/releases/resident-services-0.9.0/test-report).
