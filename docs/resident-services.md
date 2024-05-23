@@ -76,7 +76,7 @@ The design of the Resident portal embodies the following principles:
 
 ### Documentation
 
-1. [Release Notes](https://docs.mosip.io/1.2.0/releases/release-notes-resident-portal-dp1)
+1. [Release Notes](https://docs.mosip.io/1.2.0/releases/resident-services-0.9.0)
 2. [Resident Services Developers Guide](https://docs.mosip.io/1.2.0/modules/resident-services/resident-services-developer-guide)
 3. [Resident Services UI Developers Guide](https://docs.mosip.io/1.2.0/modules/resident-services/resident-services-ui-developer-guide)
 4. [Resident Portal Configuration Guide](https://docs.mosip.io/1.2.0/modules/resident-services/resident-portal-configuration-guide)
