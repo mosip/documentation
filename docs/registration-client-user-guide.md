@@ -154,7 +154,7 @@ There are two situations where a Lost UIN flow is used. I am listing here the si
 * The registrant has lost their Identity details.
 * The registrant never received his identity due to a wrong address/email/phone
 
-The registrant visits the registration centre to retrieve the same. The operator then captures the biometrics and the demographic details of the individual and processes a request to retrieve the lost UIN. As biometrics play a crucial in identifying a person's identity, it is mandated to provide the biometrics as a part of the Lost UIN flow. Other details like demographic data, and uploading documents are optional.
+The registrant visits the registration centre to retrieve the same. The operator then captures the biometrics and the demographic details of the individual and processes a request to retrieve the lost UIN. As biometrics play a crucial role in identifying a person's identity, it is mandated to provide the biometrics as a part of the Lost UIN flow. Other details like demographic data, and uploading documents are optional.
 
 ![](\_images/reg-client-lost-uin.png)
 
