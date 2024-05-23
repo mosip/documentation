@@ -56,25 +56,15 @@ MOSIP provides a reference implementation of the Resident portal that can be cus
 
 ## Known Issues
 
-### Known Bugs - Complete List
+### Complete List
 
 To get the copmlete list of known bugs click [here](https://mosip.atlassian.net/issues/MOSIP-33078?filter=-4\&jql=parent%3Dmosip-20342%20and%20status%20not%20in%20%28closed%2C%20canceled%2C%20fixed%2C%20testing%2C%20%22On%20Hold%20-%20Dev%22%29%20and%20issuetype%3Dbug).
 
-### Known Bugs - Key Issues
+### Key Issues
 
-| JIRA Issues                                                   | Issue Description                                                                                                                                                           |
-| ------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [MOSIP-33073](https://mosip.atlassian.net/browse/MOSIP-33073) | If the name is of only 3 letters, the downloaded card fails to open.                                                                                                        |
-| [MOSIP-33065](https://mosip.atlassian.net/browse/MOSIP-33065) | On uploading invalid document and viewing it, the data that was entered is not persistent.                                                                                  |
-| [MOSIP-33058](https://mosip.atlassian.net/browse/MOSIP-33058) | When one data update request is processed and another one is about to be initiated, in the pop-up if we cancel the update request, an error with “no record found” is seen. |
-| [MOSIP-32895](https://mosip.atlassian.net/browse/MOSIP-32895) | If the same name as the existing one is entered in the “New name” field, no error is thrown.                                                                                |
-| [MOSIP-32845](https://mosip.atlassian.net/browse/MOSIP-32845) | On clicking “Submit” button multiple times, multiple eventIds are getting created.                                                                                          |
-| [MOSIP-32822](https://mosip.atlassian.net/browse/MOSIP-32822) | If the name field is lengthy, the downloaded card does not show the entire name entered.                                                                                    |
-| [MOSIP-32809](https://mosip.atlassian.net/browse/MOSIP-32809) | On updating data, the page sometimes need to be refreshed to view the update.                                                                                               |
-| [MOSIP-31136](https://mosip.atlassian.net/browse/MOSIP-31136) | VC verification is failing for name, photo, and full address.                                                                                                               |
-| [MOSIP-30684](https://mosip.atlassian.net/browse/MOSIP-30684) | To enter text before sharing data with the partner, one has to click on text field twice.                                                                                   |
-| [MOSIP-30682](https://mosip.atlassian.net/browse/MOSIP-30682) | To enter text in grievance redressal form, one has to click on text field twice.                                                                                            |
-| [MOSIP-30678](https://mosip.atlassian.net/browse/MOSIP-30678) | On downloading Personalised UIN card, email/ SMS notifications are not being sent in preferred language.                                                                    |
+Mentioned below is the list of other '**key known issues**'.
+
+<table><thead><tr><th width="266">JIRA Issues</th><th>Issue Description</th></tr></thead><tbody><tr><td><a href="https://mosip.atlassian.net/browse/MOSIP-33073">MOSIP-33073</a></td><td>If the name is of only 3 letters, the downloaded card fails to open.</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/MOSIP-33065">MOSIP-33065</a></td><td>On uploading invalid document and viewing it, the data that was entered is not persistent.</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/MOSIP-33058">MOSIP-33058</a></td><td>When one data update request is processed and another one is about to be initiated, in the pop-up if we cancel the update request, an error with “no record found” is seen.</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/MOSIP-32895">MOSIP-32895</a></td><td>If the same name as the existing one is entered in the “New name” field, no error is thrown.</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/MOSIP-32845">MOSIP-32845</a></td><td>On clicking “Submit” button multiple times, multiple eventIds are getting created.</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/MOSIP-32822">MOSIP-32822</a></td><td>If the name field is lengthy, the downloaded card does not show the entire name entered.</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/MOSIP-32809">MOSIP-32809</a></td><td>On updating data, the page sometimes need to be refreshed to view the update.</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/MOSIP-31136">MOSIP-31136</a></td><td>VC verification is failing for name, photo, and full address.</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/MOSIP-30684">MOSIP-30684</a></td><td>To enter text before sharing data with the partner, one has to click on text field twice.</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/MOSIP-30682">MOSIP-30682</a></td><td>To enter text in grievance redressal form, one has to click on text field twice.</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/MOSIP-30678">MOSIP-30678</a></td><td>On downloading Personalised UIN card, email/ SMS notifications are not being sent in preferred language.</td></tr></tbody></table>
 
 
 
