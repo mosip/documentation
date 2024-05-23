@@ -2,97 +2,44 @@
 
 ## Testing Scope
 
-The scope of testing is to verify fitment to the specification from the perspective of &#x20;
+The scope of testing is to verify fitment to the specification from the perspective of&#x20;
 
-●      Functionality &#x20;
-
-●      Deployability &#x20;
-
-●      Configurability &#x20;
-
-●      Customizability
-
-&#x20;
+* Functionality&#x20;
+* Deployability&#x20;
+* Configurability&#x20;
+* Customizability
 
 Verification is performed not only from the end user perspective but also from the System Integrator (SI) point of view. Hence Configurability and Extensibility of the software is also assessed. This ensures readiness of software for use in multiple countries. Since MOSIP is an “API First” product platform, Verification scope required comprehensive automation testing for all the MOSIP APIs. An automation Test Rig is created for the same.&#x20;
 
-&#x20;
-
 The Resident Revamp testing scope revolves around the following flows:
 
-&#x20;
-
-●      Update My Data
-
-●      Multilingual (English/Arabic/French)
-
-●      Resident UI End to End testing
-
-●      Regression Testing
+* Update My Data
+* Multilingual (English/Arabic/French)
+* Resident UI End to End testing
+* Regression Testing
 
 ## Test Approach <a href="#id-2et92p0" id="id-2et92p0"></a>
 
 Persona based approach has been adopted to perform the IV\&V, by simulating test scenarios that resemble a real-time implementation.&#x20;
 
-&#x20;
-
 A Persona is a fictional character/user profile created to represent a user type that might use a product/or a service in a similar way. Persona based testing is a software testing technique that puts software testers in the customer's shoes, assesses their needs from the software and thereby determines use cases/scenarios that the customers will execute. The persona needs may be addressed through any of the following.&#x20;
 
-&#x20;
-
-●      Functionality &#x20;
-
-●      Deployability &#x20;
-
-●      Configurability &#x20;
-
-●      Customizability
-
-&#x20;
+* Functionality
+* Deployability
+* Configurability
+* Customizability
 
 The verification methods may differ based on how the need was addressed.&#x20;
 
-&#x20;
-
 For regression check, “MOSIP Test Rig” - an automation testing suite - which is indigenously designed and developed for supporting persona based testing. MOSIP Test Rig covers the end to end test execution and reporting. The end to end functional test scenarios are written starting from pre-registration, to creation of packet in registration center, processing the packet through the registration processor, generating UIN and authenticating identity using IDA through various permutation and combinations of cases being covered. MOSIP Test Rig will be an open source artifact which can also be enhanced and used by countries to validate the SI deliveries before going live. Persona classes include both negative and positive personas. Negative persona classes include users like Bribed Registration Office, Malicious Insider etc. The needs of positive persona classes must be met, whereas the needs of negative persona classes must be effectively restricted by the software.
-
-&#x20;
 
 ## Verified configuration  <a href="#tyjcwt" id="tyjcwt"></a>
 
-Verification is performed on various configurations as mentioned below&#x20;
+Verification is performed on various configurations as mentioned below
 
-&#x20;    ●         Default configuration - with 3 Lang (English/Arabic/French)
+* Default configuration - with 3 Lang (English/Arabic/French)
 
-&#x20;
 
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
 
 ## Test execution statistics  <a href="#id-4d34og8" id="id-4d34og8"></a>
 
@@ -111,7 +58,7 @@ Below are the test metrics by performing functional testing using mock MDS and m
 | 2255                                 | 2196   | 42     | 17            |
 | Test Rate: 99%  With Pass Rate : 98% |        |        |               |
 
-&#x20;
+
 
 Note: NA - 17 Test Cases which are descoped scenarios/not developed feature
 
@@ -126,23 +73,13 @@ Below section provides details on API test metrics by executing MOSIP functional
 | 1138                                    | 1123   | 10     | 5       |
 | Test Rate: 99.5% With Pass Rate: 98.68% |        |        |         |
 
-&#x20;
 
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
 
 ### UI Automation results  <a href="#id-3rdcrjn" id="id-3rdcrjn"></a>
 
 Below section provides details on UI Automation by executing MOSIP functional automation Framework.
 
-&#x20;
 
-&#x20;
 
 | Total                                | Passed | Failed | Skipped |
 | ------------------------------------ | ------ | ------ | ------- |
@@ -167,25 +104,18 @@ mosipqa/automationtests@sha256:b4545fbd7647eacd4bc3040d9f89d7638bb385cdd9372cc90
 
 Below are the detailed test metrics by performing manual/automation testing. The project metrics are derived from Defect density, Test coverage, Test execution coverage, test tracking and efficiency.&#x20;
 
-&#x20;
-
 The various metrics that assist in test tracking and efficiency are as follows:
 
-&#x20;
+* Passed Test Cases Coverage: It measures the percentage of passed test cases. (Number of passed tests / Total number of tests executed) x 100
+* Failed Test Case Coverage: It measures the percentage of all the failed test cases. (Number of failed tests / Total number of test cases executed) x 100
 
-●     Passed Test Cases Coverage: It measures the percentage of passed test cases. (Number of passed tests / Total number of tests executed) x 100
 
-●     Failed Test Case Coverage: It measures the percentage of all the failed test cases. (Number of failed tests / Total number of test cases executed) x 100
-
-&#x20;
 
 Github link for the xls file:
 
 \<TBD>
 
-&#x20;
-
-Sonar Report&#x20;
+## Sonar Report&#x20;
 
 &#x20;
 
