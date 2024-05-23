@@ -8,7 +8,7 @@
 
 **Release Date**: 23rd May, 2024
 
-### Overview
+## Overview
 
 This release is the 0.9.0 release of Resident Services, offering valuable insights into the range of features and functionality available. Resident Services is designed to run on 1.2.0.1 version of MOSIP platform. Resident Services are the self-services which are used by the residents themselves via a portal. [Resident Portal](https://docs.mosip.io/1.2.0/modules/resident-services/resident-portal-user-guide) is a web-based UI application that provides residents of a country the services related to their Unique Identification Number (UIN). The residents can perform various operations related to their UIN/ VID and can also raise concerns if any through the portal.
 
@@ -37,12 +37,14 @@ The key features provided on the Resident portal are:
 
 For a quick overview of the design principles and to understand the relationship of Resident Services with other services, read [Resident Services Overview](https://docs.mosip.io/1.2.0/modules/resident-services).
 
-### Repository Released
+## Repository Released
 
 | **Repositories**  | **Tags Released**      |
 | ----------------- | ---------------------- |
 | Resident Services | Resident Services vDP1 |
 | Resident UI       | Resident UI vDP1       |
+
+## Summary
 
 ### Services
 
@@ -52,31 +54,37 @@ For detailed description of Resident services, the code and design, refer to [re
 
 MOSIP provides a reference implementation of the Resident portal that can be customized as per the country’s needs. The sample implementation is available [here](https://github.com/mosip/resident-ui/releases/tag/vDP1).
 
-For getting started with the resident portal, refer to the [Resident Portal User Guide](https://docs.mosip.io/1.2.0/modules/resident-services/resident-portal-user-guide).
+## Known Issues
 
-### Build and Deploy
+### Known Bugs - Complete List
 
-To access the build and read through the deployment instructions, refer to the [Resident Services Deployment Guide](https://docs.mosip.io/1.2.0/modules/resident-services/resident-services-deployment-guide).
+To get the copmlete list of known bugs click [here](https://mosip.atlassian.net/issues/MOSIP-33078?filter=-4\&jql=parent%3Dmosip-20342%20and%20status%20not%20in%20%28closed%2C%20canceled%2C%20fixed%2C%20testing%2C%20%22On%20Hold%20-%20Dev%22%29%20and%20issuetype%3Dbug).
 
-### Configurations
+### Known Bugs - Key Issues
 
-For details related to resident portal configurations, refer to the [Configuration Guide](https://docs.mosip.io/1.2.0/modules/resident-services/resident-portal-configuration-guide).
+| JIRA Issues                                                   | Issue Description                                                                                                                                                           |
+| ------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [MOSIP-33073](https://mosip.atlassian.net/browse/MOSIP-33073) | If the name is of only 3 letters, the downloaded card fails to open.                                                                                                        |
+| [MOSIP-33065](https://mosip.atlassian.net/browse/MOSIP-33065) | On uploading invalid document and viewing it, the data that was entered is not persistent.                                                                                  |
+| [MOSIP-33058](https://mosip.atlassian.net/browse/MOSIP-33058) | When one data update request is processed and another one is about to be initiated, in the pop-up if we cancel the update request, an error with “no record found” is seen. |
+| [MOSIP-32895](https://mosip.atlassian.net/browse/MOSIP-32895) | If the same name as the existing one is entered in the “New name” field, no error is thrown.                                                                                |
+| [MOSIP-32845](https://mosip.atlassian.net/browse/MOSIP-32845) | On clicking “Submit” button multiple times, multiple eventIds are getting created.                                                                                          |
+| [MOSIP-32822](https://mosip.atlassian.net/browse/MOSIP-32822) | If the name field is lengthy, the downloaded card does not show the entire name entered.                                                                                    |
+| [MOSIP-32809](https://mosip.atlassian.net/browse/MOSIP-32809) | On updating data, the page sometimes need to be refreshed to view the update.                                                                                               |
+| [MOSIP-31136](https://mosip.atlassian.net/browse/MOSIP-31136) | VC verification is failing for name, photo, and full address.                                                                                                               |
+| [MOSIP-30684](https://mosip.atlassian.net/browse/MOSIP-30684) | To enter text before sharing data with the partner, one has to click on text field twice.                                                                                   |
+| [MOSIP-30682](https://mosip.atlassian.net/browse/MOSIP-30682) | To enter text in grievance redressal form, one has to click on text field twice.                                                                                            |
+| [MOSIP-30678](https://mosip.atlassian.net/browse/MOSIP-30678) | On downloading Personalised UIN card, email/ SMS notifications are not being sent in preferred language.                                                                    |
 
-### Developers Guide
 
-For a detailed description of Resident Services, code, design, and setup steps, refer to:
 
-1. [Resident Services Developers Guide](https://docs.mosip.io/1.2.0/modules/resident-services/resident-services-developer-guide)
-2. [Resident Services UI Developers Guide](https://docs.mosip.io/1.2.0/modules/resident-services/resident-services-ui-developer-guide)
+## Documentation
 
-### API
-
-Refer [API Documentation](https://mosip.stoplight.io/docs/resident/9a5192571fc51-document).
-
-### Known Bug
-
-Click [here](https://mosip.atlassian.net/issues/MOSIP-33078?filter=-4\&jql=parent%3Dmosip-20342%20and%20status%20not%20in%20%28closed%2C%20canceled%2C%20fixed%2C%20testing%2C%20%22On%20Hold%20-%20Dev%22%29%20and%20issuetype%3Dbug) to To get the list of known bugs.
-
-### Test Report
-
-For details on the test results, refer [here](https://docs.mosip.io/1.2.0/releases/resident-services-0.9.0/test-report).
+* [Resident Services Developers Guide](https://docs.mosip.io/1.2.0/modules/resident-services/resident-services-developer-guide)
+* [Resident Services UI Developers Guide](https://docs.mosip.io/1.2.0/modules/resident-services/resident-services-ui-developer-guide)
+* [Resident Portal Configuration Guide](https://docs.mosip.io/1.2.0/modules/resident-services/resident-portal-configuration-guide)
+* [Resident Services Deployment Guide](https://docs.mosip.io/1.2.0/modules/resident-services/resident-services-deployment-guide)
+* [Configuring Resident OIDC Client](https://docs.mosip.io/1.2.0/modules/resident-services/resident-services-configure-resident-oidc-client)
+* [Resident Portal User Guide](https://docs.mosip.io/1.2.0/modules/resident-services/resident-portal-user-guide)
+* [API Documentation](https://mosip.stoplight.io/docs/resident/9a5192571fc51-document).
+* [Test Report](https://docs.mosip.io/1.2.0/releases/resident-services-0.9.0/test-report)
