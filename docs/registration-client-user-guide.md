@@ -144,17 +144,22 @@ When a resident visits the registration center to update their demographic or bi
 ![](\_images/reg-client-update-uin.png)
 
 {% hint style="info" %}
-_The UIN update feature is configurable by a country. The Admin can turn ON or OFF, the UIN update feature using the configuration._
+_The UIN update feature is configurable by the adopters. The Admin can turn ON or OFF, the UIN update feature using the configuration._
 {% endhint %}
 
 ### Lost UIN
 
-There might be a situation when a resident might have lost his UIN and visits the registration center for retrieving the same. The operator then captures the biometrics and the demographic details of the individual and processes a request to retrieve the lost UIN. As biometrics play a crucial in identifying a person's identity, it is mandated to provide the biometrics as a part of the Lost UIN flow. Other details like demographic data, uploading documents are optional.
+There are two situations where a Lost UIN flow is used. I am listing here the situations.&#x20;
+
+* The registrant has lost their Identity details.
+* The registrant never received his identity due to a wrong address/email/phone
+
+The registrant visits the registration centre to retrieve the same. The operator then captures the biometrics and the demographic details of the individual and processes a request to retrieve the lost UIN. As biometrics play a crucial in identifying a person's identity, it is mandated to provide the biometrics as a part of the Lost UIN flow. Other details like demographic data, and uploading documents are optional.
 
 ![](\_images/reg-client-lost-uin.png)
 
-* As a part of Lost UIN flow, the contact details like the phone number/ e-mail address of the UIN holder can also be updated and stored in the ID Repository based on the value provided for the property (uingenerator.lost.packet.allowed.update.fields) which is specified in the Registration Processor properties.
-* If the value already exists for the above mentioned property and once the lost UIN is found, details corresponding to the property value can be fetched from Packet manager and updated in ID Repository.
+* As a part of Lost UIN flow, the contact details like the phone number/ e-mail address of the UIN holder can also be **updated** and stored in the ID Repository based on the value provided for the property `uingenerator.lost.packet.allowed.update.fields` which is specified in the Registration Processor properties.
+* If the value already exists for the above mentioned property and once the lost UIN is found, details of the identity of the individual are sent to the newly provided phone number/ e-mail address.
 
 `Example: uingenerator.lost.packet.allowed.update.fields= phone,email`
 
@@ -211,4 +216,4 @@ This section has been reserved for the countries to be able to display their liv
 
 ### Consent
 
-During the training of the Operators, It must be ensured that consent is obtained directly from the resident whose personal information is being collected and processed. There is no  technical way to handle this scenario, so the operator training must include this activity as a manual process and emphasize upon strictly following the same.
+During the training of the Operators, It must be ensured that consent is obtained directly from the resident whose personal information is being collected and processed. There is no technical way to handle this scenario, so the operator training must include this activity as a manual process and emphasize upon strictly following the same.
