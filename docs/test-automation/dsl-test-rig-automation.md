@@ -8,8 +8,6 @@ A **Domain-Specific Language (DSL)** test framework is crafted specifically to f
 
 **Execution Components and Flow**
 
-
-
 <figure><img src="../.gitbook/assets/Execution Compenents and Flow.png" alt=""><figcaption></figcaption></figure>
 
 ## PacketCreator Service
@@ -32,7 +30,7 @@ Click [here](https://github.com/mosip/mosip-functional-tests) to know more about
 
 The DSL test rig, also referred to as the DSL orchestrator, plays an important role in managing test data and executing the use cases outlined in scenario sheets. It harnesses the capabilities of `PacketCreator` and `AuthDemo` certificates to seamlessly orchestrate the complete scenario execution. Furthermore, the test rig is adept at concurrently running multiple scenarios, thereby maximizing efficiency.
 
-Upon completion of execution, comprehensive reports are meticulously stored in a Minio S3 bucket, with the folder name specified in the configuration maps.
+Upon completion of execution, comprehensive reports are meticulously stored in a **Object Store** S3 bucket, with the folder name specified in the configuration maps.
 
 Click [here](https://github.com/mosip/mosip-automation-tests) to know more about test data to run automation tests.
 
@@ -103,7 +101,7 @@ To ensure successful execution from Docker, please verify the following prerequi
 <figure><img src="../.gitbook/assets/Communication2.png" alt=""><figcaption></figcaption></figure>
 
 * Once the DSL test rig configuration maps are accurately configured, you can proceed to execute the DSL test rig pod within the Docker environment.
-* Following execution, the comprehensive execution report will be made available in the Minio S3 bucket, accessible for retrieval and further analysis.
+* Following execution, the comprehensive execution report will be made available in the '**Object Store**' S3 bucket, accessible for retrieval and further analysis.
 
 ### Prerequisites for executing the DSL test rig
 
@@ -114,13 +112,11 @@ Before executing the DSL test rig, ensure the following prerequisites are met:
 * **Network File System (NFS) Setup**: NFS must be properly configured and accessible to share data between relevant components, such as DSL test rig and PacketCreator.
 * **PacketCreator and AuthDemo Paths**: Verify that the paths for both `PacketCreator` and `AuthDemo` in the configuration are accurately set, referencing their respective locations within the environment.
 * **Scenario Sheet**: The scenario sheet containing test cases must have the correct scenario number(s) specified for execution.
-* **Minio Bucket Access**: Confirm that the configuration maps hold valid information to access the Minio S3 bucket. This access is necessary for retrieving reports after the completion of the test run.
+* **'Object Store' Bucket Access**: Confirm that the configuration maps hold valid information to access the **'Object Store'** S3 bucket. This access is necessary for retrieving reports after the completion of the test run.
 
 ### How to analyse the report
 
-Fetch reports from Minio as displayed below.
-
-
+Fetch reports from '**Object Store**' as displayed below.
 
 <figure><img src="../.gitbook/assets/dsl (2).png" alt=""><figcaption></figcaption></figure>
 
@@ -183,7 +179,7 @@ Testing and refining the newly created scenario is crucial to ensure it function
 * Start with a simple scenario to build confidence in your understanding of the DSL and scenario writing process.
 * Consult colleagues who are familiar with the existing DSL and scenario definitions for guidance and support if needed.
 * Document your new scenario clearly and concisely, explaining its purpose and any changes made compared to the original scenario.
-* Below  snapshot displays many more methods for your reference for the scenarios.
+* Below snapshot displays many more methods for your reference for the scenarios.
 
 <div align="left">
 
