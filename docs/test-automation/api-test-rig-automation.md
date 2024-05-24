@@ -97,7 +97,7 @@ Following are tested modules:
 
 **Identify Report Name**
 
-* Locate the report file in the Minio automation bucket.
+* Locate the report file in the '**Object Store**'  automation bucket.
 * The report name typically follows the format: `mosip-api-internal.<env_name>-<module_name>-<timestamp>_report_T-<Total>_P-<Passed>_S-<Skipped>_F-<Failed>.html`.
 * `<env_name>`: Name of the environment where the tests were conducted
 * `<module_name>`: Name of the module for which tests were executed
