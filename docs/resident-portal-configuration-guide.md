@@ -333,9 +333,9 @@ mosip.resident.sign.pdf.reference.id=SIGN
 
 ### Object Store configuration
 
-To configure the 'Object Store Configuration' update the URL and other configurations as below:
+To configure the 'Object Store Configuration' update the 'Object Store URL'  and other properties as below:
 
-object.store.s3.url=
+object.store.s3.url=http://exampleurl:port
 
 ```
 mosip.resident.object.store.account-name=resident
