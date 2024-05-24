@@ -333,9 +333,9 @@ mosip.resident.sign.pdf.reference.id=SIGN
 
 ### Object Store configuration
 
-For Minio: object.store.s3.url=[http://minio.minio:9000](http://minio.minio:9000/)
+To configure the 'Object Store Configuration' update the URL and other configurations as below:
 
-For AWS: object.store.s3.url=s3.${s3.region}.amazonaws.com
+object.store.s3.url=
 
 ```
 mosip.resident.object.store.account-name=resident
