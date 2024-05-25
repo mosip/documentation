@@ -52,7 +52,6 @@
     * [.well-known](well-known.md)
     * [Custom Handle Implementation Guide](modules/id-repository/custom-handle.md)
   * [Inji](https://docs.mosip.io/inji)
-  * [Inji User Guide](inji-user-guide.md)
   * [Keycloak](keycloak.md)
   * [Key Manager](keymanager.md)
     * [Keys](keys.md)
