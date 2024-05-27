@@ -18,21 +18,21 @@ Please navigate to the Play Store or App Store for iOS, select the **Install** o
 
 * Upon launching the app, the MOSIP logo will be displayed before the language filter appears.
 * The chosen language will be reflected within the app interface. Subsequently, a four-page tutorial for the Inji Mobile will be presented, followed by the option to secure the app.
-* This can be achieved through either a PIN or utilizing the device's Bio metrics (such as fingerprint or facial recognition). Once the setting is done, users will be directed to the app's home page.
+* This can be achieved through either a PIN or utilizing the device's Biometrics (such as fingerprint or facial recognition). Once the setting is done, users will be directed to the app's home page.
 
 **On Android device**
 
-<figure><img src=".gitbook/assets/Untitled design.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/TourGuide1.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/Untitled design (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/tourguide2.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/Untitled design (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/first-launch-Page-3.png" alt=""><figcaption><p>Setting up the app</p></figcaption></figure>
 
 ## Downloading VC
 
 To download VC, there are two methods:
 
-* Downloading VC using the UIN / VID
+* Downloading VC using the UIN / VID 
 * Download VC via eSignet
 
 **Downloading VC using UIN / VID**
@@ -40,7 +40,7 @@ To download VC, there are two methods:
 To download MOSIP issued VC, using OTP method, user can directly provide UIN / VID and connect to the IDA.
 
 * On the home page, there will be a plus "+" symbol that displays the list of issuers available to download VCs from.
-* Select the issuer that states **Download Credentials via OTP**.
+* Select the issuer that states **Download <Issuer> Credentials via OTP**.
 * Enter the UIN / VID and enter the OTP sent to your registered email ID.
 * Download the VC.
 
@@ -57,15 +57,15 @@ To download MOSIP issued VC, using OTP method, user can directly provide UIN / V
 * In the authorization page (eSignet page), user has to enter the UIN / VID
 * Upon Authorization, the user will be taken back to the application, landing on the loading screen. Following the completion of the download process, the user will be returned to the home page, where the Downloaded Credential will be available
 
-<figure><img src=".gitbook/assets/Untitled design (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/download using eSignet1.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/Untitled design (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/download using esignet2.png" alt=""><figcaption></figcaption></figure>
 
 ### Detailed view of the downloaded VC
 
 Once we click on the downloaded VC, it will open as a detailed view.
 
-<figure><img src=".gitbook/assets/Untitled design (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/detailed view.png" alt=""><figcaption></figcaption></figure>
 
 ### Viewing history of the downloaded VC
 
@@ -73,7 +73,7 @@ After we have completed several scenarios, when we navigate to the history page,
 
 <div align="left">
 
-<figure><img src=".gitbook/assets/Untitled design (1) (2).png" alt="" width="275"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/history1.png" alt="" width="191"><figcaption></figcaption></figure>
 
 </div>
 
@@ -95,11 +95,9 @@ Let us understand the process of sharing credentials using an example. Suppose a
 * The resident then needs to choose a downloaded VC and select either the **Share** option or the **Share with Selfie** option.
 * The **Share** button will solely share the VC, while the **Share with Selfie** option will verify if the sender's face matches the photo in the VC before proceeding to share.
 
-<figure><img src=".gitbook/assets/Untitled design (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/sharing-Page-1.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/Untitled design (1) (3).png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src=".gitbook/assets/Untitled design (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/sharing-Page-2.png" alt=""><figcaption></figcaption></figure>
 
 **On the Relying Party' phone**:
 
@@ -108,9 +106,9 @@ Let us understand the process of sharing credentials using an example. Suppose a
 * To view the received cards, they would need to access the settings page and find the `Received Cards` section. Clicking on this section will display the received cards. If the receiver has not received any card, this section will be empty.
 * Please note that the relying party can only view the received cards and will not be able to share or perform other actions with them.
 
-<figure><img src=".gitbook/assets/Untitled design (1) (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/sharing-Page-3.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/Untitled design (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/sharing-Page-4.png" alt=""><figcaption></figcaption></figure>
 
 ### Pinning a VC
 
@@ -125,9 +123,9 @@ There are two ways to activate the VC:
 * The second option is to click on the activate button found in the detailed view.
 * Upon clicking the **Activate** button, a confirmation alert message will be prompted. Once permission is granted, the user will be directed to an OTP screen. After entering the correct OTP, the VC will be activated and projected on the screen with the same message.
 
-<figure><img src=".gitbook/assets/Untitled design (2) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/activation1.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/Untitled design (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/activation2.png" alt=""><figcaption></figcaption></figure>
 
 ### Deleting a VC
 
@@ -135,7 +133,7 @@ There are two ways to activate the VC:
 * From there, the option to remove the card will be available. Select the option **Remove from Wallet**. Upon clicking this option, a confirmation prompt will appear asking for confirmation.
 * If the confirmation is selected, the VC will be successfully removed from the system.
 
-<figure><img src=".gitbook/assets/Untitled design (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/deletion of VC3.png" alt=""><figcaption></figcaption></figure>
 
 ## Data backup and restore
 
@@ -150,13 +148,13 @@ In order to backup VCs, user has to choose their preference of the cloud based o
 
 ### Data backup - Android
 
-<figure><img src=".gitbook/assets/Untitled design (1) (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/backup inji.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/Untitled design (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/backup inji 2.png" alt=""><figcaption></figcaption></figure>
 
 ### Data backup- ios
 
-<figure><img src=".gitbook/assets/Untitled design (1) (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/backup ios (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Restore
 
@@ -170,8 +168,14 @@ In order to restore backed up VCs, user has to choose their preference of the cl
 
 ### Restore - Android
 
-<figure><img src=".gitbook/assets/Untitled design (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/restore Android.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/android restore 2.png" alt=""><figcaption></figcaption></figure>
 
 ### Restore - ios
 
-<figure><img src=".gitbook/assets/Untitled design (1) (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/restore ios1.png" alt=""><figcaption></figcaption></figure>
+
+
+
+<figure><img src=".gitbook/assets/restore ios.png" alt=""><figcaption></figcaption></figure>
