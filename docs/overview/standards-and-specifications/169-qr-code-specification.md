@@ -20,15 +20,17 @@ Once a person is registered in an identity system, their data serves as the foun
 
 Among these methods, biometric-based authentication, such as facial authentication, offers the highest level of assurance as it assures the presence of the individual. While this is effective for online systems & personal phones where verification is conducted on a server or a personal device; offline authentication presents challenges in maintaining a similarly high level of assurance. The offline authentication mechanism should work for people with no phone.
 
-For instance, in a cross-border scenario remote areas often face significant internet connectivity issues. Even when internet access is available, server reliability may be inconsistent. In such circumstances, scanning a QR code containing the person's facial photograph and identity information, alongside assurance that the data is country-signed, provides an additional layer of security and affirmation for the countries involved.
+For instance, in a cross-border scenario, remote areas often face significant internet connectivity issues. Even when internet access is available, server reliability may be inconsistent. In such circumstances, scanning a standard QR code containing the person's facial photograph and identity information, alongside assurance that the data is country-signed, provides an additional layer of security and affirmation for the countries involved.
 
 **Please note:** The trust layers required to sync the country's key are beyond the scope of this document. We assume the app scanning the QR code already has the country's key to verify.
 
-To tackle the challenge above, we propose a standard CBOR-based QR Code that involves embedding a low-resolution image of the person with a minimal demographic dataset within the QR code. This QR code would be digitally signed by the ID authorities (Issuer) and then printed on a physical card. Subsequently, the signed data within the QR code can be utilized for facial authentication. However, it's essential to recognize that QR codes have limitations regarding size. We suggest leveraging CBOR Web Token (CWT) with ED25519/ECC keys to generate a smaller signature and more condensed data.
+To tackle the aforementioned challenge, we propose a **standard CBOR-based QR Code** that involves embedding a low-resolution **image** of the person with a minimal demographic dataset within the QR code. This QR code would be **digitally signed** by the ID authorities (Issuer) and then printed on a physical card. Subsequently, the signed data within the QR code can be utilized for **facial** **authentication**. This approach also helps enhance **interoperability**. \
+\
+Note: It is essential to recognize that QR codes have limitations regarding size. We suggest leveraging CBOR Web Token (CWT) with ED25519/ECC keys to generate a smaller signature and more condensed data.
 
 ### 3. Semantics
 
-Claim 169 represents a JSON Object that includes the below table as ID attributes. You can find an illustration of the ID structure contained within Claim 169, as stated below:
+Claim 169 represents a JSON Object that includes the following ID attributes, as outlined in the table. You can find an illustration of the ID structure contained within Claim 169, as stated below:
 
 #### 3.1 CBOR Map Structure Overview
 
