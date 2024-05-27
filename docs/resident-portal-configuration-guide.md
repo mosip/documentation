@@ -2,7 +2,7 @@
 
 ### Overview
 
-The guide here lists down some of the important properties that may be customized for a given installation. Note that the listing here is not exhaustive, but a checklist to review properties that are likely to be different from default. If you would like to see all the properties, then refer to the files listed below.
+The following guide outlines some important properties that can be customized for a given installation. Please note that this list is not exhaustive but serves as a checklist for reviewing properties that are likely to differ from the default settings. For a complete list of properties, refer to the files listed below.
 
 ### Configuration files
 
@@ -49,7 +49,7 @@ resident.logging.filter.url.pattern=/*
 
 ### Rest template logger filter
 
-This will print the request details such as URL, headers and body for debugging purpose. Default is false.
+This will print the request details such as URL, headers, and body for debugging purposes. The default is false.
 
 ```
 logging.level.io.mosip.resident.config.LoggingInterceptor=DEBUG
@@ -58,7 +58,7 @@ resident.rest.template.logging.interceptor.filter.enabled=false
 
 ### DB calls logger filter
 
-This will print the repository method calls for debugging purpose. Default is false.
+This will print the repository method calls for debugging purposes. The default is false.
 
 ```
 logging.level.io.mosip.resident.aspect.DatabaseLoggingAspect=DEBUG
@@ -1629,8 +1629,8 @@ This is used in Resident in Update UIN feature to show remaining update count fo
 
 ### Mvel File config
 
-This file contains Mvel method definitions for masking attributes, getting password and formatting attributes.
+This file contains Mvel method definitions for masking attributes, getting passwords, and formatting attributes.
 
-This is used in Resident for downloading PDF card and for masking attributes in share credential feature and personalise card feature.
+This is used in Resident for downloading PDF cards and for masking attributes in the share credential feature and personalize card feature.
 
 [https://github.com/mosip/mosip-config/blob/pla-1.2.0.1/credentialdata.mvel](https://github.com/mosip/mosip-config/blob/pla-1.2.0.1/credentialdata.mvel)
