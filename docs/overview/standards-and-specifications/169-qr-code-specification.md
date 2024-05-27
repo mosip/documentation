@@ -10,6 +10,8 @@
 
 **Point of Contact**: Resham Chugani ([resham@mosip.io](mailto:resham@mosip.io))
 
+**IANA Registration**: [IANA CWT Registry](https://www.iana.org/assignments/cwt/cwt.xhtml) (Search Key: 169)
+
 ### 1. Introduction
 
 This document specifies a generic data structure and encoding mechanism for storing the Identity Data of a registered person using any ID platform. It also provides a transport encoding mechanism in a machine-readable optical format (QR).
