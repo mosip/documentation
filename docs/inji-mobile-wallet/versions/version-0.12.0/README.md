@@ -55,13 +55,13 @@ To prevent failures during download caused by verification of Verifiable Credent
 
 PixelPass, part of the Inji Credentialing stack, generates QR codes for Verifiable Credentials within the Inji mobile wallet. It's specifically designed for smaller data sets when the ID provider doesn't send a QR code along with the Verifiable Credential. Users can view and use this QR code for verification purposes by the relying party or service provider.
 
-To know more about QR code verification, read about Inji Verify **here**.
+To know more about QR code verification, read about Inji Verify [**here**](https://docs.mosip.io/inji/inji-mobile-wallet/components#id-5.-pixelpass).
 
 ### Library
 
 QR Code Generation: PixelPass
 
-To read more about PixelPass library refer <mark style="color:red;">**here**</mark>.
+To read more about PixelPass library refer [**here**](../../integration-guide/pixelpass.md).
 
 ### UI/UX enhancements:
 
@@ -187,6 +187,6 @@ Below are the list of fixes as part of 0.12.0 release:
 * [Feature Documentation](https://docs.mosip.io/inji/inji-mobile-wallet/overview/features)
 * [Integration Guides](https://docs.mosip.io/inji/inji-mobile-wallet/integration-guide)
 * [User Guide](https://docs.mosip.io/inji/inji-mobile-wallet/end-user-guide)
-* QA Report
+* [QA Report](test-report.md)
 * [API Documentation](https://github.com/mosip/mimoto/tree/release-0.10.0/docs/postman-collections)
 

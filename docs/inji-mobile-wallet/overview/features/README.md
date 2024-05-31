@@ -27,7 +27,7 @@ PixelPass library is capable of generating QR codes for Verifiable Credentials w
 
 Reference Implementation: QR Code generation for Veridonia Insurance VC.
 
-Please refer [here](https://docs.mosip.io/inji/inji-verify/functional-overview/workflow) to know more about verifying the QR Code using Inji Verify.
+To know more about QR code verification, read about Inji Verify [here](https://docs.mosip.io/inji/inji-mobile-wallet/overview/features#qr-code-generation).
 
 To understand the workflow, please refer [here](https://docs.mosip.io/inji/inji-mobile-wallet/overview/features/feature-workflows#id-2.-downloading-verifying-and-storing-credentials).
 
