@@ -2,21 +2,23 @@
 
 Below is a comprehensive overview of the features provided by Inji Mobile.
 
-## Download and save Verifiable Credentials
+## Download, Veriy and Store Verifiable Credentials
 
 Downloading your digital credentials (IDs) with you at all times just got easier. This can be done as below:
 
-Downloading VC using the OpenID for VC Issuance flow: Residents can download a VC using a configured third-party issuer which complies with OpenID for VCI standard. For Inji mobile, MOSIP IDA (National ID) and Veridonia Insurance (Insurance credentials) are example integrations.
+### Downloading VC using the OpenID for VC Issuance flow:&#x20;
 
-### VC Verification:
+Residents can download a VC using a configured third-party issuer which complies with OpenID for VCI standard. For Inji mobile, MOSIP IDA (National ID) and Veridonia Insurance (Insurance credentials) are example integrations.
 
-Inji mobile wallet offers a robust feature for verifying Verifiable Credentials using the Digital Bazaar library. This advanced functionality ensures that the issuer's signature is validated and verified based on the proof type provided by the issuer. This step is ingrained as part of the VC download flow. Currently, the support is for the RSA signature type, providing users with reliable verification capabilities. Additionally, we are actively working to expand our support to include the Ed25519 proof type, further enhancing the security and versatility of our verification process. With these advancements, users can trust that their Verifiable Credentials are verified with precision and integrity, regardless of the proof type utilized by the issuer.
-
-### Credential Type Selection:
+#### Credential Type Selection:
 
 Inji mobile wallet introduces a new feature that empowers users to select the specific type of credential they require. Upon choosing an issuer, users are presented with a list of Credential Types issued by the ID provider. This functionality provides users with flexibility and control, allowing them to download their Verifiable Credentials to their precise needs.
 
-### **QR Code Generation:**
+#### VC Verification:
+
+Inji mobile wallet offers a robust feature for verifying Verifiable Credentials using the Digital Bazaar library. This advanced functionality ensures that the issuer's signature is validated and verified based on the proof type provided by the issuer. This step is ingrained as part of the VC download flow. Currently, the support is for the RSA signature type, providing users with reliable verification capabilities. Additionally, we are actively working to expand our support to include the Ed25519 proof type, further enhancing the security and versatility of our verification process. With these advancements, users can trust that their Verifiable Credentials are verified with precision and integrity, regardless of the proof type utilized by the issuer.
+
+#### **QR Code Generation:**
 
 PixelPass library is capable of generating QR codes for Verifiable Credentials with smaller size data. The library is integrated with Inji mobile and users can now see a QR code which has Verifiable Credentials embedded in it. These QR codes, visible in the detailed view of the card, offer a convenient way for users to share their credentials with relying parties or service providers. Users can display the QR code so that the relying party / service provider can either:
 
@@ -28,19 +30,6 @@ Reference Implementation: QR Code generation for Veridonia Insurance VC.
 Please refer [here](https://docs.mosip.io/inji/inji-verify/functional-overview/workflow) to know more about verifying the QR Code using Inji Verify.
 
 To understand the workflow, please refer [here](https://docs.mosip.io/inji/inji-mobile-wallet/overview/features/feature-workflows#id-2.-downloading-verifying-and-storing-credentials).
-
-## Security Features
-
-Inji Mobile, as a digital Verifiable Credential wallet, implements robust measures to safeguard PII data and protect against cyber-attacks. Inji Mobile undergoes rigorous Penetration Testing and Threat Modelling by certified experts, further enhancing its resilience against cyber threats.
-
-1. **Utilization of Hardware Keystore**:
-   * Inji Mobile securely stores private encryption keys by utilizing the Android hardware keystore.
-2. **Cryptographic Protection for PII Data**:
-   * Inji Mobile employs industry-standard SHA-256 and Argon2 cryptographic libraries to hash and strengthen Personally Identifiable Information (PII) data. The app actively detects and responds to any suspicious activities, ensuring enhanced security of user data.
-3. **Automatic biometric change detection**:
-   * Inji Mobile automatically resets itself in case of biometric change, thereby ensuring the security of information.
-
-
 
 ## Sharing Verifiable Credentials without the Internet
 
@@ -65,6 +54,17 @@ In order to safeguard against potential data loss in case of any unprecedented c
 Depending on their device platform, users can choose to store and retrieve VCs securely using either Google Drive (for Android users) or iCloud (for iOS users). This is a one-time setup process, where Android users can select their respective Google email account, while iOS users can back-up data using their default logged-in Apple account.
 
 To understand the backup and restore flow, refer [here](https://docs.mosip.io/inji/inji-mobile-wallet/overview/features/feature-workflows#id-5.-data-backup-and-restore).
+
+## Security Features
+
+Inji Mobile, as a digital Verifiable Credential wallet, implements robust measures to safeguard PII data and protect against cyber-attacks. Inji Mobile undergoes rigorous Penetration Testing and Threat Modelling by certified experts, further enhancing its resilience against cyber threats.
+
+1. **Utilization of Hardware Keystore**:
+   * Inji Mobile securely stores private encryption keys by utilizing the Android hardware keystore.
+2. **Cryptographic Protection for PII Data**:
+   * Inji Mobile employs industry-standard SHA-256 and Argon2 cryptographic libraries to hash and strengthen Personally Identifiable Information (PII) data. The app actively detects and responds to any suspicious activities, ensuring enhanced security of user data.
+3. **Automatic biometric change detection**:
+   * Inji Mobile automatically resets itself in case of biometric change, thereby ensuring the security of information.
 
 ## Ingenious Design
 
