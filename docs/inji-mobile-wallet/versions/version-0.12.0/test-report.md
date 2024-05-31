@@ -61,11 +61,11 @@ Verification is performed on various configurations as mentioned below
 
 On Android Device:
 
-<figure><img src="blob:https://app.gitbook.com/e9dd0fd0-746a-4dd2-8207-ae374a992906" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Inji_Mobile_Releases_0.12.0_Test_Report_Feature_Health_On_Android.png" alt=""><figcaption></figcaption></figure>
 
 On iOS Device:
 
-<figure><img src="blob:https://app.gitbook.com/329efb09-a40d-479e-a127-648ac7b28e27" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Inji_Mobile_Releases_0.12.0_Test_Report_Feature_Health_On_IOS.png" alt=""><figcaption></figcaption></figure>
 
 ## Test execution statistics  <a href="#id-4d34og8" id="id-4d34og8"></a>
 
@@ -173,11 +173,7 @@ SHA: sha256:c2a71c11f19a6585e6cfd3ae8ab70130babb2077e27714f5fc225b986e7c14d0
 
 Below are the test metrics by performing VC Sharing functionality on various device combinations&#x20;
 
-&#x20;
-
-<figure><img src="blob:https://app.gitbook.com/90b5062b-31b0-4554-97a9-bb5789b47df2" alt=""><figcaption></figcaption></figure>
-
-&#x20;
+<figure><img src="../../../.gitbook/assets/Inji_Mobile_Releases_0.12.0_Test_Report_Feature_Health_Various_Device.png" alt=""><figcaption></figcaption></figure>
 
 &#x20;
 
