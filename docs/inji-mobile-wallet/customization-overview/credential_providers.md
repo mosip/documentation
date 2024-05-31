@@ -1,8 +1,11 @@
 # Credential Providers
 
-Inji Mobile currently provides support for two credential providers:
+Inji Mobile currently provides support for following credential providers:
 
-1. Download via eSignet
+**Download VC using OpenID for VC Issuance Flow (eSignet)**
+
+* National ID
+* Insurance
 
 To set up a new provider that can issue VC, it can be accomplished by making a few configuration changes. The configuration details can be found in the `mimoto-issuers-config.json` property file. This file is maintained separately for each deployment environment. In this repository, each environment's configuration is stored in a dedicated branch specific to that environment.
 

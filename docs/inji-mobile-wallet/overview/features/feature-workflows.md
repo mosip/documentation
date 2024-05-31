@@ -20,14 +20,7 @@ Residents have the ability to download a Verifiable Credential (VC) for themselv
 
 While downloading the VCs, the credentials are validated and verified for the authenticity of the issuer using the signature and the proof type provided in the VC.
 
-* Download via UIN/VID
-* Download via eSignet
-
-#### Download via UIN /VID
-
-To download MOSIP issued VC, using OTP method, user can directly provide UIN / VID and connect to the IDA.
-
-<figure><img src="../../../.gitbook/assets/download_via_uin_vid (1).png" alt=""><figcaption></figcaption></figure>
+* Downloading VC using OpenID for VC Issuance Flow (eSignet)
 
 #### Download via eSignet
 

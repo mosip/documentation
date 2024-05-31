@@ -4,21 +4,32 @@
 
 **Support**: Developer Release
 
-**Release Date**: Coming Soon
+**Release Date**: 31st May, 2024
 
 ### Overview
 
 We are delighted to announce the release of Inji Mobile Version 0.12.0 . This release is compatible with v0.12.0 Mimoto release. As part of 0.12.0, Inji mobile introduces below mentioned key features:
 
-1. Credential Type Selection
-2. QR code generation for VC
-3. Data backup enhancements
-4. VC Verification
-5. UI/UX enhancements
-   * Card view UI changes
-   * VC share optimization
-   * Activity log enhancements
-   * GenderMag P2 items
+**Key Highlights**:
+
+1. Features added to the Download Functionality:
+
+* Credential Type Selection
+* VC Verification
+* QR Code Generation for VC
+
+2. Library:
+
+* QR Code Generation: PixelPass
+
+3. UI/UX Enhancements:
+
+* Card View UI Changes
+* VC Share Optimization
+* Activity Log Enhancements
+* GenderMag Fixes
+
+4. Data Backup Enhancements
 
 Inji mobile app addresses gender / inclusivity bias in software through GenderMag analysis. In this release, we have incorporated GenderMag fixes for UI / UX in inclusivity space.
 
@@ -50,7 +61,7 @@ To know more about QR code verification, read about Inji Verify **here**.
 
 QR Code Generation: PixelPass
 
-To read more about PixelPass library refer here.
+To read more about PixelPass library refer <mark style="color:red;">**here**</mark>.
 
 ### UI/UX enhancements:
 
@@ -71,8 +82,6 @@ Inji Mobile version 0.12.0 introduces enhanced UI to deliver a seamless user exp
 #### Activity Log enhancements:
 
 The audit logs have been enhanced to elevate the user experience. Now, they include the card type, along with the card number and the action performed, for better readability.
-
-
 
 **GenderMag P2 items:**
 
@@ -102,7 +111,7 @@ As part of the 0.12.0 release, the following enhancements have been made to the 
 
 | **Repositories** | **Tags Released**                                                                                |
 | ---------------- | ------------------------------------------------------------------------------------------------ |
-| Inji             | <p><br></p>                                                                                      |
+| Inji             | <p><a href="https://github.com/mosip/inji/releases/tag/v0.12.0">v0.12.0</a><br></p>              |
 | mimoto           | <p><a href="https://github.com/mosip/mimoto/releases/tag/v0.12.0">v0.12.0</a><br></p>            |
 | mosip-config     | <p><a href="https://github.com/mosip/mosip-config/releases/tag/v0.12.0-INJI">v0.12.0</a><br></p> |
 
@@ -114,7 +123,6 @@ Redmi devices are not supported in this release. To know more, refer[ here](http
 
 Mentioned below is the list of other known issues.
 
-\
 
 
 | Jira issue                                                      | Issue description                                                                                                          |
@@ -141,7 +149,8 @@ Mentioned below is the list of other known issues.
 
 ### Bug Fixes
 
-\
+Below are the list of fixes as part of 0.12.0 release:
+
 
 
 | Jira issue                                                      | Severity | Issue description                                                                                                                                   |
