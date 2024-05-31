@@ -72,7 +72,7 @@ Inji Mobile functions as a comprehensive repository for a diverse array of VCs, 
 
 * **Multiple views of VCs**: Users can access multiple views of VCs, ranging from a mini view to detailed insights.
 * **Organized UI**: Inji Mobile provides a clear demarcation between downloaded and received VCs enhancing user clarity.
-* **Quick Access menu**: Users can now directly Share, Share with Selfie directly by accessing the kebab menu from the mini view in the Home Page.
+* **Quick Access menu**: Users can now directly Share, Share with Selfie directly by accessing the kebab menu from the mini view in the Home Page and the detailed view of the VC.
 
 For a quick look at these features, refer the [Inji Mobile User Guide](../../end-user-guide.md).
 

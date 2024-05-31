@@ -1,6 +1,6 @@
 # Overview
 
-**Inji Mobile Wallet** is a mobile application specifically created to streamline all types of identification and credentials into one digital wallet. This innovative solution allows for identity verification through a straightforward selfie. 
+**Inji Mobile Wallet** is a mobile application specifically created to streamline all types of identification and credentials into one digital wallet. This innovative solution allows for identity verification through a straightforward selfie.
 
 It offers a secure, trustworthy, and dependable mobile Verifiable Credentials wallet designed to fulfil the following functions:
 
@@ -15,7 +15,7 @@ The application is constructed using the [React Native framework](https://reactn
 
 **How does Inji Mobile work?**
 
-* Inji Mobile users can obtain their Verifiable credential by utilizing their unique ID (e.g., UIN or VID issued by the government).
+* Inji Mobile users can obtain their Verifiable credential by utilizing their unique ID (e.g., UIN or VID in case of a National ID issued by the government) or using the card details/information they possess (KBI method).
 * Users are required to authenticate their request through an OTP sent to their registered mobile number or email address.
 * Only upon successful validation, the Verifiable credential will be downloaded and securely stored within the app.
 * Once a Verifiable credential is downloaded, users can share it with relying parties via Bluetooth, using the [BLE protocol](https://tlodderstedt.github.io/openid-for-verifiable-presentations-offline-1\_0-00.html).

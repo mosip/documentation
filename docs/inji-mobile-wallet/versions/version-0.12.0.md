@@ -28,34 +28,11 @@ To know more about the GenderMag UI/UI changes in the Inji mobile application, p
 
 Please find below the details for the **Inji Version 0.12.0** release:
 
+### Features added to the Download Functionality:
+
 #### Credential Type Selection:
 
 Inji mobile wallet now allows users to select the type of credential they need, giving them the option to choose from a list of Credential Types issued by the ID provider. This enables users to download Verifiable Credentials that match their selection.&#x20;
-
-#### QR code generation for VC:
-
-PixelPass, part of the Inji Credentialing stack, generates QR codes for Verifiable Credentials within the Inji mobile wallet. It's specifically designed for smaller data sets when the ID provider doesn't send a QR code along with the Verifiable Credential. Users can view and use this QR code for verification purposes by the relying party or service provider.
-
-To read more about PixelPass library refer here.
-
-To know more about QR code verification, read about Inji Verify here.
-
-#### Data backup enhancements:
-
-As part of the 0.12.0 release, the following enhancements have been made to the Data Backup feature:
-
-1. **Cloud as the Primary Source**:
-
-* The backup file stored in the cloud will be the primary source of truth.
-* Once the backup file is downloaded and restored, it is automatically removed from the local app storage to ensure that the latest backup file is always restored.
-
-2. **iCloud Section Visibility**:
-
-* The iCloud Section is now visible in the Backup & Restore settings screen, allowing users to easily manage their backups.
-
-3. **User Notification**:
-
-* When the user initiates a Backup or Restore process, a banner will be displayed to inform users about the ongoing process.
 
 #### VC Verification:
 
@@ -63,7 +40,19 @@ Inji mobile wallet provides the functionality to verify Verifiable Credentials u
 
 To prevent failures during download caused by verification of Verifiable Credentials with any other signature type, this step needs to be bypassed. Learn more about the steps here.
 
-#### UI/UX enhancements:
+#### QR code generation for VC:
+
+PixelPass, part of the Inji Credentialing stack, generates QR codes for Verifiable Credentials within the Inji mobile wallet. It's specifically designed for smaller data sets when the ID provider doesn't send a QR code along with the Verifiable Credential. Users can view and use this QR code for verification purposes by the relying party or service provider.
+
+To know more about QR code verification, read about Inji Verify **here**.
+
+### Library
+
+QR Code Generation: PixelPass
+
+To read more about PixelPass library refer here.
+
+### UI/UX enhancements:
 
 Inji Mobile version 0.12.0 introduces enhanced UI to deliver a seamless user experience with an intuitive design. The UI modifications included in this release are:
 
@@ -89,6 +78,25 @@ The audit logs have been enhanced to elevate the user experience. Now, they incl
 
 * Enhanced text to clarify the next steps and reasons for permission requests.
 * Improved user experience by providing clear notifications for success or failure, including a success screen or error banner with the reason for failure during VC sharing and face verification.
+
+### Data backup enhancements:
+
+As part of the 0.12.0 release, the following enhancements have been made to the Data Backup feature:
+
+1. **Cloud as the Primary Source**:
+
+* The backup file stored in the cloud will be the primary source of truth.
+* Once the backup file is downloaded and restored, it is automatically removed from the local app storage to ensure that the latest backup file is always restored.
+
+2. **iCloud Section Visibility**:
+
+* The iCloud Section is now visible in the Backup & Restore settings screen, allowing users to easily manage their backups.
+
+3. **User Notification**:
+
+* When the user initiates a Backup or Restore process, a banner will be displayed to inform users about the ongoing process.
+
+
 
 ### Repository Released
 

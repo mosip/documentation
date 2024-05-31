@@ -71,9 +71,9 @@ To understand the steps to generate your own Insurance credentials from Sunbird,
 
 **Step 2: QR Code generation**:
 
-With the above credentials, using Inji Mobile app you can get the QR Code (or)
+Using Inji Mobile app you can get the QR Code for Insurance Credentials
 
-To generate a QR Code using PixelPass library, please refer to the steps [here](https://docs.mosip.io/inji/inji-verify/build-and-deploy/creating-verifiable-credentials-and-generating-qr-codes#steps-to-generate-qr-code).
+<**Cross-Check**>  To generate a QR Code using PixelPass library, please refer to the steps [here](https://docs.mosip.io/inji/inji-verify/build-and-deploy/creating-verifiable-credentials-and-generating-qr-codes#steps-to-generate-qr-code).'
 
 **Step 3: QR Code verification**:
 

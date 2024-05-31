@@ -9,53 +9,19 @@ Below are some of the important APIs.
 
 ## Support for downloading VC from multiple Issuers
 
-* To get list of issuers, the below API is called.
+* To get a list of issuers, [this](https://mosip.stoplight.io/docs/mimoto/67ec1f78ee034-list-issuers) API is called. For retrieving the credential types and display properties, `.well-known` location is referred for every issuer from the [mimoto-issuers-config.json](https://github.com/mosip/mosip-config/blob/collab/mimoto-issuers-config.json)
 * To get list issuer's configuration, the below API is called.
 
-Below are 2 types of issuers fo downloading VC:
+Below are the type of issuer fo downloading VC:
 
-1. [Download via UIN/VID](mimoto.md#download-via-uinvid)
-2. [Download via eSignet](mimoto.md#download-via-esignet)
-
-### Download via UIN/VID
-
-Inji Mobile allows the users to enter their unique ID (UIN or VID) and download the credentials. Multiple Mimoto APIs are being called to complete the process in the backend.
-
-* After entering the unique ID, the user is asked to enter an OTP on the next screen. In the backend, below API is called to send the OTP to the user as an email or SMS.
-
-{% swagger src="../../.gitbook/assets/mimoto (1).json" path="/req/otp" method="post" %}
-[mimoto (1).json](<../../.gitbook/assets/mimoto (1).json>)
-{% endswagger %}
-
-* After the user enters the OTP, Inji calls the below Mimoto API to request a new credential.
-
-{% swagger src="../../.gitbook/assets/mimoto (1).json" path="/credentialshare/request" method="post" %}
-[mimoto (1).json](<../../.gitbook/assets/mimoto (1).json>)
-{% endswagger %}
-
-* The credentials are downloaded asynchronously after the request is processed. First, the API mentioned below is called to check the status of the credentials.
-
-{% swagger src="../../.gitbook/assets/mimoto (1).json" path="/credentialshare/request/status/{requestId}" method="get" %}
-[mimoto (1).json](<../../.gitbook/assets/mimoto (1).json>)
-{% endswagger %}
-
-* After the credential status is **ISSUED**, the app initiates download. The API below will be called to download the credential.
-
-{% swagger src="../../.gitbook/assets/mimoto (1).json" path="/credentialshare/download" method="post" %}
-[mimoto (1).json](<../../.gitbook/assets/mimoto (1).json>)
-{% endswagger %}
+1. [Download via eSignet](mimoto.md#download-via-esignet)
 
 ### Download via eSignet
 
-Inji Mobile allows the users to download VC by redirecting to user to eSignet UI. Multiple APIs are being called to complete the process in the backend.
+Inji Mobile allows the users to download VC by redirecting the user to eSignet UI. Multiple APIs are being called to complete the process in the backend.
 
-* Inji Mobile initiates authenticate API by redirecting user to eSignet UI. On eSignet UI, user is given option to enter the unique ID, the user is asked to enter an OTP on the next screen. In the backend, below API is called to get token.
-
-{% swagger src="../../.gitbook/assets/mimoto (1).json" path="/get-token" method="post" %}
-[mimoto (1).json](<../../.gitbook/assets/mimoto (1).json>)
-{% endswagger %}
-
-* After getting token response, Inji Mobile initiates download request. Refer [here](esignet.md#download-vc)
+* Inji Mobile initiates authenticate API by redirecting users to eSignet UI. On eSignet UI, user is given option to enter the unique ID, the user is asked to enter an OTP on the next screen. In the backend, token API is called to get a token. Refer [here](https://docs.esignet.io/integration/wallet/credential-holder) for more details.
+* After getting a token response, Inji Mobile initiates a download request. Refer[ here](https://docs.mosip.io/inji/inji-mobile-wallet/backend-services/esignet#download-vc)
 
 ## Activate credentials
 
