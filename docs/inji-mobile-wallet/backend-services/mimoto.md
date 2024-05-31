@@ -5,16 +5,9 @@ It provides all necessary APIs to the Inji Mobile and acts as a proxy for reside
 
 Detailed API documentation of Mimoto is available [here](https://mosip.stoplight.io/docs/mimoto).
 
-Below are some of the important APIs.
-
 ## Support for downloading VC from multiple Issuers
 
 * To get a list of issuers, [this](https://mosip.stoplight.io/docs/mimoto/67ec1f78ee034-list-issuers) API is called. For retrieving the credential types and display properties, `.well-known` location is referred for every issuer from the [mimoto-issuers-config.json](https://github.com/mosip/mosip-config/blob/collab/mimoto-issuers-config.json)
-* To get list issuer's configuration, the below API is called.
-
-Below are the type of issuer fo downloading VC:
-
-1. [Download via eSignet](mimoto.md#download-via-esignet)
 
 ### Download via eSignet
 
@@ -41,9 +34,9 @@ Credentials have to be activated in order to use them for online login. When a u
 
 ## Configuration
 
-The configurable properties for mimoto can be found at [mimoto-default.properties](https://github.com/mosip/mosip-config/blob/collab/mimoto-default.properties). This property file is maintained as one for each deployment environment. On [this](https://github.com/mosip/mosip-config) repository, each environment configuration is placed in a corresponding branch specific to that environment.
+The configurable properties for mimoto can be found at [mimoto-default.properties](https://github.com/mosip/mosip-config/blob/collab1/mimoto-default.properties). This property file is maintained as one for each deployment environment. On [this](https://github.com/mosip/mosip-config) repository, each environment configuration is placed in a corresponding branch specific to that environment.
 
-> Refer to [mimoto-default.properties](https://github.com/mosip/mosip-config/blob/collab/mimoto-default.properties) of Collab environment.
+> Refer to [mimoto-default.properties](https://github.com/mosip/mosip-config/blob/collab1/mimoto-default.properties) of Collab environment.
 
 The implementers can choose to use the existing configurations or add new configurations to them.
 
