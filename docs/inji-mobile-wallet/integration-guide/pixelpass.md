@@ -75,6 +75,10 @@ Shall you encounter any errors while using the APIs, please refer to the below:
 
 The below diagram shows how Inji Mobile utilises PixelPass library.
 
+<figure><img src="../../.gitbook/assets/inji_mobile_wallet_integration_guides_pixel_pass_1.png" alt=""><figcaption></figcaption></figure>
+
+
+
 \
 \
 \
