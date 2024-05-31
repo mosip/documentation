@@ -6,7 +6,7 @@
 
 **Support**: 0.9.0
 
-**Release Date**: 23rd May, 2024
+**Release Date**: 30th May, 2024
 
 ## Overview
 
@@ -14,7 +14,7 @@ This release is the 0.9.0 release of Resident Services, offering valuable insigh
 
 The key features provided on the Resident portal are:
 
-1. Avail UIN services using UIN/ VID (through [e-Signet](https://docs.esignet.io/)):
+1. Avail UIN services using UIN/ VID (through [eSignet](https://docs.esignet.io)):
    * View My History
    * Manage My VID
    * Secure My ID
@@ -39,26 +39,26 @@ For a quick overview of the design principles and to understand the relationship
 
 ## Repository Released
 
-| **Repositories**  | **Tags Released**                                                        |
-| ----------------- | ------------------------------------------------------------------------ |
-| Resident Services | [vDP1](https://github.com/mosip/resident-services/releases/tag/v1.2.1.0) |
-| Resident UI       | [vDP1](https://github.com/mosip/resident-ui/releases/tag/v0.9.0)         |
+| **Repositories**  | **Tags Released**                                                          |
+| ----------------- | -------------------------------------------------------------------------- |
+| Resident Services | [v0.9.0](https://github.com/mosip/resident-services/releases/tag/v1.2.1.0) |
+| Resident UI       | [vDP1](https://github.com/mosip/resident-ui/releases/tag/v0.9.0)           |
 
 ## Summary
 
 ### Services
 
-For detailed description of Resident services, the code and design, refer to [resident services repo](https://github.com/mosip/resident-services/releases/tag/vDP1).
+For detailed description of Resident services, the code and design, refer to [resident services repo](https://github.com/mosip/resident-services/releases/tag/v1.2.1.0).
 
 ### Resident Portal UI
 
-MOSIP provides a reference implementation of the Resident portal that can be customized as per the country’s needs. The sample implementation is available [here](https://github.com/mosip/resident-ui/releases/tag/vDP1).
+MOSIP provides a reference implementation of the Resident portal that can be customized as per the country’s needs. The sample implementation is available [here](https://github.com/mosip/resident-ui/releases/tag/v0.9.0).
 
 ## Known Issues
 
 ### Complete List
 
-To get the copmlete list of known bugs click [here](https://mosip.atlassian.net/issues/MOSIP-33078?filter=-4\&jql=parent%3Dmosip-20342%20and%20status%20not%20in%20%28closed%2C%20canceled%2C%20fixed%2C%20testing%2C%20%22On%20Hold%20-%20Dev%22%29%20and%20issuetype%3Dbug).
+To get the complete list of known bugs click [here](https://mosip.atlassian.net/issues/MOSIP-33078?filter=-4\&jql=parent%3Dmosip-20342%20and%20status%20not%20in%20%28closed%2C%20canceled%2C%20fixed%2C%20testing%2C%20%22On%20Hold%20-%20Dev%22%29%20and%20issuetype%3Dbug).
 
 ### Key Issues
 
@@ -76,5 +76,6 @@ Mentioned below is the list of other '**key known issues**'.
 * [Resident Services Deployment Guide](https://docs.mosip.io/1.2.0/modules/resident-services/resident-services-deployment-guide)
 * [Configuring Resident OIDC Client](https://docs.mosip.io/1.2.0/modules/resident-services/resident-services-configure-resident-oidc-client)
 * [Resident Portal User Guide](https://docs.mosip.io/1.2.0/modules/resident-services/resident-portal-user-guide)
+* [Functional Overview](https://docs.mosip.io/1.2.0/modules/resident-services/functional-overview)
 * [API Documentation](https://mosip.stoplight.io/docs/resident/9a5192571fc51-document).
 * [Test Report](https://docs.mosip.io/1.2.0/releases/resident-services-0.9.0/test-report)
