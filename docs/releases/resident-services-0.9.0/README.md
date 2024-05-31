@@ -39,10 +39,10 @@ For a quick overview of the design principles and to understand the relationship
 
 ## Repository Released
 
-| **Repositories**  | **Tags Released**                                                          |
-| ----------------- | -------------------------------------------------------------------------- |
-| Resident Services | [v0.9.0](https://github.com/mosip/resident-services/releases/tag/v1.2.1.0) |
-| Resident UI       | [vDP1](https://github.com/mosip/resident-ui/releases/tag/v0.9.0)           |
+| **Repositories**  | **Tags Released**                                                            |
+| ----------------- | ---------------------------------------------------------------------------- |
+| Resident Services | [v1.2.1.0](https://github.com/mosip/resident-services/releases/tag/v1.2.1.0) |
+| Resident UI       | [v.0.9.0](https://github.com/mosip/resident-ui/releases/tag/v0.9.0)          |
 
 ## Summary
 
@@ -77,5 +77,5 @@ Mentioned below is the list of other '**key known issues**'.
 * [Configuring Resident OIDC Client](https://docs.mosip.io/1.2.0/modules/resident-services/resident-services-configure-resident-oidc-client)
 * [Resident Portal User Guide](https://docs.mosip.io/1.2.0/modules/resident-services/resident-portal-user-guide)
 * [Functional Overview](https://docs.mosip.io/1.2.0/modules/resident-services/functional-overview)
-* [API Documentation](https://mosip.stoplight.io/docs/resident/9a5192571fc51-document).
+* [API Documentation](https://mosip.stoplight.io/docs/resident/9a5192571fc51-document)
 * [Test Report](https://docs.mosip.io/1.2.0/releases/resident-services-0.9.0/test-report)
