@@ -2,13 +2,25 @@
 
 ## Latest Release
 
+**Version: 0.9.0 (Resident Services)**
+
+* Support: 0.9.0
+* Date: 30th May, 2024
+* [Release Notes](releases/resident-services-0.9.0/)
+
+## Older Releases
+
+**Version: 0.9.0 (Android Registration Client)**
+
+* Support: Beta Release
+* Date: 26th February, 2024
+* [Release Notes](release-notes-android-reg-client-0.9.0.md)
+
 **Version: 1.2.1.0 (ID Authentication)**
 
 * [![LTS](https://img.shields.io/badge/Support-Long%20Term%20Support-blue?style=plastic)](https://docs.mosip.io/1.2.0/releases/support-policy)
 * Date: 03rd May, 2024
 * [Release Notes](https://docs.mosip.io/1.2.0/releases/1.2.1.0)
-
-## Older Releases
 
 **Version: 1.2.0.2**
 
