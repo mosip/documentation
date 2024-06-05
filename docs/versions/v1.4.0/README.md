@@ -10,10 +10,19 @@ Version 1.4.0 of eSignet introduces a new authentication mode and addresses know
 
 1.  **Knowledge Based Identification (KBI)**
 
-    We are excited to share that eSignet has expanded its authentication options to include Knowledge-Based Identification (KBI) as one of its factors. With eSignet's integration capabilities, existing ID repositories storing user specific details can now be easily integrated with eSignet. This integration enables OpenID based login, allowing users to access relying party services seamlessly.
+    We are excited to share that eSignet has expanded its authentication options to include Knowledge Based Identification (KBI) as one of its factors. With eSignet's integration capabilities, existing ID repositories storing user specific details can now be easily integrated with eSignet. This integration enables OpenID based login, allowing users to access relying party services seamlessly.
 
     To know more about Knowledge Based Identification, click [here](https://docs.esignet.io/overview/features#knowledge-based-authentication).
 2. **Fixes for known issues from v1.3.0**
+
+{% hint style="info" %}
+
+
+Note:
+
+1. The authentication factor can be referred to as either Knowledge Based Authentication (KBA) or Knowledge Based Identification (KBI). However, from the eSignet’s perspective, we will specifically refer to the authentication method as Knowledge Based Identification (KBI).
+2. Given the relatively low level of assurance provided by Knowledge Based Identification  (KBI), we recommend that Knowledge Based Authentication (KBA) / Knowledge Based Identification (KBI) should be used for the issuance of Verifiable Credentials (VC) or certificates rather than serving as a primary method of authentication.&#x20;
+{% endhint %}
 
 ## Repositories Released
 
@@ -32,4 +41,4 @@ For details on deployment, refer to the [helm charts](https://github.com/mosip/e
 * [Integration Guides](https://docs.esignet.io/integration)
 * [End User Guide](https://docs.esignet.io/end-user-guide)
 * [API Documentation](https://github.com/mosip/esignet/blob/v1.4.0/docs/esignet-openapi.yaml)
-* [QA Report](./)
+* [QA Report](test-report.md)
