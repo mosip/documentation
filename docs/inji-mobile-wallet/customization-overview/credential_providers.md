@@ -7,23 +7,33 @@ Inji Mobile currently provides support for following credential providers:
 * National ID
 * Insurance
 
-To set up a new provider that can issue VC, it can be accomplished by making a few configuration changes. The configuration details can be found in the `mimoto-issuers-config.json` property file. This file is maintained separately for each deployment environment. In this repository, each environment's configuration is stored in a dedicated branch specific to that environment.
+To set up a new provider that can issue VC, it can be accomplished by making a few configuration changes. 
+
+**Steps:**
+
+1. The configuration details can be found in the `mimoto-issuers-config.json` property file. This file is maintained separately for each deployment environment. In this repository, each environment's configuration is stored in a dedicated branch specific to that environment.
 
 > Refer to [mimoto-issuers-config.json](https://github.com/mosip/mosip-config/blob/collab1/mimoto-issuers-config.json) of Collab environment.
 
-These values will be used by Inji Mobile via Mimoto. Mimoto exposes APIs which is used by the Inji Mobile application to fetch and store the issuers and their configurations in the local storage.
+These values will be used by Inji Mobile via Mimoto. Mimoto exposes APIs which is used by the Inji Mobile application to fetch, store the issuers and their configurations in the local storage.
 
 * API used to fetch issuers: `https://api.mosip.io/v1/mimoto/residentmobileapp/issuers`
 * API used to fetch issuer's configuration: `https://api.mosip.io/v1/mimoto/residentmobileapp/issuers/${issuerId}`
 
-In `mimoto-issuers-config.json`, new providers can be added as per the `well-known` schema.
+2. In `mimoto-issuers-config.json`, new providers can be added as per the `well-known` schema defined by OpenID4VCI standards.
 
 After adding the provider in configuration, it will be displayed on the UI on `Add new card` screen.
 
 * If new provider supports [OpenID4VCI](https://openid.net/specs/openid-4-verifiable-credential-issuance-1\_0.html) protocol, it is recommended to use `issuerMachine.ts` and `EsignetMosipVCItemMachine.ts` for workflow to download VC.
 * If it doesn't support `OpenID4VCI` protocol, new state machine needs to be added. Please refer to `issuerMachine.ts` and `EsignetMosipVCItemMachine.ts`.
 
-## Onboarding Mimoto as OIDC Client for new Issuer:
+3. At present, Inji mobile supports verification of VCs which has RSA proof type. If VC is issued with any other proof type, verification will fail and VC will not be downloaded. To bypass this VC verification, we need to use issuer id as "Sunbird".
+
+> Refer https://github.com/mosip/mosip-config/blob/collab1/mimoto-issuers-config.json#L71 as reference. Here, credential_issuer should be "Sunbird" and then add all the configuration.
+
+4. Token endpoint should also use same issuer id. Refer https://github.com/mosip/mosip-config/blob/collab1/mimoto-issuers-config.json#L143
+   
+5. Onboarding Mimoto as OIDC Client for a new Issuer:
 
 * Mimoto OIDC client is now added as an optional partner, which can be onboarded through partner onboarder as per requirement.
 * In [mosip-onboarding](https://github.com/mosip/mosip-onboarding) itself, there is a script by the name `create-signing-certs.sh` which creates the certificates as well as the `oidckeystore.p12`.
