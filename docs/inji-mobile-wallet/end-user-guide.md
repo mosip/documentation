@@ -119,7 +119,7 @@ Users can now share their credentials using any of the methods listed below:
 
 Let us understand the process of sharing credentials using an example and see the step-wise process for all the above three methods. Suppose a Resident wishes to share their credentials with a Relying/ Requesting party through the receiver's phone, the following steps outline the procedure for both parties involved:
 
-1. **Share** **from Share Option in NavBar**
+### **Share** **from Share Option in NavBar**
 
 &#x20;**On the Sharing Party's phone:**
 
@@ -147,7 +147,7 @@ Let us understand the process of sharing credentials using an example and see th
 
 <figure><img src="../.gitbook/assets/Navbar_relying_2 (1).png" alt=""><figcaption><p>Relying Party's phone</p></figcaption></figure>
 
-2. **Share / Share with Selfie from Home Page Quick Access menu**
+### **Share / Share with Selfie from Home Page Quick Access menu**
 
 **On the Sharing Party's phone:**
 
@@ -174,7 +174,7 @@ Let us understand the process of sharing credentials using an example and see th
 
 <figure><img src="../.gitbook/assets/selfie_relying_2 (1).png" alt=""><figcaption><p>Selfie on Relying Party's phone</p></figcaption></figure>
 
-3. **Share with selfie from VC Detailed View Quick Access menu**
+### **Share with selfie from VC Detailed View Quick Access menu**
 
 &#x20;  **On the Sharing Party's phone**
 

@@ -42,21 +42,21 @@ To effectively set up the Inji Mobile app and manage Verifiable Credentials (VCs
 **Step 3: Download National ID VC (MOSIP VC) Using UIN/VID**
 
 1. Download your credential (VC) onto the app by using your demo UIN.
-2. To learn how to download VCs using the Unique Identification Number (UIN) or Virtual ID (VID) feature, click <mark style="color:red;">**here**</mark>. Refer to the section titled <mark style="color:red;">`Downloading VC using the UIN/VID feature`</mark> in the guide .
+2. To learn how to download VCs using the Unique Identification Number (UIN) or Virtual ID (VID) feature, click [here](../end-user-guide.md#id-1.-download-national-id-mosip-vc). Refer to the section titled <mark style="color:red;">`Downloading VC using the UIN/VID feature`</mark> in the guide .
 
 **Step 4**: **Download Insurance Credentials Using Policy Details**
 
 * Refer to the sample insurance credentials under 'Prerequisites' section.
-* Refer <mark style="color:red;">**here**</mark> for step-wise download.
+* Refer [here](../end-user-guide.md#id-2.-download-insurance-vc) for step-wise download.
 * You can view the QR Code for insurance credentials in the detailed view.
 
 **Step 5: Start Sharing the Credentials**
 
 1. **Quick Share**
-   * To understand the process of sharing credentials from the Resident app to the Verifier app, click <mark style="color:red;">**here**</mark>.
+   * To understand the process of sharing credentials from the Resident app to the Verifier app, click [here](../end-user-guide.md#sharing-credentials).
    * Navigate to the section titled `Sharing Credentials` for detailed instructions.
 2. **Share with Face Verification**
-   * Discover how to share credentials with the added security of face verification by clicking <mark style="color:red;">**here**</mark>.
+   * Discover how to share credentials with the added security of face verification by clicking here.
    * Refer to the section titled `Face Authentication Flow` for a step-by-step guide.
 
 ### Creating your own credentials
