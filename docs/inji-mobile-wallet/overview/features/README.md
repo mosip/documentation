@@ -2,7 +2,7 @@
 
 Below is a comprehensive overview of the features provided by Inji Mobile.
 
-## Download, Veriy and Store Verifiable Credentials
+## Download, Verify and Store Verifiable Credentials
 
 Downloading your digital credentials (IDs) with you at all times just got easier. This can be done as below:
 
