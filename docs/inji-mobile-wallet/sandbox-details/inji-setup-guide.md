@@ -42,7 +42,7 @@ To effectively set up the Inji Mobile app and manage Verifiable Credentials (VCs
 **Step 3: Download National ID VC (MOSIP VC) Using UIN/VID**
 
 1. Download your credential (VC) onto the app by using your demo UIN.
-2. To learn how to download VCs using the Unique Identification Number (UIN) or Virtual ID (VID) feature, click [here](../end-user-guide.md#id-1.-download-national-id-mosip-vc). Refer to the section titled <mark style="color:red;">`Downloading VC using the UIN/VID feature`</mark> in the guide .
+2. To learn how to download VCs using the Unique Identification Number (UIN) or Virtual ID (VID) feature, click [here](../end-user-guide.md#id-1.-download-national-id-mosip-vc). Refer to the section titled `Downloading VC using the UIN/VID` feature in the guide .
 
 **Step 4**: **Download Insurance Credentials Using Policy Details**
 
@@ -56,7 +56,7 @@ To effectively set up the Inji Mobile app and manage Verifiable Credentials (VCs
    * To understand the process of sharing credentials from the Resident app to the Verifier app, click [here](../end-user-guide.md#sharing-credentials).
    * Navigate to the section titled `Sharing Credentials` for detailed instructions.
 2. **Share with Face Verification**
-   * Discover how to share credentials with the added security of face verification by clicking here.
+   * Discover how to share credentials with the added security of face verification by clicking [here](../end-user-guide.md#share-share-with-selfie-from-home-page-quick-access-menu).
    * Refer to the section titled `Face Authentication Flow` for a step-by-step guide.
 
 ### Creating your own credentials
