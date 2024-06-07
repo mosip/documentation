@@ -5,8 +5,8 @@
 It offers a secure, trustworthy, and dependable mobile Verifiable Credentials wallet designed to fulfil the following functions:
 
 * Download and **store Verifiable Credentials (VC)** securely within the wallet. Also, serves as a secure **user wallet** for storing and managing ID credentials. Additionally, it streamlines the process of **obtaining authenticated ID credentials**.
-* Conduct **offline face authentication** against the stored VCs to verify the user's presence.
 * **Share Verifiable Credentials** with the relying parties without requiring an internet connection, utilizing Bluetooth Low Energy (BLE). Supports **decentralized ID verification** through offline sharing.
+* Conduct **offline face authentication** against the stored VCs to verify the user's presence while sharing the Vcs to the 'Service Providers'.
 * Enable users to **log in to online portals** of relying parties by scanning a QR code, facilitating seamless access to their services.Facilitates seamless access to multiple websites and services using the same login information, enhancing convenience and security.
 * Allows users to have full control over the data shared with service providers, ensuring **privacy protection**.
 * **Simplifies the registration process** for government benefits, such as pensions or healthcare services, and enhances efficiency in situations where users need to provide their identification credentials. For example, it enables the presentation of VCs during airport security checks.
