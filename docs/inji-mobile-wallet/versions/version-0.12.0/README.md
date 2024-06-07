@@ -10,26 +10,24 @@
 
 We are delighted to announce the release of Inji Mobile Version 0.12.0 . This release is compatible with v0.12.0 Mimoto release. As part of 0.12.0, Inji mobile introduces below mentioned key features:
 
-**Key Highlights**:
+**1. Features added to the Download Functionality:**
 
-1. Features added to the Download Functionality:
+   * Credential Type Selection
+   * VC Verification
+   * QR Code Generation for VC
 
-* Credential Type Selection
-* VC Verification
-* QR Code Generation for VC
+**2. Library:**
 
-2. Library:
+   * QR Code Generation: PixelPass
 
-* QR Code Generation: PixelPass
+**3. UI/UX Enhancements:**
 
-3. UI/UX Enhancements:
+   * Card View UI Changes
+   * VC Share Optimization
+   * Activity Log Enhancements
+   * GenderMag Fixes
 
-* Card View UI Changes
-* VC Share Optimization
-* Activity Log Enhancements
-* GenderMag Fixes
-
-4. Data Backup Enhancements
+**4. Data Backup Enhancements**
 
 Inji mobile app addresses gender / inclusivity bias in software through GenderMag analysis. In this release, we have incorporated GenderMag fixes for UI / UX in inclusivity space.
 
@@ -49,7 +47,7 @@ Inji mobile wallet now allows users to select the type of credential they need, 
 
 Inji mobile wallet provides the functionality to verify Verifiable Credentials using the Digital Bazaar library. The issuer's signature is verified based on the proof type provided by the issuer. Currently, we support the RSA signature type, and we will soon add support for the Ed25519 proof type.
 
-To prevent failures during download caused by verification of Verifiable Credentials with any other signature type, this step needs to be bypassed. Learn more about the steps here.
+To prevent failures during download caused by verification of Verifiable Credentials with any other signature type, this step needs to be bypassed. Learn more about the steps [**here**](../../customization-overview/credential_providers.md).
 
 #### QR code generation for VC:
 
@@ -79,7 +77,7 @@ Inji Mobile version 0.12.0 introduces enhanced UI to deliver a seamless user exp
 * With the quick access menu in the mini view of the card:
   * Users can quickly initiate a Share or Share with Selfie action from the card to be shared.
 
-#### Activity Log enhancements:
+**Activity Log enhancements:**
 
 The audit logs have been enhanced to elevate the user experience. Now, they include the card type, along with the card number and the action performed, for better readability.
 
@@ -99,7 +97,7 @@ As part of the 0.12.0 release, the following enhancements have been made to the 
 
 2. **iCloud Section Visibility**:
 
-* The iCloud Section is now visible in the Backup & Restore settings screen, allowing users to easily manage their backups.
+* The iCloud Section is now visible in the Backup & Restore settings screen, allowing users to easily manage their backup.
 
 3. **User Notification**:
 
@@ -122,7 +120,6 @@ As part of the 0.12.0 release, the following enhancements have been made to the 
 Redmi devices are not supported in this release. To know more, refer[ here](https://mosip.atlassian.net/issues/?filter=-4\&jql=labels%20%3D%20redmi%20order%20by%20created%20DESC).
 
 Mentioned below is the list of other known issues.
-
 
 
 | Jira issue                                                      | Issue description                                                                                                          |
@@ -150,7 +147,6 @@ Mentioned below is the list of other known issues.
 ### Bug Fixes
 
 Below are the list of fixes as part of 0.12.0 release:
-
 
 
 | Jira issue                                                      | Severity | Issue description                                                                                                                                   |
