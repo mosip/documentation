@@ -129,11 +129,11 @@ Let us understand the process of sharing credentials using an example and see th
 * The resident then needs to choose a downloaded VC and select either the Share or the Share with Selfie option.
 * The Share button will solely share the VC, while the Share with Selfie option will verify if the sender's face matches the photo in the VC before proceeding to share.
 
-<figure><img src="../.gitbook/assets/Navbar_share_1 (1).png" alt=""><figcaption><p>Navbar in Sharing Party's</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Navbar_share_1 (1).png" alt=""><figcaption><p>Sharing Party's phone</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/Navbar_share_2 (1).png" alt=""><figcaption><p>Navbar in Sharing Party's</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Navbar_share_2 (1).png" alt=""><figcaption><p>Sharing Party's phone</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/Navbar_share_3 (1).png" alt=""><figcaption><p>Navbar in Sharing Party's</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Navbar_share_3 (1).png" alt=""><figcaption><p>Sharing Party's phone</p></figcaption></figure>
 
 \
 **On the Relying Party's phone**
@@ -143,11 +143,11 @@ Let us understand the process of sharing credentials using an example and see th
 * To view the received cards, they would need to access the settings page and find the `Received Cards` section. Clicking on this section will display the received cards. If the receiver has not received any card, this section will be empty.
 * Please note that the relying party can only view the received cards and will not be able to share or perform other actions with them.
 
-<figure><img src="../.gitbook/assets/Navbar_relying_1 (1).png" alt=""><figcaption><p>Relying Party's</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Navbar_relying_1 (1).png" alt=""><figcaption><p>Relying Party's phone</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/Navbar_relying_2 (1).png" alt=""><figcaption><p>Relying Party's</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Navbar_relying_2 (1).png" alt=""><figcaption><p>Relying Party's phone</p></figcaption></figure>
 
-2. **Share with Selfie from Home Page Quick Access**
+2. **Share / Share with Selfie from Home Page Quick Access menu**
 
 **On the Sharing Party's phone:**
 
@@ -157,11 +157,11 @@ Let us understand the process of sharing credentials using an example and see th
 * Once the QR code is successfully scanned, both phones will establish a Bluetooth connection.
 * The Share button will solely share the VC, while the Share with Selfie option will verify if the sender's face matches the photo in the VC before proceeding to share.
 
-<figure><img src="../.gitbook/assets/Selfie_sharing_1 (1).png" alt=""><figcaption><p>Selfie on Sharing Party's</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Selfie_sharing_1 (1).png" alt=""><figcaption><p>Selfie on Sharing Party's phone</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/Selfie_sharing_2 (1).png" alt=""><figcaption><p>Selfie on Sharing Party's</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Selfie_sharing_2 (1).png" alt=""><figcaption><p>Selfie on Sharing Party's phone</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/Selfie_sharing_3 (1).png" alt=""><figcaption><p>Selfie on Sharing Party's</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Selfie_sharing_3 (1).png" alt=""><figcaption><p>Selfie on Sharing Party's phone</p></figcaption></figure>
 
 **On the Relying Party's phone**:
 
@@ -170,11 +170,11 @@ Let us understand the process of sharing credentials using an example and see th
 * To view the received cards, they would need to access the settings page and find the `Received Cards` section. Clicking on this section will display the received cards. If the receiver has not received any card, this section will be empty.
 * Please note that the relying party can only view the received cards and will not be able to share or perform other actions with them.
 
-<figure><img src="../.gitbook/assets/selfie_relying_1 (1).png" alt=""><figcaption><p>Selfie on Relying Party's</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/selfie_relying_1 (1).png" alt=""><figcaption><p>Selfie on Relying Party's phone</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/selfie_relying_2 (1).png" alt=""><figcaption><p>Selfie on Relying Party's</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/selfie_relying_2 (1).png" alt=""><figcaption><p>Selfie on Relying Party's phone</p></figcaption></figure>
 
-3. **Share with selfie from the detailed view**&#x20;
+3. **Share with selfie from VC Detailed View Quick Access menu**
 
 &#x20;  **On the Sharing Party's phone**
 
@@ -184,11 +184,11 @@ Let us understand the process of sharing credentials using an example and see th
 * Once the QR code is successfully scanned, both phones will establish a Bluetooth connection.
 * The Share button will solely share the VC, while the Share with Selfie option will verify if the sender's face matches the photo in the VC before proceeding to share.
 
-<figure><img src="../.gitbook/assets/Detailed_view_sharing_1 (1).png" alt=""><figcaption><p>Detail view on Sharing Party's</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Detailed_view_sharing_1 (1).png" alt=""><figcaption><p>Detail view on Sharing Party's phone</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/Detailed_view_sharing_2 (1).png" alt=""><figcaption><p>Detail view on Sharing Party's</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Detailed_view_sharing_2 (1).png" alt=""><figcaption><p>Detail view on Sharing Party's phone</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/Detailed_view_sharing_3 (4).png" alt=""><figcaption><p>Detail view on Sharing Party's</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Detailed_view_sharing_3 (4).png" alt=""><figcaption><p>Detail view on Sharing Party's phone</p></figcaption></figure>
 
 **On the Relying Party's phone:**
 
@@ -197,9 +197,9 @@ Let us understand the process of sharing credentials using an example and see th
 * To view the received cards, they would need to access the settings page and find the `Received Cards` section. Clicking on this section will display the received cards. If the receiver has not received any card, this section will be empty.
 * Please note that the relying party can only view the received cards and will not be able to share or perform other actions with them.
 
-<figure><img src="../.gitbook/assets/Detailed_view_Relying_1 (1).png" alt=""><figcaption><p>Detail view on Relying Party's</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Detailed_view_Relying_1 (1).png" alt=""><figcaption><p>Detail view on Relying Party's phone</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/Detailed_view_Relying_2 (1).png" alt=""><figcaption><p>Detail view on Relying Party's</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Detailed_view_Relying_2 (1).png" alt=""><figcaption><p>Detail view on Relying Party's phone</p></figcaption></figure>
 
 ### Pinning a VC
 
