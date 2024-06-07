@@ -63,7 +63,11 @@ Inji Mobile integrates with eSignet as an authorization layer to perform VC down
 
 <figure><img src="../.gitbook/assets/Download_insurance_1.png" alt=""><figcaption><p>Download Insurance VC</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/Download_insurance_2.png" alt=""><figcaption><p>Download Insurance VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/inji_mobile_end_user_guide_download_insurance_vc.png" alt=""><figcaption><p>Download Insurance VC</p></figcaption></figure>
+
+
+
+
 
 <figure><img src="../.gitbook/assets/Download_insurance_3.png" alt=""><figcaption><p>Download Insurance VC</p></figcaption></figure>
 
