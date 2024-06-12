@@ -267,3 +267,23 @@ The VC Issuance plugin interface provides methods to return Verifiable Credentia
 To know more, click [here](../integration/vc-issuance.md).
 
 </details>
+
+<details>
+
+<summary>How to configure Knowledge Based Identification Form?</summary>
+
+#### Configuration required to display KBI form.
+
+```
+#individual-id-field is set with field id which should be considered as an individual ID in the authenticate request.
+#form-details holds the list of field details like below:
+#id -> unique field Id, type -> holds datatype, format -> only supported for date fields, regex -> pattern to validate the input value, maxLength -> number of allowed characters
+#Example: mosip.esignet.authenticator.default.auth-factor.kba.field-details={{'id': '${mosip.esignet.authenticator.default.auth-factor.kba.individual-id-field}', 'type':'text', 'format':'', 'maxLength': 50, 'regex': '^\s*[+-]?(\d+|\d*\.\d+|\d+\.\d*)([Ee][+-]?\d*)?\s*$'},{'id':'fullName', 'type':'text', 'format':'', 'maxLength': 50, 'regex': '^[A-Za-z\s]{1,}[\.]{0,1}[A-Za-z\s]{0,}$'},{'id':'dob', 'type':'date', 'format':'dd/mm/yyyy'}}
+mosip.esignet.authenticator.default.auth-factor.kba.field-details={{'id':'policyNumber', 'type':'text', 'format':'', 'maxLength': 50, 'regex': '^\s*[+-]?(\d+|\d*\.\d+|\d+\.\d*)([Ee][+-]?\d*)?\s*$'},{'id':'fullName', 'type':'text', 'format':'', 'maxLength': 50, 'regex': '\S*'},{"id":"dob", "type":"date", "format":"dd/mm/yyyy"}} 
+mosip.esignet.authenticator.default.auth-factor.kba.individual-id-field=policyNumber
+```
+
+
+
+</details>
+
