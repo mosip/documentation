@@ -33,6 +33,8 @@
     * [Configuration Guide](android-registration-client-configuration.md)
     * [Developer Guide](android-registration-client-developer-guide.md)
     * [User Guide](android-registration-client-user-guide.md)
+    * [UI Spec Documentation](modules/android-registration-client/ui-spec-documentation.md)
+    * [Technology Stack](modules/android-registration-client/technology-stack.md)
   * [Automation Testing](automation-testing.md)
   * [Artifactory](artifactory.md)
   * [Commons](commons.md)

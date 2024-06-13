@@ -67,8 +67,7 @@ If the resident has a biometric exception (such as a missing finger/eye or very 
 * **Acknowledgment section**: Following the completion of the new registration process, an acknowledgment receipt is generated. This receipt includes the AID(Application ID), captured demographic data in the selected language, a photograph of the resident, and a ranking of each finger from 1 to 10, with 1 representing the finger with the best quality. The receipt is designed to be easily printed.
 
 5. **Operator onboarding**: To log in to the Android Registration Client, the operator must complete the onboarding process. This functionality is available only during the first online login. The operator will need to onboard by capturing their fingerprints, thumbprints, iris, and face. Once these are duly captured, the operator can start registering residents and using other services.
-6. **Update Operator onboarding**: The Operators can also update their biometrics. In this scenario, the Operator will have to capture all their biometrics. By doing this, the previous biometrics captured during Operator Onboarding will be overridden by the newly captured biometrics.
-7. **Dashboard:** The Operator can access the dashboard where he can view the following:
+6. **Dashboard:** The Operator can access the dashboard where he can view the following:
    1. **Packets created:** This will show the total number of packets created from the time the Android Registration Client was installed.
    2. **Packets Synced:** This will show the total number of packets synced from the time the Android Registration Client was installed.
    3. **Packets Uploaded:** This will show the total number of packets uploaded from the time the Android Registration Client was installed.

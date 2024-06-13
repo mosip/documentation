@@ -115,7 +115,7 @@ If one or both of the Irises are not detected or encounter issues that prevent s
 * Documents submitted
 * Biometric data recorded
 
-From the Preview page, the Operator has the ability to navigate back to previous screens in order to make any necessary adjustments to the entered or captured data. Once the Operator has verified the accuracy of the entered data, they can proceed by clicking on the **Continue** button, which will direct them to the `Operator Authentication` page.
+From the Preview page, the Operator can navigate back to previous screens to make any necessary adjustments to the entered or captured data. Once the Operator has verified the accuracy of the entered data, they can proceed by clicking on the **Continue** button, which will direct them to the `Operator Authentication` page.
 
 10. On the `Operator Authentication` page, operators are required to input their credentials (username and password) that were used during the login process.
 
@@ -132,11 +132,11 @@ Upon successful verification of the credentials, the packet will be uploaded to 
 
 <figure><img src=".gitbook/assets/arc-newregistration-Page-9.png" alt=""><figcaption></figcaption></figure>
 
-Upon receipt of the acknowledgement, the packet is uploaded to the [Registration Processor](registration-processor.md). Once the packet has been successfully processed, a unique identification number (UIN) is generated.
+Upon receipt of the acknowledgment, the packet is uploaded to the [Registration Processor](registration-processor.md). Once the packet has been successfully processed, a unique identification number (UIN) is generated.
 
-On the acknowledgement page, the operator will have two options available:
+On the acknowledgment page, the operator will have two options available:
 
-1. **Print**- The operator can click on this option to obtain a physical copy of the acknowledgement.
+1. **Print**- The operator can click on this option to obtain a physical copy of the acknowledgment.
 2. **New Registration**- The operator can initiate another registration by clicking on this option.
 
-In summary, the aforementioned steps can be followed by the user (Operator/ Supervisor) to register an individual by capturing demographic data, documents, and biometric data in order to generate their UIN.
+In summary, the aforementioned steps can be followed by the user (Operator/ Supervisor) to register an individual by capturing demographic data, documents, and biometric data to generate their UIN.
