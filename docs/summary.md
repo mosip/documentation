@@ -77,6 +77,7 @@
   * [Version 0.8.1](inji-web/inji-web/version-0.8.1.md)
   * [Version 0.8.0](inji-web/inji-web/version-0.8.0/README.md)
     * [Test Report](inji-web/inji-web/version-0.8.0/test-report.md)
+  * [Version 0.9.0](inji-web/inji-web/version-0.9.0.md)
 * [Try It Out](inji-web/try-it-out/README.md)
   * [Inji Web Setup Guide](inji-web/try-it-out/inji-web-setup-guide.md)
 * [Build & Deploy](inji-web/build-and-deploy/README.md)
