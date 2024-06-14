@@ -117,6 +117,4 @@ The various metrics that assist in test tracking and efficiency are as follows:
 
 <figure><img src="../../.gitbook/assets/rp-0.9.0-sonar-report.png" alt=""><figcaption></figcaption></figure>
 
-&#x20;Github link for the xls file:
-
-\<TBD>
+Github link for the xls file [here](https://github.com/mosip/test-management/tree/master/Resident%20Revamp%201.2.0.1/0.9.0).

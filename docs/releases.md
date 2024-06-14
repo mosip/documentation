@@ -6,7 +6,7 @@
 
 * Support: 0.10.0
 * Date: 14th June, 2024
-* [Release Notes](releases/android-registration-client-v0.10.0.md)
+* [Release Notes](releases/android-registration-client-v0.10.0/)
 
 **Version: 0.9.0 (Resident Services)**
 
