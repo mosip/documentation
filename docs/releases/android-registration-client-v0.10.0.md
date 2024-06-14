@@ -1,4 +1,4 @@
-# Release Notes
+# Android Registration Client v0.10.0
 
 **Release Name**: Android Registration Client v0.10.0
 
@@ -38,7 +38,3 @@ For details related to Android Registration Client configurations, refer to the[
 ### **User Guide**
 
 To learn more about the available features, processes, and user interface, refer[ Android Registration User Guide](https://docs.mosip.io/1.2.0/modules/android-registration-client/android-registration-client-user-guide) for further information.
-
-### **Known Issues**
-
-To view the list of known issues, refer **here**. **Insert the correct link here.**
