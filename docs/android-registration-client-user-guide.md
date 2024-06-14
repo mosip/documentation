@@ -70,16 +70,16 @@ To begin the Registration process, the Operator is required to follow the steps 
 
 8. After ensuring all required information has been accurately entered in the `Document Upload` screen, the Operator can proceed by clicking on the **Continue** button to access the `Biometric Capture` page. Here, the Operator can capture the biometric data of the Resident, including a face photo, fingerprint, and iris scan.
 
-**Face photo capture process**
+#### **Face photo capture process**
 
-* For capturing the face photo, the Operator should click on the **Scan** button to activate the camera and take a picture.
+* To capture the face photo, the Operator should click on the **Scan** button to activate the camera and take a picture.
 * The image quality will be displayed on the screen and must meet a certain threshold to be considered acceptable.
 * The Operator has three attempts to capture the biometric image.
 * It is important to note that no exceptions can be made for the face photo biometric capture process.
 
 <figure><img src=".gitbook/assets/arc-newregistration-Page-5 (1).png" alt=""><figcaption></figcaption></figure>
 
-**Biometric Data Capture Process**:
+#### **Biometric Data Capture Process**:
 
 * In order to capture biometric data, the Operator should click on the **Scan** button.
 * This will allow the Operator to capture the biometric information.
@@ -89,7 +89,7 @@ To begin the Registration process, the Operator is required to follow the steps 
 
 <figure><img src=".gitbook/assets/arc-newregistration-Page-6.png" alt=""><figcaption></figcaption></figure>
 
-**Fingerprint Capture Process**:
+#### **Fingerprint Capture Process**:
 
 In the event that a thumb is missing or experiencing difficulties that prevent its fingerprint from being captured, the Operator is authorized to indicate an **exception**. To mark an exception, the operator must select the affected thumb and specify the type of exception as either _Temporary_ or _Permanent_. Additionally, the operator may include any relevant additional comments.
 
@@ -145,19 +145,38 @@ In summary, the aforementioned steps can be followed by the user (Operator/ Supe
 
 a. On logging in for the first time, the Operator will be taken to the screen where they will have the following two options:
 
-1. Get onboarded: This flow is present for the system to verify the Operator’s biometrics with their registered biometrics. This is to enable local deduplication.
-2. Skip to home: This flow is to dodge “Operator’s Onboarding”. If the user selects this, they will be taken to the “Homepage” after which the user can get started with Resident registration. One of the pre-requisites of this flow is to have the “Default” role mapped to the center.
+1. **Get onboarded:** This flow is present for the system to verify the Operator’s biometrics with their registered biometrics. This is to enable local deduplication.
+2. **Skip to home:** This flow is to dodge “Operator’s Onboarding”. If the user selects this, they will be taken to the “Homepage” after which the user can get started with Resident registration. One of the prerequisites of this flow is to have the “Default” role mapped to the center.
 
-<figure><img src=".gitbook/assets/image-20240612-100557.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image-20240612-100557.png" alt="" width="188"><figcaption></figcaption></figure>
 
-3.
+3.  **Steps to Onboard Operator’s Biometrics:**
 
-    **Steps to Onboard Operator’s Biometrics:**
 
-    1. The user will be taken to the Biometrics Capture Homepage where he will be able to see all the below biometrics:
-       1. Face capture
-       2. Iris capture
-       3. Left hand finger capture
-       4. Right hand finger capture
-       5. Thumb capture
 
+    a. The user will be taken to the Biometrics Capture Homepage where he will be able to see all the below biometrics:
+
+    1. Face capture
+    2. Iris capture
+    3. Left-hand finger capture
+    4. Right-hand finger capture
+    5. Thumb capture
+
+<figure><img src=".gitbook/assets/image-20240612-074118.png" alt="" width="188"><figcaption></figcaption></figure>
+
+b. The user will then have to capture all the above-listed biometrics one by one.\
+c. Steps to capture the biometrics are given [**here**](android-registration-client-user-guide.md#face-photo-capture-process)**.**\
+d. Once all the biometrics are duly captured, the below acknowledgment message will be displayed on the screen.
+
+4. **Dashboard:** The Operator can access the dashboard where he can view the following:
+   1. **Packets created:** This will show the total number of packets created from the time the Android Registration Client was installed.
+   2. **Packets Synced:** This will show the total number of packets synced from the time the Android Registration Client was installed.
+   3. **Packets Uploaded:** This will show the total number of packets uploaded from the time the Android Registration Client was installed.
+   4. **User details:**
+      1. User ID: This will show the list of User IDs of the Users mapped to the device.
+      2. Username: This will show the list of usernames of the Users mapped to the device.
+      3. Status: This will show the status of Users mapped to the device. This can take values such as onboarded, active, inactive, etc.
+
+<figure><img src=".gitbook/assets/image-20240528-101051.png" alt="" width="215"><figcaption></figcaption></figure>
+
+In summary, the aforementioned steps can be followed by the user (Operator/ Supervisor) to onboard themselves, update their biometrics, or view the Dashboard.
