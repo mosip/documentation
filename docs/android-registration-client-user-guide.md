@@ -79,7 +79,7 @@ To begin the Registration process, the Operator is required to follow the steps 
 
 <figure><img src=".gitbook/assets/arc-newregistration-Page-5 (1).png" alt=""><figcaption></figcaption></figure>
 
-**Biometric Data capture process**:
+**Biometric Data Capture Process**:
 
 * In order to capture biometric data, the Operator should click on the **Scan** button.
 * This will allow the Operator to capture the biometric information.
@@ -140,3 +140,24 @@ On the acknowledgment page, the operator will have two options available:
 2. **New Registration**- The operator can initiate another registration by clicking on this option.
 
 In summary, the aforementioned steps can be followed by the user (Operator/ Supervisor) to register an individual by capturing demographic data, documents, and biometric data to generate their UIN.
+
+**Operator Onboarding**: To begin the Onboarding process, the Operator is required to follow the steps outlined below. The operator, in order to log in to the Android Registration Client, will have to onboard himself. This functionality will be available on first-time online login only.
+
+a. On logging in for the first time, the Operator will be taken to the screen where they will have the following two options:
+
+1. Get onboarded: This flow is present for the system to verify the Operator’s biometrics with their registered biometrics. This is to enable local deduplication.
+2. Skip to home: This flow is to dodge “Operator’s Onboarding”. If the user selects this, they will be taken to the “Homepage” after which the user can get started with Resident registration. One of the pre-requisites of this flow is to have the “Default” role mapped to the center.
+
+<figure><img src=".gitbook/assets/image-20240612-100557.png" alt="" width="375"><figcaption></figcaption></figure>
+
+3.
+
+    **Steps to Onboard Operator’s Biometrics:**
+
+    1. The user will be taken to the Biometrics Capture Homepage where he will be able to see all the below biometrics:
+       1. Face capture
+       2. Iris capture
+       3. Left hand finger capture
+       4. Right hand finger capture
+       5. Thumb capture
+
