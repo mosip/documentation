@@ -6,7 +6,7 @@
 
 **Support**: Beta Release
 
-**Release Date**: Coming soon
+**Release Date**: 14th June, 2024
 
 ### **Overview**
 
@@ -23,9 +23,9 @@ The new features included in this release, along with those from the[ Android Re
 
 ### **Repository Released**
 
-| Repositories                | Tags Released |
-| --------------------------- | ------------- |
-| android-registration-client | v0.10.0       |
+| Repositories                | Tags Released                                                                |
+| --------------------------- | ---------------------------------------------------------------------------- |
+| android-registration-client | [v0.10.0](https://github.com/mosip/android-registration-client/tree/v0.10.0) |
 
 ### **Build and Deploy**
 

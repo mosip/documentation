@@ -2,6 +2,12 @@
 
 ## Latest Release
 
+**Version:** v0.10.0 **(Android Registration Client)**
+
+* Support: 0.10.0
+* Date: 14th June, 2024
+* [Release Notes](releases/android-registration-client-v0.10.0.md)
+
 **Version: 0.9.0 (Resident Services)**
 
 * Support: 0.9.0
