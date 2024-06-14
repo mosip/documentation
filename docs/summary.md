@@ -82,6 +82,10 @@
   * [Inji Web Setup Guide](inji-web/try-it-out/inji-web-setup-guide.md)
 * [Build & Deploy](inji-web/build-and-deploy/README.md)
   * [Local setup](inji-web/build-and-deploy/local-setup.md)
+* [Customizations](inji-web/customizations/README.md)
+  * [UI Customizations](inji-web/customizations/ui-customizations.md)
+  * [Locale Customization](inji-web/customizations/locale-customization.md)
+  * [Credential Providers](inji-web/customizations/credential-providers.md)
 
 ## INJI CERTIFY
 
