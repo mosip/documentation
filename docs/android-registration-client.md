@@ -33,7 +33,7 @@ The first developer release of the Android Registration Client offers the follow
 * **UserDetails sync**: userID, along with their status is synced. Only the user details belonging to machine mapped center will be synced.
 * **Certificate sync**: Certificates used to validate the server signatures, device CA certificates, and public key (specific to a center and machine, also called policy key) used to encrypt the registration packet will be synced.
 
-4. **New Registrations**: Operators can register a resident using the `New Registration` feature. The registration process can be customized through the [UI specification](https://docs.mosip.io/1.2.0/modules/registration-client/registration-client-ui-specifications). The required data for registering an applicant are as follows:
+4. **New Registrations**: Operators can register a resident using the `New Registration` feature. The registration process can be customized through the Android Registration Client [UI specification](modules/android-registration-client/ui-spec-documentation.md). The required data for registering an applicant are as follows:
    * **Consent**: Before the registration process, applicants must provide consent to the terms and conditions presented on the consent screen. This explicitly asks the applicant to grant permission for storing and using their Personally Identifiable Information (PII).
    * **Demographic Details**: Once the consent is obtained, the Operator will enter the demographic data of the applicant in the language preferred by the applicant. This includes details such as their name, gender, date of birth, and residential address.
    * **Documents Upload**: Following the completion of the demographic details, the Operator can select the document type, input the reference, and upload the supporting documents provided by the applicant. Supporting documents may include Proof of Address, Proof of Identity, and Proof of Birth, based on the country-specific requirements.
@@ -82,7 +82,7 @@ To read through the comprehensive list of configurable properties for the Androi
 
 ### UI Specifications
 
-For more details on UI specifications for the Android Registration Client, refer [here](https://docs.mosip.io/1.2.0/android-registration-client/registration-client/registration-client-ui-specifications).
+For more details on UI specifications for the Android Registration Client, refer [here](modules/android-registration-client/ui-spec-documentation.md).
 
 ### Compatibility
 
