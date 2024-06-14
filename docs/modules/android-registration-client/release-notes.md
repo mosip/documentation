@@ -12,21 +12,20 @@
 
 The Android Registration Client is a tablet application designed to provide a mobile version of the existing desktop [Registration Client](https://docs.mosip.io/1.2.0/modules/registration-client).  It has been developed to ensure accessibility on all Android devices and to meet the mobility needs of countries implementing MOSIP.
 
-Version 0.10.0 of the Android Registration Client is the beta release, covering features such as Operator Onboarding, Update Operator Onboarding, and the dashboard.
+Version 0.10.0 of the Android Registration Client is the beta release, covering features such as Operator Onboarding, and the dashboard.
 
 The new features included in this release, along with those from the[ Android Registration Client DP1](https://docs.mosip.io/1.2.0/releases/release-notes-android-reg-client-dp1) and[ Android Registration Client 0.9.0](https://docs.mosip.io/1.2.0/releases/release-notes-android-reg-client-0.9.0) releases, are:
 
 * **Operator Onboarding:** This feature enables Operators to onboard themselves onto the Android Registration Client.
-* **Update Operator Onboarding:** This feature enables the Operators to update their biometrics in the Android Registration Client.
 * **Dashboard:** This feature enables operators to view statistics related to packet creation and upload, as well as the list of users mapped to the device and the status of those users.
 
 **Note**: Compatible with[ MOSIP version 1.2.0](https://docs.mosip.io/1.2.0/releases/release-notes)
 
 ### **Repository Released**
 
-| Repositories                | Tags Released          |
-| --------------------------- | ---------------------- |
-| android-registration-client | **Insert the version** |
+| Repositories                | Tags Released |
+| --------------------------- | ------------- |
+| android-registration-client | v0.10.0       |
 
 ### **Build and Deploy**
 
