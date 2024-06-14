@@ -30,6 +30,7 @@
     * [Admin Services Developers Guide](admin-services-developers-guide.md)
     * [Masterdata Guide](masterdata-guide.md)
   * [Android Registration Client](android-registration-client.md)
+    * [Release Notes](modules/android-registration-client/release-notes.md)
     * [Configuration Guide](android-registration-client-configuration.md)
     * [Developer Guide](android-registration-client-developer-guide.md)
     * [User Guide](android-registration-client-user-guide.md)
