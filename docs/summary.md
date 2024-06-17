@@ -97,6 +97,8 @@
     * [Resident Services Deployment Guide](resident-services-deployment-guide.md)
     * [Configuring Resident OIDC Client](resident-services-configure-resident-OIDC-client.md)
     * [Resident Portal User Guide](resident-portal-user-guide.md)
+    * [Technology Stack](modules/resident-services/technology-stack.md)
+    * [Browsers Supported](modules/resident-services/browsers-supported.md)
     * [Resident Portal UI Specifications](modules/resident-services/resident-portal-ui-specifications.md)
     * [Functional Overview](modules/resident-services/functional-overview.md)
   * [Persistence](persistence.md)
