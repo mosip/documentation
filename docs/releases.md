@@ -49,6 +49,20 @@
 * Date: 12th January, 2024
 * [Release Notes](release/1.2.0.1/release-notes-1.2.0.1-b4.md)
 
+**Version: vDP1 (Android Registration Client DP1)**
+
+* Android Registration Client DP1
+* Developer Preview Release1
+* Date: 7th Nov, 2023
+* [Release Notes](release-notes-android-reg-client-dp1.md)
+
+**Version: vDP1 (Resident Services DP1)**
+
+* Resident Services
+* Developer Preview Release1
+* Date: 12th Sept, 2023
+* [Release Notes](release-notes-resident-portal-dp1.md)
+
 **Version: 1.2.0.1 Beta 3**
 
 * Name: Beta release on Asymmetric Amoeba
