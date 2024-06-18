@@ -4,7 +4,7 @@ Countries have the option to customize Inji Web as per their requirements. Refer
 
 The following customizations are available in Inji Web:
 
-* [UI Customization](../ui-customization.md)
-* [Locale Customization](../locale-customization.md)
-* [Credential Provider](../credential\_providers.md)
+* [UI Customization](https://docs.mosip.io/inji/inji-web/customizations/ui-customizations)
+* [Locale Customization](https://docs.mosip.io/inji/inji-web/customizations/locale-customization)
+* [Credential Provider](https://docs.mosip.io/inji/inji-web/customizations/credential-providers)
 
