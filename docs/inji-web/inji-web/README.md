@@ -1,5 +1,11 @@
 # Releases
 
+## Version: 0.9.0
+
+* Name: Inji Web 0.9.0 
+* Date: Coming Soon
+* [Release Notes](https://docs.mosip.io/inji/inji-web/inji-web/version-0.9.0)
+  
 ## Version: 0.8.1
 
 * Name: Inji Web 0.8.1 (Patch)
