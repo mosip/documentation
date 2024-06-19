@@ -16,12 +16,6 @@
 
 ## Older Releases
 
-**Version: 0.9.0 (Android Registration Client)**
-
-* Support: Beta Release
-* Date: 26th February, 2024
-* [Release Notes](release-notes-android-reg-client-0.9.0.md)
-
 **Version: 1.2.1.0 (ID Authentication)**
 
 * [![LTS](https://img.shields.io/badge/Support-Long%20Term%20Support-blue?style=plastic)](https://docs.mosip.io/1.2.0/releases/support-policy)
@@ -41,6 +35,12 @@
 * [![LTS](https://img.shields.io/badge/Support-Long%20Term%20Support-blue?style=plastic)](https://docs.mosip.io/1.2.0/releases/support-policy)
 * Date: 06th March, 2024
 * [Release Notes](release/1.2.0.1/release-notes-1.2.0.1.md)
+
+**Version: 0.9.0 (Android Registration Client)**
+
+* Support: Beta Release
+* Date: 26th February, 2024
+* [Release Notes](release-notes-android-reg-client-0.9.0.md)
 
 **Version: 1.2.0.1 Beta 4**
 
