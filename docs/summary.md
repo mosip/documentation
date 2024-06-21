@@ -48,6 +48,7 @@
   * [BLE Verifier](inji-mobile-wallet/integration-guide/ble-verifier.md)
   * [PixelPass](inji-mobile-wallet/integration-guide/pixelpass.md)
   * [Telemetry](inji-mobile-wallet/integration-guide/telemetry.md)
+  * [VCI-Client](inji-mobile-wallet/integration-guide/vci-client.md)
 * [Specifications](inji-mobile-wallet/specifications/README.md)
   * [Face SDK Specifications](inji-mobile-wallet/specifications/face-sdk-specifications.md)
 * [Backend Services](inji-mobile-wallet/backend-services/README.md)
