@@ -67,7 +67,7 @@ Furthermore, eSignet has undergone meticulous testing to ensure seamless compati
 {% hint style="info" %}
 In order to add more language bundles in eSignet, you can go through the below article.
 
-[How to add a new language to eSignet?](../../faq/#how-to-add-a-new-language-in-esignet)
+[How to add a new language to eSignet?](https://docs.esignet.io/faq#how-to-add-a-new-language-in-esignet)
 
 In order to remove a language from eSignet, you can go through the below article.
 
