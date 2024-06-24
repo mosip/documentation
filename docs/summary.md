@@ -98,7 +98,7 @@
 * [Technical Overview](inji-certify/technical-overview/README.md)
   * [Technology Stack](inji-certify/technical-overview/technology-stack.md)
   * [Components](inji-certify/technical-overview/components.md)
-  * [Supported Browsers](inji-certify/technical-overview/supported-browsers.md)
+  * [Tested Operating Systems](inji-certify/technical-overview/supported-browsers.md)
 * [Releases](inji-certify/releases/README.md)
   * [Version 0.8.1](inji-certify/releases/release-notes.md)
   * [Version 0.8.0](inji-certify/releases/version-0.8.0.md)
