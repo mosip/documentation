@@ -1,21 +1,25 @@
 # Features
 
-Here is a comprehensive summary of the features offered by Inji Certify.
+Currently, Inji Certify offers the following features:
 
-**Key Features:**
+#### **Key Features**
 
+**Credential Issuance**
 
+* **Verifiable Credential Issuance**: Enables issuers to seamlessly issue verifiable credentials using the Inji Certify core component (This eSignet VCI segregated to Inji Certify)
+* **Integration Capabilities**: Supports integration with:
+  * MOSIP Identity Plugin for identity verification.
+  * Sunbird Plugin for seamless integration with Sunbird services.
+  * Mock IDA Plugin for testing and development purposes.
+* **Multiple Credential Schemas**: Allows configuration of multiple credential schemas for various certificate types.
+* **JSON-LD Format**: Generates certificates compliant with W3C VC v1.1 standards in JSON-LD format, ensuring interoperability and compatibility.
 
-### **1. Credential Issuance:**
+**Ease of Installation**
 
-* Inji Certify empowers issuers to seamlessly issue verifiable credentials using the Sunbird C component. Leveraging existing data sources, issuers can connect with the database, assuming a primary key for each data record and requisite user authentication information.&#x20;
-* This feature enables the configuration of multiple credential schemas for various certificate types. Certificates are generated in JSON-LD format compliant with W3C VC v1.1 standards, ensuring interoperability and compatibility.
+* **Streamlined Setup**: Simplifies installation with a single shell startup script connecting Docker-compose scripts.
+* **Helm Support**: Provides Helm support for deployment flexibility.
+* **User-Friendly**: Emphasizes ease of use, reducing complexity and deployment time.
 
-### **2. Ease of Installation:**
-
-* Installing Inji Certify is made simple and hassle-free with its streamlined setup process. A single shell serves as the startup script, seamlessly connecting two Docker-compose scripts.
-* This approach simplifies the installation procedure, reducing complexity and minimizing the time required to deploy Inji Certify. With an emphasis on ease of use, Inji Certify ensures a smooth installation experience for users, enabling swift deployment and integration into existing systems.
-
-{% hint style="info" %}
-**Note: We have published an** [**installation guide**](https://github.com/mosip/inji-certify/tree/develop?tab=readme-ov-file#inji-certify) **as the first step to use Inji Certify**
-{% endhint %}
+Inji Certify streamlines the issuance of verifiable credentials with robust integration capabilities and a straightforward installation process. It supports multiple credential schemas and ensures compliance with industry standards, making it a versatile solution for organizations needing secure and efficient credential management.\
+\
+**Check** [**Inji Certify** ](https://github.com/mosip/inji-certify/tree/release-0.9.x)**Repository to explore these above features!**
