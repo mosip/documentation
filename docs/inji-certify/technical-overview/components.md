@@ -44,12 +44,9 @@ Inji Certify leverages the following components (from existing building blocks/p
 
 &#x20;       **c. Credential service:**&#x20;
 
-1. Core issuance service. Called with the payload, which is then transformed into a W3C-compliant Verifiable Credential in JSON-LD format. The payload is then signed using the private key which was generated as part of the original Issuer creation.&#x20;
-
-* To be included as a dependency along with the pg.
-* Hashi Corp vault is the Keystore which acts as the vault service.&#x20;
-* Identity service is dependent on the vault service.&#x20;
-* Stores key pairs and secrets for the issuers.
+* Core issuance service. Called with the payload, which is then transformed into a W3C-compliant Verifiable Credential in JSON-LD format. The payload is then signed using the private key which was generated as part of the original Issuer creation.&#x20;
+* Docker Image: [https://github.com/sunbird-rc/sunbird-rc-core/pkgs/container/sunbird-rc-credentials-service](https://github.com/sunbird-rc/sunbird-rc-core/pkgs/container/sunbird-rc-credentials-service)
+* Depends on identity service, schema service, and database.
 
 &#x20;      **d. Vault Service:**&#x20;
 
