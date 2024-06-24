@@ -26,11 +26,11 @@ Mobile wallet-based authentication can be utilized to scan a QR code and finaliz
 
 eSignet also offers password authentication as one of its authentication factors. With eSignet's integration capabilities, existing ID repositories storing user accounts with password can now be easily integrated with eSignet. This integration enables OpenID based login, allowing users to access relying party services seamlessly.
 
-[How to enable password-based authentication in eSignet?](../../faq/#how-to-configure-password-authentication-in-e-signet)
+[How to enable password-based authentication in eSignet?](../../faq/#how-to-configure-password-authentication-in-esignet)
 
 ### Knowledge Based Identification
 
-eSignet has expanded its authentication options to include Knowledge-Based Identification (KBI) as one of its factors. With eSignet's integration capabilities, existing ID repositories storing user-specific details can now be easily integrated with eSignet and thereby enabling service providers to authenticate users. 
+eSignet has expanded its authentication options to include Knowledge-Based Identification (KBI) as one of its factors. With eSignet's integration capabilities, existing ID repositories storing user-specific details can now be easily integrated with eSignet and thereby enabling service providers to authenticate users.
 
 To know more about Knowledge Based Identification, click [here](https://docs.esignet.io/end-user-guide/knowledge-based-authentication).
 
@@ -67,9 +67,9 @@ Furthermore, eSignet has undergone meticulous testing to ensure seamless compati
 {% hint style="info" %}
 In order to add more language bundles in eSignet, you can go through the below article.
 
-[How to add a new language to eSignet?](../../faq/#how-to-add-a-new-language-in-e-signet)
+[How to add a new language to eSignet?](../../faq/#how-to-add-a-new-language-in-esignet)
 
 In order to remove a language from eSignet, you can go through the below article.
 
-[How to remove a language from the eSignet default setup?](../../faq/#how-to-remove-a-language-from-the-e-signet-default-setup)
+[How to remove a language from the eSignet default setup?](../../faq/#how-to-remove-a-language-from-the-esignet-default-setup)
 {% endhint %}
