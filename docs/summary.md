@@ -74,6 +74,7 @@
   * [Backend services](inji-web/technical-overview/backend-services/README.md)
     * [Mimoto - BFF](inji-web/technical-overview/backend-services/mimoto-bff.md)
     * [eSignet - Authentication Layer](inji-web/technical-overview/backend-services/esignet-authentication-layer.md)
+    * [Configurations](inji-web/technical-overview/backend-services/configurations.md)
 * [Releases](inji-web/inji-web/README.md)
   * [Version 0.9.0](inji-web/inji-web/version-0.9.0/README.md)
     * [Test Report](inji-web/inji-web/version-0.9.0/test-report.md)
