@@ -2,52 +2,7 @@
 
 #### **Sequence Diagram**
 
-<figure><img src="../../.gitbook/assets/injiverify_sequence.png" alt=""><figcaption></figcaption></figure>
-
-Visit [https://www.plantuml.com/plantuml/uml](https://www.plantuml.com/plantuml/uml) and import the following file to edit the above sequence diagram as UML
-
-```
-@startuml
-participant User
-participant InjiVerify
-participant DeviceCamera
-participant PixelPass
-participant VerificationSDK
-participant Issuer
-
-User -> InjiVerify: Scan Request
-InjiVerify -> DeviceCamera: Scan Request
-DeviceCamera --> User: Camera permissions
-User -> DeviceCamera: Granted Camera Permissions
-User -[#red]-> DeviceCamera: <color:red>Deny Camera Permissions
-DeviceCamera -> InjiVerify: QR Read Data
-InjiVerify -> PixelPass: Unzip and Decode QR Data
-PixelPass --> InjiVerify: Decoded Data
-PixelPass -[#red]-> InjiVerify: <color:red>Invalid Data
-InjiVerify -[#red]-> User: <color:red>Error Display
-InjiVerify -> VerificationSDK: Verify Data
-VerificationSDK --> InjiVerify: Verified status
-InjiVerify -> Issuer: Get Display properties
-Issuer --> InjiVerify: Display Properties
-InjiVerify --> User: Credential DIsplayed
-|||
-|||
-|||
-|||
-|||
-User -> InjiVerify: Upload File with QR
-InjiVerify -> PixelPass: Unzip and Decode QR Data
-PixelPass --> InjiVerify: Decoded Data
-PixelPass -[#red]-> InjiVerify: <color:red>Invalid Data
-InjiVerify -[#red]-> User: <color:red>Error Display
-InjiVerify -> VerificationSDK: Verify Data
-VerificationSDK --> InjiVerify: Verified status
-InjiVerify -> Issuer: Get Display properties
-Issuer --> InjiVerify: Display Properties
-InjiVerify --> User: Credential DIsplayed
-
-@enduml
-```
+<figure><img src="../../.gitbook/assets/inji-verify-workflow-sequence-diagram (1).png" alt="" width="563"><figcaption><p>Sequence Diagram</p></figcaption></figure>
 
 ### **Understanding the workflow**:
 
@@ -79,6 +34,11 @@ InjiVerify --> User: Credential DIsplayed
   * Finally, Inji Verify displays the credential details using the fetched display properties.
 * However, if [**Pixel Pass**](https://www.npmjs.com/package/@mosip/pixelpass/v/0.1.4) fails to decode the data:
   * Inji Verify navigates back to the home screen and displays the "QR code format not supported" error.
+
+#### Additional Features:
+
+* The Pixel Pass library now supports decoding CBOR QR codes and can provide details of verifiable credential (VC) data.
+* Inji Verify can now handle the display of expired credentials, in addition to valid and invalid credential displays, using the same verification and display processes.
 
 {% hint style="info" %}
 **Note**: To understand the Inji Verify components in detail please refer to the topic [**Components**](../technical-overview/components.md) under [**Technical Overview**](../technical-overview/) section.

@@ -6,121 +6,187 @@ This document serves as a concise guide for end users, providing comprehensive s
 
 **Step 1: Initiate Scan Request:**
 
-* Begin by accessing the Inji Verify portal and selecting the option to scan a QR code by clicking on **“Scan QR Code”**.
+* Begin by accessing the Inji Verify portal and selecting the tab “Scan the QR Code” where the Scan QR code section will come up and click on the “Scan” button to initiate the scanning process.
 
-<figure><img src="../../.gitbook/assets/image-20240503-134218.png" alt=""><figcaption></figcaption></figure>
+**Desktop View**
 
+<figure><img src="../../.gitbook/assets/Inji-verify-Desktop-view.png" alt="" width="563"><figcaption><p>Scan QR Code Desktop View</p></figcaption></figure>
 
+**Mobile View**
+
+<figure><img src="../../.gitbook/assets/inji-verify-mobile-view.png" alt="" width="210"><figcaption><p>Scan QR Code Mobile View</p></figcaption></figure>
 
 **Step 2: Camera Permissions:**
 
-If prompted, grant the necessary camera permissions to the Inji Verify portal to allow access to your device's camera by clicking on the “Allow” button.
+When the scan is initiated, you will be prompted to grant the necessary camera permissions for the Inji Verify portal. Please click the "Allow" button to give the portal access to your device's camera.
 
-<figure><img src="../../.gitbook/assets/image-20240503-134547.png" alt=""><figcaption></figcaption></figure>
+**Desktop View**
+
+<figure><img src="../../.gitbook/assets/inji-verify-camera-permissions-desktop-view.png" alt="" width="563"><figcaption><p>Camera Permission Desktop View</p></figcaption></figure>
+
+**Mobile View**
+
+<figure><img src="../../.gitbook/assets/inji-verify-camera-permissions-mobile-view.png" alt="" width="212"><figcaption><p>Camera Permission Mobile View</p></figcaption></figure>
 
 **Step 3: Scan QR Code:**
 
 * Position the device's camera in front of the QR code you wish to scan.
 * Capture the QR code by aligning it within the frame displayed on your device's screen.
-
-<figure><img src="../../.gitbook/assets/image-20240503-135054.png" alt=""><figcaption></figcaption></figure>
-
-**Step 4: QR Code Processing:**
-
 * Once the QR code is captured, the data is sent to the Inji Verify portal for processing.
+
+{% hint style="info" %}
 * **Decoding and Verification:**
   * The QR data is passed to the Pixel Pass library for decoding.
   * Pixel Pass returns the decoded data to Inji Verify for further processing.
   * Inji Verify then verifies the decoded data using the Verification SDK.
+{% endhint %}
 
+**Desktop View**
 
+<figure><img src="../../.gitbook/assets/inji-verify-scan-qr-code-desktop-view.png" alt="" width="563"><figcaption><p>Scan QR Code Desktop View</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image-20240503-135233 (1).png" alt=""><figcaption></figcaption></figure>
+**Mobile View**
 
-**Step 5: Display Credential Details:**
+<figure><img src="../../.gitbook/assets/inji-verify-scan-qr-code-mobile-view.png" alt="" width="215"><figcaption><p>Scan QR Code Mobile View</p></figcaption></figure>
+
+**Step 4: Display Credential Details:**
 
 * After successful verification, Inji Verify retrieves the display properties of the credential from the issuer's configuration.
 * The credential details are displayed on the portal's interface using the fetched display properties.
 
+**Desktop View**
 
+<figure><img src="../../.gitbook/assets/inji-verify-display-credential-details-desktop-view.png" alt="" width="563"><figcaption><p>Display Credential Details Desktop View</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image-20240503-135440 (1).png" alt=""><figcaption></figcaption></figure>
+**Mobile View**
+
+<figure><img src="../../.gitbook/assets/inji-verify-display-credential-details-mobile-view.png" alt="" width="201"><figcaption><p>Display Credential Details Mobile View</p></figcaption></figure>
 
 ### **Feature 2 Flow: Upload QR Flow:**
 
 **Step 1: Upload QR Code:**
 
-* Click on the **“Upload QR Code”** button as you select the option to upload a file containing the QR code or credential document you wish to verify from your device's file explorer. Simply click on the file to proceed.
+* Begin by accessing the Inji Verify portal and selecting the tab “Upload QR Code” where the Upload QR code section will come up and click on the “Upload” button to initiate the process.
 
-<figure><img src="../../.gitbook/assets/image-20240503-140402.png" alt=""><figcaption></figcaption></figure>
+**Desktop View**
 
+<figure><img src="../../.gitbook/assets/inji-verify-upload-qr-code-desktop-view.png" alt="" width="563"><figcaption><p>Upload QR Code Desktop View</p></figcaption></figure>
 
+**Mobile View**
 
-**Step 2: QR Code Processing:**
+<figure><img src="../../.gitbook/assets/Inji-verify-upload-qr-code-mobile-view.png" alt="" width="199"><figcaption><p>Upload QR Code Mobile View</p></figcaption></figure>
 
+* Click on the **“Upload”** button on the “Upload QR Code” Page as you select the option to upload a file containing the QR code or credential document you wish to verify from your device's file explorer. Click on the file to proceed.
 * Inji Verify passes the QR data from the uploaded file to the Pixel Pass library for processing.
+
+{% hint style="info" %}
 * **Decoding and Verification:**
   * The QR data is passed to the Pixel Pass SDK for decoding.
   * Pixel Pass returns the decoded data to Inji Verify for further processing.
   * Inji Verify then verifies the decoded data using the Verification SDK.
+{% endhint %}
 
+**Desktop View**
 
+<figure><img src="../../.gitbook/assets/inji-verify-upload-qr-file-desktop-view.png" alt="" width="563"><figcaption><p>Upload QR file Desktop View</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image-20240503-135233.png" alt=""><figcaption></figcaption></figure>
+**Mobile View**
 
+<figure><img src="../../.gitbook/assets/inji-verify-qr-file-upload-mobile-view.png" alt="" width="194"><figcaption><p>Verify Document Mobile View</p></figcaption></figure>
 
-
-**Step 3: Display Credential Details:**
+**Step 2: Display Credential Details:**
 
 * Upon successful verification, Inji Verify retrieves the display properties of the credential and presents the details on the portal's interface.
 
+**Desktop View**
 
+<figure><img src="../../.gitbook/assets/image-20240503-135440 (1) (1).png" alt="" width="563"><figcaption><p>Display Credentials Desktop View</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image-20240503-135440 (1) (1).png" alt=""><figcaption></figcaption></figure>
+**Mobile View**
+
+<figure><img src="../../.gitbook/assets/inji-verify-display-credentials-mobile-view.png" alt="" width="196"><figcaption><p>Display Credentials Mobile View</p></figcaption></figure>
 
 ### **Error Handling:**
 
 **Scenario 1:** If Pixel Pass encounters difficulties in decoding the data or encounters an unsupported QR code format, Inji Verify returns to the home screen.
 
-* An error message stating "**QR code format not supported" is displayed to the user.”**
+* An error message stating "**QR code format not supported"** is displayed to the user.
 
+**Desktop View**
 
-
-<figure><img src="../../.gitbook/assets/image-20240503-135701.png" alt=""><figcaption></figcaption></figure>
-
-
+<figure><img src="../../.gitbook/assets/inji-verify-error-handling-desktop-view.png" alt="" width="563"><figcaption><p>QR Code not supported Desktop View</p></figcaption></figure>
 
 **Scenario 2:** If the QR code size or file size exceeds the permissible limit where the maximum size is 5MB, Inji Verify returns to the home screen.
 
-* An error message stating "**QR code size is not supported. Please use a QR code within the specified limit.**"
+* An error message stating "**File size not supported. The file should be between 10Kb and 5 MB.**"
 
+**Desktop View**
 
-
-<figure><img src="../../.gitbook/assets/image-20240503-141405.png" alt=""><figcaption></figcaption></figure>
-
-
+<figure><img src="../../.gitbook/assets/inji-verify-error-handling-file-exceeds-desktop-view.png" alt="" width="563"><figcaption><p>File Size Not Supported Desktop View</p></figcaption></figure>
 
 **Scenario 3:** If the QR code is unreadable or blurry then Inji Verify returns to the home screen.
 
 * An error message stating**"No multi-format readers were able to read the QR code."**
 
+**Desktop View**
 
-
-<figure><img src="../../.gitbook/assets/image-20240503-141755.png" alt=""><figcaption></figcaption></figure>
-
-
+<figure><img src="../../.gitbook/assets/inji-verify-error-handling-unreadable-desktop-view.png" alt="" width="563"><figcaption><p>Unreadable QR Code Desktop View</p></figcaption></figure>
 
 **Scenario 4:** If the user fails to scan the QR code within the 60-second timeframe then Inji Verify returns to the home screen.
 
 * An error message stating "**The scan session has expired due to inactivity. Please initiate a new scan**."
 
+**Desktop View**
 
+<figure><img src="../../.gitbook/assets/inji-verify-error-handling-expired-seesion-desktop-view.png" alt="" width="563"><figcaption><p>Scan Session Expired Desktop View</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image-20240503-142012.png" alt=""><figcaption></figcaption></figure>
+### **Header Section:** <a href="#header-section" id="header-section"></a>
 
+#### **Home** <a href="#home" id="home"></a>
 
+* The “Home” Screen is not available now so you will be able to see the “Upload QR Code” Page instead.
 
+#### **Verify Credentials** <a href="#verify-credentials" id="verify-credentials"></a>
 
+* The Verify Credentials Page will showcase two main features of Inji Verify that is “Upload QR Code” and “Scan the QR Code”.
 
-\
-\
+**Desktop View**
+
+<figure><img src="../../.gitbook/assets/inji-verify-end-user-guide-header.png" alt="" width="563"><figcaption><p>Verify Credentials Desktop View</p></figcaption></figure>
+
+#### **Help** <a href="#help" id="help"></a>
+
+* The Help section includes three sub-sections or sub-menus:
+  * **Contact Us**: This directs you to our MOSIP Community where you can write to us with any queries related to Inji Verify or general inquiries.
+  * **Documentation**: This directs you to the Inji Verify documentation page for detailed information about Inji Verify.
+  * **FAQ**: This section is still under development.
+
+**Desktop View**
+
+<figure><img src="../../.gitbook/assets/inji-verify-end-user-guide-help.png" alt="" width="563"><figcaption><p>Help Desktop View</p></figcaption></figure>
+
+### **Credential Display Capability** <a href="#credential-display-capability" id="credential-display-capability"></a>
+
+**Valid Credentials**
+
+* These credentials are currently active and verified using the Inji Verify Portal.
+
+**Desktop View**
+
+<figure><img src="../../.gitbook/assets/inji-verify-end-user-guide-valid.png" alt="" width="563"><figcaption><p>Valid Credentials Desktop View</p></figcaption></figure>
+
+**Invalid Credentials**:
+
+* These credentials are currently active but invalid.
+
+**Desktop View**
+
+<figure><img src="../../.gitbook/assets/inji-verify-end-user-guide-invalid-creds.png" alt="" width="563"><figcaption><p>Invalid Credentials Desktop View</p></figcaption></figure>
+
+**Expired Credentials**
+
+* These credentials have passed their validity period and are no longer active.
+
+**Desktop View**
+
+<figure><img src="../../.gitbook/assets/inji-verify-end-user-guide-expired-creds.png" alt="" width="563"><figcaption><p>Expired Credentials Desktop View</p></figcaption></figure>
