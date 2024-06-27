@@ -19,4 +19,4 @@ Here is a comprehensive summary of the features offered by Inji Verify.
 8. **Real-time Verification:** Users can verify credentials in real time, ensuring prompt validation and reducing verification delays.
 9. **Scalability:** Inji Verify is designed to scale efficiently, accommodating growing user demands and ensuring optimal performance under varying load conditions.
 
-For more detailed information on each step and the underlying systems, click [**here.**](https://mosip.atlassian.net/wiki/spaces/PROD/pages/1297121401/Inji+Verify+Workflow)
+For more detailed information on each step and the underlying systems, click [**here**](workflow.md)**.**
