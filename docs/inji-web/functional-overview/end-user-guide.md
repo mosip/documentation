@@ -94,3 +94,32 @@ Users can choose a different language from the options listed. Inji Web supports
 
 <figure><img src="../../.gitbook/assets/Inji Web_Language Selection_Step2.png" alt=""><figcaption><p>UI as per selected Language</p></figcaption></figure>
 
+## Responsive Views
+
+Inji Web is now responsive supporting a wide range of devices (Smartphones & Tablets) for the ease of use. Let's look at how the interface looks on a phone and a tablet.
+
+### **Mobile devices**
+
+
+<figure><img src="../../.gitbook/assets/Responsive View_Mobile_Inji Web_1.png" alt=""><figcaption><p>Landing Page</p></figcaption></figure>
+
+
+<figure><img src="../../.gitbook/assets/Responsive View_Mobile_Inji Web_2.png" alt=""><figcaption><p>Menu Bar</p></figcaption></figure>
+
+
+<figure><img src="../../.gitbook/assets/Responsive View_Mobile_Inji Web_3.png" alt=""><figcaption><p>Help Section</p></figcaption></figure>
+
+
+<figure><img src="../../.gitbook/assets/Responsive View_Mobile_Inji Web_4.png" alt=""><figcaption><p>Credential Type Selection</p></figcaption></figure>
+
+
+### **Tablet devices**
+
+
+<figure><img src="../../.gitbook/assets/Responsive View_Tablet_Inji Web_1.png" alt=""><figcaption><p>Landing Page</p></figcaption></figure>
+
+
+<figure><img src="../../.gitbook/assets/Responsive View_Tablet_Inji Web_2.png" alt=""><figcaption><p>Search Issuers</p></figcaption></figure>
+
+
+<figure><img src="../../.gitbook/assets/Responsive View_Tablet_Inji Web_3.png" alt=""><figcaption><p>Credential Type Selection</p></figcaption></figure>
