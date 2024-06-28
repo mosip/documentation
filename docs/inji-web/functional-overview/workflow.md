@@ -8,7 +8,7 @@ The image below illustrates the workflow for the VC download process and explain
 
 <figure><img src="../../.gitbook/assets/line dia.png" alt=""><figcaption><p>VC Download as PDF</p></figcaption></figure>
 
-_**Reference Implementation**: Download of Insurance VC using **Sunbird Credentials** service with_ [_eSignet KBI (Knowledge Based Identification)_](https://docs.esignet.io/end-user-guide/knowledge-based-authentication) _as identification partner_
+_**Reference Implementation**: Download of Insurance VC (Veridonia Insurance) with_ [_eSignet KBI (Knowledge Based Identification)_](https://docs.esignet.io/end-user-guide/knowledge-based-authentication) _as identification partner_
 
 **Components**:
 
@@ -30,7 +30,7 @@ _**Reference Implementation**: Download of Insurance VC using **Sunbird Credenti
     ii. Users can choose a credential type from the available options provided by the issuers
 3.  **Verification**:
 
-    i. In this reference implementation, the Insurance use case is demonstrated using Sunbird Credentials
+    i. In this reference implementation, the Insurance use case is demonstrated using Veridonia Insurance Credentials
 
     ii. Users are required to provide their Policy Number, Date of Birth, and Name for verification
 
