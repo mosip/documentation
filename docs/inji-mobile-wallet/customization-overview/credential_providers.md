@@ -155,19 +155,19 @@ kubectl -n mimoto cp mimoto-86cc54569c-9bs65:certs/..data/oidckeystore.p12 oidck
 ```
 2. Add the esignet-<issuername>-partner's key as alias “esignet-<issuername>-partner“ onto the same p12 file using a tool like keystore-explorer. The password here is “mosip123“
 
-<figure><img src="../.gitbook/assets/Original_p12file_img1.png" alt=""><figcaption><p>Original p12 file as downloaded from environment</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Original_p12file_img1.png" alt=""><figcaption><p>Original p12 file as downloaded from environment</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/Import new keypair_img2.png" alt=""><figcaption><p>Importing a new keypair</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Import new keypair_img2.png" alt=""><figcaption><p>Importing a new keypair</p></figcaption></figure>
 
 3. The below image shows how to browse and select the esignet-sunbird-partner’s oidckeystore as the second alias. in the decryption password field should have the password of the p12 file, in this case “mosip123“ 
 
-<figure><img src="../.gitbook/assets/OIDC keystore_img3.png" alt=""><figcaption><p>Selection of OIDC Keystore</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/OIDC keystore_img3.png" alt=""><figcaption><p>Selection of OIDC Keystore</p></figcaption></figure>
 
 4. The below image shows how to add an alias for the new key pair, here the value is esignet-sunbird-partner.
 
-<figure><img src="../.gitbook/assets/Alias_img4.png" alt=""><figcaption><p>Alias for the new keypair</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Alias_img4.png" alt=""><figcaption><p>Alias for the new keypair</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/Add keypairs_img5.png" alt=""><figcaption><p>Add keypairs to keystore.p12</p></figcaption></figure>  
+<figure><img src="../../.gitbook/assets/Add keypairs_img5.png" alt=""><figcaption><p>Add keypairs to keystore.p12</p></figcaption></figure>  
 
 5. To take a backup of the original keystore.p12 use the following command
 
