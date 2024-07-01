@@ -76,7 +76,7 @@ To download a Insurance ID VC using eSignet as authentication layer (KBI method)
 
 **Step6**: Upon successful PDF generation, user can view the PDF of the downloaded VC (Insurance ID).
 
-<figure><img src="../../.gitbook/assets/Inji Web_Download Insurance ID as PDF_Step8.png" alt=""><figcaption><p>Downloaded Insurance VC as PDF</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Inji Web_Download Insurance ID as PDF_Step8.png" alt="" width="375"><figcaption><p>Downloaded Insurance VC as PDF</p></figcaption></figure>
 
 ## Help
 
@@ -100,26 +100,18 @@ Inji Web is now responsive supporting a wide range of devices (Smartphones & Tab
 
 ### **Mobile devices**
 
+<figure><img src="../../.gitbook/assets/Responsive View_Mobile_Inji Web_1.png" alt="" width="375"><figcaption><p>Landing Page</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/Responsive View_Mobile_Inji Web_1.png" alt=""><figcaption><p>Landing Page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Responsive View_Mobile_Inji Web_2.png" alt="" width="375"><figcaption><p>Menu Bar</p></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/Responsive View_Mobile_Inji Web_3.png" alt="" width="375"><figcaption><p>Help Section</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/Responsive View_Mobile_Inji Web_2.png" alt=""><figcaption><p>Menu Bar</p></figcaption></figure>
-
-
-<figure><img src="../../.gitbook/assets/Responsive View_Mobile_Inji Web_3.png" alt=""><figcaption><p>Help Section</p></figcaption></figure>
-
-
-<figure><img src="../../.gitbook/assets/Responsive View_Mobile_Inji Web_4.png" alt=""><figcaption><p>Credential Type Selection</p></figcaption></figure>
-
+<figure><img src="../../.gitbook/assets/Responsive View_Mobile_Inji Web_4.png" alt="" width="375"><figcaption><p>Credential Type Selection</p></figcaption></figure>
 
 ### **Tablet devices**
 
+<figure><img src="../../.gitbook/assets/Responsive View_Tablet_Inji Web_1.png" alt="" width="375"><figcaption><p>Landing Page</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/Responsive View_Tablet_Inji Web_1.png" alt=""><figcaption><p>Landing Page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Responsive View_Tablet_Inji Web_2.png" alt="" width="375"><figcaption><p>Search Issuers</p></figcaption></figure>
 
-
-<figure><img src="../../.gitbook/assets/Responsive View_Tablet_Inji Web_2.png" alt=""><figcaption><p>Search Issuers</p></figcaption></figure>
-
-
-<figure><img src="../../.gitbook/assets/Responsive View_Tablet_Inji Web_3.png" alt=""><figcaption><p>Credential Type Selection</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Responsive View_Tablet_Inji Web_3.png" alt="" width="375"><figcaption><p>Credential Type Selection</p></figcaption></figure>
