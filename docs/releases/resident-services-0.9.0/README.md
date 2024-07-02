@@ -10,7 +10,7 @@
 
 ## Overview
 
-This release is the 0.9.0 release of Resident Services, offering valuable insights into the range of features and functionality available. Resident Services is designed to run on 1.2.0.1 version of MOSIP platform. Resident Services are the self-services which are used by the residents themselves via a portal. [Resident Portal](https://docs.mosip.io/1.2.0/modules/resident-services/resident-portal-user-guide) is a web-based UI application that provides residents of a country the services related to their Unique Identification Number (UIN). The residents can perform various operations related to their UIN/ VID and can also raise concerns if any through the portal.
+This release is the 0.9.0 release of Resident Services, offering valuable insights into the range of features and functionality available. Resident Services is designed to run on the 1.2.0.1 version of the MOSIP platform. Resident Services are the self-services that are used by the residents themselves via a portal. [Resident Portal](https://docs.mosip.io/1.2.0/modules/resident-services/resident-portal-user-guide) is a web-based UI application that provides residents of a country with services related to their Unique Identification Number (UIN). The residents can perform various operations related to their UIN/ VID and can also raise concerns if any through the portal.
 
 The key features provided on the Resident portal are:
 
@@ -27,7 +27,7 @@ The key features provided on the Resident portal are:
    1. Get the list of Registration Centres
    2. Get the list of Supporting Documents
 3. Get My UIN (using UIN/ VID/ AID)
-4. Verify email ID and/ or phone number
+4. Verify Email ID and/ or phone number
 5. Book an appointment for new enrolment (via the pre-registration portal)
 6. Ancillary features
    * Multi-lingual support
@@ -39,16 +39,24 @@ For a quick overview of the design principles and to understand the relationship
 
 ## Repository Released
 
-| **Repositories**  | **Tags Released**                                                            |
-| ----------------- | ---------------------------------------------------------------------------- |
-| Resident Services | [v1.2.1.0](https://github.com/mosip/resident-services/releases/tag/v1.2.1.0) |
-| Resident UI       | [v.0.9.0](https://github.com/mosip/resident-ui/releases/tag/v0.9.0)          |
+| **Repositories**            | **Tags Released**                                                                      |
+| --------------------------- | -------------------------------------------------------------------------------------- |
+| Resident Services           | [v1.2.1.0](https://github.com/mosip/resident-services/releases/tag/v1.2.1.0)           |
+| Resident UI                 | [v.0.9.0](https://github.com/mosip/resident-ui/releases/tag/v0.9.0)                    |
+| Id repository               | [v1.2.1.0](https://github.com/mosip/id-repository/releases/tag/v1.2.1.0)               |
+| Partner Management Services | [v1.2.1.0](https://github.com/mosip/partner-management-services/releases/tag/v1.2.1.0) |
+| Admin Services              | [v1.2.1.0](https://github.com/mosip/admin-services/releases/tag/v1.2.1.0)              |
+| Mosip data                  | [v1.2.1.0](https://github.com/mosip/mosip-data/releases/tag/v1.2.1.0)                  |
+| Mosip config                | [v1.2.1.0](https://github.com/mosip/mosip-config/releases/tag/v1.2.1.0)                |
+| Artifactory ref impl        | [v1.2.0.2](https://github.com/mosip/artifactory-ref-impl/releases/tag/v1.2.0.2)        |
+| Mosip functional tests      | [v1.2.0.2](https://github.com/mosip/mosip-functional-tests/releases/tag/v1.2.0.2)      |
+| Mosip helm                  | [v1.2.0.2](https://github.com/mosip/mosip-helm/releases/tag/v1.2.0.2)                  |
 
 ## Summary
 
 ### Services
 
-For detailed description of Resident services, the code and design, refer to [resident services repo](https://github.com/mosip/resident-services/releases/tag/v1.2.1.0).
+For a detailed description of Resident services, the code, and the design, refer to the [resident services repo](https://github.com/mosip/resident-services/releases/tag/v1.2.1.0).
 
 ### Resident Portal UI
 
