@@ -266,13 +266,13 @@ FAILURE: Build failed with an exception.
 
 **Enabling Google Drive APIs** Go to - https://console.cloud.google.com/apis/library
 
-![GCP API Library](../.gitbook/assets/gcp-api-libs.png)
+![GCP API Library](../../.gitbook/assets/gcp-api-libs.png)
 
 Search for `Google drive API` and Select Google Drive API from the list.
 
 Then enable the API.
 
-![GCP Drive API Enable](../.gitbook/assets/drive-api.png)
+![GCP Drive API Enable](../../.gitbook/assets/drive-api.png)
 
 #### Step 3:
 
@@ -288,15 +288,15 @@ Create a new Consent Screen with necessary details such as - App Name, User Supp
 
 Go to - https://console.cloud.google.com/apis/credentials
 
-![GCP Create Client ID](../.gitbook/assets/create-CID.png)
+![GCP Create Client ID](../../.gitbook/assets/create-CID.png)
 
 Click on `CREATE CREDENTIALS` and choose `OAuth client ID`
 
-![GCP Create Client ID](../.gitbook/assets/application-type.png)
+![GCP Create Client ID](../../.gitbook/assets/application-type.png)
 
 Choose Appliation type as `Android`
 
-![GCP Create Client ID](../.gitbook/assets/cid-details.png)
+![GCP Create Client ID](../../.gitbook/assets/cid-details.png)
 
 Add in details such as _Name_, _Package Name_ and _SHA- Fingerptint_
 
@@ -318,7 +318,7 @@ Once the Client ID has been created copy the client ID and add it as part of `.e
 
 The Internal testing version of the build can be uploaded to `PlayConsole` for testing. PlayConsole allows the creation of internal testers group.
 
-![Internal testers](../.gitbook/assets/internal\_testers\_android.png)
+![Internal testers](../../.gitbook/assets/internal\_testers\_android.png)
 
 **Publishing build manually to PlayConsole**
 
@@ -331,17 +331,17 @@ A Google play console developer account is a must to publish builds in PlayConso
 
 **Upload in PlayConsole**
 
-![img.png](../.gitbook/assets/upload\_android.png)
+![img.png](../../.gitbook/assets/upload\_android.png)
 
-![img.png](../.gitbook/assets/uploading\_android.png)
+![img.png](../../.gitbook/assets/uploading\_android.png)
 
 1. Once the build is uploaded and saved you will be able to see the status of the release with version name, code, API level and some more details.
 
-![img.png](../.gitbook/assets/uploaded\_view\_android.png)
+![img.png](../../.gitbook/assets/uploaded\_view\_android.png)
 
 2. Select the testers group you want to share with. Once saved, you can copy the link and share the same with the testers to test the APK or App bundle.
 
-![img.png](../.gitbook/assets/internal\_testers\_select\_android.png)
+![img.png](../../.gitbook/assets/internal\_testers\_select\_android.png)
 
 3. You are required to manually share the link with the testers as they will not receive any notifications when a new build is uploaded.
 
@@ -351,11 +351,11 @@ A Google play console developer account is a must to publish builds in PlayConso
 
 > Testers must be added to internal testers group in Play console.
 
-![img.png](../.gitbook/assets/internal\_testers\_select\_android.png)
+![img.png](../../.gitbook/assets/internal\_testers\_select\_android.png)
 
 2. To deploy the Android build to PlayConsole, select `Android Custom Build` workflow from github actions.
 
-![img.png](../.gitbook/assets/inji\_android\_github\_actions.png)
+![img.png](../../.gitbook/assets/inji\_android\_github\_actions.png)
 
 3. Choose the branch, backend url, theme and describe about build details.
 4. Click the `Run` workflow button.
@@ -372,7 +372,7 @@ _**Note**_: Only those who are registered in the selected testers group will be 
 
 #### Step 1:
 
-Follow the [Steps](build-and-deployment.md#installation-and-keystore-generation-on-mac) to configure Node & npm, Expo and generate debug keystore
+Follow the [Steps](./#installation-and-keystore-generation-on-mac) to configure Node & npm, Expo and generate debug keystore
 
 #### Step 2:
 
@@ -413,7 +413,7 @@ npm run ios -- --device
 
 The beta version of the build can be uploaded to `TestFlight` for testing. TestFlight allows the creation of internal and external testing teams who will be notified once a new build is published.
 
-![Testflight testers](../.gitbook/assets/img.png)
+![Testflight testers](../../.gitbook/assets/img.png)
 
 **Publishing build manually to TestFlight**
 
@@ -425,17 +425,17 @@ An Apple developer account is a must to publish builds in TestFlight.
 
 First choose `Distribute App`.
 
-![img.png](../.gitbook/assets/archive.png)
+![img.png](../../.gitbook/assets/archive.png)
 
 **Upload in TestFlight**
 
-![img.png](../.gitbook/assets/upload.png)
+![img.png](../../.gitbook/assets/upload.png)
 
-![img.png](../.gitbook/assets/uploading.png)
+![img.png](../../.gitbook/assets/uploading.png)
 
 1. Login to TestFlight and check for the build upload status. Once the build is uploaded successfully, add `Groups` to provide access to testers.
 
-![img.png](../.gitbook/assets/testflight\_testers\_group.png)
+![img.png](../../.gitbook/assets/testflight\_testers\_group.png)
 
 2. All the group members will be notified about the new build. Open TestFlight and install the new version.
 
@@ -445,14 +445,14 @@ An Apple developer account must be configured to Inji app to publish builds via 
 
 > Testers must be added to group in TestFlight.
 
-![img.png](../.gitbook/assets/testflight\_testers\_group.png)
+![img.png](../../.gitbook/assets/testflight\_testers\_group.png)
 
 1. To deploy the iOS build to testflight, select `Inji iOS build` workflow from github actions.
 
-![img.png](../.gitbook/assets/inji\_ios\_github\_actions.png)
+![img.png](../../.gitbook/assets/inji\_ios\_github\_actions.png)
 
 2. Choose the branch, backend URL, theme, testers group from TestFlight to get the build and describe about build details.
 3. Click the `Run` workflow button.
 4. Once the pipeline has done with building the app (takes around \~25-30min), TestFlight notifies corresponding testers associated with the testers group in email about deployed build details.
 
-![img.png](../.gitbook/assets/testflight\_ios\_notification.png)
+![img.png](../../.gitbook/assets/testflight\_ios\_notification.png)
