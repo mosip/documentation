@@ -27,6 +27,7 @@ Below are the combinations that QA verified and Certified INJI Verify:
 **Upload feature Verification:**
 
 1. Windows using Edge, Firefox, and Chrome browsers.
+2. Mac using Safari browser.
 
 **Scan functionality Verification:**
 
