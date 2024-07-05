@@ -44,7 +44,7 @@ Release 0.9.0 of Inji Verify enhances usability with a mobile-responsive portal,
 
 **Assumptions or Limitations:**
 
-* **Verification Method**: We are assuming the verification method to be a DID (Decentralized Identifier). However, it can also be a direct URL key reference. This distinction is crucial for correct implementation and usage. You can refer [here](https://github.com/mosip/inji-verify/blob/c32f37b1df3c99fc9ecda12af573e73083e02111/inji-verify/src/utils/verification-utils.js#L7).
+* **Verification Method**: We are assuming the verification method currently only works with DID (Decentralized Identifier). However, it can also be a direct URL key reference. This distinction is crucial for correct implementation and usage. You can look at the specific code handling this verification method [here](https://github.com/mosip/inji-verify/blob/c32f37b1df3c99fc9ecda12af573e73083e02111/inji-verify/src/utils/verification-utils.js#L7).
 
 This release represents a significant step forward in improving functionality, usability, and compatibility within Inji Verify.
 

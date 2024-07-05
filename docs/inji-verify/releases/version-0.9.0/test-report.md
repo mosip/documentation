@@ -33,7 +33,7 @@ Below are the combinations that QA verified and Certified INJI Verify:
 
 1. MAC (Laptop) with a front camera of 2 megapixels and Safari browser.
 2. Mobile phone Android with camera 16 megapixel using browsers Chrome.
-3. iPhone with 12-megapixel camera using Safari browser.
+3. iPhone with 24-megapixel camera using Safari browser.
 
 {% hint style="info" %}
 Note: Unable to verify Scan functionality in Windows.
@@ -82,6 +82,34 @@ Below are the test metrics by performing functional testing. The process followe
 Here is the detailed breakdown of metrics for each module:
 
 <table><thead><tr><th width="206">Module</th><th width="156">Total Test Cases</th><th>Passed</th><th>Failed</th><th>Skipped</th></tr></thead><tbody><tr><td>Inji Verify UI Verification</td><td>253</td><td>198</td><td>39</td><td>16</td></tr></tbody></table>
+
+### Test results for Upload and Scan
+
+#### Windows
+
+<table><thead><tr><th width="116">Windows</th><th width="141">Upload button</th><th width="146">Upload feature</th><th>Scan Button</th><th width="157">Scan Feature</th><th>Overall layout</th></tr></thead><tbody><tr><td>Firefox</td><td>Pass</td><td>Pass</td><td>Pass</td><td>In-consistent (Camera resolutions)</td><td>Pass</td></tr><tr><td>Edge</td><td>Pass</td><td>Pass</td><td>Pass</td><td>In-consistent (Camera resolutions)</td><td>Pass</td></tr><tr><td>Safari</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td></tr><tr><td>Chrome</td><td>Pass</td><td>Pass</td><td>Pass</td><td>In-consistent (Camera resolutions)</td><td>Pass</td></tr></tbody></table>
+
+#### MAC
+
+<table><thead><tr><th width="107">MAC</th><th width="147">Upload button</th><th>Upload feature</th><th>Scan Button</th><th>Scan Feature</th><th>Overall layout</th></tr></thead><tbody><tr><td>Firefox</td><td>Pass</td><td>Pass</td><td>Pass</td><td>Pass</td><td>Pass</td></tr><tr><td>Edge</td><td>Pass</td><td>Pass</td><td>Pass</td><td>Pass</td><td>Pass</td></tr><tr><td>Safari</td><td>Pass</td><td>Pass</td><td>Pass</td><td>Pass</td><td>Pass</td></tr><tr><td>Chrome</td><td>Pass</td><td>Pass</td><td>Pass</td><td>Pass</td><td>Pass</td></tr></tbody></table>
+
+#### iPhone
+
+| IPhone  | Upload button | Upload feature | Scan Button | Scan Feature | Overall layout |
+| ------- | ------------- | -------------- | ----------- | ------------ | -------------- |
+| Firefox | Pass          | Pass           | Pass        | Pass         | Pass           |
+| Edge    | Pass          | Pass           | Pass        | Pass         | Pass           |
+| Safari  | Pass          | Pass           | Pass        | Pass         | Pass           |
+| Chrome  | Pass          | Pass           | Pass        | Pass         | Pass           |
+
+#### Android
+
+| Android | Upload button | Upload feature | Scan Button | Scan Feature | Overall layout |
+| ------- | ------------- | -------------- | ----------- | ------------ | -------------- |
+| Firefox | Pass          | Pass           | Pass        | Pass         | Pass           |
+| Edge    | Pass          | Pass           | Pass        | Pass         | Pass           |
+| Safari  | NA            | NA             | NA          | NA           | NA             |
+| Chrome  | Pass          | Pass           | Pass        | Pass         | Pass           |
 
 ### Detailed Test metrics
 
