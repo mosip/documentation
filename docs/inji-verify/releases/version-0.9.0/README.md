@@ -42,7 +42,7 @@ Release 0.9.0 of Inji Verify enhances usability with a mobile-responsive portal,
 
 * **Chrome, Edge, Safari, and Firefox**: Full support for both scan and upload features, ensuring a seamless user experience across these popular browsers.
 
-**8. Assumptions or Limitations**
+**Assumptions or Limitations:**
 
 * **Verification Method**: We are assuming the verification method to be a DID (Decentralized Identifier). However, it can also be a direct URL key reference. This distinction is crucial for correct implementation and usage. You can refer [here](https://github.com/mosip/inji-verify/blob/c32f37b1df3c99fc9ecda12af573e73083e02111/inji-verify/src/utils/verification-utils.js#L7).
 

@@ -9,15 +9,15 @@ If you are looking to try out Inji Verify in our Collab environment, please foll
 1. To obtain sample verifiable credentials embedded in a QR code, please initiate the process by following the steps to generate the QR code, click [**here**](https://docs.mosip.io/inji/inji-verify/build-and-deploy/creating-verifiable-credentials-and-generating-qr-codes)!
 2. To use the QR code with verifiable credentials and test out the Inji Verify application, exploring the scan and upload features, please use the QR codes provided below:
 
-### **Verifiable QR Code 1**
+### **Verifiable QR Code - Valid VC**
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/Birth Certificate.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Birth Certificate.png" alt="" width="375"><figcaption><p>Valid Verifiable Credentials</p></figcaption></figure>
 
 </div>
 
-### **Sample QR code VC Data 1 -**
+### **Sample QR code - Valid VC Data**&#x20;
 
 ```json
 {
@@ -74,15 +74,15 @@ If you are looking to try out Inji Verify in our Collab environment, please foll
 }
 ```
 
-### **Verifiable QR Code 2**
+### **Verifiable QR Code - Expired VC**
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/response_2_v21.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/response_2_v21.png" alt="" width="375"><figcaption><p>Expired Verifiable Credentials </p></figcaption></figure>
 
 </div>
 
-### **Sample QR code VC Data 2 -**
+### **Sample QR code - Expired VC Data** &#x20;
 
 ```json
 {
@@ -131,59 +131,55 @@ If you are looking to try out Inji Verify in our Collab environment, please foll
 }
 ```
 
-### **Verifiable QR Code 3**
+### **Verifiable QR Code - Invalid VC**
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/response_1_v22 (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Verifiable QR Code - Invalid VC.png" alt="" width="375"><figcaption><p>Invalid Verifiable Credential</p></figcaption></figure>
 
 </div>
 
-### **Sample QR code VC Data 3 -**
+### **Sample QR code - Invalid VC Data**&#x20;
 
 ```json
 {
-    "id": "did:rcw:65485cc0-505c-4729-a293-ac449460be86",
+    "id": "did:cbse:327b6c3f-ce17-4c00-ae4f-7fb2313b0626",
     "type": [
         "VerifiableCredential",
-        "LifeInsuranceCredential",
-        "InsuranceCredential"
+        "UniversityDegreeCredential"
     ],
     "proof": {
         "type": "Ed25519Signature2020",
-        "created": "2024-05-03T12:49:45Z",
-        "proofValue": "z39xjuB92GHEqzVSW3GrrhJAH1fjRDEeAd48cWjnPQwjSw7Sbo5qD8AfJ8P8qgYcnx5ak7EsdQ3fEhEqijcCYYHVD",
+        "created": "2024-05-16T07:27:43Z",
+        "proofValue": "z56crqnnjmvDa46FqmAnVhEttqKtFMTQ1et1mM5dA3WSHtb5ncQ36sS8fG3fxw6dpvtqbqvaE5FzaqwJTBX6dGH3P",
         "proofPurpose": "assertionMethod",
-        "verificationMethod": "did:web:challabeehyv.github.io:DID-Resolve:3313e611-d08a-49c8-b478-7f55eafe62f2#key-0"
+        "verificationMethod": "did:web:Sreejit-K.github.io:VCTest:d40bdb68-6a8d-4b71-9c2a-f3002513ae0e#key-0"
     },
-    "issuer": "did:web:challabeehyv.github.io:DID-Resolve:3313e611-d08a-49c8-b478-7f55eafe62f2",
+    "issuer": "did:web:Sreejit-K.github.io:VCTest:d40bdb68-6a8d-4b71-9c2a-f3002513ae0e",
     "@context": [
         "https://www.w3.org/2018/credentials/v1",
-        "https://holashchand.github.io/test_project/insurance-context.json",
-        {
-            "LifeInsuranceCredential": {
-                "@id": "InsuranceCredential"
-            }
-        },
+        "https://sreejit-k.github.io/VCTest/udc-context2.json",
         "https://w3id.org/security/suites/ed25519-2020/v1"
     ],
-    "issuanceDate": "2024-05-03T12:49:45.705Z",
-    "expirationDate": "2024-06-02T12:49:45.689Z",
+    "issuanceDate": "2023-02-06T11:56:27.259Z",
+    "expirationDate": "2025-02-08T11:56:27.259Z",
     "credentialSubject": {
-        "id": "did:jwk:eyJrdHkiOiJFQyIsInVzZSI6InNpZyIsImNydiI6IlAtMjU2Iiwia2lkIjoiVzN2LXRnUWJqaGRUQnBpb3FjQXYzVXpKRzdEN3RLVU55SG0waTVteDZ4QSIsIngiOiIwaW93MHgzc09HVHY0S0VhZU5XRUluMU15MGpXbGdMdWZ5RzNwd0YzcHhZIiwieSI6IjFWQ21rUFhfck9UeGh3MXR0MDh2bGVGRmpCSldWb2dhbWxmNjk1blVRbG8iLCJhbGciOiJFUzI1NiJ9",
-        "dob": "1967-12-15",
-        "email": "abhishek@gmail.com",
-        "gender": "Male",
-        "mobile": "0123456789",
-        "benefits": [
-            "Critical Surgery",
-            "Full body checkup"
-        ],
-        "fullName": "Abhishek Gurgo",
-        "policyName": "Start Insurance Gold Premium",
-        "policyNumber": "1234567",
-        "policyIssuedOn": "2023-04-20T20:48:17.684Z",
-        "policyExpiresOn": "2033-04-20T20:48:17.684Z"
+        "id": "did:example:2002-AR-015678",
+        "type": "UniversityDegreeCredential",
+        "ChildFullName": "Alex Jameson Taylor",
+        "ChildDob": "January 15, 2003",
+        "ChildGender": "Male",
+        "ChildNationality": "Arandian",
+        "ChildPlaceOfBirth": "Central Hospital, New Valera, Arandia",
+        "FatherFullName": "Michael David Taylor",
+        "FatherDob": "April 22, 1988",
+        "FatherNationality": "Arandian",
+        "MotherFullName": "Emma Louise Taylor",
+        "MotherDob": "June 5, 1990",
+        "MotherNationality": "Arandian",
+        "RegistrationNumber": "2002-AR-015678",
+        "DateOfRegistration": "January 20, 2002",
+        "DateOfIssuance": "January 22, 2002"
     }
 }
 ```

@@ -13,9 +13,16 @@ Let's briefly explore the key components that constitute Inji Verify:
 
 * Inji Verify offers functionalities for both scanning QR codes and uploading QR code files. Users interact with the portal to initiate the verification process and view the results.
 
-1. **Pixel-Pass Library:** The [**Pixel-Pass Library**](https://www.npmjs.com/package/@mosip/pixelpass/v/0.1.4) is a set of software tools and utilities designed to assist in the decoding of QR codes. It provides functions and algorithms to interpret the data encoded within QR codes accurately.&#x20;
-   * The [**Pixel-Pass Library**](https://www.npmjs.com/package/@mosip/pixelpass/v/0.1.4) is integrated into Inji Verify to handle the decoding of QR code data received from scanned images or uploaded files.
-2. **Pixel-Pass SDK:** The Pixel-Pass SDK is a comprehensive package of software tools, and libraries provided to developers to facilitate the integration of Pixel-Pass functionality into their applications.&#x20;
-   * In the context of Inji Verify, the Pixel-Pass SDK is utilized to pass the decoded data for verification to the SDK.&#x20;
-3. **Verification SDK:** The Verification SDK is a software toolkit used for verifying the authenticity and validity of Verifiable Credentials. It contains algorithms, cryptographic functions, and validation methods required to ensure the integrity of credential data.
-   * The Verification SDK is employed within Inji Verify to perform verification checks on the decoded data obtained from QR codes. It validates the information against predefined criteria and standards to determine the legitimacy of the presented credentials and shows the VC properties.
+2. **Pixel-Pass Library:** The [**Pixel-Pass Library** ](https://www.npmjs.com/package/@mosip/pixelpass/v/0.1.6)is a set of software tools and utilities designed to assist in the decoding of QR codes. It provides functions and algorithms to interpret the data encoded within QR codes accurately.&#x20;
+
+* The [**Pixel-Pass Library**](https://www.npmjs.com/package/@mosip/pixelpass/v/0.1.6) is integrated into Inji Verify to handle the decoding of QR code data received from scanned images or uploaded files.
+
+3. **Pixel-Pass SDK:** The Pixel-Pass SDK is a comprehensive package of software tools, and libraries provided to developers to facilitate the integration of Pixel-Pass functionality into their applications.&#x20;
+
+* In the context of Inji Verify, the Pixel-Pass SDK is utilized to pass the decoded data for verification to the SDK.&#x20;
+
+4. **Verification SDK:** The Verification SDK is a software toolkit used for verifying the authenticity and validity of Verifiable Credentials. It contains algorithms, cryptographic functions, and validation methods required to ensure the integrity of credential data.
+
+* The Verification SDK is employed within Inji Verify to perform verification checks on the decoded data obtained from QR codes. It validates the information against predefined criteria and standards to determine the legitimacy of the presented credentials and shows the VC properties.
+* **Assumptions or Limitations:**
+  * **Verification Method**: We are assuming the verification method to be a DID (Decentralized Identifier). However, it can also be a direct URL key reference. This distinction is crucial for correct implementation and usage. You can refer [here](https://github.com/mosip/inji-verify/blob/c32f37b1df3c99fc9ecda12af573e73083e02111/inji-verify/src/utils/verification-utils.js#L7).
