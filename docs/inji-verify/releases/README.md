@@ -4,7 +4,7 @@ Version: 0.9.0
 
 * Name: Inji Verify v0.9.0
 * Date: 5th July 2024
-* [**Release Notes**](https://app.gitbook.com/o/-M1FyzBr-VmticWYm8QI/s/aY8BQ4hdzhSchZV814Ev/\~/changes/511/inji-verify/releases/version-0.9.0)
+* [**Release Notes**](https://docs.mosip.io/inji/inji-verify/releases/version-0.9.0/test-report)
 
 Version: 0.8.1
 
