@@ -70,22 +70,22 @@ Verification is performed on various configurations as mentioned below
 
 ### Functional test results <a href="#id-2s8eyo1" id="id-2s8eyo1"></a>
 
-Below are the test metrics by performing functional testing. The process followed was black box testing which based its test cases on the specifications of the software component under test. Functional test was performed in combination of individual module testing as well as integration testing. Test data were prepared in line with the user stories. Expected results were monitored by examining the user interface. The coverage includes GUI testing, System testing, End-To-End flows across multiple configurations. The testing cycle included simulation of multiple identity schema and respective UI schema configurations.
+Below are the test metrics by performing functional testing. The process followed was black box testing which based its test cases on the specifications of the software component under test. The functional test was performed in combination with individual module testing as well as integration testing. Test data were prepared in line with the user stories. Expected results were monitored by examining the user interface. The coverage includes GUI testing, System testing, End-To-End flows across multiple configurations. The testing cycle included the simulation of multiple identity schema and respective UI schema configurations.
 
 <table><thead><tr><th width="330">Total</th><th>Passed</th><th>Failed</th><th>Skipped</th></tr></thead><tbody><tr><td>104</td><td>68</td><td>33</td><td>3</td></tr><tr><td>Test Rate: 97%, With Pass Rate: 67%</td><td></td><td></td><td></td></tr></tbody></table>
 
 Here is the detailed breakdown of metrics for each module:
 
-|                              |         | Test cases |
-| ---------------------------- | ------- | ---------- |
-|  Inji Web Ui    Verification | Total   | 104        |
-|                              | Passed  | 68         |
-|                              | Failed  | 33         |
-|                              | Skipped | 3          |
+|                |         | Test cases |
+| -------------- | ------- | ---------- |
+| Inji Verify UI | Total   | 104        |
+|                | Passed  | 68         |
+|                | Failed  | 33         |
+|                | Skipped | 3          |
 
 ### Detailed Test metrics <a href="#id-26in1rg" id="id-26in1rg"></a>
 
-Below are the detailed test metrics by performing manual/automation testing. The project metrics are derived from Defect density, Test coverage, Test execution coverage, test tracking and efficiency.
+Below are the detailed test metrics by performing manual/automation testing. The project metrics are derived from Defect density, Test coverage, Test execution coverage, test tracking, and efficiency.
 
 The various metrics that assist in test tracking and efficiency are as follows:
 
@@ -94,5 +94,3 @@ The various metrics that assist in test tracking and efficiency are as follows:
 ●  Failed Test Case Coverage: It measures the percentage of all the failed test cases. (Number of failed tests / Total number of test cases executed) x 100.
 
 Inji-Verify 0.8.0 - Verification - Report
-
-&#x20;

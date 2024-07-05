@@ -4,7 +4,7 @@
 
 **Support**: Developer Release
 
-**Release Date**: Coming Soon
+**Release Date**: 5th July 2024
 
 ### **Overview**
 
@@ -52,7 +52,7 @@ This release represents a significant step forward in improving functionality, u
 
 | Repositories       | Tags Released                                                        |
 | ------------------ | -------------------------------------------------------------------- |
-| Inji Verify        | **v0.9.0**                                                           |
+| Inji Verify        | [**v0.9.0**](https://github.com/mosip/inji-verify/tree/v0.9.0)       |
 | Pixel-Pass Library | [**v0.1.6**](https://www.npmjs.com/package/@mosip/pixelpass/v/0.1.6) |
 
 ### **Known Issues**
@@ -96,4 +96,4 @@ Below is the list of fixes as part of the **0.9.0** release:
 
 * [Feature documentation](https://docs.mosip.io/inji/inji-verify/functional-overview/features)
 * [User guide](https://docs.mosip.io/inji/inji-verify/functional-overview/end-user-guide)
-* [QA Report](https://app.gitbook.com/o/-M1FyzBr-VmticWYm8QI/s/aY8BQ4hdzhSchZV814Ev/\~/changes/514/inji-verify/releases/version-0.9.0/test-report)
+* [QA Report](https://docs.mosip.io/inji/inji-verify/releases/version-0.9.0/test-report)
