@@ -8,14 +8,14 @@ Biometric devices capture individuals' biometric data (fingerprint, iris scan, p
 
 ## Device types
 
-| Purpose        | Type        | Subtype\*             | Certification | Specification                              |
-| -------------- | ----------- | --------------------- | ------------- | ------------------------------------------ |
-| Registration   | Fingerprint | Slap scanner          | SBI 1.0       | [Fingerprint image spec](broken-reference) |
-| Registration   | Iris        | Double eye scanner    | SBI 1.0       | [Iris image spec](broken-reference)        |
-| Registration   | Face        | Camera                | SBI 1.0       | [Face image spec](broken-reference)        |
-| Authentication | Fingerprint | Single finger scanner | SBI 2.0       | [Fingerprint image spec](broken-reference) |
-| Authentication | Iris        | Single eye scanner    | SBI 2.0       | [Iris image spec](broken-reference)        |
-| Authentication | Face        | Camera                | SBI 2.0       | [Face image spec](broken-reference)        |
+| Purpose        | Type        | Subtype\*             | Certification | Specification                               |
+| -------------- | ----------- | --------------------- | ------------- | ------------------------------------------- |
+| Registration   | Fingerprint | Slap scanner          | SBI 1.0       | [Fingerprint image spec](broken-reference/) |
+| Registration   | Iris        | Double eye scanner    | SBI 1.0       | [Iris image spec](broken-reference/)        |
+| Registration   | Face        | Camera                | SBI 1.0       | [Face image spec](broken-reference/)        |
+| Authentication | Fingerprint | Single finger scanner | SBI 2.0       | [Fingerprint image spec](broken-reference/) |
+| Authentication | Iris        | Single eye scanner    | SBI 2.0       | [Iris image spec](broken-reference/)        |
+| Authentication | Face        | Camera                | SBI 2.0       | [Face image spec](broken-reference/)        |
 
 \* An adopter may choose to have different subtypes, however, the certification needs to be adhered to.
 
@@ -29,7 +29,7 @@ Biometric devices capture individuals' biometric data (fingerprint, iris scan, p
 
 ## SBI test kit
 
-[SBI](broken-reference) compliance of a device may be tested using an [MDS testing kit](https://github.com/mosip/mds-testing-kit).
+[SBI](broken-reference/) compliance of a device may be tested using an [Compliance Tool Kit (CTK)](https://docs.mosip.io/compliance-tool-kit).
 
 ## Devices calculator
 
