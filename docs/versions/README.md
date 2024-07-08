@@ -4,7 +4,7 @@
 
 * Name: eSignet(Patch)
 * Date: Coming Soon
-* [Release Notes](v1.4.1.md)
+* [Release Notes](v1.4.1/)
 
 ## Version: 1.4.0
 

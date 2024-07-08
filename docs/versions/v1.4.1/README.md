@@ -27,7 +27,7 @@ This release focuses on addressing the known issues from our previous releases a
 | artifactory-ref-impl  | [v1.4.1-ES](https://github.com/mosip/artifactory-ref-impl/tree/release-1.4.1-ES) |
 | eSignet Signup        | [v1.0.2](https://github.com/mosip/esignet-signup/tree/release-1.0.x)             |
 
-For details on deployment, refer to the helm charts in the eSignet repository.
+For details on deployment, refer to the [helm charts](https://github.com/mosip/esignet/tree/v1.4.1/helm) in the eSignet repository.
 
 **Known Issues**
 
@@ -50,4 +50,4 @@ Please refer to [this link](https://mosip.atlassian.net/jira/software/c/projects
 * [Integration Guides](https://docs.esignet.io/integration)
 * [End User Guide](https://docs.esignet.io/end-user-guide)
 * [API Documentation](https://github.com/mosip/esignet/blob/v1.4.0/docs/esignet-openapi.yaml)
-* QA Report - **To be updated**
+* [QA Report ](https://app.gitbook.com/o/-M1FyzBr-VmticWYm8QI/s/ylzvZHp30DQ3rNCClELV/\~/changes/156/versions/v1.4.1/test-report)
