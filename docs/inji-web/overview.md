@@ -2,7 +2,7 @@
 
 ### What is Inji Web?
 
-Inji Web, akin to the [Inji Mobile Wallet](https://docs.mosip.io/inji/inji-mobile-wallet/overview), is a user-friendly web portal designed to facilitate the process of **securely downloading**, **storingy**, **managing** and **sharing Verifiable Credentials** through a web interface. This easy-to-use platform enables users to access and store their credentials, ensuring confident presentation to service providers for verification and service access, with ease and reliability. Rooted by the principles of inclusivity, Inji Web endeavors to empower individuals to access benefits or services even without smartphones. 
+Inji Web, akin to the [Inji Mobile Wallet](https://docs.mosip.io/inji/inji-mobile-wallet/overview), is a user-friendly web portal designed to facilitate the process of **securely downloading**, **storing**, **managing** and **sharing Verifiable Credentials** through a web interface. This easy-to-use platform enables users to access and store their credentials, ensuring confident presentation to service providers for verification and service access, with ease and reliability. Rooted by the principles of inclusivity, Inji Web endeavors to empower individuals to access benefits or services even without smartphones. 
 
 With its simple and intuitive interface, Inji Web offers features similar to the mobile wallet, catering to a variety of use cases. Whether you are a resident needing VCs for identity verification, a student seeking academic credentials, a professional verifying employment, or an organization enhancing business operations, Inji Web provides easy access to your credentials tailored to your specific needs.
 
