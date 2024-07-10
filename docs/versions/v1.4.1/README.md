@@ -50,4 +50,4 @@ Please refer to [this link](https://mosip.atlassian.net/jira/software/c/projects
 * [Integration Guides](https://docs.esignet.io/integration)
 * [End User Guide](https://docs.esignet.io/end-user-guide)
 * [API Documentation](https://github.com/mosip/esignet/blob/v1.4.0/docs/esignet-openapi.yaml)
-* [QA Report ](https://app.gitbook.com/o/-M1FyzBr-VmticWYm8QI/s/ylzvZHp30DQ3rNCClELV/\~/changes/156/versions/v1.4.1/test-report)
+* [QA Report ](https://docs.esignet.io/versions/v1.4.1/test-report)
