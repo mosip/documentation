@@ -43,7 +43,7 @@ Below are the details for the **Inji Version 0.9.0** release:
 | ---------------- | --------------------------------------------------------------------------- |
 | Inji Web         | [**v0.9.0**](https://github.com/mosip/inji-web/releases/tag/v0.9.0)         |
 | mimoto           |   [**v0.13.0**](https://github.com/mosip/mimoto/releases/tag/v0.13.0)       |
-| inji-config      |  [**v0.1.0**](https://github.com/mosip/inji-config/releases/tag/v0.1.0)     |
+| inji-config      |  [**v0.1.1**](https://github.com/mosip/inji-config/releases/tag/v0.1.1)     |
 
 ## Known Issues <a href="#known-issues" id="known-issues"></a>
 
