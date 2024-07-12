@@ -27,7 +27,7 @@ Biometric devices capture individuals' biometric data (fingerprint, iris scan, p
 
 ![](\_images/devices-authentication.png)
 
-## SBI test kit
+## Compliance test kit
 
 Compliance of a device may be tested using an [Compliance Tool Kit (CTK)](https://docs.mosip.io/compliance-tool-kit).
 
