@@ -8,14 +8,14 @@ Biometric devices capture individuals' biometric data (fingerprint, iris scan, p
 
 ## Device types
 
-| Purpose        | Type        | Subtype\*             | Certification | Specification                               |
-| -------------- | ----------- | --------------------- | ------------- | ------------------------------------------- |
-| Registration   | Fingerprint | Slap scanner          | SBI 1.0       | [Fingerprint image spec](broken-reference/) |
-| Registration   | Iris        | Double eye scanner    | SBI 1.0       | [Iris image spec](broken-reference/)        |
-| Registration   | Face        | Camera                | SBI 1.0       | [Face image spec](broken-reference/)        |
-| Authentication | Fingerprint | Single finger scanner | SBI 2.0       | [Fingerprint image spec](broken-reference/) |
-| Authentication | Iris        | Single eye scanner    | SBI 2.0       | [Iris image spec](broken-reference/)        |
-| Authentication | Face        | Camera                | SBI 2.0       | [Face image spec](broken-reference/)        |
+| Purpose        | Type        | Subtype\*             | Certification | Specification                                                                                        |
+| -------------- | ----------- | --------------------- | ------------- | ---------------------------------------------------------------------------------------------------- |
+| Registration   | Fingerprint | Slap scanner          | SBI 1.0       | [Fingerprint image spec](https://docs.mosip.io/1.1.5/biometrics/biometric-specification#fingerprint) |
+| Registration   | Iris        | Double eye scanner    | SBI 1.0       | [Iris image spec](https://docs.mosip.io/1.1.5/biometrics/biometric-specification#iris)               |
+| Registration   | Face        | Camera                | SBI 1.0       | [Face image spec](https://docs.mosip.io/1.1.5/biometrics/biometric-specification#face-capture)       |
+| Authentication | Fingerprint | Single finger scanner | SBI 2.0       | [Fingerprint image spec](https://docs.mosip.io/1.1.5/biometrics/biometric-specification#fingerprint) |
+| Authentication | Iris        | Single eye scanner    | SBI 2.0       | [Iris image spec](https://docs.mosip.io/1.1.5/biometrics/biometric-specification#iris)               |
+| Authentication | Face        | Camera                | SBI 2.0       | [Face image spec](https://docs.mosip.io/1.1.5/biometrics/biometric-specification#face-capture)       |
 
 \* An adopter may choose to have different subtypes, however, the certification needs to be adhered to.
 
