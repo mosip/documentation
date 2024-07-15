@@ -73,3 +73,15 @@ In order to remove a language from eSignet, you can go through the below article
 
 [How to remove a language from the eSignet default setup?](../../faq/#how-to-remove-a-language-from-the-esignet-default-setup)
 {% endhint %}
+
+## VC Issuance plugin implementation for Sunbird RC
+
+Content will be updated soon
+
+## Authenticator plugin implementation for KBI Sunbird RC
+
+Content will be updated soon
+
+## Changes in eSignet UI to support KBI
+
+Content will be updated soon
