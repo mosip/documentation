@@ -2,7 +2,7 @@
 
 **Release Name**: v.1.4.1 (Patch)
 
-**Release Date**: Coming Soon
+**Release Date**: 15th July, 2024
 
 ### Overview
 

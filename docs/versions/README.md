@@ -3,7 +3,7 @@
 ## Version: 1.4.1
 
 * Name: eSignet(Patch)
-* Date: Coming Soon
+* Date: 15th July, 2024
 * [Release Notes](v1.4.1/)
 
 ## Version: 1.4.0
