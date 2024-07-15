@@ -32,13 +32,13 @@ The verification methods may differ based on how the need was addressed.
 
 For regression check, “MOSIP Test Rig” - an automation testing suite - is indigenously designed and developed for supporting persona based testing. MOSIP Test Rig covers the end to end test execution and reporting. The end to end functional test scenarios are written starting from pre-registration, to the creation of the packet in the registration center, processing the packet through the registration process, generating UIN, and authenticating identity using IDA through various permutations and combinations of cases being covered. MOSIP Test Rig will be an open source artifact that can also be enhanced and used by countries to validate the SI deliveries before going live. Persona classes include both negative and positive personas. Negative persona classes include users like Bribed Registration Office, Malicious Insider, etc. The needs of positive persona classes must be met, whereas the needs of negative persona classes must be effectively restricted by the software.
 
-## Verified configuration <a href="#heading-h.tyjcwt" id="heading-h.tyjcwt"></a>
+## Verified Configuration <a href="#heading-h.tyjcwt" id="heading-h.tyjcwt"></a>
 
 Verification is performed on various configurations as mentioned below
 
-&#x20;    ●        Default configuration - with 7 Lang (English/Khmer/Hindi/Kannada/Tamil/Arabic/French).
+&#x20;    ●  Default configuration - with 7 Lang (English/Khmer/Hindi/Kannada/Tamil/Arabic/French).
 
-## Main feature tested:
+## Main Features Tested:
 
 * Signup Portal
 * Login with Password
@@ -51,9 +51,9 @@ Verification is performed on various configurations as mentioned below
 
 <figure><img src="../../.gitbook/assets/Feature Health - eSignet.png" alt=""><figcaption><p>Feature Health</p></figcaption></figure>
 
-## Test execution statistics
+## Test Execution Statistics
 
-### Functional test results <a href="#heading-h.x3l4xp1n67g2" id="heading-h.x3l4xp1n67g2"></a>
+### Functional Test Results <a href="#heading-h.x3l4xp1n67g2" id="heading-h.x3l4xp1n67g2"></a>
 
 Below are the test metrics by performing functional testing using mock MDS, mock Auth, and mock ABIS. The process followed was black box testing which based its test cases on the specifications of the software component under test. The functional test was performed in combination with individual module testing as well as integration testing. Test data were prepared in line with the user stories. Expected results were monitored by examining the user interface. The coverage includes GUI testing, System testing, End-To-End flows across multiple languages and configurations. The testing cycle included the simulation of multiple identity schema and respective UI schema configurations.
 
@@ -81,7 +81,7 @@ Here is the detailed breakdown:
 * Failed - 15
 * Skipped - 13
 
-### API Testrig results for eSignet and Mimoto:
+### API Testrig Results for eSignet and Mimoto:
 
 #### **API Based Testrig - eSignet**
 
@@ -97,7 +97,7 @@ Here is the detailed breakdown:
 In UI Based testing, 13 test cases are marked as skipped as they were enhancement test cases.
 {% endhint %}
 
-### Detailed Test metrics
+### Detailed Test Metrics
 
 Below are the detailed test metrics by performing manual/automation testing. The project metrics are derived from Defect density, Test coverage, Test execution coverage, test tracking, and efficiency.
 
