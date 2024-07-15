@@ -44,7 +44,7 @@ To ensure successful verification, devices used for scanning QR codes must meet 
 
 #### **QR Code Version Compatibility:**
 
-For successful verification using the scan feature, the verifiable credential (VC) should be encoded in QR code versions 27 and below. More details on QR code compatibility can be found in the Functional Overview Section \[here]\(Link to the Functional Overview Section).
+For successful verification using the scan feature, the verifiable credential (VC) should be encoded in QR code versions 27 and below. More details on QR code compatibility can be found in the [Functional Overview Section](functional-overview/).
 
 #### **Conclusion**
 
