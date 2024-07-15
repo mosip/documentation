@@ -6,7 +6,7 @@
 
 ### Overview
 
-This release focuses on incorporating features related to VC issuance plug-in pertaining to Sunbird RC, and Knowledge Based Identification (KBI) authentication, alongside addressing critical known issues from our previous releases.
+This release focuses on incorporating features related to VC issuance plug-in pertaining to Sunbird RC, enhancing configuration capabilities for Knowledge-Based Identification (KBI), and addressing critical known issues from our previous releases.
 
 **1. Features included**
 
@@ -24,9 +24,9 @@ b. Enhanced and user friendly error messages.
 
 **3. Fixes for known issues from v1.3.0**
 
-a. Critical & major bug fixes relating to eSignet service.
+a. Critical & major bug fixes related to eSignet service.
 
-b. Critical & major bug fixes relating to the eSignet Signup service.
+b. Critical & major bug fixes related to the eSignet Signup service.
 
 Please refer to [this link](https://mosip.atlassian.net/jira/software/c/projects/ES/issues/?jql=%22Release%20Number%5BLabels%5D%22%20in%20\(esignet\_v1.4.1\)%20and%20issuetype%3DBug) for the list of all bugs addressed as part of this release.
 
