@@ -7,7 +7,7 @@
   * [Standards](overview/Standards/README.md)
   * [Components](overview/components/README.md)
   * [Technology Stack](overview/technology-stack/README.md)
-* [Try it out](try-it-out/README.md)
+* [Try It Out](try-it-out/README.md)
   * [Using Mock Data](try-it-out/using-mock-data.md)
   * [Register Yourself](try-it-out/register-yourself.md)
   * [Integrate with eSignet](try-it-out/integrate-with-e-signet.md)
