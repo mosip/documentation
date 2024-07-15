@@ -10,7 +10,7 @@ This release focuses on incorporating features related to VC issuance plug-in pe
 
 **1. Features included**
 
-a. [VC Issuance plugin implementation for Sunbird RC.](../../overview/features/#vcissuance-plugin-implementation-for-sunbird-rc)
+a. [VC Issuance plugin implementation for Sunbird RC.](../../overview/features/#vc-issuance-plugin-implementation-for-sunbird-rc)
 
 b. [Authenticator plugin implementation for KBI with Sunbird RC.](../../overview/features/#authenticator-plugin-implementation-for-kbi-sunbird-rc)
 
