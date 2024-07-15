@@ -37,7 +37,7 @@ For details on deployment, refer to the [helm charts](https://github.com/mosip/e
 | --------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | [ES-903](https://mosip.atlassian.net/browse/ES-903) | Intermittent issue faced in Biometric Login when used in certain organization/domain specific laptops |
 
-* Please refer to [this link](https://mosip.atlassian.net/jira/software/c/projects/ES/issues/?jql=labels%20%3D%20known-issue-eSignet-v1.4.1) for the list of all known issues.
+Please refer to [this link](https://mosip.atlassian.net/jira/software/c/projects/ES/issues/?jql=labels%20%3D%20known-issue-eSignet-v1.4.1) for the list of all known issues.
 
 \
 **Bug Fixes**
