@@ -289,8 +289,8 @@ mosip.esignet.authenticator.default.auth-factor.kba.individual-id-field=policyNu
 
 <details>
 
-<summary>How to implement changes in eSignet UI to support KBI</summary>
+<summary>How to configure KBI form in eSignet UI</summary>
 
-To know more about How to implement changes in eSignet UI to support KBI please refer [here](https://github.com/mosip/digital-credential-plugins/blob/master/sunbird-rc-esignet-integration-impl/README.md)
+To know more about how to configure KBI Form in eSiget please refer [here](https://github.com/mosip/digital-credential-plugins/blob/master/sunbird-rc-esignet-integration-impl/README.md)
 
 </details>
