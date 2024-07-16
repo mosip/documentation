@@ -40,14 +40,6 @@ To know more about Knowledge Based Identification, click [here](https://docs.esi
 
 The authenticator plugin for the Sunbird registry only supports “Knowledge Based Identification” (KBI) of the end user. The fields part of the KBI is completely dependent on the registry schema. Fields configured to be part of the KBI form should identify the end user . Denies the identification if more than one entry is found in the registry. Support is added for text and date fields. For more details on 'eSignet and Sunbird RC Integration Implementation' please refer [here](https://github.com/mosip/digital-credential-plugins/blob/master/sunbird-rc-esignet-integration-impl/README.md):&#x20;
 
-
-
-
-
-
-
-
-
 ## Verifiable Credentials Issuance
 
 Verifiable credentials (VCs) are an open standard for digital credentials. They can represent information found in physical credentials, such as a passport or license, in digital format. They have numerous advantages over physical credentials, most notably that they're digitally signed, which makes them tamper-resistant and instantly verifiable.
@@ -67,8 +59,6 @@ eSignet being an OAuth 2.0 & OIDC-based solution, it is enhanced to support OID4
 #### VC Issuance plugin implementation for Sunbird RC
 
 **Sunbird RC version:** v2.0.0-rc3
-
-**Use case:** Insurance policy Verifiable Credential (VC) download. VC format: JsonLD
 
 The access token subject is used to search the registry to create the latest up-to-date VC based on the provided credential type, credential schema, and the credential schema version input. The sunbird created VC is downloaded into the Inji wallet using eSignet OpenId4VCI flow. For more information on VC Issuance plugin implementation for Sunbird RC please refer [here](https://github.com/mosip/digital-credential-plugins/blob/master/sunbird-rc-esignet-integration-impl/README.md).
 
