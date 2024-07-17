@@ -6,11 +6,11 @@
 
 ### Overview
 
-This release focuses on incorporating features related to VC issuance plug-in pertaining to Sunbird RC, enhancing configuration capabilities for Knowledge-Based Identification (KBI), and addressing critical known issues from our previous releases.
+This release focuses on incorporating features related to VC issuance plug-ins pertaining to Sunbird RC, enhancing configuration capabilities for Knowledge-Based Identification (KBI), and addressing critical known issues from our previous releases.
 
 **1. Features included**
 
-The below two plugins have been developed to address a use case of issuance of verifiable credentials (VC issuance plugin) by authenticating/identifying the user via KBI (Knowledge Based Authentication) using the Authenticator plugin. Please find below links for more details about the plugin’s and the implemented use case called “Insurance verifiable credential” using Sunbird RC.
+The below two plugins have been developed to address a use case of issuance of verifiable credentials (VC issuance plugin) by authenticating/identifying the user via KBI (Knowledge Based Identification) using the Authenticator plugin. Please find below links for more details about the plugin’s and the implemented use case called “Insurance verifiable credential” using Sunbird RC.
 
 For more details about KBI, please refer to the link[ KBI](https://docs.esignet.io/end-user-guide/knowledge-based-authentication).
 
