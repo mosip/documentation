@@ -55,38 +55,24 @@ To begin the Registration process, the Operator is required to follow the steps 
 
 <figure><img src=".gitbook/assets/language-select-1.png" alt="" width="375"><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/language-select-2.png" alt="" width="253"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/language-select-2.png" alt="" width="380"><figcaption></figcaption></figure>
 
 4. The operator will be redirected to the Consent page, where the resident must agree to the `terms and conditions` in order to proceed.
 5. After accepting consent, the Operator will need to fill out the demographic data of the resident, including their name, age, date of birth, and address. Once all mandatory fields are completed, the **Continue** button will be enabled.
 
-<div>
+<figure><img src=".gitbook/assets/consent.png" alt="" width="375"><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/consent.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/demographic-1.png" alt="" width="375"><figcaption></figcaption></figure>
 
- 
-
-<figure><img src=".gitbook/assets/demographic-1.png" alt=""><figcaption></figcaption></figure>
-
- 
-
-<figure><img src=".gitbook/assets/demographic-2.png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<figure><img src=".gitbook/assets/demographic-2.png" alt="" width="375"><figcaption></figcaption></figure>
 
 4. Upon clicking the **Continue** button, the Operator will be navigated to the `Document upload` page where they will need to:
    * Select the type of document (e.g. proof of identity, proof of address) from the drop-down menu.
    * Enter the **Reference Number** of the document.
 
-<div>
+<figure><img src=".gitbook/assets/document-1.png" alt="" width="375"><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/document-1.png" alt=""><figcaption></figcaption></figure>
-
- 
-
-<figure><img src=".gitbook/assets/document-2.png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<figure><img src=".gitbook/assets/document-2.png" alt="" width="375"><figcaption></figcaption></figure>
 
 4. Upload the document by clicking on the **Scan** button to open the camera. The Operator can take a picture of the document and then choose from the following actions:
    * **Cancel**: Clicking on the "Cross" icon will remove the captured image and return the Operator to the previous screen.
@@ -94,15 +80,9 @@ To begin the Registration process, the Operator is required to follow the steps 
    * **Save**: Clicking on the "Save" button will save the captured image and return the Operator to the previous Document Upload page.
    * **Retake**: Clicking on the "Retake" button will remove the captured image, reopen the camera, and allow the Operator to take a new photo.
 
-<div>
+<figure><img src=".gitbook/assets/document-3.png" alt="" width="375"><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/document-3.png" alt=""><figcaption></figcaption></figure>
-
- 
-
-<figure><img src=".gitbook/assets/document-4.png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<figure><img src=".gitbook/assets/document-4.png" alt="" width="375"><figcaption></figcaption></figure>
 
 8. After ensuring all required information has been accurately entered in the `Document Upload` screen, the Operator can proceed by clicking on the **Continue** button to access the `Biometric Capture` page. Here, the Operator can capture the biometric data of the Resident, including a face photo, fingerprint, and iris scan.
 
@@ -113,19 +93,11 @@ To begin the Registration process, the Operator is required to follow the steps 
 * The Operator has three attempts to capture the biometric image.
 * It is important to note that no exceptions can be made for the face photo biometric capture process.
 
-<div>
+<figure><img src=".gitbook/assets/biometric-14.png" alt="" width="375"><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/biometric-14.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/biometric-15.png" alt="" width="375"><figcaption></figcaption></figure>
 
- 
-
-<figure><img src=".gitbook/assets/biometric-15.png" alt=""><figcaption></figcaption></figure>
-
- 
-
-<figure><img src=".gitbook/assets/biometric-16.png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<figure><img src=".gitbook/assets/biometric-16.png" alt="" width="375"><figcaption></figcaption></figure>
 
 #### **Biometric Data Capture Process**:
 
@@ -135,33 +107,19 @@ To begin the Registration process, the Operator is required to follow the steps 
 
 **Note**: Three attempts are provided to capture the biometric data.
 
-<div>
+<figure><img src=".gitbook/assets/biometric-5.png" alt="" width="375"><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/biometric-5.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/biometric-6.png" alt="" width="375"><figcaption></figcaption></figure>
 
- 
-
-<figure><img src=".gitbook/assets/biometric-6.png" alt=""><figcaption></figcaption></figure>
-
- 
-
-<figure><img src=".gitbook/assets/biometric-7.png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<figure><img src=".gitbook/assets/biometric-7.png" alt="" width="375"><figcaption></figcaption></figure>
 
 #### **Fingerprint Capture Process**:
 
 In the event that a thumb is missing or experiencing difficulties that prevent its fingerprint from being captured, the Operator is authorized to indicate an **exception**. To mark an exception, the operator must select the affected thumb and specify the type of exception as either _Temporary_ or _Permanent_. Additionally, the operator may include any relevant additional comments.
 
-<div>
+<figure><img src=".gitbook/assets/biometric-11.png" alt="" width="375"><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/biometric-11.png" alt=""><figcaption></figcaption></figure>
-
- 
-
-<figure><img src=".gitbook/assets/biometric-12.png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<figure><img src=".gitbook/assets/biometric-12.png" alt="" width="375"><figcaption></figcaption></figure>
 
 **Iris Scanning Process**:
 
@@ -173,33 +131,17 @@ In the event that a thumb is missing or experiencing difficulties that prevent i
 
 If one or both of the Irises are not detected or encounter issues that prevent successful capture, the Operator has the option to mark an exception. To do so, the Operator must identify the specific Iris that is problematic and indicate the type of exception- either _Temporary_ or _Permanent_. Additionally, the Operator may provide any relevant comments.
 
-<div>
+<figure><img src=".gitbook/assets/biometric-2.png" alt="" width="375"><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/biometric-2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/biometric-3.png" alt="" width="375"><figcaption></figcaption></figure>
 
- 
+<figure><img src=".gitbook/assets/biometric-4.png" alt="" width="375"><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/biometric-3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/biometric-17.png" alt="" width="375"><figcaption></figcaption></figure>
 
- 
+<figure><img src=".gitbook/assets/preview-1.png" alt="" width="375"><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/biometric-4.png" alt=""><figcaption></figcaption></figure>
-
-</div>
-
-<div>
-
-<figure><img src=".gitbook/assets/biometric-17.png" alt=""><figcaption></figcaption></figure>
-
- 
-
-<figure><img src=".gitbook/assets/preview-1.png" alt=""><figcaption></figcaption></figure>
-
- 
-
-<figure><img src=".gitbook/assets/preview-2.png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<figure><img src=".gitbook/assets/preview-2.png" alt="" width="375"><figcaption></figcaption></figure>
 
 9. After all the biometric data has been properly captured or any exceptions have been noted, the **Continue** button will be activated. The Operator can then proceed by clicking on the **Continue** button, which will redirect them to the **Preview** page. The Preview page will display the following information:
 
@@ -224,9 +166,9 @@ Upon successful verification of the credentials, the packet will be uploaded to 
 * QR code for the Application ID
 * Option to initiate a new registration process.
 
-<figure><img src=".gitbook/assets/operators authentication.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/operators authentication.png" alt="" width="375"><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/Acknowledgement.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Acknowledgement.png" alt="" width="375"><figcaption></figcaption></figure>
 
 Upon receipt of the acknowledgment, the packet is uploaded to the [Registration Processor](registration-processor.md). Once the packet has been successfully processed, a unique identification number (UIN) is generated.
 
@@ -244,7 +186,7 @@ a. On logging in for the first time, the Operator will be taken to the screen wh
 1. **Get onboarded:** This flow is present for the system to verify the Operator’s biometrics with their registered biometrics. This is to enable local deduplication.
 2. **Skip to home:** This flow is to dodge “Operator’s Onboarding”. If the user selects this, they will be taken to the “Homepage” after which the user can get started with Resident registration. One of the prerequisites of this flow is to have the “Default” role mapped to the center.
 
-<figure><img src=".gitbook/assets/image-20240612-100557.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image-20240612-100557.png" alt="" width="375"><figcaption></figcaption></figure>
 
 3.  **Steps to Onboard Operator’s Biometrics:**
 
@@ -258,7 +200,7 @@ a. On logging in for the first time, the Operator will be taken to the screen wh
     4. Right-hand finger capture
     5. Thumb capture
 
-<figure><img src=".gitbook/assets/image-20240612-074118.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image-20240612-074118.png" alt="" width="375"><figcaption></figcaption></figure>
 
 b. The user will then have to capture all the above-listed biometrics one by one.\
 c. Steps to capture the biometrics are given [**here**](android-registration-client-user-guide.md#face-photo-capture-process)**.**\
@@ -273,6 +215,6 @@ d. Once all the biometrics are duly captured, the below acknowledgment message w
       2. Username: This will show the list of usernames of the Users mapped to the device.
       3. Status: This will show the status of Users mapped to the device. This can take values such as onboarded, active, inactive, etc.
 
-<figure><img src=".gitbook/assets/image-20240528-101051.png" alt="" width="215"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/dashboard.png" alt="" width="375"><figcaption></figcaption></figure>
 
 In summary, the aforementioned steps can be followed by the user (Operator/ Supervisor) to onboard themselves, update their biometrics, or view the Dashboard.
