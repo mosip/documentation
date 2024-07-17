@@ -10,11 +10,22 @@ This release focuses on incorporating features related to VC issuance plug-in pe
 
 **1. Features included**
 
-a. [VC Issuance plugin implementation for Sunbird RC.](../../overview/features/#vc-issuance-plugin-implementation-for-sunbird-rc)
+The below two plugins have been developed to address a use case of issuance of verifiable credentials (VC issuance plugin) by authenticating/identifying the user via KBI (Knowledge Based Authentication) using the Authenticator plugin. Please find below links for more details about the plugin’s and the implemented use case called “Insurance verifiable credential” using Sunbird RC.
 
-b. [Authenticator plugin implementation for KBI with Sunbird RC.](../../overview/features/#authenticator-plugin-implementation-for-kbi-sunbird-rc)
+For more details about KBI, please refer to the link[ KBI](https://docs.esignet.io/end-user-guide/knowledge-based-authentication).
 
-c. [Changes in eSignet UI to support KBI.](../../overview/features/#changes-in-esignet-ui-to-support-kbi)
+a. [Authenticator plugin implementation for KBI with Sunbird RC.](../../overview/features/#authenticator-plugin-implementation-for-kbi-with-sunbird-rc)
+
+b. [VC Issuance plugin implementation for Sunbird RC.](../../overview/features/#vc-issuance-plugin-implementation-for-sunbird-rc)
+
+c. [eSignet UI to support KBI form configuration](../../overview/features/#kbi-form-configuration-for-esignet-ui).
+
+{% hint style="info" %}
+**Note:**
+
+1. The plugins developed are independent of the use cases and may need modifications based on the use case that can take advantage of Knowledge based Identification.
+2. The above has been explained with the help of a use case called Insurance Card VC Issuance to a user using the [Sunbird RC](https://github.com/mosip/digital-credential-plugins/blob/master/sunbird-rc-esignet-integration-impl/README.md) registry based on the KBI configuration done within the plugin.
+{% endhint %}
 
 **2. Fixes for known issues from v1.4.0**
 

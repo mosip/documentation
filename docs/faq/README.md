@@ -291,6 +291,14 @@ mosip.esignet.authenticator.default.auth-factor.kba.individual-id-field=policyNu
 
 <summary>How to configure KBI form in eSignet UI</summary>
 
-To know more about how to configure KBI Form in eSiget please refer [here](https://github.com/mosip/digital-credential-plugins/blob/master/sunbird-rc-esignet-integration-impl/README.md)
+KBI form can be configured based on the fields required to identify a user via Knowledge based identification, please refer to the use case [example](https://docs.esignet.io/end-user-guide/knowledge-based-authentication) here and please find the below properties to be changed to reflect the fields in the KBI form on eSignet UI.
+
+```
+Update the below sub properties inside mosip.esignet.ui.config.key-values property
+'auth.factor.kba.individual-id-field' : '${mosip.esignet.authenticator.sunbird-rc.auth-factor.kba.individual-id-field}',\
+'auth.factor.kba.field-details':${mosip.esignet.authenticator.sunbird-rc.auth-factor.kba.field-details}
+```
+
+To know more about how to configure the KBI Form in eSignet please refer [here](https://github.com/mosip/digital-credential-plugins/blob/master/sunbird-rc-esignet-integration-impl/README.md)
 
 </details>
