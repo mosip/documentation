@@ -121,7 +121,9 @@ In the event that a thumb is missing or experiencing difficulties that prevent i
 
 <figure><img src=".gitbook/assets/biometric-12.png" alt="" width="375"><figcaption></figcaption></figure>
 
-**Iris Scanning Process**:
+<figure><img src=".gitbook/assets/fingerprint.png" alt="" width="380"><figcaption></figcaption></figure>
+
+#### **Iris Scanning Process**:
 
 * To initiate the Iris scan, the Operator is required to click on the **Scan** button.
 * This action will allow the Operator to capture the Iris image.
