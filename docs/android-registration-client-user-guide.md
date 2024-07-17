@@ -47,26 +47,62 @@ To begin the Registration process, the Operator is required to follow the steps 
 2. Select the language to be used for data entry, which will be used to collect the resident's information. There will be a default language for data entry.
 3. Choose the language in which the notification will be sent to the resident. Click **Submit** to proceed.
 
-<figure><img src=".gitbook/assets/arc-newregistration-Page-1.png" alt=""><figcaption></figcaption></figure>
+<div align="center">
+
+<figure><img src=".gitbook/assets/home_page.png" alt="" width="375"><figcaption></figcaption></figure>
+
+</div>
+
+<figure><img src=".gitbook/assets/language-select-1.png" alt="" width="375"><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/language-select-2.png" alt="" width="253"><figcaption></figcaption></figure>
 
 4. The operator will be redirected to the Consent page, where the resident must agree to the `terms and conditions` in order to proceed.
 5. After accepting consent, the Operator will need to fill out the demographic data of the resident, including their name, age, date of birth, and address. Once all mandatory fields are completed, the **Continue** button will be enabled.
 
-<figure><img src=".gitbook/assets/arc-newregistration-Page-2.png" alt=""><figcaption></figcaption></figure>
+<div>
 
-6. Upon clicking the **Continue** button, the Operator will be navigated to the `Document upload` page where they will need to:
+<figure><img src=".gitbook/assets/consent.png" alt=""><figcaption></figcaption></figure>
+
+ 
+
+<figure><img src=".gitbook/assets/demographic-1.png" alt=""><figcaption></figcaption></figure>
+
+ 
+
+<figure><img src=".gitbook/assets/demographic-2.png" alt=""><figcaption></figcaption></figure>
+
+</div>
+
+4. Upon clicking the **Continue** button, the Operator will be navigated to the `Document upload` page where they will need to:
    * Select the type of document (e.g. proof of identity, proof of address) from the drop-down menu.
    * Enter the **Reference Number** of the document.
 
-<figure><img src=".gitbook/assets/arc-newregistration-Page-3.png" alt=""><figcaption></figcaption></figure>
+<div>
 
-7. Upload the document by clicking on the **Scan** button to open the camera. The Operator can take a picture of the document and then choose from the following actions:
+<figure><img src=".gitbook/assets/document-1.png" alt=""><figcaption></figcaption></figure>
+
+ 
+
+<figure><img src=".gitbook/assets/document-2.png" alt=""><figcaption></figcaption></figure>
+
+</div>
+
+4. Upload the document by clicking on the **Scan** button to open the camera. The Operator can take a picture of the document and then choose from the following actions:
    * **Cancel**: Clicking on the "Cross" icon will remove the captured image and return the Operator to the previous screen.
    * **Crop**: The Operator can drag from the four corners of the captured image to crop it as needed.
    * **Save**: Clicking on the "Save" button will save the captured image and return the Operator to the previous Document Upload page.
    * **Retake**: Clicking on the "Retake" button will remove the captured image, reopen the camera, and allow the Operator to take a new photo.
 
-<figure><img src=".gitbook/assets/arc-newregistration-Page-4.png" alt=""><figcaption></figcaption></figure>
+<div>
+
+<figure><img src=".gitbook/assets/document-3.png" alt=""><figcaption></figcaption></figure>
+
+ 
+
+<figure><img src=".gitbook/assets/document-4.png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 8. After ensuring all required information has been accurately entered in the `Document Upload` screen, the Operator can proceed by clicking on the **Continue** button to access the `Biometric Capture` page. Here, the Operator can capture the biometric data of the Resident, including a face photo, fingerprint, and iris scan.
 
@@ -77,7 +113,19 @@ To begin the Registration process, the Operator is required to follow the steps 
 * The Operator has three attempts to capture the biometric image.
 * It is important to note that no exceptions can be made for the face photo biometric capture process.
 
-<figure><img src=".gitbook/assets/arc-newregistration-Page-5 (1).png" alt=""><figcaption></figcaption></figure>
+<div>
+
+<figure><img src=".gitbook/assets/biometric-14.png" alt=""><figcaption></figcaption></figure>
+
+ 
+
+<figure><img src=".gitbook/assets/biometric-15.png" alt=""><figcaption></figcaption></figure>
+
+ 
+
+<figure><img src=".gitbook/assets/biometric-16.png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 #### **Biometric Data Capture Process**:
 
@@ -87,13 +135,33 @@ To begin the Registration process, the Operator is required to follow the steps 
 
 **Note**: Three attempts are provided to capture the biometric data.
 
-<figure><img src=".gitbook/assets/arc-newregistration-Page-6.png" alt=""><figcaption></figcaption></figure>
+<div>
+
+<figure><img src=".gitbook/assets/biometric-5.png" alt=""><figcaption></figcaption></figure>
+
+ 
+
+<figure><img src=".gitbook/assets/biometric-6.png" alt=""><figcaption></figcaption></figure>
+
+ 
+
+<figure><img src=".gitbook/assets/biometric-7.png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 #### **Fingerprint Capture Process**:
 
 In the event that a thumb is missing or experiencing difficulties that prevent its fingerprint from being captured, the Operator is authorized to indicate an **exception**. To mark an exception, the operator must select the affected thumb and specify the type of exception as either _Temporary_ or _Permanent_. Additionally, the operator may include any relevant additional comments.
 
-<figure><img src=".gitbook/assets/arc-newregistration-Page-7.png" alt=""><figcaption></figcaption></figure>
+<div>
+
+<figure><img src=".gitbook/assets/biometric-11.png" alt=""><figcaption></figcaption></figure>
+
+ 
+
+<figure><img src=".gitbook/assets/biometric-12.png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 **Iris Scanning Process**:
 
@@ -105,7 +173,33 @@ In the event that a thumb is missing or experiencing difficulties that prevent i
 
 If one or both of the Irises are not detected or encounter issues that prevent successful capture, the Operator has the option to mark an exception. To do so, the Operator must identify the specific Iris that is problematic and indicate the type of exception- either _Temporary_ or _Permanent_. Additionally, the Operator may provide any relevant comments.
 
-<figure><img src=".gitbook/assets/arc-newregistration-Page-8.png" alt=""><figcaption></figcaption></figure>
+<div>
+
+<figure><img src=".gitbook/assets/biometric-2.png" alt=""><figcaption></figcaption></figure>
+
+ 
+
+<figure><img src=".gitbook/assets/biometric-3.png" alt=""><figcaption></figcaption></figure>
+
+ 
+
+<figure><img src=".gitbook/assets/biometric-4.png" alt=""><figcaption></figcaption></figure>
+
+</div>
+
+<div>
+
+<figure><img src=".gitbook/assets/biometric-17.png" alt=""><figcaption></figcaption></figure>
+
+ 
+
+<figure><img src=".gitbook/assets/preview-1.png" alt=""><figcaption></figcaption></figure>
+
+ 
+
+<figure><img src=".gitbook/assets/preview-2.png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 9. After all the biometric data has been properly captured or any exceptions have been noted, the **Continue** button will be activated. The Operator can then proceed by clicking on the **Continue** button, which will redirect them to the **Preview** page. The Preview page will display the following information:
 
@@ -130,7 +224,9 @@ Upon successful verification of the credentials, the packet will be uploaded to 
 * QR code for the Application ID
 * Option to initiate a new registration process.
 
-<figure><img src=".gitbook/assets/arc-newregistration-Page-9.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/operators authentication.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/Acknowledgement.png" alt="" width="563"><figcaption></figcaption></figure>
 
 Upon receipt of the acknowledgment, the packet is uploaded to the [Registration Processor](registration-processor.md). Once the packet has been successfully processed, a unique identification number (UIN) is generated.
 
