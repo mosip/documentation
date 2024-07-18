@@ -24,7 +24,7 @@ ABIS must support the following types of biometric images:
 * Iris images (left, right)
 * Face image
 
-Biometrics data in MOSIP is exchanged as per formats defined in [Biometric Image Specification](broken-reference).
+Biometrics data in MOSIP is exchanged as per formats defined in [Biometric Image Specification](broken-reference/).
 
 ## Test kits
 
@@ -33,6 +33,6 @@ MOSIP provides kits to test the interface. Refer to the [abis-testing-kit repo](
 ## ABIS deployment
 
 * ABIS must comply with [ABIS API Specifications](abis-api.md).
-* The queues can be configured in the [RegistrationProcessorAbis-env.json](https://github.com/mosip/mosip-config/blob/master/config-templates/RegistrationProcessorAbis-env.json) file. The ABIS system connects to the queues using a pre-defined user ID and password.
+* The queues can be configured in the [RegistrationProcessorAbis-env.jso](https://github.com/mosip/mosip-config/blob/master/registration-processor-abis.json)n file. The ABIS system connects to the queues using a pre-defined user ID and password.
 * It is recommended that ABIS be deployed in the same secure zone (military zone) where the registration processor is deployed.
 * ABIS system is not recommended to connect to any external network.

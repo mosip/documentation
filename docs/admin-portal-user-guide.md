@@ -297,7 +297,7 @@ _Note_: This feature is currently under development.
 
 ![](\_images/admin-master-data.png)
 
-To know more, refer to [Masterdata guide](broken-reference).
+To know more, refer to [Masterdata guide](masterdata-guide.md).
 
 ## Bulk upload
 
@@ -322,7 +322,6 @@ To upload Master data using Admin portal,
 * To view the format for inserting data in a particular table, click on the Download icon.
 * A CSV file gets downloaded in which the first row represents the column names and the rest of the rows are the data which will be inserted into the table(sample).
 * From 1.2.0.1-B2 version, apart from comma, other special characters (i.e., '|','$'etc.) can also be used as a separator in the csv file used for masterdata bulk upload. This can be done by updating the property `mosip.admin.batch.line.delimiter` with the same special character.
-
 
 _Note:_ While editing CSV files, it is recommended to keep track of the Date format and Time format to be the same as the acceptable formats. The acceptable Date format is _YYYY-MM-DD_ and the acceptable Time format is _HH:MM:SS_. Any other Date and Time formats in CSV files will result in a `DataType Mismatch Error`.
 
@@ -393,14 +392,14 @@ With the help of this feature, the Admin user can generate and manage the keys r
 
 ### UploadCertificate
 
-* The logged in user can use this option to update the certificate for all the keys generated in [Key Manager](key-manager.md) service.
-* This option is used in scenarios where a valid CA certificate has been procured for a key available in [Key Manager](key-manager.md) service.
+* The logged in user can use this option to update the certificate for all the keys generated in [Key Manager service](keymanager.md).
+* This option is used in scenarios where a valid CA certificate has been procured for a key available in [Key Manager service](keymanager.md).
 
 ![](\_images/admin-upload-certificate.png)
 
 ### UploadOtherDomainCertificate
 
-* The logged in use can use this option to upload partner certificate in Key Manager service.
+* The logged in use can use this option to upload partner certificate in [Key Manager service](keymanager.md).
 * Partner certificates will be used in Key Manager service to encrypt any sharable data using the partner certificate required in datashare from MOSIP to any partner.
 * Partner certificates can also be used in Key Manager service for signature verification purpose.
 
