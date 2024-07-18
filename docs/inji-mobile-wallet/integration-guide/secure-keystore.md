@@ -2,7 +2,13 @@
 
 ## Secure Keystore
 
-Secure Keystore is a **React Native library exclusively for Android platform**. The devices which have a [Hardware Keystore](https://source.android.com/docs/security/features/keystore) can use this library to perform encryption, decryption and computation of HMAC on the native side using the Hardware backed security features.
+Secure Keystore is a **library exclusively for Android platform**. The devices which have a [Hardware Keystore](https://source.android.com/docs/security/features/keystore) can use this library to perform encryption, decryption and computation of HMAC on the native side using the Hardware backed security features.
+
+## Artifacts
+
+  *  Maven Snapshots are available [here](https://oss.sonatype.org/content/repositories/snapshots/io/mosip/secure-keystore/)
+
+  *  NPM modules are available [here](https://www.npmjs.com/package/@mosip/secure-keystore)
 
 ## Installation
 
