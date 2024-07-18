@@ -10,7 +10,7 @@ This release focuses on incorporating features related to VC issuance plug-ins p
 
 **1. Features included**
 
-The below two plugins have been developed to address a use case of issuance of verifiable credentials (VC issuance plugin) by authenticating/identifying the user via KBI (Knowledge Based Identification) using the Authenticator plugin. Please find below links for more details about the plugin’s and the implemented use case called “Insurance verifiable credential” using Sunbird RC.
+The below two plugins have been developed to address a use case of issuance of verifiable credentials (VC issuance plugin) by authenticating/identifying the user via KBI (Knowledge Based Identification) using the Authenticator plugin. Please find below links for more details about the plugin’s and the implemented use case called Insurance verifiable credential using Sunbird RC.
 
 For more details about KBI, please refer to the link [KBI](https://docs.esignet.io/end-user-guide/knowledge-based-authentication).
 
@@ -55,7 +55,7 @@ Please refer to [this link](https://mosip.atlassian.net/jira/software/c/projects
 
 | Repository Released   | Tags                                                                             |
 | --------------------- | -------------------------------------------------------------------------------- |
-| eSignet               | [v1.4.1](https://github.com/mosip/esignet/tree/release-1.4.x)                    |
+| eSignet               | [v1.4.1](https://github.com/mosip/mosip-config/tree/v1.4.1-ES)                   |
 | mosip-config          | [v1.4.1-ES](https://github.com/mosip/mosip-config/tree/release-1.4.1-ES)         |
 | esignet-mock-services | [v0.9.3](https://github.com/mosip/esignet-mock-services/tree/release-0.9.x)      |
 | mosip-ref-impl/kernel | [v1.2.0.2](https://github.com/mosip/mosip-ref-impl/tree/release-1.2.0.x/kernel)  |
