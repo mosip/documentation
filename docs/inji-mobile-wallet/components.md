@@ -11,9 +11,10 @@ The libraries are as follows:
 3. Secure Keystore
 4. BLE Verifier
 5. PixelPass
-6. Telemetry (coming soon)
+6. VCI-client
+7. Telemetry (coming soon)
 
-#### **1. Tuvali - Sharing via BLE**
+### **1. Tuvali - Sharing via BLE**
 
 * The transfer of downloaded Verifiable Credential from the Wallet to Verifier is facilitated by a React Native library named Tuvali.
 * [Tuvali](https://github.com/mosip/tuvali) enables offline VC transfer between mobile devices via Bluetooth Low Energy (BLE).\
@@ -25,14 +26,17 @@ The libraries are as follows:
 * Tuvali is actively developed and maintained by MOSIP.
 * It does not support iOS for initiating the BLE exchanges, hence preventing two iOS devices from transferring VC.
 
-**Note**:
+{% hint style="info" %}
+Note:&#x20;
 
 * To learn more about Tuvali's implementation, refer [here](https://docs.mosip.io/inji/integration-guide/tuvali).
 * For information on Tuvali's permissions and requirements, refer [here](https://docs.mosip.io/inji/integration-guide/tuvali/tuvali-requirements).
 * To understand Tuvali and Inji Mobile integration, along with API documentation, refer[ here](https://docs.mosip.io/inji/integration-guide/tuvali/tuvali-inji).
 * To check the NPM module, click [here](https://www.npmjs.com/package/@mosip/tuvali).
+* Maven snapshots are available [here](https://oss.sonatype.org/content/repositories/snapshots/io/mosip/tuvali/)
+{% endhint %}
 
-#### **2. Face Match**
+### **2. Face Match**
 
 The face matcher SDK internally implements native functionalities for Android and iOS, utilizing [Tensorflow](https://www.tensorflow.org/) and [Google ML Kit](https://developers.google.com/ml-kit) to identify faces.
 
@@ -48,19 +52,27 @@ Upon the initial launch of Inji Mobile, the model is downloaded in the backgroun
 
 ### **3. Secure Keystore**
 
-The [secure-keystore](https://github.com/mosip/secure-keystore) library is a module in the React Native framework. It is designed for the purpose of creating and storing key-pairs in the hardware keystore of Android devices. The library also supports encryption, decryption, and HMAC calculation functionalities.
+The [secure-keystore](https://github.com/mosip/secure-keystore) library is a module designed for the purpose of creating and storing key-pairs in the hardware keystore of Android devices. The library also supports encryption, decryption, and HMAC calculation functionalities.
 
 It also helps to sign with aliases, created as part of key pair generation.
 
 As the description says, this module is only for Android devices which support hardware keystore.
 
+This library is available as Kotlin artefact in maven as well as npm module for react native application. Inji mobile wallet is integrated with the kotlin artefact of secure-keystore. 
+
+In order to reduce the key size during credential download request, Inji mobile wallet is using RSA-2048 instead of RSA-4096 bits keys.
+
 To check all the APIs supported by this module, refer [here](https://github.com/mosip/secure-keystore/blob/develop/src/interface.ts).
 
-**Note**:
+{% hint style="info" %}
+Note:&#x20;
 
 * This feature is exclusive to the Android operating system.
 * It is only compatible with devices that have a hardware keystore.
+* To understand about the library and the API documentation, refer [here](https://github.com/mosip/documentation/blob/inji/docs/inji-mobile-wallet/integration-guide/secure-keystore.md).
 * To check the NPM module, click [here](https://www.npmjs.com/package/@mosip/secure-keystore).
+* Maven snapshots are available [here](https://oss.sonatype.org/content/repositories/snapshots/io/mosip/secure-keystore/)
+{% endhint %}
 
 ### **4. BLE Verifier**
 
@@ -68,9 +80,11 @@ The [BLE Verifier](https://github.com/mosip/ble-verifier-sdk/tree/develop) is th
 
 To know more about API and how to integrate, refer [here](integration-guide/ble-verifier.md).
 
-**Note**:
+{% hint style="info" %}
+Note:&#x20;
 
 * To check the NPM module, click [here](https://www.npmjs.com/package/@mosip/ble-verifier-sdk).
+{% endhint %}
 
 ### 5. PixelPass
 
@@ -83,9 +97,23 @@ Note:&#x20;
 * To understand about the installation and the API documentation, refer [here](integration-guide/pixelpass.md).
 * For a hands-on experience of Generate a VC, Generate QR Code for the VC and Verify the same using Inji Verify, please click [here](https://docs.mosip.io/inji/inji-verify/build-and-deploy/creating-verifiable-credentials-and-generating-qr-codes).
 * To check the NPM module, click[ here](https://www.npmjs.com/package/@mosip/pixelpass).
+* Maven snapshots are available [here](https://oss.sonatype.org/content/repositories/snapshots/io/mosip/pixelpass/)
 {% endhint %}
 
-### **6. Telemetry**
+### **6. VCI-client**
+
+VCI-Client library carries out the credential request from the consumer application (mobile wallet or web) and redirects the issuance/issuer. The library creates a request with the credential format, jwtproof of the wallet, issuer meta data and the access token received for authorization and provides VC as the response back to the consumer application for storage. 
+
+{% hint style="info" %}
+Note:&#x20;
+
+* Refer to the VCI-Client repository [here](https://github.com/mosip/inji-vci-client/blob/develop/README.md).
+* To understand about the installation and the API documentation, refer [here](https://docs.mosip.io/inji/inji-mobile-wallet/integration-guide/vci-client).
+* To check the NPM module, click [here](https://www.npmjs.com/package/@mosip/inji-vci-client).
+* Maven snapshots are available [here](https://oss.sonatype.org/content/repositories/snapshots/io/mosip/inji-vci-client/)
+{% endhint %}
+
+### **7. Telemetry**
 
 The [telemetry](https://github.com/mosip/sunbird-telemetry-sdk) module is derived from the [sunbird telemetry](https://github.com/project-sunbird/sunbird-telemetry-sdk) module. It is responsible for generating events that can provide valuable analytics.
 
