@@ -8,7 +8,7 @@
 
 ## **Overview**
 
-We are delighted to announce the release of Inji Mobile Version 0.13.0 . This release is compatible with v0.13.0 Mimoto release. As part of 0.13.0, Inji mobile introduces below mentioned key features:
+We are delighted to announce the release of Inji mobile Version 0.13.0 . This release is compatible with v0.13.1 Mimoto release. As part of 0.13.0, Inji mobile introduces below mentioned key features:
 
 **Libraries:**
 
@@ -16,9 +16,11 @@ We are delighted to announce the release of Inji Mobile Version 0.13.0 . This re
 
     * Secure Keystore
     * Pixelpass
-    * VCI client 
+    * VCI client
+    * Tuvali 
 
-2. Secure-keystore changes (credential request keypair change from RSA-4096 to RSA-2048 bits)
+2. UUID changes for verifier services in tuvali.
+3. Secure-keystore changes (credential request keypair change from RSA-4096 to RSA-2048 bits)
 
 **Enhancements:**
 
@@ -35,11 +37,13 @@ Please find below the details for the Inji Version 0.13.0 release:
 
 **Libraries:**
 
-  * Inji Mobile utilizes the Secure Keystore SDK to store keypairs, ensuring enhanced security. The SDK now includes native artifacts and is fully integrated with Inji Mobile.     Additionally, the keypair generation for credential requests has been updated from RSA-4096 to RSA-2048 bits to reduce the size of the VCs.
+  * Inji Mobile utilizes the **Secure Keystore SDK** to store keypairs, ensuring enhanced security. The SDK now includes native artifacts and is fully integrated with Inji Mobile.     Additionally, the keypair generation for credential requests has been updated from RSA-4096 to RSA-2048 bits to reduce the size of the VCs.
 
-  * With this release, Java, Kotlin, and Swift artifacts are available for the PixelPass library, and native artifacts are integrated into the Inji Mobile app. Additionally, the Java library facilitates QR code generation on the server side.
+  * **Tuvali**: UUID for all the verifier services is modified to reflect the UUID service definition as per the spec. In addition, Tuvali SDK which enables offline sharing based on BLE, has native artifacts(Kotlin and Swift) now and integrated with Inji mobile.
 
-  * The VCI client library handles credential requests from issuance, provided it has the accessToken, proof, and issuer metadata.
+  * With this release, Java, Kotlin, and Swift artifacts are available for the **PixelPass** library, and native artifacts are integrated into the Inji Mobile app. Additionally, the Java library facilitates QR code generation on the server side.
+
+  * The **VCI client** library handles credential requests from issuance, provided it has the accessToken, proof, and issuer metadata.
 
 **Enhancements:**
 
@@ -49,7 +53,7 @@ Please find below the details for the Inji Version 0.13.0 release:
 
 **Deployment:**
 
-  * To simplify the deployment process for Mimoto, a Docker Compose file is now available.
+  * To simplify the deployment process for Mimoto in local environment, a Docker Compose file is now available. Click [here](https://docs.mosip.io/inji/inji-mobile-wallet/build-and-deployment/local-setup) to know more in detail.
 
 ## **Repository Released**
 
@@ -58,6 +62,7 @@ Please find below the details for the Inji Version 0.13.0 release:
 | Inji             | <p><a href=""></a><br></p>              |
 | mimoto           | <p><a href=""></a><br></p>            |
 | mosip-config     | <p><a href=""></a><br></p> |
+| tuvali     | <p><a href=""></a><br></p> |
 
 ## **Known Issues**
 
@@ -65,13 +70,19 @@ Redmi devices are not supported in this release. To know more, refer [here](http
 
 Mentioned below is the list of other known issues.
 
-|         **Jira Issue**                             |                     **Description**                                                                                |
-| -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+|         **Jira Issue**                                                        |                     **Description**                                                                |
+| ----------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+|     [INJIMOB-1603](https://mosip.atlassian.net/browse/INJIMOB-1603)           | INJIMOB- During face authentication, the camera view is not opening in all IOS device |
+|     [INJIMOB-1600](https://mosip.atlassian.net/browse/INJIMOB-1600)           | INJIMOB- In Android when the user clicks + icon from home page issuer page is not getting loaded |
+|     [INJIMOB-1591](https://mosip.atlassian.net/browse/INJIMOB-1591)           | INJIMOB- Users are unable to upload the VC QR code shared via email and WhatsApp, or stored locally |
+|     [INJIMOB-1574](https://mosip.atlassian.net/browse/INJIMOB-1574)           | INJI - unable to scroll the page add new card page |
 |     [INJIMOB-1530](https://mosip.atlassian.net/browse/INJIMOB-1530)           | INJIMOB - IOS - "Share QR Code" is not working on iPhone 8.|
-|     [INJIMOB-1492](https://mosip.atlassian.net/browse/INJIMOB-1492)           | UI issue in copilot tooltip (Help / FAQs step) |
+|     [INJIMOB-1503](https://mosip.atlassian.net/browse/INJIMOB-1503)           | INJIMOB - IOS - The buttons in the INJI tour guide are not properly aligned. |
+|     [INJIMOB-1499](https://mosip.atlassian.net/browse/INJIMOB-1499)           | INJIMOB -  Android - The backup and restore process is failing on Android devices when the size of the backup exceeds 10MB. |
 |     [INJIMOB-1490](https://mosip.atlassian.net/browse/INJIMOB-1490)           | INJIMOB - Backup is not triggering automatically when VC is removed. |
 |     [INJIMOB-1481](https://mosip.atlassian.net/browse/INJIMOB-1481)           | INJI - logo of inji mobile stretched while booting the app |
 |     [INJIMOB-1422](https://mosip.atlassian.net/browse/INJIMOB-1422)           | Inji mob- During face authentication, the camera view is wider than the face. |
+|     [INJIMOB-1403](https://mosip.atlassian.net/browse/INJIMOB-1403)           | INJI - VC download failed because of eSignet pod being down doesn't have a proper error message |
 |     [INJIMOB-1265](https://mosip.atlassian.net/browse/INJIMOB-1265)           | IOS -Specific devices the User not able to see the iCloud ID in iCloud setting section of backup and restore page.|
 |     [INJIMOB-1261](https://mosip.atlassian.net/browse/INJIMOB-1261)           | INJI- Error message is not proper when invalid QR is scanned after changing language to other than English. |
 |     [INJIMOB-1259](https://mosip.atlassian.net/browse/INJIMOB-1259)           | INJI - Backup & restore Name Is Different In Settings And in Backup & restore Page |
