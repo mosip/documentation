@@ -2,7 +2,7 @@
 
 ## PixelPass
 
-PixelPass is a node library which helps in generating QR Code for VCs with smaller data size. It can also be used for decoding the VC generated.
+PixelPass is a node library which helps in generating QR Code for VCs with smaller data size. It can also be used for decoding the VC generated. PixelPass also has Kotlin, Swift and Java artifacts available.
 
 ### Features
 
@@ -10,11 +10,33 @@ PixelPass is a node library which helps in generating QR Code for VCs with small
 * Uses zlib compression and base45 encoding
 * Decode QR data encoded by PixelPass
 
+### Snapshots
+
+Below snapshots provide the mobile platform native artifacts along with the java library:
+
+**Kotlin**: Index of /repositories/snapshots/io/mosip/pixelpass-aar 
+
+**Swift**: GitHub - mosip/pixelpass-ios-swift: Swift library to generate QR code from VC and decode the data 
+
+**Java:** Index of /repositories/snapshots/io/mosip/pixelpass-jar 
+
+
 ### Installation
 
+1. As a node project:
+   
 npm i @mosip/pixelpass
 
 [npm](https://www.npmjs.com/package/@mosip/pixelpass)
+
+2. To include PixelPass in your Swift project, follow the below steps:
+
+    1.    Clone the PixelPass library locally.
+
+    2.    Create a new Swift project.
+
+    3.    Add package dependency: PixelPass
+
 
 ### APIs
 
