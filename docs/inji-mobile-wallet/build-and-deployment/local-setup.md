@@ -1,6 +1,8 @@
 # Local Setup
 
-This section explains the docker-compose setup to run mimoto in local which act as BFF for Inji mobile and backend for Inji web. This is not intended for production use.
+Mimoto can be deployed in local using Docker Compose setup. This service streamlines deployment and management, offering a seamless and efficient way to handle backend operations. 
+
+Below sections details the docker-compose setup to run mimoto which act as BFF for Inji mobile and backend for Inji web. This docker compose setup is intended only for local use and not for production deployment.
 
 ## What is in the docker-compose folder?
 
@@ -25,14 +27,17 @@ This section explains the docker-compose setup to run mimoto in local which act 
 The mimoto APIs can be accessed as below:
 
 http://localhost:8099/residentmobileapp/allProperties
+
 http://localhost:8099/residentmobileapp/issuers
+
 http://localhost:8099/residentmobileapp/issuers/Sunbird
+
 http://localhost:8099/residentmobileapp/issuers/Sunbird/credentialTypes
 
 ## Note:
 
 * For local env use ngrok.
-* Replace http://localhost:8099 by ngrok public domain at following places
+* Replace http://localhost:8099 by [ngrok](https://ngrok.com/docs/getting-started/) public domain at following places
     * token_endpoint in mimoto-issuers-config.json
     * mosipbox.public.url, mosip.api.public.url in mimoto-default.properties
 
