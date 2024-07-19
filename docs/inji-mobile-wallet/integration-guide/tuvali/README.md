@@ -4,6 +4,42 @@ This is the module that supports transferring verifiable credentials (VC) over B
 
 Let's have a look at how BLE communication works in general between the two devices A & B.
 
+## Repository: 
+
+* [tuvali](https://github.com/mosip/tuvali) presents the kotlin library for tuvali
+
+* [tuvali-ios-swift](https://github.com/mosip/tuvali-ios-swift) to get details on swift artifact.
+
+## Installation:
+
+### Usage as a Kotlin library (for native android)   
+
+1. In build.gradle.kts add the following:
+   
+``` kotlin
+    dependencies {
+        implementation("io.mosip:tuvali:0.5.0-SNAPSHOT")
+    }
+```
+
+The kotlin library has been added to your project.
+
+### Usage as a Swift library (for native ios)    
+
+1. Download swift artifact (ios-tuvali-library) from the repository.
+
+2. Open your project in XCode.
+
+3. Goto File > Add Package Dependencies.
+
+4. Select Add Local option.
+
+5. Add the artifact folder.
+
+The swift library has been added to your project.
+
+Before we understand how Tuvali works, let's go through BLE communication.
+
 ## How does BLE Communication work?
 
 ![BLE Communication](../../../.gitbook/assets/ble-high-level-comm-generic.png)
@@ -178,15 +214,17 @@ Below are the exception message and the disconnect message which appears on the 
 
 ## Characteristics UUID
 
-* IDENTIFY\_REQUEST\_CHAR\_UUID (00002030-0000-1000-8000-00805f9b34fb): Characteristic for sending the public key of the wallet.
-* RESPONSE\_SIZE\_CHAR\_UUID (00002033-0000-1000-8000-00805f9b34fb): Characteristic for sending VC size to the verifier.
-* SUBMIT\_RESPONSE\_CHAR\_UUID (00002034-0000-1000-8000-00805f9b34fb): Characteristic for sending the entire VC.
-* TRANSFER\_REPORT\_REQUEST\_CHAR\_UUID (00002035-0000-1000-8000-00805f9b34fb): Characteristic for requesting for transfer report from the verifier.
-* TRANSFER\_REPORT\_RESPONSE\_CHAR\_UUID (00002036-0000-1000-8000-00805f9b34fb): Characteristic for sending transfer report to the wallet
+* IDENTIFY\_REQUEST\_CHAR\_UUID (00000006-5026-444A-9E0E-D6F2450F3A77): Characteristic for sending the public key of the wallet.
+* REQUEST\_SIZE\_CHAR\_UUID (00000004-5026-444A-9E0E-D6F2450F3A77): Characteristic for requesting VC size by wallet from verifier.
+* REQUEST\_CHAR\_UUID (00000005-5026-444A-9E0E-D6F2450F3A77): Characteristic for requesting the VC by the verifier.
+* RESPONSE\_SIZE\_CHAR\_UUID (00000007-5026-444A-9E0E-D6F2450F3A77): Characteristic for sending VC size to the verifier.
+* SUBMIT\_RESPONSE\_CHAR\_UUID (00000008-5026-444A-9E0E-D6F2450F3A77): Characteristic for sending the entire VC.
+* TRANSFER\_REPORT\_REQUEST\_CHAR\_UUID (00000009-5026-444A-9E0E-D6F2450F3A77): Characteristic for requesting for transfer report from the verifier.
+* TRANSFER\_REPORT\_RESPONSE\_CHAR\_UUID (0000000A-5026-444A-9E0E-D6F2450F3A77): Characteristic for sending transfer report to the wallet
 * VERIFICATION\_STATUS\_CHAR\_UUID (00002037-0000-1000-8000-00805f9b34fb): Characteristic for informing the wallet if the VC is accepted or rejected.
-* DISCONNECT\_CHAR\_UUID (00002038-0000-1000-8000-00805f9b34fb): Characteristic for notifying the wallet to initiate the disconnection between the devices.
+* DISCONNECT\_CHAR\_UUID (0000000B-5026-444A-9E0E-D6F2450F3A77): Characteristic for notifying the wallet to initiate the disconnection between the devices.
 
 ## Service UUID
 
-* SERVICE\_UUID (0000AB29-0000-1000-8000-00805f9b34fb): Service UUID of the verifier
-* SCAN\_RESPONSE\_SERVICE\_UUID (0000AB2A-0000-1000-8000-00805f9b34fb): Service UUID for uniquely identifying the scan response data to the wallet's SCAN\_REQ
+* SERVICE\_UUID (00000001-0000-1000-8000-00805f9b34fb): Service UUID of the verifier
+* SCAN\_RESPONSE\_SERVICE\_UUID (00000002-0000-1000-8000-00805f9b34fb): Service UUID for uniquely identifying the scan response data to the wallet's SCAN\_REQ
