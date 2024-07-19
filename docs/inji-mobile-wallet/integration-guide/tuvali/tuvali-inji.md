@@ -1,21 +1,36 @@
 # Tuvali API Documentation
 
+Tuvali module is based on the OpenID for Verifiable Presentations over BLE implementation to support sending vc/vp using Bluetooth Low Energy local channel. 
+The below sections explains the APIs of the library in detail.
+
 Firstly, for establishing the secured connection over BLE the connection params which include `name` and `key` needs to be exchanged between the two devices. This exchange of parameters can be accomplished but is not limited to by using a QR code.
 
 For example, use a QR code generator to visually display params and a QR code scanner to get params. A mobile app that displays a QR code can act as an `Verifier` by including its connection params as data in the QR code and another device can act as `Wallet` which scans the QR code, it can extract the connection parameters and initiate a BLE connection with the advertising device.
 
 
-## Connection parameters exchange
+## URI Exchange and Establishing Connection
 
-* The device on which the QR code is displayed shall generate connection parameters using the `startAdvertisement()` method:
+### Verifier
+
+The Verifier device generates a URI using the `startAdvertisement()` method and displays it as a QR code. Once the advertisement starts, the Verifier continuously advertises with a payload derived from the URI.
+
+#### URI contains:
+```
+OPENID4VP://connect?name=STADONENTRY&key=8520f0098930a754748b7ddcb43ef75a0dbf3a0d26381af4eba4a98eaa9b4e6a
+```
+URI structure can be found in the [spec](https://bitbucket.org/openid/connect/src/master/openid-4-verifiable-presentations-over-ble/openid-4-verifiable-presentations-over-ble-1_0.md).
+Currently the library doesnot support iOS as a verifier.But it can act as a wallet for android verifier.
 
 ```
 var verifier = Verifier()
 var uri = verifier.startAdvertisement()
 println(uri)
 ```
+### Wallet
 
-* The device that scans the QR code will extract the connection parameters from the QR code and set its connection parameters using the `startConnection()` method :
+### Start Connection
+
+The device that scans the QR code will extract the connection parameters from the QR code and set its connection parameters using the `startConnection()` method :
 
 ```
 var wallet = Wallet()
@@ -33,23 +48,10 @@ OPENID4VP://connect:?name=OVPMOSIP&key=69dc92a2cc91f02258aa8094d6e2b62877f5b6498
 &#x20;  E.g: OVPMOSIP://connect:?name=\<\>&key=\<verifier public key\>
 
 
-## Establishing connection
-
-The device that displays the QR code will become `Verifier`
-
-```
-const uri = verifier.startAdvertisement();
-```
-
-and the other device that scans the QR code will become `discoverer` and will attempt to discover the devices based on the pre-exchanged `uri`.
-
-```
-wallet.startConnection(uri);
-```
-
 ## Share data
 
-Once the connection is established, wallet app can send the data
+Once the connection is established, wallet app can send the data in a secured way to the Verifier.
+**Note:** At this moment, we currently support data transfer from Wallet to Verifier only.
 
 ```
 wallet.sendData(payload);
@@ -127,6 +129,8 @@ verifier.disconnect();
 ```
 
 ## Tuvali & Inji Integration
+
+The below diagram explains the series of handshakes between the Verifier and the Wallet device.
 
 ```mermaid
 sequenceDiagram
