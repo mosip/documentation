@@ -9,21 +9,17 @@ For example, use a QR code generator to visually display params and a QR code sc
 
 * The device on which the QR code is displayed shall generate connection parameters using the `startAdvertisement()` method:
 
-```typescript
-import tuvali from '@mosip/tuvali';
-const { verifier } = tuvali;
-
-const uri = verifier.startAdvertisement();
-console.log(uri);
+```
+var verifier = Verifier()
+var uri = verifier.startAdvertisement()
+println(uri)
 ```
 
-* The device that scans the QR code will extract the connection parameters from the QR code and set its connection parameters using the `startAdvertisement()` method :
+* The device that scans the QR code will extract the connection parameters from the QR code and set its connection parameters using the `startConnection()` method :
 
-```typescript
-import tuvali from '@mosip/tuvali';
-const { wallet } = tuvali;
-
-wallet.startConnection(uri);
+```
+var wallet = Wallet()
+wallet.startConnection(uri)
 ```
 
 The connection param is a URI with a name & a key. The `name` is the client's name & the `key` is the verfier's public key.
@@ -41,13 +37,13 @@ OPENID4VP://connect:?name=OVPMOSIP&key=69dc92a2cc91f02258aa8094d6e2b62877f5b6498
 
 The device that displays the QR code will become `Verifier`
 
-```typescript
+```
 const uri = verifier.startAdvertisement();
 ```
 
 and the other device that scans the QR code will become `discoverer` and will attempt to discover the devices based on the pre-exchanged `uri`.
 
-```typescript
+```
 wallet.startConnection(uri);
 ```
 
@@ -55,22 +51,22 @@ wallet.startConnection(uri);
 
 Once the connection is established, wallet app can send the data
 
-```typescript
-wallet.sendData(stringData);
+```
+wallet.sendData(payload);
 ```
 and verifier app can acknowledge it.
 
-```typescript
-verifier.sendVerificationStatus(VerificationStatus.ACCEPTED);
+```
+verifier.sendVerificationStatus(status);
 ```
 
 The following sequence of actions should be performed to transfer data over BLE:
 
 1. Verifier must start advertising by calling `verifier.startAdvertisement(name)` method
 2. Subscribe to events using `wallet.handleDataEvents`
-2. Initiate the secure connection using `wallet.startConnection(uri)`. The Wallet public keys are exchanged with verifier on successful connection.
-3. Wallet calls `wallet.sendData(payload)` to transfer requisite data over BLE.
-4. Send VC response - Verifier can exchange "Accept/Reject" status to Wallet with the following message type for `verifier.sendVerificationStatus` method
+3. Initiate the secure connection using `wallet.startConnection(uri)`. The Wallet public keys are exchanged with verifier on successful connection.
+4. Wallet calls `wallet.sendData(payload)` to transfer requisite data over BLE.
+5. Send VC response - Verifier can exchange "Accept/Reject" status to Wallet with the following message type for `verifier.sendVerificationStatus` method
 
 ## Subscribe to events
 
@@ -79,59 +75,55 @@ Tuvali sends multiple events to propagate connection status, received data etc. 
 
 on Wallet:
 
-```typescript
-wallet.handleDataEvents((event: WalletDataEvent) => {
-  // Add the code that needs to run once data is received
-})
+```
+wallet.subscribe {
+  event  ->
+  // Add the code that needs to run once event is received
+}
 ```
 
 on Verifier:
 
-```typescript
-verifier.handleDataEvents((event: VerifierDataEvent) => {
+```
+verifier.subscribe {
+  event  ->
   // Add the code that needs to run once data is received
-})
+}
 ```
 Here are the different types of events that can be received
 
 ### Common Events
 Events which are emitted by both Wallet and Verifier
 
-1. onConnected
-   * `{"type": "onConnected"}`
+1. ConnectedEvent
    * on BLE connection getting established between Wallet and Verifier
-2. onSecureChannelEstablished
-   * `{"type": "onSecureChannelEstablished"}`
+2. SecureChannelEstablishedEvent
    * on completion of key exchange between Wallet and Verifier
-3. onError
-   * `{"type": "onError", "message": "Something Went wrong in BLE", "code": "TVW_CON_001"}`
+3. ErrorEvent
    * on any error in Wallet or Verifier
-4. onDisconnected
-   * `{"type": "onDisconnected"}`
+4. DisconnectedEvent
    * on BLE disconnection between Wallet and Verifier
 
 
 ### Wallet Specific Events
 
-1. onDataSent
-   * `{"type": "onDataSent"}`
+1. DataSentEvent
    * on completion of Data transfer from the Wallet Side
-2. onVerificationStatusReceived
-   * `{"type": "onVerificationStatusReceived", "status": "ACCEPTED"}`
+2. VerificationStatusReceivedEvent
    * on received verification status from Verifier
 
 ### Verifier Specific Events
 
-1. onDataReceived
-  * `{"type": "onDataReceived"}`
+1. DataReceivedEvent
   * on receiving data from the Wallet Side
 
 ## Connection closure
 
 The device on which app is running can destroy the connection by calling disconnect() method:
 
-```typescript
-wallet/verifier.disconnect();
+```
+wallet.disconnect();
+verifier.disconnect();
 ```
 
 ## Tuvali & Inji Integration
