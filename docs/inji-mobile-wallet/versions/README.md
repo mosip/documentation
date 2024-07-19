@@ -1,5 +1,11 @@
 # Releases
 
+## Version: 0.13.0
+
+* Name: Inji 0.13.0
+* Date: Coming Soon
+* [Release Notes](./#version-0.13.0)
+  
 ## Version: 0.12.0
 
 * Name: Inji 0.12.0
