@@ -71,8 +71,9 @@ Below are the test metrics by performing functional testing using mock MDS and m
 
 &#x20;
 
-| Total                                 | Passed | Failed | Skipped (N/A) |
+|                                       |        |        |               |
 | ------------------------------------- | ------ | ------ | ------------- |
+| Total                                 | Passed | Failed | Skipped (N/A) |
 | 2322                                  | 2076   | 206    | 40            |
 | Test Rate: 98% With Pass Rate: 89.40% |        |        |               |
 
@@ -80,16 +81,17 @@ Below are the test metrics by performing functional testing using mock MDS and m
 
 Here is the detailed breakdown of metrics for each module:
 
-|                                                              | Test cases |      |
-| ------------------------------------------------------------ | ---------- | ---- |
-| <p> </p><p> </p><p> </p><p>On Android Device</p>             | Total      | 1268 |
-| Passed                                                       | 1103       |      |
-| Failed                                                       | 139        |      |
-| Skipped (N/A)                                                | 26         |      |
-| <p> </p><p> </p><p> </p><p>On iOS Device</p><p> </p><p> </p> | Total      | 1054 |
-| Passed                                                       | 973        |      |
-| Failed                                                       | 67         |      |
-| Skipped (N/A)                                                | 14         |      |
+|                                               |               |            |
+| --------------------------------------------- | ------------- | ---------- |
+|                                               |               | Test cases |
+| On Android Device                             | Total         | 1268       |
+|                                               | Passed        | 1103       |
+|                                               | Failed        | 139        |
+|                                               | Skipped (N/A) | 26         |
+| <p> </p><p> On iOS Device</p><p> </p><p> </p> | Total         | 1054       |
+|                                               | Passed        | 973        |
+|                                               | Failed        | 67         |
+|                                               | Skipped (N/A) | 14         |
 
 &#x20;
 
@@ -109,13 +111,13 @@ Here is the detailed breakdown of metrics
 |           | Test cases |      |
 | --------- | ---------- | ---- |
 | Mobile ID | Total      | 63   |
-| Passed    | 61         |      |
-| Failed    | 2          |      |
-| Skipped   | 0          |      |
+|           | Passed     | 61   |
+|           | Failed     | 2    |
+|           | Skipped    | 0    |
 | eSignet   | Total      | 1272 |
-| Passed    | 1214       |      |
-| Failed    | 30         |      |
-| Skipped   | 28         |      |
+|           | Passed     | 1214 |
+|           | Failed     | 30   |
+|           | Skipped    | 28   |
 
 ### UI Automation results <a href="#id-3rdcrjn" id="id-3rdcrjn"></a>
 
@@ -128,16 +130,16 @@ Below section provides details on Ui Automation by executing MOSIP functional au
 
 Here is the detailed breakdown of metrics
 
-|                                                | Test cases |    |
-| ---------------------------------------------- | ---------- | -- |
-| <p> </p><p> </p><p> </p><p>Android</p><p> </p> | Total      | 63 |
-| Passed                                         | 54         |    |
-| Failed                                         | 9          |    |
-| Skipped                                        | 0          |    |
-| <p> </p><p> </p><p>iOS</p><p> </p>             | Total      | 56 |
-| Passed                                         | 49         |    |
-| Failed                                         | 7          |    |
-| Skipped                                        | 0          |    |
+|                                                |         | Test cases |
+| ---------------------------------------------- | ------- | ---------- |
+| <p> </p><p> </p><p> </p><p>Android</p><p> </p> | Total   | 63         |
+|                                                | Passed  | 54         |
+|                                                | Failed  | 9          |
+|                                                | Skipped | 0          |
+| <p> </p><p> </p><p>iOS</p><p> </p>             | Total   | 56         |
+|                                                | Passed  | 49         |
+|                                                | Failed  | 7          |
+|                                                | Skipped | 0          |
 
 
 
