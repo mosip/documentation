@@ -57,11 +57,11 @@ Verification is performed on various configurations as mentioned below
 
 ## Feature Health
 
-### On Andron Device:&#x20;
+**On Andron Device**:&#x20;
 
 <figure><img src="../../../.gitbook/assets/Inji_Mobile_Releases_0.13.0_Test_Report_Feature_Health_On_Android.png" alt=""><figcaption></figcaption></figure>
 
-### On iOS Device:
+**On iOS Device**:
 
 <figure><img src="../../../.gitbook/assets/Inji_Mobile_Releases_0.13.0_Test_Report_Feature_Health_On_IOS.png" alt=""><figcaption></figcaption></figure>
 
