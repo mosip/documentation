@@ -22,4 +22,4 @@ In Summary, Inji provides a comprehensive solution for managing verifiable crede
 5. INJI Infra: Support essential functionality for Revocation, Ledger, Status, Resolution, Federation of verifiable credentials.
 6. INJI Govern: Frameworks to define Policies, Schemas, Assurance, and Parties in context of verifiable credentials.
 
-In essence, Inji is a comprehensive digital credential stack designed to foster a high-trust, low-cost ecosystem.
+In essence, Inji is a comprehensive **digital verifiable credentials' stack**, designed to foster a high-trust, low-cost ecosystem.
