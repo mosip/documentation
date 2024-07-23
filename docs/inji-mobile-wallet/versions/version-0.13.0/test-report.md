@@ -3,8 +3,8 @@
 The scope of testing is to verify fitment to the specification from the perspective of&#x20;
 
 * Functionality&#x20;
-* Deploy ability&#x20;
-* Configurability&#x20;
+* Deployability
+* Configurability
 * Customizability
 
 Verification is performed not only from the end user perspective but also from the System Integrator (SI) point of view. Hence Configurability and Extensibility of the software is also assessed. This ensures the readiness of software for use in multiple countries. Since MOSIP is an “API First” product platform, Verification scope required comprehensive automation testing for all the MOSIP APIs. An automation Test Rig is created for the same.
@@ -35,7 +35,7 @@ Persona based approach has been adopted to perform the IV\&V, by simulating test
 A Persona is a fictional character/user profile created to represent a user type that might use a product/or a service in a similar way. Persona based testing is a software testing technique that puts software testers in the customer's shoes, assesses their needs from the software and thereby determines use cases/scenarios that the customers will execute. The persona needs may be addressed through any of the following.
 
 * Functionality&#x20;
-* Deploy ability&#x20;
+* Deployability&#x20;
 * Configurability&#x20;
 * Customizability&#x20;
 
@@ -55,13 +55,13 @@ Verification is performed on various configurations as mentioned below
 
 ## Feature Health
 
-On Andron Device:&#x20;
+### On Andron Device:&#x20;
 
-\<Image>
+<figure><img src="../../../.gitbook/assets/Inji_Mobile_Releases_0.13.0_Test_Report_Feature_Health_On_Android.png" alt=""><figcaption></figcaption></figure>
 
-On iOS Device:
+### On iOS Device:
 
-\<Image>
+<figure><img src="../../../.gitbook/assets/Inji_Mobile_Releases_0.13.0_Test_Report_Feature_Health_On_IOS.png" alt=""><figcaption></figcaption></figure>
 
 ## Test execution statistics
 
@@ -76,13 +76,9 @@ Below are the test metrics by performing functional testing using mock MDS and m
 | 2322                                  | 2076   | 206    | 40            |
 | Test Rate: 98% With Pass Rate: 89.40% |        |        |               |
 
-&#x20;
 
-&#x20;
 
 Here is the detailed breakdown of metrics for each module:
-
-&#x20;
 
 |                                                              | Test cases |      |
 | ------------------------------------------------------------ | ---------- | ---- |
@@ -108,11 +104,7 @@ Below section provides details on API test metrics by executing MOSIP functional
 | 1335                                   | 1272   | 32     | 28      |
 | Test Rate: 97.6% With Pass Rate: 97.5% |        |        |         |
 
-&#x20;
-
 Here is the detailed breakdown of metrics
-
-&#x20;
 
 |           | Test cases |      |
 | --------- | ---------- | ---- |
@@ -125,24 +117,16 @@ Here is the detailed breakdown of metrics
 | Failed    | 30         |      |
 | Skipped   | 28         |      |
 
-
-
 ### UI Automation results <a href="#id-3rdcrjn" id="id-3rdcrjn"></a>
 
 Below section provides details on Ui Automation by executing MOSIP functional automation Framework.
-
-&#x20;
 
 | Total                                  | Passed | Failed | Skipped |
 | -------------------------------------- | ------ | ------ | ------- |
 | 120                                    | 107    | 13     | 0       |
 | Test Rate: 100% With Pass Rate: 89.16% |        |        |         |
 
-
-
 Here is the detailed breakdown of metrics
-
-&#x20;
 
 |                                                | Test cases |    |
 | ---------------------------------------------- | ---------- | -- |
@@ -155,7 +139,7 @@ Here is the detailed breakdown of metrics
 | Failed                                         | 7          |    |
 | Skipped                                        | 0          |    |
 
-&#x20;
+
 
 Functional and test rig code base branch which is used for the above metrics is:
 
@@ -166,6 +150,8 @@ SHA: sha256: b477f64889c7340a1d1ca6b17601473c30d206de8de9c8a69e8879be38e1dbb5
 ### Testing with various device combinations <a href="#id-26in1rg" id="id-26in1rg"></a>
 
 Below are the test metrics by performing VC Sharing functionality on various device combinations
+
+<figure><img src="../../../.gitbook/assets/Inji_Mobile_Releases_0.13.0_Test_Report_Feature_Health_Various_Device.png" alt=""><figcaption></figcaption></figure>
 
 | Total                                | Passed | Failed | Skipped |
 | ------------------------------------ | ------ | ------ | ------- |
