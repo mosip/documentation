@@ -27,7 +27,7 @@ The libraries are as follows:
 * It does not support iOS for initiating the BLE exchanges, hence preventing two iOS devices from transferring VC.
 
 {% hint style="info" %}
-Note:&#x20;
+Note:
 
 * To learn more about Tuvali's implementation, refer [here](https://docs.mosip.io/inji/integration-guide/tuvali).
 * For information on Tuvali's permissions and requirements, refer [here](https://docs.mosip.io/inji/integration-guide/tuvali/tuvali-requirements).
@@ -52,24 +52,24 @@ Upon the initial launch of Inji Mobile, the model is downloaded in the backgroun
 
 ### **3. Secure Keystore**
 
-The [secure-keystore](https://github.com/mosip/secure-keystore) library is a module designed for the purpose of creating and storing key-pairs in the hardware keystore of Android devices. The library also supports encryption, decryption, and HMAC calculation functionalities.
+The [secure-keystore](https://github.com/mosip/secure-keystore) library is designed for the purpose of creating and storing key-pairs in the hardware keystore of Android devices. The library also supports encryption, decryption, and HMAC calculation functionalities.
 
 It also helps to sign with aliases, created as part of key pair generation.
 
 As the description says, this module is only for Android devices which support hardware keystore.
 
-This library is available as Kotlin artefact in maven as well as npm module for react native application. Inji mobile wallet is integrated with the kotlin artefact of secure-keystore. 
+This library is available as Kotlin artefact in maven as well as npm module for react native application. Inji mobile wallet is integrated with the kotlin artefact of secure-keystore.
 
 In order to reduce the key size during credential download request, Inji mobile wallet is using RSA-2048 instead of RSA-4096 bits keys.
 
 To check all the APIs supported by this module, refer [here](https://github.com/mosip/secure-keystore/blob/develop/src/interface.ts).
 
 {% hint style="info" %}
-Note:&#x20;
+Note:
 
 * This feature is exclusive to the Android operating system.
 * It is only compatible with devices that have a hardware keystore.
-* To understand about the library and the API documentation, refer [here](https://github.com/mosip/documentation/blob/inji/docs/inji-mobile-wallet/integration-guide/secure-keystore.md).
+* To understand about the library and the API documentation, refer [here](integration-guide/secure-keystore.md).
 * To check the NPM module, click [here](https://www.npmjs.com/package/@mosip/secure-keystore).
 * Maven snapshots are available [here](https://oss.sonatype.org/content/repositories/snapshots/io/mosip/secure-keystore/)
 {% endhint %}
@@ -81,7 +81,7 @@ The [BLE Verifier](https://github.com/mosip/ble-verifier-sdk/tree/develop) is th
 To know more about API and how to integrate, refer [here](integration-guide/ble-verifier.md).
 
 {% hint style="info" %}
-Note:&#x20;
+Note:
 
 * To check the NPM module, click [here](https://www.npmjs.com/package/@mosip/ble-verifier-sdk).
 {% endhint %}
@@ -91,7 +91,7 @@ Note:&#x20;
 PixelPass library creates a QR code for the given Verifiable Credentials data which is of smaller size. The library uses zlib compression and base45 encoding. In addition, PixelPass can also Decode QR data encoded by the library. The library is actively developed and maintained by MOSIP.
 
 {% hint style="info" %}
-Note:&#x20;
+Note:
 
 * Refer to the PixelPass repository [here](https://github.com/mosip/pixelpass/tree/develop/js#readme).
 * To understand about the installation and the API documentation, refer [here](integration-guide/pixelpass.md).
@@ -102,10 +102,10 @@ Note:&#x20;
 
 ### **6. VCI-client**
 
-VCI-Client library carries out the credential request from the consumer application (mobile wallet or web) and redirects the issuance/issuer. The library creates a request with the credential format, jwtproof of the wallet, issuer meta data and the access token received for authorization and provides VC as the response back to the consumer application for storage. 
+VCI-Client library carries out the credential request from the consumer application (mobile wallet or web) and redirects the issuance/issuer. The library creates a request with the credential format, jwtproof of the wallet, issuer meta data and the access token received for authorization and provides VC as the response back to the consumer application for storage.
 
 {% hint style="info" %}
-Note:&#x20;
+Note:
 
 * Refer to the VCI-Client repository [here](https://github.com/mosip/inji-vci-client/blob/develop/README.md).
 * To understand about the installation and the API documentation, refer [here](https://docs.mosip.io/inji/inji-mobile-wallet/integration-guide/vci-client).
