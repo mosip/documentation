@@ -58,6 +58,16 @@ Please find below the details for the Inji Version 0.13.0 release:
 | mosip-config     | <p><br></p>       |
 | tuvali           | <p><br></p>       |
 
+## Compatible modules:
+
+The following table outlines the tested and certified compatibility of Inji Mobile 0.13.0 with other modules.
+
+| Module | Version |
+|----------|---------|
+| Mimoto | 0.13.1 |
+| eSignet	| 1.4.0 |
+| Inji Verify | 0.9.0 |
+
 ## **Known Issues**
 
 Redmi devices are not supported in this release. To know more, refer [here](https://mosip.atlassian.net/issues/?filter=-4\&jql=labels%20%3D%20redmi%20order%20by%20created%20DESC).
