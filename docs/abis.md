@@ -36,3 +36,4 @@ MOSIP provides kits to test the interface. Refer to the [abis-testing-kit repo](
 * The queues can be configured in the [RegistrationProcessorAbis-env.jso](https://github.com/mosip/mosip-config/blob/master/registration-processor-abis.json)n file. The ABIS system connects to the queues using a pre-defined user ID and password.
 * It is recommended that ABIS be deployed in the same secure zone (military zone) where the registration processor is deployed.
 * ABIS system is not recommended to connect to any external network.
+keshav
