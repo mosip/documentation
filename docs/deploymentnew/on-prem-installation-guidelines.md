@@ -226,7 +226,7 @@ sudo systemctl status wg-quick@wg0
   * kubectl
   * helm
   * ansible
-  * rke (version 1.3.10)
+  * rke (version 1.5.7)
 * Setup Observation Cluster node VM’s as per the hardware and network requirements as mentioned above.
 * Setup passwordless SSH into the cluster nodes via pem keys. (Ignore if VM’s are accessible via pem’s).
     *  Generate keys on your PC
@@ -499,7 +499,7 @@ helm repo add mosip https://mosip.github.io/mosip-helm
 ```
 
 * ansible
-* rke (version 1.3.10)
+* rke (version 1.5.7)
 * Setup MOSIP K8 Cluster node VM’s as per the hardware and network requirements as mentioned above.
 * Run `env-check-setup.yaml` to check if cluster nodes are fine and dont have known issues in it.
   * cd $K8\_ROOT/rancher/on-prem
