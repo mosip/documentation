@@ -106,8 +106,8 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo add mosip https://mosip.github.io/mosip-helm
 ```
 
-* [Istioctl](https://istio.io/latest/docs/setup/getting-started/#download) : version: 1.15.0
-* [rke](https://rancher.com/docs/rke/latest/en/installation/) : version: [1.3.10](https://github.com/rancher/rke/releases/tag/v1.3.10)
+* [Istioctl](https://istio.io/latest/docs/setup/getting-started/#download) : version: 1.22.0
+* [rke](https://rancher.com/docs/rke/latest/en/installation/) : version: [1.5.7](https://github.com/rancher/rke/releases/tag/v1.5.7)
 * \[Ansible]\(https://docs.ansible.com/ansible/latest/installation\_guide/intro\_installation.html: version > 2.12.4
 *   Create a directory as MOSIP in your PC and:
 
@@ -226,7 +226,7 @@ sudo systemctl status wg-quick@wg0
   * kubectl
   * helm
   * ansible
-  * rke (version 1.3.10)
+  * rke (version 1.5.7)
 * Setup Observation Cluster node VM’s as per the hardware and network requirements as mentioned above.
 * Setup passwordless SSH into the cluster nodes via pem keys. (Ignore if VM’s are accessible via pem’s).
     *  Generate keys on your PC
@@ -576,7 +576,7 @@ helm repo add mosip https://mosip.github.io/mosip-helm
 ```
 
 * ansible
-* rke (version 1.3.10)
+* rke (version 1.5.7)
 * Setup MOSIP K8 Cluster node VM’s as per the hardware and network requirements as mentioned above.
 * Run `env-check.yaml` to check if cluster nodes are fine and don't have known issues in it.
   * cd $K8\_ROOT/rancher/on-prem
