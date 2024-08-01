@@ -36,10 +36,19 @@ $ cd ./inji-web
 $ npm install
 $ npm start
 ```
+### Troubleshooting:
 
-Run npm test to run tests
+*  Running Web in local gives CORS error. To avoid this, run proxy server in local and use that proxy server in Inji Web. Refer [here](https://jakemccambley.medium.com/fixing-cors-errors-when-working-with-3rd-party-apis-a69dc5474804) to setup proxy server in local and set mimoto url https://api.collab.mosip.net as api url.
 
-* Build and run Docker for a service:
+*  Once proxy server is up, use proxy server in Inji Web.
+
+*  Replace window.location.origin by proxy server url [here](https://github.com/mosip/inji-web/blob/master/inji-web/src/utils/api.ts#L12-L14)
+
+### Tests
+
+*  Run ```npm test``` to run tests
+
+### Build and run Docker for a service:
 
 ```
 $ cd ./inji-web

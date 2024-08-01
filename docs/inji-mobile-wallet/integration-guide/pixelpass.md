@@ -20,6 +20,8 @@ Below snapshots provide the mobile platform native artifacts along with the java
 
 **Java:** Index of /repositories/snapshots/io/mosip/pixelpass-jar 
 
+**Maven repo:** [pixelpass](https://repo1.maven.org/maven2/io/mosip/pixelpass/)
+
 
 ### Installation
 
