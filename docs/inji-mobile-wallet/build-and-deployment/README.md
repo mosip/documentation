@@ -13,9 +13,16 @@
 * [Node](https://nodejs.org/en/download)
 * [XCode](https://developer.apple.com/xcode/) for iOS development
 
+To perform **offline sharing using BLE**, we recommend below:
+
+* Devices with Bluetooth v4.2 and above
+* Android v23 and above for Android
+
 ## Android - Build and Run
 
-### Installation and Keystore generation on MAC
+The below sections describe the steps for building the android application in Mac and Windows OS.
+
+### 1a. Installation and Keystore generation on MAC
 
 #### Step 1:
 
@@ -95,7 +102,7 @@ export DEBUG_KEYSTORE_ALIAS=androiddebugkey
 export DEBUG_KEYSTORE_PASSWORD=android
 ```
 
-### Installation and Keystore generation on Windows
+### 1b. Installation and Keystore generation on Windows
 
 #### Step 1:
 
@@ -195,12 +202,8 @@ https://sourceforge.net/projects/quickadb/
 
 Configure ANDROID\_HOME and JAVA\_HOME in system environment variables
 
-### Prerequisites for running on device
 
-1. Requires Bluetooth v4.2 and above
-2. Android v23 and above for Android
-
-### Command to build
+### 2. Command to build the application
 
 #### Step 1:
 
@@ -230,33 +233,41 @@ sdk.dir = <location-of-the-android-sdk>
 
 #### Step 4:
 
+*  Update mimoto url as https://api.collab.mosip.net [here](https://github.com/mosip/inji/blob/main/.env#L5)
+*  Update esignet host as https://esignet.collab.mosip.net [here](https://github.com/mosip/inji/blob/main/.env#L7)
+* To deploy mimoto in local refer [here](https://docs.mosip.io/inji/inji-mobile-wallet/build-and-deployment/local-setup#how-to-run-this-setup)
+  
+#### Step 5:
+
 * Go to the root folder of the project in the terminal.
 * Install all the dependencies using `npm install`.
 
-#### Step 5:
+#### Step 6:
 
 **Build and run the application on the device:**
 
 * Run `npm run android:mosip` to build and install the application on the device.
 * Run `npm run android:mosip --reset-cache` to build and install the application if any change is made in the .env file.
 
+### 3. Troubleshooting
+
 If you encounter the below issue on Windows,
 
 ```
-FAILURE: Build failed with an exception.
+**FAILURE:** Build failed with an exception.
 
-- Where:
+**Where:**
   Script 'C:\....\inji\node_modules\expo\scripts\autolinking.gradle' line: 2
 
-- What went wrong:
+**What went wrong:**
   A problem occurred evaluating script.
   > Could not read script 'C:\"PATH"\inji\node_modules\expo\scripts\android\autolinking_implementation.gradle' as it does not exist.
 ```
 
-* Run this `npm i expo-modules-autolinking@~1.1.0` and rebuild the app
+* Run `npm i expo-modules-autolinking@~1.1.0` and rebuild the app
 * Path for debug apk in Inji directory `android/app/build/outputs/apk/mosip/debug`
 
-### Setting Up Google API Services and Client ID
+### 4. Setting Up Google API Services and Client ID for Data backup & Restore
 
 #### Step 1:
 
@@ -314,7 +325,7 @@ Once the Client ID has been created copy the client ID and add it as part of `.e
 
 `GOOGLE_ANDROID_CLIENT_ID="<copied-client-id>"`
 
-### Build for PlayConsole
+### 5. Build for PlayConsole
 
 The Internal testing version of the build can be uploaded to `PlayConsole` for testing. PlayConsole allows the creation of internal testers group.
 
@@ -368,7 +379,9 @@ _**Note**_: Only those who are registered in the selected testers group will be 
 
 ## iOS - Build and run
 
-### Installation and Keystore generation
+The below section describes the steps build the iOS application.
+
+### 1. Installation and Keystore generation
 
 #### Step 1:
 
@@ -382,7 +395,7 @@ Configure XCode, refer [here](https://developer.apple.com/xcode/).
 
 Enable iCloud and create Containers, refer https://developer.apple.com/help/account/manage-identifiers/create-an-icloud-container/
 
-### Build process
+### 2. Build process
 
 * Install all the dependencies
 
@@ -409,7 +422,7 @@ Command to run real device
 npm run ios -- --device
 ```
 
-### Build for TestFlight
+### 3. Build for TestFlight
 
 The beta version of the build can be uploaded to `TestFlight` for testing. TestFlight allows the creation of internal and external testing teams who will be notified once a new build is published.
 
