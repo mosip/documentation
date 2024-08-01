@@ -20,7 +20,7 @@ We extend our sincere appreciation to the **IRIScan team** for their invaluable 
 
 * To install any face sdk module, please add it's dependency in the `package.json` file.
 * Once done rebuild the Inji Mobile.
-* The Inji Mobile wallet should be able to integrate and use the face sdk.
+* The Inji Wallet should be able to integrate and use the face sdk.
 
 ### Face Compare with liveness is coming soon
 

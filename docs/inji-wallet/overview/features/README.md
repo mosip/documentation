@@ -12,11 +12,11 @@ Residents can download a VC using a configured third-party issuer which complies
 
 #### Credential Type Selection:
 
-Inji mobile wallet introduces a new feature that empowers users to select the specific type of credential they require. Upon choosing an issuer, users are presented with a list of Credential Types issued by the ID provider. This functionality provides users with flexibility and control, allowing them to download their Verifiable Credentials to their precise needs.
+Inji Wallet introduces a new feature that empowers users to select the specific type of credential they require. Upon choosing an issuer, users are presented with a list of Credential Types issued by the ID provider. This functionality provides users with flexibility and control, allowing them to download their Verifiable Credentials to their precise needs.
 
 #### VC Verification:
 
-Inji mobile wallet offers a robust feature for verifying Verifiable Credentials using the Digital Bazaar library. This advanced functionality ensures that the issuer's signature is validated and verified based on the proof type provided by the issuer. This step is ingrained as part of the VC download flow. Currently, the support is for the RSA signature type, providing users with reliable verification capabilities. Additionally, we are actively working to expand our support to include the Ed25519 proof type, further enhancing the security and versatility of our verification process. With these advancements, users can trust that their Verifiable Credentials are verified with precision and integrity, regardless of the proof type utilized by the issuer.
+Inji Wallet offers a robust feature for verifying Verifiable Credentials using the Digital Bazaar library. This advanced functionality ensures that the issuer's signature is validated and verified based on the proof type provided by the issuer. This step is ingrained as part of the VC download flow. Currently, the support is for the RSA signature type, providing users with reliable verification capabilities. Additionally, we are actively working to expand our support to include the Ed25519 proof type, further enhancing the security and versatility of our verification process. With these advancements, users can trust that their Verifiable Credentials are verified with precision and integrity, regardless of the proof type utilized by the issuer.
 
 #### **QR Code Generation:**
 
