@@ -5,7 +5,7 @@
 * Name: Inji 0.13.0
 * Date: Coming Soon
 * [Release Notes](./#version-0.13.0)
-  
+
 ## Version: 0.12.0
 
 * Name: Inji 0.12.0
@@ -34,7 +34,7 @@
 
 * Name: Inji 0.10.0
 * Date: 19th December, 2023
-* [Release Notes](version-0.10.0/)
+* [Release Notes](../../inji-mobile-wallet/versions/version-0.10.0)
 
 ## Version: vDP1
 
@@ -46,13 +46,13 @@
 
 * Name: Inji 0.9.1 (Beta)
 * Date: 25th July, 2023
-* [Release Notes](version-0.9.1/)
+* [Release Notes](../../inji-mobile-wallet/versions/version-0.9.1)
 
 ## Version: 0.9.0
 
 * Name: Inji 0.9.0 (Beta)
 * Date: 14th April, 2023
-* [Release Notes](version-0.9.0/)
+* [Release Notes](../../inji-mobile-wallet/versions/version-0.9.0)
 
 ## Version: 0.8.0
 

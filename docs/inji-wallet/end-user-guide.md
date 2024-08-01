@@ -46,7 +46,7 @@ Inji Mobile integrates with eSignet as an authorization layer to perform VC down
 * On the authorization page (eSignet page), the user has to enter the UIN / VID and provide the OTP sent to the registered mobile number/email.
 * Upon successful validation of OTP, the user will be taken back to the application, landing on the loading screen. Following the completion of the download process, the user will be returned to the home page, where the Downloaded Credential will be available.
 
-<figure><img src="../.gitbook/assets/Download_National_ID_1.png" alt=""><figcaption><p>Download National ID </p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Download_National_ID_1.png" alt="" width="471"><figcaption><p>Download National ID </p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/Download_National_ID_2.png" alt=""><figcaption><p>Download National ID</p></figcaption></figure>
 
