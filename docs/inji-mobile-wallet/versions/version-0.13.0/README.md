@@ -8,7 +8,7 @@
 
 ## **Overview**
 
-We are delighted to announce the release of Inji mobile Version 0.13.0 . This release is compatible with v0.13.1 Mimoto release. As part of 0.13.0, Inji mobile introduces below mentioned key features:
+We are delighted to announce the release of Inji Wallet Version 0.13.0. This release has a major announcement on inji repository renamed as inji-wallet and is compatible with v0.13.1 Mimoto. As part of 0.13.0, Inji Wallet introduces below mentioned key features:
 
 **Libraries:**
 
@@ -53,10 +53,16 @@ Please find below the details for the Inji Version 0.13.0 release:
 
 | **Repositories** | **Tags Released** |
 | ---------------- | ----------------- |
-| Inji             | <p><br></p>       |
-| mimoto           | <p><br></p>       |
-| mosip-config     | <p><br></p>       |
-| tuvali           | <p><br></p>       |
+| inji-wallet             | <p><a href="https://github.com/mosip/inji-wallet/releases/tag/v0.13.0">v0.13.0</a><br></p>      |
+| mimoto           | <p><a href="https://github.com/mosip/mimoto/releases/tag/v0.13.1">v0.13.1</a><br></p>       |
+| inji-config     | <p><a href="https://github.com/mosip/inji-config/releases/tag/v0.1.2">v0.1.2</a><br></p>     |
+| tuvali           | <p><a href="https://github.com/mosip/tuvali/releases/tag/v0.5.0">v0.5.0</a><br></p> `       |
+| tuvali-ios-swift           | <p><a href="https://github.com/mosip/tuvali-ios-swift/releases/tag/v0.5.0">v0.5.0</a><br></p> `       |
+| secure-keystore           | <p><a href="https://github.com/mosip/secure-keystore/releases/tag/v0.2.0">v0.2.0</a><br></p> `       |
+| pixelpass           | <p><a href="https://github.com/mosip/pixelpass/releases/tag/v0.2.0">v0.2.0</a><br></p> `       |
+| pixelpass-ios-swift         | <p><a href="https://github.com/mosip/pixelpass-ios-swift/releases/tag/v0.2.0">v0.2.0</a><br></p> `       |
+| inji-vci-client           | <p><a href="https://github.com/mosip/inji-vci-client/releases/tag/v0.1.0">v0.1.0</a><br></p> `       |
+| inji-vci-client-ios-swift         | <p><a href="https://github.com/mosip/inji-vci-client-ios-swift/releases/tag/v0.1.0">v0.1.0</a><br></p> `       |
 
 ## Compatible modules:
 
