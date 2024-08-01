@@ -10,6 +10,8 @@ Let's have a look at how BLE communication works in general between the two devi
 
 * [tuvali-ios-swift](https://github.com/mosip/tuvali-ios-swift) to get details on swift artifact.
 
+* [tuvali](https://repo1.maven.org/maven2/io/mosip/tuvali/) contains the artefacts in maven.
+
 ## Installation:
 
 ### Usage as a Kotlin library (for native android)   
