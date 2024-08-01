@@ -1,6 +1,6 @@
 # Overview
 
-**Inji Mobile Wallet** is a mobile application specifically created to streamline all types of identification and credentials into one digital wallet. This innovative solution allows for identity verification through a straightforward selfie. 
+**Inji Wallet** is a mobile application specifically created to streamline all types of identification and credentials into one digital wallet. This innovative solution allows for identity verification through a straightforward selfie. 
 
 It offers a secure, trustworthy, and dependable mobile Verifiable Credentials wallet designed to fulfil the following functions:
 

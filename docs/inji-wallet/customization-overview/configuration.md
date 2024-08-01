@@ -21,6 +21,6 @@ The properties used by Inji Mobile are:
 * `mosip.inji.audience(ida-binding)`: This is used to generate the JWT token which will be passed during online login.
 * `mosip.inji.issuer(residentapp)`: This is used to generate the JWT token which will be passed during online login.
 * `mosip.inji.warningDomainName(https://${mosip.api.public.host})`: This is the domain used to access all Apis.
-* `mosip.inji.aboutInjiUrl(https://docs.mosip.io/inji)`: This is the url for Inji Mobile documentation used in About Inji Mobile Wallet page.
+* `mosip.inji.aboutInjiUrl(https://docs.mosip.io/inji)`: This is the url for Inji Mobile documentation used in About Inji Wallet page.
 * `mosip.inji.minStorageRequiredForAuditEntry(1)`: This is threshold(minimum storage space required) in MB for storing audit entries.
 * `mosip.inji.minStorageRequired(5)`: This is threshold(minimum storage space required) in MB for storing downloaded / received vc.
