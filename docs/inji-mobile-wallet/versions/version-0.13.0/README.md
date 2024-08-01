@@ -4,7 +4,7 @@
 
 **Support:** Developer Release
 
-**Release Date:** 01st Aug, 2024
+**Release Date:** 1st August, 2024
 
 ## **Overview**
 
@@ -51,37 +51,41 @@ Please find below the details for the Inji Version 0.13.0 release:
 
 #### Inji repo name change:
 
-Inji repo is renamed to [inji-wallet](https://github.com/mosip/inji-wallet)
+Inji repo is renamed to [inji-wallet](https://github.com/mosip/inji-wallet)
 
 **Steps to update local github configuration:**
 
-* 		Navigate to the location where your forked repository is cloned.
-* 		Execute git remote -v to view the current remote configurations (origin and upstream). Update these configurations to align with the new repository name.
+* ```
+    Navigate to the location where your forked repository is cloned.
+  ```
+* ```
+    Execute git remote -v to view the current remote configurations (origin and upstream). Update these configurations to align with the new repository name.
+  ```
 
 ## **Repository Released**
 
-| **Repositories** | **Tags Released** |
-| ---------------- | ----------------- |
-| inji-wallet             | <p><a href="https://github.com/mosip/inji-wallet/releases/tag/v0.13.0">v0.13.0</a><br></p>      |
-| mimoto           | <p><a href="https://github.com/mosip/mimoto/releases/tag/v0.13.1">v0.13.1</a><br></p>       |
-| inji-config     | <p><a href="https://github.com/mosip/inji-config/releases/tag/v0.1.2">v0.1.2</a><br></p>     |
-| tuvali           | <p><a href="https://github.com/mosip/tuvali/releases/tag/v0.5.0">v0.5.0</a><br></p> `       |
-| tuvali-ios-swift           | <p><a href="https://github.com/mosip/tuvali-ios-swift/releases/tag/v0.5.0">v0.5.0</a><br></p> `       |
-| secure-keystore           | <p><a href="https://github.com/mosip/secure-keystore/releases/tag/v0.2.0">v0.2.0</a><br></p> `       |
-| pixelpass           | <p><a href="https://github.com/mosip/pixelpass/releases/tag/v0.2.0">v0.2.0</a><br></p> `       |
-| pixelpass-ios-swift         | <p><a href="https://github.com/mosip/pixelpass-ios-swift/releases/tag/v0.2.0">v0.2.0</a><br></p> `       |
-| inji-vci-client           | <p><a href="https://github.com/mosip/inji-vci-client/releases/tag/v0.1.0">v0.1.0</a><br></p> `       |
-| inji-vci-client-ios-swift         | <p><a href="https://github.com/mosip/inji-vci-client-ios-swift/releases/tag/v0.1.0">v0.1.0</a><br></p> `       |
+| **Repositories**          | **Tags Released**                                                                                              |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| inji-wallet               | <p><a href="https://github.com/mosip/inji-wallet/releases/tag/v0.13.0">v0.13.0</a><br></p>                     |
+| mimoto                    | <p><a href="https://github.com/mosip/mimoto/releases/tag/v0.13.1">v0.13.1</a><br></p>                          |
+| inji-config               | <p><a href="https://github.com/mosip/inji-config/releases/tag/v0.1.2">v0.1.2</a><br></p>                       |
+| tuvali                    | <p><a href="https://github.com/mosip/tuvali/releases/tag/v0.5.0">v0.5.0</a><br></p><p>`</p>                    |
+| tuvali-ios-swift          | <p><a href="https://github.com/mosip/tuvali-ios-swift/releases/tag/v0.5.0">v0.5.0</a><br></p><p>`</p>          |
+| secure-keystore           | <p><a href="https://github.com/mosip/secure-keystore/releases/tag/v0.2.0">v0.2.0</a><br></p><p>`</p>           |
+| pixelpass                 | <p><a href="https://github.com/mosip/pixelpass/releases/tag/v0.2.0">v0.2.0</a><br></p><p>`</p>                 |
+| pixelpass-ios-swift       | <p><a href="https://github.com/mosip/pixelpass-ios-swift/releases/tag/v0.2.0">v0.2.0</a><br></p><p>`</p>       |
+| inji-vci-client           | <p><a href="https://github.com/mosip/inji-vci-client/releases/tag/v0.1.0">v0.1.0</a><br></p><p>`</p>           |
+| inji-vci-client-ios-swift | <p><a href="https://github.com/mosip/inji-vci-client-ios-swift/releases/tag/v0.1.0">v0.1.0</a><br></p><p>`</p> |
 
 ## Compatible modules:
 
 The following table outlines the tested and certified compatibility of Inji Mobile 0.13.0 with other modules.
 
-| Module | Version |
-|----------|---------|
-| Mimoto | 0.13.1 |
-| eSignet	| 1.4.0 |
-| Inji Verify | 0.9.0 |
+| Module      | Version |
+| ----------- | ------- |
+| Mimoto      | 0.13.1  |
+| eSignet     | 1.4.0   |
+| Inji Verify | 0.9.0   |
 
 ## **Known Issues**
 
