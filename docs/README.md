@@ -15,7 +15,7 @@ Inji (meaning "knowing" or "recognizance" in Korean) is evolving into a user-cen
 
 In Summary, Inji provides a **complete solution** for managing verifiable credentials across their entire lifecycle. It offers a suite of tools to Create, Issue, Manage, Share, Verify and Consume Credentials. **Key modules** include:
 
-1. **INJI Mobile Wallet**: Secure, trustworthy, dependable, and decentralized mobile wallet enabling users to Download, Manage, Share, Verify verifiable credentials.
+1. **Inji Wallet**: Secure, trustworthy, dependable, and decentralized mobile wallet enabling users to Download, Manage, Share, Verify verifiable credentials.
 2. **INJI Web**: Easy to use web portal making credentials accessible to all, allowing users to download, print, store, and share verifiable credentials physically.
 3. **INJI Certify** (issuance): Empowering issuers to create, sign, issue, bind, and store/hold verifiable credentials in multiple formats.
 4. **INJI Verify**: Tools and utilities to consume and verify authenticity of credentials.

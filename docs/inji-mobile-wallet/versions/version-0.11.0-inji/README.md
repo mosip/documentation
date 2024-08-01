@@ -24,13 +24,13 @@ Please find below the details for the **Inji Version 0.11.0** release:
 
 ### VC download using KBI method
 
-  Inji Mobile wallet has proven capability to integrate with any credential issuer supporting **OpenID** protocol and issues Verifiable Credentials (VCs) based on **OpenID4VCI** standards. To demonstrate the implementation of VC download using KBI (Knowledge Based Identification), Inji mobile wallet when integrated with [eSignet 1.4.0](https://docs.esignet.io/versions/v1.4.0), can connect with any issuer preferring KBI-based identification.
+  Inji Wallet has proven capability to integrate with any credential issuer supporting **OpenID** protocol and issues Verifiable Credentials (VCs) based on **OpenID4VCI** standards. To demonstrate the implementation of VC download using KBI (Knowledge Based Identification), Inji Wallet when integrated with [eSignet 1.4.0](https://docs.esignet.io/versions/v1.4.0), can connect with any issuer preferring KBI-based identification.
 
 To know more about, KBI, refer [here](https://docs.esignet.io/end-user-guide/knowledge-based-authentication).
 
 ### Data backup and restore
 
-Inji mobile wallet currently offers data backup and restore functionality using Google Drive for Android and iCloud for iOS to safely store residents' Verifiable Credentials(VCs) on resident's preferred cloud platform. This ensures security and accessibility. Resident can also easily restore backed up information as required, and thereby enabling seamless user experience whether the resident uses Android or iOS.
+Inji Wallet currently offers data backup and restore functionality using Google Drive for Android and iCloud for iOS to safely store residents' Verifiable Credentials(VCs) on resident's preferred cloud platform. This ensures security and accessibility. Resident can also easily restore backed up information as required, and thereby enabling seamless user experience whether the resident uses Android or iOS.
 
 ### GenderMag
 

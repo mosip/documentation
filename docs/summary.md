@@ -4,7 +4,7 @@
   * [Try It Out](readme/try-it-out.md)
   * [Use case](readme/use-case.md)
 
-## Inji Mobile Wallet
+## Inji Wallet
 
 * [Overview](inji-mobile-wallet/overview/README.md)
   * [Features](inji-mobile-wallet/overview/features/README.md)

@@ -24,7 +24,7 @@ While downloading the VCs, the credentials are validated and verified for the au
 
 #### Download via eSignet
 
-Below sections are going to detail as how Inji Mobile wallet as an OIDC client to OpenID4VCI method of downloading a VC and illustrated implementations.
+Below sections are going to detail as how Inji Wallet as an OIDC client to OpenID4VCI method of downloading a VC and illustrated implementations.
 
 **Download credentials using UIN / VID**:
 

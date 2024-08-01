@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a draft specification that is used to implement the face match in the Inji Mobile wallet or any similar wallets.
+This is a draft specification that is used to implement the face match in the Inji Wallet or any similar wallets.
 
 ### Configure API
 

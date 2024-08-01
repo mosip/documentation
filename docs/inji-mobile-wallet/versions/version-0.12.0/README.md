@@ -41,17 +41,17 @@ Please find below the details for the **Inji Version 0.12.0** release:
 
 #### Credential Type Selection:
 
-Inji mobile wallet now allows users to select the type of credential they need, giving them the option to choose from a list of Credential Types issued by the ID provider. This enables users to download Verifiable Credentials that match their selection.&#x20;
+Inji Wallet now allows users to select the type of credential they need, giving them the option to choose from a list of Credential Types issued by the ID provider. This enables users to download Verifiable Credentials that match their selection.&#x20;
 
 #### VC Verification:
 
-Inji mobile wallet provides the functionality to verify Verifiable Credentials using the Digital Bazaar library. The issuer's signature is verified based on the proof type provided by the issuer. Currently, we support the RSA signature type, and we will soon add support for the Ed25519 proof type.
+Inji Wallet provides the functionality to verify Verifiable Credentials using the Digital Bazaar library. The issuer's signature is verified based on the proof type provided by the issuer. Currently, we support the RSA signature type, and we will soon add support for the Ed25519 proof type.
 
 To prevent failures during download caused by verification of Verifiable Credentials with any other signature type, this step needs to be bypassed. Learn more about the steps [**here**](../../customization-overview/credential_providers.md).
 
 #### QR code generation for VC:
 
-PixelPass, part of the Inji Credentialing stack, generates QR codes for Verifiable Credentials within the Inji mobile wallet. It's specifically designed for smaller data sets when the ID provider doesn't send a QR code along with the Verifiable Credential. Users can view and use this QR code for verification purposes by the relying party or service provider.
+PixelPass, part of the Inji Credentialing stack, generates QR codes for Verifiable Credentials within the Inji Wallet. It's specifically designed for smaller data sets when the ID provider doesn't send a QR code along with the Verifiable Credential. Users can view and use this QR code for verification purposes by the relying party or service provider.
 
 To know more about QR code verification, read about Inji Verify [**here**](https://docs.mosip.io/inji/inji-mobile-wallet/components#id-5.-pixelpass).
 

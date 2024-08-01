@@ -31,7 +31,7 @@ To download MOSIP issued VC, using OTP method, user can directly provide UIN / V
 
 #### Download via eSignet
 
-Below sections are going to detail as how Inji Mobile wallet as an OIDC client to OpenID4VCI method of downloading a VC and illustrated implementations.
+Below sections are going to detail as how Inji Wallet as an OIDC client to OpenID4VCI method of downloading a VC and illustrated implementations.
 
 **Download credentials using UIN / VID**:
 
