@@ -69,13 +69,13 @@ Inji repo is renamed to [inji-wallet](https://github.com/mosip/inji-wallet)
 | inji-wallet               | <p><a href="https://github.com/mosip/inji-wallet/releases/tag/v0.13.0">v0.13.0</a><br></p>                     |
 | mimoto                    | <p><a href="https://github.com/mosip/mimoto/releases/tag/v0.13.1">v0.13.1</a><br></p>                          |
 | inji-config               | <p><a href="https://github.com/mosip/inji-config/releases/tag/v0.1.2">v0.1.2</a><br></p>                       |
-| tuvali                    | <p><a href="https://github.com/mosip/tuvali/releases/tag/v0.5.0">v0.5.0</a><br></p><p>`</p>                    |
-| tuvali-ios-swift          | <p><a href="https://github.com/mosip/tuvali-ios-swift/releases/tag/v0.5.0">v0.5.0</a><br></p><p>`</p>          |
-| secure-keystore           | <p><a href="https://github.com/mosip/secure-keystore/releases/tag/v0.2.0">v0.2.0</a><br></p><p>`</p>           |
-| pixelpass                 | <p><a href="https://github.com/mosip/pixelpass/releases/tag/v0.2.0">v0.2.0</a><br></p><p>`</p>                 |
-| pixelpass-ios-swift       | <p><a href="https://github.com/mosip/pixelpass-ios-swift/releases/tag/v0.2.0">v0.2.0</a><br></p><p>`</p>       |
-| inji-vci-client           | <p><a href="https://github.com/mosip/inji-vci-client/releases/tag/v0.1.0">v0.1.0</a><br></p><p>`</p>           |
-| inji-vci-client-ios-swift | <p><a href="https://github.com/mosip/inji-vci-client-ios-swift/releases/tag/v0.1.0">v0.1.0</a><br></p><p>`</p> |
+| tuvali                    | <p><a href="https://github.com/mosip/tuvali/releases/tag/v0.5.0">v0.5.0</a><br></p>                    |
+| tuvali-ios-swift          | <p><a href="https://github.com/mosip/tuvali-ios-swift/releases/tag/v0.5.0">v0.5.0</a><br></p>          |
+| secure-keystore           | <p><a href="https://github.com/mosip/secure-keystore/releases/tag/v0.2.0">v0.2.0</a><br></p>           |
+| pixelpass                 | <p><a href="https://github.com/mosip/pixelpass/releases/tag/v0.2.0">v0.2.0</a><br></p>                 |
+| pixelpass-ios-swift       | <p><a href="https://github.com/mosip/pixelpass-ios-swift/releases/tag/v0.2.0">v0.2.0</a><br></p>       |
+| inji-vci-client           | <p><a href="https://github.com/mosip/inji-vci-client/releases/tag/v0.1.0">v0.1.0</a><br></p>           |
+| inji-vci-client-ios-swift | <p><a href="https://github.com/mosip/inji-vci-client-ios-swift/releases/tag/v0.1.0">v0.1.0</a><br></p> |
 
 ## Compatible modules:
 
