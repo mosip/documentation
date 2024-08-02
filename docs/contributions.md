@@ -52,7 +52,7 @@ Singapore based Newlogic is a software consultancy company providing innovative 
 
 In 2022, Thoughtworks partnered with MOSIP as an engineering ally, embarking on a significant journey together. Key milestone was the creation of Tuvali, a BLE layer adhering to OpenID4VP standards. An alternate to Google Nearby, Tuvali facilitates the exchange of verifiable IDs across wallets and devices even without internet connectivity. This innovation empowers governments to effectively provide efficient and monitored citizen services.
 
-Furthermore, the organization played a pivotal role in developing Inji Mobile, a digital VC wallet reference application. With a strong focus on security and inclusivity, Inji Mobile offers features for downloading, storing, managing, presenting, and verifying VCs within the MOSIP community. Built on OpenID4VCI standards, the wallet also includes data backup capabilities.
+Furthermore, the organization played a pivotal role in developing Inji Wallet, a digital VC wallet reference application. With a strong focus on security and inclusivity, Inji Wallet offers features for downloading, storing, managing, presenting, and verifying VCs within the MOSIP community. Built on OpenID4VCI standards, the wallet also includes data backup capabilities.
 
 The organization has broadened its contributions to other essential components of the digital credentialing stack - Inji.
 
