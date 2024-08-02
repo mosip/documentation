@@ -4,13 +4,13 @@
 
 * Name: Inji 0.13.0
 * Date: 02nd Aug, 2024
-* [Release Notes](./#version-0.13.0)
+* [Release Notes](https://docs.mosip.io/inji/inji-wallet/versions/version-0.13.0)
 
 ## Version: 0.12.0
 
 * Name: Inji 0.12.0
 * Date: 31st May, 2024
-* [Release Notes](./#version-0.12.0)
+* [Release Notes](https://docs.mosip.io/inji/inji-wallet/versions/version-0.12.0)
 
 ## Version: Inji 0.11.0-Inji
 
