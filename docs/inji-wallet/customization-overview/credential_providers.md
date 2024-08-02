@@ -1,6 +1,6 @@
 # Credential Providers
 
-Inji Mobile currently provides support for following credential providers:
+Inji Wallet currently provides support for following credential providers:
 
 **Download VC using OpenID for VC Issuance Flow (eSignet)**
 
@@ -15,7 +15,7 @@ To set up a new provider that can issue VC, it can be accomplished by making a f
 
 > Refer to [mimoto-issuers-config.json](https://github.com/mosip/mosip-config/blob/collab1/mimoto-issuers-config.json) of Collab environment.
 
-These values will be used by Inji Mobile via Mimoto. Mimoto exposes APIs which is used by the Inji Mobile application to fetch, store the issuers and their configurations in the local storage.
+These values will be used by Inji Wallet via Mimoto. Mimoto exposes APIs which is used by the Inji Wallet application to fetch, store the issuers and their configurations in the local storage.
 
 * API used to fetch issuers: `https://api.mosip.io/v1/mimoto/residentmobileapp/issuers`
 * API used to fetch issuer's configuration: `https://api.mosip.io/v1/mimoto/residentmobileapp/issuers/${issuerId}`
@@ -27,7 +27,7 @@ After adding the provider in configuration, it will be displayed on the UI on `A
 * If new provider supports [OpenID4VCI](https://openid.net/specs/openid-4-verifiable-credential-issuance-1\_0.html) protocol, it is recommended to use `issuerMachine.ts` and `EsignetMosipVCItemMachine.ts` for workflow to download VC.
 * If it doesn't support `OpenID4VCI` protocol, new state machine needs to be added. Please refer to `issuerMachine.ts` and `EsignetMosipVCItemMachine.ts`.
 
-3. At present, Inji mobile supports verification of VCs which has RSA proof type. If VC is issued with any other proof type, verification will fail and VC will not be downloaded. To bypass this VC verification, we need to use issuer id as "Sunbird".
+3. At present, Inji Wallet supports verification of VCs which has RSA proof type. If VC is issued with any other proof type, verification will fail and VC will not be downloaded. To bypass this VC verification, we need to use issuer id as "Sunbird".
 
 > Refer https://github.com/mosip/mosip-config/blob/collab1/mimoto-issuers-config.json#L71 as reference. Here, credential_issuer should be "Sunbird" and then add all the configuration.
 

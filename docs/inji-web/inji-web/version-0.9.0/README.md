@@ -35,7 +35,7 @@ Below are the details for the **Inji Version 0.9.0** release:
 
   1. Responsive views: Users can now view Inji Web portal in Tablets and Mobile devices.
 
-  2. PDF Layout changes The layout of the VC generated as PDF is now in similar lines of VC detailed view in Inji Mobile.
+  2. PDF Layout changes The layout of the VC generated as PDF is now in similar lines of VC detailed view in Inji Wallet.
 
 ## Repository Released
 
@@ -70,7 +70,7 @@ Below are the list of fixes as part of 0.9.0 release:
 | [**INJIWEB-291**](https://mosip.atlassian.net/browse/INJIWEB-291) | Inji-web: Multi languages support is not working at Authentication window                                      |
 | [**INJIWEB-243**](https://mosip.atlassian.net/browse/INJIWEB-243) | Inji-web: Observed drop down box in search bar at issuer selection page as well as at credential download pages|
 | [**INJIWEB-132**](https://mosip.atlassian.net/browse/INJIWEB-132) | Inji-web: Data in VC(PDF) are not properly aligned                                                             |
-| [**INJIWEB-131**](https://mosip.atlassian.net/browse/INJIWEB-131) | Inji-web: attributes are missing compared to the VC on inji mobile                                             |
+| [**INJIWEB-131**](https://mosip.atlassian.net/browse/INJIWEB-131) | Inji-web: attributes are missing compared to the VC on Inji Wallet                                             |
 
 
 ## Documentation <a href="#documentation" id="documentation"></a>

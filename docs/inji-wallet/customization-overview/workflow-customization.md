@@ -1,6 +1,6 @@
 # Workflow customization
 
-Workflow in Inji Mobile is achieved by finite-state machine components. State machines are written using a library called [xstate](https://xstate.js.org/docs/recipes/react.html). All the state machines are available in the machines folder of the Inji Mobile codebase. There are few machines under the screens folder but these are too specific to those features.
+Workflow in Inji Wallet is achieved by finite-state machine components. State machines are written using a library called [xstate](https://xstate.js.org/docs/recipes/react.html). All the state machines are available in the machines folder of the Inji Wallet codebase. There are few machines under the screens folder but these are too specific to those features.
 
 Here is a list of state machines and their responsibilities. The developers can choose to use the existing state machine components and customize the workflow as per their needs.
 
@@ -38,9 +38,9 @@ After selecting the unlock method as passcode or biometric, the user is navigate
 
 ## vc.ts
 
-This state machine takes care of the VC received in Inji Mobile as a Wallet or Verifier. When Inji Mobile is being used as a Wallet, all the user-downloaded VCs are displayed on the Home screen.
+This state machine takes care of the VC received in Inji Wallet as a Wallet or Verifier. When Inji Wallet is being used as a Wallet, all the user-downloaded VCs are displayed on the Home screen.
 
-It also keeps track of sharing VC over BLE. When Inji Mobile is being used as a Verifier, all received VCs are displayed under the Received Card option in Settings.
+It also keeps track of sharing VC over BLE. When Inji Wallet is being used as a Verifier, all received VCs are displayed under the Received Card option in Settings.
 
 ## ExistingMosipVCItemMAchine.ts
 
@@ -85,7 +85,7 @@ This state machine helps to view the audit log of the different activities on th
 
 ## requestMachine.ts
 
-This state machine is instantiated when the user launches the verification section which displays the QR code. This QR is generated with content from a low-level [offline VC-sharing component](../components.md#offline-vc-sharing-component). The content of the QR code is scanned by a wallet Inji Mobile application to establish connection with verifier and share the VC credential. Once the VC is received on the Verifier side, the state machine allows seeing the received VC details as well for Verification.
+This state machine is instantiated when the user launches the verification section which displays the QR code. This QR is generated with content from a low-level [offline VC-sharing component](../components.md#offline-vc-sharing-component). The content of the QR code is scanned by a wallet Inji Wallet application to establish connection with verifier and share the VC credential. Once the VC is received on the Verifier side, the state machine allows seeing the received VC details as well for Verification.
 
 ## scanMachine.ts
 
@@ -93,13 +93,13 @@ This state machine is instantiated when the user launches the scanner section wh
 
 ## revoke.ts
 
-_Note_: This feature is currently disabled in Inji Mobile but underlying support for code is available.
+_Note_: This feature is currently disabled in Inji Wallet but underlying support for code is available.
 
-A unique ID can be revoked using Inji Mobile. For example, if the resident has used a VID to generate VCs and no longer wishes to use the VID, then it can be disabled. This state machine will communicate with the backend service to disable the VC.
+A unique ID can be revoked using Inji Wallet. For example, if the resident has used a VID to generate VCs and no longer wishes to use the VID, then it can be disabled. This state machine will communicate with the backend service to disable the VC.
 
 ## QrLoginMachine.ts
 
-This state machine facilitates flow for `Login with QR code` through Open ID connect from various portals. This is launched when the user opens up the scanner and scans a QR code from a website that supports login with Inji Mobile. Once the scan is performed, the user can review the required claims and select voluntary claims to be submitted. Once the submission is done successfully, the portal will be able to redirect automatically and logs the user in.
+This state machine facilitates flow for `Login with QR code` through Open ID connect from various portals. This is launched when the user opens up the scanner and scans a QR code from a website that supports login with Inji Wallet. Once the scan is performed, the user can review the required claims and select voluntary claims to be submitted. Once the submission is done successfully, the portal will be able to redirect automatically and logs the user in.
 
 ## pinInput.ts
 

@@ -79,7 +79,7 @@ Inji repo is renamed to [inji-wallet](https://github.com/mosip/inji-wallet)
 
 ## Compatible modules:
 
-The following table outlines the tested and certified compatibility of Inji Mobile 0.13.0 with other modules.
+The following table outlines the tested and certified compatibility of Inji Wallet 0.13.0 with other modules.
 
 | Module      | Version |
 | ----------- | ------- |
@@ -103,7 +103,7 @@ Mentioned below is the list of other known issues.
 | [INJIMOB-1503](https://mosip.atlassian.net/browse/INJIMOB-1503) | INJIMOB - IOS - The buttons in the INJI tour guide are not properly aligned.                                               |
 | [INJIMOB-1499](https://mosip.atlassian.net/browse/INJIMOB-1499) | INJIMOB - Android - The backup and restore process is failing on Android devices when the size of the backup exceeds 10MB. |
 | [INJIMOB-1490](https://mosip.atlassian.net/browse/INJIMOB-1490) | INJIMOB - Backup is not triggering automatically when VC is removed.                                                       |
-| [INJIMOB-1481](https://mosip.atlassian.net/browse/INJIMOB-1481) | INJI - logo of inji mobile stretched while booting the app                                                                 |
+| [INJIMOB-1481](https://mosip.atlassian.net/browse/INJIMOB-1481) | INJI - logo of Inji Wallet stretched while booting the app                                                                 |
 | [INJIMOB-1422](https://mosip.atlassian.net/browse/INJIMOB-1422) | Inji mob- During face authentication, the camera view is wider than the face.                                              |
 | [INJIMOB-1403](https://mosip.atlassian.net/browse/INJIMOB-1403) | INJI - VC download failed because of eSignet pod being down doesn't have a proper error message                            |
 | [INJIMOB-1265](https://mosip.atlassian.net/browse/INJIMOB-1265) | IOS -Specific devices the User not able to see the iCloud ID in iCloud setting section of backup and restore page.         |

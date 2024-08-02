@@ -95,9 +95,9 @@ Shall you encounter any errors while using the APIs, please refer to the below:
 6. **Invalid character at position X**. - This error denotes that the string passed to decode is invalid with an unknown character then base45 character set. Also denotes the invalid character position.&#x20;
 7. **incorrect data check** - This error denotes that the string passed to decode is invalid.
 
-## PixelPass & Inji Mobile Integration:
+## PixelPass & Inji Wallet Integration:
 
-The below diagram shows how Inji Mobile utilises PixelPass library.
+The below diagram shows how Inji Wallet utilises PixelPass library.
 
 <figure><img src="../../.gitbook/assets/inji_mobile_wallet_integration_guides_pixel_pass_1.png" alt=""><figcaption></figcaption></figure>
 

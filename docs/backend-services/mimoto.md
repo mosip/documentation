@@ -1,7 +1,7 @@
 # Mimoto
 
-Mimoto is a BFF(Backend for Frontend) for Inji Mobile. It's being used to get default configuration, download verifiable credentials (VC) and activate VC.\
-It provides all necessary APIs to the Inji Mobile and acts as a proxy for resident services. Mimoto gets the request from Inji Mobile, performs all the validations and forwards it to respective services. Additionally, it subscribes to the web-sub event to be able to download the VC once it's ready.
+Mimoto is a BFF(Backend for Frontend) for Inji Wallet. It's being used to get default configuration, download verifiable credentials (VC) and activate VC.\
+It provides all necessary APIs to the Inji Wallet and acts as a proxy for resident services. Mimoto gets the request from Inji Wallet, performs all the validations and forwards it to respective services. Additionally, it subscribes to the web-sub event to be able to download the VC once it's ready.
 
 Detailed API documentation of Mimoto is available [here](https://mosip.stoplight.io/docs/mimoto).
 
@@ -19,7 +19,7 @@ Below are 2 types of issuers fo downloading VC:
 
 ### Download via UIN/VID
 
-Inji Mobile allows the users to enter their unique ID (UIN or VID) and download the credentials. Multiple Mimoto APIs are being called to complete the process in the backend.
+Inji Wallet allows the users to enter their unique ID (UIN or VID) and download the credentials. Multiple Mimoto APIs are being called to complete the process in the backend.
 
 * After entering the unique ID, the user is asked to enter an OTP on the next screen. In the backend, below API is called to send the OTP to the user as an email or SMS.
 
@@ -47,15 +47,15 @@ Inji Mobile allows the users to enter their unique ID (UIN or VID) and download 
 
 ### Download via eSignet
 
-Inji Mobile allows the users to download VC by redirecting to user to eSignet UI. Multiple APIs are being called to complete the process in the backend.
+Inji Wallet allows the users to download VC by redirecting to user to eSignet UI. Multiple APIs are being called to complete the process in the backend.
 
-* Inji Mobile initiates authenticate API by redirecting user to eSignet UI. On eSignet UI, user is given option to enter the unique ID, the user is asked to enter an OTP on the next screen. In the backend, below API is called to get token.
+* Inji Wallet initiates authenticate API by redirecting user to eSignet UI. On eSignet UI, user is given option to enter the unique ID, the user is asked to enter an OTP on the next screen. In the backend, below API is called to get token.
 
 {% swagger src="../.gitbook/assets/mimoto (1).json" path="/get-token" method="post" %}
 [mimoto (1).json](<../.gitbook/assets/mimoto (1).json>)
 {% endswagger %}
 
-* After getting token response, Inji Mobile initiates download request. Refer [here](esignet.md#download-vc)
+* After getting token response, Inji Wallet initiates download request. Refer [here](esignet.md#download-vc)
 
 ## Activate credentials
 

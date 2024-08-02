@@ -11,7 +11,7 @@ The scope of testing is to verify fitment to the specification from the perspect
 
 Verification is performed not only from the end user perspective but also from the System Integrator (SI) point of view. Hence, the configurability and extensibility of the software is also assessed. This ensures readiness of software for use in multiple countries. Since MOSIP is an “API First” product platform, verification scope required comprehensive automation testing for all the MOSIP APIs. An automation Test Rig is created for the same. 
 
-In this release, the testing scope has been focused around the hotfixes for Inji Mobile along with the addition of the below new features:
+In this release, the testing scope has been focused around the hotfixes for Inji Wallet along with the addition of the below new features:
 * Moving away from Google Nearby API definitions
 * Optimization of Save VC flow
 

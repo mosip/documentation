@@ -24,7 +24,7 @@
 * [Build & Deployment](inji-wallet/build-and-deployment/README.md)
   * [Local Setup](inji-wallet/build-and-deployment/local-setup.md)
 * [Try It Out](inji-wallet/sandbox-details/README.md)
-  * [Inji Mobile Setup Guide](inji-wallet/sandbox-details/inji-setup-guide.md)
+  * [Inji Wallet Setup Guide](inji-wallet/sandbox-details/inji-setup-guide.md)
 * [Releases](inji-wallet/versions/README.md)
   * [Version 0.13.0](inji-wallet/versions/version-0.13.0/README.md)
     * [Test Report](inji-wallet/versions/version-0.13.0/test-report.md)

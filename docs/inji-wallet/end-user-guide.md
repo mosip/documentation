@@ -1,23 +1,23 @@
 # End User Guide
 
-This document serves as a concise user guide for end users, providing comprehensive information on the features and functionalities offered by Inji Mobile.
+This document serves as a concise user guide for end users, providing comprehensive information on the features and functionalities offered by Inji Wallet.
 
-## Installing Inji Mobile
+## Installing Inji Wallet
 
 Please navigate to the Play Store or App Store for iOS, select the **Install** option, and kindly wait for the installation process to complete.
 
 #### On Android device
 
-<figure><img src="../.gitbook/assets/inji-install-android.png" alt=""><figcaption><p>Installation of Inji Mobile on Android mobile device</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/inji-install-android.png" alt=""><figcaption><p>Installation of Inji Wallet on Android mobile device</p></figcaption></figure>
 
 #### On iOS device
 
-<figure><img src="../.gitbook/assets/inji-install-ios (1).png" alt=""><figcaption><p>Installation of Inji Mobile on iOS device</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/inji-install-ios (1).png" alt=""><figcaption><p>Installation of Inji Wallet on iOS device</p></figcaption></figure>
 
 ### First launch of the app
 
 * Upon launching the app, the MOSIP logo will be displayed before the language filter appears.
-* The chosen language will be reflected within the app interface. Subsequently, a five-page tutorial for the Inji Mobile will be presented, followed by the option to secure the app.
+* The chosen language will be reflected within the app interface. Subsequently, a five-page tutorial for the Inji Wallet will be presented, followed by the option to secure the app.
 * This can be achieved through a PIN or the device's Biometrics (such as fingerprint or facial recognition). Once the setting is done, users will be directed to the app's home page.
 
 **On Android Device**
@@ -30,7 +30,7 @@ Please navigate to the Play Store or App Store for iOS, select the **Install** o
 
 ## Downloading VC
 
-Inji Mobile integrates with eSignet as an authorization layer to perform VC downloads based on OpenID4VCI standards. Let us understand how to download a National ID VC and an Insurance VC into the Mobile Wallet through the below sections:
+Inji Wallet integrates with eSignet as an authorization layer to perform VC downloads based on OpenID4VCI standards. Let us understand how to download a National ID VC and an Insurance VC into the Mobile Wallet through the below sections:
 
 ## Download VC via eSignet
 
@@ -107,7 +107,7 @@ Users can view the activity logs of a VC from the Home Page or the detailed view
 
 Prerequisites:
 
-* Two or more devices with Inji Mobile installed are required for sharing credentials. The relying party's phone should be an Android device.
+* Two or more devices with Inji Wallet installed are required for sharing credentials. The relying party's phone should be an Android device.
 * All required permissions like Bluetooth, location and camera access are enabled on both devices.
 * The parties involved are usually a Resident (sharing party) who wishes to share their credentials with a Relying party (receiving party), which could be a banker, health worker, or other professional service.
 
