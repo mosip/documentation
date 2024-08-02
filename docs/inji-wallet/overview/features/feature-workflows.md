@@ -1,6 +1,6 @@
 # Feature Workflows
 
-This document delineates the workflow for essential functionalities of Inji Mobile.
+This document delineates the workflow for essential functionalities of Inji Wallet.
 
 ### 1. First App Launch
 
@@ -56,7 +56,7 @@ The credentials are shared in a peer-to-peer model with the verifier application
 
 ### 4. QR code login process
 
-* Residents can use Inji Mobile to log in to any service provider app (integrated with e-Signet) by just scanning a QR code from their portal.
+* Residents can use Inji Wallet to log in to any service provider app (integrated with e-Signet) by just scanning a QR code from their portal.
 * The app performs offline face auth after scanning the QR code to verify the user's presence.
 * Once the presence is verified, the resident is given the option to choose the optional information to be shared with the service provider portal.
 * After consent is provided, the app sends a WLA (Wallet local auth) token which is a JWT token to the relying party.

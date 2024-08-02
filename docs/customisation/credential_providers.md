@@ -1,6 +1,6 @@
 # Credential Providers
 
-Inji Mobile currently provides support for two credential providers:
+Inji Wallet currently provides support for two credential providers:
 
 1. Download via UIN/VID
 2. Download via eSignet
@@ -9,7 +9,7 @@ To set up a new provider that can issue VC, it can be accomplished by making a f
 
 > Refer to [mimoto-issuers-config.json](https://github.com/mosip/mosip-config/blob/collab/mimoto-issuers-config.json) of Collab environment.
 
-These values will be used by Inji Mobile via Mimoto. Mimoto exposes APIs which is used by the Inji Mobile application to fetch and store the issuers and their configurations in the local storage.
+These values will be used by Inji Wallet via Mimoto. Mimoto exposes APIs which is used by the Inji Wallet application to fetch and store the issuers and their configurations in the local storage.
 
 * API used to fetch issuers: `https://api.mosip.io/v1/mimoto/residentmobileapp/issuers`
 * API used to fetch issuer's configuration: `https://api.mosip.io/v1/mimoto/residentmobileapp/issuers/${issuerId}`

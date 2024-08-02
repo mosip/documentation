@@ -2,7 +2,7 @@
 
 Mimoto can be deployed in local using Docker Compose setup. This service streamlines deployment and management, offering a seamless and efficient way to handle backend operations. 
 
-Below sections details the docker-compose setup to run mimoto which act as BFF for Inji mobile and backend for Inji web. This docker compose setup is intended only for local use and not for production deployment.
+Below sections details the docker-compose setup to run mimoto which act as BFF for Inji Wallet and backend for Inji web. This docker compose setup is intended only for local use and not for production deployment.
 
 ## What is in the docker-compose folder?
 

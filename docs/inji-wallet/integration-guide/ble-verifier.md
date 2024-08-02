@@ -87,6 +87,6 @@ Transitions between states is shown below:
 
 **Note**_:_ If either the sender or receiver decides to cancel the transfer at any stage, the state will transition to Disconnected and become Idle as a result.
 
-#### Inji Mobile integration workflow with BLE Verifier SDK and Face Match SDK <a href="#inji-integration-workflow-with-ble-verifier-sdk-and-face-match-sdk" id="inji-integration-workflow-with-ble-verifier-sdk-and-face-match-sdk"></a>
+#### Inji Wallet integration workflow with BLE Verifier SDK and Face Match SDK <a href="#inji-integration-workflow-with-ble-verifier-sdk-and-face-match-sdk" id="inji-integration-workflow-with-ble-verifier-sdk-and-face-match-sdk"></a>
 
 <figure><img src="../../.gitbook/assets/verifierApp-integration.png" alt=""><figcaption><p>Verifier App integration</p></figcaption></figure>

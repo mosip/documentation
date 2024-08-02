@@ -112,6 +112,6 @@ An example app is added under /SwiftExample folder which can be referenced for m
 
 ### VCI-Client and Inji Wallet integration:
 
-The below diagram shows how Inji Mobile utilises vci-client library.
+The below diagram shows how Inji Wallet utilises vci-client library.
 
 <figure><img src="../../.gitbook/assets/inji_mobile_wallet_integration_guides_vci-client-inji-interaction.png" alt=""><figcaption></figcaption></figure>

@@ -1,6 +1,6 @@
 # Roadmap 2024
 
-## Inji Mobile
+## Inji Wallet
 
 Q1: Jan24 - Mar24
 

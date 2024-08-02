@@ -8,7 +8,7 @@
 
 ### Overview
 
-We are delighted to announce the release of Inji Mobile Version 0.12.0 . This release is compatible with v0.12.0 Mimoto release. As part of 0.12.0, Inji mobile introduces below mentioned key features:
+We are delighted to announce the release of Inji Wallet Version 0.12.0 . This release is compatible with v0.12.0 Mimoto release. As part of 0.12.0, Inji Wallet introduces below mentioned key features:
 
 **1. Features added to the Download Functionality:**
 
@@ -29,9 +29,9 @@ We are delighted to announce the release of Inji Mobile Version 0.12.0 . This re
 
 **4. Data Backup Enhancements**
 
-Inji mobile app addresses gender / inclusivity bias in software through GenderMag analysis. In this release, we have incorporated GenderMag fixes for UI / UX in inclusivity space.
+Inji Wallet app addresses gender / inclusivity bias in software through GenderMag analysis. In this release, we have incorporated GenderMag fixes for UI / UX in inclusivity space.
 
-To know more about the GenderMag UI/UI changes in the Inji mobile application, please refer[ here](https://docs.mosip.io/inji/inji-mobile-wallet/overview/features/gendermag).
+To know more about the GenderMag UI/UI changes in the Inji Wallet application, please refer[ here](https://docs.mosip.io/inji/inji-mobile-wallet/overview/features/gendermag).
 
 ### Summary
 
@@ -63,7 +63,7 @@ To read more about PixelPass library refer [**here**](../../integration-guide/pi
 
 ### UI/UX enhancements:
 
-Inji Mobile version 0.12.0 introduces enhanced UI to deliver a seamless user experience with an intuitive design. The UI modifications included in this release are:
+Inji Wallet version 0.12.0 introduces enhanced UI to deliver a seamless user experience with an intuitive design. The UI modifications included in this release are:
 
 **Card View UI Changes**:
 
