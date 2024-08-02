@@ -3,7 +3,7 @@
 ## Version: 0.13.0
 
 * Name: Inji 0.13.0
-* Date: Coming Soon
+* Date: 02nd Aug, 2024
 * [Release Notes](./#version-0.13.0)
 
 ## Version: 0.12.0
