@@ -17,7 +17,7 @@ Note:
 2. Given the relatively low level of assurance provided by Knowledge Based Identification  (KBI), we recommend that Knowledge Based Authentication (KBA) / Knowledge Based Identification (KBI) should be used for the issuance of Verifiable Credentials (VC) or certificates rather than serving as a primary method of authentication.&#x20;
 {% endhint %}
 
-The below mentioned scenario describes a user attempting to download a VC (Verifiable Credential) from the list of VC issuers through their mobile wallet (for example., Inji mobile wallet). The user is verified using Knowledge Based Identification (KBI) through eSignet.
+The below mentioned scenario describes a user attempting to download a VC (Verifiable Credential) from the list of VC issuers through their mobile wallet (for example., Inji Wallet). The user is verified using Knowledge Based Identification (KBI) through eSignet.
 
 ### Prerequisite:
 
@@ -26,12 +26,13 @@ The below mentioned scenario describes a user attempting to download a VC (Verif
 
 ### Steps
 
-1. The resident accesses their digital wallet (e.g., Inji mobile wallet) and taps on the plus '+' button.
+1. The resident accesses their digital wallet (e.g., Inji Wallet) and taps on the plus '+' button.
 2. Resident selects their preferred issuer from the available list.
 3. Resident provides their **Policy Number**, **Full Name**, and **Date of Birth** as credentials for KBI login.
 4. The resident clicks on the Login button.
-5. Upon successful completion, the user downloads their Insurance Card into their digital wallet (Inji mobile wallet).
+5. Upon successful completion, the user downloads their Insurance Card into their digital wallet (Inji Wallet).
 
 <figure><img src="../.gitbook/assets/eSignet_KBA1.drawio.png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/eSignet_KBA_3.drawio.png" alt=""><figcaption></figcaption></figure>
+
