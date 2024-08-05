@@ -22,6 +22,7 @@
   * [Biometric Specification](biometrics/biometric-specification.md)
   * [CBEFF](cbeff-xml.md)
   * [Compliance Tool Kit](https://docs.mosip.io/compliance-tool-kit/)
+  * [MDS Specification](biometrics/mds-specification.md)
 * [👨‍💼 Partners](partners.md)
 * [⚒️ Modules](modules/README.md)
   * [Administration](administration.md)
