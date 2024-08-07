@@ -8,8 +8,6 @@ Partner user is an entity who uses the Partner Management Portal to perform func
 
 ![](\_images/pms_register_as_partner.png)
 
-
-
 **Partner Management Portal (PMP) is used by both;**
 
 * Partner Administrator: Partner Admin
@@ -222,7 +220,7 @@ Pre-Requisite:
 After you have self registered, selected a policy group, requested for policy and also got approval now you can 'Setup Authentication Services':
 
 * OIDC Client: Create OIDC Client for approved policy
-*   API Key : Generate API Key for approved policy, tabular list and individual view of submitted API Key details and Deactivate API Key.
+* API Key : Generate API Key for approved policy, tabular list and individual view of submitted API Key details and Deactivate API Key.
 
     **Pre-Requisite**:
 * Policy requested by the **Partner** must be already approved by **Policy Manager**.
@@ -286,14 +284,14 @@ As an existing user, the following steps are to be taken before reaching the hom
 
 Existing user can perform these functionalities on a need basis:
 
-### Reupload a new partner certificate through the following steps:
+### Reupload a new partner certificate through the following steps
 
 * Click on Partner Certificate option in the dashboard/ side panel / hamburger menu.
 * The user is navigated to list view of partner certificate and click on Re- Upload button of Authentication Partner Type.
 
 \<image>
 
-*   Re- upload certificate pop-up window appears . The time and date of previous certificate upload is also displayed for user reference.\
+* Re- upload certificate pop-up window appears . The time and date of previous certificate upload is also displayed for user reference.\
     \<image>
 
     \<image>
@@ -311,7 +309,7 @@ On click of Submit, Partner certificate upload success message is displayed.\
 2. Request Policy (if not done earlier) as covered in b) above.
 3. Perform Authentication Services as covered in c) above.
 
-### FORGOT PASSWORD:
+### FORGOT PASSWORD
 
 If user is unable to remember his password at the time of login, he can click on Forgot Password link displayed in login page to reset his password.\
 \<image>
@@ -330,4 +328,3 @@ If user is unable to remember his password at the time of login, he can click on
 * After clicking submit, This new password will be further used in subsequent logins.
 
 Content - Coming up on 6-Aug-24
-
