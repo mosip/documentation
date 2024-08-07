@@ -69,7 +69,7 @@
     * [Auth Partner](modules/partner-management-services/auth-partner/README.md)
       * [Functional Overview](modules/partner-management-services/auth-partner/functional-overview/README.md)
         * [Features](modules/partner-management-services/auth-partner/functional-overview/features.md)
-        * [End User Guide](modules/partner-management-services/auth-partner/functional-overview/end-user-guide.md)
+        * [PMS User Guide](modules/partner-management-services/auth-partner/functional-overview/end-user-guide.md)
       * [Technical Overview](modules/partner-management-services/auth-partner/technical-overview/README.md)
         * [Technology Stack](modules/partner-management-services/auth-partner/technical-overview/technology-stack.md)
         * [PMS Configuration Guide](modules/partner-management-services/auth-partner/technical-overview/pms-configuration-guide.md)
