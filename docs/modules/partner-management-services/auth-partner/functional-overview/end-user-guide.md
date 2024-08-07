@@ -4,10 +4,7 @@
 
 Partner user is an entity who uses the Partner Management Portal to perform functions on behalf of Partner Organisation. Hence partner user / user / partner are referred interchangeably in this document.
 
-![](../../../../\_images/pms-filter-auth-policy.png)
-
-![](../../../../\_images/pms_register_as_partner.png)
-
+![](../../../../\_images/pms\_register\_as\_partner.png)
 
 **Partner Management Portal (PMP) is used by both;**
 
@@ -16,7 +13,9 @@ Partner user is an entity who uses the Partner Management Portal to perform func
 
 Caution:
 
-While we are improving/revamping the PMS (Partner Management Service) and it’s interface which we will frequently call as PMP (Partner Management Portal) this will be wroth noting that there are still some dependencies on older ‘Partner Management Portal’and therefore we will still be doing few activities from an older PMP, this we have mentioned at places in ‘Prerequisites’.
+{% hint style="info" %}
+While we are improving/revamping the PMS (Partner Management Service) and it’s interface which we will frequently call as PMP (Partner Management Portal) this will be worth noting that there are still some dependencies on older ‘**Partner Management Portal**’ and therefore we will still be doing few activities from an older PMP, this we have mentioned at appropriate places with ‘**Prerequisites**’.
+{% endhint %}
 
 ### Interface Overview
 
@@ -38,9 +37,11 @@ As ‘Partner Admin’ you can do following:
 
 As a process of Partner onboarding onto PMP after successful registration Partner is required to **Upload CA signed Partner Certificate** on behalf of their organisation which would be used to build a trust store in MOSIP to cryptographically validate that they are from a trusted organisation to perform authentication of citizens. Also this certificate is used to encrypt the response shared in e-KYC.
 
+{% hint style="info" %}
 **Note**:
 
 You will have to use older Partner Admin interface, Yes! you read it correct! before a Partner will be able to ‘**Upload ‘CA Signed Certificate**’ it is prerequisite that the ‘Partner Admin’ must upload the **Root CA** and **Sub CA** certificates and this you can do from ‘Older PMP Interface’.
+{% endhint %}
 
 #### Uploading Root CA and Sub CA (From Older PMP Interface)
 
@@ -50,7 +51,7 @@ You will have to use older Partner Admin interface, Yes! you read it correct! be
 4. Click Upload.
 5. Similarly, sub/intermediate CA certificate should be uploaded by following the above steps (1-4).
 
-\<image>
+<figure><img src="../../../../.gitbook/assets/pms_upload_root_ca.png" alt=""><figcaption></figcaption></figure>
 
 ### Policy Group and Policy
 
@@ -63,13 +64,15 @@ As an admin you will also have privilege to ‘**Approve Policy Request**’. Yo
 * Login as Partner Admin into the PMS portal
 * Click on **Policy** > **Policy Group**. The existing policy groups are listed on the screen and the new ones can be created.
 
-\<image>
+<figure><img src="../../../../.gitbook/assets/pms_create_policy_group.png" alt=""><figcaption><p>Create Policy Group</p></figcaption></figure>
+
+
 
 * Click on Create Policy Group (+).
 * Enter the ‘**Policy Group Name**’ and ‘**Description**’.
 * Click **Save**.
 
-\<image>
+<figure><img src="../../../../.gitbook/assets/pms_create_policy_group_basic_details.png" alt=""><figcaption></figcaption></figure>
 
 #### Create an Auth Policy
 
@@ -85,7 +88,7 @@ Note: **MOSIP** supports two types of policies, i.e. **Auth Policy** and **Datas
 5. Add the Policies Data.
 6. Click Save.
 
-\<image>
+<figure><img src="../../../../.gitbook/assets/pms_create_auth_policy.png" alt=""><figcaption></figcaption></figure>
 
 **Note**: Once the policy is created, it will be in Inactive state. You have to **Activate a Policy** before a Partner will be able to select it while ‘**Requesting a Policy**’.
 
@@ -93,12 +96,12 @@ Note: **MOSIP** supports two types of policies, i.e. **Auth Policy** and **Datas
 
 You can also change the status of **Policy Group**( Deactivate/Re-activate) or edit it using the Action menu as shown below.
 
-\<image>
+
 
 1. Select the policy you want to activate or edit.
 2. From the Actions menu, select Activate/Edit.
 
-\<image>
+<figure><img src="../../../../.gitbook/assets/pms_activate_auth_policy.png" alt=""><figcaption></figcaption></figure>
 
 ### Approve Policy Request
 
@@ -109,9 +112,15 @@ You can approve a ‘**Policy Request**’ initiated by a Partner using ‘**Req
 * Click on **Manage Policy** on the ‘Action Menu’ appearing against the Policy.
 * Click on **Approve**.
 
-’
+<figure><img src="../../../../.gitbook/assets/pms_approve_policy_1.png" alt=""><figcaption></figcaption></figure>
 
-<4-image>
+<figure><img src="../../../../.gitbook/assets/pms_approve_policy_2.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../../.gitbook/assets/pms_approve_policy_3.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../../.gitbook/assets/pms_approve_policy_4.png" alt=""><figcaption></figcaption></figure>
+
+
 
 ## Partner
 
@@ -204,8 +213,7 @@ Pre-Requisite:
 
 #### Requesting a Policy
 
-1. Go to **Request Policy** On PMP Interface. You can also use search to filter data.\
-
+1. Go to **Request Policy** On PMP Interface. You can also use search to filter data.\\
    1. Each policy is provided with policy description for user can make a suitable policy selection.
    2. You can provide appropriate request comments and submit the policy request details. A message conveying Policy request submitted successfully to admin is displayed.\
       \<image>\
@@ -213,7 +221,7 @@ Pre-Requisite:
       \
       \<image>
 2. This newly created policy request will be in ‘Pending for Approval’status. You can also click on action menu to see all the submitted policy details irrespective of its status. The details will also display the comments by admin, if any.
-3. Once the request is approved (Partner Admin will then **Approve Policy Request**). Once the request is approved you can view the status turns to ‘Approved’ status. \
+3. Once the request is approved (Partner Admin will then **Approve Policy Request**). Once the request is approved you can view the status turns to ‘Approved’ status.\
    \<image>
 
 ### Setup Authentication Services
@@ -221,7 +229,7 @@ Pre-Requisite:
 After you have self registered, selected a policy group, requested for policy and also got approval now you can 'Setup Authentication Services':
 
 * OIDC Client: Create OIDC Client for approved policy
-* API Key : Generate API Key for approved policy, tabular list and individual view of submitted API Key details and Deactivate API Key.
+*   API Key : Generate API Key for approved policy, tabular list and individual view of submitted API Key details and Deactivate API Key.
 
     **Pre-Requisite**:
 * Policy requested by the **Partner** must be already approved by **Policy Manager**.
@@ -240,7 +248,7 @@ After you have self registered, selected a policy group, requested for policy an
 \<image>
 
 * Once the details are in Activated status, user will be able to view the OIDC Client ID generated, by clicking on the eye icon ( ). clicking on the OIDC Client ID eye icon, opens a popup window which displays the Client ID and a copy button.
-* This Client ID can then be consumed in eSignet to perform authentication. Client ID can be accessed by clicking on eye icon&#x20;
+* This Client ID can then be consumed in eSignet to perform authentication. Client ID can be accessed by clicking on eye icon
 
 \<image>
 
@@ -292,7 +300,7 @@ Existing user can perform these functionalities on a need basis:
 
 \<image>
 
-* Re- upload certificate pop-up window appears . The time and date of previous certificate upload is also displayed for user reference.\
+*   Re- upload certificate pop-up window appears . The time and date of previous certificate upload is also displayed for user reference.\
     \<image>
 
     \<image>
