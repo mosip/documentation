@@ -252,11 +252,10 @@ After you have self registered, selected a policy group, requested for policy an
   * Enter the public key in JWK format, name or label for OIDC Client, LogoURI and one or more Redirect URI.
   * On successful submission, user can find this record in tabular list of submitted OIDC Client details in ‘Activated’ status. Tabular list and individual view of submitted OIDC Client details along with OIDC Client ID, Edit OIDC Client details and Deactivate OIDC Client can be done from here.
 
-\
-\<image>
+<figure><img src="../../../../.gitbook/assets/OIDC_client_creation_1.png" alt=""><figcaption></figcaption></figure>
 
 \
-\<image>
+
 
 * Once the details are in Activated status, user will be able to view the OIDC Client ID generated, by clicking on the eye icon ( ). clicking on the OIDC Client ID eye icon, opens a popup window which displays the Client ID and a copy button.
 * This Client ID can then be consumed in eSignet to perform authentication. Client ID can be accessed by clicking on eye icon
@@ -275,21 +274,47 @@ After you have self registered, selected a policy group, requested for policy an
 
 #### API Key Generation
 
-* The authentication partner needs to provide the following details to generate API Key
-  * Select suitable Authentication policy for API Client. Only the policies that are APPROVED by admin will be available in dropdown for selection.
-  * Enter an appropriate name or label for API Key to be generated and submit.
+The authentication partner needs to provide the following details to generate API Key
 
-\
-\<image>
+* Select suitable Authentication policy for API Client. Only the policies that are **Approved** by admin will be available in dropdown for selection.
 
-* On successful submission, a popup window displays API Key along with a copy button.
-  * This API Key can be viewed by user in PMS application only once due to security reasons, hence the user is well notified with an appropriate message in the same API Key popup window to avoid closing the window unless he has not copied the API Key.\
-    \<image>
-* User can find this record in tabular list of submitted API details in ‘Activated’ status.\
-  \<image>
-* User can either view individual API Key entries or view the consolidated list in tabular view. \<image>
-* The user also has an option to deactivate an API Key, which thereafter cannot be used for authentication. On clicking confirm, the API Key record is changed to Deactivated status. Once deactivated, it cannot be activated again. You may need to generate a new API key as per requirement.\
-  \<image>
+1. Enter an appropriate name or label for API Key to be generated and submit, On successful submission, a popup window displays API Key along with a copy button.
+
+<figure><img src="../../../../.gitbook/assets/pms_generating_api_key_1.png" alt=""><figcaption></figcaption></figure>
+
+2.  This API Key can be viewed by user in PMS application only once due to security reasons, hence the user is well notified with an appropriate message in the same API Key popup window to avoid closing the window unless user has not copied the API Key.\
+
+
+    <figure><img src="../../../../.gitbook/assets/pms_generating_api_key_2.png" alt=""><figcaption></figcaption></figure>
+3.  User can find this record in tabular list of submitted API details in ‘Activated’ status.\
+
+
+    <figure><img src="../../../../.gitbook/assets/pms_generating_api_key_3.png" alt=""><figcaption></figcaption></figure>
+4. User can either view individual API Key entries or view the consolidated list in tabular view.
+
+<figure><img src="../../../../.gitbook/assets/pms_generating_api_key_4.png" alt=""><figcaption></figcaption></figure>
+
+5. You also have an option to deactivate an API Key, which thereafter cannot be used for authentication. On clicking confirm, the API Key record is changed to Deactivated status. Once deactivated, it cannot be activated again. You may need to generate a new API key as per requirement.
+
+<figure><img src="../../../../.gitbook/assets/pms_generating_api_key_5.png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Existing User
+
+
 
 As an existing user, the following steps are to be taken before reaching the home page of PMS:
 
@@ -333,12 +358,6 @@ On click of Submit, Partner certificate upload success message is displayed.\
 
 
 
-
-
-
-
-
-
 ### Forgot Password
 
 If a user is unable to remember his password at the time of login, he can click on **Forgot Password** link displayed on login page to reset his password.\
@@ -356,11 +375,3 @@ If a user is unable to remember his password at the time of login, he can click 
 \<image>
 
 * After clicking submit, This new password will be further used in subsequent logins.
-
-Content - Coming up on 6-Aug-24
-
-* [ ] now
-* [ ] click&#x20;
-* [ ] ter
-  * [ ] ,.mzczmc
-  * [ ] zmnc
