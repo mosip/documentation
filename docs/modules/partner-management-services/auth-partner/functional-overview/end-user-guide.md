@@ -4,9 +4,10 @@
 
 Partner user is an entity who uses the Partner Management Portal to perform functions on behalf of Partner Organisation. Hence partner user / user / partner are referred interchangeably in this document.
 
-![](\_images/pms-filter-auth-policy.png)
+![](../../../../\_images/pms-filter-auth-policy.png)
 
-![](\_images/pms_register_as_partner.png)
+![](../../../../\_images/pms_register_as_partner.png)
+
 
 **Partner Management Portal (PMP) is used by both;**
 
