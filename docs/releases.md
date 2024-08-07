@@ -2,6 +2,12 @@
 
 ## Latest Release
 
+**Version:** v1.2.1 **(Api Test Commons Releases)**
+
+* Support: 1.2.1
+* Date: 5th July, 2024
+* [Release Notes](https://docs.mosip.io/1.2.0/releases/api-test-commons-releases)
+
 **Version:** v0.10.0 **(Android Registration Client)**
 
 * Support: 0.10.0
