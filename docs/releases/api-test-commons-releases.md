@@ -4,7 +4,7 @@
 
 **Release version**: 1.2.1
 
-**Release Date**: 5th July, 2024
+**Release Date**: 5th August, 2024
 
 The 1.2.1 release incorporates new features and enhancements to improve the functionality, usability, and performance of the MOSIP Functional Tests. This update addresses several critical issues to ensure a more seamless user experience.
 
