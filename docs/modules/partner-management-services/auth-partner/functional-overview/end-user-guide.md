@@ -4,8 +4,6 @@
 
 Partner user is an entity who uses the Partner Management Portal to perform functions on behalf of Partner Organisation. Hence partner user / user / partner are referred interchangeably in this document.
 
-![](../../../../\_images/pms\_register\_as\_partner.png)
-
 **Partner Management Portal (PMP) is used by both;**
 
 * Partner Administrator: Partner Admin
@@ -139,16 +137,20 @@ Click on ........ ...........a form appears.
    6. e-mail
    7. Username and password
 
-\<image>
+<figure><img src="../../../../_images/pms_register_as_partner.png" alt=""><figcaption></figcaption></figure>
 
 2. Click on Register, After you filled the form and click on ‘Register’ you will now be presented with a popup which seeks to take your consent .....
 3. **Select Policy Group** popup opens, Select the relevant/applicable **Policy Group** from **Policy Group** dropdown which then will ask you read through ‘Terms and Condition’ and having carefully read through it you can agree and accept it. Before hit the ‘Submit’ read through the **Policy Group** description.
 
-\<image>
+<figure><img src="../../../../.gitbook/assets/pms_select_policy_group.png" alt=""><figcaption></figcaption></figure>
 
-\<image>
+<figure><img src="../../../../.gitbook/assets/pms_select_policy_group_2.png" alt=""><figcaption></figcaption></figure>
 
-\<image>
+<figure><img src="../../../../.gitbook/assets/pms_self_register_terms_and_condition.png" alt=""><figcaption></figcaption></figure>
+
+
+
+
 
 **Validations**:
 
@@ -179,23 +181,23 @@ As a process of Partner onboarding onto PMP after successful registration, user 
 
 Authentication Partner (new UI): On clicking Partner Certificate option in user dashboard, user can upload the partner certificate signed by CA by clicking on the upload button.
 
-\<image>
+<figure><img src="../../../../.gitbook/assets/pms_upload_partner_vertificate_1.png" alt=""><figcaption></figcaption></figure>
 
 Select the CA signed partner certificate from local system by tapping on the upload section (blue area)
 
-\<image>
+<figure><img src="../../../../.gitbook/assets/pms_upload_partner_vertificate_2.png" alt=""><figcaption></figcaption></figure>
 
 Certificate is successfully fetched from local system.
 
-\<image>
+<figure><img src="../../../../.gitbook/assets/pms_upload_partner_vertificate_3.png" alt=""><figcaption></figcaption></figure>
 
 Partner Certificate is uploaded successfully on clicking Submit.
 
-\<image>
+<figure><img src="../../../../.gitbook/assets/pms_upload_partner_vertificate_4.png" alt=""><figcaption></figcaption></figure>
 
 On closing the popup, The user can view the uploaded certificate details in the form of a list view.
 
-\<image>
+<figure><img src="../../../../.gitbook/assets/pms_upload_partner_vertificate_5.png" alt=""><figcaption></figcaption></figure>
 
 #### Download Certificate
 
@@ -215,14 +217,22 @@ Pre-Requisite:
 
 1. Go to **Request Policy** On PMP Interface. You can also use search to filter data.\\
    1. Each policy is provided with policy description for user can make a suitable policy selection.
-   2. You can provide appropriate request comments and submit the policy request details. A message conveying Policy request submitted successfully to admin is displayed.\
-      \<image>\
-      \<image>\
-      \
-      \<image>
-2. This newly created policy request will be in ‘Pending for Approval’status. You can also click on action menu to see all the submitted policy details irrespective of its status. The details will also display the comments by admin, if any.
-3. Once the request is approved (Partner Admin will then **Approve Policy Request**). Once the request is approved you can view the status turns to ‘Approved’ status.\
-   \<image>
+   2.  You can provide appropriate request comments and submit the policy request details. A message conveying Policy request submitted successfully to admin is displayed.\
+       \
+       \
+
+
+       <figure><img src="../../../../.gitbook/assets/pms_request_policy_1.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../../.gitbook/assets/pms_request_policy_2.png" alt=""><figcaption></figcaption></figure>
+
+
+
+3. This newly created policy request will be in ‘Pending for Approval’status. You can also click on action menu to see all the submitted policy details irrespective of its status. The details will also display the comments by admin, if any.
+4. Once the request is approved (Partner Admin will then **Approve Policy Request**). Once the request is approved you can view the status turns to ‘Approved’ status.\
+
+
+<figure><img src="../../../../.gitbook/assets/pms_request_policy_3.png" alt=""><figcaption></figcaption></figure>
 
 ### Setup Authentication Services
 
@@ -232,7 +242,8 @@ After you have self registered, selected a policy group, requested for policy an
 *   API Key : Generate API Key for approved policy, tabular list and individual view of submitted API Key details and Deactivate API Key.
 
     **Pre-Requisite**:
-* Policy requested by the **Partner** must be already approved by **Policy Manager**.
+
+**Prerequisites**: Policy requested by the **Partner** must be already approved by **Policy Manager**.
 
 #### Creating OIDC Client
 
