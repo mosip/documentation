@@ -254,23 +254,34 @@ After you have self registered, selected a policy group, requested for policy an
 
 <figure><img src="../../../../.gitbook/assets/OIDC_client_creation_1.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../../../.gitbook/assets/OIDC_client_creation_1.png" alt=""><figcaption></figcaption></figure>
+
 \
 
 
 * Once the details are in Activated status, user will be able to view the OIDC Client ID generated, by clicking on the eye icon ( ). clicking on the OIDC Client ID eye icon, opens a popup window which displays the Client ID and a copy button.
 * This Client ID can then be consumed in eSignet to perform authentication. Client ID can be accessed by clicking on eye icon
 
-\<image>
+<figure><img src="../../../../.gitbook/assets/OIDC_client_creation_3.png" alt=""><figcaption></figcaption></figure>
 
-* User can utilize this OIDC Client ID to perform eSignet based authentication of citizens.\
-  \<image>
-* The user can also view every OIDC Client detail individually using the View option\
-  \<image>
+* User can utilize this OIDC Client ID to perform eSignet based authentication of citizens.
+
+<figure><img src="../../../../.gitbook/assets/OIDC_client_creation_4.png" alt=""><figcaption></figcaption></figure>
+
+
+
+* The user can also view every OIDC Client detail individually using the View option
+
+<figure><img src="../../../../.gitbook/assets/OIDC_client_creation_5.png" alt=""><figcaption></figcaption></figure>
+
 * The user can also edit the OIDC Client details in Activated (only OIDC Client Name, LogoURI and RedirectURI are editable) by selecting the edit option in Action Menu.\
-  \<image>
+
+
+<figure><img src="../../../../.gitbook/assets/OIDC_client_creation_6.png" alt=""><figcaption></figcaption></figure>
+
 * User can deactivate the OIDC Client ID by clicking on deactivate option . The deactivate popup window appears and on clicking confirm, the OIDC Client record is changed to Deactivated status. **Once deactivated, the client ID can not be used anymore for authentication**.
 
-\<image>
+<figure><img src="../../../../.gitbook/assets/OIDC_client_creation_7.png" alt=""><figcaption></figcaption></figure>
 
 #### API Key Generation
 
