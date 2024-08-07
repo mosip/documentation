@@ -1,4 +1,4 @@
-# End User Guide
+# PMS User Guide
 
 ## Authentication Partner
 
@@ -329,9 +329,19 @@ On click of Submit, Partner certificate upload success message is displayed.\
 2. Request Policy (if not done earlier) as covered in b) above.
 3. Perform Authentication Services as covered in c) above.
 
-### FORGOT PASSWORD
 
-If user is unable to remember his password at the time of login, he can click on Forgot Password link displayed in login page to reset his password.\
+
+
+
+
+
+
+
+
+
+### Forgot Password
+
+If a user is unable to remember his password at the time of login, he can click on **Forgot Password** link displayed on login page to reset his password.\
 \<image>
 
 * On clicking Forgot password, the user enters his registered email address and submits.
@@ -339,7 +349,7 @@ If user is unable to remember his password at the time of login, he can click on
 
 \<image>
 
-* The user clicks on the reset password link received on his email address where he is navigated to Change Password screen to enter a new password that adheres password policy and reenter the same password before saving it.
+* The user clicks on the Reset password link received on his email address where he is navigated to Change Password screen to enter a new password that adheres password policy and reenter the same password before saving it.
 
 \<image>
 
