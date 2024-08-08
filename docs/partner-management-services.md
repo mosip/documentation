@@ -1,52 +1,81 @@
-# Partner Management
+# Partner Management System
 
-## Overview
+Partners are external entities or organisations which offer products or services to ensure the effective implementation and operation of MOSIP-based identity systems.&#x20;
 
-Partner Management Services (PMS) module provides the following services:
+Partner Management Portal (PMP) is a web based application that is designed to facilitate the collaboration and integration of external partners with the MOSIP ecosystem. This portal serves as a central platform to onboard all types of MOSIP partners, manage their details and build partner specific functionalities for seamless interaction.
 
-1. Partner Management Service
-2. Policy Management Service
+**Announce**
 
-For an overview of role of partners in MOSIP, refer [here](partners.md).
+<mark style="color:red;">As a majaor revamp we are under going a major revamp of  existing partner management portal where we are trying to intro new  featy=ure and enhance existing features for better usablity and make USX better .............................</mark>
 
-## Partner Management Service
+<mark style="color:red;">PMS - Revamp : Any documentation you can find  for revamp.........</mark>
 
-Provides various partner services like onboarding partners and providing partner data to other modules.
+<mark style="color:red;">PMS - Legacy: Features from legacy release is documented here.........</mark>
 
-The diagram below illustrates the relationship of this service to other MOSIP services.
+<mark style="color:red;">link also to release notes.....</mark>
 
-![](\_images/pms.png)
 
-1. Certificates of partner are uploaded to [Key Manager](keymanager.md) as part of onboarding.
-2. Registration processor fetches ABIS datashare policy from PMS.
-3. PMS sends notification messages to partners via notification service (of Kernel).
-4. Audit logs are logged into Auditmanager.
-5. [ID Repository](id-repository.md) fetches credential data share partners and their polices from PMS.
-6. All PMS data is stored in `mosip_pms` DB.
-7. Certificates of Authentication Partners are send to IDA module as IDA runs independently. The certs are shared using [Datashare](datashare.md) (which futher uses Websub to share data with IDA).
 
-## Policy Management Service
+### Who are the partners in MOSIP?
 
-This service manages partner policies.
+<table data-header-hidden><thead><tr><th width="222"></th><th></th><th></th></tr></thead><tbody><tr><td><strong>Partner Type</strong></td><td><strong>What do they do in MOSIP?</strong></td><td><strong>Why do they need PMS portal?</strong></td></tr><tr><td>Device Provider</td><td><ul><li>Provide devices for Registration and Authentication</li></ul></td><td><ul><li>Shares partner certificate which would be used to build a trust store in MOSIP to cryptographically validate that the biometric data was captured by a device issued by the device provider.</li><li>Provides make &#x26; model details of devices for book keeping.</li><li>Provides SBI information for book keeping.</li></ul></td></tr><tr><td>FTM Chip Provider</td><td><ul><li>Provides secure chip for Authentication devices</li></ul></td><td><ul><li>Shares partner certificate which would be used to build a trust store in MOSIP to cryptographically validate that the biometric data was captured by a device integrated with a chip issued by the FTM chip provider.</li><li>Provide chip model details for book keeping.</li></ul></td></tr><tr><td>ABIS Partner</td><td><ul><li>Provides ABIS engine to deduplicate biometrics</li></ul></td><td><ul><li>Shares partner certificate which would be used for encryption the biometric data that is shared during deduplication.</li><li>The request for a policy based on which data is shared with them for deduplication</li></ul></td></tr><tr><td>Manual Adjudication System</td><td><ul><li>Manual Adjudication system helps a biometric expert to compare two sets of biometric data and few demographic data, so that, the adjudicator can take the final decision that the identified record is actually a duplicate.</li></ul></td><td><ul><li>Shares partner certificate which would be used for encryption the biometric and demographic data that is shared during deduplication.</li><li>The request for a policy based on which data is shared with them for adjudication</li></ul></td></tr><tr><td>SDK Partner</td><td><ul><li>Provides SDKs that are used for performing matching of two records, checking the quality of the biometrics or generating biometric templates.</li></ul></td><td><ul><li>They don’t need Partner Management Portal</li></ul></td></tr><tr><td>Authentication Partner</td><td><ul><li>They are also called Relying Party or Service Providers which uses MOSIP authentication services for delivering services</li></ul></td><td><ul><li>Shares partner certificate which would be used to build a trust store in MOSIP to cryptographically validate that they were the ones who were authenticating the citizens also this certificate is used to encrypt the response shared in e-KYC.</li><li>They choose a policy which they want to use and request for approval for the policy from the partner admin.</li><li>Once a policy is approved, they can perform eSignet (OIDC Client) and/or API based authentication.</li><li>They can create OIDC client for an approved policy which is used in eSignet authentication.</li><li>They can generate API Keys against the policy in order to use it during citizen authentication.</li><li>They can also deactivate an OIDC Client or API Key if it is compromised</li></ul></td></tr><tr><td>MISP (MOSIP Infrastructure Service Providers)</td><td><ul><li>They provide infrastructure services to MOSIP and help relying parties (authentication partners) access the authentication endpoints exposed by MOSIP</li></ul></td><td><ul><li>Share partner certificate which helps verify that the ISP is a genuine partner, the certificate uploaded is generally not used in MOSIP.</li><li>Generate License Keys which would be used for during citizen authentication.</li></ul></td></tr><tr><td>ID Authentication Module / Online Verification Partner</td><td><ul><li>Module that stores ID data used for authenticating the citizens</li><li>This is an internal module</li></ul></td><td><ul><li>Generally added from the backend by the administrator</li></ul></td></tr><tr><td>Printing/ Credential Partner</td><td><ul><li>They provide print solution</li></ul></td><td><ul><li>Shares partner certificate which would be used for encryption the face and demographic data that is shared for printing the ID card.</li><li>The request for a policy based on which data is shared with them for printing</li></ul></td></tr></tbody></table>
 
-![](\_images/policymanager.png)
+### What are the policies used in MOSIP?
 
-1. Audit logs are logged into Auditmanager.
-2. All policies are stored stored in `mosip_pms` DB.
-3. Datashare service fetches partner policies and shares data with partners accordingly.
+* Data Share Policy
+* Authentication Policy
+* MISP Policy
 
-## Partner portal
+Partner policies control the data that needs to be shared with a partner. The policies reside in auth\_policy table of mosip\_pms DB.
 
-To know more about the partner portal, refer [Partner Management portal](modules/partner-management-services/pms-existing/auth-credential-partner/partner-management-portal.md).
+#### Policy types
 
-## Developer Guide
+| Policy type      | Partners                                                                          | Description                                                                                                                                                                                                                 |
+| ---------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Auth policy      | AP                                                                                | Specifies [authentication types](https://docs.mosip.io/1.2.0/id-authentication#authentication-types) and [KYC](https://docs.mosip.io/1.2.0/id-authentication#kyc-authentication) fields to be shared during authentication. |
+| Datashare policy | Online Verification Partner, Credential Partner, Manual Adjudiation, ABIS partner | Specifies data to be shared with partners                                                                                                                                                                                   |
+| MISP Policy      | MISP                                                                              | Specifies                                                                                                                                                                                                                   |
 
-To know more about the developer setup, read [Partner Management Services Developers Guide](https://docs.mosip.io/1.2.0/modules/partner-management-services/partner-management-services-developer-setup).
+Policies are not applicable for Device Provider, FTM Provider
 
-## API
 
-Refer [API Documentation](https://mosip.github.io/documentation/1.2.0/1.2.0.html).
 
-## Source code
+### Partner roles
 
-[Github repo](https://github.com/mosip/partner-management-services/tree/release-1.2.0).
+| **Partner Type**       | **Associated Role**        |
+| ---------------------- | -------------------------- |
+| Partner Admin          | PARTNER\_ADMIN             |
+| Policy Manager         | POLICYMANAGER              |
+| Authentication Partner | **AUTH\_PARTNER (new UI)** |
+| Credential Partner     | CREDENTIAL\_PARTNER        |
+| Device Provider        | DEVICE\_PROVIDER           |
+| FTM Provider           | FTM\_PROVIDER              |
+
+
+
+## Partner Policies
+
+Partner policies control the data that needs to be shared with a partner. The policies reside in [`auth_policy` table](https://github.com/mosip/partner-management-services/blob/release-1.2.0/db\_scripts/mosip\_pms/ddl/pms-auth\_policy.sql) of `mosip_pms` DB.
+
+### Policy types
+
+| Policy type      | Partners                                                                          | Description                                                                                                                                                               |
+| ---------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Auth policy      | AP                                                                                | Specifies [authentication types](id-authentication.md#authentication-types) and [KYC](id-authentication.md#kyc-authentication) fields to be shared during authentication. |
+| Datashare policy | Online Verification Partner, Credential Partner, Manual Adjudiation, ABIS partner | Specifies data to be shared with partners                                                                                                                                 |
+
+Policies are not applicable for Device Provider, FTM Provider and MISP Partner as data is not shared with them.
+
+Refer to the [default policies](https://github.com/mosip/partner-management-services/blob/release-1.2.0/db\_scripts/mosip\_pms/dml/pms-auth\_policy.csv) loaded while installing MOSIP.
+
+## Policy group
+
+Common policies are grouped example 'Telecom', 'Banking', 'Insurance' etc.
+
+
+
+## Documentation
+
+[PMS Revamp](modules/partner-management-services/pms-revamp/)
+
+[PMS Existing](modules/partner-management-services/pms-existing/)

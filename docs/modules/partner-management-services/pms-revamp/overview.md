@@ -1,63 +1,46 @@
 # Overview
 
-## Partner Management Portal
+Partner Management Services (PMS) is undergoing a major revamp and as our first step, we have introduced a brand new web application - Partner Management Portal, This brings:
 
-Partners are external entities or organisations which offer products or services to ensure the effective implementation and operation of MOSIP-based identity systems.&#x20;
+* Improved usability and user experience.
+* Enhancement of existing features.
+* Introduce new features.
+* Introduce new partner types.
+* Technology stack upgrade
 
-Partner Management Portal (PMP) is a web based application that is designed to facilitate the collaboration and integration of external partners with the MOSIP ecosystem. This portal serves as a central platform to onboard all types of MOSIP partners, manage their details and build partner specific functionalities for seamless interaction.
+This release marks the developer's preview release (1.3.0-dp.1) of Partner Management Services which focuses on implementation of **Authentication Partner** workflow **in the new UI.** This version of PMS is designed to run on 1.2.0.1 version of MOSIP platform.
 
-### Who are the partners in MOSIP?
+The **key features** of Authentication Partner incorporated in this release are:
 
-| **Partner Type**                                       | **What do they do in MOSIP?**                                                                                                                                                                                                                  | **Why do they need PMS portal?**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Device Provider                                        | <ul><li>Provide devices for Registration and Authentication</li></ul>                                                                                                                                                                          | <ul><li>Shares partner certificate which would be used to build a trust store in MOSIP to cryptographically validate that the biometric data was captured by a device issued by the device provider.</li><li>Provides make &#x26; model details of devices for book keeping.</li><li>Provides SBI information for book keeping.</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| FTM Chip Provider                                      | <ul><li>Provides secure chip for Authentication devices</li></ul>                                                                                                                                                                              | <ul><li>Shares partner certificate which would be used to build a trust store in MOSIP to cryptographically validate that the biometric data was captured by a device integrated with a chip issued by the FTM chip provider.</li><li>Provide chip model details for book keeping.</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| ABIS Partner                                           | <ul><li>Provides ABIS engine to deduplicate biometrics</li></ul>                                                                                                                                                                               | <ul><li>Shares partner certificate which would be used for encryption the biometric data that is shared during deduplication.</li><li>The request for a policy based on which data is shared with them for deduplication</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Manual Adjudication System                             | <ul><li>Manual Adjudication system helps a biometric expert to compare two sets of biometric data and few demographic data, so that, the adjudicator can take the final decision that the identified record is actually a duplicate.</li></ul> | <ul><li>Shares partner certificate which would be used for encryption the biometric and demographic data that is shared during deduplication.</li><li>The request for a policy based on which data is shared with them for adjudication</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| SDK Partner                                            | <ul><li>Provides SDKs that are used for performing matching of two records, checking the quality of the biometrics or generating biometric templates.</li></ul>                                                                                | <ul><li>They don’t need Partner Management Portal</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| Authentication Partner                                 | <ul><li>They are also called Relying Party or Service Providers which uses MOSIP authentication services for delivering services</li></ul>                                                                                                     | <ul><li>Shares partner certificate which would be used to build a trust store in MOSIP to cryptographically validate that they were the ones who were authenticating the citizens also this certificate is used to encrypt the response shared in e-KYC.</li><li>They choose a policy which they want to use and request for approval for the policy from the partner admin.</li><li>Once a policy is approved, they can perform eSignet (OIDC Client) and/or API based authentication.</li><li>They can create OIDC client for an approved policy which is used in eSignet authentication.</li><li>They can generate API Keys against the policy in order to use it during citizen authentication.</li><li>They can also deactivate an OIDC Client or API Key if it is compromised</li></ul> |
-| MISP (MOSIP Infrastructure Service Providers)          | <ul><li>They provide infrastructure services to MOSIP and help relying parties (authentication partners) access the authentication endpoints exposed by MOSIP</li></ul>                                                                        | <ul><li>Share partner certificate which helps verify that the ISP is a genuine partner, the certificate uploaded is generally not used in MOSIP.</li><li>Generate License Keys which would be used for during citizen authentication.</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| ID Authentication Module / Online Verification Partner | <ul><li>Module that stores ID data used for authenticating the citizens</li><li>This is an internal module</li></ul>                                                                                                                           | <ul><li>Generally added from the backend by the administrator</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| Printing/ Credential Partner                           | <ul><li>They provide print solution</li></ul>                                                                                                                                                                                                  | <ul><li>Shares partner certificate which would be used for encryption the face and demographic data that is shared for printing the ID card.</li><li>The request for a policy based on which data is shared with them for printing</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-
-### What are the policies used in MOSIP?
-
-* Data Share Policy
-* Authentication Policy
-* MISP Policy
-
-Partner policies control the data that needs to be shared with a partner. The policies reside in auth\_policy table of mosip\_pms DB.
-
-#### Policy types
-
-| Policy type      | Partners                                                                          | Description                                                                                                                                                                                                                 |
-| ---------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Auth policy      | AP                                                                                | Specifies [authentication types](https://docs.mosip.io/1.2.0/id-authentication#authentication-types) and [KYC](https://docs.mosip.io/1.2.0/id-authentication#kyc-authentication) fields to be shared during authentication. |
-| Datashare policy | Online Verification Partner, Credential Partner, Manual Adjudiation, ABIS partner | Specifies data to be shared with partners                                                                                                                                                                                   |
-| MISP Policy      | MISP                                                                              | Specifies                                                                                                                                                                                                                   |
-
-Policies are not applicable for Device Provider, FTM Provider
+* **Partner Certificate:**
+  * **Upload and Re-upload:** Easily upload or re-upload Certificate Authority (CA) signed Partner Certificate.
+  * **Download:** Download CA signed Partner Certificate and corresponding MOSIP Signed Certificate.
+* **Policies:**
+  * **Request Policies:** Request policies within selected policy group.
+  * **Policy List:** View a tabular list of requested policies along with Partner Admin approval status.
+  * **View Policy Details:** Access detailed views of individual policies, including status of Partner Admin approval/rejection.
+* **Authentication Services:**
+  * **OIDC Client:**
+    * **Create OIDC Client:** Create OIDC Clients for approved policies.
+    * **View OIDC Details:** Access a tabular list and individual views of submitted OIDC Client details, including OIDC Client IDs.
+    * **Edit:** Edit existing OIDC Client details.
+    * **Deactivate:** Deactivate OIDC Client whenever needed.
+  * **API Key:**
+    * **Generate API Key:** Create API Keys for approved policies.
+    * **View API Key Details:** View a tabular list and individual details of submitted API Keys.
+    * **Deactivate:** Deactivate API Keys when necessary.
 
 
 
-### Partner roles
 
-| **Partner Type**       | **Associated Role**        |
-| ---------------------- | -------------------------- |
-| Partner Admin          | PARTNER\_ADMIN             |
-| Policy Manager         | POLICYMANAGER              |
-| Authentication Partner | **AUTH\_PARTNER (new UI)** |
-| Credential Partner     | CREDENTIAL\_PARTNER        |
-| Device Provider        | DEVICE\_PROVIDER           |
-| FTM Provider           | FTM\_PROVIDER              |
 
-## Documentation
+<mark style="background-color:red;">Our upcoming releases we will be working afreash on other Partner Type(s)  and</mark>&#x20;
 
-[https://docs.mosip.io/1.2.0/partners](https://docs.mosip.io/1.2.0/partners)
+<mark style="background-color:red;">Move existing PMS features and functionality to be absorbed within  the new PMS  and become integral  part of this......................... and then work/improve on all other partner types afreash..</mark>
 
-* [Partner Management | MOSIP Docs 1.2.0](https://docs.mosip.io/1.2.0/modules/partner-management-services)
-  * [Partner Policies | MOSIP Docs 1.2.0](https://docs.mosip.io/1.2.0/modules/partner-management-services/partner-policies)
-  * [Partner Management Portal | MOSIP Docs 1.2.0](https://docs.mosip.io/1.2.0/modules/partner-management-services/partner-management-portal)
-  * [Auth Partner | MOSIP Docs 1.2.0](https://docs.mosip.io/1.2.0/modules/partner-management-services/auth-credential-partner)
-  * [Device Provider | MOSIP Docs 1.2.0](https://docs.mosip.io/1.2.0/modules/partner-management-services/device-provider-partner)
-  * [Foundational Trust Provider | MOSIP Docs 1.2.0](https://docs.mosip.io/1.2.0/modules/partner-management-services/ftm-partner)
+<mark style="background-color:red;">Phase out - synonym</mark>
+
+
+
+
+

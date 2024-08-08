@@ -1,20 +1,52 @@
-# Partner Policies
+# Partner Management System
 
 ## Overview
 
-Partner policies control the data that needs to be shared with a partner. The policies reside in [`auth_policy` table](https://github.com/mosip/partner-management-services/blob/release-1.2.0/db\_scripts/mosip\_pms/ddl/pms-auth\_policy.sql) of `mosip_pms` DB.
+Partner Management System (PMS) module provides the following services:
 
-### Policy types
+1. Partner Management Service
+2. Policy Management Service
 
-| Policy type      | Partners                                                                          | Description                                                                                                                                                                                 |
-| ---------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Auth policy      | AP                                                                                | Specifies [authentication types](../../../id-authentication.md#authentication-types) and [KYC](../../../id-authentication.md#kyc-authentication) fields to be shared during authentication. |
-| Datashare policy | Online Verification Partner, Credential Partner, Manual Adjudiation, ABIS partner | Specifies data to be shared with partners                                                                                                                                                   |
+For an overview of role of partners in MOSIP, refer [here](../../../partners.md).
 
-Policies are not applicable for Device Provider, FTM Provider and MISP Partner as data is not shared with them.
+## Partner Management Service
 
-Refer to the [default policies](https://github.com/mosip/partner-management-services/blob/release-1.2.0/db\_scripts/mosip\_pms/dml/pms-auth\_policy.csv) loaded while installing MOSIP.
+Provides various partner services like onboarding partners and providing partner data to other modules.
 
-## Policy group
+The diagram below illustrates the relationship of this service to other MOSIP services.
 
-Common policies are grouped example 'Telecom', 'Banking', 'Insurance' etc.
+![](../../../\_images/pms.png)
+
+1. Certificates of partner are uploaded to [Key Manager](../../../keymanager.md) as part of onboarding.
+2. Registration processor fetches ABIS datashare policy from PMS.
+3. PMS sends notification messages to partners via notification service (of Kernel).
+4. Audit logs are logged into Auditmanager.
+5. [ID Repository](../../../id-repository.md) fetches credential data share partners and their polices from PMS.
+6. All PMS data is stored in `mosip_pms` DB.
+7. Certificates of Authentication Partners are send to IDA module as IDA runs independently. The certs are shared using [Datashare](../../../datashare.md) (which futher uses Websub to share data with IDA).
+
+## Policy Management Service
+
+This service manages partner policies.
+
+![](../../../\_images/policymanager.png)
+
+1. Audit logs are logged into Auditmanager.
+2. All policies are stored stored in `mosip_pms` DB.
+3. Datashare service fetches partner policies and shares data with partners accordingly.
+
+## Partner portal
+
+To know more about the partner portal, refer [Partner Management portal](auth-credential-partner/partner-management-portal.md).
+
+## Developer Guide
+
+To know more about the developer setup, read [Partner Management Services Developers Guide](https://docs.mosip.io/1.2.0/modules/partner-management-services/partner-management-services-developer-setup).
+
+## API
+
+Refer [API Documentation](https://mosip.github.io/documentation/1.2.0/1.2.0.html).
+
+## Source code
+
+[Github repo](https://github.com/mosip/partner-management-services/tree/release-1.2.0).

@@ -5,12 +5,12 @@
 **Partner Management Portal (PMP) is used by both; PMS Admin and Partner User.**
 
 * Partner Administrator: Partner Admin
-* Partners: Partner User (Relying Party)
+* Partners: Partner User
 
 {% hint style="warning" %}
 **Important**:&#x20;
 
-While we are improving/revamping the PMS (Partner Management Service) and it’s interface which we will frequently call as PMP (Partner Management Portal) this will be worth noting that there are still some dependencies on older ‘**Partner Management Portal**’ and therefore we will still be doing few activities from an older PMP interface, this we have mentioned at appropriate places as ‘**Prerequisites**’.
+While we are improving/revamping the PMS (Partner Management System) and it’s interface which we will frequently call as PMP (Partner Management Portal) this will be worth noting that there are still some dependencies on older ‘**Partner Management Portal**’ and therefore we will still be doing few activities from an older PMP interface, this we have mentioned at appropriate places as ‘**Prerequisites**’.
 {% endhint %}
 
 ## What all activities does a 'Partner Admin' performs?
@@ -120,16 +120,14 @@ When a Partner have chosen a 'Policy Group' and the 'Policy'an approval request 
 
 
 
-## Partner
+## Partner Registration
 
 Before an interested organization/entity can become an 'Authentication Partner' to MOSIP platform the organization will need to undergo a flow of following activites and when the organization will finally be inducted as 'Authentication Partner'.
 
 * Self Register on PMS Interface
 * Upload CA signed Certificate
-* Requesting Policy
-* Setup Authentication Services
-  * OIDC Client : Create OIDC Client for approved policy, tabular list and individual view of submitted OIDC Client details along with OIDC Client ID, Edit OIDC Client details and Deactivate OIDC Client
-  * API Key : Generate API Key for approved policy, tabular list and individual view of submitted API Key details and Deactivate API Key.
+
+
 
 ### Self-Register on PMP as Auth Partner
 
@@ -213,6 +211,14 @@ There is also an option to download initially uploaded CA signed certificate and
 
 Content to be updated..
 
+
+
+
+
+
+
+
+
 ### Request Policy
 
 **Pre-Requisite**: **Policy Manager** must have created a **Policy Group** and then created a **Policy** within it for the Partner to be able to ‘**Request a Policy**’.
@@ -235,6 +241,21 @@ Content to be updated..
 
 
 <figure><img src="../../../../../.gitbook/assets/pms_request_policy_3.png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
+## Authentication Service
+
+* Request Policy
+* Setup Authentication Services
+  * OIDC Client : Create OIDC Client for approved policy, tabular list and individual view of submitted OIDC Client details along with OIDC Client ID, Edit OIDC Client details and Deactivate OIDC Client
+  * API Key : Generate API Key for approved policy, tabular list and individual view of submitted API Key details and Deactivate API Key.
+
+
+
+
 
 ### Setup Authentication Services
 
