@@ -32,13 +32,13 @@ The **key features** of Authentication Partner incorporated in this release are:
 
 
 
+Our upcoming PMS releases will incorporate all functionalities of the current system and rebuild them from scratch to deliver a robust solution. Existing features will be seamlessly integrated into the new PMS, ensuring a comprehensive transition. Future releases will focus on enhancing support for other partner types such as............, starting anew to ensure optimal performance.
+
+Our upcoming releases we will be working afreash on other Partner Type(s)  that MOSIP Supports in our current PMS
+
+The upcoming pms will ingest all existing functionalities from the current PMS and build afreash for and come out as all new robust PMS that is Move existing PMS features and functionality to be absorbed within  the new PMS  and become integral  part of this......................... and then work/improve on all other partner types afreash..
 
 
-<mark style="background-color:red;">Our upcoming releases we will be working afreash on other Partner Type(s)  and</mark>&#x20;
-
-<mark style="background-color:red;">Move existing PMS features and functionality to be absorbed within  the new PMS  and become integral  part of this......................... and then work/improve on all other partner types afreash..</mark>
-
-<mark style="background-color:red;">Phase out - synonym</mark>
 
 
 

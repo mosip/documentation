@@ -4,17 +4,12 @@ Partners are external entities or organisations which offer products or services
 
 Partner Management Portal (PMP) is a web based application that is designed to facilitate the collaboration and integration of external partners with the MOSIP ecosystem. This portal serves as a central platform to onboard all types of MOSIP partners, manage their details and build partner specific functionalities for seamless interaction.
 
-**Announce**
+We are undertaking a comprehensive overhaul of our existing Partner Management Portal (PMP). This revamp includes introducing a suite of new features and significantly enhancing the current ones. Our aim is to improve usability and elevate the overall user experience (UX). By incorporating cutting-edge technology and user feedback, we are committed to making the PMP more intuitive, efficient, and aligned with our partners' evolving needs.
 
-<mark style="color:red;">As a majaor revamp we are under going a major revamp of  existing partner management portal where we are trying to intro new  featy=ure and enhance existing features for better usablity and make USX better .............................</mark>
+You can refer to the comprehensive documentation on our current releaseas below:
 
-<mark style="color:red;">PMS - Revamp : Any documentation you can find  for revamp.........</mark>
-
-<mark style="color:red;">PMS - Legacy: Features from legacy release is documented here.........</mark>
-
-<mark style="color:red;">link also to release notes.....</mark>
-
-
+* [PMS - Revamp](modules/partner-management-services/pms-revamp/) :  Documentation includes latest features
+* [PMS - Legacy](modules/partner-management-services/pms-existing/): Existing documentation
 
 ### Who are the partners in MOSIP?
 
