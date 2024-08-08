@@ -8,7 +8,7 @@ Partner Management Service DB Scripts to be run: [DB scripts](https://github.com
 
 ### Keycloak Roles
 
-mosip-pms-client needs to have below roles in keycloak:
+`mosip-pms-client` needs to have below roles in keycloak:
 
 * CREATE\_SHARE
 * DEVICE\_PROVIDER
