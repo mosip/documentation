@@ -23,7 +23,7 @@ The MOSIP platform requires integration with several other systems. Typically, a
 
 ## Partner policies
 
-Partner policies control the data that needs to be shared with a partner. Learn more about [partner policies](modules/partner-management-services/pms-existing/auth-credential-partner/partner-policies.md).
+Partner policies control the data that needs to be shared with a partner. Learn more about [partner policies](modules/partner-management-services/pms-existing/partner-policies.md).
 
 ## Partner onboarding
 

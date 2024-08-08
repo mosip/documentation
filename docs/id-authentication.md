@@ -45,7 +45,7 @@ Learn more about the [Token ID](identifiers.md#token).
 
 ## Relying parties and policies
 
-Read more about [parties and policies](modules/partner-management-services/pms-existing/auth-credential-partner/partner-policies.md).
+Read more about [parties and policies](modules/partner-management-services/pms-existing/partner-policies.md).
 
 ## Consent
 
