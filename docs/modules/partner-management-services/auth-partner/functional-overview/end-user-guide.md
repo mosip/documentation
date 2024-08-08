@@ -345,22 +345,24 @@ Existing user can perform these functionalities on a need basis:
 * Click on Partner Certificate option in the dashboard/ side panel / hamburger menu.
 * The user is navigated to list view of partner certificate and click on Re- Upload button of Authentication Partner Type.
 
-\<image>
+<figure><img src="../../../../.gitbook/assets/pms_reupload_partner_certificate_1.png" alt=""><figcaption></figcaption></figure>
 
 *   Re- upload certificate pop-up window appears . The time and date of previous certificate upload is also displayed for user reference.\
-    \<image>
+    ![](../../../../.gitbook/assets/pms\_reupload\_partner\_certificate\_2.png)
 
-    \<image>
+    \
+    ![](../../../../.gitbook/assets/pms\_reupload\_partner\_certificate\_3.png)\
+
 * Click on the certificate upload section (blue area) to upload a new partner certificate from the local system. After selecting the certificate from local system , the fetched certificate name is displayed:
 
-\<image>
+<figure><img src="../../../../.gitbook/assets/pms_reupload_partner_certificate_4.png" alt=""><figcaption></figcaption></figure>
 
 On click of Submit, Partner certificate upload success message is displayed.\
-\<image>
+<mark style="color:red;">**\<image>**</mark>
 
 * On click of Close, the user is navigated to list view of partner certificate.
 
-\<image>
+<figure><img src="../../../../.gitbook/assets/pms_reupload_partner_certificate_5.png" alt=""><figcaption></figcaption></figure>
 
 2. Request Policy (if not done earlier) as covered in b) above.
 3. Perform Authentication Services as covered in c) above.
@@ -371,18 +373,20 @@ On click of Submit, Partner certificate upload success message is displayed.\
 
 ### Forgot Password
 
-If a user is unable to remember his password at the time of login, he can click on **Forgot Password** link displayed on login page to reset his password.\
-\<image>
+If a user is unable to recall password at the time of login, he can click on **Forgot Password** link displayed on login page to reset his password.\
+
+
+<figure><img src="../../../../.gitbook/assets/pms_forgot_password_2.png" alt=""><figcaption></figcaption></figure>
 
 * On clicking Forgot password, the user enters his registered email address and submits.
 * A message is displayed informing user that further instructions to reset password has been sent to his email address entered.
 
-\<image>
+<figure><img src="../../../../.gitbook/assets/pms_forgot_password_3.png" alt=""><figcaption></figcaption></figure>
 
 * The user clicks on the Reset password link received on his email address where he is navigated to Change Password screen to enter a new password that adheres password policy and reenter the same password before saving it.
 
-\<image>
-
-\<image>
+<figure><img src="../../../../.gitbook/assets/pms_forgot_password_4.png" alt=""><figcaption></figcaption></figure>
 
 * After clicking submit, This new password will be further used in subsequent logins.
+
+<figure><img src="../../../../.gitbook/assets/pms_forgot_password_5.png" alt=""><figcaption></figcaption></figure>
