@@ -1,4 +1,4 @@
-# 👨💼 Partners
+# 👨‍💼 Partners
 
 ## Overview
 
@@ -23,7 +23,7 @@ The MOSIP platform requires integration with several other systems. Typically, a
 
 ## Partner policies
 
-Partner policies control the data that needs to be shared with a partner. Learn more about [partner policies](partner-policies.md).
+Partner policies control the data that needs to be shared with a partner. Learn more about [partner policies](modules/partner-management-services/pms-existing/auth-credential-partner/partner-policies.md).
 
 ## Partner onboarding
 
@@ -87,7 +87,7 @@ The sections below describe the onboarding process for each type of partner.
 
 The MOSIP Partner Programme (MPP) was initiated to help stakeholders connect with MOSIP, and become part of an ecosystem invested in building foundational digital ID systems that are trustworthy, secure, efficient, and interoperable while being customised to specific needs.
 
-Refer [MPP document](https://mosip.io/program_partner/MOSIP-Partner-Programme-Revised.pdf) for further details.
+Refer [MPP document](https://mosip.io/program\_partner/MOSIP-Partner-Programme-Revised.pdf) for further details.
 
 ## PMS module
 

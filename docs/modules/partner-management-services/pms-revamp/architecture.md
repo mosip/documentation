@@ -6,7 +6,7 @@ Provides various partner services like onboarding partners and providing partner
 
 The diagram below illustrates the relationship of this service to other MOSIP services.
 
-<figure><img src="../../.gitbook/assets/pms_arch.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/pms_arch.png" alt=""><figcaption></figcaption></figure>
 
 1. Certificates of partner are uploaded to [Key Manager](https://docs.mosip.io/1.2.0/modules/keymanager) as part of onboarding.
 2. Registration processor fetches ABIS datashare policy from PMS.

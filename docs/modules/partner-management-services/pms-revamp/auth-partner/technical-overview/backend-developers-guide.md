@@ -33,12 +33,12 @@ Follow the steps below to set up Partner Management Services on your local syste
 4. Install Eclipse.
 5. Open the `lombok.jar` file and wait for some time until it completes the scan for Eclipse IDE and then click `Install/Update`. Specify the eclipse installation location if required by clicking the ‘Specify location…’ button. Then, click `Install/Update` the button to proceed.
 
-<figure><img src="../../../../.gitbook/assets/pms_bdg_1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_bdg_1.png" alt=""><figcaption></figcaption></figure>
 
 6. Check the Eclipse installation folder `C:\Users\userName\eclipse\jee-2021-12\eclipse` to see if `lombok.jar` is added. By doing this, you will not have to add the dependency of lombok in your `pom.xml` file separately as it is auto-configured by Eclipse.
 7. Configure the JDK (Standard VM) with your Eclipse by traversing through `Preferences → Java → Installed JREs`.
 
-<figure><img src="../../../../.gitbook/assets/pms_bdg_2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_bdg_2.png" alt=""><figcaption></figcaption></figure>
 
 ### Code setup
 
@@ -52,7 +52,7 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 4. After building a project, open Eclipse and select `Import Projects → Maven → Existing Maven Projects → Next → Browse to project directory → Finish`
 5. This will import 5 projects into Eclipse: `partner, partner-management-service, pms-common, policy-management-service and policy-validator`
 
-<figure><img src="../../../../.gitbook/assets/pms_bdg_3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_bdg_3.png" alt=""><figcaption></figcaption></figure>
 
 6. After successful importing of all the projects, update each `project by right-clicking on Project → Maven → Update Project`.
 
@@ -61,7 +61,7 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 * For the environment setup, you need an external JAR that is available [here](https://oss.sonatype.org/#nexus-search;gav\~\~kernel-auth-adapter\~1.2.0-SNAPSHOT\~\~) with different versions. Download the below-mentioned JARs with appropriate latest/appropriate versions. You will need to input the appropriate artifact ID and version and other inputs. `kernel-auth-adapter.jar`
 * E.g.: You can download `kernel-auth-adapter.jar` and add to the `project Libraries → Classpath → Add External JARs → Select Downloaded JAR → Add → Apply` and Close).
 
-<figure><img src="../../../../.gitbook/assets/pms_bdg_4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_bdg_4.png" alt=""><figcaption></figcaption></figure>
 
 * Properties Files - Update `application-dev.properties` and `bootstrap.properties` files in below folder `partner-management-services\partner\partner-management-service\src\main\resources` _to run the Partner Management Service locally_
 

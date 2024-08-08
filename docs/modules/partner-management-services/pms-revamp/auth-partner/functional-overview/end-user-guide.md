@@ -41,7 +41,7 @@ You will have to use older Partner Admin interface, Yes! you read it correct! be
 4. Click Upload.
 5. Similarly, sub/intermediate CA certificate should be uploaded by following the above steps (1-4).
 
-<figure><img src="../../../../.gitbook/assets/pms_upload_root_ca.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_upload_root_ca.png" alt=""><figcaption></figcaption></figure>
 
 ### Creating Policy Group and Policy
 
@@ -54,7 +54,7 @@ As an admin you will also have privilege to ‘**Approve Policy Request**’ whe
 * Login as Partner Admin into the PMS portal (Older PMP Interface).
 * Click on **Policy** > **Policy Group**. The existing policy groups are listed on the screen and the new ones can be created.
 
-<figure><img src="../../../../.gitbook/assets/pms_create_policy_group.png" alt=""><figcaption><p>Create Policy Group</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_create_policy_group.png" alt=""><figcaption><p>Create Policy Group</p></figcaption></figure>
 
 
 
@@ -62,7 +62,7 @@ As an admin you will also have privilege to ‘**Approve Policy Request**’ whe
 * Enter the ‘**Policy Group Name**’ and ‘**Description**’.
 * Click **Save**.
 
-<figure><img src="../../../../.gitbook/assets/pms_create_policy_group_basic_details.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_create_policy_group_basic_details.png" alt=""><figcaption></figcaption></figure>
 
 #### Create an Auth Policy
 
@@ -82,7 +82,7 @@ On successful creation of **Policy Group(s)**, Polices can be created under a re
 5. Add the <mark style="color:red;">**Policies Data**</mark>.
 6. Click Save.
 
-<figure><img src="../../../../.gitbook/assets/pms_create_auth_policy.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_create_auth_policy.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 **Note**:&#x20;
@@ -99,7 +99,7 @@ Once you 'Create Policy' you also be required to activate it and it will reflect
 1. Select the Policy you want to activate or edit.
 2. From the Actions menu, select Activate/Edit.
 
-<figure><img src="../../../../.gitbook/assets/pms_activate_auth_policy.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_activate_auth_policy.png" alt=""><figcaption></figcaption></figure>
 
 ### Approve Policy Request
 
@@ -110,13 +110,13 @@ When a Partner have chosen a 'Policy Group' and the 'Policy'an approval request 
 * Click on **Manage Policy** on the ‘**Action Menu**’ appearing against a Policy.
 * Click on **Approve**.
 
-<figure><img src="../../../../.gitbook/assets/pms_approve_policy_1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_approve_policy_1.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../../.gitbook/assets/pms_approve_policy_2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_approve_policy_2.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../../.gitbook/assets/pms_approve_policy_3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_approve_policy_3.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../../.gitbook/assets/pms_approve_policy_4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_approve_policy_4.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -141,16 +141,16 @@ Before an interested organization/entity can become an 'Authentication Partner' 
    4. Address, Phone number
    5. e-mail, Username and password
 
-<figure><img src="../../../../_images/pms_register_as_partner.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../_images/pms_register_as_partner.png" alt=""><figcaption></figcaption></figure>
 
 2. Click on Register, a popup comes up which asks you to '**Choose a Policy Group**' and seeks you to '**Agree to Terms and Conditions**' before you can be considered as 'Auth Partner.
 3. Select the relevant/applicable **Policy Group** on **Select Policy Group** popup using **Policy Group** dropdown which then will ask you read through ‘Terms and Condition’ and having carefully read through it you can agree and accept it.
 
-<figure><img src="../../../../.gitbook/assets/pms_select_policy_group.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_select_policy_group.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../../.gitbook/assets/pms_select_policy_group_2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_select_policy_group_2.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../../.gitbook/assets/pms_self_register_terms_and_condition.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_self_register_terms_and_condition.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 **Validations**:
@@ -187,23 +187,23 @@ Before a Partner can upload a ‘CA Signed Certificate’ it is prerequisite tha
 
 1. Go to Authentication Partner (new UI) > Dashboard, Click on Partner Certificate option, User can upload the partner certificate signed by CA by clicking on the upload button.
 
-<figure><img src="../../../../.gitbook/assets/pms_upload_partner_vertificate_1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_upload_partner_vertificate_1.png" alt=""><figcaption></figcaption></figure>
 
 2. &#x20;Select the CA signed partner certificate from local system by tapping on the upload section (blue area)
 
-<figure><img src="../../../../.gitbook/assets/pms_upload_partner_vertificate_2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_upload_partner_vertificate_2.png" alt=""><figcaption></figcaption></figure>
 
 3. Certificate is successfully fetched from local system.
 
-<figure><img src="../../../../.gitbook/assets/pms_upload_partner_vertificate_3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_upload_partner_vertificate_3.png" alt=""><figcaption></figcaption></figure>
 
 4. Partner Certificate is uploaded successfully on clicking Submit.
 
-<figure><img src="../../../../.gitbook/assets/pms_upload_partner_vertificate_4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_upload_partner_vertificate_4.png" alt=""><figcaption></figcaption></figure>
 
 5. On closing the popup, The user can view the uploaded certificate details in the form of a list view.
 
-<figure><img src="../../../../.gitbook/assets/pms_upload_partner_vertificate_5.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_upload_partner_vertificate_5.png" alt=""><figcaption></figcaption></figure>
 
 #### Download Certificate
 
@@ -226,15 +226,15 @@ Content to be updated..
        \
 
 
-       <figure><img src="../../../../.gitbook/assets/pms_request_policy_1.png" alt=""><figcaption></figcaption></figure>
+       <figure><img src="../../../../../.gitbook/assets/pms_request_policy_1.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../../.gitbook/assets/pms_request_policy_2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_request_policy_2.png" alt=""><figcaption></figcaption></figure>
 
 3. This newly created policy request will be in ‘Pending for Approval’ status. You can also click on action menu to see all the submitted policy details irrespective of its status. The details will also display the comments by admin, if any.
 4. Once the request is approved (Partner Admin will then [**Approve Policy Request**](end-user-guide.md#approve-policy-request)). Once the request is approved you can view the status turns to ‘Approved’ status.\
 
 
-<figure><img src="../../../../.gitbook/assets/pms_request_policy_3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_request_policy_3.png" alt=""><figcaption></figcaption></figure>
 
 ### Setup Authentication Services
 
@@ -252,29 +252,29 @@ After you have self registered, selected a policy group, requested for policy an
   * Enter the public key in JWK format, name or label for OIDC Client, LogoURI and one or more Redirect URI.
   * On successful submission, user can find this record in tabular list of submitted OIDC Client details in ‘Activated’ status. Tabular list and individual view of submitted OIDC Client details along with OIDC Client ID, Edit OIDC Client details and Deactivate OIDC Client can also be seen from here.
 
-<figure><img src="../../../../.gitbook/assets/OIDC_client_creation_1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/OIDC_client_creation_1.png" alt=""><figcaption></figcaption></figure>
 
 * Once the details are in Activated status, user will be able to view the OIDC Client ID generated, by clicking on the eye icon ( ). clicking on the OIDC Client ID eye icon, opens a popup window which displays the Client ID and a copy button.
 * This Client ID can then be consumed in eSignet to perform authentication. Client ID can be accessed by clicking on eye icon
 
-<figure><img src="../../../../.gitbook/assets/OIDC_client_creation_3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/OIDC_client_creation_3.png" alt=""><figcaption></figcaption></figure>
 
 * User can utilize this OIDC Client ID to perform eSignet based authentication of citizens.
 
-<figure><img src="../../../../.gitbook/assets/OIDC_client_creation_4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/OIDC_client_creation_4.png" alt=""><figcaption></figcaption></figure>
 
 * The user can also view every OIDC Client detail individually using the View option
 
-<figure><img src="../../../../.gitbook/assets/OIDC_client_creation_5.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/OIDC_client_creation_5.png" alt=""><figcaption></figcaption></figure>
 
 * The user can also edit the OIDC Client details in Activated (only OIDC Client Name, LogoURI and RedirectURI are editable) by selecting the edit option in Action Menu.\
 
 
-<figure><img src="../../../../.gitbook/assets/OIDC_client_creation_6.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/OIDC_client_creation_6.png" alt=""><figcaption></figcaption></figure>
 
 * User can deactivate the OIDC Client ID by clicking on deactivate option . The deactivate popup window appears and on clicking confirm, the OIDC Client record is changed to Deactivated status. **Once deactivated, the client ID can not be used anymore for authentication**.
 
-<figure><img src="../../../../.gitbook/assets/OIDC_client_creation_7.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/OIDC_client_creation_7.png" alt=""><figcaption></figcaption></figure>
 
 #### API Key Generation
 
@@ -284,23 +284,23 @@ The authentication partner needs to provide the following details to generate AP
 
 1. Enter an appropriate name or label for API Key to be generated and submit, On successful submission, a popup window displays API Key along with a copy button.
 
-<figure><img src="../../../../.gitbook/assets/pms_generating_api_key_1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_generating_api_key_1.png" alt=""><figcaption></figcaption></figure>
 
 2.  This API Key can be viewed by user in PMS application only once due to security reasons, hence the user is well notified with an appropriate message in the same API Key popup window to avoid closing the window unless user has not copied the API Key.\
 
 
-    <figure><img src="../../../../.gitbook/assets/pms_generating_api_key_2.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../../../.gitbook/assets/pms_generating_api_key_2.png" alt=""><figcaption></figcaption></figure>
 3.  User can find this record in tabular list of submitted API details in ‘Activated’ status.\
 
 
-    <figure><img src="../../../../.gitbook/assets/pms_generating_api_key_3.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../../../.gitbook/assets/pms_generating_api_key_3.png" alt=""><figcaption></figcaption></figure>
 4. User can either view individual API Key entries or view the consolidated list in tabular view.
 
-<figure><img src="../../../../.gitbook/assets/pms_generating_api_key_4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_generating_api_key_4.png" alt=""><figcaption></figcaption></figure>
 
 5. You also have an option to deactivate an API Key, which thereafter cannot be used for authentication. On clicking confirm, the API Key record is changed to Deactivated status. Once deactivated, it cannot be activated again. You may need to generate a new API key as per requirement.
 
-<figure><img src="../../../../.gitbook/assets/pms_generating_api_key_5.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_generating_api_key_5.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -348,24 +348,24 @@ Existing user can perform these functionalities on a need basis:
 * Click on Partner Certificate option in the dashboard/ side panel / hamburger menu.
 * The user is navigated to list view of partner certificate and click on Re- Upload button of Authentication Partner Type.
 
-<figure><img src="../../../../.gitbook/assets/pms_reupload_partner_certificate_1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_reupload_partner_certificate_1.png" alt=""><figcaption></figcaption></figure>
 
 *   Re- upload certificate pop-up window appears . The time and date of previous certificate upload is also displayed for user reference.\
-    ![](../../../../.gitbook/assets/pms\_reupload\_partner\_certificate\_2.png)
+    ![](../../../../../.gitbook/assets/pms\_reupload\_partner\_certificate\_2.png)
 
     \
-    ![](../../../../.gitbook/assets/pms\_reupload\_partner\_certificate\_3.png)\
+    ![](../../../../../.gitbook/assets/pms\_reupload\_partner\_certificate\_3.png)\
 
 * Click on the certificate upload section (blue area) to upload a new partner certificate from the local system. After selecting the certificate from local system , the fetched certificate name is displayed:
 
-<figure><img src="../../../../.gitbook/assets/pms_reupload_partner_certificate_4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_reupload_partner_certificate_4.png" alt=""><figcaption></figcaption></figure>
 
 On click of Submit, Partner certificate upload success message is displayed.\
 <mark style="color:red;">**\<image>**</mark>
 
 * On click of Close, the user is navigated to list view of partner certificate.
 
-<figure><img src="../../../../.gitbook/assets/pms_reupload_partner_certificate_5.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_reupload_partner_certificate_5.png" alt=""><figcaption></figcaption></figure>
 
 2. Request Policy (if not done earlier) as covered in b) above.
 3. Perform Authentication Services as covered in c) above.
@@ -379,17 +379,17 @@ On click of Submit, Partner certificate upload success message is displayed.\
 If a user is unable to recall password at the time of login, he can click on **Forgot Password** link displayed on login page to reset his password.\
 
 
-<figure><img src="../../../../.gitbook/assets/pms_forgot_password_2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_forgot_password_2.png" alt=""><figcaption></figcaption></figure>
 
 * On clicking Forgot password, the user enters his registered email address and submits.
 * A message is displayed informing user that further instructions to reset password has been sent to his email address entered.
 
-<figure><img src="../../../../.gitbook/assets/pms_forgot_password_3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_forgot_password_3.png" alt=""><figcaption></figcaption></figure>
 
 * The user clicks on the Reset password link received on his email address where he is navigated to Change Password screen to enter a new password that adheres password policy and reenter the same password before saving it.
 
-<figure><img src="../../../../.gitbook/assets/pms_forgot_password_4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_forgot_password_4.png" alt=""><figcaption></figcaption></figure>
 
 * After clicking submit, This new password will be further used in subsequent logins.
 
-<figure><img src="../../../../.gitbook/assets/pms_forgot_password_5.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_forgot_password_5.png" alt=""><figcaption></figcaption></figure>
