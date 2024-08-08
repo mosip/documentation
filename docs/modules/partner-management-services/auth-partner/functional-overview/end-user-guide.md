@@ -1,21 +1,6 @@
-# PMS User Guide
+# User Guide
 
-## Authentication Partner
-
-Partner user is an entity who uses the Partner Management Portal to perform functions on behalf of Partner Organisation. Hence partner user / user / partner are referred interchangeably in this document.
-
-**Partner Management Portal (PMP) is used by both;**
-
-* Partner Administrator: Partner Admin
-* Partners: Partner User (Relying Party)
-
-Caution:
-
-{% hint style="info" %}
-While we are improving/revamping the PMS (Partner Management Service) and it’s interface which we will frequently call as PMP (Partner Management Portal) this will be worth noting that there are still some dependencies on older ‘**Partner Management Portal**’ and therefore we will still be doing few activities from an older PMP, this we have mentioned at appropriate places with ‘**Prerequisites**’.
-{% endhint %}
-
-### Interface Overview
+## Interface Overview
 
 After registering User is now in Home Page/ Dashboard where the following features are provided to Auth Partner:
 
@@ -23,25 +8,46 @@ These features can also be accessed by clicking on side panel (in the form of ic
 
 \<image>
 
-## Partner Admin
+## Authentication Partner
 
-As ‘Partner Admin’ you can do following:
+Partner user is an entity who uses the Partner Management Portal to perform functions on behalf of Partner Organisation. Hence partner user / user / partner are referred interchangeably in this document.
 
-* Partner Root CA and Sub CA Upload
+
+
+
+
+## PMS Admin (Partner Admin)
+
+**Partner Management Portal (PMP) is used by both; PMS Admin and Partner User.**
+
+* Partner Administrator: Partner Admin
+* Partners: Partner User (Relying Party)
+
+{% hint style="warning" %}
+**Caution**: While we are improving/revamping the PMS (Partner Management Service) and it’s interface which we will frequently call as PMP (Partner Management Portal) this will be worth noting that there are still some dependencies on older ‘**Partner Management Portal**’ and therefore we will still be doing few activities from an older PMP interface, this we have mentioned at appropriate places as ‘**Prerequisites**’.
+{% endhint %}
+
+## What all activities does a 'Partner Admin' performs?
+
+Being a ‘Partner Admin’ you can perform following activities:
+
+* Upload Root CA and Sub CA Certificates
 * Create Policy Group and Policy
 * Approve Policy
 
-### Partner Certificate Upload
+### Upload Root CA and Sub CA (From Older PMP Interface)
 
-As a process of Partner onboarding onto PMP after successful registration Partner is required to **Upload CA signed Partner Certificate** on behalf of their organisation which would be used to build a trust store in MOSIP to cryptographically validate that they are from a trusted organisation to perform authentication of citizens. Also this certificate is used to encrypt the response shared in e-KYC.
+Only after you 'Upload Root CA and Sub CA (From Older PMP Interface)' that a Partner will then be able to 'Upload CA signed Partner Certificate'.&#x20;
 
-{% hint style="info" %}
-**Note**:
+> As a process of Partner onboarding onto PMP after successful registration Partner is required to **Upload CA signed Partner Certificate** on behalf of their organisation which would be used to build a trust store in MOSIP to cryptographically validate that they are from a trusted organisation to perform authentication of citizens. Also this certificate is used to encrypt the response shared in e-KYC.
 
-You will have to use older Partner Admin interface, Yes! you read it correct! before a Partner will be able to ‘**Upload ‘CA Signed Certificate**’ it is prerequisite that the ‘Partner Admin’ must upload the **Root CA** and **Sub CA** certificates and this you can do from ‘Older PMP Interface’.
+{% hint style="warning" %}
+**Important:**
+
+You will have to use older Partner Admin interface, Yes! you read it correct! before a Partner will be able to ‘**Upload ‘CA Signed Certificate**’ it is prerequisite that the ‘**Partner Admin**’ must upload the **Root CA** and **Sub CA** certificates and this you can do from ‘**Older PMP Interface’**.
 {% endhint %}
 
-#### Uploading Root CA and Sub CA (From Older PMP Interface)
+#### To Upload Root CA and Sub CA (From Older PMP Interface)
 
 1. Go to **Older PMP Interface** and click on **Upload CA Certificate** option on the left navigation pane.
 2. Select the Partner Domain.
@@ -51,22 +57,22 @@ You will have to use older Partner Admin interface, Yes! you read it correct! be
 
 <figure><img src="../../../../.gitbook/assets/pms_upload_root_ca.png" alt=""><figcaption></figcaption></figure>
 
-### Policy Group and Policy
+### Creating Policy Group and Policy
 
-As Partner Admin you need to ‘**Create Policy Group**’ and ‘**Create Policy(s)**’ which a ‘Partner’ will be able to select while self-registering on PMP.
+As Partner Admin you are required to ‘**Create Policy Group**’ and ‘**Create Policy(s)**’ which a ‘Partner’ will be able to select while self-registering on PMP.
 
-As an admin you will also have privilege to ‘**Approve Policy Request**’. You can read more about this here.
+As an admin you will also have privilege to ‘**Approve Policy Request**’ when a Partner selects a Policy and it comes to you for approval, You can read more about this <mark style="color:red;">**here**</mark>.
 
 #### Create Policy group
 
-* Login as Partner Admin into the PMS portal
+* Login as Partner Admin into the PMS portal (Older PMP Interface).
 * Click on **Policy** > **Policy Group**. The existing policy groups are listed on the screen and the new ones can be created.
 
 <figure><img src="../../../../.gitbook/assets/pms_create_policy_group.png" alt=""><figcaption><p>Create Policy Group</p></figcaption></figure>
 
 
 
-* Click on Create Policy Group (+).
+* Click on **Create Policy Group** (+).
 * Enter the ‘**Policy Group Name**’ and ‘**Description**’.
 * Click **Save**.
 
@@ -74,40 +80,48 @@ As an admin you will also have privilege to ‘**Approve Policy Request**’. Yo
 
 #### Create an Auth Policy
 
-On successful creation of **Policy Group(s)**, Polices can be created under that group.
+On successful creation of **Policy Group(s)**, Polices can be created under a respective group.
 
-Note: **MOSIP** supports two types of policies, i.e. **Auth Policy** and **Datashare Policy**. Only **Auth Policy** is used by **Authentication Partners**.
+{% hint style="info" %}
+**Note:**&#x20;
+
+**MOSIP** supports two types of policies, i.e. **Auth Policy** and **Datashare Policy**. Only **Auth Policy** is used by **Authentication Partners**.
+{% endhint %}
 
 1. Click on **Policy** > **Policy Group** on the left navigation pane, The existing policy groups are listed on the screen and the new ones can be created. You can also search or filter any data pertaining to policy groups, use the filter menu.\
-   \<image>
+   <mark style="color:red;">**\<image>**</mark>
 2. Click **Auth Policy** > **Create Policy**.
 3. Add the **Name** and **Description**.
-4. Select the **Policy Group** from the dropdown.
-5. Add the Policies Data.
+4. Select the **Policy Group** from the dropdown, (Select the **Policy Group - Auth Policy**) here under which this Policy you are creating will be added.
+5. Add the <mark style="color:red;">**Policies Data**</mark>.
 6. Click Save.
 
 <figure><img src="../../../../.gitbook/assets/pms_create_auth_policy.png" alt=""><figcaption></figcaption></figure>
 
-**Note**: Once the policy is created, it will be in Inactive state. You have to **Activate a Policy** before a Partner will be able to select it while ‘**Requesting a Policy**’.
+{% hint style="info" %}
+**Note**:&#x20;
 
-#### Activate/edit Auth policy
-
-You can also change the status of **Policy Group**( Deactivate/Re-activate) or edit it using the Action menu as shown below.
-
+Once the policy is created, it will be in Inactive state. You have to **Activate a Policy** before a Partner will be able to select it while ‘**Requesting a Policy**’.
+{% endhint %}
 
 
-1. Select the policy you want to activate or edit.
+
+#### Activate/Edit Auth policy
+
+Once you 'Create Policy' you also be required to activate it and it will reflect when a Partner wants to select a policy. You can also change the status of **Policy Group** ( Deactivate/Re-activate) or edit it using the Action menu as shown below.
+
+1. Select the Policy you want to activate or edit.
 2. From the Actions menu, select Activate/Edit.
 
 <figure><img src="../../../../.gitbook/assets/pms_activate_auth_policy.png" alt=""><figcaption></figcaption></figure>
 
 ### Approve Policy Request
 
-You can approve a ‘**Policy Request**’ initiated by a Partner using ‘**Request Policy**’ screen.
+When a Partner have chosen a 'Policy Group' and the 'Policy'an approval request will come to you and  you can approve or reject a ‘**Policy Request**’ using ‘**Request Policy**’ screen.
 
 * Click on **Partner Policy Mapping** in the left navigation pane.
 * Select the policy mapping that needs an approval.
-* Click on **Manage Policy** on the ‘Action Menu’ appearing against the Policy.
+* Click on **Manage Policy** on the ‘**Action Menu**’ appearing against a Policy.
 * Click on **Approve**.
 
 <figure><img src="../../../../.gitbook/assets/pms_approve_policy_1.png" alt=""><figcaption></figcaption></figure>
