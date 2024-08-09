@@ -77,7 +77,7 @@ The Inji repo is renamed to [inji-wallet](https://github.com/mosip/inji-wallet)
 | inji-vci-client           | <p><a href="https://github.com/mosip/inji-vci-client/releases/tag/v0.1.0">v0.1.0</a><br></p>           |
 | inji-vci-client-ios-swift | <p><a href="https://github.com/mosip/inji-vci-client-ios-swift/releases/tag/v0.1.0">v0.1.0</a><br></p> |
 
-## Compatible modules:
+## Compatible Modules:
 
 The following table outlines the tested and certified compatibility of Inji Wallet 0.13.0 with other modules.
 
