@@ -4,11 +4,11 @@
 
 **Support:** Developer Release
 
-**Release Date:** 02nd Aug, 2024
+**Release Date:** 2nd Aug, 2024
 
 ## **Overview**
 
-We are delighted to announce the release of Inji Wallet Version 0.13.0. This release has a major announcement on inji repository renamed as inji-wallet and is compatible with v0.13.1 Mimoto. In this new version, Inji Wallet introduces below mentioned key features:
+We are delighted to announce the release of Inji Wallet Version 0.13.0. This update includes a significant change: The Inji repository has been renamed to **inji-wallet** and is now compatible with Mimoto v0.13.1. In this latest version, Inji Wallet introduces the following key features:
 
 **Libraries:**
 
@@ -17,7 +17,7 @@ We are delighted to announce the release of Inji Wallet Version 0.13.0. This rel
    * Pixelpass
    * VCI client
    * Tuvali
-2. UUID changes for verifier services in tuvali.
+2. UUID changes for verifier services in tuvali
 3. Secure-keystore changes (credential request keypair change from RSA-4096 to RSA-2048 bits)
 
 **Enhancements:**
@@ -36,7 +36,7 @@ Please find below the details for the Inji Version 0.13.0 release:
 **Libraries:**
 
 * Inji Wallet utilizes the **Secure Keystore SDK** to store keypairs, ensuring enhanced security. The SDK now includes native artifacts and is fully integrated with Inji Wallet. Additionally, the keypair generation for credential requests has been updated from RSA-4096 to RSA-2048 bits to reduce the size of the VCs.
-* **Tuvali**: UUID for all the verifier services is modified to reflect the UUID service definition as per the spec. In addition, Tuvali SDK which enables offline sharing based on BLE, has native artifacts(Kotlin and Swift) now and integrated with Inji Wallet.
+* **Tuvali**: UUID for all the verifier services is modified to reflect the UUID service definition as per the spec. In addition, Tuvali SDK which enables offline sharing based on BLE, has native artifacts (Kotlin and Swift) now and is integrated with Inji Wallet.
 * With this release, Java, Kotlin, and Swift artifacts are available for the **PixelPass** library, and native artifacts are integrated into the Inji Wallet app. Additionally, the Java library facilitates QR code generation on the server side.
 * The **VCI client** library handles credential requests from issuance, provided it has the accessToken, proof, and issuer metadata.
 
@@ -47,11 +47,11 @@ Please find below the details for the Inji Version 0.13.0 release:
 
 **Deployment:**
 
-* To simplify the deployment process for Mimoto in local environment, a Docker Compose file is now available. Click [here](https://docs.mosip.io/inji/inji-mobile-wallet/build-and-deployment/local-setup) to know more in detail.
+* To simplify the deployment process for Mimoto in local environment, a Docker Compose file is now available. Click [here](https://docs.mosip.io/inji/inji-mobile-wallet/build-and-deployment/local-setup) to know more.
 
 #### Inji repo name change:
 
-Inji repo is renamed to [inji-wallet](https://github.com/mosip/inji-wallet)
+The Inji repo is renamed to [inji-wallet](https://github.com/mosip/inji-wallet)
 
 **Steps to update local github configuration:**
 
@@ -64,11 +64,11 @@ Inji repo is renamed to [inji-wallet](https://github.com/mosip/inji-wallet)
 
 ## **Repository Released**
 
-| **Repositories**          | **Tags Released**                                                                                              |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| inji-wallet               | <p><a href="https://github.com/mosip/inji-wallet/releases/tag/v0.13.0">v0.13.0</a><br></p>                     |
-| mimoto                    | <p><a href="https://github.com/mosip/mimoto/releases/tag/v0.13.1">v0.13.1</a><br></p>                          |
-| inji-config               | <p><a href="https://github.com/mosip/inji-config/releases/tag/v0.1.2">v0.1.2</a><br></p>                       |
+| **Repositories**          | **Tags Released**                                                                                      |
+| ------------------------- | ------------------------------------------------------------------------------------------------------ |
+| inji-wallet               | <p><a href="https://github.com/mosip/inji-wallet/releases/tag/v0.13.0">v0.13.0</a><br></p>             |
+| mimoto                    | <p><a href="https://github.com/mosip/mimoto/releases/tag/v0.13.1">v0.13.1</a><br></p>                  |
+| inji-config               | <p><a href="https://github.com/mosip/inji-config/releases/tag/v0.1.2">v0.1.2</a><br></p>               |
 | tuvali                    | <p><a href="https://github.com/mosip/tuvali/releases/tag/v0.5.0">v0.5.0</a><br></p>                    |
 | tuvali-ios-swift          | <p><a href="https://github.com/mosip/tuvali-ios-swift/releases/tag/v0.5.0">v0.5.0</a><br></p>          |
 | secure-keystore           | <p><a href="https://github.com/mosip/secure-keystore/releases/tag/v0.2.0">v0.2.0</a><br></p>           |
@@ -127,7 +127,7 @@ Mentioned below is the list of other known issues.
 
 ## Bug Fixes:
 
-Below are the list of fixes as part of 0.13.0 release:
+The 0.13.0 release includes the following bug fixes:
 
 | Jira Issue                                                      | Issue Description                                                                                                             | Severity |
 | --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | -------- |
