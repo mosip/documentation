@@ -1,6 +1,6 @@
 # Version 0.9.0
 
-**Release Name**: Inji Verify v0.9.0
+**Release Name**: Inji Verify 0.9.0
 
 **Support**: Developer Release
 

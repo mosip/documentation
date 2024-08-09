@@ -1,6 +1,6 @@
 # Version 0.8.0
 
-**Release Name**: Inji Certify v0.8.0
+**Release Name**: Inji Certify 0.8.0
 
 **Support**: Developer Release
 
