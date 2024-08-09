@@ -10,7 +10,7 @@
 
 Asymmetric Amoeba is a Long Term Support (LTS) release. This release focuses on easy manageability, usability, enhanced performance, robustness, security, inclusivity (supports 2+ languages with no restrictions), and comprehensive documentation.
 
-As a part of manageability, a fully supported [Admin](../../admin-portal-user-guide.md) and [Partner Management Portal](../../modules/partner-management-services/pms-existing/auth-credential-partner/partner-management-portal.md) with the ability to self-register partners is included. To help with the operational needs, a fully-working reference [Reporting](../../reporting.md) module is included that can be used by the adopters to track and monitor the analytics around MOSIP.
+As a part of manageability, a fully supported [Admin](../../admin-portal-user-guide.md) and [Partner Management Portal](../../modules/partner-management-services/pms-existing/partner-management-portal.md) with the ability to self-register partners is included. To help with the operational needs, a fully-working reference [Reporting](../../reporting.md) module is included that can be used by the adopters to track and monitor the analytics around MOSIP.
 
 **Major areas of work**
 

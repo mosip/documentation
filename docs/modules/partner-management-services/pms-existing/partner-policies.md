@@ -37,7 +37,7 @@ This service manages partner policies.
 
 ## Partner portal
 
-To know more about the partner portal, refer [Partner Management portal](auth-credential-partner/partner-management-portal.md).
+To know more about the partner portal, refer [Partner Management portal](partner-management-portal.md).
 
 ## Developer Guide
 

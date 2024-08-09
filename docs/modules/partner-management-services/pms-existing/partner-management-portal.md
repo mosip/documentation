@@ -26,7 +26,7 @@ A Partner Admin can create Policies that are required for Authentication and Cre
 
 ## Home page
 
-![](../../../../\_images/pms-home-page.png)
+![](../../../\_images/pms-home-page.png)
 
 ## Policies
 
@@ -38,30 +38,30 @@ To create policies, policy groups should be defined. Policy groups can be consid
 * After successful login, on the left navigation pane, click on **Policy -> Policy Group**.
 * The existing policy groups are listed on the screen and the new ones can be created.
 
-![](../../../../\_images/pms-policy-groups.png)
+![](../../../\_images/pms-policy-groups.png)
 
 **To create Policy groups**
 
 * Click Policy -> Policy Group -> +Create Policy Group
 * Enter the Policy group Name and Description and click **Save**.
 
-![](../../../../\_images/pms-create-policy-groups.png)
+![](../../../\_images/pms-create-policy-groups.png)
 
 To search or filter any data pertaining to policy groups, use the filter menu.
 
-![](../../../../\_images/pms-filter-policy-groups.png)
+![](../../../\_images/pms-filter-policy-groups.png)
 
 You can also change the status of policy group(Deactivate/Re-activate) or edit it using the Action menu as shown below.
 
-![](../../../../\_images/pms-actionmenu-policy-groups.png)
+![](../../../\_images/pms-actionmenu-policy-groups.png)
 
 On successful creation of Policy groups, polices can be created under that group. MOSIP supports two types of policies, i.e., **Auth** policy and **Datashare** policy.
 
 ## Auth Policy
 
-By default, on clicking Auth policy, the screen displays the list of existing auth [policies](../../../../partners.md#partner-policies).
+By default, on clicking Auth policy, the screen displays the list of existing auth [policies](../../../partners.md#partner-policies).
 
-![](../../../../\_images/pms-auth-policy.png)
+![](../../../\_images/pms-auth-policy.png)
 
 ### Create an Auth policy
 
@@ -71,7 +71,7 @@ By default, on clicking Auth policy, the screen displays the list of existing au
 4. Add the Policies Data.
 5. Click **Save**.
 
-![](../../../../\_images/pms-create-auth-policy.png)
+![](../../../\_images/pms-create-auth-policy.png)
 
 _Note_: Once the policy is created, it will be in _Inactive_ state. You have to activate it before using it for a partner.
 
@@ -80,21 +80,21 @@ _Note_: Once the policy is created, it will be in _Inactive_ state. You have to 
 1. Select the policy you want to activate or edit.
 2. From the Actions menu, select Activate/Edit.
 
-![](../../../../\_images/pms-actionmenu-auth-policy.png)
+![](../../../\_images/pms-actionmenu-auth-policy.png)
 
 ### Search or filter data
 
 1. Use the filter menu.
 
-![](../../../../\_images/pms-filter-auth-policy.png)
+![](../../../\_images/pms-filter-auth-policy.png)
 
-![](../../../../\_images/pms-filter-results-auth-policy.png)
+![](../../../\_images/pms-filter-results-auth-policy.png)
 
 ## Data Share Policy
 
 Data Share policy can be created/edited in the same way as the steps mentioned in the previous section on `Auth policy` by using Data Share Policy menu options.
 
-![](../../../../\_images/pms-data-share-policy.png)
+![](../../../\_images/pms-data-share-policy.png)
 
 ## Partner
 
@@ -104,6 +104,6 @@ Partners in MOSIP are created in a self-service mode. The partner visits the MOS
 
 To know more about each of the partners, click:
 
-1. [Auth partner/ Credential partner](./)
-2. [Device Provide](../device-provider-partner.md)
-3. [FTM Provider](../../../../ftm-provider-partner.md)
+1. [Auth partner/ Credential partner](auth-credential-partner.md)
+2. [Device Provide](device-provider-partner.md)
+3. [FTM Provider](../../../ftm-provider-partner.md)

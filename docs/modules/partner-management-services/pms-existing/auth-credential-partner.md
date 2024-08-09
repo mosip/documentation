@@ -22,11 +22,11 @@ Below is the workflow that includes the registration process for an Auth or Cred
   * Address, e-mail, phone number
   * Username and password
 
-![](../../../../\_images/auth-partner-self-register.PNG)
+![](../../../\_images/auth-partner-self-register.PNG)
 
 To view the details entered, click **Home** to see the dashboard.
 
-![](<../../../../\_images/auth-partner-map-policy-page (1).PNG>)
+![](<../../../\_images/auth-partner-map-policy-page (1).PNG>)
 
 ### Policy Group mapping
 
@@ -35,7 +35,7 @@ On successful registration, the partner can see their username displayed on the 
 1. Partner selects the relevant Policy Group from **Map Policy Group** dropdown.
 2. Clicks **Save**.
 
-![](../../../../\_images/auth-partner-dashboard.PNG)
+![](../../../\_images/auth-partner-dashboard.PNG)
 
 ### Upload of Certificates
 
@@ -48,23 +48,23 @@ The Partner admin needs to upload the CA certificate to enable the partner for u
 3. Chooses the certificate to upload (only files with extensions as .cer or .pem).
 4. Clicks **Upload**.
 
-![](../../../../\_images/ca-cert-data-upload.PNG)
+![](../../../\_images/ca-cert-data-upload.PNG)
 
-![](../../../../\_images/ca-cert-data-success.PNG)
+![](../../../\_images/ca-cert-data-success.PNG)
 
 The uploaded certificates can be viewed by clicking on `View Certificates-> View`.
 
-![](../../../../\_images/auth-partner-view-cert.PNG)
+![](../../../\_images/auth-partner-view-cert.PNG)
 
 #### Partner Certificate upload
 
 Similarly, the Partner certificates can be added by the Partner admin/ partner.
 
-![](../../../../\_images/auth-partner-upload-cert-page1.PNG)
+![](../../../\_images/auth-partner-upload-cert-page1.PNG)
 
-![](../../../../\_images/auth-partner-upload-cert-page2.PNG)
+![](../../../\_images/auth-partner-upload-cert-page2.PNG)
 
-![](../../../../\_images/auth-partner-upload-cert-success.PNG)
+![](../../../\_images/auth-partner-upload-cert-success.PNG)
 
 ### Mapping policy to policy group
 
@@ -75,16 +75,16 @@ Once the certificates are uploaded,
 3. Selects the Auth Policy Name from the dropdown.
 4. Enters a value for the Request Details (unique value) and clicks **Save**.
 
-![](../../../../\_images/auth-partner-policy-mapping-default-page.PNG)
+![](../../../\_images/auth-partner-policy-mapping-default-page.PNG)
 
-![](../../../../\_images/auth-partner-policy-mapping-data.PNG)
+![](../../../\_images/auth-partner-policy-mapping-data.PNG)
 
 * Once this is done, you will see a message saying `Policy mapping grequest submitted successfully`.
 * Also, the status is displayed as "In progress" and this means that the partner cannot generate the API key until the request is approved by the Partner admin.
 
-![](../../../../\_images/auth-partner-policy-mapping-request-success.PNG)
+![](../../../\_images/auth-partner-policy-mapping-request-success.PNG)
 
-![](../../../../\_images/auth-partner-policy-mapping-page-view.PNG)
+![](../../../\_images/auth-partner-policy-mapping-page-view.PNG)
 
 ### Approval/ Rejection of partner policy mapping
 
@@ -95,15 +95,15 @@ Once the Partner Policy Mapping request is raised by the partner, the Partner ad
 3. From the action menu against the policy mapping, selects **Manage Policy**.
 4. Clicks **Approve**.
 
-![](../../../../\_images/partner-admin-policy-mappings-view-policy.PNG)
+![](../../../\_images/partner-admin-policy-mappings-view-policy.PNG)
 
-![](../../../../\_images/partner-admin-policy-mappings-manage-policy.PNG)
+![](../../../\_images/partner-admin-policy-mappings-manage-policy.PNG)
 
-![](../../../../\_images/partner-admin-policy-mappings-approve.PNG)
+![](../../../\_images/partner-admin-policy-mappings-approve.PNG)
 
 Once the request is approved, the partner can view the status being updated to `Approved` instead of `InProgress`.
 
-![](../../../../\_images/auth-partner-policy-mapping-data-approved.PNG)
+![](../../../\_images/auth-partner-policy-mapping-data-approved.PNG)
 
 ### Generating the API Key
 
@@ -116,12 +116,12 @@ Partner logins after the Partner Policy Mapping is approved by the Partner admin
 
 The API key is generated and can be used by the partner.
 
-![](../../../../\_images/auth-partner-generate-apikey-option.PNG)
+![](../../../\_images/auth-partner-generate-apikey-option.PNG)
 
-![](../../../../\_images/auth-partner-generate-apikey-page.PNG)
+![](../../../\_images/auth-partner-generate-apikey-page.PNG)
 
-![](../../../../\_images/auth-partner-genearted-apikeys-page.PNG)
+![](../../../\_images/auth-partner-genearted-apikeys-page.PNG)
 
-![](../../../../\_images/auth-partner-generate-apikey-success.PNG)
+![](../../../\_images/auth-partner-generate-apikey-success.PNG)
 
 The partner can also deactivate a particular API Key by clicking on the cross-mark (X) next to it. Please note, once deactivated, it cannot be activated again. You may need to generate a new API key as per requirement.
