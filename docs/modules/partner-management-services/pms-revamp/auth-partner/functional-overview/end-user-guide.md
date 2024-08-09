@@ -213,12 +213,6 @@ Content to be updated..
 
 
 
-
-
-
-
-
-
 ### Request Policy
 
 **Pre-Requisite**: **Policy Manager** must have created a **Policy Group** and then created a **Policy** within it for the Partner to be able to ‘**Request a Policy**’.
@@ -226,38 +220,22 @@ Content to be updated..
 #### To Request a Policy
 
 1. Go to **Request Policy** On PMP Interface. You can also use search to filter data.
-   1. Each policy is provided with policy description for user can make a suitable policy selection.
-   2.  You can provide appropriate request comments and submit the policy request details. A message conveying Policy request submitted successfully to admin is displayed.\
-       \
-       \
+   1. Each policy is provided with policy description, You can make a suitable policy selection. You can provide appropriate request comments and submit the policy request details. A message conveying Policy request submitted successfully to admin is displayed.
 
+<figure><img src="../../../../../.gitbook/assets/pms_request_policy_1.png" alt=""><figcaption></figcaption></figure>
 
-       <figure><img src="../../../../../.gitbook/assets/pms_request_policy_1.png" alt=""><figcaption></figcaption></figure>
+2. This newly created policy request will be in ‘Pending for Approval’ status. You can also click on action menu to see all the submitted policy details irrespective of its status. The details will also display the comments by admin, if any.
 
 <figure><img src="../../../../../.gitbook/assets/pms_request_policy_2.png" alt=""><figcaption></figcaption></figure>
 
-3. This newly created policy request will be in ‘Pending for Approval’ status. You can also click on action menu to see all the submitted policy details irrespective of its status. The details will also display the comments by admin, if any.
-4. Once the request is approved (Partner Admin will then [**Approve Policy Request**](end-user-guide.md#approve-policy-request)). Once the request is approved you can view the status turns to ‘Approved’ status.\
+3. Once the request is approved (Partner Admin will [**Approve Policy Request**](end-user-guide.md#approve-policy-request)). Once the request is approved you can view the status turns to ‘Approved’ status.\
 
 
 <figure><img src="../../../../../.gitbook/assets/pms_request_policy_3.png" alt=""><figcaption></figcaption></figure>
 
 
 
-
-
 ## Authentication Service
-
-* Request Policy
-* Setup Authentication Services
-  * OIDC Client : Create OIDC Client for approved policy, tabular list and individual view of submitted OIDC Client details along with OIDC Client ID, Edit OIDC Client details and Deactivate OIDC Client
-  * API Key : Generate API Key for approved policy, tabular list and individual view of submitted API Key details and Deactivate API Key.
-
-
-
-
-
-### Setup Authentication Services
 
 After you have self registered, selected a policy group, requested for policy and also got approval now you can 'Setup Authentication Services':
 
@@ -288,8 +266,7 @@ After you have self registered, selected a policy group, requested for policy an
 
 <figure><img src="../../../../../.gitbook/assets/OIDC_client_creation_5.png" alt=""><figcaption></figcaption></figure>
 
-* The user can also edit the OIDC Client details in Activated (only OIDC Client Name, LogoURI and RedirectURI are editable) by selecting the edit option in Action Menu.\
-
+* The user can also edit the OIDC Client details in Activated (only OIDC Client Name, LogoURI and RedirectURI are editable) by selecting the edit option in Action Menu.
 
 <figure><img src="../../../../../.gitbook/assets/OIDC_client_creation_6.png" alt=""><figcaption></figcaption></figure>
 
