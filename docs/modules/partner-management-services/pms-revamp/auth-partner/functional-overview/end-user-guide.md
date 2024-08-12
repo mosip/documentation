@@ -302,6 +302,66 @@ The authentication partner needs to provide the following details to generate AP
 
 
 
+................................................................................................................................................................................
+
+
+
+### Interface Overview
+
+PMP (Partner Management Portal) is going under a comprehensive overhaul. This revamp includes improving usability and elevate the overall user experience (UX). The focus is to bring user centered design to PMP, make the PMP more intuitive, efficient, and aligned with our partners' evolving needs.
+
+Card view presentation for each functionality with brief description to help you understand the services offered in Partner User Dashboard:
+
+After successfully registering you can access the Home Page / Dashboard and based on your Partner Type you will be able to view the features and functionalities in the dashboard.
+
+Note: You can access the partner dashboard only when you are duly registered and have selected the 'Policy Group'.
+
+Each functionality that the user can perform is displayed in each card so that there is independent navigation for each tasks.
+
+The PMP Interface 'Card View' for 'Auth Partner' presents you with following features, These features can also be accessed by clicking on side panel (in the form of icons) or clicking on the hamburger menu on the top left which is available across all screens of PMP to help user to easily navigate.
+
+* Partner Certificate: Upload or Reupload CA Signed Partner Certificate and Download CA Signed Partner Certificate & corresponding MOSIP Signed Certificate
+* Policies: Request for a policy within the selected policy group, tabular list of requested policies along with status of admin approval, view requested policy details along with admin comments/status.
+* Authentication Services:
+  * OIDC Client : Create OIDC Client for approved policy, tabular list and individual view of submitted OIDC Client details along with OIDC Client ID, Edit OIDC Client details and Deactivate OIDC Client
+  * API Key : Generate API Key for approved policy, tabular list and individual view of submitted API Key details and Deactivate API Key.
+
+You can view your organisation name and username on the top right called 'User Profile', logout options is also placed here only.
+
+Open image-20240719-134912.png image-20240719-134912.png
+
+\<image>
+
+### Reupload a new partner certificate through the following steps
+
+* Login to PMP and Go to Dashboard.
+* Click on Partner Certificate option in the dashboard/ side panel / hamburger menu, you will be redirected to list view of partner certificate.
+* Click on Re-Upload button of Authentication Partner Type.
+*   Re-upload certificate pop-up window appears. The time and date of previous certificate upload is also displayed for user reference.\
+
+
+    \
+    \\
+* Click on the certificate upload section (blue area) to upload a new partner certificate from the local system. After selecting the certificate from local system , the fetched certificate name is displayed:
+
+Click on Submit, Partner certificate upload success message is displayed.\
+<mark style="color:red;">**\<image>**</mark>
+
+* Click on Close to come back to list view of partner certificate.
+
+#### Forgot Password
+
+You can retrieve password in case you are unable to recall.
+
+Click on **Forgot Password** link displayed on login page to reset his password.
+
+* Enter registered email address and submit, a message is displayed informing user that further instructions to reset password has been sent on te email address entered.
+* Click on the Reset password link received on his email address, you will be redirected to Change Password screen.
+* Enter a new password that adheres to password policy and reenter to confirm before you save it.
+* After clicking submit, This new password will be further used in subsequent logins.
+
+
+
 
 
 

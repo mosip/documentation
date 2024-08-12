@@ -201,6 +201,7 @@
     * [Performance Test Report](release/1.2.0/performance-report/performance-test-report.md)
     * [Security Test Report](release/1.2.0/security-test-report.md)
     * [Feature Health Report](release/1.2.0/feature-health-report.md)
+  * [Partner Management System 1.3.0 DP1](releases/partner-management-system-1.3.0-dp1.md)
 * [📋 Adopting LTS 1.2.0](adopting-lts-1.2.0.md)
 * [🈴 Upgrade Runbook](upgrade-runbook.md)
   * [Deployment Architecture Upgrade](upgrade-deployment-architecture.md)
