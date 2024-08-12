@@ -1,8 +1,8 @@
 # Components
 
-<figure><img src="../../.gitbook/assets/Architecture-2.png" alt=""><figcaption></figcaption></figure>
-
 Inji Certify leverages the following components (from existing building blocks/products):
+
+<figure><img src="../../.gitbook/assets/inji_certify_components.png" alt=""><figcaption></figcaption></figure>
 
 1.  eSignet (v1.4.0): VCI microservice and Authentication microservice
 

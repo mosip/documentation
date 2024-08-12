@@ -104,6 +104,7 @@
   * [Components](inji-certify/technical-overview/components.md)
   * [Tested Operating Systems](inji-certify/technical-overview/supported-browsers.md)
 * [Releases](inji-certify/releases/README.md)
+  * [Version 0.9.0](inji-certify/releases/version-0.9.0.md)
   * [Version 0.8.1](inji-certify/releases/release-notes.md)
   * [Version 0.8.0](inji-certify/releases/version-0.8.0.md)
 * [Build & Deploy](inji-certify/build-and-deploy/README.md)
