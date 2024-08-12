@@ -50,7 +50,7 @@ Inji Certify leverages the following components (from existing building blocks/p
 
 &#x20;      **d. Vault Service:**&#x20;
 
-* to be included as a dependency along with the pg.
+* To be included as a dependency along with the pg.
 * Hashi Corp vault is the Keystore which acts as the vault service.&#x20;
 * Identity service is dependent on the vault service.&#x20;
 * Stores key pairs and secrets for the issuers.
