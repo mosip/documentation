@@ -1,6 +1,6 @@
 # Overview
 
-Partner Management Services (PMS) is undergoing a major revamp and as our first step, we have introduced a brand new web application - Partner Management Portal, This brings:
+Partner Management System (PMS) is undergoing a major revamp and as our first step, we have introduced a brand new web application - Partner Management Portal. This brings:
 
 * Improved usability and user experience.
 * Enhancement of existing features.
@@ -8,7 +8,7 @@ Partner Management Services (PMS) is undergoing a major revamp and as our first 
 * Introduce new partner types.
 * Technology stack upgrade
 
-This release marks the developer's preview release (1.3.0-dp.1) of Partner Management Services which focuses on implementation of **Authentication Partner** workflow **in the new UI.** This version of PMS is designed to run on 1.2.0.1 version of MOSIP platform.
+This release marks the developer's preview release (1.3.0-dp.1) of Partner Management System which focuses on implementation of **Authentication Partner** workflow **in the new UI.** This version of PMS is designed to run on 1.2.0.1 version of MOSIP platform.
 
 The **key features** of Authentication Partner incorporated in this release are:
 
