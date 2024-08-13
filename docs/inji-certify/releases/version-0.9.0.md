@@ -37,23 +37,27 @@ For detailed steps click here to view the [**ReadMe**](https://github.com/mosip/
 2. **Issuer Configuration:** Add an issuer in Mimoto with the authorization\_endpoint, credential\_endpoint and .well-known properties pointing to the installed eSignet and Certify services.
 3. **Private Key Addition:** Insert the private key from the OIDC client created in eSignet into the .p12 file in Mimoto.
 4. **Verification:** The configured issuer should now appear on the InjiWeb homepage, allowing you to download the credential.
-5. **Plugin Compatibility:** For this release, ensure that the eSignet image version in Docker Compose (currently 1.4.0) is consistent with the MOSIP ID and Mock plugin dependencies in Artifactory. This alignment is crucial due to shared Redis cache dependencies resolving serialization issues.
+5. **Plugin Compatibility:** For this release, ensure that the eSignet image version in Docker Compose (currently 1.4.0) is consistent with the Mock plugin dependencies in Artifactory. This alignment is crucial due to shared Redis cache dependencies resolving serialization issues.
 
 ### **Repositories: Released/Dependent**
 
-| **Repositories** | **Tags: Released/Dependent** |
-| ---------------- | ---------------------------- |
-| **Inji Certify** | v0.9.0                       |
-| **inji-config**  | v0.2.0                       |
+| **Repositories**              | **Tags: Released/Dependent** |
+| ----------------------------- | ---------------------------- |
+| **Inji Certify**              | v0.9.0                       |
+| **inji-config**               | v0.2.0                       |
+| **Digital Credential Plugin** | v0.2.0                       |
+| **Artifactory Server**        | v0.9.0                       |
 
 ### **Compatible modules:**
 
 The following table outlines the tested and certified compatibility of Inji Certify 0.9.0 with other modules.
 
-| **Module**    | **Version**                                                                         |
-| ------------- | ----------------------------------------------------------------------------------- |
-| **eSignet**   | [**v1.4.0**](https://github.com/mosip/esignet/releases/tag/v1.4.0)                  |
-| **Sunbird C** | [**v2.0.0**](https://github.com/Sunbird-RC/sunbird-rc-core/releases/tag/v2.0.0-rc3) |
+| **Module**      | **Version**                                                                         |
+| --------------- | ----------------------------------------------------------------------------------- |
+| **eSignet**     | [**v1.4.0**](https://github.com/mosip/esignet/releases/tag/v1.4.0)                  |
+| **Sunbird C**   | [**v2.0.0**](https://github.com/Sunbird-RC/sunbird-rc-core/releases/tag/v2.0.0-rc3) |
+| **Key Manager** | [**v1.3.0-B1**](https://github.com/mosip/keymanager/tree/release-1.3.x)             |
+| **Commons**     | [**v1.3.0-B1**](https://github.com/mosip/commons/tree/release-1.3.x)                |
 
 ### **Known Issues**
 
@@ -66,6 +70,7 @@ Below is the list of known issues. To read in detail and view all the topics rel
 | [**INJICERT-316**](https://mosip.atlassian.net/browse/INJICERT-316) | Inji Certify: Response of Mock VC is having extra attribute with null value                                       |
 | [**INJICERT-324**](https://mosip.atlassian.net/browse/INJICERT-324) | Inji Certify: VC download is failing with credential type "LifeInsuranceCredential"                               |
 | [**INJICERT-327**](https://mosip.atlassian.net/browse/INJICERT-327) | Inji Certify: Extra credential type is coming in VC response for insurance usecase                                |
+| [**INJICERT-328**](https://mosip.atlassian.net/browse/INJICERT-328) | Inji Certify : Not able to download VC with few of the registries from InjiWeb, certify issuer                    |
 
 ### **Bug Fixes**
 
