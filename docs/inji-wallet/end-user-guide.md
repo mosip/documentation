@@ -19,31 +19,31 @@ The below sections explain the steps for installing the Inji Wallet application 
 
 The below screenshots explain the next steps after you get access.
 
-<div align="left">
+<div align="center">
 
-<figure><img src="../.gitbook/assets/Testflight_Inji Wallet_Installation_Step1.png" alt=""><figcaption></figcaption></figure>
-
- 
-
-<figure><img src="../.gitbook/assets/Testflight_Inji Wallet_Installation_Step2 (1).png" alt=""><figcaption><p>Installation of Inji Wallet on iOS mobile device</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Testflight_Inji Wallet_Installation_Step1.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Testflight_Inji Wallet_Installation_Step3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Testflight_Inji Wallet_Installation_Step2 (1).png" alt="" width="188"><figcaption><p>Installation of Inji Wallet on iOS mobile device</p></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/Testflight_Inji Wallet_Installation_Step3.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
-<div>
+<div align="center">
 
-<figure><img src="../.gitbook/assets/Testflight_Inji Wallet_Installation_Step4.png" alt=""><figcaption></figcaption></figure>
-
- 
-
-<figure><img src="../.gitbook/assets/Testflight_Inji Wallet_Installation_Step6.png" alt=""><figcaption><p>Installation of Inji Wallet on iOS mobile device</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Testflight_Inji Wallet_Installation_Step4.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Testflight_Inji Wallet_Installation_Step7.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Testflight_Inji Wallet_Installation_Step6.png" alt="" width="188"><figcaption><p>Installation of Inji Wallet on iOS mobile device</p></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/Testflight_Inji Wallet_Installation_Step7.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
@@ -55,59 +55,59 @@ The below screenshots explain the next steps after you get access.
 
 **On Android Device**
 
-<div>
+<div align="center">
 
-<figure><img src="../.gitbook/assets/First Launch of the App_Step1.png" alt="" width="375"><figcaption></figcaption></figure>
-
- 
-
-<figure><img src="../.gitbook/assets/First Launch of the App_Step2.png" alt="" width="375"><figcaption><p>First launch on android device</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/First Launch of the App_Step1.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/First Launch of the App_Step3.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/First Launch of the App_Step2.png" alt="" width="188"><figcaption><p>First launch on android device</p></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/First Launch of the App_Step3.png" alt="" width="188"><figcaption></figcaption></figure>
+
+</div>
+
+<div align="center">
+
+<figure><img src="../.gitbook/assets/First Launch of the App_Step4.png" alt="" width="188"><figcaption></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/First Launch of the App_Step5.png" alt="" width="188"><figcaption><p>First launch on android device</p></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/First Launch of the App_Step6.png" alt="" width="188"><figcaption></figcaption></figure>
+
+</div>
+
+<div align="center">
+
+<figure><img src="../.gitbook/assets/First Launch of the App_Step7.png" alt="" width="188"><figcaption></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/First Launch of the App_Step8.png" alt="" width="188"><figcaption><p>First launch on android device</p></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/First Launch of the App_Step9.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
 <div>
 
-<figure><img src="../.gitbook/assets/First Launch of the App_Step4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/First Launch of the App_Step10.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/First Launch of the App_Step5.png" alt=""><figcaption><p>First launch on android device</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/First Launch of the App_Step11.png" alt="" width="188"><figcaption><p>First launch on android device</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/First Launch of the App_Step6.png" alt=""><figcaption></figcaption></figure>
-
-</div>
-
-<div>
-
-<figure><img src="../.gitbook/assets/First Launch of the App_Step7.png" alt=""><figcaption></figcaption></figure>
-
- 
-
-<figure><img src="../.gitbook/assets/First Launch of the App_Step8.png" alt=""><figcaption><p>First launch on android device</p></figcaption></figure>
-
- 
-
-<figure><img src="../.gitbook/assets/First Launch of the App_Step9.png" alt=""><figcaption></figcaption></figure>
-
-</div>
-
-<div>
-
-<figure><img src="../.gitbook/assets/First Launch of the App_Step10.png" alt=""><figcaption></figcaption></figure>
-
- 
-
-<figure><img src="../.gitbook/assets/First Launch of the App_Step11.png" alt=""><figcaption><p>First launch on android device</p></figcaption></figure>
-
- 
-
-<figure><img src="../.gitbook/assets/First Launch of the App_Step12.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/First Launch of the App_Step12.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
@@ -131,57 +131,57 @@ Inji Wallet integrates with eSignet as an authorization layer to perform VC down
 
 <div>
 
-<figure><img src="../.gitbook/assets/Download National ID VC_Step1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Download National ID VC_Step1.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Download National ID VC_Step2.png" alt=""><figcaption><p>Download national id</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Download National ID VC_Step2.png" alt="" width="188"><figcaption><p>Download national id</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Download National ID VC_Step3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Download National ID VC_Step3.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
 <div>
 
-<figure><img src="../.gitbook/assets/Download National ID VC_Step4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Download National ID VC_Step4.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Download National ID VC_Step5.png" alt=""><figcaption><p>Download national id</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Download National ID VC_Step5.png" alt="" width="188"><figcaption><p>Download national id</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Download National ID VC_Step6.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Download National ID VC_Step6.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
 <div>
 
-<figure><img src="../.gitbook/assets/Download National ID VC_Step7.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Download National ID VC_Step7.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Download National ID VC_Step8.png" alt=""><figcaption><p>Download national id</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Download National ID VC_Step8.png" alt="" width="188"><figcaption><p>Download national id</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Download National ID VC_Step9.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Download National ID VC_Step9.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
 <div>
 
-<figure><img src="../.gitbook/assets/Download National ID VC_Step10.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Download National ID VC_Step10.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Download National ID VC_Step11.png" alt=""><figcaption><p>Download national id</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Download National ID VC_Step11.png" alt="" width="188"><figcaption><p>Download national id</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Download National ID VC_Step12.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Download National ID VC_Step12.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
@@ -196,53 +196,53 @@ Inji Wallet integrates with eSignet as an authorization layer to perform VC down
 
 <div>
 
-<figure><img src="../.gitbook/assets/Download StayProtected Insurance VC_Step1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Download StayProtected Insurance VC_Step1.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Download StayProtected Insurance VC_Step2.png" alt=""><figcaption><p>Download insurance VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Download StayProtected Insurance VC_Step2.png" alt="" width="188"><figcaption><p>Download insurance VC</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Download StayProtected Insurance VC_Step3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Download StayProtected Insurance VC_Step3.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
 <div>
 
-<figure><img src="../.gitbook/assets/Download StayProtected Insurance VC_Step4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Download StayProtected Insurance VC_Step4.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Download StayProtected Insurance VC_Step5.png" alt=""><figcaption><p>Download insurance VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Download StayProtected Insurance VC_Step5.png" alt="" width="188"><figcaption><p>Download insurance VC</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Download StayProtected Insurance VC_Step6.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Download StayProtected Insurance VC_Step6.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
 <div>
 
-<figure><img src="../.gitbook/assets/Download StayProtected Insurance VC_Step7.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Download StayProtected Insurance VC_Step7.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Download StayProtected Insurance VC_Step8.png" alt=""><figcaption><p>Download insurance VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Download StayProtected Insurance VC_Step8.png" alt="" width="188"><figcaption><p>Download insurance VC</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Download StayProtected Insurance VC_Step9.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Download StayProtected Insurance VC_Step9.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
 <div>
 
-<figure><img src="../.gitbook/assets/Download StayProtected Insurance VC_Step10.png" alt="" width="375"><figcaption><p>                                                                  Download insurance VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Download StayProtected Insurance VC_Step10.png" alt="" width="188"><figcaption><p>Download insurance VC</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Download StayProtected Insurance VC_Step11.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Download StayProtected Insurance VC_Step11.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
@@ -256,35 +256,35 @@ Users can see all the details of the National ID in the detailed view. In additi
 
 <div>
 
-<figure><img src="../.gitbook/assets/Detailed View of National ID VC_Step1.png" alt="" width="563"><figcaption><p>Detailed view of national id</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Detailed View of National ID VC_Step1.png" alt="" width="188"><figcaption><p>Detailed view of national id</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Detailed View of National ID VC_Step2.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Detailed View of National ID VC_Step2.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
 ### Detailed View of Insurance VC
 
-Users can see all the details of the Insurance policy in the detailed view along with the QR Code. The QR Code can be magnified which can be presented to the verifier for scanning. Through the quick access menu (...) on the top right user can also perform other actions like Share, Pin, Remove and Activity log on the VC.
+Users can see all the Insurance policy details in the detailed view along with the QR Code. The QR Code can be magnified which can be presented to the verifier for scanning. Through the quick access menu (...) on the top right user can also perform other actions like Share, Pin, Remove and Activity log on the VC.
 
 <div>
 
-<figure><img src="../.gitbook/assets/Detailed View of Insurance VC_Step1.png" alt="" width="375"><figcaption><p>Detailed view of insurance VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Detailed View of Insurance VC_Step1.png" alt="" width="188"><figcaption><p>Detailed view of insurance VC</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Detailed View of Insurance VC_Step2.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Detailed View of Insurance VC_Step2.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
 ### Viewing the history of the downloaded VC
 
-After we have completed several scenarios, when we navigate to the history page, we can find it by selecting the third icon located in the bottom right corner. This page will display a comprehensive list of all the events that have occurred.
+After completing several scenarios, we can find it by selecting the third icon in the bottom right corner when we navigate to the history page. This page will display a comprehensive list of all the events that have occurred.
 
 <div align="center">
 
-<figure><img src="../.gitbook/assets/History tab.png" alt="" width="375"><figcaption><p>Viewing History</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/History tab.png" alt="" width="188"><figcaption><p>Viewing History</p></figcaption></figure>
 
 </div>
 
@@ -294,15 +294,15 @@ Users can view the activity logs of a VC from the Home Page or the detailed view
 
 <div>
 
-<figure><img src="../.gitbook/assets/View Activity Log for a VC_Step1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/View Activity Log for a VC_Step1.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/View Activity Log for a VC_Step2.png" alt=""><figcaption><p>Activity Log for a VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/View Activity Log for a VC_Step2.png" alt="" width="188"><figcaption><p>Activity Log for a VC</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/View Activity Log for a VC_Step3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/View Activity Log for a VC_Step3.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
@@ -334,43 +334,43 @@ Let us understand the process of sharing credentials using an example and see th
 
 <div>
 
-<figure><img src="../.gitbook/assets/Resident_Step1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident_Step1.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Resident_Step2.png" alt=""><figcaption><p>Share option in nav bar</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident_Step2.png" alt="" width="188"><figcaption><p>Share option in nav bar</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Resident_Step3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident_Step3.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
 <div>
 
-<figure><img src="../.gitbook/assets/Resident_Step4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident_Step4.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Resident_Step5.png" alt=""><figcaption><p>Share option in nav bar</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident_Step5.png" alt="" width="188"><figcaption><p>Share option in nav bar</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Resident_Step6.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident_Step6.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
 <div>
 
-<figure><img src="../.gitbook/assets/Resident_Step7.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident_Step7.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Resident_Step8.png" alt="" width="563"><figcaption><p>Share option in nav bar</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident_Step8.png" alt="" width="188"><figcaption><p>Share option in nav bar</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Resident_Step9.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident_Step9.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
@@ -385,29 +385,29 @@ Let us understand the process of sharing credentials using an example and see th
 
 <div>
 
-<figure><img src="../.gitbook/assets/Relying Party_Step1.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Relying Party_Step1.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Relying Party_Step2.png" alt="" width="563"><figcaption><p>Share option on relying party's phone</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Relying Party_Step2.png" alt="" width="188"><figcaption><p>Share option on relying party's phone</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Relying Party_Step3.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Relying Party_Step3.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
 <div>
 
-<figure><img src="../.gitbook/assets/Relying Party_Step4.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Relying Party_Step4.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Relying Party_Step5.png" alt="" width="563"><figcaption><p>Share option on Relying party's phone</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Relying Party_Step5.png" alt="" width="188"><figcaption><p>Share option on Relying party's phone</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Relying Party_Step6.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Relying Party_Step6.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
@@ -423,43 +423,43 @@ Let us understand the process of sharing credentials using an example and see th
 
 <div>
 
-<figure><img src="../.gitbook/assets/Resident_Step1 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident_Step1 (1).png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Resident_Step2 (1).png" alt=""><figcaption><p>Share / share with selfie</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident_Step2 (1).png" alt="" width="188"><figcaption><p>Share / share with selfie</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Resident_Step3 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident_Step3 (1).png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
 <div>
 
-<figure><img src="../.gitbook/assets/Resident_Step4 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident_Step4 (1).png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Resident_Step5 (1).png" alt=""><figcaption><p>Share / share with selfie</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident_Step5 (1).png" alt="" width="188"><figcaption><p>Share / share with selfie</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Resident_Step6 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident_Step6 (1).png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
 <div>
 
-<figure><img src="../.gitbook/assets/Resident_Step7 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident_Step7 (1).png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Resident_Step8 (1).png" alt=""><figcaption><p>Share / share with selfie</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident_Step8 (1).png" alt="" width="188"><figcaption><p>Share / share with selfie</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Resident_Step9 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident_Step9 (1).png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
@@ -482,33 +482,33 @@ Let us understand the process of sharing credentials using an example and see th
 
 <div>
 
-<figure><img src="../.gitbook/assets/Relying Party_Step1 (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Relying Party_Step1 (1).png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Relying Party_Step2 (1).png" alt="" width="563"><figcaption><p>Sharing on relying party's phone</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Relying Party_Step2 (1).png" alt="" width="188"><figcaption><p>Sharing on relying party's phone</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Relying Party_Step3 (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Relying Party_Step3 (1).png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
 <div>
 
-<figure><img src="../.gitbook/assets/Relying Party_Step4 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Relying Party_Step4 (1).png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Relying Party_Step5 (1).png" alt=""><figcaption><p>Sharing on relying party's phone</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Relying Party_Step5 (1).png" alt="" width="188"><figcaption><p>Sharing on relying party's phone</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Relying Party_Step6 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Relying Party_Step6 (1).png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
-<figure><img src="../.gitbook/assets/Relying Party_Step7 (1).png" alt="" width="375"><figcaption><p>Sharing on relying party's phone</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Relying Party_Step7 (1).png" alt="" width="188"><figcaption><p>Sharing on relying party's phone</p></figcaption></figure>
 
 ### **Share with a selfie from VC Detailed View Quick Access menu**
 
@@ -522,43 +522,43 @@ Let us understand the process of sharing credentials using an example and see th
 
 <div>
 
-<figure><img src="../.gitbook/assets/Resident App_Step1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident App_Step1.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Resident App_Step2.png" alt=""><figcaption><p>Share with selfie <strong>on</strong> resident's phone</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident App_Step2.png" alt="" width="188"><figcaption><p>Share with selfie <strong>on</strong> resident's phone</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Resident App_Step3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident App_Step3.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
 <div>
 
-<figure><img src="../.gitbook/assets/Resident App_Step4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident App_Step4.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Resident App_Step5.png" alt=""><figcaption><p>Share with selfie <strong>on</strong> resident's phone</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident App_Step5.png" alt="" width="188"><figcaption><p>Share with selfie <strong>on</strong> resident's phone</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Resident App_Step6.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident App_Step6.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
 <div>
 
-<figure><img src="../.gitbook/assets/Resident App_Step7.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident App_Step7.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Resident App_Step8.png" alt=""><figcaption><p>Share with selfie <strong>on</strong> resident's phone</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident App_Step8.png" alt="" width="188"><figcaption><p>Share with selfie <strong>on</strong> resident's phone</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Resident App_Step9.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident App_Step9.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
@@ -573,29 +573,29 @@ Let us understand the process of sharing credentials using an example and see th
 
 <div>
 
-<figure><img src="../.gitbook/assets/Relying Party_Step1 (2).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Relying Party_Step1 (2).png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Relying Party_Step2 (2).png" alt="" width="563"><figcaption><p>Share with selfie on relying party's phone</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Relying Party_Step2 (2).png" alt="" width="188"><figcaption><p>Share with selfie on relying party's phone</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Relying Party_Step3 (2).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Relying Party_Step3 (2).png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
 <div>
 
-<figure><img src="../.gitbook/assets/Relying Party_Step4 (2).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Relying Party_Step4 (2).png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Relying Party_Step5 (2).png" alt="" width="563"><figcaption><p>Share with selfie on relying party's phone</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Relying Party_Step5 (2).png" alt="" width="188"><figcaption><p>Share with selfie on relying party's phone</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Relying Party_Step6(1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Relying Party_Step6(1).png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
@@ -607,21 +607,21 @@ After clicking on the ellipsis button on the downloaded VC, a button will appear
 
 <div>
 
-<figure><img src="../.gitbook/assets/Pinning a VC_Step1.png" alt="" width="375"><figcaption><p>Pinning a vc</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Pinning a VC_Step1.png" alt="" width="188"><figcaption><p>Pinning a vc</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Pinning a VC_Step2.png" alt="" width="375"><figcaption><p>Pinning a vc</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Pinning a VC_Step2.png" alt="" width="188"><figcaption><p>Pinning a vc</p></figcaption></figure>
 
 </div>
 
 <div>
 
-<figure><img src="../.gitbook/assets/Pinning a VC_Step3.png" alt="" width="375"><figcaption><p>Pinning a VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Pinning a VC_Step3.png" alt="" width="188"><figcaption><p>Pinning a VC</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Pinning a VC_Step4.png" alt="" width="375"><figcaption><p>Pinning a VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Pinning a VC_Step4.png" alt="" width="188"><figcaption><p>Pinning a VC</p></figcaption></figure>
 
 </div>
 
@@ -631,29 +631,29 @@ There are two ways to activate the VC:
 
 * The first option is to click on the "Activate for online login" menu option by clicking on the quick access menu (...) of the card from the Home Page.
 * The second option is to click on the "Activate for online login" menu option by clicking on the quick access menu (...) of the card from the detailed view of the VC.
-* Upon clicking the "**Activate for online login**" option, a confirmation alert message will be prompted. Once permission is granted, the user will be directed to an OTP screen. After entering the correct OTP, the VC will be activated and projected on the screen with the same message.
+* A confirmation alert message will be prompted upon clicking the "Activate for online login" option. Once permission is granted, the user will be directed to an OTP screen. After entering the correct OTP, the VC will be activated and projected on the screen with the same message.
 
 <div>
 
-<figure><img src="../.gitbook/assets/Veridonia National ID VC Activation_Step1.png" alt="" width="375"><figcaption><p>Activating a VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Veridonia National ID VC Activation_Step1.png" alt="" width="188"><figcaption><p>Activating a VC</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Veridonia National ID VC Activation_Step2.png" alt="" width="375"><figcaption><p>Activating a VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Veridonia National ID VC Activation_Step2.png" alt="" width="188"><figcaption><p>Activating a VC</p></figcaption></figure>
 
 </div>
 
 <div>
 
-<figure><img src="../.gitbook/assets/Veridonia National ID VC Activation_Step3.png" alt="" width="563"><figcaption><p>Activating a VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Veridonia National ID VC Activation_Step3.png" alt="" width="188"><figcaption><p>Activating a VC</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Veridonia National ID VC Activation_Step4.png" alt="" width="563"><figcaption><p>Activating a VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Veridonia National ID VC Activation_Step4.png" alt="" width="188"><figcaption><p>Activating a VC</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Veridonia National ID VC Activation_Step5.png" alt="" width="563"><figcaption><p>Activating a VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Veridonia National ID VC Activation_Step5.png" alt="" width="188"><figcaption><p>Activating a VC</p></figcaption></figure>
 
 </div>
 
@@ -667,21 +667,21 @@ There are two ways to remove/delete a VC from the wallet:
 
 <div>
 
-<figure><img src="../.gitbook/assets/Deleting a VC_Step1.png" alt="" width="375"><figcaption><p>Deleting a VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Deleting a VC_Step1.png" alt="" width="188"><figcaption><p>Deleting a VC</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Deleting a VC_Step2.png" alt="" width="375"><figcaption><p>Deleting a VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Deleting a VC_Step2.png" alt="" width="188"><figcaption><p>Deleting a VC</p></figcaption></figure>
 
 </div>
 
 <div>
 
-<figure><img src="../.gitbook/assets/Deleting a VC_Step3.png" alt="" width="375"><figcaption><p>Deleting a VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Deleting a VC_Step3.png" alt="" width="188"><figcaption><p>Deleting a VC</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Deleting a VC_Step4.png" alt="" width="375"><figcaption><p>Deleting a VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Deleting a VC_Step4.png" alt="" width="188"><figcaption><p>Deleting a VC</p></figcaption></figure>
 
 </div>
 
@@ -691,21 +691,21 @@ Users can now search for a VC by providing a search string in the search bar. VC
 
 <div>
 
-<figure><img src="../.gitbook/assets/Search Step1.png" alt="" width="375"><figcaption><p>Search for a VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Search Step1.png" alt="" width="188"><figcaption><p>Search for a VC</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Search Step2.png" alt="" width="375"><figcaption><p>Search for a VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Search Step2.png" alt="" width="188"><figcaption><p>Search for a VC</p></figcaption></figure>
 
 </div>
 
 <div>
 
-<figure><img src="../.gitbook/assets/Search Step3.png" alt="" width="375"><figcaption><p>Search for a VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Search Step3.png" alt="" width="188"><figcaption><p>Search for a VC</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Search Step4.png" alt="" width="375"><figcaption><p>Search for a VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Search Step4.png" alt="" width="188"><figcaption><p>Search for a VC</p></figcaption></figure>
 
 </div>
 
@@ -722,37 +722,37 @@ To backup VCs, the user has to choose their preference for the cloud based on th
 
 ### Data backup - Android
 
-<figure><img src="../.gitbook/assets/Untitled design (1) (5).png" alt=""><figcaption><p>Data Backup on Android</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled design (1) (5).png" alt="" width="563"><figcaption><p>Data Backup on Android</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/Untitled design (11).png" alt=""><figcaption><p>Data Backup on Android</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled design (11).png" alt="" width="563"><figcaption><p>Data Backup on Android</p></figcaption></figure>
 
 ### Data backup- ios
 
 <div>
 
-<figure><img src="../.gitbook/assets/Data Backup_iOS_Step1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Data Backup_iOS_Step1.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Data Backup_iOS_Step2.png" alt=""><figcaption><p>Data backup on iOS</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Data Backup_iOS_Step2.png" alt="" width="188"><figcaption><p>Data backup on iOS</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Data Backup_iOS_Step3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Data Backup_iOS_Step3.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
 <div>
 
-<figure><img src="../.gitbook/assets/Data Backup_iOS_Step4.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Data Backup_iOS_Step4.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Data Backup_iOS_Step5.png" alt="" width="563"><figcaption><p>Data backup on iOS</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Data Backup_iOS_Step5.png" alt="" width="188"><figcaption><p>Data backup on iOS</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Data Backup_iOS_Step6.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Data Backup_iOS_Step6.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
@@ -768,8 +768,8 @@ To restore backed-up VCs, the user has to choose their preference of the cloud b
 
 ### Restore - Android
 
-<figure><img src="../.gitbook/assets/Untitled design (12).png" alt=""><figcaption><p>Restore on Android</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled design (12).png" alt="" width="563"><figcaption><p>Restore on Android</p></figcaption></figure>
 
 ### Restore - ios
 
-<figure><img src="../.gitbook/assets/Untitled design (1) (7).png" alt=""><figcaption><p>Restore on iOS</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Untitled design (1) (7).png" alt="" width="563"><figcaption><p>Restore on iOS</p></figcaption></figure>
