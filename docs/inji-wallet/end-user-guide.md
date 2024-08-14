@@ -238,7 +238,7 @@ Inji Wallet integrates with eSignet as an authorization layer to perform VC down
 
 <div>
 
-<figure><img src="../.gitbook/assets/Download StayProtected Insurance VC_Step10.png" alt="" width="188"><figcaption><p>Download insurance VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Download StayProtected Insurance VC_Step10.png" alt="" width="188"><figcaption><p>               </p></figcaption></figure>
 
  
 
@@ -260,7 +260,7 @@ Users can see all the details of the National ID in the detailed view. In additi
 
  
 
-<figure><img src="../.gitbook/assets/Detailed View of National ID VC_Step2.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Detailed View of National ID VC_Step2.png" alt="" width="188"><figcaption><p>Detailed view of national id</p></figcaption></figure>
 
 </div>
 
@@ -274,7 +274,7 @@ Users can see all the Insurance policy details in the detailed view along with t
 
  
 
-<figure><img src="../.gitbook/assets/Detailed View of Insurance VC_Step2.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Detailed View of Insurance VC_Step2.png" alt="" width="188"><figcaption><p>Detailed view of insurance VC</p></figcaption></figure>
 
 </div>
 
@@ -469,7 +469,7 @@ Let us understand the process of sharing credentials using an example and see th
 
  
 
-<figure><img src="../.gitbook/assets/Resident_Step11.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident_Step11.png" alt="" width="188"><figcaption><p>Share / share with selfie</p></figcaption></figure>
 
 </div>
 
