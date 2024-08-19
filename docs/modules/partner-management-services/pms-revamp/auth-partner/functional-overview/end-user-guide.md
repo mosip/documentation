@@ -37,7 +37,7 @@ You will have to use older Partner Admin interface, Yes! you read it correct! be
 
 1. Go to **Older PMP Interface** and click on **Upload CA Certificate** option on the left navigation pane.
 2. Select the Partner Domain.
-3. Choose the **Root certificate** to upload (only files with extensions as .cer or .pem).
+3. Choose the **Root CA Certificate** to upload (only files with extensions as .cer or .pem).
 4. Click Upload.
 5. Similarly, sub/intermediate CA certificate should be uploaded by following the above steps (1-4).
 
@@ -47,7 +47,7 @@ You will have to use older Partner Admin interface, Yes! you read it correct! be
 
 As Partner Admin you are required to ‘**Create Policy Group**’ and ‘**Create Policy(s)**’ which a ‘Partner’ will be able to select while self-registering on PMP.
 
-As an admin you will also have privilege to ‘**Approve Policy Request**’ when a Partner selects a Policy and it comes to you for approval, You can read more about this <mark style="color:red;">**here**</mark>.
+As an admin you will also have privilege to ‘**Approve Policy Request**’ when a Partner selects a Policy and it comes to you for approval, You can read more about this [**here**](end-user-guide.md#approve-policy-request).
 
 #### Create Policy group
 
@@ -98,6 +98,8 @@ Once you 'Create Policy' you also be required to activate it and it will reflect
 <figure><img src="../../../../../.gitbook/assets/pms_activate_auth_policy.png" alt=""><figcaption></figcaption></figure>
 
 ### Approve Policy Request
+
+When a Partner have chosen a 'Policy Group' and the 'Policy', an approval request will come to you and  you can approve or reject a ‘**Policy Request**’ using ‘**Request Policy**’ screen.
 
 When a Partner have chosen a 'Policy Group' and the 'Policy'an approval request will come to you and you can approve or reject a ‘**Policy Request**’ using ‘**Request Policy**’ screen.
 
@@ -195,7 +197,15 @@ There is also an option to download initially uploaded CA signed certificate and
 
 #### Re-Upload Certificate
 
-Content to be updated..
+Reuploading certifacte is required in cases when MOSIP Signed Certificate gets expired after one year.&#x20;
+
+{% hint style="info" %}
+**Note:**
+
+'MOSIP Signed Certifcate has a validity of 1 year from the time of Partner Certificate Upload.&#x20;
+{% endhint %}
+
+You must ensure that you re- upload the partner certificate again so that new MOSIP signed certificate can be generated and other functionalities such as Request Policy, Authentication Policies can function.
 
 ### Request Policy
 
