@@ -72,15 +72,15 @@ On successful creation of **Policy Group(s)**, Polices can be created under a re
 **MOSIP** supports two types of policies, i.e. **Auth Policy** and **Datashare Policy**. Only **Auth Policy** is used by **Authentication Partners**.
 {% endhint %}
 
-1. Click on **Policy** > **Policy Group** on the left navigation pane, The existing policy groups are listed on the screen and the new ones can be created. You can also search or filter any data pertaining to policy groups, use the filter menu.\
-   <mark style="color:red;">**\<image>**</mark>
+1. Click on **Policy** > **Policy Group** on the left navigation pane, The existing policy groups are listed on the screen and the new ones can be created. You can also search or filter any data pertaining to policy groups, use the filter menu.
+
+<figure><img src="../../../../../.gitbook/assets/pms_create_auth_policy.png" alt=""><figcaption></figcaption></figure>
+
 2. Click **Auth Policy** > **Create Policy**.
 3. Add the **Name** and **Description**.
 4. Select the **Policy Group** from the dropdown, (Select the **Policy Group - Auth Policy**) here under which this Policy you are creating will be added.
-5. Add the <mark style="color:red;">**Policies Data**</mark>.
+5. Add the **Policies Data**.
 6. Click Save.
-
-<figure><img src="../../../../../.gitbook/assets/pms_create_auth_policy.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 **Note**:
@@ -135,12 +135,14 @@ To be able to access the services by PMP and to validate that the partner is fro
 
 <figure><img src="../../../../../_images/pms_register_as_partner.png" alt=""><figcaption></figcaption></figure>
 
-2. Click on Register, a popup comes up which asks you to '**Choose a Policy Group**' and seeks you to '**Agree to Terms and Conditions**' before you can be considered as 'Auth Partner.
-3. Select the relevant/applicable **Policy Group** on **Select Policy Group** popup using **Policy Group** dropdown which then will ask you read through ‘Terms and Condition’ and having carefully read through it you can agree and accept it.
+2. <mark style="color:red;">**Click on Register**</mark>, a popup comes up which asks you to '**Choose a Policy Group**' and seeks you to '**Agree to Terms and Conditions**' before you can be considered as 'Auth Partner.
+3. Select the relevant/applicable **Policy Group** on **Select Policy Group** popup using **Policy Group** dropdown by reading through policy group description in dropdown.
 
 <figure><img src="../../../../../.gitbook/assets/pms_select_policy_group.png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../../../../.gitbook/assets/pms_select_policy_group_2.png" alt=""><figcaption></figcaption></figure>
+
+4. This will ask you to read through ‘**Terms and Condition**’ and having carefully read through it you can agree and accept it.
 
 <figure><img src="../../../../../.gitbook/assets/pms_self_register_terms_and_condition.png" alt=""><figcaption></figcaption></figure>
 
@@ -155,7 +157,7 @@ To be able to access the services by PMP and to validate that the partner is fro
 
 ### CA Signed Partner Certificate Upload / Download or Re-Upload
 
-Once registered as a process of Partner onboarding onto PMP after successful registration, user is required to perform upload CA signed Partner Certificate on behalf of their organisation which would be used to build a trust store in MOSIP to cryptographically validate that they are from a trusted organisation to perform authentication of citizens. Also this certificate is used to encrypt the response shared in e-KYC.
+Once registered, as a process of Partner onboarding onto PMP after successful registration, user is required to perform upload CA signed Partner Certificate on behalf of their organisation which would be used to build a trust store in MOSIP to cryptographically validate that they are from a trusted organisation to perform authentication of citizens. Also this certificate is used to encrypt the response shared in e-KYC.
 
 {% hint style="info" %}
 **Tips**:
@@ -169,9 +171,15 @@ Important:
 Before a Partner can upload a ‘CA Signed Certificate’ it is prerequisite that the ‘Partner Admin’ should have already had uploaded the **Root CA** and **Sub CA** certificates (From older PMP interface).
 {% endhint %}
 
+User is now in [**Home Page/Dashboard**](end-user-guide.md#interface-overview) where the following features are provided to Auth Partner: 1) Partner Certificate, 2) Policies and 3) Authentication Services: OIDC Client and API Key generation.
+
+These features can also be accessed by clicking on side panel (in the form of icons) or clicking on the hamburger menu <img src="../../../../../.gitbook/assets/pms_hamburger_menu.png" alt="" data-size="line"> on the top left which is available across all screens of PMP to help user to easily navigate.
+
 #### To Upload CA signed Certificate
 
 1. Go to Authentication Partner (new UI) > Dashboard, Click on Partner Certificate option, User can upload the partner certificate signed by CA by clicking on the upload button.
+
+<figure><img src="../../../../../.gitbook/assets/pms_dashboard.png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../../../../.gitbook/assets/pms_upload_partner_vertificate_1.png" alt=""><figcaption></figcaption></figure>
 
@@ -209,7 +217,7 @@ You must ensure that you re- upload the partner certificate again so that new MO
 
 ### Request Policy
 
-**Pre-Requisite**: **Policy Manager** must have created a **Policy Group** and then created a **Policy** within it for the Partner to be able to ‘**Request a Policy**’.
+**Pre-Requisite**: **Policy Manager** must have created a [**Policy Group**](end-user-guide.md#create-policy-group) and then created a [**Policy**](end-user-guide.md#create-an-auth-policy) within it for the Partner to be able to ‘**Request a Policy**’.
 
 #### To Request a Policy
 
@@ -244,7 +252,7 @@ After the partner has selected a policy group, uploaded partner certificate, req
 
 <figure><img src="../../../../../.gitbook/assets/OIDC_client_creation_1.png" alt=""><figcaption></figcaption></figure>
 
-* Once the details are in Activated status, user will be able to view the OIDC Client ID generated, by clicking on the eye icon ( ). clicking on the OIDC Client ID eye icon, opens a popup window which displays the Client ID and a copy button.
+* Once the details are in Activated status, user will be able to view the OIDC Client ID generated, by clicking on the eye icon ( <img src="../../../../../.gitbook/assets/OIDC_client_creation_2_eye_icon.png" alt="" data-size="line">). clicking on the OIDC Client ID eye icon, opens a popup window which displays the Client ID and a copy button.
 * This Client ID can then be consumed in eSignet to perform authentication. Client ID can be accessed by clicking on eye icon
 * User can utilize this OIDC Client ID to perform eSignet based authentication of citizens
 
@@ -300,7 +308,7 @@ The PMP Interface 'Card View' for 'Auth Partner' presents you with following fea
 
 Card view presentation for each functionality with brief description to help you understand the services offered in Partner User Dashboard:
 
-After successfully registering you can access the Home Page / Dashboard and based on your Partner Type you will be able to view the features and functionalities in the dashboard.
+After successfully registering you can access the Home Page / Dashboard. You will be able to view the features and functionalities on the dashboardand based on your Partner Type.
 
 Note: You can access the partner dashboard only when you are duly registered and have selected the 'Policy Group'.
 
@@ -323,7 +331,7 @@ Open image-20240719-134912.png image-20240719-134912.png
 * Login to PMP and Go to Dashboard.
 * Click on Partner Certificate option in the dashboard/ side panel / hamburger menu, you will be redirected to list view of partner certificate.
 
-\<Image> Screenshot of dashboard.
+<figure><img src="../../../../../.gitbook/assets/pms_dashboard.png" alt=""><figcaption></figcaption></figure>
 
 * Click on Re-Upload button of Authentication Partner Type.
 

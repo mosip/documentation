@@ -6,7 +6,7 @@ Partner Management Portal (PMP) is a web based application that is designed to f
 
 We are undertaking a comprehensive overhaul of our existing Partner Management Portal (PMP). This revamp includes introducing a suite of new features and significantly enhancing the current ones. Our aim is to improve usability and elevate the overall user experience (UX). Also incorporating tech stack upgrade and realigning our focus to bring user centered design to PMP, we are committed to making the PMP more intuitive, efficient, and aligned with our partners' evolving needs.
 
-You can refer to the comprehensive documentation on our current releaseas below:
+You can refer to the comprehensive documentation as below:
 
 * [PMS - Revamp](modules/partner-management-services/pms-revamp/) :  Documentation that includes features from new UI
 * [PMS - Legacy](modules/partner-management-services/pms-existing/): Existing documentation
