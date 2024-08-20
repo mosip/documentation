@@ -36,4 +36,4 @@ We are reconstructing the entire PMS ground up and our upcoming releases is goin
 
 The exiting PMS will be available during the overhaul and new system is to gradually take over in phase wise releases of the system, ensuring thereby a smooth and seamless transition. This means existing system will continue to work and be available during the course undergoing rebuilding process.
 
-Moving further from the current release with which we bring for you a renewed 'Auth Partner', our upcoming releases will focus on working afreash on other Partner Type(s)  which will include... PT1, PT2.
+Moving further from the current release with which we bring for you a renewed 'Auth Partner', our upcoming releases will focus on working afreash on other Partner Type(s)  which will include... <mark style="color:red;">**PT1, PT2**</mark>.
