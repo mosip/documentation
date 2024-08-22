@@ -57,7 +57,7 @@ The following table outlines the tested and certified compatibility of Inji Cert
 | **eSignet**     | [**v1.4.0**](https://github.com/mosip/esignet/tree/v1.4.0)                  |
 | **Sunbird C**   | [**v2.0.0**](https://github.com/Sunbird-RC/sunbird-rc-core/tree/v2.0.0)     |
 | **Key Manager** | [**v1.3.0-beta.1**](https://github.com/mosip/keymanager/tree/v1.3.0-beta.1) |
-| **Commons**     | [**v1.3.0-B1**](https://github.com/mosip/commons/tree/v1.3.0-beta.1)        |
+| **Commons**     | [**v1.3.0-beta.1**](https://github.com/mosip/commons/tree/v1.3.0-beta.1)    |
 
 ### **Known Issues**
 
