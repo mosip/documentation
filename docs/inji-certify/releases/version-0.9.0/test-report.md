@@ -96,4 +96,23 @@ The various metrics that assist in test tracking and efficiency are as follows:
 | Artifactory-certify    | mosipqa/artifactory-server:0.9.0-INJI |                 |                                   |                                                                                                                    |
 | eSignet                | eSignet-1.4.0                         |                 |                                   |                                                                                                                    |
 
+## Stories Tested
+
+<table><thead><tr><th>Details</th><th width="134">Stories Tested</th><th>Test Cases</th><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td>Total</td><td>Total</td><td>With Stories</td><td>w/o Stories</td><td>Pass</td><td>Fail</td><td>Not tested</td><td></td></tr><tr><td>Inji-Certify</td><td>4</td><td>311</td><td>311</td><td>0</td><td>305</td><td>6</td><td>0</td></tr><tr><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td></tr><tr><td>Total</td><td>4</td><td>311</td><td>311</td><td>0</td><td>305</td><td>6</td><td>0</td></tr></tbody></table>
+
+<table data-header-hidden><thead><tr><th width="696">Functional Testing - Stories Verified : 4</th></tr></thead><tbody><tr><td>Test cases : 311      Passed : 305     Failed : 6    Skipped : 0</td></tr><tr><td>Test Rate : 100%     With Pass Rate : 98%</td></tr></tbody></table>
+
+## API + Docker compose testing
+
+<table><thead><tr><th width="332">API +Docker compose testing</th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td>Story</td><td>Test Results</td><td></td><td></td><td></td></tr><tr><td>INJICERT-41</td><td>85</td><td>83</td><td>2</td><td>0</td></tr><tr><td>INJICERT-13</td><td>72</td><td>71</td><td>1</td><td>0</td></tr><tr><td>INJICERT_186</td><td>72</td><td>70</td><td>2</td><td>0</td></tr><tr><td>INJICERT-189</td><td>82</td><td>81</td><td>1</td><td>0</td></tr></tbody></table>
+
+## Browser Versions Used For Testing
+
+| Browser Versions Used For Testing |
+| --------------------------------- |
+| chrome: Version 127.0.6533.89     |
+| Mac : version 16.6                |
+
+
+
 Git hub link for the xls file is **here**.

@@ -4,7 +4,7 @@
 
 **Support:** Developer Release
 
-**Release Date:** Coming Soon
+**Release Date:** 22nd August, 2024
 
 ### **Overview**
 
@@ -31,7 +31,7 @@ Inji Certify continues to innovate in the realm of verifiable credentials (VCs) 
 
 ### **Testing and Integration Note:**
 
-For detailed steps click here to view the [**ReadMe**](https://github.com/mosip/inji-certify/tree/release-0.9.x) file.
+For detailed steps click here to view the [**ReadMe**](https://github.com/mosip/inji-certify/blob/v0.9.0/README.md) file.
 
 1. **Setup:** Configure InjiWeb and Mimoto in your local environment.
 2. **Issuer Configuration:** Add an issuer in Mimoto with the authorization\_endpoint, credential\_endpoint and .well-known properties pointing to the installed eSignet and Certify services.
@@ -52,12 +52,12 @@ For detailed steps click here to view the [**ReadMe**](https://github.com/mosip/
 
 The following table outlines the tested and certified compatibility of Inji Certify 0.9.0 with other modules.
 
-| **Module**      | **Version**                                                                         |
-| --------------- | ----------------------------------------------------------------------------------- |
-| **eSignet**     | [**v1.4.0**](https://github.com/mosip/esignet/releases/tag/v1.4.0)                  |
-| **Sunbird C**   | [**v2.0.0**](https://github.com/Sunbird-RC/sunbird-rc-core/releases/tag/v2.0.0-rc3) |
-| **Key Manager** | [**v1.3.0-B1**](https://github.com/mosip/keymanager/tree/release-1.3.x)             |
-| **Commons**     | [**v1.3.0-B1**](https://github.com/mosip/commons/tree/v1.3.0-beta.1)                |
+| **Module**      | **Version**                                                             |
+| --------------- | ----------------------------------------------------------------------- |
+| **eSignet**     | [**v1.4.0**](https://github.com/mosip/esignet/tree/v1.4.0)              |
+| **Sunbird C**   | [**v2.0.0**](https://github.com/Sunbird-RC/sunbird-rc-core/tree/v2.0.0) |
+| **Key Manager** | [**v1.3.0-B1**](https://github.com/mosip/keymanager/tree/v1.3.0-beta.1) |
+| **Commons**     | [**v1.3.0-B1**](https://github.com/mosip/commons/tree/v1.3.0-beta.1)    |
 
 ### **Known Issues**
 
