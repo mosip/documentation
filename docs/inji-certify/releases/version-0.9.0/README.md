@@ -41,12 +41,12 @@ For detailed steps click here to view the [**ReadMe**](https://github.com/mosip/
 
 ### **Repositories: Released/Dependent**
 
-| **Repositories**              | **Tags: Released/Dependent** |
-| ----------------------------- | ---------------------------- |
-| **Inji Certify**              | v0.9.0                       |
-| **inji-config**               | v0.2.0                       |
-| **Digital Credential Plugin** | v0.2.0                       |
-| **Artifactory Server**        | v0.9.0                       |
+| **Repositories**              | **Tags: Released/Dependent**                                                      |
+| ----------------------------- | --------------------------------------------------------------------------------- |
+| **Inji Certify**              | [**v0.9.0**](https://github.com/mosip/inji-certify/tree/v0.9.0)                   |
+| **inji-config**               | [**v0.2.0**](https://github.com/mosip/inji-config/tree/v0.2.0)                    |
+| **Digital Credential Plugin** | [**v0.2.0**](https://github.com/mosip/digital-credential-plugins/tree/v0.2.0)     |
+| **Artifactory Server**        | [**v0.9.0-INJI**](https://github.com/mosip/artifactory-ref-impl/tree/v0.9.0-INJI) |
 
 ### **Compatible modules:**
 
@@ -57,7 +57,7 @@ The following table outlines the tested and certified compatibility of Inji Cert
 | **eSignet**     | [**v1.4.0**](https://github.com/mosip/esignet/releases/tag/v1.4.0)                  |
 | **Sunbird C**   | [**v2.0.0**](https://github.com/Sunbird-RC/sunbird-rc-core/releases/tag/v2.0.0-rc3) |
 | **Key Manager** | [**v1.3.0-B1**](https://github.com/mosip/keymanager/tree/release-1.3.x)             |
-| **Commons**     | [**v1.3.0-B1**](https://github.com/mosip/commons/tree/release-1.3.x)                |
+| **Commons**     | [**v1.3.0-B1**](https://github.com/mosip/commons/tree/v1.3.0-beta.1)                |
 
 ### **Known Issues**
 
@@ -89,6 +89,6 @@ Inji Certify 0.9.0 represents a significant milestone in the evolution of the mo
 
 ### **Documentation**
 
-* [Feature Documentation](../functional-overview/features.md)
-* QA Report
-* [Local Setup](../build-and-deploy/local-setup.md)
+* [Feature Documentation](../../functional-overview/features.md)
+* [QA Report](test-report.md)
+* [Local Setup](../../build-and-deploy/local-setup.md)
