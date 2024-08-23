@@ -22,37 +22,6 @@ Synergy represents our stable environment, where the most recently released vers
 
 For quick access to environment related resources, please visit the provided[ link](https://synergy.mosip.net/).
 
-### **Additional Resources**
-
-To gain a deeper understanding of the Inji ecosystem including Inji Wallet, Inji Verify, Inji Web, and the Inji Certify backend service you can watch the video titled '[**Inji Stack End To End Demo**](https://www.youtube.com/watch?v=p6oro5MYtHc)**'**. This video provides a visual walkthrough of the features and a persona-based presentation for QR code-based verifiable credential (VC) verification.
-
-{% embed url="https://youtu.be/p6oro5MYtHc?si=8P8yscLHpy-SZKQz" %}
-
-#### Key Areas Covered in the Video:
-
-{% tabs %}
-{% tab title="Inji Wallet" %}
-* How users manage and share their credentials with BLE support.
-* User interactions, including downloading, sharing, and scanning QR code-based verifiable credentials(VC).
-{% endtab %}
-
-{% tab title="Inji Verify" %}
-* The verification process for credentials includes validating a user's credentials by scanning or uploading of QR Code.
-{% endtab %}
-
-{% tab title="Inji Web" %}
-* The user experience on the web portal focuses on how credentials are verified through an online interface.
-* Integration with other Inji components for seamless verification.
-{% endtab %}
-
-{% tab title="Inji Certify" %}
-* The backend processes that power the entire Inji Stack.
-* How credentials are issued, managed, and stored securely.&#x20;
-{% endtab %}
-{% endtabs %}
-
-This [**video** ](https://www.youtube.com/watch?v=p6oro5MYtHc)will help you get a quick and comprehensive understanding of how Inji Stack operates and how each component works together to facilitate secure and efficient credential verification. You can access this video for further insights and a practical demonstration.
-
 ### **Feedback and Support**
 
 If you require any assistance or encounter any issues during the testing and integration process, kindly reach out to us through the support mechanism provided below.
