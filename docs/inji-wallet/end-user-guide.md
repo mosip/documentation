@@ -111,6 +111,20 @@ The below screenshots explain the next steps after you get access.
 
 </div>
 
+<div>
+
+<figure><img src="../.gitbook/assets/First Launch of the App_Step15.png" alt="" width="188"><figcaption></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/First Launch of the App_Step13.png" alt="" width="188"><figcaption><p>First launch on android device</p></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/First Launch of the App_Step14.png" alt="" width="188"><figcaption></figcaption></figure>
+
+</div>
+
 ## Downloading VC
 
 Inji Wallet integrates with eSignet as an authorization layer to perform VC downloads based on OpenID4VCI standards. Let us understand how to download a National ID VC and an Insurance VC into the Mobile Wallet through the below sections:
@@ -256,7 +270,7 @@ Users can see all the details of the National ID in the detailed view. In additi
 
 <div>
 
-<figure><img src="../.gitbook/assets/Detailed View of National ID VC_Step1.png" alt="" width="188"><figcaption><p>Detailed view of national id</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Detailed View of National ID VC_Step1.png" alt="" width="188"><figcaption><p>Detailed view of National ID</p></figcaption></figure>
 
  
 
@@ -607,7 +621,7 @@ After clicking on the ellipsis button on the downloaded VC, a button will appear
 
 <div>
 
-<figure><img src="../.gitbook/assets/Pinning a VC_Step1.png" alt="" width="188"><figcaption><p>Pinning a vc</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Pinning a VC_Step1.png" alt="" width="188"><figcaption><p>Pinning a VC</p></figcaption></figure>
 
  
 
