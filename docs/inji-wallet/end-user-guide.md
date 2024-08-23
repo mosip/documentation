@@ -124,10 +124,10 @@ Inji Wallet integrates with eSignet as an authorization layer to perform VC down
 
 **Download credentials using UIN / VID**:
 
-* On the home page, a plus "+" symbol will display the list of issuers available to download VCs from.
+* On the home page, a plus "+" symbol will display the list of issuers from which you can download VCs.
 * Select the issuer that states **National Identity Department** and choose a credential type (MOSIP National ID). Once clicked, the browser will open and take you to the eSignet page.
 * On the authorization page (eSignet page), the user has to enter the UIN / VID and provide the OTP sent to the registered mobile number/email.
-* Upon successful validation of OTP, the user will be taken back to the application, landing on the loading screen. After the download process is completed, the user will be returned to the home page, where the Downloaded Credential will be available.
+* Upon successful validation of OTP, the user will be taken back to the application and land on the loading screen. After the download process is completed, the user will be returned to the home page, where the Downloaded Credential will be available.
 
 <div>
 
@@ -135,7 +135,7 @@ Inji Wallet integrates with eSignet as an authorization layer to perform VC down
 
  
 
-<figure><img src="../.gitbook/assets/Download National ID VC_Step2.png" alt="" width="188"><figcaption><p>Download national id</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Download National ID VC_Step2.png" alt="" width="188"><figcaption><p>Download National ID</p></figcaption></figure>
 
  
 
@@ -149,7 +149,7 @@ Inji Wallet integrates with eSignet as an authorization layer to perform VC down
 
  
 
-<figure><img src="../.gitbook/assets/Download National ID VC_Step5.png" alt="" width="188"><figcaption><p>Download national id</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Download National ID VC_Step5.png" alt="" width="188"><figcaption><p>Download National ID</p></figcaption></figure>
 
  
 
@@ -163,7 +163,7 @@ Inji Wallet integrates with eSignet as an authorization layer to perform VC down
 
  
 
-<figure><img src="../.gitbook/assets/Download National ID VC_Step8.png" alt="" width="188"><figcaption><p>Download national id</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Download National ID VC_Step8.png" alt="" width="188"><figcaption><p>Download National ID</p></figcaption></figure>
 
  
 
@@ -177,7 +177,7 @@ Inji Wallet integrates with eSignet as an authorization layer to perform VC down
 
  
 
-<figure><img src="../.gitbook/assets/Download National ID VC_Step11.png" alt="" width="188"><figcaption><p>Download national id</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Download National ID VC_Step11.png" alt="" width="188"><figcaption><p>Download National ID</p></figcaption></figure>
 
  
 
@@ -189,10 +189,10 @@ Inji Wallet integrates with eSignet as an authorization layer to perform VC down
 
 **Download credentials using KBI:**
 
-* On the home page, a plus "+" symbol will display the list of issuers available to download VCs from.
+* A plus "+" symbol on the home page will display the list of issuers from which you can download VCs.
 * Select the issuer that states **Veridonia Insurance Company** and choose a credential type (Health Insurance, Life Insurance). Once clicked, the browser will open and take you to the eSignet page.
 * On the authorization page (eSignet page), the user has to enter the Policy Number, Full Name, and Date Of Birth(D.O.B).
-* Upon successful validation, the user will return to the application, landing on the loading screen. Following the completion of the download process, the user will be returned to the home page, where the Downloaded Credential will be available.
+* Upon successful validation, the user will return to the application and land on the loading screen. Following the completion of the download process, the user will be returned to the home page, where the Downloaded Credential will be available.
 
 <div>
 
@@ -238,7 +238,7 @@ Inji Wallet integrates with eSignet as an authorization layer to perform VC down
 
 <div>
 
-<figure><img src="../.gitbook/assets/Download StayProtected Insurance VC_Step10.png" alt="" width="188"><figcaption><p>               </p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Download StayProtected Insurance VC_Step10.png" alt="" width="188"><figcaption><p>            Download insurance VC   </p></figcaption></figure>
 
  
 
@@ -260,7 +260,7 @@ Users can see all the details of the National ID in the detailed view. In additi
 
  
 
-<figure><img src="../.gitbook/assets/Detailed View of National ID VC_Step2.png" alt="" width="188"><figcaption><p>Detailed view of national id</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Detailed View of National ID VC_Step2.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
@@ -274,7 +274,7 @@ Users can see all the Insurance policy details in the detailed view along with t
 
  
 
-<figure><img src="../.gitbook/assets/Detailed View of Insurance VC_Step2.png" alt="" width="188"><figcaption><p>Detailed view of insurance VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Detailed View of Insurance VC_Step2.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
@@ -308,7 +308,7 @@ Users can view the activity logs of a VC from the Home Page or the detailed view
 
 ### Sharing Credentials
 
-Prerequisites:
+## Pre-requisites
 
 * Two or more devices with Inji Wallet installed are required for sharing credentials. The relying party's phone should be an Android device.
 * All required permissions like Bluetooth, location, and camera access are enabled on both devices.
@@ -338,7 +338,7 @@ Let us understand the process of sharing credentials using an example and see th
 
  
 
-<figure><img src="../.gitbook/assets/Resident_Step2.png" alt="" width="188"><figcaption><p>Share option in nav bar</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident_Step2.png" alt="" width="188"><figcaption><p>On Resident's wallet</p></figcaption></figure>
 
  
 
@@ -352,7 +352,7 @@ Let us understand the process of sharing credentials using an example and see th
 
  
 
-<figure><img src="../.gitbook/assets/Resident_Step5.png" alt="" width="188"><figcaption><p>Share option in nav bar</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident_Step5.png" alt="" width="188"><figcaption><p>On Resident's wallet</p></figcaption></figure>
 
  
 
@@ -366,7 +366,7 @@ Let us understand the process of sharing credentials using an example and see th
 
  
 
-<figure><img src="../.gitbook/assets/Resident_Step8.png" alt="" width="188"><figcaption><p>Share option in nav bar</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident_Step8.png" alt="" width="188"><figcaption><p>On Resident's wallet</p></figcaption></figure>
 
  
 
@@ -374,7 +374,7 @@ Let us understand the process of sharing credentials using an example and see th
 
 </div>
 
-<figure><img src="../.gitbook/assets/Resident_Step10.png" alt="" width="188"><figcaption><p>Share option in nav bar</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident_Step10.png" alt="" width="188"><figcaption><p>On Resident's wallet</p></figcaption></figure>
 
 **On the Relying Party's phone**
 
@@ -389,7 +389,7 @@ Let us understand the process of sharing credentials using an example and see th
 
  
 
-<figure><img src="../.gitbook/assets/Relying Party_Step2.png" alt="" width="188"><figcaption><p>Share option on relying party's phone</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Relying Party_Step2.png" alt="" width="188"><figcaption><p>Relying party's device</p></figcaption></figure>
 
  
 
@@ -403,7 +403,7 @@ Let us understand the process of sharing credentials using an example and see th
 
  
 
-<figure><img src="../.gitbook/assets/Relying Party_Step5.png" alt="" width="188"><figcaption><p>Share option on Relying party's phone</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Relying Party_Step5.png" alt="" width="188"><figcaption><p>Relying party's device</p></figcaption></figure>
 
  
 
@@ -427,7 +427,7 @@ Let us understand the process of sharing credentials using an example and see th
 
  
 
-<figure><img src="../.gitbook/assets/Resident_Step2 (1).png" alt="" width="188"><figcaption><p>Share / share with selfie</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident_Step2 (1).png" alt="" width="188"><figcaption><p>On Resident's wallet</p></figcaption></figure>
 
  
 
@@ -441,7 +441,7 @@ Let us understand the process of sharing credentials using an example and see th
 
  
 
-<figure><img src="../.gitbook/assets/Resident_Step5 (1).png" alt="" width="188"><figcaption><p>Share / share with selfie</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident_Step5 (1).png" alt="" width="188"><figcaption><p>On Resident's wallet</p></figcaption></figure>
 
  
 
@@ -455,7 +455,7 @@ Let us understand the process of sharing credentials using an example and see th
 
  
 
-<figure><img src="../.gitbook/assets/Resident_Step8 (1).png" alt="" width="188"><figcaption><p>Share / share with selfie</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident_Step8 (1).png" alt="" width="188"><figcaption><p>On Resident's wallet</p></figcaption></figure>
 
  
 
@@ -465,11 +465,11 @@ Let us understand the process of sharing credentials using an example and see th
 
 <div>
 
-<figure><img src="../.gitbook/assets/Resident_Step10 (1).png" alt="" width="188"><figcaption><p>   Share / share with selfie</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident_Step10 (1).png" alt="" width="188"><figcaption><p>  On Resident's wallet</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Resident_Step11.png" alt="" width="188"><figcaption><p>Share / share with selfie</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident_Step11.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
@@ -486,7 +486,7 @@ Let us understand the process of sharing credentials using an example and see th
 
  
 
-<figure><img src="../.gitbook/assets/Relying Party_Step2 (1).png" alt="" width="188"><figcaption><p>Sharing on relying party's phone</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Relying Party_Step2 (1).png" alt="" width="188"><figcaption><p>Relying party's device</p></figcaption></figure>
 
  
 
@@ -500,7 +500,7 @@ Let us understand the process of sharing credentials using an example and see th
 
  
 
-<figure><img src="../.gitbook/assets/Relying Party_Step5 (1).png" alt="" width="188"><figcaption><p>Sharing on relying party's phone</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Relying Party_Step5 (1).png" alt="" width="188"><figcaption><p>Relying party's device</p></figcaption></figure>
 
  
 
@@ -508,7 +508,7 @@ Let us understand the process of sharing credentials using an example and see th
 
 </div>
 
-<figure><img src="../.gitbook/assets/Relying Party_Step7 (1).png" alt="" width="188"><figcaption><p>Sharing on relying party's phone</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Relying Party_Step7 (1).png" alt="" width="188"><figcaption><p>Relying party's device</p></figcaption></figure>
 
 ### **Share with a selfie from VC Detailed View Quick Access menu**
 
@@ -526,7 +526,7 @@ Let us understand the process of sharing credentials using an example and see th
 
  
 
-<figure><img src="../.gitbook/assets/Resident App_Step2.png" alt="" width="188"><figcaption><p>Share with selfie <strong>on</strong> resident's phone</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident App_Step2.png" alt="" width="188"><figcaption><p>On Resident's wallet</p></figcaption></figure>
 
  
 
@@ -540,7 +540,7 @@ Let us understand the process of sharing credentials using an example and see th
 
  
 
-<figure><img src="../.gitbook/assets/Resident App_Step5.png" alt="" width="188"><figcaption><p>Share with selfie <strong>on</strong> resident's phone</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident App_Step5.png" alt="" width="188"><figcaption><p>On Resident's wallet</p></figcaption></figure>
 
  
 
@@ -554,7 +554,7 @@ Let us understand the process of sharing credentials using an example and see th
 
  
 
-<figure><img src="../.gitbook/assets/Resident App_Step8.png" alt="" width="188"><figcaption><p>Share with selfie <strong>on</strong> resident's phone</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident App_Step8.png" alt="" width="188"><figcaption><p>On Resident's wallet</p></figcaption></figure>
 
  
 
@@ -562,7 +562,7 @@ Let us understand the process of sharing credentials using an example and see th
 
 </div>
 
-<figure><img src="../.gitbook/assets/Resident App_Step10.png" alt="" width="188"><figcaption><p>Share with selfie <strong>on</strong> resident's phone</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Resident App_Step10.png" alt="" width="188"><figcaption><p>On Resident's wallet</p></figcaption></figure>
 
 **On the Relying Party's phone:**
 
@@ -577,7 +577,7 @@ Let us understand the process of sharing credentials using an example and see th
 
  
 
-<figure><img src="../.gitbook/assets/Relying Party_Step2 (2).png" alt="" width="188"><figcaption><p>Share with selfie on relying party's phone</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Relying Party_Step2 (2).png" alt="" width="188"><figcaption><p>Relying party's device</p></figcaption></figure>
 
  
 
@@ -591,7 +591,7 @@ Let us understand the process of sharing credentials using an example and see th
 
  
 
-<figure><img src="../.gitbook/assets/Relying Party_Step5 (2).png" alt="" width="188"><figcaption><p>Share with selfie on relying party's phone</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Relying Party_Step5 (2).png" alt="" width="188"><figcaption><p>Relying party's device</p></figcaption></figure>
 
  
 
@@ -599,7 +599,7 @@ Let us understand the process of sharing credentials using an example and see th
 
 </div>
 
-<figure><img src="../.gitbook/assets/Relying Party_Step6 (2).png" alt="" width="188"><figcaption><p>Share with selfie on relying party's phone</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Relying Party_Step6 (2).png" alt="" width="188"><figcaption><p>Relying party's device</p></figcaption></figure>
 
 ### Pinning a VC
 
@@ -611,7 +611,7 @@ After clicking on the ellipsis button on the downloaded VC, a button will appear
 
  
 
-<figure><img src="../.gitbook/assets/Pinning a VC_Step2.png" alt="" width="188"><figcaption><p>Pinning a vc</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Pinning a VC_Step2.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
@@ -621,7 +621,7 @@ After clicking on the ellipsis button on the downloaded VC, a button will appear
 
  
 
-<figure><img src="../.gitbook/assets/Pinning a VC_Step4.png" alt="" width="188"><figcaption><p>Pinning a VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Pinning a VC_Step4.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
@@ -639,13 +639,13 @@ There are two ways to activate the VC:
 
  
 
-<figure><img src="../.gitbook/assets/Veridonia National ID VC Activation_Step2.png" alt="" width="188"><figcaption><p>Activating a VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Veridonia National ID VC Activation_Step2.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
 <div>
 
-<figure><img src="../.gitbook/assets/Veridonia National ID VC Activation_Step3.png" alt="" width="188"><figcaption><p>Activating a VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Veridonia National ID VC Activation_Step3.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
@@ -653,7 +653,7 @@ There are two ways to activate the VC:
 
  
 
-<figure><img src="../.gitbook/assets/Veridonia National ID VC Activation_Step5.png" alt="" width="188"><figcaption><p>Activating a VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Veridonia National ID VC Activation_Step5.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
@@ -671,7 +671,7 @@ There are two ways to remove/delete a VC from the wallet:
 
  
 
-<figure><img src="../.gitbook/assets/Deleting a VC_Step2.png" alt="" width="188"><figcaption><p>Deleting a VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Deleting a VC_Step2.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
@@ -681,7 +681,7 @@ There are two ways to remove/delete a VC from the wallet:
 
  
 
-<figure><img src="../.gitbook/assets/Deleting a VC_Step4.png" alt="" width="188"><figcaption><p>Deleting a VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Deleting a VC_Step4.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
@@ -695,7 +695,7 @@ Users can now search for a VC by providing a search string in the search bar. VC
 
  
 
-<figure><img src="../.gitbook/assets/Search Step2.png" alt="" width="188"><figcaption><p>Search for a VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Search Step2.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
@@ -705,7 +705,7 @@ Users can now search for a VC by providing a search string in the search bar. VC
 
  
 
-<figure><img src="../.gitbook/assets/Search Step4.png" alt="" width="188"><figcaption><p>Search for a VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Search Step4.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
