@@ -48,7 +48,7 @@ For detailed steps click here to view the [**ReadMe**](https://github.com/mosip/
 | **Digital Credential Plugin** | [**v0.2.0**](https://github.com/mosip/digital-credential-plugins/tree/v0.2.0)     |
 | **Artifactory Server**        | [**v0.9.0-INJI**](https://github.com/mosip/artifactory-ref-impl/tree/v0.9.0-INJI) |
 
-### **Compatible modules:**
+### **Compatible Modules:**
 
 The following table outlines the tested and certified compatibility of Inji Certify 0.9.0 with other modules.
 
