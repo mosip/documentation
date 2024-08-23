@@ -619,25 +619,9 @@ Let us understand the process of sharing credentials using an example and see th
 
 After clicking on the ellipsis button on the downloaded VC, a button will appear allowing for the VC to be pinned. Selecting this option will pin the specific VC to the top of the screen.
 
-<div>
+<figure><img src="../.gitbook/assets/pinning a VC 1.png" alt="" width="413"><figcaption><p>Pinning a VC</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/Pinning a VC_Step1.png" alt="" width="188"><figcaption><p>Pinning a VC</p></figcaption></figure>
-
- 
-
-<figure><img src="../.gitbook/assets/Pinning a VC_Step2.png" alt="" width="188"><figcaption></figcaption></figure>
-
-</div>
-
-<div>
-
-<figure><img src="../.gitbook/assets/Pinning a VC_Step3.png" alt="" width="188"><figcaption><p>Pinning a VC</p></figcaption></figure>
-
- 
-
-<figure><img src="../.gitbook/assets/Pinning a VC_Step4.png" alt="" width="188"><figcaption></figcaption></figure>
-
-</div>
+<figure><img src="../.gitbook/assets/Poinning a VC 2.png" alt="" width="399"><figcaption><p>Pinning a VC</p></figcaption></figure>
 
 ### Activating a VC
 
