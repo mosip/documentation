@@ -10,22 +10,25 @@
 {% hint style="warning" %}
 **Important**:
 
-While we are improving/revamping the PMS (Partner Management System) and it’s interface which we will frequently call as PMP (Partner Management Portal) this will be worth noting that there are still some dependencies on older ‘**Partner Management Portal**’ and therefore we will still be doing few activities from an older PMP interface, this we have mentioned at appropriate places as ‘**Prerequisites**’.
+We are improving/revamping the PMS (Partner Management System), we also have worked upon the UX and the interface, the new interface for 'Partner Users' is ready and launced with the current [**release**](../../../../../releases/partner-management-system-1.3.0-dp1.md), However please note that with the current release the interface revamp covers only the user flow of it; for admin activities you still will have to make use of 'Older Admin Interface' which also is going under the knife to come up with arfresh new UX and Interface.   This essentially means the following:
+
+* **Partner User** - 'Authentication Partners' can use the new interface to perform all the activities as mentioned under '[**Authenticatioin Partner Workflow**](end-user-guide.md#authentication-partner-workflow)**'**
+* **Partner Admin** - Partner Admin still will have to user the older 'Partner Admin Interface to perform all the activities explained under '[**What all activities does a 'Partner Admin' perform for Authentication Partner?**](end-user-guide.md#what-all-activities-does-a-partner-admin-perform-for-authentication-partner)'.
 {% endhint %}
 
 ## What all activities does a 'Partner Admin' perform for Authentication Partner?
 
-Being a ‘Partner Admin’ you can perform following activities:
+Being a ‘Partner Admin’ you can perform following 3 activities, It should be noted that all these activities that you can perform as an admin you will still have to use the older 'Partner Admin Interface' as of now untill we complete its revamp which is already underway on a war footing.
 
 * Upload Root CA and Sub CA Certificates
 * Create Policy Group and Policy
 * Approve/Reject Policy
 
-### Upload Root CA and Sub CA (From Older PMP Interface)
+### Upload Root CA and Sub CA
 
 Only after you 'Upload Root CA and Sub CA Certificates (From Older PMP Interface)' that a Partner will then be able to 'Upload CA signed Partner Certificate.
 
-> As a process of Partner onboarding onto PMP after successful registration Partner is required to **Upload CA signed Partner Certificate** on behalf of their organisation which would be used to build a trust store in MOSIP to cryptographically validate that they are from a trusted organisation to perform authentication of citizens. Also this certificate is used to encrypt the response shared in e-KYC.
+> As a process of Partner onboarding onto PMP after successful registration, Partner is required to **Upload CA signed Partner Certificate** on behalf of their organisation which would be used to build a trust store in MOSIP to cryptographically validate that they are from a trusted organisation to perform authentication of citizens. Also this certificate is used to encrypt the response shared in e-KYC.
 
 {% hint style="warning" %}
 **Important:**
@@ -123,10 +126,10 @@ To be able to access the services by PMP and to validate that the partner is fro
 * Self Register on PMS Interface
 * Upload CA signed Certificate
 
-### Self-Register on PMP as Auth Partner
+### Self-Register on PMP as Authentication Partner
 
 1. The Authentication Partner can register themselves on MOSIP PMS portal by clicking **Register** on the Login Page, a form comes up.
-2. Enter the Auth Partner details:
+2. Enter the Authentication Partner details:
    1. Partner type (Authentication Partner)
    2. First and Last name
    3. Organization Name
@@ -135,14 +138,14 @@ To be able to access the services by PMP and to validate that the partner is fro
 
 <figure><img src="../../../../../_images/pms_register_as_partner.png" alt=""><figcaption></figcaption></figure>
 
-2. <mark style="color:red;">**Click on Register**</mark>, a popup comes up which asks you to '**Choose a Policy Group**' and seeks you to '**Agree to Terms and Conditions**' before you can be considered as 'Auth Partner.
+2. **Click on Register**, a popup comes up which asks you to '**Choose a Policy Group**' and seeks you to '**Agree to Terms and Conditions**' before you can be considered as 'Authentication Partner.
 3. Select the relevant/applicable **Policy Group** on **Select Policy Group** popup using **Policy Group** dropdown by reading through policy group description in dropdown.
 
 <figure><img src="../../../../../.gitbook/assets/pms_select_policy_group.png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../../../../.gitbook/assets/pms_select_policy_group_2.png" alt=""><figcaption></figcaption></figure>
 
-4. This will ask you to read through ‘**Terms and Condition**’ and having carefully read through it you can agree and accept it.
+4. On Submit it will ask you to read through ‘**Terms and Condition**’ and having carefully read through it you can agree and accept it.
 
 <figure><img src="../../../../../.gitbook/assets/pms_self_register_terms_and_condition.png" alt=""><figcaption></figcaption></figure>
 
@@ -156,6 +159,10 @@ To be able to access the services by PMP and to validate that the partner is fro
 {% endhint %}
 
 ### CA Signed Partner Certificate Upload / Download or Re-Upload
+
+User is now in [**Home Page/Dashboard**](end-user-guide.md#interface-overview) where the following features are provided to Authentication Partner: 1) Partner Certificate, 2) Policies and 3) Authentication Services: OIDC Client and API Key generation.
+
+These features can also be accessed by clicking on side panel (in the form of icons) or clicking on the hamburger menu <img src="../../../../../.gitbook/assets/pms_hamburger_menu.png" alt="" data-size="line"> on the top left which is available across all screens of PMP to help user to easily navigate.
 
 Once registered, as a process of Partner onboarding onto PMP after successful registration, user is required to perform upload CA signed Partner Certificate on behalf of their organisation which would be used to build a trust store in MOSIP to cryptographically validate that they are from a trusted organisation to perform authentication of citizens. Also this certificate is used to encrypt the response shared in e-KYC.
 
@@ -171,10 +178,6 @@ Important:
 Before a Partner can upload a ‘CA Signed Certificate’ it is prerequisite that the ‘Partner Admin’ should have already had uploaded the **Root CA** and **Sub CA** certificates (From older PMP interface).
 {% endhint %}
 
-User is now in [**Home Page/Dashboard**](end-user-guide.md#interface-overview) where the following features are provided to Auth Partner: 1) Partner Certificate, 2) Policies and 3) Authentication Services: OIDC Client and API Key generation.
-
-These features can also be accessed by clicking on side panel (in the form of icons) or clicking on the hamburger menu <img src="../../../../../.gitbook/assets/pms_hamburger_menu.png" alt="" data-size="line"> on the top left which is available across all screens of PMP to help user to easily navigate.
-
 #### To Upload CA signed Certificate
 
 1. Go to Authentication Partner (new UI) > Dashboard, Click on Partner Certificate option, User can upload the partner certificate signed by CA by clicking on the upload button.
@@ -187,7 +190,7 @@ These features can also be accessed by clicking on side panel (in the form of ic
 
 <figure><img src="../../../../../.gitbook/assets/pms_upload_partner_vertificate_2.png" alt=""><figcaption></figcaption></figure>
 
-3. Certificate is successfully fetched from local system, Click on Submit.
+3. Certificate is successfully fetched from local system, Click on **Submit**.
 
 <figure><img src="../../../../../.gitbook/assets/pms_upload_partner_vertificate_3.png" alt=""><figcaption></figcaption></figure>
 
@@ -213,11 +216,11 @@ Reuploading certifacte is required in cases when MOSIP Signed Certificate gets e
 'MOSIP Signed Certifcate has a validity of 1 year from the time of Partner Certificate Upload.&#x20;
 {% endhint %}
 
-You must ensure that you re- upload the partner certificate again so that new MOSIP signed certificate can be generated and other functionalities such as Request Policy, Authentication Policies can function.
+You must ensure that you re-upload the partner certificate again so that new MOSIP signed certificate can be generated and other functionalities such as Request Policy, Authentication Policies can function.
 
 ### Request Policy
 
-**Pre-Requisite**: **Policy Manager** must have created a [**Policy Group**](end-user-guide.md#create-policy-group) and then created a [**Policy**](end-user-guide.md#create-an-auth-policy) within it for the Partner to be able to ‘**Request a Policy**’.
+**Pre-Requisite**: **Policy Manager** (in our case '**Admin**') must have created a [**Policy Group**](end-user-guide.md#create-policy-group) and then created a [**Policy**](end-user-guide.md#create-an-auth-policy) within it for the Partner to be able to ‘**Request a Policy**’.
 
 #### To Request a Policy
 
@@ -230,7 +233,7 @@ You must ensure that you re- upload the partner certificate again so that new MO
 
 <figure><img src="../../../../../.gitbook/assets/pms_request_policy_2.png" alt=""><figcaption></figcaption></figure>
 
-3. Once the request is approved (Partner Admin will [**Approve Policy Request**](end-user-guide.md#approve-policy-request)). Once the request is approved you can view the status turns to ‘Approved’ status.\\
+3. Once the request is approved (Partner Admin will [**Approve Policy Request**](end-user-guide.md#approve-policy-request)). Once the request is approved you can view the status turns to ‘Approved’ status.
 
 <figure><img src="../../../../../.gitbook/assets/pms_request_policy_3.png" alt=""><figcaption></figcaption></figure>
 
@@ -241,7 +244,7 @@ After the partner has selected a policy group, uploaded partner certificate, req
 * OIDC Client: Create OIDC Client for approved policy
 * API Key : Generate API Key for approved policy
 
-**Prerequisites**: Policy requested by the **Partner** must be already approved by **Policy Manager**.
+**Prerequisites**: Policy requested by the **Partner** must be already approved by **Policy Manager** (Read More [**here**](end-user-guide.md#approve-policy-request)).
 
 #### Creating OIDC Client
 
@@ -304,7 +307,7 @@ The authentication partner needs to provide the following details to generate AP
 
 PMP (Partner Management Portal) is going under a comprehensive overhaul. This revamp includes improving usability and elevate the overall user experience (UX). The focus is to bring user centered design to PMP, make the PMP more intuitive, efficient, and aligned with our partners' evolving needs.
 
-The PMP Interface 'Card View' for 'Auth Partner' presents you with following features, These features can also be accessed by clicking on side panel (in the form of icons) or expanding the hamburger menu on the top left which is available across all screens of PMP to help user to easily navigate.
+The PMP Interface 'Card View' for 'Authentication Partner' presents you with following features, These features can also be accessed by clicking on side panel (in the form of icons) or expanding the hamburger menu ( <img src="../../../../../.gitbook/assets/pms_hamburger_menu.png" alt="" data-size="line">) on the top left which is available across all screens of PMP to help user to easily navigate.
 
 Card view presentation for each functionality with brief description to help you understand the services offered in Partner User Dashboard:
 
@@ -329,7 +332,7 @@ Open image-20240719-134912.png image-20240719-134912.png
 ## Reupload a new partner certificate through the following steps
 
 * Login to PMP and Go to Dashboard.
-* Click on Partner Certificate option in the dashboard/ side panel / hamburger menu, you will be redirected to list view of partner certificate.
+* Click on Partner Certificate option in the dashboard / side panel / hamburger menu ( <img src="../../../../../.gitbook/assets/pms_hamburger_menu.png" alt="" data-size="line"> ), you will be redirected to list view of partner certificate.
 
 <figure><img src="../../../../../.gitbook/assets/pms_dashboard.png" alt=""><figcaption></figcaption></figure>
 
@@ -338,15 +341,20 @@ Open image-20240719-134912.png image-20240719-134912.png
 <figure><img src="../../../../../.gitbook/assets/pms_reupload_partner_certificate_1.png" alt=""><figcaption></figcaption></figure>
 
 *   Re-upload certificate pop-up window appears. The time and date of previous certificate upload is also displayed for user reference.\
-    ![](../../../../../.gitbook/assets/pms\_reupload\_partner\_certificate\_2.png)
 
-    \
-    ![](../../../../../.gitbook/assets/pms\_reupload\_partner\_certificate\_3.png)\\
-* Click on the certificate upload section (blue area) to upload a new partner certificate from the local system. After selecting the certificate from local system , the fetched certificate name is displayed, Click on Submit, Partner certificate upload success message is displayed.
+
+
+
+    <figure><img src="../../../../../.gitbook/assets/pms_reupload_partner_certificate_2.png" alt=""><figcaption></figcaption></figure>
+
+
+* Click on the certificate upload section (blue area) to upload a new partner certificate from the local system. After selecting the certificate from local system, the fetched certificate name is displayed, Click on Submit.
+
+<figure><img src="../../../../../.gitbook/assets/pms_reupload_partner_certificate_3.png" alt=""><figcaption></figcaption></figure>
+
+* Partner certificate upload success message is displayed.
 
 <figure><img src="../../../../../.gitbook/assets/pms_reupload_partner_certificate_4.png" alt=""><figcaption></figcaption></figure>
-
-
 
 * Click on Close to come back to list view of partner certificate.
 

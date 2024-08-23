@@ -67,7 +67,7 @@
     * [PMS Revamp](modules/partner-management-services/pms-revamp/README.md)
       * [Overview](modules/partner-management-services/pms-revamp/overview.md)
       * [Architecture](modules/partner-management-services/pms-revamp/architecture.md)
-      * [Auth Partner](modules/partner-management-services/pms-revamp/auth-partner/README.md)
+      * [Authentication Partner](modules/partner-management-services/pms-revamp/auth-partner/README.md)
         * [Functional Overview](modules/partner-management-services/pms-revamp/auth-partner/functional-overview/README.md)
           * [Features](modules/partner-management-services/pms-revamp/auth-partner/functional-overview/features.md)
           * [User Guide](modules/partner-management-services/pms-revamp/auth-partner/functional-overview/end-user-guide.md)

@@ -16,9 +16,9 @@ We are excited to announce that Partner Management System (PMS) is undergoing a 
 
 * Technology stack upgrade
 * Introduce new partner types.
+* Introduce new features.
 * Enhancement of existing features.
 * Improved usability and user experience.
-* Introduce new features.
 
 This release marks the developer's preview release (1.3.0-dp.1) of Partner Management System which focuses on implementation of **Authentication Partner** workflow **in the new UI.** This version of PMS is designed to run on 1.2.0.1 version of MOSIP platform.
 

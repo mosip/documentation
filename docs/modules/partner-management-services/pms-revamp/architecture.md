@@ -2,7 +2,7 @@
 
 ### **Partner Management Service**
 
-Partner Management System provides various partner services like onboarding partners and providing partner data to other modules.
+Partner Management Service provides various partner services like onboarding partners and providing partner data to other modules.
 
 The diagram below illustrates the relationship of this service to other MOSIP services.
 
