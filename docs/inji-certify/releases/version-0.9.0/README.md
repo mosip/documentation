@@ -22,7 +22,7 @@ Inji Certify continues to innovate in the realm of verifiable credentials (VCs) 
    * **JSON-LD Compliance:** Ensures adherence to W3C VC v1.1 standards promoting interoperability and industry compliance.
    * **Credential Schema Configuration:** Issuers can now configure custom credential schemas for various types of certificates, enhancing flexibility in credential design and issuance.
 4. **Ease of Installation and Deployment:**
-   * **Docker-compose Support:** Quick and easy deployment using Docker-compose, allowing for rapid local setup and scaling. Click [**here**](https://github.com/mosip/inji-certify/tree/release-0.9.x/docker-compose) to learn more**!**
+   * **Docker-compose Support:** Quick and easy deployment using Docker-compose, allowing for rapid local setup and scaling. Click [**here**](https://github.com/mosip/inji-certify/tree/v0.9.0/docker-compose) to learn more**!**
 5. **Inji-config Repository:**
    * **Configuration Management:** Introduction of the inji-config repository to maintain all configurations related to the Inji Certify, streamlining configuration management and consistency across deployments.
 6. **Support for Mock and Insurance Credential Use Cases:**

@@ -22,4 +22,4 @@ Currently, Inji Certify offers the following features:
 
 Inji Certify streamlines the issuance of verifiable credentials with robust integration capabilities and a straightforward installation process. It supports multiple credential schemas and ensures compliance with industry standards, making it a versatile solution for organizations needing secure and efficient credential management.\
 \
-**Check** [**Inji Certify** ](https://github.com/mosip/inji-certify/tree/release-0.9.x)**Repository to explore these above features!**
+**Check** [**Inji Certify Repository**](https://github.com/mosip/inji-certify/tree/v0.9.0) **to explore these above features!**

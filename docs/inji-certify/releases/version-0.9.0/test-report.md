@@ -83,28 +83,32 @@ The various metrics that assist in test tracking and efficiency are as follows:
 * Passed Test Cases Coverage: It measures the percentage of passed test cases. (Number of passed tests / Total number of tests executed) x 100
 * Failed Test Case Coverage: It measures the percentage of all the failed test cases. (Number of failed tests / Total number of test cases executed) x 100
 
-## Tested with Components
-
-| **Module/Repo**        | **Image**                             | **POM version** | **Dependent artifactID**          | **Comments**                                                                                                       |
-| ---------------------- | ------------------------------------- | --------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Inji-certify-mosipid   | mosipqa/inji-certify:0.9.x            |                 | Digital-credential-plugin - 0.2.0 |                                                                                                                    |
-| Inji-certify-mock      | mosipqa/inji-certify:0.9.x            |                 | Digital-credential-plugin - 0.2.0 |                                                                                                                    |
-| Inji-certify-Insurance | mosipqa/inji-certify:0.9.x            |                 | Digital-credential-plugin - 0.2.0 |                                                                                                                    |
-| Inji-config            | mosipqa/config-server:1.1.2           |                 |                                   | [https://github.com/mosip/inji-config/tree/release-0.2.x](https://github.com/mosip/inji-config/tree/release-0.2.x) |
-| Keymanager             |                                       | 1.3.0-Snapshot  |                                   | Will be released as 1.3.0-beta.1                                                                                   |
-| Commons                |                                       | 1.3.0-Snapshot  |                                   | Will be released as 1.3.0-beta.1                                                                                   |
-| Artifactory-certify    | mosipqa/artifactory-server:0.9.0-INJI |                 |                                   |                                                                                                                    |
-| eSignet                | eSignet-1.4.0                         |                 |                                   |                                                                                                                    |
-
-## Stories Tested
+### Stories Tested
 
 <table><thead><tr><th>Details</th><th width="134">Stories Tested</th><th>Test Cases</th><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td>Total</td><td>Total</td><td>With Stories</td><td>w/o Stories</td><td>Pass</td><td>Fail</td><td>Not tested</td><td></td></tr><tr><td>Inji-Certify</td><td>4</td><td>311</td><td>311</td><td>0</td><td>305</td><td>6</td><td>0</td></tr><tr><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td></tr><tr><td>Total</td><td>4</td><td>311</td><td>311</td><td>0</td><td>305</td><td>6</td><td>0</td></tr></tbody></table>
 
 <table data-header-hidden><thead><tr><th width="696">Functional Testing - Stories Verified : 4</th></tr></thead><tbody><tr><td>Test cases : 311      Passed : 305     Failed : 6    Skipped : 0</td></tr><tr><td>Test Rate : 100%     With Pass Rate : 98%</td></tr></tbody></table>
 
-## API + Docker compose testing
+### API + Docker compose testing
 
 <table><thead><tr><th width="332">API +Docker compose testing</th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td>Story</td><td>Test Results</td><td></td><td></td><td></td></tr><tr><td>INJICERT-41</td><td>85</td><td>83</td><td>2</td><td>0</td></tr><tr><td>INJICERT-13</td><td>72</td><td>71</td><td>1</td><td>0</td></tr><tr><td>INJICERT_186</td><td>72</td><td>70</td><td>2</td><td>0</td></tr><tr><td>INJICERT-189</td><td>82</td><td>81</td><td>1</td><td>0</td></tr></tbody></table>
+
+
+
+## Tested with Components
+
+| **Module/Repo**        | **Image**                             | **POM version** | **Dependent artifactID**          | **Comments**                                                                |
+| ---------------------- | ------------------------------------- | --------------- | --------------------------------- | --------------------------------------------------------------------------- |
+| Inji-certify-mosipid   | mosipqa/inji-certify:0.9.x            |                 | Digital-credential-plugin - 0.2.0 |                                                                             |
+| Inji-certify-mock      | mosipqa/inji-certify:0.9.x            |                 | Digital-credential-plugin - 0.2.0 |                                                                             |
+| Inji-certify-Insurance | mosipqa/inji-certify:0.9.x            |                 | Digital-credential-plugin - 0.2.0 |                                                                             |
+| Inji-config            | mosipqa/config-server:1.1.2           |                 |                                   | [**v0.2.0**](https://github.com/mosip/inji-config/tree/v0.2.0)              |
+| Keymanager             |                                       | 1.3.0-Snapshot  |                                   | [**v1.3.0-beta.1**](https://github.com/mosip/keymanager/tree/v1.3.0-beta.1) |
+| Commons                |                                       | 1.3.0-Snapshot  |                                   | [**v1.3.0-beta.1**](https://github.com/mosip/commons/tree/v1.3.0-beta.1)    |
+| Artifactory-certify    | mosipqa/artifactory-server:0.9.0-INJI |                 |                                   |                                                                             |
+| eSignet                | eSignet-1.4.0                         |                 |                                   |                                                                             |
+
+
 
 ## Browser Versions Used For Testing
 
