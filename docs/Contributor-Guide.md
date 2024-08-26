@@ -2,7 +2,7 @@
 
 #### Where to start ?
 
-* Read about [What is a foundational ID system?](https://docs.mosip.io/1.2.0/overview#what-is-a-foundational-id-system) . Gives you a good overview of foundational ID and MOSIP.
+* Refer to '[What is a foundational ID system](https://docs.mosip.io/1.2.0/overview#what-is-a-foundational-id-system)' for a comprehensive overview of foundational ID systems and MOSIP.
 * Get to know the [Technology Stack](Technology-Stack.md)
 * Get to know the [MOSIP github repo structure](https://github.com/mosip)
 * If you do not have a github account, get one.
