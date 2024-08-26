@@ -73,6 +73,7 @@
           * [User Guide](modules/partner-management-services/pms-revamp/auth-partner/functional-overview/end-user-guide.md)
         * [Technical Overview](modules/partner-management-services/pms-revamp/auth-partner/technical-overview/README.md)
           * [Technology Stack](modules/partner-management-services/pms-revamp/auth-partner/technical-overview/technology-stack.md)
+          * [Browsers Supported](modules/partner-management-services/pms-revamp/auth-partner/technical-overview/browsers-supported.md)
           * [PMS Configuration Guide](modules/partner-management-services/pms-revamp/auth-partner/technical-overview/pms-configuration-guide.md)
           * [Backend Developers Guide](modules/partner-management-services/pms-revamp/auth-partner/technical-overview/backend-developers-guide.md)
           * [UI Developers Guide](modules/partner-management-services/pms-revamp/auth-partner/technical-overview/ui-developers-guide.md)
