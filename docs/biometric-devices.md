@@ -35,7 +35,7 @@ Compliance of a device may be tested using an [Compliance Tool Kit (CTK)](https:
 
 The following calculator may be used to estimate the number of devices required for a rollout.
 
-[MOSIPDevicesCalculator](\_files/mosip-devices-calculator.xls)
+[MOSIPDevicesCalculator](https://github.com/mosip/documentation/blob/84384099540b09b265703e96644a944adcdd2f3b/docs/\_files/mosip-devices-calculator.xlsx)
 
 ## Partners
 
