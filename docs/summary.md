@@ -170,6 +170,7 @@
   * [MOSIP Branching Strategy](mosip-branching-strategy.md)
   * [Community Calendars](community/community-calendar.md)
 * [📖 Releases](releases.md)
+  * [1.2.2.0 (Mosip - Config)](releases/1.2.2.0-mosip-config.md)
   * [Partner Management System 1.3.0 DP1](releases/partner-management-system-1.3.0-dp1.md)
   * [Api Test Commons Releases](releases/api-test-commons-releases.md)
   * [Android Registration Client v0.10.0](releases/android-registration-client-v0.10.0/README.md)

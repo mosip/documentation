@@ -6,15 +6,15 @@
 
 **Release Date**: 19th March, 2024
 
-The **1.2.0.1** release incorporates all features previously released in beta, including upgrade of platform to V3 architecture along with several significant fixes requested by the countries. It prioritizes enhancements in testability, usability, and security.
+The **1.2.0.1** release incorporates all features previously released in beta, including the upgrade of the platform to V3 architecture and several significant fixes requested by the countries. It prioritizes enhancements in testability, usability, and security.
 
-To know more about upgrade, please refer [here](https://docs.mosip.io/1.2.0/upgrade-runbook).
+To learn more about the upgrade, please refer to the information below.
 
 Also included in this release are Domain Specific Language (DSL) automation scripts, which facilitate platform testing. Additionally, several security-related issues have been addressed. Click [here](https://docs.mosip.io/1.2.0/test-automation) for more information on test automation.
 
-Another major highlight of this patch release is the Print Stage. The Print Stage, now re-named as **Credential Requestor Stage**, additionally manages the initiation of credential requests tailored to partner-specific information needs. Click [here](https://docs.mosip.io/1.2.0/modules/registration-processor/credential-requestor-stage) to know more about the Credential Requestor Stage.
+Another major highlight of this patch release is the Print Stage. The Print Stage, now renamed as **Credential Requestor Stage**, additionally manages the initiation of credential requests tailored to partner-specific information needs. Click [here](https://docs.mosip.io/1.2.0/modules/registration-processor/credential-requestor-stage) to learn more about the Credential Requestor Stage.
 
-Implementation of handles in ID Repository is also included as part of this release. Refer [here](https://docs.mosip.io/1.2.0/modules/id-repository/custom-handle) to know more about handles and its implementation.
+Implementation of handles in ID Repository is also included as part of this release. Refer [here](https://docs.mosip.io/1.2.0/modules/id-repository/custom-handle) to learn more about handles and their implementation.
 
 **Major Areas of Work**
 

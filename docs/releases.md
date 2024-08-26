@@ -2,6 +2,11 @@
 
 ## Latest Release
 
+**Version:** v1.2.2.0 **(Mosip - Config)**
+
+* Date: 26th August, 2024
+* Release Notes
+
 **Version:** v1.2.1 **(Api Test Commons Releases)**
 
 * Support: 1.2.1
