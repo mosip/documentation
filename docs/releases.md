@@ -5,7 +5,7 @@
 **Version:** v1.2.2.0 **(Mosip - Config)**
 
 * Date: 26th August, 2024
-* Release Notes
+* [Release Notes](https://docs.mosip.io/1.2.0/releases/1.2.2.0-mosip-config)
 
 **Version:** v1.2.1 **(Api Test Commons Releases)**
 
