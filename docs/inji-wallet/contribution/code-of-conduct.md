@@ -2,7 +2,7 @@
 
 ## Preamble
 
-e-Signet was created to foster an open, innovative and inclusive community around open source & open standards. To clarify expected behaviour in our communities we have adopted the Contributor Covenant. This code of conduct has been adopted by many other open-source communities and we feel it expresses our values well.
+Community was created to foster an open, innovative and inclusive community around open source & open standards. To clarify expected behaviour in our communities we have adopted the Contributor Covenant. This code of conduct has been adopted by many other open-source communities and we feel it expresses our values well.
 
 ## Our Pledge
 
@@ -40,7 +40,7 @@ This Code of Conduct applies within all community spaces and also applies when a
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise, unacceptable behaviour may be reported to the community leaders responsible for enforcement at  [MOSIP](mailto:info@mosip.io). All complaints will be reviewed and investigated promptly and fairly.
+Instances of abusive, harassing, or otherwise, unacceptable behaviour may be reported to the community leaders responsible for enforcement at [MOSIP](mailto:info@mosip.io). All complaints will be reviewed and investigated promptly and fairly.
 
 All community leaders are obligated to respect the privacy and security of the reporter of any incident.
 
