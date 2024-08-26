@@ -77,7 +77,7 @@
           * [Backend Developers Guide](modules/partner-management-services/pms-revamp/auth-partner/technical-overview/backend-developers-guide.md)
           * [UI Developers Guide](modules/partner-management-services/pms-revamp/auth-partner/technical-overview/ui-developers-guide.md)
           * [Build and Development Guide](modules/partner-management-services/pms-revamp/auth-partner/technical-overview/build-and-development-guide.md)
-    * [PMS Existing](modules/partner-management-services/pms-existing/README.md)
+    * [PMS Legacy](modules/partner-management-services/pms-existing/README.md)
       * [Partner Management System](modules/partner-management-services/pms-existing/partner-policies.md)
       * [Partner Management Portal](modules/partner-management-services/pms-existing/partner-management-portal.md)
       * [Auth Partner](modules/partner-management-services/pms-existing/auth-credential-partner.md)

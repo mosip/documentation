@@ -10,15 +10,17 @@
 {% hint style="warning" %}
 **Important**:
 
-We are improving/revamping the PMS (Partner Management System), we also have worked upon the UX and the interface, the new interface for 'Partner Users' is ready and launced with the current [**release**](../../../../../releases/partner-management-system-1.3.0-dp1.md), However please note that with the current release the interface revamp covers only the user flow of it; for admin activities you still will have to make use of 'Older Admin Interface' which also is going under the knife to come up with arfresh new UX and Interface.   This essentially means the following:
+We are revamping the PMS (Partner Management System), we also have worked on the UX and the interface, the new interface for 'Partner Users' is ready and launced with the current [**release**](../../../../../releases/partner-management-system-1.3.0-dp1.md), However please note that with the current release the interface revamp covers only the user flow of it; for admin activities you still will have to make use of 'Older Admin Interface' which also is going under the knife to come up with arfresh new UX and Interface.   This essentially means the following:
 
-* **Partner User** - 'Authentication Partners' can use the new interface to perform all the activities as mentioned under '[**Authenticatioin Partner Workflow**](end-user-guide.md#authentication-partner-workflow)**'**
+* **Partner User** - 'Authentication Partners' can use the new interface to perform all the activities mentioned under '[**Authenticatioin Partner Workflow**](end-user-guide.md#authentication-partner-workflow)**'**
 * **Partner Admin** - Partner Admin still will have to user the older 'Partner Admin Interface to perform all the activities explained under '[**What all activities does a 'Partner Admin' perform for Authentication Partner?**](end-user-guide.md#what-all-activities-does-a-partner-admin-perform-for-authentication-partner)'.
 {% endhint %}
 
 ## What all activities does a 'Partner Admin' perform for Authentication Partner?
 
-Being a ‘Partner Admin’ you can perform following 3 activities, It should be noted that all these activities that you can perform as an admin you will still have to use the older 'Partner Admin Interface' as of now untill we complete its revamp which is already underway on a war footing.
+Being a ‘Partner Admin’ you can perform following 3 activities to complete the end to end functionality pertaining to Authentication partner.
+
+It should be noted that all these activities that you can perform as an admin you will still have to use the older 'Partner Admin Interface' as of now untill we complete its revamp which is already underway on a war footing.
 
 * Upload Root CA and Sub CA Certificates
 * Create Policy Group and Policy
@@ -36,7 +38,7 @@ Only after you 'Upload Root CA and Sub CA Certificates (From Older PMP Interface
 You will have to use older Partner Admin interface, Yes! you read it correct! before a Partner will be able to ‘**Upload ‘CA Signed Certificate**’ it is prerequisite that the ‘**Partner Admin**’ must upload the **Root CA** and **Sub CA** certificates and this you can do from ‘**Older PMP Interface’**.
 {% endhint %}
 
-#### To Upload Root CA and Sub CA (From Older PMP Interface)
+#### To Upload Root CA and Sub CA Certificates
 
 1. Go to **Older PMP Interface** and click on **Upload CA Certificate** option on the left navigation pane.
 2. Select the Partner Domain.
@@ -88,12 +90,12 @@ On successful creation of **Policy Group(s)**, Polices can be created under a re
 {% hint style="info" %}
 **Note**:
 
-Once the policy is created, it will be in Inactive state. You have to **Activate a Policy** before a Partner will be able to select it while ‘**Requesting a Policy**’.
+Once the policy is created, it will be in inactive state. You have to **Activate a Policy** before a Partner will be able to select it while ‘**Requesting a Policy**’.
 {% endhint %}
 
 #### Activate/Edit Auth policy
 
-Once you 'Create Policy' you also be required to activate it and it will reflect when a Partner wants to select a policy. You can also change the status of **Policy Group** ( Deactivate) or edit it using the Action menu as shown below.
+Once you 'Create Policy' you will also be required to activate it and then it will reflect when a Partner wants to select a policy. You can also change the status of **Policy Group** ( Deactivate) or edit it using the Action menu as shown below.
 
 1. Select the Policy you want to activate or edit.
 2. From the Actions menu, select Activate/Edit.
@@ -104,7 +106,7 @@ Once you 'Create Policy' you also be required to activate it and it will reflect
 
 When a Partner have chosen a 'Policy Group' and the 'Policy', an approval request will come to you and  you can approve or reject a ‘**Policy Request**’ using ‘**Request Policy**’ screen.
 
-When a Partner have chosen a 'Policy Group' and the 'Policy'an approval request will come to you and you can approve or reject a ‘**Policy Request**’ using ‘**Request Policy**’ screen.
+When a Partner have chosen a 'Policy Group' and the 'Policy' an approval request will come to you and you can approve or reject a ‘**Policy Request**’ using ‘**Request Policy**’ screen.
 
 * Click on **Partner Policy Mapping** in the left navigation pane.
 * Select the policy mapping that needs an approval.
@@ -138,7 +140,7 @@ To be able to access the services by PMP and to validate that the partner is fro
 
 <figure><img src="../../../../../_images/pms_register_as_partner.png" alt=""><figcaption></figcaption></figure>
 
-2. **Click on Register**, a popup comes up which asks you to '**Choose a Policy Group**' and seeks you to '**Agree to Terms and Conditions**' before you can be considered as 'Authentication Partner.
+2. **Click** on **Register**, a popup comes up which asks you to '**Choose a Policy Group**' and seeks you to '**Agree to Terms and Conditions**' before you can be considered as 'Authentication Partner.
 3. Select the relevant/applicable **Policy Group** on **Select Policy Group** popup using **Policy Group** dropdown by reading through policy group description in dropdown.
 
 <figure><img src="../../../../../.gitbook/assets/pms_select_policy_group.png" alt=""><figcaption></figcaption></figure>
@@ -180,13 +182,15 @@ Before a Partner can upload a ‘CA Signed Certificate’ it is prerequisite tha
 
 #### To Upload CA signed Certificate
 
-1. Go to Authentication Partner (new UI) > Dashboard, Click on Partner Certificate option, User can upload the partner certificate signed by CA by clicking on the upload button.
+1. Go to **Authentication Partner** (New UI) -> **Dashboard.**
 
 <figure><img src="../../../../../.gitbook/assets/pms_dashboard.png" alt=""><figcaption></figcaption></figure>
 
+2. Click on **Partner Certificate** option, Click on the **Upload** button to upload the partner certificate signed by CA.
+
 <figure><img src="../../../../../.gitbook/assets/pms_upload_partner_vertificate_1.png" alt=""><figcaption></figcaption></figure>
 
-2. Select the CA signed partner certificate from local system by tapping on the upload section (blue area)
+2. Select the CA signed partner certificate from local system by tapping on the upload section (blue area).
 
 <figure><img src="../../../../../.gitbook/assets/pms_upload_partner_vertificate_2.png" alt=""><figcaption></figcaption></figure>
 
@@ -204,7 +208,7 @@ Before a Partner can upload a ‘CA Signed Certificate’ it is prerequisite tha
 
 #### Download Certificate
 
-There is also an option to download initially uploaded CA signed certificate and also MOSIP Signed Certificate.
+There is also an option to download initially uploaded CA signed certificate and also the MOSIP Signed Certificate.
 
 #### Re-Upload Certificate
 
@@ -256,7 +260,7 @@ After the partner has selected a policy group, uploaded partner certificate, req
 <figure><img src="../../../../../.gitbook/assets/OIDC_client_creation_1.png" alt=""><figcaption></figcaption></figure>
 
 * Once the details are in Activated status, user will be able to view the OIDC Client ID generated, by clicking on the eye icon ( <img src="../../../../../.gitbook/assets/OIDC_client_creation_2_eye_icon.png" alt="" data-size="line">). clicking on the OIDC Client ID eye icon, opens a popup window which displays the Client ID and a copy button.
-* This Client ID can then be consumed in eSignet to perform authentication. Client ID can be accessed by clicking on eye icon
+* This Client ID can then be consumed in eSignet to perform authentication. Client ID can be accessed by clicking on eye icon.
 * User can utilize this OIDC Client ID to perform eSignet based authentication of citizens
 
 <figure><img src="../../../../../.gitbook/assets/OIDC_client_creation_3.png" alt=""><figcaption></figcaption></figure>
@@ -301,7 +305,7 @@ The authentication partner needs to provide the following details to generate AP
 
 <figure><img src="../../../../../.gitbook/assets/pms_generating_api_key_5.png" alt=""><figcaption></figcaption></figure>
 
-................................................................................................................................................................................
+
 
 ## Interface Overview
 
@@ -309,11 +313,15 @@ PMP (Partner Management Portal) is going under a comprehensive overhaul. This re
 
 The PMP Interface 'Card View' for 'Authentication Partner' presents you with following features, These features can also be accessed by clicking on side panel (in the form of icons) or expanding the hamburger menu ( <img src="../../../../../.gitbook/assets/pms_hamburger_menu.png" alt="" data-size="line">) on the top left which is available across all screens of PMP to help user to easily navigate.
 
-Card view presentation for each functionality with brief description to help you understand the services offered in Partner User Dashboard:
+Card view presentation is there for each functionality with brief description to help you understand the services offered in Partner User Dashboard.
 
 After successfully registering you can access the Home Page / Dashboard. You will be able to view the features and functionalities on the dashboardand based on your Partner Type.
 
 Note: You can access the partner dashboard only when you are duly registered and have selected the 'Policy Group'.
+
+<figure><img src="../../../../../.gitbook/assets/pms_dashboard.png" alt=""><figcaption></figcaption></figure>
+
+
 
 Each functionality that the user can perform is displayed in each card so that there is independent navigation for each tasks.
 
@@ -324,10 +332,6 @@ Each functionality that the user can perform is displayed in each card so that t
   * API Key : Generate API Key for approved policy, tabular list and individual view of submitted API Key details and Deactivate API Key.
 
 You can view your organisation name and username on the top right called 'User Profile', logout options is also placed here only.
-
-Open image-20240719-134912.png image-20240719-134912.png
-
-\<image>
 
 ## Reupload a new partner certificate through the following steps
 

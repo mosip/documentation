@@ -2,7 +2,7 @@
 
 ## Features
 
-The key features of Authentication Partner incorporated in this release are:
+The key features of Authentication Partner and the Partner Management System are here below.
 
 ### Ease of Use and Usability Enhancements
 
@@ -60,3 +60,6 @@ The new interface of PMP, for its user part, has undergone a complete revamp not
 ## Compatibility:
 
 * Optimized for standard browser sizes (laptop/desktop) with responsive UI design for laptop/desktop views.
+
+
+

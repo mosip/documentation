@@ -19,7 +19,7 @@ You can refer to the comprehensive documentation as below:
 
 ### Policy group
 
-Common policies are grouped example 'Telecom', 'Banking', 'Insurance' etc.
+Common policies group examples include 'Telecom', 'Banking', 'Insurance' among others.
 
 ### What are the policies used in MOSIP?
 
@@ -30,9 +30,9 @@ Common policies are grouped example 'Telecom', 'Banking', 'Insurance' etc.
 
 <table data-header-hidden><thead><tr><th width="181"></th><th width="260"></th><th></th></tr></thead><tbody><tr><td>Policy type</td><td>Partners</td><td>Description</td></tr><tr><td>Auth policy</td><td>AP</td><td>Specifies <a href="https://docs.mosip.io/1.2.0/id-authentication#authentication-types">authentication types</a> and <a href="https://docs.mosip.io/1.2.0/id-authentication#kyc-authentication">KYC</a> fields to be shared during authentication.</td></tr><tr><td>Datashare policy</td><td>Online Verification Partner, Credential Partner, Manual Adjudiation, ABIS partner</td><td>Specifies data to be shared with partners</td></tr></tbody></table>
 
-
-
-Policies are not applicable for Device Provider, FTM Provider and MISP Partner as data is not shared with them.
+{% hint style="info" %}
+**Note:** Policies are not applicable for Device Provider, FTM Provider and MISP Partner as data is not shared with them.
+{% endhint %}
 
 Refer to the [default policies](https://github.com/mosip/partner-management-services/blob/release-1.2.0/db\_scripts/mosip\_pms/dml/pms-auth\_policy.csv) loaded while installing MOSIP.
 

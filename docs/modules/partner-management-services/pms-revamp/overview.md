@@ -17,7 +17,7 @@ The **key features** of Authentication Partner incorporated in this release are:
   * **Download:** Download CA signed Partner Certificate and corresponding MOSIP Signed Certificate.
 * **Policies:**
   * **Request Policies:** Request policies within selected policy group.
-  * **Policy List:** View a tabular list of requested policies along with Partner Admin approval status.
+  * **Policy List:** View a tabular list of requested policies along with approval status from 'Partner Admin'.
   * **View Policy Details:** Access detailed views of individual policies, including status of Partner Admin approval/rejection.
 * **Authentication Services:**
   * **OIDC Client:**
@@ -32,6 +32,6 @@ The **key features** of Authentication Partner incorporated in this release are:
 
 We are reconstructing the entire PMS ground up and our upcoming releases is going to keep the best of current system and rebuild everything else from scratch.&#x20;
 
-The exiting PMS will be available during the overhaul and new system is to gradually take over in phase wise releases of the system, ensuring thereby a smooth and seamless transition. This means existing system will continue to work and be available during the course undergoing rebuilding process.
+The exiting PMS will be available during the overhaul and new system is to gradually take over in phase wise releases of the system, ensuring thereby a smooth and seamless transition. This means existing system will continue to work and be available during the course of undergoing the rebuilding process.
 
-Moving further from the current release our upcoming PMS releases will aim to introduce new features and incorporate all the essential functionalities of legacy system'. The upcoming releases is also going to focus on working afreash on other Partner Type(s), Refer to to the **Roadmap 2024** to know more about what all will unviel gradually.
+Moving further from the current release our upcoming PMS releases will aim to introduce new features and incorporate all the essential functionalities of '[legacy system](../pms-existing/)'. The upcoming releases is also going to focus on working afreash on other Partner Type(s), Refer to to the [**Roadmap 2024**](../../../roadmap-2024-2025.md) to know more about what all will unveil gradually.
