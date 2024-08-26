@@ -24,7 +24,7 @@ ABIS must support the following types of biometric images:
 * Iris images (left, right)
 * Face image
 
-Biometrics data in MOSIP is exchanged as per formats defined in [Biometric Image Specification](broken-reference/).
+Biometrics data in MOSIP is exchanged as per formats defined in [Biometric Image Specification](biometrics/biometric-specification.md#image-formats).
 
 ## Test kits
 

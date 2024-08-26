@@ -4,7 +4,7 @@
 
 The DataShare service is used to share data with other entrusted services and partners. The mechanism shares are the following:
 
-1. Retrieves and stores data to be shared in [Object Store](broken-reference/) and returns a Datashare URL.
+1. Retrieves and stores data to be shared in [Object Store](object-store.md) and returns a Datashare URL.
 2. It fetches data from the Object Store when the Datashare URL is called.
 
 The sharing of data is controlled by the [Datashare policy](modules/partner-management-services/pms-existing/partner-policies.md#datashare-policy).
