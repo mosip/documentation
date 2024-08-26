@@ -20,7 +20,7 @@ The relationship of Datashare Service with other services is explained here. _NO
 3. Verification Stage creates datashare for verification.
 4. Datashare Service calls [Policy Manager Service](partner-management-services.md#policy-management-service) to get the policy for creating shares.
 5. It calls the [Keymanager](keymanager.md) Service to encrypt data as per policy.
-6. Stores datashare inside [object store](broken-reference/).
+6. Stores datashare inside [object store](object-store.md).
 7. Retrieves datashare from the object store when the datashare URL is called.
 8. External systems like [ABIS](abis.md), Print System, Adjudication system etc. calls Datashare Service to get the datashare.
 9. Print Service creates UIN PDF and uploads to datashare through Credential.
