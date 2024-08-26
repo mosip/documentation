@@ -2,11 +2,15 @@
 
 In the rapidly evolving and interconnected world we live in today, ensuring widespread access to essential services such as healthcare, financial equality, global mobility, and support is of paramount importance. Central to accessing these services is the authentication of individuals' identities and the secure sharing of data to validate eligibility. Currently, individuals often juggle multiple physical identification documents and certificates, each necessary for various rights and services. It’s cumbersome for anyone to manage a pile of physical documents and can be prone to loss or fraud.
 
-To gain a deeper understanding of the Inji ecosystem including Inji Wallet, Inji Verify, Inji Web, and the Inji Certify backend service you can watch the video titled '**Inji Stack End To End Demo'**. This video provides a visual walkthrough of the features and a persona-based presentation for QR code-based verifiable credential (VC) verification.
+To gain a deeper understanding of the Inji ecosystem including Inji Wallet, Inji Verify, Inji Web, and the Inji Certify backend service you can watch the video titled '**Inji Stack End To End Usecase Demonstration'**. This video provides a visual walkthrough of the features and a persona-based presentation for QR code-based verifiable credential (VC) verification.
 
 {% embed url="https://youtu.be/p6oro5MYtHc?si=8P8yscLHpy-SZKQz" %}
+Inji Stack: E2E Usecase Demonstration
+{% endembed %}
 
 #### Key Areas Covered in the Video:
+
+The video will help you get a quick and comprehensive understanding of how Inji Stack operates and how each component works together to facilitate secure and efficient credential verification. You can access this video for further insights and a practical demonstration.
 
 <details>
 
@@ -58,9 +62,9 @@ To gain a deeper understanding of the Inji ecosystem including Inji Wallet, Inji
 
 </details>
 
-The **video** will help you get a quick and comprehensive understanding of how Inji Stack operates and how each component works together to facilitate secure and efficient credential verification. You can access this video for further insights and a practical demonstration.
 
-#### Introducing Inji: User-Centric Digital Credential Stack
+
+### Introducing Inji: User-Centric Digital Credential Stack
 
 Inji (meaning "knowing" or "recognizance" in Korean) is evolving into a user-centric digital credential stack. It aims to streamline all types of credentials and identification solutions by enabling:
 
