@@ -28,3 +28,13 @@ Partner Management Service DB Scripts to be run: [DB scripts](https://github.com
 * `REGISTRATION_PROCESSOR`
 * `SUBSCRIBE_CA_CERTIFICATE_UPLOADED_GENERAL`
 * `ZONAL_ADMIN`
+
+### **Config Changes:**
+
+Add below property to partner-management-default.properties file in mosip-config repository to Deploy PMS Revamp 1.3.0-DP.1 release in your env.
+
+```
+## This property is used by kernel-authcodeflowproxy-api to check request is coming from allowed urls not.
+auth.allowed.urls=https://${mosip.pmp.host}/,https://${mosip.pmp.reactjs.ui.host}/
+```
+

@@ -1,7 +1,5 @@
 # Features
 
-## Features
-
 The key features of Authentication Partner and the Partner Management System are here below.
 
 ### Ease of Use and Usability Enhancements
