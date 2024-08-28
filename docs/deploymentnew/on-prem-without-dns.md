@@ -9,18 +9,18 @@
   * SSL termination
   * Reverse Proxy
   * CDN/Cache management
-  * Loadbalancing
+  * Load balancing
 * Kubernetes cluster is administered using the [Rancher](https://rancher.com/docs/rancher/v1.3/en/kubernetes/#rancher-ui) and [rke](https://www.rancher.com/products/rke) tools.
 * In V3, we have two Kubernetes clusters:
 
-**Observation cluster** - This cluster is a part of the observation plane and it helps in administrative tasks. By design, this is kept independent of the actual cluster as a good security practice and to ensure clear segregation of roles and responsibilities. As a best practice, this cluster or it's services should be internal and should never be exposed to the external world.
+**Observation cluster** - This cluster is a part of the observation plane, and it helps in administrative tasks. By design, this is kept independent of the actual cluster as a good security practice and to ensure clear segregation of roles and responsibilities. As a best practice, this cluster or it's services should be internal and should never be exposed to the external world.
 
 * [Rancher](https://rancher.com/docs/rancher/v1.3/en/kubernetes/#rancher-ui) is used for managing the MOSIP cluster.
 * [Keycloak](https://www.keycloak.org/) in this cluster is used for cluster user access management.
 * It is recommended to configure log monitoring and network monitoring in this cluster.
 * In case you have an internal container registry, then it should run here.
 
-**MOSIP cluster** - This cluster runs all the MOSIP components and certain third party components to secure the cluster, API’s and data.
+**MOSIP cluster** - This cluster runs all the MOSIP components and certain third party components to secure the cluster, APIs and data.
 
 * [MOSIP External Components](https://github.com/mosip/mosip-infra/blob/v1.2.0.1-B1/deployment/v3/external/README.md#mosip-external-components)
 * [MOSIP Services](https://github.com/mosip/mosip-infra/blob/v1.2.0.1-B1/deployment/v3/mosip/README.md#mosip-services)
@@ -94,38 +94,34 @@
 As only secured https connections are allowed via nginx server will need below mentioned valid ssl certificates:
 
 * One valid wildcard ssl certificate related to domain used for accessing Observation cluster, this needs to be stored inside the nginx server VM for Observation cluster. In above e.g.: \*.org.net is the similar example domain.
-* One valid wildcard ssl certificate related to domain used for accesing Mosip cluster, this needs to be stored inside the nginx server VM for mosip cluster. In above e.g.: \*.sandbox.xyz.net is the similar example domain.
+* One valid wildcard ssl certificate related to domain used for accessing Mosip cluster, this needs to be stored inside the nginx server VM for mosip cluster. In above e.g.: \*.sandbox.xyz.net is the similar example domain.
 
-**Tools to be installed in Personel Computers for complete deployment**
+**Tools to be installed in Personal Computers for complete deployment**
 
-* [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)- any client version above 1.19
-* [helm](https://helm.sh/docs/intro/install/)- any client version above 3.0.0 and add below repos as well:
-
-```
-helm repo add bitnami https://charts.bitnami.com/bitnami
-helm repo add mosip https://mosip.github.io/mosip-helm
-```
-
+* [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl) - any client version above 1.19
+* [helm](https://helm.sh/docs/intro/install/) - any client version above 3.0.0 and add below repos as well:
+  ```
+  helm repo add bitnami https://charts.bitnami.com/bitnami
+  helm repo add mosip https://mosip.github.io/mosip-helm
+  ```
 * [Istioctl](https://istio.io/latest/docs/setup/getting-started/#download) : version: 1.15.0
 * [rke](https://rancher.com/docs/rke/latest/en/installation/) : version: [1.3.10](https://github.com/rancher/rke/releases/tag/v1.3.10)
-* \[Ansible]\(https://docs.ansible.com/ansible/latest/installation\_guide/intro\_installation.html: version > 2.12.4
+* [Ansible](https://docs.ansible.com/ansible/latest/installation\_guide/intro\_installation.html): version > 2.12.4
 *   Create a directory as MOSIP in your PC and:
-
-    * clone k8’s infra repo with tag : 1.2.0.1-B2 (**whichever is the latest version**) inside mosip directory.\
+    * Clone k8’s infra repo with tag : 1.2.0.1-B2 (**whichever is the latest version**) inside mosip directory.\
       `git clone https://github.com/mosip/k8s-infra -b v1.2.0.1-B2`
-    * clone mosip-infra with tag : 1.2.0.1-B2 (**whichever is the latest version**) inside mosip directory.\
+    * Clone mosip-infra with tag : 1.2.0.1-B2 (**whichever is the latest version**) inside mosip directory.\
       `git clone https://github.com/mosip/mosip-infra -b v1.2.0.1-B2`
     * Set below mentioned variables in bashrc
-
-    ```
-    export MOSIP_ROOT=<location of mosip directory>
-    export K8_ROOT=$MOSIP_ROOT/k8s-infra
-    export INFRA_ROOT=$MOSIP_ROOT/mosip-infra
-    ```
-
-    `source .bashrc`
-
-    > Note: Above mentioned environment variables will be used throughout the installation to move between one directory to other to run install scripts.
+      ```
+      export MOSIP_ROOT=<location of mosip directory>
+      export K8_ROOT=$MOSIP_ROOT/k8s-infra
+      export INFRA_ROOT=$MOSIP_ROOT/mosip-infra
+      ```
+      ```
+      source .bashrc
+      ```
+      > Note: Above-mentioned environment variables will be used throughout the installation to move between one directory to other to run install scripts.
 
 ### Installation
 
@@ -135,35 +131,27 @@ A Wireguard bastion host (Wireguard server) provides secure private channel to a
 
 #### Setup Wireguard VM and wireguard bastion server
 
-* Create a Wireguard server VM with above mentioned Hardware and Network requirements.
+* Create a Wireguard server VM with above-mentioned Hardware and Network requirements.
 * Open ports and Install docker on Wireguard VM.
-  * cd $K8\_ROOT/wireguard/
-  *   create copy of `hosts.ini.sample` as `hosts.ini` and update the required details for wireguard VM\\
-
-      `cp hosts.ini.sample hosts.ini`
-  *   execute ports.yml to enable ports on VM level using ufw:
-
-      `ansible-playbook -i hosts.ini ports.yaml`
+  * `cd $K8_ROOT/wireguard/`
+  * Create copy of `hosts.ini.sample` as `hosts.ini` and update the required details for wireguard VM\
+    `cp hosts.ini.sample hosts.ini`
+  * Execute ports.yml to enable ports on VM level using ufw:\
+    `ansible-playbook -i hosts.ini ports.yaml`
 
 > Note: 
 >  *  Permission of the pem files to access nodes should have 400 permission. `sudo chmod 400 ~/.ssh/privkey.pem`
 >  *  These ports are only needed to be opened for sharing packets over UDP.
 >  *  Take necessary measure on firewall level so that the Wireguard server can be reachable on 51820/udp.
 
-```
-* execute docker.yml to install docker and add user to docker group:
+* Execute docker.yml to install docker and add user to docker group:\
+  `ansible-playbook -i hosts.ini docker.yaml`
 
-    `ansible-playbook -i hosts.ini docker.yaml`
-    
-```
-
-*   Setup Wireguard server
-
-    * SSH to wireguard VM
-    * Create directory for storing wireguard config files.\
-      `mkdir -p wireguard/config`
-    * Install and start wireguard server using docker as given below:
-
+* Setup Wireguard server
+  * SSH to wireguard VM
+  * Create directory for storing wireguard config files.\
+    `mkdir -p wireguard/config`
+  * Install and start wireguard server using docker as given below:
     ```
     sudo docker run -d \
     --name=wireguard \
@@ -182,7 +170,6 @@ A Wireguard bastion host (Wireguard server) provides secure private channel to a
     ```
 
 > Note:
-
 >  *  Increase the no. of peers above in case more than 30 wireguard client confs (-e PEERS=30) are needed.  
 >  *  Change the directory to be mounted to wireguard docker as per need. All your wireguard confs will be generated in the mounted directory (`-v /home/ubuntu/wireguard/config:/config`).
 
@@ -192,31 +179,26 @@ A Wireguard bastion host (Wireguard server) provides secure private channel to a
 * Assign `wireguard.conf`:
   * SSH to the wireguard server VM.
   * `cd /home/ubuntu/wireguard/config`
-  *   assign one of the PR for yourself and use the same from the PC to connect to the server.
-
-      * create `assigned.txt` file to assign the keep track of peer files allocated and update every time some peer is allocated to someone.
-
-      ```
-      peer1 :   peername
-      peer2 :   xyz
-      ```
-
-      * use `ls` cmd to see the list of peers.
-      * get inside your selected peer directory, and add mentioned changes in `peer.conf`:
+  * Assign one of the PR for yourself and use the same from the PC to connect to the server.
+      * Create `assigned.txt` file to assign the keep track of peer files allocated and update every time some peer is allocated to someone.
+        ```
+        peer1 :   peername
+        peer2 :   xyz
+        ```
+      * Use `ls` cmd to see the list of peers.
+      * Get inside your selected peer directory, and add mentioned changes in `peer.conf`:
         * `cd peer1`
         * `nano peer1.conf`
           * Delete the DNS IP.
           * Update the allowed IP's to subnets CIDR ip . e.g. 10.10.20.0/23
         * Share the updated `peer.conf` with respective peer to connect to wireguard server from Personel PC.
-* add `peer.conf` in your PC’s `/etc/wireguard` directory as `wg0.conf`.
-* start the wireguard client and check the status:
-
-```
-sudo systemctl start wg-quick@wg0
-sudo systemctl status wg-quick@wg0
-```
-
-* Once connected to wireguard, you should be now able to login using private IP’s.
+* Add `peer.conf` in your PC’s `/etc/wireguard` directory as `wg0.conf`.
+* Start the wireguard client and check the status:
+  ```
+  sudo systemctl start wg-quick@wg0
+  sudo systemctl status wg-quick@wg0
+  ```
+* Once connected to wireguard, you should be now able to login using private IPs.
 
 ## Observation K8s Cluster setup and configuration
 
@@ -226,131 +208,130 @@ sudo systemctl status wg-quick@wg0
   * kubectl
   * helm
   * ansible
-  * rke (version 1.3.10)
+  * rke (version v1.3.10 )
+  * istioctl (istioctl version: v1.15.0)
 * Setup Observation Cluster node VM’s as per the hardware and network requirements as mentioned above.
 * Setup passwordless SSH into the cluster nodes via pem keys. (Ignore if VM’s are accessible via pem’s).
     *  Generate keys on your PC
-       `ssh-keygen -t rsa`
+       ```
+       ssh-keygen -t rsa
+       ```
     *  Copy the keys to remote observation node VM’s
-       `ssh-copy-id <remote-user>@<remote-ip>`
+       ```
+       ssh-copy-id <remote-user>@<remote-ip>
+       ```
     *  SSH into the node to check password-less SSH
-       `ssh -i ~/.ssh/<your private key> <remote-user>@<remote-ip>`
+       ```
+       ssh -i ~/.ssh/<your private key> <remote-user>@<remote-ip>
+       ```
 > Note:
 > *  Make sure the permission for `privkey.pem` for ssh is set to 400.
 
 * Run `env-check.yaml` to check if cluster nodes are fine and do not have known issues in it.
-  * cd $K8\_ROOT/rancher/on-prem
+  * `cd $K8_ROOT/rancher/on-prem/`
   * create copy of `hosts.ini.sample` as `hosts.ini` and update the required details for Observation k8 cluster nodes.
     * `cp hosts.ini.sample hosts.ini`
     * `ansible-playbook -i hosts.ini env-check.yaml`
-    * This ansible checks if localhost mapping is already present in /etc/hosts file in all cluster nodes, if not it adds the same.
+    * This ansible checks if localhost mapping is already present in `/etc/hosts` file in all cluster nodes, if not it adds the same.
 * Open ports and install docker on Observation K8 Cluster node VM’s.
-  * `cd $K8_ROOT/rancher/on-prem`
+  * `cd $K8_ROOT/rancher/on-prem/`
   * Ensure that `hosts.ini` is updated with nodal details.
-  * Update vpc\_ip variable in `ports.yaml` with vpc CIDR ip to allow access only from machines inside same vpc.
-  * Execute `ports.yml` to enable ports on VM level using ufw:
-    * `ansible-playbook -i hosts.ini ports.yaml`
+  * Update `vpc_ip` variable in `ports.yaml` with vpc CIDR ip to allow access only from machines inside same vpc.
+  * Execute `ports.yaml` to enable ports on VM level using ufw:
+    ```
+    ansible-playbook -i hosts.ini ports.yaml
+    ```
   * Disable swap in cluster nodes. (Ignore if swap is already disabled)
-    * ansible-playbook -i hosts.ini swap.yaml
-  * execute `docker.yml` to install docker and add user to docker group:
-    * ansible-playbook -i hosts.ini docker.yaml
+    ```
+    ansible-playbook -i hosts.ini swap.yaml
+    ```
+  * Execute `docker.yml` to install docker and add user to docker group:
+    ```
+    ansible-playbook -i hosts.ini docker.yaml
+    ```
 * Creating RKE Cluster Configuration file
   * `rke config`
-  *   Command will prompt for nodal details related to cluster, provide inputs w.r.t below mentioned points:
-
-      * `SSH Private Key Path` :
-      * `Number of Hosts`:
-      * `SSH Address of host` :
-      * `SSH User of host` :
-      *
-
+  * Command will prompt for nodal details related to cluster, provide inputs w.r.t below mentioned points:
+    * `SSH Private Key Path` :
+    * `Number of Hosts`:
+    * `SSH Address of host` :
+    * `SSH User of host` :
+    *
       ```
       Is host (<node1-ip>) a Control Plane host (y/n)? [y]: y
       Is host (<node1-ip>) a Worker host (y/n)? [n]: y
       Is host (<node1-ip>) an etcd host (y/n)? [n]: y
       ```
-
-      * Make all the nodes `Worker host` by default.
-      * To create an HA cluster, specify more than one host with role `Control Plane` and `etcd host`.
+    * Make all the nodes `Worker host` by default.
+    * To create an HA cluster, specify more than one host with role `Control Plane` and `etcd host`.
   * `Network Plugin Type` : Continue with canal as default network plugin.
   * For rest of other configurations, opt the required or default value.
 * As result of `rke config` command `cluster.yml` file will be generated inside same directory, update the below mentioned fields:
-  *   `nano cluster.yml`
-
+  * `nano cluster.yml`
       * Remove the default Ingress install
-
       ```
       ingress:
-      provider: none
+        provider: none
       ```
   * Add the name of the kubernetes cluster
     * `cluster_name: sandbox-name`
 * For production deployments edit the `cluster.yml`, according to this [RKE Cluster Hardening Guide](https://github.com/mosip/k8s-infra/blob/v1.2.0.1-B1/docs/rke-cluster-hardening.md).
-*   Setup up the cluster:
-
-    *   Once `cluster.yml` is ready, you can bring up the kubernetes cluster using simple command.
-
-        * This command assumes the `cluster.yml` file is in the same directory as where you are running the command.
-        * `rke up`
-        *
-
-        ````
-        INFO[0000] Building Kubernetes cluster
-        INFO[0000] [dialer] Setup tunnel for host [10.0.0.1]
-        INFO[0000] [network] Deploying port listener containers   
-        INFO[0000] [network] Pulling image [alpine:latest] on host [10.0.0.1]
-        ...
-        INFO[0101] Finished building Kubernetes cluster successfully
-        ```
-        * The last line should read `Finished building Kubernetes cluster` successfully to indicate that your cluster is ready to use.
-        ````
+* Setup up the cluster:
+  * Once `cluster.yml` is ready, you can bring up the kubernetes cluster using simple command.
+    * This command assumes the `cluster.yml` file is in the same directory as where you are running the command.
+    * `rke up`
+      ```
+      INFO[0000] Building Kubernetes cluster
+      INFO[0000] [dialer] Setup tunnel for host [10.0.0.1]
+      INFO[0000] [network] Deploying port listener containers   
+      INFO[0000] [network] Pulling image [alpine:latest] on host [10.0.0.1]
+      ...
+      INFO[0101] Finished building Kubernetes cluster successfully
+      ```
+    * The last line should read `Finished building Kubernetes cluster` successfully to indicate that your cluster is ready to use.
     * As part of the Kubernetes creation process, a `kubeconfig` file has been created and written at `kube_config_cluster.yml`, which can be used to start interacting with your Kubernetes cluster.
-    * Copy the kubeconfig files
-
-    ```
-    cp kube_config_cluster.yml $HOME/.kube/<cluster_name>_config
-    chmod 400 $HOME/.kube/<cluster_name>_config
-    ```
-
+    * Copy the kubeconfig files.
+      ```
+      cp kube_config_cluster.yml $HOME/.kube/<cluster_name>_config
+      chmod 400 $HOME/.kube/<cluster_name>_config
+      ```
     * To access the cluster using `kubeconfig` file use any one of the below method:
-      * `cp $HOME/.kube/<cluster_name>_config $HOME/.kube/config`\
-        **Alternatively**
-      * `export KUBECONFIG="$HOME/.kube/<cluster_name>_config`
+    * `cp $HOME/.kube/<cluster_name>_config $HOME/.kube/config`\
+      **Alternatively**
+    * `export KUBECONFIG="$HOME/.kube/<cluster_name>_config`
     * Test cluster access:
-      * `kubect get nodes`
-        * Command will result in details of the nodes of the Observation cluster.
+    * `kubect get nodes`
+      * Command will result in details of the nodes of the Observation cluster.
     * Save your files
-      * Save a copy of the following files in a secure location, they are needed to maintain, troubleshoot and upgrade your cluster.
-        * `cluster.yml`: The RKE cluster configuration file.
-        * `kube_config_cluster.yml`: The [Kubeconfig file](https://rancher.com/docs/rke/latest/en/kubeconfig/) for the cluster, this file contains credentials for full access to the cluster.
-        * `cluster.rkestate`: The [Kubernetes Cluster State file](https://rancher.com/docs/rke/latest/en/installation/#kubernetes-cluster-state), this file contains credentials for full access to the cluster.
+    * Save a copy of the following files in a secure location, they are needed to maintain, troubleshoot and upgrade your cluster.
+      * `cluster.yml`: The RKE cluster configuration file.
+      * `kube_config_cluster.yml`: The [Kubeconfig file](https://rancher.com/docs/rke/latest/en/kubeconfig/) for the cluster, this file contains credentials for full access to the cluster.
+      * `cluster.rkestate`: The [Kubernetes Cluster State file](https://rancher.com/docs/rke/latest/en/installation/#kubernetes-cluster-state), this file contains credentials for full access to the cluster.
     * In case not having Public DNS system add the custom DNS configuration for the cluster.
-        * Check whether coredns pods are up and running in your cluster via the below command:
+      * Check whether coredns pods are up and running in your cluster via the below command:
         ```
         kubectl -n kube-system get pods -l k8s-app=kube-dns
         ```
-        * Update the IP address and domain name in the below DNS hosts template and add it in the coredns configmap Corefile key in the kube-system namespace.
+      * Update the IP address and domain name in the below DNS hosts template and add it in the coredns configmap Corefile key in the kube-system namespace.
         ```
         hosts {
           <INTERNAL_IP_OF_OBS_NGINX_NODE>    rancher.xyz.net keycloak.xyz.net
           fallthrough
         }
         ```
-        * Update coredns configmap via below command.
+      * To update the coredns configmap, use the below command.
         ```
         kubectl -n kube-system edit cm coredns
         ```
-        example:
-        ![mosip-without-dns-1.png](_images/mosip-without-dns-1.png)
-        * Check whether the DNS changes are correctly updated in coredns configmap.
+      * Check whether the DNS changes are correctly updated in coredns configmap.
         ```
         kubectl -n kube-system get cm coredns -o yaml
         ```
-        * Restart the `coredns` pod in the `kube-system` namespace.
+      * Restart the `coredns` pod in the `kube-system` namespace.
         ```
         kubectl -n kube-system rollout restart deploy coredns coredns-autoscaler
         ```
-        * Check status of coredns restart.
+      * Check status of coredns restart.
         ```
         kubectl -n kube-system rollout status deploy coredns
         kubectl -n kube-system rollout status coredns-autoscaler
@@ -361,53 +342,44 @@ sudo systemctl status wg-quick@wg0
 Once the rancher cluster is ready, we need ingress and storage class to be set for other applications to be installed.
 
 * [Nginx Ingress Controller](https://kubernetes.github.io/ingress-nginx/deploy/): used for ingress in rancher cluster.
-
-```
-cd $K8_ROOT/rancher/on-prem
-helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
-helm repo update
-helm install \                                                                                                             
-  ingress-nginx ingress-nginx/ingress-nginx \
+  ```
+  cd $K8_ROOT/rancher/on-prem
+  helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+  helm repo update
+  helm install ingress-nginx ingress-nginx/ingress-nginx \
   --namespace ingress-nginx \
   --version 4.0.18 \
   --create-namespace  \
   -f ingress-nginx.values.yaml
-```
-
-this will install ingress in ingress-nginx namespace of rancher cluster.
+  ```
+  this will install ingress in ingress-nginx namespace of rancher cluster.
 
 * Storage class setup: [Longhorn](https://longhorn.io/) creates a storage class in the cluster for creating pv (persistence volume) and pvc (persistence volume claim).
 
-Pre-requisites:
+  * Pre-requisites:
+    ```
+    cd $K8_ROOT/longhorn
+    ./pre_install.sh
+   ```
+  * Install Longhorn via helm
+      * `./install.sh`
+* Note: Values of below mentioned parameters are set as by default Longhorn installation script:
 
-```
-cd $K8_ROOT/longhorn
-./pre_install.sh
-```
-
-Install Longhorn via helm
-
-* `./install.sh`
-*   Note: Values of below mentioned parameters are set as by default Longhorn installation script:
-
-    *   PV replica count is set to 1. Set the replicas for the storage class appropriately.
-
-        ```
-        persistence.defaultClassReplicaCount=1
-        defaultSettings.defaultReplicaCount=1
-        ```
-    * Total available node CPU allocated to **each** `instance-manager` pod in the `longhorn-system` namespace.
-
+  * PV replica count is set to 1. Set the replicas for the storage class appropriately.
+    ```
+    persistence.defaultClassReplicaCount=1
+    defaultSettings.defaultReplicaCount=1
+    ```
+  * Total available node CPU allocated to **each** `instance-manager` pod in the `longhorn-system` namespace.
     ```
     guaranteedEngineManagerCPU: 5
     guaranteedReplicaManagerCPU: 5   
     ```
-
-    * The value "5" means 5% of the total available node CPU.
-    * This value should be fine for sandbox and pilot but you may have to increase the default to "12" for production.
+    * The value `5` means 5% of the total available node CPU.
+    * This value should be fine for sandbox and pilot, but you may have to increase the default to "12" for production.
     * The value can be updated on Longhorn UI after installation.
 * Access the Longhorn dashboard from Rancher UI once installed.
-* Setup Backup : In case you want to backup the pv data from longhorn to s3 periodically follow [instructions](https://github.com/mosip/k8s-infra/blob/main/docs/longhorn-backupstore-and-tests.md). (Optional, ignore if not required)
+* Setup Backup : In case you want to back up the pv data from longhorn to s3 periodically follow [instructions](https://github.com/mosip/k8s-infra/blob/main/docs/longhorn-backupstore-and-tests.md). (Optional, ignore if not required)
 
 ### Setting up nginx server for Observation K8s Cluster
 
@@ -416,15 +388,15 @@ Install Longhorn via helm
     *  Letsencrypt: Generate wildcard ssl certificate having 3 months validity when you have public DNS system using below steps.
        * SSH into the nginx server node.
        * Install Pre-requisites
-       ```
-       sudo apt update -y
-       sudo apt-get install software-properties-common -y
-       sudo add-apt-repository ppa:deadsnakes/ppa
-       sudo apt-get update -y
-       sudo apt-get install python3.8 -y
-       sudo apt install letsencrypt -y
-       sudo apt install certbot python3-certbot-nginx -y
-       ```
+         ```
+         sudo apt update -y
+         sudo apt-get install software-properties-common -y
+         sudo add-apt-repository ppa:deadsnakes/ppa
+         sudo apt-get update -y
+         sudo apt-get install python3.8 -y
+         sudo apt install letsencrypt -y
+         sudo apt install certbot python3-certbot-nginx -y
+         ```
        *  Generate wildcard SSL certificates for your domain name.
        * `sudo certbot certonly --agree-tos --manual --preferred-challenges=dns -d *.org.net`
        * replace `org.net` with your domain.
@@ -438,95 +410,84 @@ Install Longhorn via helm
        * Certificates created are valid for 3 months only.
        * Wildcard SSL certificate [renewal](https://github.com/mosip/k8s-infra/blob/main/docs/wildcard-ssl-certs-letsencrypt.md#ssl-certificate-renewal). This will increase the validity of the certificate for next 3 months.
     * Openssl : Generate wildcard ssl certificate using openssl in case you don't have public DNS using below steps. (Ensure to use this only in development env, not suggested for Production env).
-       * Install docker on nginx node.
-       ```
-       sudo apt-get update --fix-missing
-       sudo apt install docker.io -y
-       sudo systemctl restart docker
-       ```
        * Generate a self-signed certificate for your domain, such as *.sandbox.xyz.net.
        * Execute the following command to generate a self-signed SSL certificate. Prior to execution, kindly ensure to update environmental variables & rancher domain passed to openssl command:
-       ```
-        mkdir -p /etc/ssl/certs/
-        export VALIDITY=700 
-        export COUNTRY=IN 
-        export STATE=KAR
-        export LOCATION=BLR
-        export ORG=MOSIP
-        export ORG_UNIT=MOSIP
-        export COMMON_NAME=*.xyz.net
-        
-        openssl req -x509 -nodes -days $VALIDITY \
+         ```
+         mkdir -p /etc/ssl/certs/
+         export VALIDITY=700 
+         export COUNTRY=IN 
+         export STATE=KAR
+         export LOCATION=BLR
+         export ORG=MOSIP
+         export ORG_UNIT=MOSIP
+         export COMMON_NAME=*.xyz.net
+         
+         openssl req -x509 -nodes -days $VALIDITY \
           -newkey rsa:2048 -keyout /etc/ssl/certs/tls.key -out /etc/ssl/certs/tls.crt \
           -subj "/C=$COUNTRY/ST=$STATE/L=$LOCATION/O=$ORG/OU=$ORG_UNIT/CN=$COMMON_NAME" \
           -addext "subjectAltName = DNS:rancher.xyz.net, DNS:*.xyz.net"
-       ```
+         ```
        * Above command will generate certs in below specified location. Use it when prompted during nginx installation.
          * fullChain path: `/etc/ssl/certs/tls.crt`.
          * privKey path: `/etc/ssl/private/tls.key`.  
 * Install nginx:
     * Login to nginx server node.
     * Clone [k8s-infra](https://github.com/mosip/k8s-infra)
-    ```
-    cd $K8_ROOT/rancher/on-prem/nginx
-    sudo ./install.sh
-    ```
+      ```
+      cd $K8_ROOT/rancher/on-prem/nginx
+      sudo ./install.sh
+      ```
     * Provide below mentioned inputs as and when promted
         * Rancher nginx ip : internal ip of the nginx server VM.
         * SSL cert path : path of the ssl certificate to be used for ssl termination.
         * SSL key path : path of the ssl key to be used for ssl termination.
-        * Cluster node ip's : ip’s of the rancher cluster node
+        * Cluster node IPs : IPs of the rancher cluster node
 * Restart nginx service.
-```
-sudo systemctl restart nginx
-```
+  ```
+  sudo systemctl restart nginx
+  ```
 * Post installation check:
     * `sudo systemctl status nginx`
-* Steps to Uninstall nginx (in case required)
-`sudo apt purge nginx nginx-common`
+* Steps to Uninstall nginx (in case required). `sudo apt purge nginx nginx-common`.
 * DNS mapping:
     * Once nginx server is installed successfully, create DNS mapping for rancher cluster related domains as mentioned in DNS requirement section. (rancher.org.net, keycloak.org.net)
     * In case used Openssl for wildcard ssl certificate add DNS entries in local hosts file of your system.
-        * For example: /etc/hosts files for Linux machines.
-        ```
-         <INTERNAL_IP_OF_OBS_NGINX_NODE>    rancher.xyz.net keycloak.xyz.net
-        ```  
+        * For example: `/etc/hosts` files for Linux machines.
+          ```
+          <INTERNAL_IP_OF_OBS_NGINX_NODE>    rancher.xyz.net keycloak.xyz.net
+          ```  
 
 ## Observation K8's Cluster Apps Installation
 
 **Rancher UI**: Rancher provides full CRUD capability of creating and managing kubernetes cluster.
 
 * Install rancher using Helm, update `hostname`, & add `privateCA` to `true` in `rancher-values.yaml`, and run the following command to install.
-
-```
-cd $K8_ROOT/rancher/rancher-ui
-helm repo add rancher https://releases.rancher.com/server-charts/stable
-helm repo update
-kubectl create ns cattle-system
-kubectl -n cattle-system create secret generic tls-ca --from-file=cacerts.pem=./tls.crt
-helm install rancher rancher/rancher --version 2.6.3 \
---namespace cattle-system \
---create-namespace \
---set privateCA=true \
--f rancher-values.yaml
-```
+  * `cd $K8_ROOT/rancher/rancher-ui`
+  * `helm repo add rancher https://releases.rancher.com/server-charts/stable`
+  * `helm repo update`
+  * `kubectl create ns cattle-system`
+  * Create a secret containing the observation nginx self-signed public certificate (i.e. `tls.crt` ) generated in [openssl section](#setting-up-nginx-server-for-observation-k8s-cluster).
+    ```
+    kubectl -n cattle-system create secret generic tls-ca --from-file=cacerts.pem=./tls.crt
+    helm install rancher rancher/rancher --version 2.6.3 \
+    --namespace cattle-system \
+    --create-namespace \
+    --set privateCA=true \
+    -f rancher-values.yaml
+    ```
 
 *   Login:
-
     * Open [Rancher](https://rancher.org.net) page.
     * Get Bootstrap password using
-
-    ```
-    kubectl get secret --namespace cattle-system bootstrap-secret -o go-template='{{ .data.bootstrapPassword|base64decode}}{{ "\n" }}'
-    ```
-
-    Assign a password. IMPORTANT: makes sure this password is securely saved and retrievable by Admin.
+      ```
+      kubectl get secret --namespace cattle-system bootstrap-secret -o go-template='{{ .data.bootstrapPassword|base64decode}}{{ "\n" }}'
+      ```
+      Assign a password. IMPORTANT: makes sure this password is securely saved and retrievable by Admin.
 * [Keycloak](https://www.keycloak.org/): Keycloak is an OAuth 2.0 compliant Identity Access Management (IAM) system used to manage the access to Rancher for cluster controls.
-
-```
-cd $K8_ROOT/rancher/keycloak
-./install.sh <iam.host.name>
-```
+  ```
+  cd $K8_ROOT/apps/keycloak
+  ./install.sh <iam.host.name>
+  ```
 
 `keycloak_client.json`: Used to create SAML client on Keycloak for Rancher integration.
 
@@ -606,7 +567,6 @@ helm repo add mosip https://mosip.github.io/mosip-helm
 * Creating RKE Cluster Configuration file
   * rke config
   *   Command will prompt for nodal details related to cluster, provide inputs w.r.t below mentioned points:
-
       * `SSH Private Key Path` :
       * `Number of Hosts`:
       * `SSH Address of host` :
@@ -623,28 +583,21 @@ helm repo add mosip https://mosip.github.io/mosip-helm
   * `Network Plugin Type` : Continue with canal as default network plugin.
   * For rest for other configuration opt the required or default value.
 *   As result of rke config command `cluster.ymlfile` will be generated inside same directory, update the below mentioned fields:
-
     * `nano cluster.yml`
     * Remove the default Ingress install
-
-    ```
-    ingress:
-    provider: none
-    ```
-
+      ```
+      ingress:
+        provider: none
+      ```
     * Add the name of the kubernetes cluster
-
-    ```
-    `cluster_name: sandbox-name`
-    ```
-
-    * For production deplopyments edit the `cluster.yml`, according to this [RKE Cluster Hardening Guide](https://github.com/mosip/k8s-infra/blob/v1.2.0.1-B1/docs/rke-cluster-hardening.md).
+      ```
+      cluster_name: <sandbox-name>
+      ```
+    * For production deployments edit the `cluster.yml`, according to this [RKE Cluster Hardening Guide](https://github.com/mosip/k8s-infra/blob/v1.2.0.1-B1/docs/rke-cluster-hardening.md).
 * Setup up the cluster:
   * Once `cluster.yml` is ready, you can bring up the kubernetes cluster using simple command.
     *   This command assumes the `cluster.yml` file is in the same directory as where you are running the command.
-
         * rke up
-
         ```
         INFO[0000] Building Kubernetes cluster
         INFO[0000] [dialer] Setup tunnel for host [10.0.0.1]
@@ -655,7 +608,6 @@ helm repo add mosip https://mosip.github.io/mosip-helm
         ```
     * The last line should read `Finished building Kubernetes cluster successfully` to indicate that your cluster is ready to use.
     *   Copy the kubeconfig files
-
         ```
         cp kube_config_cluster.yml $HOME/.kube/<cluster_name>_config
         chmod 400 $HOME/.kube/<cluster_name>_config
@@ -679,36 +631,38 @@ helm repo add mosip https://mosip.github.io/mosip-helm
     * `cluster.rkestate`: The [Kubernetes Cluster State file](https://rke.docs.rancher.com/installation#kubernetes-cluster-state), this file contains credentials for full access to the cluster.
 * In case not having Public DNS system add the custom DNS configuration for the cluster.
     * Check whether coredns pods are up and running in your cluster via the below command:
-    ```
-    kubectl -n kube-system get pods -l k8s-app=kube-dns
-    ```
+      ```
+      kubectl -n kube-system get pods -l k8s-app=kube-dns
+      ```
     * Update the IP address and domain name in the below DNS hosts template and add it in the coredns configmap Corefile key in the kube-system namespace.
-    ```
-    hosts {
-      <PUBLIC_IP_OF_MOSIP_NGINX_NODE>    api.sandbox.xyz.net resident.sandbox.xyz.net esignet.sandbox.xyz.net prereg.sandbox.xyz.net healthservices.sandbox.xyz.net
-      <INTERNAL_IP_OF_MOSIP_NGINX_NODE>  sandbox.xyz.net api-internal.sandbox.xyz.net activemq.sandbox.xyz.net kibana.sandbox.xyz.net regclient.sandbox.xyz.net admin.sandbox.xyz.net minio.sandbox.xyz.net iam.sandbox.xyz.net kafka.sandbox.xyz.net postgres.sandbox.xyz.net pmp.sandbox.xyz.net onboarder.sandbox.xyz.net smtp.sandbox.xyz.net compliance.sandbox.xyz.net
-      fallthrough
-    }
-    ```
-    * Update coredns configmap via below command.
-    ```
-    kubectl -n kube-system edit cm coredns
-    ```
-    example:
-    ![mosip-without-dns-1.png](_images/mosip-without-dns-1.png)
+      ```
+      hosts {
+        <PUBLIC_IP_OF_MOSIP_NGINX_NODE>    api.sandbox.xyz.net resident.sandbox.xyz.net esignet.sandbox.xyz.net prereg.sandbox.xyz.net healthservices.sandbox.xyz.net
+        <INTERNAL_IP_OF_MOSIP_NGINX_NODE>  sandbox.xyz.net api-internal.sandbox.xyz.net activemq.sandbox.xyz.net kibana.sandbox.xyz.net regclient.sandbox.xyz.net admin.sandbox.xyz.net minio.sandbox.xyz.net iam.sandbox.xyz.net kafka.sandbox.xyz.net postgres.sandbox.xyz.net pmp.sandbox.xyz.net onboarder.sandbox.xyz.net smtp.sandbox.xyz.net compliance.sandbox.xyz.net
+        
+        ## Observation 
+        <INTERNAL_IP_OF_OBS_NGINX_NODE>    rancher.xyz.net keycloak.xyz.net
+        fallthrough
+      }
+      ```
+    * To update the coredns configmap, use the below command.
+      ```
+      kubectl -n kube-system edit cm coredns
+      ```
+
     * Check whether the DNS changes are correctly updated in coredns configmap.
-    ```
-    kubectl -n kube-system get cm coredns -o yaml
-    ```
+      ```
+      kubectl -n kube-system get cm coredns -o yaml
+      ```
     * Restart the `coredns` pod in the `kube-system` namespace.
-    ```
-    kubectl -n kube-system rollout restart deploy coredns coredns-autoscaler
-    ```
+      ```
+      kubectl -n kube-system rollout restart deploy coredns coredns-autoscaler
+      ```
     * Check status of coredns restart.
-    ```
-    kubectl -n kube-system rollout status deploy coredns
-    kubectl -n kube-system rollout status coredns-autoscaler
-    ```
+      ```
+      kubectl -n kube-system rollout status deploy coredns
+      kubectl -n kube-system rollout status coredns-autoscaler
+      ```
 ### MOSIP K8 Cluster Global configmap, Ingress and Storage Class setup
 
 **Global configmap**: Global configmap contains the list of neccesary details to be used throughout the namespaces of the cluster for common details.
@@ -727,34 +681,28 @@ helm repo add mosip https://mosip.github.io/mosip-helm
       * `istio-ingressgateway-internal`: internal facing istio service.
       * `istiod`: Istio daemon for replicating the changes to all envoy filters.
 *   Storage class setup: Longhorn creates a storage class in the cluster for creating pv (persistence volume) and pvc (persistence volume claim).
-
     * Pre-requisites:
-
-    ```
-    cd $K8_ROOT/longhorn
-    ./pre_install.sh
-    ```
+      ```
+      cd $K8_ROOT/longhorn
+      ./pre_install.sh
+      ```
 
     * Install Longhorn via helm
       * `./install.sh`
-      *   Note: Values of below mentioned parameters are set as by default Longhorn installation script:
-
+      * Note: Values of below mentioned parameters are set as by default Longhorn installation script:
           * PV replica count is set to 1. Set the replicas for the storage class appropriately.
-
-          ```
-          persistence.defaultClassReplicaCount=1
-          defaultSettings.defaultReplicaCount=1
-          ```
-
+            ```
+            persistence.defaultClassReplicaCount=1
+            defaultSettings.defaultReplicaCount=1
+            ```
           * Total available node CPU allocated to **each** `instance-manager` pod in the `longhorn-system` namespace.
+            ```
+            guaranteedEngineManagerCPU: 5
+            guaranteedReplicaManagerCPU: 5   
+            ```
 
-          ```
-          guaranteedEngineManagerCPU: 5
-          guaranteedReplicaManagerCPU: 5   
-          ```
-
-          * The value "5" means 5% of the total available node CPU
-          * This value should be fine for sandbox and pilot but you may have to increase the default to "12" for production.
+          * The value `5` means 5% of the total available node CPU
+          * This value should be fine for sandbox and pilot, but you may have to increase the default to `12` for production.
           * The value can be updated on Longhorn UI after installation.
 
 ### Import MOSIP Cluster into Rancher UI
@@ -763,13 +711,11 @@ helm repo add mosip https://mosip.github.io/mosip-helm
 * Select `Import` Existing for cluster addition.
 * Select `Generic` as cluster type to add.
 * Fill the `Cluster Name` field with unique cluster name and select `Create`.
-* You will get the kubecl commands to be executed in the kubernetes cluster. Copy the command and execute from your PC (make sure your `kube-config` file is correctly set to MOSIP cluster).
-
-```
-e.g.:
-kubectl apply -f https://rancher.e2e.mosip.net/v3/import/pdmkx6b4xxtpcd699gzwdtt5bckwf4ctdgr7xkmmtwg8dfjk4hmbpk_c-m-db8kcj4r.yaml
-```
-
+* You will get the kubectl commands to be executed in the kubernetes cluster. Copy the command and execute from your PC (make sure your `kube-config` file is correctly set to MOSIP cluster).
+  ```
+  e.g.:
+  kubectl apply -f https://rancher.e2e.mosip.net/v3/import/pdmkx6b4xxtpcd699gzwdtt5bckwf4ctdgr7xkmmtwg8dfjk4hmbpk_c-m-db8kcj4r.yaml
+  ```
 * Wait for few seconds after executing the command for the cluster to get verified.
 * Your cluster is now added to the rancher management server.
 
@@ -779,15 +725,15 @@ kubectl apply -f https://rancher.e2e.mosip.net/v3/import/pdmkx6b4xxtpcd699gzwdtt
     *  Letsencrypt: Generate wildcard ssl certificate having 3 months validity when you have public DNS system using below steps.
        * SSH into the nginx server node.
        * Install Pre-requisites
-       ```
-       sudo apt update -y
-       sudo apt-get install software-properties-common -y
-       sudo add-apt-repository ppa:deadsnakes/ppa
-       sudo apt-get update -y
-       sudo apt-get install python3.8 -y
-       sudo apt install letsencrypt -y
-       sudo apt install certbot python3-certbot-nginx -y
-       ```
+         ```
+         sudo apt update -y
+         sudo apt-get install software-properties-common -y
+         sudo add-apt-repository ppa:deadsnakes/ppa
+         sudo apt-get update -y
+         sudo apt-get install python3.8 -y
+         sudo apt install letsencrypt -y
+         sudo apt install certbot python3-certbot-nginx -y
+         ```
        *  Generate wildcard SSL certificates for your domain name.
        * `sudo certbot certonly --agree-tos --manual --preferred-challenges=dns -d *.org.net`
        * replace `org.net` with your domain.
@@ -802,35 +748,35 @@ kubectl apply -f https://rancher.e2e.mosip.net/v3/import/pdmkx6b4xxtpcd699gzwdtt
        * Wildcard SSL certificate [renewal](https://github.com/mosip/k8s-infra/blob/main/docs/wildcard-ssl-certs-letsencrypt.md#ssl-certificate-renewal). This will increase the validity of the certificate for next 3 months.
     * Openssl : Generate wildcard ssl certificate using openssl in case you don't have public DNS using below steps. (Ensure to use this only in development env, not suggested for Production env).
        * Install docker on nginx node.
-       ```
-       sudo apt-get update --fix-missing
-       sudo apt install docker.io -y
-       sudo systemctl restart docker
-       ```
+         ```
+         sudo apt-get update --fix-missing
+         sudo apt install docker.io -y
+         sudo systemctl restart docker
+         ```
        * Generate a self-signed certificate for your domain, such as *.sandbox.xyz.net.
        * Execute the following command to generate a self-signed SSL certificate. Prior to execution, kindly ensure that the environmental variables passed to the OpenSSL Docker container have been properly updated:
-       ```
-       docker volume create --name gensslcerts --opt type=none --opt device=/etc/ssl --opt o=bind
-       docker run -it --mount type=volume,src='gensslcerts',dst=/home/mosip/ssl,volume-driver=local \
-       -e VALIDITY=700        \
-       -e COUNTRY=IN          \
-       -e STATE=KAR           \
-       -e LOCATION=BLR        \
-       -e ORG=MOSIP           \
-       -e ORG_UNIT=MOSIP      \
-       -e COMMON_NAME=*.sandbox.xyz.net \
-       mosipdev/openssl:latest
-       ```
+         ```
+         docker volume create --name gensslcerts --opt type=none --opt device=/etc/ssl --opt o=bind
+         docker run -it --mount type=volume,src='gensslcerts',dst=/home/mosip/ssl,volume-driver=local \
+         -e VALIDITY=700        \
+         -e COUNTRY=IN          \
+         -e STATE=KAR           \
+         -e LOCATION=BLR        \
+         -e ORG=MOSIP           \
+         -e ORG_UNIT=MOSIP      \
+         -e COMMON_NAME=*.sandbox.xyz.net \
+         mosipdev/openssl:latest
+         ```
        * Above command will generate certs in below specified location. Use it when prompted during nginx installation.
          * fullChain path: /etc/ssl/certs/nginx-selfsigned.crt.
          * privKey path: /etc/ssl/private/nginx-selfsigned.key.
 * Install nginx:
     * Login to nginx server node.
     * Clone [k8s-infra](https://github.com/mosip/k8s-infra)
-    ```
-    cd $K8_ROOT/mosip/on-prem/nginx
-    sudo ./install.sh
-    ```
+      ```
+      cd $K8_ROOT/mosip/on-prem/nginx
+      sudo ./install.sh
+      ```
     * Provide below mentioned inputs as and when prompted
         * MOSIP nginx server internal ip
         * MOSIP nginx server public ip
@@ -840,11 +786,11 @@ kubectl apply -f https://rancher.e2e.mosip.net/v3/import/pdmkx6b4xxtpcd699gzwdtt
         * Cluster node ip's (comma separated no whitespace)
 * When utilizing an openssl wildcard SSL certificate, please add the following server block to the nginx server configuration within the http block. Disregard this if using SSL certificates obtained through letsencrypt or for publicly available domains. Please note that this should only be used in a development environment and is not recommended for production environments.
     * `nano /etc/nginx/nginx.conf`
-    ```
-    server{
-       listen <cluster-nginx-internal-ip>:80;
-       server_name iam.sandbox.xyz.net;
-       location /auth/realms/mosip/protocol/openid-connect/certs {
+      ```
+      server{
+         listen <cluster-nginx-internal-ip>:80;
+         server_name iam.sandbox.xyz.net;
+         location /auth/realms/mosip/protocol/openid-connect/certs {
             proxy_pass                      http://myInternalIngressUpstream;
             proxy_http_version              1.1;
             proxy_set_header                Upgrade $http_upgrade;
@@ -856,49 +802,48 @@ kubectl apply -f https://rancher.e2e.mosip.net/v3/import/pdmkx6b4xxtpcd699gzwdtt
             proxy_set_header                X-Forwarded-Proto $scheme;
             proxy_pass_request_headers      on;
             proxy_set_header  Strict-Transport-Security "max-age=0;";
-       }
-       location / { return 301 https://iam.sandbox.xyz.net; }
+         }
+         location / { return 301 https://iam.sandbox.xyz.net; }
       }
-    ```
+      ```
     * Note: HTTP access is enabled for IAM because MOSIP's keymanager expects to have valid SSL certificates. Ensure to use this only for development purposes, and it is not recommended to use it in production environments.
     * Restart nginx service.
-    ```
-    sudo systemctl restart nginx
-    ```  
+      ```
+      sudo systemctl restart nginx
+      ```  
 * Post installation check:
     * `sudo systemctl status nginx`
-* Steps to Uninstall nginx (in case required)
-`sudo apt purge nginx nginx-common`
+* Steps to Uninstall nginx (in case required) \
+  `sudo apt purge nginx nginx-common`
 * DNS mapping:
     * Once nginx server is installed successfully, create DNS mapping for rancher cluster related domains as mentioned in DNS requirement section. (rancher.org.net, keycloak.org.net)
     * In case used Openssl for wildcard ssl certificate add DNS entries in local hosts file of your system.
-        * For example: /etc/hosts files for Linux machines.
+        * For example: `/etc/hosts` files for Linux machines.
         ```
          <PUBLIC_IP>    api.sandbox.xyz.net resident.sandbox.xyz.net esignet.sandbox.xyz.net prereg.sandbox.xyz.net healthservices.sandbox.xyz.net
          <INTERNAL_IP>  sandbox.xyz.net api-internal.sandbox.xyz.net activemq.sandbox.xyz.net kibana.sandbox.xyz.net regclient.sandbox.xyz.net admin.sandbox.xyz.net minio.sandbox.xyz.net iam.sandbox.xyz.net kafka.sandbox.xyz.net postgres.sandbox.xyz.net pmp.sandbox.xyz.net onboarder.sandbox.xyz.net smtp.sandbox.xyz.net compliance.sandbox.xyz.net
         ```
 *   Check Overall if nginx and istio wiring is set correctly
     * `Install httpbin`: This utility docker returns http headers received inside the cluster. You may use it for general debugging - to check ingress, headers etc.
-    ```
-    cd $K8_ROOT/utils/httpbin
-    ./install.sh
-    ```
+      ```
+      cd $K8_ROOT/utils/httpbin
+      ./install.sh
+      ```
     * To see what is reaching the httpbin (example, replace with your domain name):
-    ```
-    curl https://api.sandbox.xyz.net/httpbin/get?show_env=true
-    curl https://api-internal.sandbox.xyz.net/httpbin/get?show_env=true
-    ```
+      ```
+      curl https://api.sandbox.xyz.net/httpbin/get?show_env=true
+      curl https://api-internal.sandbox.xyz.net/httpbin/get?show_env=true
+      ```
 
 ### Monitoring module deployment
 
 * Prometheus and Grafana and Alertmanager tools are used for cluster monitoring.
 * Select 'Monitoring' App from Rancher console -> `Apps & Marketplaces`.
-*   In Helm options, open the YAML file and disable Nginx Ingress.
-
-    ```
-     ingressNginx:
-     enabled: false
-    ```
+* In Helm options, open the YAML file and disable Nginx Ingress.
+  ```
+  ingressNginx:
+    enabled: false
+  ```
 * Click on `Install`.
 
 ### Alerting setup
@@ -907,39 +852,36 @@ Alerting is part of cluster monitoring, where alert notifications are sent to th
 
 * Monitoring should be deployed which includes deployment of prometheus, grafana and alertmanager.
 * Create [slack incoming webhook](https://api.slack.com/messaging/webhooks).
-*   After setting slack incoming webhook update `slack_api_url` and `slack_channel_name` in `alertmanager.yml`.
-
+* After setting slack incoming webhook update `slack_api_url` and `slack_channel_name` in `alertmanager.yml`.
     * `cd $K8_ROOT/monitoring/alerting/`
     * `nano alertmanager.yml`
     * Update:
-
-    ```
-    global:
-    resolve_timeout: 5m
-    slack_api_url: <YOUR-SLACK-API-URL>
-    ...
-    slack_configs:
-    - channel: '<YOUR-CHANNEL-HERE>'
-    send_resolved: true
-    ```
+      ```
+      global:
+        resolve_timeout: 5m
+        slack_api_url: <YOUR-SLACK-API-URL>
+      ...
+      ...
+      receivers:
+      - name: slack
+        slack_configs:
+        - channel: '<YOUR-CHANNEL-HERE>'
+          send_resolved: true
+      ```
 * Update `Cluster_name` in `patch-cluster-name.yaml`.
 * `cd $K8_ROOT/monitoring/alerting/`
 * `nano patch-cluster-name.yaml`
 * Update:
-
-```
-spec:
-externalLabels:
-cluster: <YOUR-CLUSTER-NAME-HERE>
-```
-
+  ```
+  spec:
+   externalLabels:
+     cluster: <YOUR-CLUSTER-NAME-HERE>
+  ```
 * Install Default alerts along some of the defined custom alerts:
-
-```
-cd $K8_ROOT/monitoring/alerting/
-./install.sh
-```
-
+  ```
+  cd $K8_ROOT/monitoring/alerting/
+  ./install.sh
+  ```
 * Alerting is installed.
 
 ### Logging module setup and installation
@@ -954,21 +896,18 @@ MOSIP uses [Rancher Fluentd](https://ranchermanager.docs.rancher.com/v2.0-v2.4/e
     * `kubectl apply -f clusteroutput-elasticsearch.yaml`
   * Start `clusterFlow`
     * `kubectl apply -f clusterflow-elasticsearch.yaml`
-  *   Install elasticsearch, kibana and Istio addons\\
-
-      ```
-      cd $K8_ROOT/logging
-      ./intall.sh
-      ```
+  * Install elasticsearch, kibana and Istio addons\\
+    ```
+    cd $K8_ROOT/logging
+    ./intall.sh
+    ```
   * set `min_age` in `elasticsearch-ilm-script.sh` and execute the same.
-  *   `min_age` : is the minimum no. of days for which indices will be stored in elasticsearch.
-
-      ```
-       cd $K8_ROOT/logging
-
-      ./elasticsearch-ilm-script.sh
-      ```
-  * MOSIP provides set of Kibana Dashboards for checking logs and throughputs.
+  * `min_age` : is the minimum no. of days for which indices will be stored in elasticsearch.
+    ```
+    cd $K8_ROOT/logging
+    ./elasticsearch-ilm-script.sh
+    ```
+  * MOSIP provides set of Kibana Dashboards for checking logs and throughput's.
     * Brief description of these dashboards are as follows:
       * [01-logstash.ndjson](https://github.com/mosip/k8s-infra/blob/main/logging/dashboards/01-logstash.ndjson) contains the logstash _Index_ Pattern required by the rest of the dashboards.
       * [02-error-only-logs.ndjson](https://github.com/mosip/k8s-infra/blob/main/logging/dashboards/03-service-logs.ndjson) contains a Search dashboard which shows only the error logs of the services, called `MOSIP Error Logs` dashboard.
@@ -995,32 +934,30 @@ cd $INFRA_ROOT/deployment/v3/external/all
 
 Click [here](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/mosip-external-dependencies) to check the detailed installation instructions of all the external components.
 
-### Configurational change in case using Openssl wildcard ssl certificate. (Only advised in development env, not recommended for Production setup)
-*  Add/ Update the below property in application-default.properties and comment on the below property in the *-default.properties file in the config repo.
-```
-mosip.iam.certs_endpoint=http://${keycloak.external.host}/auth/realms/mosip/protocol/openid-connect/certs
-```
-* Add/ Update the below property in the esignet-default.properties file in the config repo.
-```
-spring.security.oauth2.resourceserver.jwt.jwk-set-uri=http://${keycloak.external.host}/auth/realms/mosip/protocol/openid-connect/certs
-```
+### Configuration change in case using Openssl wildcard ssl certificate. (Only advised in development env, not recommended for Production setup)
+* Add/Update the below property in application-default.properties and comment on the below property in the *-default.properties file in the config repo.
+  ```
+  mosip.iam.certs_endpoint=http://${keycloak.external.host}/auth/realms/mosip/protocol/openid-connect/certs
+  ```
+* Add/Update the below property in the esignet-default.properties file in the config repo.
+  ```
+  spring.security.oauth2.resourceserver.jwt.jwk-set-uri=http://${keycloak.external.host}/auth/realms/mosip/protocol/openid-connect/certs
+  ```
 
 ### MOSIP Modules Deployment
 
 * Now that all the Kubernetes cluster and external dependencies are already installed, will continue with MOSIP service deployment.
 * While installing a few modules, installation script prompts to check if you have public domain and valid SSL certificates on the server. Opt option n as we are using self-signed certificates. For example:
-```
-./install.sh
-Do you have public domain & valid SSL? (Y/n) 
- Y: if you have public domain & valid ssl certificate
- n: If you don't have a public domain and a valid SSL certificate. Note: It is recommended to use this option only in development environments.
-```
+  ```
+  ./install.sh
+  Do you have public domain & valid SSL? (Y/n) 
+  Y: if you have public domain & valid ssl certificate
+  n: If you don't have a public domain and a valid SSL certificate. Note: It is recommended to use this option only in development environments.
+  ```
 * Start installing mosip modules:
-```
-cd $INFRA_ROOT/deployment/v3/mosip/all
-./install-all.sh
-```
+  ```
+  cd $INFRA_ROOT/deployment/v3/mosip/all
+  ./install-all.sh
+  ```
 
 Check detailed [MOSIP Modules Deployment](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/mosip-modules-deployment) installation steps.
-
-
