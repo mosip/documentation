@@ -38,7 +38,7 @@ Refer to the [default policies](https://github.com/mosip/partner-management-serv
 
 ### Partner Policies
 
-Partner policies control the data that needs to be shared with a partner. The policies reside in [`auth_policy` table](https://github.com/mosip/partner-management-services/blob/release-1.2.0/db\_scripts/mosip\_pms/ddl/pms-auth\_policy.sql) of `mosip_pms` DB.
+Partner policies control the data that needs to be shared with a partner. The policies reside in [`auth_policy` table](https://github.com/mosip/partner-management-services/blob/release-1.2.0/db\_scripts/mosip\_pms/ddl/pms-auth\_policy.sql) of `mosip_pms` DB..
 
 ### Partner roles
 

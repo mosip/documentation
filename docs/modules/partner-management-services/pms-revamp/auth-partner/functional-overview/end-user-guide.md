@@ -10,7 +10,7 @@
 {% hint style="warning" %}
 **Important**:
 
-We are revamping the PMS (Partner Management System), we also have worked on the UX and the interface, the new interface for 'Partner Users' is ready and launced with the current [**release**](../../../../../releases/partner-management-system-1.3.0-dp1.md), However please note that with the current release the interface revamp covers only the user flow of it; for admin activities you still will have to make use of 'Older Admin Interface' which also is going under the knife to come up with arfresh new UX and Interface.   This essentially means the following:
+We are revamping the PMS (Partner Management System), we also have worked on the UX and the interface, the new interface for 'Partner Users' is ready and launced with the current [**release**](../../../../../releases/partner-management-system-1.3.0-dp1/), However please note that with the current release the interface revamp covers only the user flow of it; for admin activities you still will have to make use of 'Older Admin Interface' which also is going under the knife to come up with arfresh new UX and Interface.   This essentially means the following:
 
 * **Partner User** - 'Authentication Partners' can use the new interface to perform all the activities mentioned under '[**Authenticatioin Partner Workflow**](end-user-guide.md#authentication-partner-workflow)**'**
 * **Partner Admin** - Partner Admin still will have to user the older 'Partner Admin Interface to perform all the activities explained under '[**What all activities does a 'Partner Admin' perform for Authentication Partner?**](end-user-guide.md#what-all-activities-does-a-partner-admin-perform-for-authentication-partner)'.

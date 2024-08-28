@@ -49,11 +49,11 @@ The **key features** of Authentication Partner incorporated in this release are:
 * **Compatibility:**
   * Optimized for standard browser sizes (laptop/desktop) with responsive UI design for laptop/desktop views.
 
-For detailed description of the above features, refer to [Feature Documentation](../modules/partner-management-services/pms-revamp/auth-partner/functional-overview/features.md).
+For detailed description of the above features, refer to [Feature Documentation](../../modules/partner-management-services/pms-revamp/auth-partner/functional-overview/features.md).
 
 **Note:** All other existing services offered by earlier version of Partner Management Portal (Version 1.2.0.1) for roles such as Partner Admin, Device Provider, FTM Chip provider etc will continue to work in the previous UI until our revamp incorporates all these features in upcoming releases.
 
-To know more about the upcoming features planned as part of PMS Revamp for this year, please check out [Roadmap 2024](../roadmap-2024-2025.md).
+To know more about the upcoming features planned as part of PMS Revamp for this year, please check out [Roadmap 2024](../../roadmap-2024-2025.md).
 
 **Known Issues**
 
@@ -87,22 +87,22 @@ For code and implementation of Partner Management Services, refer [here](https:/
 
 For code and implementation of Partner Management Portal (revamp) , refer [here](https://github.com/mosip/partner-management-portal/tree/release-1.3.x).
 
-To get started with the new interface of Partner Management Portal, refer to the [Partner Management Portal End User Guide](../modules/partner-management-services/pms-revamp/auth-partner/functional-overview/end-user-guide.md).
+To get started with the new interface of Partner Management Portal, refer to the [Partner Management Portal End User Guide](../../modules/partner-management-services/pms-revamp/auth-partner/functional-overview/end-user-guide.md).
 
 ### Build and Deploy
 
-To access the build and read through the deployment instructions, refer to the [Partner Management Services Deployment Guide](../modules/partner-management-services/pms-revamp/auth-partner/technical-overview/build-and-development-guide.md).
+To access the build and read through the deployment instructions, refer to the [Partner Management Services Deployment Guide](../../modules/partner-management-services/pms-revamp/auth-partner/technical-overview/build-and-development-guide.md).
 
 ### Configurations
 
-For details related to partner management services revamp configurations, refer to the [PMS Revamp Configuration Guide](../modules/partner-management-services/pms-revamp/auth-partner/technical-overview/pms-configuration-guide.md)
+For details related to partner management services revamp configurations, refer to the [PMS Revamp Configuration Guide](../../modules/partner-management-services/pms-revamp/auth-partner/technical-overview/pms-configuration-guide.md)
 
 ### Developers Guide
 
 For a detailed description of Partner Management System, code, design, and setup steps, refer to:
 
-1. [UI Developer’s Guide](../modules/partner-management-services/pms-revamp/auth-partner/technical-overview/ui-developers-guide.md)
-2. [Backend Developer’s Guide](../modules/partner-management-services/pms-revamp/auth-partner/technical-overview/backend-developers-guide.md)
+1. [UI Developer’s Guide](../../modules/partner-management-services/pms-revamp/auth-partner/technical-overview/ui-developers-guide.md)
+2. [Backend Developer’s Guide](../../modules/partner-management-services/pms-revamp/auth-partner/technical-overview/backend-developers-guide.md)
 
 ### API
 
