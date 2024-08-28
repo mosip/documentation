@@ -79,6 +79,14 @@ For more details on all the open issues, please refer [here](https://mosip.atlas
 | keymanager                  | release-1.2.1.x | v1.2.1.0    |
 | artifactory-ref-impl        | release-1.2.0.x | v1.2.0.3    |
 
+### Compatible Modules
+
+The following table outlines the tested and certified compatibility of PMS 1.3.0-dp.1 with other modules.
+
+<table><thead><tr><th width="472">Module/Repo</th><th>Tags</th></tr></thead><tbody><tr><td>PMS UI (legacy PMS UI for admin activities)</td><td><a href="https://github.com/mosip/partner-management-portal/tree/v1.2.0.2">v1.2.0.2</a></td></tr><tr><td>IDA Auth</td><td><a href="https://github.com/mosip/id-authentication/tree/v1.2.0.1">v1.2.0.1</a></td></tr><tr><td>eSignet</td><td><a href="https://github.com/mosip/esignet/tree/v1.2.0">v1.2.0</a></td></tr><tr><td>Reg Proc</td><td><a href="https://github.com/mosip/registration/tree/v1.2.0.1">v1.2.0.1</a></td></tr><tr><td>Notifier (Kernel)</td><td><a href="https://github.com/mosip/commons/tree/v1.2.0.1-B1/kernel">v1.2.0.1-B1</a></td></tr><tr><td>Audit manager</td><td><a href="https://github.com/mosip/audit-manager/tree/v1.2.0.1-B1">v1.2.0.1-B1</a></td></tr><tr><td>ID Repo</td><td><a href="https://github.com/mosip/id-repository/tree/v1.2.0.1">v1.2.0.1</a></td></tr><tr><td>datashare</td><td><a href="https://github.com/mosip/durian/tree/v1.2.0.1">v1.2.0.1</a></td></tr><tr><td>mosip-pms table</td><td><a href="https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/external/postgres">v1.2.0.2</a></td></tr><tr><td>Keycloak</td><td><a href="https://github.com/mosip/keycloak/tree/v1.2.0.1">v1.2.0.1</a></td></tr><tr><td>minio</td><td><a href="https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/external/object-store">v1.2.0.2</a></td></tr><tr><td>config-server</td><td></td></tr><tr><td>Websub</td><td><a href="https://github.com/mosip/websub/tree/v1.2.0.1-B1">v1.2.0.1-B1</a></td></tr></tbody></table>
+
+
+
 ### Services
 
 For code and implementation of Partner Management Services, refer [here](https://github.com/mosip/partner-management-services/tree/release-1.3.x).
