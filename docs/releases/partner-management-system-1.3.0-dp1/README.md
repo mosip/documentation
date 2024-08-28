@@ -8,7 +8,7 @@
 
 **Release Type**:**:** Developer Preview Release
 
-**Release Date**: Coming Soon
+**Release Date**: 27th Aug, 2024
 
 ### Overview
 
@@ -55,7 +55,7 @@ For detailed description of the above features, refer to [Feature Documentation]
 
 To know more about the upcoming features planned as part of PMS Revamp for this year, please check out [Roadmap 2024](../../roadmap-2024-2025.md).
 
-**Known Issues**
+### **Known Issues**
 
 Below is the list of key [known issues](https://mosip.atlassian.net/issues/?jql=labels%20%3D%20%22known\_issue%22%20and%20parent%3DMOSIP-32075%20AND%20affectedversion%20%3D%201.3.0-dp.1%20ORDER%20BY%20cf%5B10039%5D%20ASC%2C%20created%20DESC):
 
@@ -70,7 +70,7 @@ Below is the list of key [known issues](https://mosip.atlassian.net/issues/?jql=
 
 For more details on all the open issues, please refer [here](https://mosip.atlassian.net/issues/?filter=11506\&jql=project%20%3D%20MOSIP%20AND%20issuetype%20%3D%20Bug%20AND%20%22Epic%20Link%22%20%3D%20MOSIP-32075%20and%20status%20not%20in%20%28Canceled%2C%20Closed%2C%20Fixed%2C%20Testing%2C%20%22PR%20Raised%22%2C%20Documentation%29%20and%20%22Severity%5BDropdown%5D%22%20in%20%28Blocker%2C%20critical%2C%20Major%2C%20Minor%29%20and%20affectedVersion%3D1.3.0-dp.1)
 
-**Repositories Released**
+### **Repositories Released**
 
 | **Repository Released**     | **Branch name** | **Tags**    |
 | --------------------------- | --------------- | ----------- |
@@ -110,9 +110,9 @@ Refer [API Documentation](https://mosip.stoplight.io/docs/partner-management-por
 
 ### Test Report
 
-For details on the test results, refer [here](file:///wiki/spaces/PMS/pages/1376780627/Test+Report).
+For details on the test results, refer [here](test-report.md).
 
-#### Other Documentation
+## Other Documentation
 
-* [Technology Stack](file:///wiki/spaces/PMS/pages/1373896882/Technology+Stack)
-* [Browsers Supported](file:///wiki/spaces/PMS/pages/1373765816/Browsers+Supported)
+* [Technology Stack](../../modules/partner-management-services/pms-revamp/auth-partner/technical-overview/technology-stack.md)
+* [Browsers Supported](../../modules/partner-management-services/pms-revamp/auth-partner/technical-overview/browsers-supported.md)
