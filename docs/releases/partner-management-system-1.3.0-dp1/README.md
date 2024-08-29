@@ -1,4 +1,4 @@
-# Partner Management System 1.3.0 DP1
+# Partner Management System 1.3.0-dp.1
 
 ## Releases : 1.3.0-dp.1
 
@@ -8,7 +8,7 @@
 
 **Release Type**:**:** Developer Preview Release
 
-**Release Date**: 27th Aug, 2024
+**Release Date**: 28th Aug, 2024
 
 ### Overview
 
@@ -51,7 +51,7 @@ The **key features** of Authentication Partner incorporated in this release are:
 
 For detailed description of the above features, refer to [Feature Documentation](../../modules/partner-management-services/pms-revamp/auth-partner/functional-overview/features.md).
 
-**Note:** All other existing services offered by earlier version of Partner Management Portal (Version 1.2.0.1) for roles such as Partner Admin, Device Provider, FTM Chip provider etc will continue to work in the previous UI until our revamp incorporates all these features in upcoming releases.
+**Note:** All other existing services offered by earlier version of Partner Management Portal (Version 1.2.0.2) for roles such as Partner Admin, Device Provider, FTM Chip provider etc will continue to work in the previous UI until our revamp incorporates all these features in upcoming releases.
 
 To know more about the upcoming features planned as part of PMS Revamp for this year, please check out [Roadmap 2024](../../roadmap-2024-2025.md).
 

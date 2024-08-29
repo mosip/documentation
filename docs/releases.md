@@ -6,7 +6,7 @@
 
 * Partner Management System v1.3.0-dp.1
 * Developer Preview Release1
-* Date: 27th Aug, 2024
+* Date: 28th Aug, 2024
 * [Release Notes](releases/partner-management-system-1.3.0-dp1/)
 
 **Version:** v1.2.2.0 **(Mosip - Config)**

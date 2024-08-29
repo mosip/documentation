@@ -171,7 +171,7 @@
   * [MOSIP Branching Strategy](mosip-branching-strategy.md)
   * [Community Calendars](community/community-calendar.md)
 * [📖 Releases](releases.md)
-  * [Partner Management System 1.3.0 DP1](releases/partner-management-system-1.3.0-dp1/README.md)
+  * [Partner Management System 1.3.0-dp.1](releases/partner-management-system-1.3.0-dp1/README.md)
     * [Test Report](releases/partner-management-system-1.3.0-dp1/test-report.md)
   * [1.2.2.0 (Mosip - Config)](releases/1.2.2.0-mosip-config.md)
   * [Api Test Commons Releases](releases/api-test-commons-releases.md)

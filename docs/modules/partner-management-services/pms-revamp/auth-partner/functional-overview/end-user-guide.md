@@ -190,7 +190,7 @@ Before a Partner can upload a ‘CA Signed Certificate’ it is prerequisite tha
 
 <figure><img src="../../../../../.gitbook/assets/pms_upload_partner_vertificate_1.png" alt=""><figcaption></figcaption></figure>
 
-2. Select the CA signed partner certificate from local system by tapping on the upload section (blue area).
+3. Select the CA signed partner certificate from local system by tapping on the upload section (blue area).
 
 <figure><img src="../../../../../.gitbook/assets/pms_upload_partner_vertificate_2.png" alt=""><figcaption></figcaption></figure>
 
@@ -335,32 +335,28 @@ You can view your organisation name and username on the top right called 'User P
 
 ## Reupload a new partner certificate through the following steps
 
-* Login to PMP and Go to Dashboard.
-* Click on Partner Certificate option in the dashboard / side panel / hamburger menu ( <img src="../../../../../.gitbook/assets/pms_hamburger_menu.png" alt="" data-size="line"> ), you will be redirected to list view of partner certificate.
+1. Login to PMP and Go to Dashboard.
+2. Click on Partner Certificate option in the dashboard / side panel / hamburger menu ( <img src="../../../../../.gitbook/assets/pms_hamburger_menu.png" alt="" data-size="line"> ), you will be redirected to list view of partner certificate.
 
 <figure><img src="../../../../../.gitbook/assets/pms_dashboard.png" alt=""><figcaption></figcaption></figure>
 
-* Click on Re-Upload button of Authentication Partner Type.
+3. Click on Re-Upload button of Authentication Partner Type.
 
 <figure><img src="../../../../../.gitbook/assets/pms_reupload_partner_certificate_1.png" alt=""><figcaption></figcaption></figure>
 
-*   Re-upload certificate pop-up window appears. The time and date of previous certificate upload is also displayed for user reference.\
+4. Re-upload certificate pop-up window appears. The time and date of previous certificate upload is also displayed for user reference. Click on the certificate upload section (blue area) to upload a new partner certificate from the local system.&#x20;
 
+<figure><img src="../../../../../.gitbook/assets/pms_reupload_partner_certificate_2.png" alt=""><figcaption></figcaption></figure>
 
-
-
-    <figure><img src="../../../../../.gitbook/assets/pms_reupload_partner_certificate_2.png" alt=""><figcaption></figcaption></figure>
-
-
-* Click on the certificate upload section (blue area) to upload a new partner certificate from the local system. After selecting the certificate from local system, the fetched certificate name is displayed, Click on Submit.
+5. After selecting the certificate from local system, the fetched certificate name is displayed, Click on Submit.
 
 <figure><img src="../../../../../.gitbook/assets/pms_reupload_partner_certificate_3.png" alt=""><figcaption></figcaption></figure>
 
-* Partner certificate upload success message is displayed.
+6. Partner certificate upload success message is displayed.
 
 <figure><img src="../../../../../.gitbook/assets/pms_reupload_partner_certificate_4.png" alt=""><figcaption></figcaption></figure>
 
-* Click on Close to come back to list view of partner certificate.
+7. Click on Close to come back to list view of partner certificate.
 
 <figure><img src="../../../../../.gitbook/assets/pms_reupload_partner_certificate_5.png" alt=""><figcaption></figcaption></figure>
 
@@ -368,20 +364,20 @@ You can view your organisation name and username on the top right called 'User P
 
 You can retrieve password in case you are unable to recall.
 
-Click on **Forgot Password** link displayed on login page to reset his password.
+1. Click on **Forgot Password** link displayed on login page to reset password.
 
 <figure><img src="../../../../../.gitbook/assets/pms_forgot_password_2.png" alt=""><figcaption></figcaption></figure>
 
-* Enter registered email address and submit, a message is displayed informing user that further instructions to reset password has been sent on te email address entered.
+2. Enter registered email address and submit, a message is displayed informing user that further instructions to reset password has been sent on te email address entered.
 
 <figure><img src="../../../../../.gitbook/assets/pms_forgot_password_3.png" alt=""><figcaption></figcaption></figure>
 
-* Click on the Reset password link received on his email address, you will be redirected to Change Password screen.
+3. Click on the Reset password link received on his email address, you will be redirected to Change Password screen.
 
 <figure><img src="../../../../../.gitbook/assets/pms_forgot_password_5.png" alt=""><figcaption></figcaption></figure>
 
-* Enter a new password that adheres to password policy and re enter to confirm before you save it.
+4. Enter a new password that adheres to password policy and re enter to confirm before you save it.
 
 <figure><img src="../../../../../.gitbook/assets/pms_forgot_password_4.png" alt=""><figcaption></figcaption></figure>
 
-* After clicking submit, This new password will be further used in subsequent logins
+5. After clicking submit, This new password will be further used in subsequent logins
