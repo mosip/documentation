@@ -102,6 +102,8 @@ To get started with the new interface of Partner Management Portal, refer to the
 
 To access the build and read through the deployment instructions, refer to the [Partner Management Services Deployment Guide](../../modules/partner-management-services/pms-revamp/technical-overview/build-and-development-guide.md).
 
+**Note**: The deployment script for the PMS module-wise test rig will be addressed in the next release. Meanwhile, users who wish to run automation tests can refer to the [documentation](https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/testrig) and deploy using the image `mosipid/apitest-pms:1.3.0-dp.1` .
+
 ### Configurations
 
 For details related to partner management services revamp configurations, refer to the [PMS Revamp Configuration Guide](../../modules/partner-management-services/pms-revamp/technical-overview/pms-configuration-guide.md)
