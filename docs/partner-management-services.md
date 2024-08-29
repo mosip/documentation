@@ -8,7 +8,7 @@ We are undertaking a comprehensive overhaul of our existing Partner Management P
 
 You can refer to the comprehensive documentation as below:
 
-* [PMS - Revamp](modules/partner-management-services/pms-revamp/) :  Documentation that includes the features in new UI
+* [PMS - Revamp](broken-reference) :  Documentation that includes the features in new UI
 * [PMS - Legacy](modules/partner-management-services/pms-existing/): Existing documentation (Old UI)
 
 ### Who are the partners in MOSIP?
@@ -53,6 +53,6 @@ Partner policies control the data that needs to be shared with a partner. The po
 
 ## Documentation
 
-[PMS Revamp](modules/partner-management-services/pms-revamp/)
+[PMS Revamp](broken-reference)
 
 [PMS Legacy](modules/partner-management-services/pms-existing/)
