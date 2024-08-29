@@ -49,7 +49,7 @@ The **key features** of Authentication Partner incorporated in this release are:
 * **Compatibility:**
   * Optimized for standard browser sizes (laptop/desktop) with responsive UI design for laptop/desktop views.
 
-For detailed description of the above features, refer to [Feature Documentation](../../modules/partner-management-services/functional-overview/partners/auth-partner/features.md).
+For detailed description of the above features, refer to [Feature Documentation](../../modules/partner-management-services/functional-overview/auth-partner/features.md).
 
 **Note:** All other existing services offered by earlier version of Partner Management Portal (Version 1.2.0.2) for roles such as Partner Admin, Device Provider, FTM Chip provider etc will continue to work in the previous UI until our revamp incorporates all these features in upcoming releases.
 
@@ -95,7 +95,7 @@ For code and implementation of Partner Management Services, refer [here](https:/
 
 For code and implementation of Partner Management Portal (revamp) , refer [here](https://github.com/mosip/partner-management-portal/tree/release-1.3.x).
 
-To get started with the new interface of Partner Management Portal, refer to the [Partner Management Portal End User Guide](../../modules/partner-management-services/functional-overview/partners/auth-partner/end-user-guide.md).
+To get started with the new interface of Partner Management Portal, refer to the [Partner Management Portal End User Guide](../../modules/partner-management-services/functional-overview/auth-partner/end-user-guide.md).
 
 ### Build and Deploy
 

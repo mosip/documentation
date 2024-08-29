@@ -105,5 +105,5 @@ Partners in MOSIP are created in a self-service mode. The partner visits the MOS
 To know more about each of the partners, click:
 
 1. [Auth partner/ Credential partner](auth-credential-partner.md)
-2. [Device Provide](../functional-overview/partners/device-provider-partner.md)
+2. [Device Provide](device-provider-partner.md)
 3. [FTM Provider](../../../ftm-provider-partner.md)
