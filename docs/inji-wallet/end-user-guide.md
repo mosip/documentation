@@ -250,15 +250,7 @@ Inji Wallet integrates with eSignet as an authorization layer to perform VC down
 
 </div>
 
-<div>
-
-<figure><img src="../.gitbook/assets/Download StayProtected Insurance VC_Step10.png" alt="" width="188"><figcaption><p>            Download insurance VC   </p></figcaption></figure>
-
- 
-
-<figure><img src="../.gitbook/assets/Download StayProtected Insurance VC_Step11.png" alt="" width="188"><figcaption></figcaption></figure>
-
-</div>
+<figure><img src="../.gitbook/assets/Download insurance VC.png" alt="" width="375"><figcaption><p>Download insurance VC</p></figcaption></figure>
 
 ## Detailed view of the downloaded VC
 
@@ -268,15 +260,7 @@ Once we click on the downloaded VC on the Home Page, the detailed view opens up 
 
 Users can see all the details of the National ID in the detailed view. In addition, the user can access the quick access menu (...) on the top right to perform actions such as Pin/Unpin, Share, Share with Selfie, QR Code Login, view Activity Log, and Remove from the detailed view of the VC.
 
-<div>
-
-<figure><img src="../.gitbook/assets/Detailed View of National ID VC_Step1.png" alt="" width="188"><figcaption><p>Detailed view of National ID</p></figcaption></figure>
-
- 
-
-<figure><img src="../.gitbook/assets/Detailed View of National ID VC_Step2.png" alt="" width="188"><figcaption></figcaption></figure>
-
-</div>
+<figure><img src="../.gitbook/assets/Detailed view of National ID (1).png" alt="" width="375"><figcaption><p>Detailed view of National ID</p></figcaption></figure>
 
 ### Detailed View of Insurance VC
 
@@ -284,17 +268,21 @@ Users can see all the Insurance policy details in the detailed view along with t
 
 <div>
 
-<figure><img src="../.gitbook/assets/Detailed View of Insurance VC_Step1.png" alt="" width="188"><figcaption><p>Detailed view of insurance VC</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Detailed View of Insurance VC_Step1.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/Detailed View of Insurance VC_Step2.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Detailed View of Insurance VC_Step2.png" alt="" width="188"><figcaption><p>Detailed view of insurance VC</p></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/Detailed View of Insurance VC_Step3.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
 ### Viewing the history of the downloaded VC
 
-After completing several scenarios, we can find it by selecting the third icon in the bottom right corner when we navigate to the history page. This page will display a comprehensive list of all the events that have occurred.
+After completing several scenarios, we can find it by selecting the third icon in the bottom right corner when we navigate to the history page. This page will display a comprehensive list of all the events.
 
 <div align="center">
 
@@ -320,13 +308,13 @@ Users can view the activity logs of a VC from the Home Page or the detailed view
 
 </div>
 
-### Sharing Credentials
+## Sharing Credentials
 
 ## Pre-requisites
 
-* Two or more devices with Inji Wallet installed are required for sharing credentials. The relying party's phone should be an Android device.
+* Two or more devices with Inji Wallet installed are required to share credentials. The relying party's phone should be an Android device.
 * All required permissions like Bluetooth, location, and camera access are enabled on both devices.
-* The parties involved are usually a Resident (sharing party) who wishes to share their credentials with a Relying party (receiving party), which could be a banker, health worker, or other professional service.
+* The parties involved are usually a Resident (sharing party) who wishes to share their credentials with a Relying party (receiving party), a banker, a health worker, or other professional service.
 
 Users can now share their credentials using any of the methods listed below:
 
@@ -477,15 +465,7 @@ Let us understand the process of sharing credentials using an example and see th
 
 </div>
 
-<div>
-
-<figure><img src="../.gitbook/assets/Resident_Step10 (1).png" alt="" width="188"><figcaption><p>  On Resident's wallet</p></figcaption></figure>
-
- 
-
-<figure><img src="../.gitbook/assets/Resident_Step11.png" alt="" width="188"><figcaption></figcaption></figure>
-
-</div>
+<figure><img src="../.gitbook/assets/On Resident&#x27;s wallet.png" alt="" width="375"><figcaption><p>On Resident's wallet</p></figcaption></figure>
 
 **On the Relying Party's phone**:
 
@@ -631,15 +611,7 @@ There are two ways to activate the VC:
 * The second option is to click on the "Activate for online login" menu option by clicking on the quick access menu (...) of the card from the detailed view of the VC.
 * A confirmation alert message will be prompted upon clicking the "Activate for online login" option. Once permission is granted, the user will be directed to an OTP screen. After entering the correct OTP, the VC will be activated and projected on the screen with the same message.
 
-<div>
-
-<figure><img src="../.gitbook/assets/Veridonia National ID VC Activation_Step1.png" alt="" width="188"><figcaption><p>Activating a VC</p></figcaption></figure>
-
- 
-
-<figure><img src="../.gitbook/assets/Veridonia National ID VC Activation_Step2.png" alt="" width="188"><figcaption></figcaption></figure>
-
-</div>
+<figure><img src="../.gitbook/assets/Activating a VC.png" alt="" width="375"><figcaption><p>Activating a VC</p></figcaption></figure>
 
 <div>
 
@@ -663,49 +635,17 @@ There are two ways to remove/delete a VC from the wallet:
 * The second option is to choose the Remove from Wallet menu option from the quick access menu (...) of the card from the detailed view of the VC.
 * Upon clicking this option, the user will be prompted with a pop-up for confirmation. If the user chooses, “Yes, I confirm” the VC will be removed from the wallet.
 
-<div>
+<figure><img src="../.gitbook/assets/Deleting a VC 1.png" alt="" width="375"><figcaption><p>Deleting a VC</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/Deleting a VC_Step1.png" alt="" width="188"><figcaption><p>Deleting a VC</p></figcaption></figure>
-
- 
-
-<figure><img src="../.gitbook/assets/Deleting a VC_Step2.png" alt="" width="188"><figcaption></figcaption></figure>
-
-</div>
-
-<div>
-
-<figure><img src="../.gitbook/assets/Deleting a VC_Step3.png" alt="" width="188"><figcaption><p>Deleting a VC</p></figcaption></figure>
-
- 
-
-<figure><img src="../.gitbook/assets/Deleting a VC_Step4.png" alt="" width="188"><figcaption></figcaption></figure>
-
-</div>
+<figure><img src="../.gitbook/assets/Deleting a VC 2.png" alt="" width="375"><figcaption><p>Deleting a VC</p></figcaption></figure>
 
 ## Search
 
 Users can now search for a VC by providing a search string in the search bar. VCs that match the search criteria will be displayed.
 
-<div>
+<figure><img src="../.gitbook/assets/searching a VC 1.png" alt="" width="375"><figcaption><p>Search for a VC</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/Search Step1.png" alt="" width="188"><figcaption><p>Search for a VC</p></figcaption></figure>
-
- 
-
-<figure><img src="../.gitbook/assets/Search Step2.png" alt="" width="188"><figcaption></figcaption></figure>
-
-</div>
-
-<div>
-
-<figure><img src="../.gitbook/assets/Search Step3.png" alt="" width="188"><figcaption><p>Search for a VC</p></figcaption></figure>
-
- 
-
-<figure><img src="../.gitbook/assets/Search Step4.png" alt="" width="188"><figcaption></figcaption></figure>
-
-</div>
+<figure><img src="../.gitbook/assets/search a vc 2.png" alt="" width="375"><figcaption><p>Search for a VC</p></figcaption></figure>
 
 ## Data backup and restore
 
