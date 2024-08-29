@@ -49,11 +49,8 @@ The below screenshots explain the next steps after you get access.
 
 ### First launch of the app
 
-* Upon launching the app, the MOSIP logo will be displayed before the language filter appears.
 * The chosen language will be reflected within the app interface. Subsequently, a five-page tutorial for the Inji Wallet will be presented, followed by the option to secure the app.
 * This can be achieved through a PIN or the device's Biometrics (such as fingerprint or facial recognition). Once the setting is done, users will be directed to the app's home page.
-
-**On Android Device**
 
 <div align="center">
 
@@ -61,7 +58,7 @@ The below screenshots explain the next steps after you get access.
 
  
 
-<figure><img src="../.gitbook/assets/First Launch of the App_Step2.png" alt="" width="188"><figcaption><p>First launch on android device</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/First Launch of the App_Step2.png" alt="" width="188"><figcaption><p>First launch of app</p></figcaption></figure>
 
  
 
@@ -75,7 +72,7 @@ The below screenshots explain the next steps after you get access.
 
  
 
-<figure><img src="../.gitbook/assets/First Launch of the App_Step5.png" alt="" width="188"><figcaption><p>First launch on android device</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/First Launch of the App_Step5.png" alt="" width="188"><figcaption><p>First launch of app</p></figcaption></figure>
 
  
 
@@ -89,7 +86,7 @@ The below screenshots explain the next steps after you get access.
 
  
 
-<figure><img src="../.gitbook/assets/First Launch of the App_Step8.png" alt="" width="188"><figcaption><p>First launch on android device</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/First Launch of the App_Step8.png" alt="" width="188"><figcaption><p>First launch of app</p></figcaption></figure>
 
  
 
@@ -103,7 +100,7 @@ The below screenshots explain the next steps after you get access.
 
  
 
-<figure><img src="../.gitbook/assets/First Launch of the App_Step11.png" alt="" width="188"><figcaption><p>First launch on android device</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/First Launch of the App_Step11.png" alt="" width="188"><figcaption><p>First launch of app</p></figcaption></figure>
 
  
 
@@ -117,7 +114,7 @@ The below screenshots explain the next steps after you get access.
 
  
 
-<figure><img src="../.gitbook/assets/First Launch of the App_Step13.png" alt="" width="188"><figcaption><p>First launch on android device</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/First Launch of the App_Step13.png" alt="" width="188"><figcaption><p>First launch of app</p></figcaption></figure>
 
  
 
