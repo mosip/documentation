@@ -8,7 +8,7 @@
 
 **Release Type**:**:** Developer Preview Release
 
-**Release Date**: 28th Aug, 2024
+**Release Date**: Coming Soon
 
 ### Overview
 
