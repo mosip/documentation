@@ -8,7 +8,7 @@
 
 **Release Type**:**:** Developer Preview Release
 
-**Release Date**: Coming Soon
+**Release Date**: 2nd Sep, 2024
 
 ### Overview
 
@@ -73,12 +73,7 @@ For more details on all the open issues, please refer [here](https://mosip.atlas
 
 ### **Repositories Released**
 
-| **Repository Released**     | **Branch name** | **Tags**    |
-| --------------------------- | --------------- | ----------- |
-| partner-management-services | release-1.3.x   | v1.3.0-dp.1 |
-| partner-management-portal   | release-1.3.x   | v1.3.0-dp.1 |
-| keymanager                  | release-1.2.1.x | v1.2.1.0    |
-| artifactory-ref-impl        | release-1.2.0.x | v1.2.0.3    |
+<table data-header-hidden><thead><tr><th width="491"></th><th></th></tr></thead><tbody><tr><td><strong>Repository Released</strong></td><td><strong>Tags</strong></td></tr><tr><td>partner-management-services</td><td><a href="https://github.com/mosip/partner-management-services/tree/v1.3.0-dp.1">v1.3.0-dp.1</a></td></tr><tr><td>partner-management-portal</td><td><a href="https://github.com/mosip/partner-management-portal/tree/v1.3.0-dp.1">v1.3.0-dp.1</a></td></tr><tr><td>keymanager</td><td><a href="https://github.com/mosip/keymanager/tree/v1.2.1.0">v1.2.1.0</a></td></tr><tr><td>artifactory-ref-impl</td><td><a href="https://github.com/mosip/artifactory-ref-impl/tree/v1.2.0.3">v1.2.0.3</a></td></tr></tbody></table>
 
 ### Compatible Modules
 
