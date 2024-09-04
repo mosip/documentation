@@ -82,7 +82,7 @@ Default CRON expression for scheduling the Jobs.
 *   The maximum duration to which registration is permitted without sync of master data
 
     `mosip.registration.sync_transaction_no_of_days_limit=5`
-*   Allowed a number of invalid login attempts
+*   Allowed several invalid login attempts
 
     `mosip.registration.invalid_login_count=50`
 *   Configuration is used to check if any sync job is missed/ failed beyond expected days, this configuration is checked every time the operator clicks on any registration process. We follow the below convention to create this config key.
@@ -139,3 +139,11 @@ Ensure that the preview and acknowledge templates are present in the `template t
 `reg-android-preview-template-part`
 
 `reg-android-ack-template-part`
+
+#### Logout <a href="#logout-.1" id="logout-.1"></a>
+
+Logout from ARC will check for any running background tasks in the background. Ask the user if the user still wants to logout from the application.
+
+* If the user clicks on logout on the popup, all the jobs running and scheduled jobs will stop.
+* If no jobs are running in the background, the user will simply log out and navigate to the login screen.
+* No configuration changes are required to log out of ARC.

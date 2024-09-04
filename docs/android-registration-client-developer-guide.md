@@ -23,7 +23,7 @@ git clone -b feature-flutter https://github.com/mosip/android-registration-clien
 
 **Active Branches**:
 
-* [release-0.9.x](https://github.com/mosip/android-registration-client/tree/release-0.9.x)(developer release branch)
+* [release-0.11.x](https://github.com/mosip/android-registration-client/tree/release-0.11.x)(developer release branch)
 * [develop](https://github.com/mosip/android-registration-client/tree/develop)(active development branch)
 
 #### Step 2: Set up Flutter in Android Studio
@@ -35,11 +35,16 @@ git clone -b feature-flutter https://github.com/mosip/android-registration-clien
 5. To ensure proper functionality, configure the Flutter SDK path by navigating to `File > Settings > Languages & Frameworks > Flutter` and specifying the Flutter SDK path as the location where you have installed Flutter.
 6. Finally, save the changes by clicking on the "Apply" button.
 
-**Customising the Registration Client**
+**Customizing the Registration Client**
 
 * Styling of the application can be configured by modifying these files `lib/utils/app_style.dart, lib/utils/app_config.dart`
-* Application language bundles can be added to this path `lib/l10n`.
-* Label and application logo can be changed here `android/app/src/main/AndroidManifest.xml`
+* Application language bundles can be added to this path `lib/l10n` After adding the bundle run the below command to generate Localization data (Required for the first time).
+
+```
+flutter gen-l10n
+```
+
+* The label and application logo can be changed here android/app/src/main/AndroidManifest.xml
 
 #### Step 3: Build and Run the Application
 
@@ -47,15 +52,15 @@ git clone -b feature-flutter https://github.com/mosip/android-registration-clien
 * Ensure you have connected an Android device or initiated an Android emulator.
 * Open the terminal within Android Studio or use an external terminal.
 * Navigate to the `android-registration-client` directory.
-* Run the following command in order to build and execute the application:
+* Run the following command to build and execute the application:
 
 ```
 flutter run
 ```
 
-#### Step 4: Build, debug and release APK
+#### Step 4: Build, debug, and release APK
 
-Excecute the commands below to debug and release the APK
+Execute the commands below to debug and release the APK
 
 ```
 // Debug APK
