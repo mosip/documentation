@@ -6,27 +6,29 @@
 
 **Support**: Beta Release
 
-**Release Date**: 4th Sept, 2024
+**Release Date**: 5th Sept, 2024
 
 ### **Overview**
 
 The Android Registration Client is a tablet application designed to provide a mobile version of the existing desktop [Registration Client](https://docs.mosip.io/1.2.0/modules/registration-client).  It has been developed to ensure accessibility on all Android devices and to meet the mobility needs of countries implementing MOSIP.
 
-Version 0.10.0 of the Android Registration Client is the beta release, covering features such as Operator Onboarding, Update Operator Onboarding, and the dashboard.
+The new features included in this release, along with those from the[ Android Registration Client DP1](https://docs.mosip.io/1.2.0/releases/release-notes-android-reg-client-dp1) , [ Android Registration Client 0.9.0](https://docs.mosip.io/1.2.0/releases/release-notes-android-reg-client-0.9.0), and [Android Registration Client 0.10.0](https://docs.mosip.io/1.2.0/releases/android-registration-client-v0.10.0) releases, are:
 
-The new features included in this release, along with those from the[ Android Registration Client DP1](https://docs.mosip.io/1.2.0/releases/release-notes-android-reg-client-dp1) and[ Android Registration Client 0.9.0](https://docs.mosip.io/1.2.0/releases/release-notes-android-reg-client-0.9.0) releases, are:
+Version 0.11.0 of the Android Registration Client is the beta release, covering features such as:
 
-* **Operator Onboarding:** This feature enables Operators to onboard themselves onto the Android Registration Client.
-* **Update Operator Onboarding:** This feature enables the Operators to update their biometrics in the Android Registration Client.
-* **Dashboard:** This feature enables operators to view statistics related to packet creation and upload, as well as the list of users mapped to the device and the status of those users.
+1. **Supervisor's Approval:** This feature will only be available for users having a “Supervisor” role. This is an additional check by the Supervisor where they will have to go through each application to make sure the details filled are coherent. At this stage, the Supervisor can either Approve the Application or he can Reject it.
+2. Manual Application upload/export: This feature can be used to sync and upload a packet if there is internet connectivity and in case of lack of internet connectivity, the User can also export the packet to their local device storage.
+3. Update UIN: This feature can be used by the Residents when they want to update their demographic data, documents, and biometrics.
+4. Logout: Using this feature, the user can logout once they are done with their registration tasks and other activities.
+5. Update operator's biometrics: This feature can be used by the operator to update their biometrics.
 
 **Note**: Compatible with[ MOSIP version 1.2.0](https://docs.mosip.io/1.2.0/releases/release-notes)
 
 ### **Repository Released**
 
-| **Repositories**            | **Tags Released**      |
-| --------------------------- | ---------------------- |
-| android-registration-client | **Insert the version** |
+| **Repositories**            | **Tags Released** |
+| --------------------------- | ----------------- |
+| android-registration-client | 0.11.0            |
 
 ### **Build and Deploy**
 
@@ -42,4 +44,4 @@ To learn more about the available features, processes, and user interface, refer
 
 ### **Known Issues**
 
-To view the list of known issues, refer **here**. **Insert the correct link here.**
+To view the list of known issues, refer [**here**](https://mosip.atlassian.net/issues/RCF-969?jql=parent%3Drcf-31%20and%20issuetype%3Dbug%20and%20status%20not%20in%20%28closed%2C%20Canceled%29).&#x20;

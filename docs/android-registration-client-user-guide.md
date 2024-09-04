@@ -49,15 +49,15 @@ To begin the Registration process, the Operator is required to follow the steps 
 
 <div align="center">
 
-<figure><img src=".gitbook/assets/home_page.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/home_page.png" alt="" width="375"><figcaption><p>New Registration</p></figcaption></figure>
 
 </div>
 
-<figure><img src=".gitbook/assets/language-select-1.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/language-select-1.png" alt="" width="375"><figcaption><p>New registration</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/language-select-2.png" alt="" width="380"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/language-select-2.png" alt="" width="380"><figcaption><p>New Registration</p></figcaption></figure>
 
-4. The operator will be redirected to the Consent page, where the resident must agree to the `terms and conditions` in order to proceed.
+4. The operator will be redirected to the Consent page, where the resident must agree to the `terms and conditions` to proceed.
 5. After accepting consent, the Operator will need to fill out the demographic data of the resident, including their name, age, date of birth, and address. Once all mandatory fields are completed, the **Continue** button will be enabled.
 
 <figure><img src=".gitbook/assets/consent.png" alt="" width="375"><figcaption></figcaption></figure>
@@ -128,7 +128,7 @@ In the event that a thumb is missing or experiencing difficulties that prevent i
 * To initiate the Iris scan, the Operator is required to click on the **Scan** button.
 * This action will allow the Operator to capture the Iris image.
 * Once the Iris has been successfully captured, the quality of the image will be displayed on the screen.
-* It is essential for the quality score to meet the established threshold limit.
+* The quality score needs to meet the established threshold limit.
 * The Operator has three opportunities to capture the biometric data.
 
 If one or both of the Irises are not detected or encounter issues that prevent successful capture, the Operator has the option to mark an exception. To do so, the Operator must identify the specific Iris that is problematic and indicate the type of exception- either _Temporary_ or _Permanent_. Additionally, the Operator may provide any relevant comments.
@@ -172,23 +172,81 @@ Upon successful verification of the credentials, the packet will be uploaded to 
 
 <figure><img src=".gitbook/assets/Acknowledgement.png" alt="" width="375"><figcaption></figcaption></figure>
 
-Upon receipt of the acknowledgment, the packet is uploaded to the [Registration Processor](registration-processor.md). Once the packet has been successfully processed, a unique identification number (UIN) is generated.
+**Supervisor’s Approval:**
 
-On the acknowledgment page, the operator will have two options available:
+Upon successful verification of the credentials, the acknowledgment will be displayed, and the Application will be moved to the “Supervisor’s Approval” section. This feature will only be available for the User who has a Supervisor’s role assigned to him.
+
+Once the packet is created by the Operator, as an additional check, the Supervisor will have to go through each application to make sure the details filled are coherent.
+
+**Step 1:** The user goes to the “Supervisor’s Approval” section from the Operational Tasks section. The user will be taken to the page where they can see the list of all the Applications created by the Operator. All of these Applications will be “Pending”.
+
+<div>
+
+<figure><img src=".gitbook/assets/supervisor approval 1.png" alt=""><figcaption></figcaption></figure>
+
+ 
+
+<figure><img src=".gitbook/assets/supervisor approval 2.png" alt=""><figcaption></figcaption></figure>
+
+ 
+
+<figure><img src=".gitbook/assets/supervisor approval 3.png" alt=""><figcaption></figcaption></figure>
+
+</div>
+
+**Step 2:** The Supervisor then clicks on the Application ID one by one. At this stage, the Supervisor can either Approve the Application or he can Reject it. If the Supervisor decides to reject it, they also will have to mandatorily mention the reason for rejection.
+
+**Step 3:** Once the Application has been Approved or Rejected, the Supervisor will have to authenticate himself by clicking on the “Submit” button and thereby entering their Username and Password. The User can also bulk submit the Applications. The only pre-requisite is that the packet has to be in Approved or Rejected status (pending Applications cannot be submitted for uploading). Once they have successfully authenticated, the Application will be removed from the “Supervisor’s Approval” section and will be moved to the “Manage Application” Section.
+
+<div>
+
+<figure><img src=".gitbook/assets/supervisor approval 4.png" alt=""><figcaption></figcaption></figure>
+
+ 
+
+<figure><img src=".gitbook/assets/supervisor approval 5.png" alt=""><figcaption></figcaption></figure>
+
+ 
+
+<figure><img src=".gitbook/assets/supervisor approval 6.png" alt=""><figcaption></figcaption></figure>
+
+</div>
+
+**Step 4:** Once the Application is either Approved or Rejected by the Supervisor and is submitted, those packets can be uploaded to the server from the “Manage Application” section or can be exported to their local device storage.
+
+**Manual Application upload/export**
+
+Once the Application is either Approved or Rejected by the Supervisor, those packets can be uploaded to the server from the “Manage Application” section.
+
+<div>
+
+<figure><img src=".gitbook/assets/export n upload 1.png" alt="" width="375"><figcaption></figcaption></figure>
+
+ 
+
+<figure><img src=".gitbook/assets/export n upload 2.png" alt="" width="375"><figcaption></figcaption></figure>
+
+</div>
+
+**Step 1:** The user selects the packets that they want to upload (bulk upload can also be done). Once selected, the user will click on the “Upload” button after which the packet syncs and gets uploaded if there is internet connectivity.
+
+In case of a lack of internet connectivity, the User can also export the packet to their local device storage. They can also bulk export the packets by choosing the Applications and clicking on the Export button.
+
+On choosing to upload, the packet is uploaded to the [Registration Processor](https://docs.mosip.io/1.2.0/modules/registration-processor). Once the packet has been successfully processed, a unique identification number (UIN) is generated.
 
 1. **Print**- The operator can click on this option to obtain a physical copy of the acknowledgment.
 2. **New Registration**- The operator can initiate another registration by clicking on this option.
 
 In summary, the aforementioned steps can be followed by the user (Operator/ Supervisor) to register an individual by capturing demographic data, documents, and biometric data to generate their UIN.
 
-**Operator Onboarding**: To begin the Onboarding process, the Operator is required to follow the steps outlined below. The operator, in order to log in to the Android Registration Client, will have to onboard himself. This functionality will be available on first-time online login only.
+**Operator Onboarding**: To begin the Onboarding process, the Operator is required to follow the steps outlined below. The operator, to log in to the Android Registration Client, will have to onboard himself. This functionality will be available on first-time online login only.
 
 a. On logging in for the first time, the Operator will be taken to the screen where they will have the following two options:
 
-1. **Get onboarded:** This flow is present for the system to verify the Operator’s biometrics with their registered biometrics. This is to enable local deduplication.
+1. **Get onboard:** This flow is present for the system to verify the Operator’s biometrics with their registered biometrics. This is to enable local deduplication.
 2. **Skip to home:** This flow is to dodge “Operator’s Onboarding”. If the user selects this, they will be taken to the “Homepage” after which the user can get started with Resident registration. One of the prerequisites of this flow is to have the “Default” role mapped to the center.
 
-<figure><img src=".gitbook/assets/image-20240612-100557.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image-20240612-100557.png" alt="" width="375"><figcaption><p>Operator’s Onboarding</p></figcaption></figure>
 
 3.  **Steps to Onboard Operator’s Biometrics:**
 
@@ -220,3 +278,71 @@ d. Once all the biometrics are duly captured, the below acknowledgment message w
 <figure><img src=".gitbook/assets/dashboard.png" alt="" width="375"><figcaption></figcaption></figure>
 
 In summary, the aforementioned steps can be followed by the user (Operator/ Supervisor) to onboard themselves, update their biometrics, or view the Dashboard.
+
+**Update UIN**
+
+&#x20;In a scenario where the Resident wants to update their data, they can do so by letting the Operator know their UIN along with the data that needs to be updated. Residents can update their demographic details, documents, and biometrics using this feature.
+
+**Step 1:** Go to “Update UIN” from the Homepage
+
+**Step 2:** Enter the UIN of the Resident and choose the data to be updated.
+
+<figure><img src=".gitbook/assets/update uin 1.png" alt="" width="375"><figcaption></figcaption></figure>
+
+**Step 3:** Enter the data that the Resident wants to update. It could demographic data, documents, and biometrics.
+
+<div>
+
+<figure><img src=".gitbook/assets/update uin 2.png" alt=""><figcaption></figcaption></figure>
+
+ 
+
+<figure><img src=".gitbook/assets/update uin 3.png" alt=""><figcaption></figcaption></figure>
+
+ 
+
+<figure><img src=".gitbook/assets/update uin 4.png" alt=""><figcaption></figcaption></figure>
+
+</div>
+
+**Step 4:** Once all the required data is filled, the User will be taken to the Preview screen (data can still be modified) and then to the Acknowledgment screen (data cannot be updated hereafter).
+
+<div>
+
+<figure><img src=".gitbook/assets/update uin 5.png" alt=""><figcaption></figcaption></figure>
+
+ 
+
+<figure><img src=".gitbook/assets/update uin 6.png" alt=""><figcaption></figcaption></figure>
+
+ 
+
+<figure><img src=".gitbook/assets/update uin 7.png" alt=""><figcaption></figcaption></figure>
+
+</div>
+
+**Step 5:** The user will then have to authenticate himself using his Username and Password. Once the authentication is successful, the packet will be uploaded to the server.
+
+5. **Logout:** Using this feature, once the user is done with their registration and other activities, they can logout. If no background tasks are running, the user will be immediately logged out. If there are tasks (like sync) running in the background, the user will be notified about the same. From here if the User wants to cancel the logout, the background activities will keep running where whereas if the user chooses to logout, they will be logged out and the background activities will be terminated.
+
+<figure><img src=".gitbook/assets/logout 1.png" alt="" width="375"><figcaption><p>Logout</p></figcaption></figure>
+
+#### Update operators biometrics
+
+This feature will be used by the operators to update their biometrics. They can follow the below steps for the same:
+
+a. The user will be taken to the Biometrics Capture Homepage where he will be able to see all the below biometrics:
+
+1. Face capture
+2. Iris capture
+3. Left-hand finger capture
+4. Right-hand finger capture
+5. Thumb capture
+
+<figure><img src=".gitbook/assets/update operator&#x27;s biometrics.png" alt="" width="375"><figcaption></figcaption></figure>
+
+b. The user will then have to capture all the above-listed biometrics one by one.&#x20;
+
+c. Steps to capture the biometrics are given [**here**](https://docs.mosip.io/1.2.0/modules/android-registration-client/android-registration-client-user-guide#face-photo-capture-process)**.**&#x20;
+
+d. Once all the biometrics are duly captured, the below acknowledgment message will be displayed on the screen.
