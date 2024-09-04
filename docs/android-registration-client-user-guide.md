@@ -49,30 +49,30 @@ To begin the Registration process, the Operator is required to follow the steps 
 
 <div align="center">
 
-<figure><img src=".gitbook/assets/home_page.png" alt="" width="375"><figcaption><p>New Registration</p></figcaption></figure>
+<figure><img src=".gitbook/assets/home_page.png" alt="" width="375"><figcaption><p>New registration</p></figcaption></figure>
 
 </div>
 
 <figure><img src=".gitbook/assets/language-select-1.png" alt="" width="375"><figcaption><p>New registration</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/language-select-2.png" alt="" width="380"><figcaption><p>New Registration</p></figcaption></figure>
+<figure><img src=".gitbook/assets/language-select-2.png" alt="" width="380"><figcaption><p>New registration</p></figcaption></figure>
 
 4. The operator will be redirected to the Consent page, where the resident must agree to the `terms and conditions` to proceed.
 5. After accepting consent, the Operator will need to fill out the demographic data of the resident, including their name, age, date of birth, and address. Once all mandatory fields are completed, the **Continue** button will be enabled.
 
-<figure><img src=".gitbook/assets/consent.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/consent.png" alt="" width="375"><figcaption><p>New registration</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/demographic-1.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/demographic-1.png" alt="" width="375"><figcaption><p>New registration</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/demographic-2.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/demographic-2.png" alt="" width="375"><figcaption><p>New registration</p></figcaption></figure>
 
 4. Upon clicking the **Continue** button, the Operator will be navigated to the `Document upload` page where they will need to:
    * Select the type of document (e.g. proof of identity, proof of address) from the drop-down menu.
    * Enter the **Reference Number** of the document.
 
-<figure><img src=".gitbook/assets/document-1.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/document-1.png" alt="" width="375"><figcaption><p>Document upload</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/document-2.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/document-2.png" alt="" width="375"><figcaption><p>Document upload</p></figcaption></figure>
 
 4. Upload the document by clicking on the **Scan** button to open the camera. The Operator can take a picture of the document and then choose from the following actions:
    * **Cancel**: Clicking on the "Cross" icon will remove the captured image and return the Operator to the previous screen.
@@ -80,11 +80,11 @@ To begin the Registration process, the Operator is required to follow the steps 
    * **Save**: Clicking on the "Save" button will save the captured image and return the Operator to the previous Document Upload page.
    * **Retake**: Clicking on the "Retake" button will remove the captured image, reopen the camera, and allow the Operator to take a new photo.
 
-<figure><img src=".gitbook/assets/document-3.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/document-3.png" alt="" width="375"><figcaption><p>Document upload</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/document-4.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/document-4.png" alt="" width="375"><figcaption><p>Document upload</p></figcaption></figure>
 
-8. After ensuring all required information has been accurately entered in the `Document Upload` screen, the Operator can proceed by clicking on the **Continue** button to access the `Biometric Capture` page. Here, the Operator can capture the biometric data of the Resident, including a face photo, fingerprint, and iris scan.
+8. After ensuring all required information has been accurately entered into the `Document Upload` screen, the Operator can proceed by clicking on the **Continue** button to access the `Biometric Capture` page. Here, the Operator can capture the biometric data of the Resident, including a face photo, fingerprint, and iris scan.
 
 #### **Face photo capture process**
 
@@ -93,11 +93,11 @@ To begin the Registration process, the Operator is required to follow the steps 
 * The Operator has three attempts to capture the biometric image.
 * It is important to note that no exceptions can be made for the face photo biometric capture process.
 
-<figure><img src=".gitbook/assets/biometric-14.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/biometric-14.png" alt="" width="375"><figcaption><p>Face photo capture process</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/biometric-15.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/biometric-15.png" alt="" width="375"><figcaption><p>Face photo capture process</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/biometric-16.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/biometric-16.png" alt="" width="375"><figcaption><p>Face photo capture process</p></figcaption></figure>
 
 #### **Biometric Data Capture Process**:
 
@@ -107,21 +107,21 @@ To begin the Registration process, the Operator is required to follow the steps 
 
 **Note**: Three attempts are provided to capture the biometric data.
 
-<figure><img src=".gitbook/assets/biometric-5.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/biometric-5.png" alt="" width="375"><figcaption><p>Biometric data capture process</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/biometric-6.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/biometric-6.png" alt="" width="375"><figcaption><p>Biometric data capture process</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/biometric-7.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/biometric-7.png" alt="" width="375"><figcaption><p>Biometric data capture process</p></figcaption></figure>
 
 #### **Fingerprint Capture Process**:
 
-In the event that a thumb is missing or experiencing difficulties that prevent its fingerprint from being captured, the Operator is authorized to indicate an **exception**. To mark an exception, the operator must select the affected thumb and specify the type of exception as either _Temporary_ or _Permanent_. Additionally, the operator may include any relevant additional comments.
+If a thumb is missing or experiencing difficulties that prevent its fingerprint from being captured, the Operator is authorized to indicate an **exception**. To mark an exception, the operator must select the affected thumb and specify the type of exception as either _Temporary_ or _Permanent_. Additionally, the operator may include any relevant additional comments.
 
-<figure><img src=".gitbook/assets/biometric-11.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/biometric-11.png" alt="" width="375"><figcaption><p>Fingerprint capture process</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/biometric-12.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/biometric-12.png" alt="" width="375"><figcaption><p>Fingerprint capture process</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/fingerprint.png" alt="" width="380"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/fingerprint.png" alt="" width="380"><figcaption><p>Fingerprint capture process</p></figcaption></figure>
 
 #### **Iris Scanning Process**:
 
@@ -133,17 +133,17 @@ In the event that a thumb is missing or experiencing difficulties that prevent i
 
 If one or both of the Irises are not detected or encounter issues that prevent successful capture, the Operator has the option to mark an exception. To do so, the Operator must identify the specific Iris that is problematic and indicate the type of exception- either _Temporary_ or _Permanent_. Additionally, the Operator may provide any relevant comments.
 
-<figure><img src=".gitbook/assets/biometric-2.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/biometric-2.png" alt="" width="375"><figcaption><p>Iris scanning process</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/biometric-3.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/biometric-3.png" alt="" width="375"><figcaption><p>Iris scanning process</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/biometric-4.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/biometric-4.png" alt="" width="375"><figcaption><p>Iris scanning process</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/biometric-17.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/biometric-17.png" alt="" width="375"><figcaption><p>Iris scanning process</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/preview-1.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/preview-1.png" alt="" width="375"><figcaption><p>Iris scanning process</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/preview-2.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/preview-2.png" alt="" width="375"><figcaption><p>Iris scanning process</p></figcaption></figure>
 
 9. After all the biometric data has been properly captured or any exceptions have been noted, the **Continue** button will be activated. The Operator can then proceed by clicking on the **Continue** button, which will redirect them to the **Preview** page. The Preview page will display the following information:
 
@@ -168,9 +168,9 @@ Upon successful verification of the credentials, the packet will be uploaded to 
 * QR code for the Application ID
 * Option to initiate a new registration process.
 
-<figure><img src=".gitbook/assets/operators authentication.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/operators authentication.png" alt="" width="375"><figcaption><p>Authentication page</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/Acknowledgement.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Acknowledgement.png" alt="" width="375"><figcaption><p>Authentication page</p></figcaption></figure>
 
 **Supervisor’s Approval:**
 
@@ -186,7 +186,7 @@ Once the packet is created by the Operator, as an additional check, the Supervis
 
  
 
-<figure><img src=".gitbook/assets/supervisor approval 2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/supervisor approval 2.png" alt=""><figcaption><p>Supervisor's approval</p></figcaption></figure>
 
  
 
@@ -204,7 +204,7 @@ Once the packet is created by the Operator, as an additional check, the Supervis
 
  
 
-<figure><img src=".gitbook/assets/supervisor approval 5.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/supervisor approval 5.png" alt=""><figcaption><p>Supervisor's approval</p></figcaption></figure>
 
  
 
@@ -220,7 +220,7 @@ Once the Application is either Approved or Rejected by the Supervisor, those pac
 
 <div>
 
-<figure><img src=".gitbook/assets/export n upload 1.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/export n upload 1.png" alt="" width="375"><figcaption><p>Manage application</p></figcaption></figure>
 
  
 
@@ -260,7 +260,7 @@ a. On logging in for the first time, the Operator will be taken to the screen wh
     4. Right-hand finger capture
     5. Thumb capture
 
-<figure><img src=".gitbook/assets/image-20240612-074118.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image-20240612-074118.png" alt="" width="375"><figcaption><p>Operator's biometrics</p></figcaption></figure>
 
 b. The user will then have to capture all the above-listed biometrics one by one.\
 c. Steps to capture the biometrics are given [**here**](android-registration-client-user-guide.md#face-photo-capture-process)**.**\
@@ -275,19 +275,19 @@ d. Once all the biometrics are duly captured, the below acknowledgment message w
       2. Username: This will show the list of usernames of the Users mapped to the device.
       3. Status: This will show the status of Users mapped to the device. This can take values such as onboarded, active, inactive, etc.
 
-<figure><img src=".gitbook/assets/dashboard.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/dashboard.png" alt="" width="375"><figcaption><p>User's dashboard</p></figcaption></figure>
 
 In summary, the aforementioned steps can be followed by the user (Operator/ Supervisor) to onboard themselves, update their biometrics, or view the Dashboard.
 
 **Update UIN**
 
-&#x20;In a scenario where the Resident wants to update their data, they can do so by letting the Operator know their UIN along with the data that needs to be updated. Residents can update their demographic details, documents, and biometrics using this feature.
+In a scenario where the Resident wants to update their data, they can do so by letting the Operator know their UIN along with the data that needs to be updated. Residents can update their demographic details, documents, and biometrics using this feature.
 
 **Step 1:** Go to “Update UIN” from the Homepage
 
 **Step 2:** Enter the UIN of the Resident and choose the data to be updated.
 
-<figure><img src=".gitbook/assets/update uin 1.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/update uin 1.png" alt="" width="375"><figcaption><p>Update UIN</p></figcaption></figure>
 
 **Step 3:** Enter the data that the Resident wants to update. It could demographic data, documents, and biometrics.
 
@@ -297,7 +297,7 @@ In summary, the aforementioned steps can be followed by the user (Operator/ Supe
 
  
 
-<figure><img src=".gitbook/assets/update uin 3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/update uin 3.png" alt=""><figcaption><p>Update data</p></figcaption></figure>
 
  
 
@@ -313,7 +313,7 @@ In summary, the aforementioned steps can be followed by the user (Operator/ Supe
 
  
 
-<figure><img src=".gitbook/assets/update uin 6.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/update uin 6.png" alt=""><figcaption><p>Acknowledge data</p></figcaption></figure>
 
  
 
@@ -325,7 +325,7 @@ In summary, the aforementioned steps can be followed by the user (Operator/ Supe
 
 5. **Logout:** Using this feature, once the user is done with their registration and other activities, they can logout. If no background tasks are running, the user will be immediately logged out. If there are tasks (like sync) running in the background, the user will be notified about the same. From here if the User wants to cancel the logout, the background activities will keep running where whereas if the user chooses to logout, they will be logged out and the background activities will be terminated.
 
-<figure><img src=".gitbook/assets/logout 1.png" alt="" width="375"><figcaption><p>Logout</p></figcaption></figure>
+<figure><img src=".gitbook/assets/logout 1.png" alt="" width="375"><figcaption><p>Logout screen</p></figcaption></figure>
 
 #### Update operators biometrics
 
@@ -339,7 +339,7 @@ a. The user will be taken to the Biometrics Capture Homepage where he will be ab
 4. Right-hand finger capture
 5. Thumb capture
 
-<figure><img src=".gitbook/assets/update operator&#x27;s biometrics.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/update operator&#x27;s biometrics.png" alt="" width="375"><figcaption><p>Update operator's biometrics</p></figcaption></figure>
 
 b. The user will then have to capture all the above-listed biometrics one by one.&#x20;
 
