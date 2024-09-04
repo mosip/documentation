@@ -62,7 +62,7 @@ If the resident has a biometric exception (such as a missing finger/eye or very 
 * **Packet Upload**: Once the packet sync is completed, the system will proceed to upload the packet to the server when an internet connection is available. If there is no network access, the system will attempt to upload the packet as soon as connectivity is established.
 * **Acknowledgment section**: Following the completion of the new registration process, an acknowledgment receipt is generated. This receipt includes the AID(Application ID), captured demographic data in the selected language, a photograph of the resident, and a ranking of each finger from 1 to 10, with 1 representing the finger with the best quality. The receipt is designed to be easily printed.
 
-5. **Operator onboarding**: To log in to the Android Registration Client, the operator must complete the onboarding process. This functionality is available only during the first online login. The operator will need to onboard by capturing their fingerprints, thumbprints, iris, and face. Once these are duly captured, the operator can start registering residents and using other services.
+5. **Operator onboarding**: To log in to the Android Registration Client, the operator must complete the onboarding process. This functionality is available only during the first online login. The operator must onboard by capturing their fingerprints, thumbprints, iris, and face. Once these are captured, the operator can start registering residents and using other services.
 6. **Dashboard:** The Operator can access the dashboard where he can view the following:
    1. **Packets created:** This will show the total number of packets created from the time the Android Registration Client was installed.
    2. **Packets Synced:** This will show the total number of packets synced from the time the Android Registration Client was installed.
@@ -71,6 +71,15 @@ If the resident has a biometric exception (such as a missing finger/eye or very 
       1. **User ID:** This will show the list of User IDs of the Users mapped to the device.
       2. **Username:** This will show the list of usernames of the Users mapped to the device.
       3. **Status:** This will show the status of Users mapped to the device. This can take values such as onboarded, active, inactive, etc.
+7. **Supervisor's Approval:** Once the packet is created by the Operator, as an additional check, the Supervisor will have to go through each application to make sure the details filled are coherent. At this stage, the Supervisor can either Approve the Application or he can Reject it. If the Supervisor decides to reject it, they also will have to mandatorily mention the reason for rejection. Once the Application has been Approved or Rejected, the Supervisor will have to authenticate himself by entering his Username and Password. Once they have successfully authenticated, the Application will be removed from the “Supervisor’s Approval” section and will be moved to the “Manage Application” Section.
+
+{% hint style="info" %}
+This feature will only be available for a users having “Supervisor” role.
+{% endhint %}
+
+5. **Manual Application upload/export:** Once the Application is either Approved or Rejected by the Supervisor, those packets can be uploaded to the server from the “Manage Application” section. If there is internet connectivity, the packet will be synced and uploaded to the server but in case of lack of internet connectivity, the User can also export the packet to their local device storage.
+6. **Update UIN:** In a scenario where the Resident wants to update their data, they can do so by letting the Operator know their UIN and the data that needs to be updated. Residents can update their demographic details, documents, and biometrics using this feature.
+7. **Logout:** Using this feature, once the user is done with their registration and other activities, they can logout. If no background tasks are running, the user will be immediately logged out. If there are tasks (like sync) running in the background, the user will be notified about the same. From here if the User wants to cancel the logout, the background activities will keep running whereas if the user chooses to logout, they will be logged out and the background activities will be terminated.
 
 ### Configuration Guide
 
