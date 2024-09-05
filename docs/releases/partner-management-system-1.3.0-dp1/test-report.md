@@ -113,3 +113,5 @@ The various metrics that assist in test tracking and efficiency are as follows:
 * **Partner-Management-Portal:**
 
 <figure><img src="../../.gitbook/assets/pms_sonar_report_pmp.png" alt=""><figcaption></figcaption></figure>
+
+Github link for 'Test Reports' is [here](https://github.com/mosip/test-management/tree/master/PMS%20Revamp/1.3.0%20dp1).
