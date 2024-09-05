@@ -23,20 +23,22 @@ This user guide is designed to provide assistance to Operators and Supervisors i
      * Enter Public Key
      * Enter Sign Public Key
    * Create the role `Default` in KeyCloak with all the other roles.
-   * Create the Operator’s user account in KeyCloak and set the password and assign the role as `Default`, `REGISTRATION_OFFICER`, `Registration Operator`, `REGISTRATION_SUPERVISOR`
+   * Create the Operator’s user account in KeyCloak set the password and assign the role as `Default`, `REGISTRATION_OFFICER`, `Registration Operator`, `REGISTRATION_SUPERVISOR`
    * Login into Admin Portal to perform the following and add the user:
-     * After login into Admin Portal, go to `User Zone Mapping` and add the zone for the user and activate the zone.
+     * After login into the Admin Portal, go to `User Zone Mapping` and add the zone for the user and activate it.
      * Go to `User Center Mapping` and add the center for the user and activate it.
 
-> Note: The user should be assigned to the same Zone and Center as the device.
+{% hint style="info" %}
+**Note: The user should be assigned to the same Zone and Center as the device.**
+{% endhint %}
 
 4. The user should relaunch the ARC and log in using their valid credentials. Additionally, the operator has the option to select their preferred display language.
 
 Upon successful login, the user will be directed to the Home page, which includes the following options:
 
 * New Registration
-* Operations Tasks (Future scope)
-* Dashboard (Future scope)
+* Operational Tasks&#x20;
+* Dashboard
 * Settings (Future scope)
 
 ### New Registration
@@ -172,13 +174,13 @@ Upon successful verification of the credentials, the packet will be uploaded to 
 
 <figure><img src=".gitbook/assets/Acknowledgement.png" alt="" width="375"><figcaption><p>Authentication page</p></figcaption></figure>
 
-**Supervisor’s Approval:**
+**Pending Approval:**
 
-Upon successful verification of the credentials, the acknowledgment will be displayed, and the Application will be moved to the “Supervisor’s Approval” section. This feature will only be available for the User who has a Supervisor’s role assigned to him.
+Upon successful verification of the credentials, the acknowledgment will be displayed, and the Application will be moved to the “Pending Approval” section. This feature will only be available for the User who has a Supervisor’s role assigned to him.
 
 Once the packet is created by the Operator, as an additional check, the Supervisor will have to go through each application to make sure the details filled are coherent.
 
-**Step 1:** The user goes to the “Supervisor’s Approval” section from the Operational Tasks section. The user will be taken to the page where they can see the list of all the Applications created by the Operator. All of these Applications will be “Pending”.
+**Step 1:** The user goes to the “Pending Approval” section from the Operational Tasks section. The user will be taken to the page where they can see the list of all the Applications created by the Operator. All of these Applications will be “Pending”.
 
 <div>
 
@@ -196,7 +198,7 @@ Once the packet is created by the Operator, as an additional check, the Supervis
 
 **Step 2:** The Supervisor then clicks on the Application ID one by one. At this stage, the Supervisor can either Approve the Application or he can Reject it. If the Supervisor decides to reject it, they also will have to mandatorily mention the reason for rejection.
 
-**Step 3:** Once the Application has been Approved or Rejected, the Supervisor will have to authenticate himself by clicking on the “Submit” button and thereby entering their Username and Password. The User can also bulk submit the Applications. The only pre-requisite is that the packet has to be in Approved or Rejected status (pending Applications cannot be submitted for uploading). Once they have successfully authenticated, the Application will be removed from the “Supervisor’s Approval” section and will be moved to the “Manage Application” Section.
+**Step 3:** Once the Application has been Approved or Rejected, the Supervisor will have to authenticate himself by clicking on the “Submit” button and thereby entering their Username and Password. The User can also bulk submit the Applications. The only pre-requisite is that the packet has to be in Approved or Rejected status (pending Applications cannot be submitted for uploading). Once they have successfully authenticated, the Application will be removed from the “Pending Approval” section and will be moved to the “Manage Application” Section.
 
 <div>
 
@@ -204,7 +206,7 @@ Once the packet is created by the Operator, as an additional check, the Supervis
 
  
 
-<figure><img src=".gitbook/assets/supervisor approval 5.png" alt=""><figcaption><p>Supervisor's approval</p></figcaption></figure>
+<figure><img src=".gitbook/assets/supervisor approval 5.png" alt=""><figcaption><p>Pending approval</p></figcaption></figure>
 
  
 
@@ -243,7 +245,7 @@ In summary, the aforementioned steps can be followed by the user (Operator/ Supe
 
 a. On logging in for the first time, the Operator will be taken to the screen where they will have the following two options:
 
-1. **Get onboard:** This flow is present for the system to verify the Operator’s biometrics with their registered biometrics. This is to enable local deduplication.
+1. **Get onboard:** This flow is present for the system to verify the Operator’s biometrics with their registered biometrics. This is to enable local deduplication. To get onboarded the operator must not be assigned "default" role.
 2. **Skip to home:** This flow is to dodge “Operator’s Onboarding”. If the user selects this, they will be taken to the “Homepage” after which the user can get started with Resident registration. One of the prerequisites of this flow is to have the “Default” role mapped to the center.
 
 <figure><img src=".gitbook/assets/image-20240612-100557.png" alt="" width="375"><figcaption><p>Operator’s Onboarding</p></figcaption></figure>
@@ -265,6 +267,8 @@ a. On logging in for the first time, the Operator will be taken to the screen wh
 b. The user will then have to capture all the above-listed biometrics one by one.\
 c. Steps to capture the biometrics are given [**here**](android-registration-client-user-guide.md#face-photo-capture-process)**.**\
 d. Once all the biometrics are duly captured, the below acknowledgment message will be displayed on the screen.
+
+<figure><img src=".gitbook/assets/Acknowledgement.webp" alt="" width="375"><figcaption><p>Acknowledgment</p></figcaption></figure>
 
 4. **Dashboard:** The Operator can access the dashboard where he can view the following:
    1. **Packets created:** This will show the total number of packets created from the time the Android Registration Client was installed.
