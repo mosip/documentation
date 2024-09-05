@@ -46,4 +46,4 @@ To learn more about the available features, processes, and user interface, refer
 
 ### **Known Issues**
 
-To view the list of known issues, refer [here](https://mosip.atlassian.net/issues/RCF-969?jql=parent%3Drcf-31%20and%20issuetype%3Dbug\[%E2%80%A6]closed%2C%20Canceled%29%20and%20labels%21%3DARC\_Real\_Device).&#x20;
+To view the list of known issues, refer [here](https://mosip.atlassian.net/issues/RCF-969?jql=parent%3Drcf-31%20and%20issuetype%3Dbug%20and%20status%20not%20in%20\(closed%2C%20Canceled\)%20and%20labels!%3DARC\_Real\_Device).&#x20;
