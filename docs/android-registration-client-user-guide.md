@@ -111,7 +111,7 @@ To begin the Registration process, the Operator is required to follow the steps 
 
 <figure><img src=".gitbook/assets/biometric-5.png" alt="" width="375"><figcaption><p>Biometric data capture process</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/biometric-6.png" alt="" width="375"><figcaption><p>Biometric data capture process</p></figcaption></figure>
+<figure><img src=".gitbook/assets/exception.png" alt="" width="375"><figcaption></figcaption></figure>
 
 <figure><img src=".gitbook/assets/biometric-7.png" alt="" width="375"><figcaption><p>Biometric data capture process</p></figcaption></figure>
 
@@ -172,7 +172,7 @@ Upon successful verification of the credentials, the packet will be uploaded to 
 
 <figure><img src=".gitbook/assets/operators authentication.png" alt="" width="375"><figcaption><p>Authentication page</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/Acknowledgement.png" alt="" width="375"><figcaption><p>Authentication page</p></figcaption></figure>
+<figure><img src=".gitbook/assets/ackn1 (1).png" alt="" width="375"><figcaption><p>Acknowledgement page</p></figcaption></figure>
 
 **Pending Approval:**
 
@@ -268,7 +268,7 @@ b. The user will then have to capture all the above-listed biometrics one by one
 c. Steps to capture the biometrics are given [**here**](android-registration-client-user-guide.md#face-photo-capture-process)**.**\
 d. Once all the biometrics are duly captured, the below acknowledgment message will be displayed on the screen.
 
-<figure><img src=".gitbook/assets/Acknowledgement.webp" alt="" width="375"><figcaption><p>Acknowledgment</p></figcaption></figure>
+<figure><img src=".gitbook/assets/Acknowledgement.png" alt="" width="338"><figcaption><p>Acknowledgement  page</p></figcaption></figure>
 
 4. **Dashboard:** The Operator can access the dashboard where he can view the following:
    1. **Packets created:** This will show the total number of packets created from the time the Android Registration Client was installed.
