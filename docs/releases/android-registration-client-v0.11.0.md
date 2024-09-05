@@ -28,9 +28,9 @@ Version 0.11.0 of the Android Registration Client is the beta release, covering 
 
 ### **Repository Released**
 
-| **Repositories**            | **Tags Released** |
-| --------------------------- | ----------------- |
-| android-registration-client | 0.11.0            |
+| **Repositories**            | **Tags Released**                                                               |
+| --------------------------- | ------------------------------------------------------------------------------- |
+| android-registration-client | [0.11.0](https://github.com/mosip/test-management/tree/master/ARC/ARC%200.11.0) |
 
 ### **Build and Deploy**
 
