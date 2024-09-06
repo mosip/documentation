@@ -1,6 +1,6 @@
 # v1.4.0
 
-**Release Name**: v.1.4.0
+**Release Number**: v.1.4.0
 
 **Release Date**: 23rd April, 2024
 
