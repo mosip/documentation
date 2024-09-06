@@ -6,40 +6,45 @@
 
 ### Overview
 
-This release focuses on incorporating features related to VC issuance plug-ins pertaining to Sunbird RC, enhancing configuration capabilities for Knowledge-Based Identification (KBI), and addressing critical known issues from our previous releases.
+This release introduces new features centered on Verifiable Credentials (VC) issuance plugins related to Sunbird RC, enhances configuration capabilities for Knowledge-Based Identification (KBI), and addresses critical known issues from previous versions.
+
+### Features
 
 **1. Features included**
 
-The below two plugins have been developed to address a use case of issuance of verifiable credentials (VC issuance plugin) by authenticating/identifying the user via KBI (Knowledge Based Identification) using the Authenticator plugin. Please find below links for more details about the plugin’s and the implemented use case called Insurance verifiable credential using Sunbird RC.
-
-For more details about KBI, please refer to the link [KBI](https://docs.esignet.io/end-user-guide/knowledge-based-authentication).
+We have developed two new plugins to support the issuance of verifiable credentials (VC) by authenticating users through Knowledge-Based Identification (KBI) using the Authenticator plugin. These enhancements are detailed below:
 
 a. [Authenticator plugin implementation for KBI with Sunbird RC.](../../overview/features/#authenticator-plugin-implementation-for-kbi-with-sunbird-rc)
 
+* Implementation of the Authenticator plugin to enable Knowledge-Based Identification (KBI) within Sunbird RC.
+
 b. [VC Issuance plugin implementation for Sunbird RC.](../../overview/features/#vc-issuance-plugin-implementation-for-sunbird-rc)
+
+* Implementation of the VC Issuance plugin to facilitate the issuance of verifiable credentials within Sunbird RC.
 
 c. [eSignet UI to support KBI form configuration](../../overview/features/#kbi-form-configuration-for-esignet-ui).
 
-{% hint style="info" %}
-**Note:**
+* eSignet UI now supports KBI form configuration, making it easier to set up and manage KBI-based identification.
 
-1. The plugins developed are independent of the use cases and may need modifications based on the use case that can take advantage of Knowledge based Identification.
-2. The above has been explained with the help of a use case called Insurance Card VC Issuance to a user using the [Sunbird RC](https://github.com/mosip/digital-credential-plugins/blob/master/sunbird-rc-esignet-integration-impl/README.md) registry based on the KBI configuration done within the plugin.
+For more information on KBI, please refer to the [KBI documentation](https://docs.esignet.io/end-user-guide/knowledge-based-authentication)
+
+{% hint style="info" %}
+**Note:** The newly developed plugins are independent and can be adapted to various use cases that utilize Knowledge-Based Identification. An example use case like Insurance Card VC Issuance demonstrates how a user can be issued a verifiable credential using the [Sunbird RC](https://github.com/mosip/digital-credential-plugins/blob/master/sunbird-rc-esignet-integration-impl/README.md) registry configured with KBI.
 {% endhint %}
 
-**2. Fixes for known issues from v1.4.0**
+### Bug Fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-a. Enhanced input field validations with regex implementation.
+#### Fixes from v1.4.0: <a href="#fixes-from-v1.4.0" id="fixes-from-v1.4.0"></a>
 
-b. Enhanced and user friendly error messages.
+* **Improved Input Field Validations**: Enhanced input field validations using regex implementation.
+* **User-Friendly Error Messages**: Improved error messages for better user experience.
 
-**3. Fixes for known issues from v1.3.0**
+#### Fixes from v1.3.0: <a href="#fixes-from-v1.3.0" id="fixes-from-v1.3.0"></a>
 
-a. Critical & major bug fixes related to eSignet service.
+* **eSignet Service Fixes**: Critical and major bug fixes related to the eSignet service.
+* **eSignet Signup Service Fixes**: Critical and major bug fixes related to the eSignet Signup service.
 
-b. Critical & major bug fixes related to the eSignet Signup service.
-
-Please refer to [this link](https://mosip.atlassian.net/jira/software/c/projects/ES/issues/?jql=%22Release%20Number%5BLabels%5D%22%20in%20\(esignet\_v1.4.1\)%20and%20issuetype%3DBug) for the list of all bugs addressed as part of this release.
+For a complete list of all bugs addressed in this release, please refer to the [bug fixes list](https://mosip.atlassian.net/jira/software/c/projects/ES/issues/?jql=%22Release%20Number%5BLabels%5D%22%20in%20\(esignet\_v1.4.1\)%20and%20issuetype%3DBug).
 
 **Known Issues**
 
@@ -53,14 +58,19 @@ Please refer to [this link](https://mosip.atlassian.net/jira/software/c/projects
 
 **Repositories Released**
 
-| Repository Released   | Tags                                                                             |
-| --------------------- | -------------------------------------------------------------------------------- |
-| eSignet               | [v1.4.1](https://github.com/mosip/mosip-config/tree/v1.4.1-ES)                   |
-| mosip-config          | [v1.4.1-ES](https://github.com/mosip/mosip-config/tree/release-1.4.1-ES)         |
-| esignet-mock-services | [v0.9.3](https://github.com/mosip/esignet-mock-services/tree/release-0.9.x)      |
-| mosip-ref-impl/kernel | [v1.2.0.2](https://github.com/mosip/mosip-ref-impl/tree/release-1.2.0.x/kernel)  |
-| artifactory-ref-impl  | [v1.4.1-ES](https://github.com/mosip/artifactory-ref-impl/tree/release-1.4.1-ES) |
-| eSignet Signup        | [v1.0.2](https://github.com/mosip/esignet-signup/tree/release-1.0.x)             |
+| Repository Released        | Tags                                                                             |
+| -------------------------- | -------------------------------------------------------------------------------- |
+| eSignet                    | [v1.4.1](https://github.com/mosip/mosip-config/tree/v1.4.1-ES)                   |
+| mosip-config               | [v1.4.1-ES](https://github.com/mosip/mosip-config/tree/release-1.4.1-ES)         |
+| esignet-mock-services      | [v0.9.3](https://github.com/mosip/esignet-mock-services/tree/release-0.9.x)      |
+| mosip-ref-impl/kernel      | [v1.2.0.2](https://github.com/mosip/mosip-ref-impl/tree/release-1.2.0.x/kernel)  |
+| artifactory-ref-impl       | [v1.4.1-ES](https://github.com/mosip/artifactory-ref-impl/tree/release-1.4.1-ES) |
+| eSignet Signup             | [v1.0.2](https://github.com/mosip/esignet-signup/tree/release-1.0.x)             |
+| digital-credential-plugins | [v0.1.0](https://github.com/mosip/digital-credential-plugins)                    |
+
+{% hint style="info" %}
+**Note:** digital-credential-plugins was released as part of v1.4.0, and is compliant with v1.4.1.
+{% endhint %}
 
 For details on deployment, refer to the [helm charts](https://github.com/mosip/esignet/tree/v1.4.1/helm) in the eSignet repository.
 
