@@ -26,6 +26,7 @@
 * [Try It Out](inji-wallet/sandbox-details/README.md)
   * [Inji Wallet Setup Guide](inji-wallet/sandbox-details/inji-setup-guide.md)
 * [Releases](inji-wallet/versions/README.md)
+  * [Version 0.13.1](inji-wallet/versions/version-0.13.1.md)
   * [Version 0.13.0](inji-wallet/versions/version-0.13.0/README.md)
     * [Test Report](inji-wallet/versions/version-0.13.0/test-report.md)
   * [Version 0.12.0](inji-wallet/versions/version-0.12.0/README.md)
