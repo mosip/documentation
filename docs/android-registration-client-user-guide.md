@@ -103,7 +103,7 @@ To begin the Registration process, the Operator is required to follow the steps 
 
 #### **Biometric Data Capture Process**:
 
-* In order to capture biometric data, the Operator should click on the **Scan** button.
+* To capture biometric data, the Operator should click on the **Scan** button.
 * This will allow the Operator to capture the biometric information.
 * Once the data is captured, the image quality will be displayed on the screen and must meet the acceptable threshold limit.
 
@@ -111,7 +111,9 @@ To begin the Registration process, the Operator is required to follow the steps 
 
 <figure><img src=".gitbook/assets/biometric-5.png" alt="" width="375"><figcaption><p>Biometric data capture process</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/exception.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/righthand.png" alt="" width="375"><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/lefthand.png" alt="" width="375"><figcaption></figcaption></figure>
 
 <figure><img src=".gitbook/assets/biometric-7.png" alt="" width="375"><figcaption><p>Biometric data capture process</p></figcaption></figure>
 
@@ -121,7 +123,7 @@ If a thumb is missing or experiencing difficulties that prevent its fingerprint 
 
 <figure><img src=".gitbook/assets/biometric-11.png" alt="" width="375"><figcaption><p>Fingerprint capture process</p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/biometric-12.png" alt="" width="375"><figcaption><p>Fingerprint capture process</p></figcaption></figure>
+<figure><img src=".gitbook/assets/thumb.png" alt="" width="375"><figcaption><p>Fingerprint capture process</p></figcaption></figure>
 
 <figure><img src=".gitbook/assets/fingerprint.png" alt="" width="380"><figcaption><p>Fingerprint capture process</p></figcaption></figure>
 
@@ -220,17 +222,9 @@ Once the packet is created by the Operator, as an additional check, the Supervis
 
 Once the Application is either Approved or Rejected by the Supervisor, those packets can be uploaded to the server from the “Manage Application” section.
 
-<div>
-
 <figure><img src=".gitbook/assets/export n upload 1.png" alt="" width="375"><figcaption><p>Manage application</p></figcaption></figure>
 
- 
-
-<figure><img src=".gitbook/assets/export n upload 2.png" alt="" width="375"><figcaption></figcaption></figure>
-
-</div>
-
-**Step 1:** The user selects the packets that they want to upload (bulk upload can also be done). Once selected, the user will click on the “Upload” button after which the packet syncs and gets uploaded if there is internet connectivity.
+**Step 1:** The user selects the packets they want to upload (bulk upload can also be done). Once selected, the user clicks on the “Upload” button, after which the packet syncs and gets uploaded if there is internet connectivity.
 
 In case of a lack of internet connectivity, the User can also export the packet to their local device storage. They can also bulk export the packets by choosing the Applications and clicking on the Export button.
 
@@ -239,7 +233,7 @@ On choosing to upload, the packet is uploaded to the [Registration Processor](ht
 1. **Print**- The operator can click on this option to obtain a physical copy of the acknowledgment.
 2. **New Registration**- The operator can initiate another registration by clicking on this option.
 
-In summary, the aforementioned steps can be followed by the user (Operator/ Supervisor) to register an individual by capturing demographic data, documents, and biometric data to generate their UIN.
+In summary, the user (Operator/ Supervisor) can follow the aforementioned steps to register an individual by capturing demographic data, documents, and biometric data to generate their UIN.
 
 **Operator Onboarding**: To begin the Onboarding process, the Operator is required to follow the steps outlined below. The operator, to log in to the Android Registration Client, will have to onboard himself. This functionality will be available on first-time online login only.
 
