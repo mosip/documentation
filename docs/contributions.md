@@ -123,3 +123,15 @@ Protean partnered with MOSIP in September 2018 and since then the company has ac
 So far, Protean has contributed approximately 1905 person per days of development effort, which roughly translates to more than 15000 person hours of work.
 
 **About Protean**: Protean (NSDL e-Governance) offers digital ecosystem, curated to cater to billions. With over 25+ years providing unparalleled experience in creating population scale e-governance solutions, the company has empowered billions of lives across the country. Protean is building a digitised ecosystem for 1.4 billion people transforming citizen services for a better future.
+
+
+
+## [Sunird](https://sunbird.org/)
+
+<figure><img src=".gitbook/assets/sunbird-logo-new.png" alt=""><figcaption></figcaption></figure>
+
+
+
+The Sunbird community has developed 20+ digital solutions (called “building blocks”) which can be used individually or combined to create larger and more complex solutions. One of the building blocks, Sunbird RC has been used in the creation of Inji - a digital credentialing stack. The Sunbird RC team has actively led the development and contribution of a few components within Inji, such as Inji Certify, Inji Verify, and Inji Web.
+
+**About Sunbird**: Sunbird is an open-source collective, seeded by the EkStep Foundation.
