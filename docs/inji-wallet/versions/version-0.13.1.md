@@ -25,21 +25,13 @@ We are excited to announce the release of **Inji Wallet Version 0.13.1**! This p
 
 ### Repository Released
 
-| **Repositories** | **Tags Released** |
-| ---------------- | ----------------- |
-| tuvali           |                   |
-| secure-keystore  |                   |
-| pixelpass        |                   |
-| inji-vci-client  |                   |
+<table data-header-hidden><thead><tr><th width="499"></th><th></th></tr></thead><tbody><tr><td><strong>Repositories</strong></td><td><strong>Tags Released</strong></td></tr><tr><td>tuvali</td><td><a href="https://github.com/mosip/tuvali/tree/v0.5.1"> v0.5.1</a></td></tr><tr><td>secure-keystore</td><td><a href="https://github.com/mosip/secure-keystore/tree/v0.2.1"> v0.2.1</a></td></tr><tr><td>pixelpass</td><td><a href="https://github.com/mosip/pixelpass/tree/v0.2.1">v0.2.1</a></td></tr><tr><td>inji-vci-client</td><td><a href="https://github.com/mosip/inji-vci-client/tree/v0.1.1">v0.1.1</a></td></tr><tr><td>Inji Wallet</td><td><a href="https://github.com/mosip/inji-wallet/tree/v0.13.1">v0.13.1</a></td></tr></tbody></table>
 
 ### Compatible Modules:
 
 The following table outlines the tested and certified compatibility of Inji Wallet 0.13.1 with other modules.
 
-| **Module**  | **Version** |
-| ----------- | ----------- |
-| Mimoto      | 0.13.1      |
-| inji-config | 0.1.2       |
+<table data-header-hidden><thead><tr><th width="499"></th><th></th></tr></thead><tbody><tr><td><strong>Module</strong></td><td><strong>Version</strong></td></tr><tr><td>Mimoto</td><td>0.13.1</td></tr><tr><td>inji-config</td><td>0.1.2</td></tr></tbody></table>
 
 ### Bugs/Security Fixes
 
