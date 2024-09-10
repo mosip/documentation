@@ -2,7 +2,7 @@
 
 ## Latest Release
 
-**Version: Android Registration Client v0.11.0**
+**Version: Android Registration Client v0.11.0-beta.1**
 
 * Support: Beta Release
 * Date: 5th Sept, 2024

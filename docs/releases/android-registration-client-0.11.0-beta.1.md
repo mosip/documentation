@@ -1,8 +1,8 @@
-# Android Registration Client v0.11.0
+# Android Registration Client         0.11.0-beta.1
 
-**Release Name**: Android Registration Client v0.11.0
+**Release Name**: Android Registration Client 0.11.0-beta.1
 
-**Release version**: 0.11.0
+**Release version**: 0.11.0-beta.1
 
 **Support**: Beta Release
 
@@ -14,7 +14,7 @@ The Android Registration Client is a tablet application designed to provide a mo
 
 The new features included in this release, along with those from the[ Android Registration Client DP1](https://docs.mosip.io/1.2.0/releases/release-notes-android-reg-client-dp1), [ Android Registration Client 0.9.0](https://docs.mosip.io/1.2.0/releases/release-notes-android-reg-client-0.9.0), and [Android Registration Client 0.10.0](https://docs.mosip.io/1.2.0/releases/android-registration-client-v0.10.0) releases, are:
 
-Version 0.11.0 of the Android Registration Client is the beta release, covering features such as:
+Version 0.11.0-beta.1 of the Android Registration Client is the beta release, covering features such as:
 
 1. **Supervisor's Approval:** This feature will only be available for users having a “Supervisor” role. This is an additional check by the Supervisor where they will have to go through each application to make sure the details filled are coherent. At this stage, the Supervisor can either Approve the Application or he can Reject it.
 2. Manual Application upload/export: This feature can be used to sync and upload a packet if there is internet connectivity and in case of lack of internet connectivity, the User can also export the packet to their local device storage.
@@ -28,9 +28,9 @@ Version 0.11.0 of the Android Registration Client is the beta release, covering 
 
 ### **Repository Released**
 
-| **Repositories**            | **Tags Released**                                                               |
-| --------------------------- | ------------------------------------------------------------------------------- |
-| android-registration-client | [0.11.0](https://github.com/mosip/test-management/tree/master/ARC/ARC%200.11.0) |
+| **Repositories**            | **Tags Released**                                                                      |
+| --------------------------- | -------------------------------------------------------------------------------------- |
+| android-registration-client | [0.11.0-beta.1](https://github.com/mosip/test-management/tree/master/ARC/ARC%200.11.0) |
 
 ### **Build and Deploy**
 
