@@ -6,7 +6,7 @@
 
 **Support**: Beta Release
 
-**Release Date**: 5th Sept, 2024
+**Release Date**: 10th Sept, 2024
 
 ### **Overview**
 
@@ -17,10 +17,10 @@ The new features included in this release, along with those from the[ Android Re
 Version 0.11.0-beta.1 of the Android Registration Client is the beta release, covering features such as:
 
 1. **Supervisor's Approval:** This feature will only be available for users having a “Supervisor” role. This is an additional check by the Supervisor where they will have to go through each application to make sure the details filled are coherent. At this stage, the Supervisor can either Approve the Application or he can Reject it.
-2. Manual Application upload/export: This feature can be used to sync and upload a packet if there is internet connectivity and in case of lack of internet connectivity, the User can also export the packet to their local device storage.
-3. Update UIN: This feature can be used by the Residents when they want to update their demographic data, documents, and biometrics.
-4. Logout: Using this feature, the user can logout once they are done with their registration tasks and other activities.
-5. Update operator's biometrics: This feature can be used by the operator to update their biometrics.
+2. **Manual Application upload/export:** This feature can be used to sync and upload a packet if there is internet connectivity and in case of lack of internet connectivity, the User can also export the packet to their local device storage.
+3. **Update UIN:** This feature can be used by the Residents when they want to update their demographic data, documents, and biometrics.
+4. **Update operator's biometrics:** This feature can be used by the operator to update their biometrics.
+5. **Logout:** Using this feature, the user can logout once they are done with their registration tasks and other activities.
 
 {% hint style="info" %}
 **Note**: Compatible with[ MOSIP version 1.2.0](https://docs.mosip.io/1.2.0/releases/release-notes)
@@ -28,9 +28,9 @@ Version 0.11.0-beta.1 of the Android Registration Client is the beta release, co
 
 ### **Repository Released**
 
-| **Repositories**            | **Tags Released**                                                                      |
-| --------------------------- | -------------------------------------------------------------------------------------- |
-| android-registration-client | [0.11.0-beta.1](https://github.com/mosip/test-management/tree/master/ARC/ARC%200.11.0) |
+| **Repositories**            | **Tags Released**                                                                                 |
+| --------------------------- | ------------------------------------------------------------------------------------------------- |
+| android-registration-client | [0.11.0-beta.1](https://github.com/mosip/android-registration-client/releases/tag/v0.11.0-beta.1) |
 
 ### **Build and Deploy**
 

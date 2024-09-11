@@ -5,7 +5,7 @@
 **Version: Android Registration Client v0.11.0-beta.1**
 
 * Support: Beta Release
-* Date: 5th Sept, 2024
+* Date: 10th Sept, 2024
 * [Release Notes](https://docs.mosip.io/1.2.0/releases/android-registration-client-v0.11.0)
 
 **Version:** **Partner Management System v1.3.0-dp.1**
