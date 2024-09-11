@@ -1,8 +1,15 @@
 # Releases
 
+## Version: 0.13.1
+
+* Name: Inji Wallet 0.13.1 Patch release
+* Date: 10th Sep, 2024
+* Release Type: Developer
+* Release Notes
+
 ## Version: 0.13.0
 
-* Name: Inji 0.13.0
+* Name: Inji Wallet 0.13.0
 * Date: 2nd Aug, 2024
 * [Release Notes](https://docs.mosip.io/inji/inji-wallet/versions/version-0.13.0)
 
