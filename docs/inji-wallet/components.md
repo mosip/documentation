@@ -88,7 +88,11 @@ Note:
 
 ### 5. PixelPass
 
-PixelPass library creates a QR code for the given Verifiable Credentials data which is of smaller size. The library uses zlib compression and base45 encoding. In addition, PixelPass can also Decode QR data encoded by the library. The library is actively developed and maintained by MOSIP.
+The PixelPass library offers a powerful solution for creating and decoding QR codes for Verifiable Credentials (VCs). It is designed to optimize the size of the data encoded within a QR code, making it easier to store and share credential information. The library achieves this by utilizing advanced compression and encoding techniques, ensuring smaller QR codes that maintain the integrity and security of the data.
+
+PixelPass uses zlib compression with a level 9 setting, which significantly reduces the data size before encoding. It then applies base45 encoding to further compress the data into a QR code-friendly format. Additionally, the library can decode any QR code data previously encoded using its own compression and encoding algorithms, ensuring seamless interoperability.
+
+Additionally, for a JSON data, the library employs CBOR encoding and decoding to minimize the size even further. When a JSON Mapper similar to [Claim 169](https://docs.mosip.io/1.2.0/overview/standards-and-specifications/169-qr-code-specification) is provided, PixelPass maps the data, applies CBOR encoding/decoding, and compresses the data, achieving maximum size reduction. Developed and maintained by MOSIP, PixelPass is continually updated to provide reliable and efficient QR code generation and decoding capabilities.
 
 {% hint style="info" %}
 Note:
