@@ -132,6 +132,7 @@
 
 ***
 
+* [Resources](resources.md)
 * [References](references.md)
 * [Supported Integrations](supported-integrations/README.md)
   * [MOSIP](https://docs.mosip.io)
