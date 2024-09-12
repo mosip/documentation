@@ -3,13 +3,20 @@
 * [Inji](README.md)
   * [Try It Out](readme/try-it-out.md)
   * [Use case](readme/use-case.md)
+  * [Supported Integrations](readme/supported-integrations/README.md)
+    * [MOSIP](https://docs.mosip.io)
+  * [Project Governance](readme/project-governance.md)
+  * [Contribution](readme/contribution/README.md)
+    * [Code Contribution](readme/contribution/code-contribution.md)
+    * [Code of Conduct](readme/contribution/code-of-conduct.md)
+  * [License](readme/license.md)
 
 ## Inji Wallet
 
 * [Overview](inji-wallet/overview.md)
 * [Functional Overview](inji-wallet/functional-overview/README.md)
   * [Features](inji-wallet/functional-overview/features.md)
-  * [Feature Workflows](inji-wallet/functional-overview/feature-workflows.md)
+  * [Workflow](inji-wallet/functional-overview/feature-workflows.md)
   * [GenderMag](inji-wallet/functional-overview/gendermag.md)
   * [End User Guide](inji-wallet/functional-overview/end-user-guide.md)
 * [Technical Overview](inji-wallet/technical-overview/README.md)
@@ -50,7 +57,7 @@
     * [Test Report](inji-wallet/versions/version-0.9.0/test-report-0.9.0.md)
 * [Try It Out](inji-wallet/sandbox-details/README.md)
   * [Inji Wallet Setup Guide](inji-wallet/sandbox-details/inji-setup-guide.md)
-* [Build & Deployment](inji-wallet/build-and-deployment/README.md)
+* [Build & Deploy](inji-wallet/build-and-deployment/README.md)
   * [Local Setup](inji-wallet/build-and-deployment/local-setup.md)
 * [Customizations](inji-wallet/customization-overview/README.md)
   * [Workflow customization](inji-wallet/customization-overview/workflow-customization.md)
@@ -133,12 +140,5 @@
 ***
 
 * [Resources](resources.md)
-* [Supported Integrations](supported-integrations/README.md)
-  * [MOSIP](https://docs.mosip.io)
-* [Project Governance](project-governance.md)
-* [Contribution](contribution/README.md)
-  * [Code Contribution](contribution/code-contribution.md)
-  * [Code of Conduct](contribution/code-of-conduct.md)
-* [License](license.md)
 * [Roadmap](roadmap/README.md)
   * [Roadmap 2024](roadmap/roadmap-2024.md)
