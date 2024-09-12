@@ -30,8 +30,6 @@
   * [Backend Services](inji-wallet/technical-overview/backend-services/README.md)
     * [Mimoto](inji-wallet/technical-overview/backend-services/mimoto.md)
     * [eSignet](inji-wallet/technical-overview/backend-services/esignet.md)
-* [Build & Deployment](inji-wallet/build-and-deployment/README.md)
-  * [Local Setup](inji-wallet/build-and-deployment/local-setup.md)
 * [Releases](inji-wallet/versions/README.md)
   * [Version 0.13.1](inji-wallet/versions/version-0.13.1.md)
   * [Version 0.13.0](inji-wallet/versions/version-0.13.0/README.md)
@@ -52,6 +50,8 @@
     * [Test Report](inji-wallet/versions/version-0.9.0/test-report-0.9.0.md)
 * [Try It Out](inji-wallet/sandbox-details/README.md)
   * [Inji Wallet Setup Guide](inji-wallet/sandbox-details/inji-setup-guide.md)
+* [Build & Deployment](inji-wallet/build-and-deployment/README.md)
+  * [Local Setup](inji-wallet/build-and-deployment/local-setup.md)
 * [Customizations](inji-wallet/customization-overview/README.md)
   * [Workflow customization](inji-wallet/customization-overview/workflow-customization.md)
   * [UI customization](inji-wallet/customization-overview/ui-customization.md)
@@ -132,12 +132,13 @@
 
 ***
 
+* [References](references.md)
 * [Supported Integrations](supported-integrations/README.md)
   * [MOSIP](https://docs.mosip.io)
+* [Project Governance](project-governance.md)
 * [Contribution](contribution/README.md)
   * [Code Contribution](contribution/code-contribution.md)
   * [Code of Conduct](contribution/code-of-conduct.md)
-* [Project Governance](project-governance.md)
 * [License](license.md)
 * [Roadmap](roadmap/README.md)
   * [Roadmap 2024](roadmap/roadmap-2024.md)
