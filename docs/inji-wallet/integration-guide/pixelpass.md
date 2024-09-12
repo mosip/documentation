@@ -2,13 +2,16 @@
 
 ## PixelPass
 
-PixelPass is a node library which helps in generating QR Code for VCs with smaller data size. It can also be used for decoding the VC generated. PixelPass also has Kotlin, Swift and Java artifacts available.
+PixelPass is a versatile and easy-to-use node library designed to simplify working with QR codes and data compression. It allows you to generate QR codes from any given data with just a single function. If you’re working with JSON, PixelPass can take that data, compress it, and convert it into a compact format using CBOR encoding, making it smaller and more efficient for QR code generation. The library can also decode this compressed data, turning CBOR back into the original JSON format. Additionally, for more complex use cases, PixelPass offers the ability to map your JSON data to a specific structure, compress it, and encode it into CBOR. Later, you can also reverse this process, decoding the CBOR back into its mapped JSON structure. With these capabilities, PixelPass makes managing, compressing, and encoding data for QR codes easy and efficient.
+
+PixelPass also has Kotlin, Swift and Java artifacts available.
 
 ### Features
 
-* Create QR Code for given data
-* Uses zlib compression and base45 encoding
-* Decode QR data encoded by PixelPass
+* Compresses data using zlib with the highest compression level (level 9).
+* Encodes and decodes data with the base45 format.
+* For JSON data, applies CBOR encoding/decoding to achieve additional size reduction.
+* With JSON and a Mapper provided, maps the JSON and then performs CBOR encoding/decoding to further shrink the data size.
 
 ### Snapshots
 
@@ -44,44 +47,121 @@ npm i @mosip/pixelpass
 
 Below are the APIs provided by the PixelPass library:
 
-#### To Generate QR Data:
+### To Generate QR Data:
 
-```
-
-generateQRData( data, header )
+**generateQRData( data, header )**
 
     data - Data needs to be compressed and encoded
 
-    header - Data header needs to be prepended to identify the encoded data. defaults to ""
+    header - Data header needs to be prepended to identify the encoded data. It defaults to ""
+
+```
+import { generateQRData } from '@mosip/pixelpass';
+
+const jsonString = "{\"name\":\"Steve\",\"id\":\"1\",\"l_name\":\"jobs\"}";
+const header = "jsonstring";
+
+const encodedCBORData = generateQRData(jsonString, header);
+
+// header defaults to empty string if not passed.
 ```
 
 The API returns a zlib compressed and base45 encoded string with header prepended if provided.
 
-#### To Generate QR Code:
+### To Generate QR Code:
 
-
-
-```
-generateQRCode( data, ecc , header )
+**generateQRCode( data, ecc , header )**
 
     data - Data needs to be compressed and encoded
 
     ecc - Error Correction Level for the QR generated. defaults to "L"
 
     header - Data header needs to be prepended to identify the encoded data. defaults to ""
+
+```
+import { generateQRCode } from '@mosip/pixelpass';
+
+const data = "Hello";
+const qrCode = generateQRCode(data, ecc, header);
+
+// ecc is Error Correction Level for the QR generated. defaults to "L".
+// header defaults to empty string if not passed.
 ```
 
 The API returns a base64 encoded PNG image with header prepended if provided.
 
-#### To Decode the QR Code:
+### To Decode the QR Code:
 
-```
-decode(data)
+**decode(data)**
 
     data - Data needs to be decoded and decompressed without header
+
+```
+import { decode } from '@mosip/pixelpass';
+
+const encodedData = "NCFWTL$PPB$PN$AWGAE%5UW5A%ADFAHR9 IE:GG6ZJJCL2.AJKAMHA100+8S.1";
+const jsonString = decode(encodedData);
 ```
 
 The API returns a base45 decoded and zlib decompressed string.
+
+### To get Mapped CBOR data from JSON:
+
+**getMappedData( jsonData, mapper, cborEnable );**
+
+jsonData - A JSON data.
+
+mapper - A Map which is used to map with the JSON.
+
+cborEnable - A Boolean which is used to enable or disable CBOR encoding on mapped data. Defaults to false if not provided.
+
+```
+import { getMappedData } from '@mosip/pixelpass';
+
+const jsonData = {"name": "Jhon", "id": "207", "l_name": "Honay"};
+const mapper = {"id": "1", "name": "2", "l_name": "3"};
+
+const byteBuffer = getMappedData(jsonData, mapper,true);
+
+const cborEncodedString = byteBuffer.toString('hex');
+```
+
+The getMappedData function accepts three arguments: a JSON object and a map used to create a new set of key-value pairs based on the provided mapper. The third argument is a boolean value and an optional parameter that enables or disables CBOR encoding for the newly mapped data.
+
+**Eg:** The converted map would look like, 
+
+{ 
+"1": "207",
+"2": "Jhon",
+"3": "Honay"
+}
+
+### To decode mapped CBOR data:
+
+**decodeMappedData( data, mapper )**
+
+data - A CBOREncoded string or a mapped JSON.
+
+mapper - A Map which is used to map with the JSON.
+
+```
+import { decodeMappedData } from '@mosip/pixelpass';
+
+const cborEncodedString = "a302644a686f6e01633230370365486f6e6179";
+const mapper = {"1": "id", "2": "name", "3": "l_name"};
+
+const jsonData = decodeMappedData(cborEncodedString, mapper);
+```
+
+The decodeMappedData function accepts two arguments: a string that can be either CBOR-encoded or a mapped JSON, and a map used to create a JSON by mapping the keys and values. If the input string is CBOR-encoded, the API will first decode it using CBOR, and then proceed with re-mapping the data based on the provided map.
+
+**Eg:** The returned JSON would look like, 
+
+{
+"name": "Jhon",
+"id": "207",
+"l_name": "Honay"
+}
 
 ### Errors / Exceptions
 
