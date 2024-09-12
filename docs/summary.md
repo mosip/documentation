@@ -8,9 +8,9 @@
 
 * [Overview](inji-wallet/overview.md)
 * [Functional Overview](inji-wallet/functional-overview/README.md)
-  * [Features](inji-wallet/functional-overview/features/README.md)
-    * [Feature Workflows](inji-wallet/functional-overview/features/feature-workflows.md)
-    * [GenderMag](inji-wallet/functional-overview/features/gendermag.md)
+  * [Features](inji-wallet/functional-overview/features.md)
+  * [Feature Workflows](inji-wallet/functional-overview/feature-workflows.md)
+  * [GenderMag](inji-wallet/functional-overview/gendermag.md)
   * [End User Guide](inji-wallet/functional-overview/end-user-guide.md)
 * [Technical Overview](inji-wallet/technical-overview/README.md)
   * [Architecture](inji-wallet/technical-overview/architecture.md)

@@ -78,7 +78,7 @@ Redmi devices are not supported for this release. To know more, refer to [known 
 
 ## Documentation
 
-* [Feature Documentation](../../functional-overview/features/)
+* [Feature Documentation](../../functional-overview/features.md)
 * [Integration Guides](../../technical-overview/integration-guide/)
 * [User Guide](../../functional-overview/end-user-guide.md)
 * [QA Report](test-report-0.10.0.md)
