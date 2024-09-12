@@ -25,6 +25,18 @@ $ nvm install 18
 
 ***
 
+## Run mimoto in local:
+
+Running Mimoto locally involves setting up a development environment using Docker Compose. This allows you to test and develop the Backend for Frontend (BFF) service on your own machine, simulating its functionality such as handling API requests and performing validations. By using Docker Compose, you can easily manage Mimoto’s dependencies and configurations, ensuring a streamlined and controlled environment for development and troubleshooting before moving to production.
+
+To setup mimoto in local, read [here](https://docs.mosip.io/inji/inji-wallet/build-and-deployment/local-setup)
+
+## Run Durian in local:
+
+Running Durian locally is achieved through install scripts, enabling developers to set up and manage the secure data storage environment with ease. By using these scripts, you can test and validate Durian’s functionality, such as storing and retrieving Verifiable Credentials, on your local machine. This setup ensures a flexible and reliable development environment, allowing for thorough testing and configuration before moving to a live environment.
+
+To setup durian in local, read [here](https://github.com/mosip/durian/tree/release-1.3.x/deploy)
+
 ## Run Inji Web in local:
 
 Let's explore how to initiate Inji Web locally after completing the setup on your local environment.
