@@ -4,20 +4,20 @@ Verifiable Credentials (VCs) are digital equivalents of physical documents such 
 
 Below are the key features provided by Inji Web:
 
-[Download](https://docs.mosip.io/inji/inji-web/functional-overview/features#download-verifiable-credentials-vc)
+**[Download](https://docs.mosip.io/inji/inji-web/functional-overview/features#download-verifiable-credentials-vc)**
 
-Users can simply select an issuer from the trusted list of issuers and credential types, verify themselves with their information, and download the Verifiable Credential as a PDF file.
+With Inji Web, users can effortlessly select an issuer from a trusted list, verify their information, and download their Verifiable Credential in a convenient PDF format. This streamlined process ensures quick access to trusted credentials in just a few clicks.
 
-**Store (coming soon)**
+**[Store](https://docs.mosip.io/inji/inji-web/functional-overview/features#store-verifiable-credentials-vc)**
 
-Inji Web additionally offers users the capability to securely store Verifiable Credentials in the cloud, enabling convenient access and presentation anytime, anywhere, and on-the-go.
+Inji Web also offers secure storage for Verifiable Credentials, providing users with the flexibility to access and present their credentials anytime, anywhere. This ensures that users are always prepared to share their credentials, whether they’re at home or on the go.
 
-**Manage (coming soon)**
+**[Share](https://docs.mosip.io/inji/inji-web/functional-overview/features#share-verifiable-credentials-vc)**
+
+Sharing credentials is made simple with Inji Web. The PDF version of the Verifiable Credential includes a QR code that can be shared with service providers either by presenting a printed copy, uploading the PDF to a verifier's website, or sharing it digitally through an online mechanism. This allows for quick and easy verification in response to any verifier’s presentation request, offering maximum convenience for users.
+
+_**Manage (coming soon)**_
 
 Users can view the downloaded credentials and access their activity logs for additional auditing purposes.
-
-**Share (coming soon)**
-
-The downloaded Verifiable Credential in PDF format can be shared with service providers for verification either as a **printed** copy or by **uploading** the PDF file to the verifier website. Alternatively, it can be **shared** using an online sharing mechanism as a response to any verifier's presentation request.
 
 <table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><img src="../../.gitbook/assets/Features (2).png" alt="Features" data-size="original"></td><td></td><td><strong>Features</strong></td><td><a href="https://docs.mosip.io/inji/inji-web/functional-overview/features">https://docs.mosip.io/inji/inji-web/functional-overview/features</a></td></tr><tr><td><img src="../../.gitbook/assets/Workflow (1) (1).png" alt="\WorkFlow" data-size="original"></td><td></td><td><strong>Workflow</strong></td><td><a href="https://docs.mosip.io/inji/inji-web/functional-overview/workflow">https://docs.mosip.io/inji/inji-web/functional-overview/workflow</a></td></tr><tr><td><img src="../../.gitbook/assets/End User Guide.png" alt="" data-size="original"></td><td></td><td><strong>End User Guide</strong></td><td><a href="https://docs.mosip.io/inji/inji-web/functional-overview/end-user-guide">https://docs.mosip.io/inji/inji-web/functional-overview/end-user-guide</a></td></tr></tbody></table>
