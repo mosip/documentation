@@ -64,13 +64,13 @@ Verification is performed on various configurations as mentioned below
 
 ## Feature Health
 
-<figure><img src="../../.gitbook/assets/feature health.png" alt=""><figcaption><p>Feature Health</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/feature_health.png" alt=""><figcaption><p>Feature Health</p></figcaption></figure>
 
 ## Test execution statistics
 
 ### Functional test results by modules
 
-Below are the test metrics by performing functional testing using mock SBI and mock ABIS. The process followed was black box testing which based its test cases on the specifications of the software component under test. The functional test was performed in combination with individual module testing and integration testing. Test data were prepared in line with the user stories. Expected results were monitored by examining the user interface. The coverage includes GUI testing, System testing, End-To-End flows across multiple languages and configurations. The testing cycle included the simulation of multiple identity schema and respective UI schema configurations.
+Below are the test metrics by performing functional testing using mock SBI and mock ABIS. The process followed was black box testing which based its test cases on the specifications of the software component under test. The functional test was performed using individual modules and integration testing. Test data were prepared in line with the user stories. Expected results were monitored by examining the user interface. The coverage includes GUI testing, System testing, End-To-End flows across multiple languages and configurations. The testing cycle included the simulation of numerous identity schema and respective UI schema configurations.
 
 <table><thead><tr><th width="332">Total</th><th>Passed</th><th>Failed</th><th>Skipped (N/A)</th></tr></thead><tbody><tr><td>511</td><td>373</td><td>138</td><td>0</td></tr></tbody></table>
 
