@@ -4,21 +4,19 @@ This is the module that supports transferring verifiable credentials (VC) over B
 
 Let's have a look at how BLE communication works in general between the two devices A & B.
 
-## Repository: 
+## Repository:
 
 * [tuvali](https://github.com/mosip/tuvali) presents the kotlin library for tuvali
-
 * [tuvali-ios-swift](https://github.com/mosip/tuvali-ios-swift) to get details on swift artifact.
-
 * [tuvali](https://repo1.maven.org/maven2/io/mosip/tuvali/) contains the artefacts in maven.
 
 ## Installation:
 
-### Usage as a Kotlin library (for native android)   
+### Usage as a Kotlin library (for native android)
 
 1. In build.gradle.kts add the following:
-   
-``` kotlin
+
+```kotlin
     dependencies {
         implementation("io.mosip:tuvali:0.5.0-SNAPSHOT")
     }
@@ -26,16 +24,12 @@ Let's have a look at how BLE communication works in general between the two devi
 
 The kotlin library has been added to your project.
 
-### Usage as a Swift library (for native ios)    
+### Usage as a Swift library (for native ios)
 
 1. Download swift artifact (ios-tuvali-library) from the repository.
-
 2. Open your project in XCode.
-
 3. Goto File > Add Package Dependencies.
-
 4. Select Add Local option.
-
 5. Add the artifact folder.
 
 The swift library has been added to your project.
@@ -44,7 +38,7 @@ Before we understand how Tuvali works, let's go through BLE communication.
 
 ## How does BLE Communication work?
 
-![BLE Communication](../../../.gitbook/assets/ble-high-level-comm-generic.png)
+![BLE Communication](../../../../.gitbook/assets/ble-high-level-comm-generic.png)
 
 In BLE communication, one device is designated as Peripheral and another one designated as Central.
 
@@ -77,7 +71,7 @@ More details about other BLE terminology used here can be found in standard BLE 
 
 ## How Tuvali works with BLE to transfer VC from Central to Peripheral
 
-![OpenID for VP over BLE Implementation](../../../.gitbook/assets/openid-for-vp-over-ble-spec-impl.png)
+![OpenID for VP over BLE Implementation](../../../../.gitbook/assets/openid-for-vp-over-ble-spec-impl.png)
 
 > Note: Tuvali is supposed to implement OpenID for VP over BLE specification. As part of it, both VP request and response transfer should be implemented. However the current version of Tuvali only transfers VC from Central to Peripheral.
 
@@ -182,11 +176,11 @@ Current Supported Stages: CON(Connection) | KEX(Key Exchange) | ENC(Encryption) 
 
 Below are the exception message and the disconnect message which appears on the screen during the error.
 
-![Exception Message](../../../.gitbook/assets/failedToTransferError.jpeg)
+![Exception Message](../../../../.gitbook/assets/failedToTransferError.jpeg)
 
 > This message is displayed on the device throwing the exception.
 
-> <img src="../../../.gitbook/assets/disconnect-message.png" alt="" data-size="original">
+> <img src="../../../../.gitbook/assets/disconnect-message.png" alt="" data-size="original">
 >
 > This message is displayed whenever a device gets disconnected.
 

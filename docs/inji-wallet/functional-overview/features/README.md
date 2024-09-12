@@ -6,7 +6,7 @@ Below is a comprehensive overview of the features provided by Inji Wallet.
 
 Downloading your digital credentials (IDs) with you at all times just got easier. This can be done as below:
 
-### Downloading VC using the OpenID for VC Issuance flow:&#x20;
+### Downloading VC using the OpenID for VC Issuance flow:
 
 Residents can download a VC using a configured third-party issuer which complies with OpenID for VCI standard. For Inji Wallet, MOSIP IDA (National ID) and Veridonia Insurance (Insurance credentials) are example integrations.
 
@@ -43,8 +43,7 @@ To understand the workflow, please refer [here](https://docs.mosip.io/inji/inji-
 
 * The Inji Wallet application facilitates a Single Sign-On (SSO) function, empowering supported partners to enable a seamless login to online portals. This is achieved through the efficient process of scanning a QR code and sharing user data with their explicit consent.\
   \
-  To understand the QR code login flow, refer [here](https://docs.esignet.io/end-user-guide/login-with-qr-code).\
-
+  To understand the QR code login flow, refer [here](https://docs.esignet.io/end-user-guide/login-with-qr-code).\\
 * Inji Wallet users have the ability to choose which downloaded VC should be enabled for online authentication and selectively share the credentials on their ID. This capability provides users with an additional layer of security and control over the utilization of their stored information.
 
 ## Data backup and restore
@@ -74,7 +73,7 @@ Inji Wallet functions as a comprehensive repository for a diverse array of VCs, 
 * **Organized UI**: Inji Wallet provides a clear demarcation between downloaded and received VCs enhancing user clarity.
 * **Quick Access menu**: Users can now directly Share, Share with Selfie directly by accessing the kebab menu from the mini view in the Home Page and the detailed view of the VC.
 
-For a quick look at these features, refer the [Inji Wallet User Guide](../../end-user-guide.md).
+For a quick look at these features, refer the [Inji Wallet User Guide](../end-user-guide.md).
 
 To understand the workflow of key features, refer [Feature Workflows](https://docs.mosip.io/inji/overview/features/feature-workflows).
 

@@ -17,31 +17,26 @@ PixelPass also has Kotlin, Swift and Java artifacts available.
 
 Below snapshots provide the mobile platform native artifacts along with the java library:
 
-**Kotlin**: Index of /repositories/snapshots/io/mosip/pixelpass-aar 
+**Kotlin**: Index of /repositories/snapshots/io/mosip/pixelpass-aar
 
-**Swift**: GitHub - mosip/pixelpass-ios-swift: Swift library to generate QR code from VC and decode the data 
+**Swift**: GitHub - mosip/pixelpass-ios-swift: Swift library to generate QR code from VC and decode the data
 
-**Java:** Index of /repositories/snapshots/io/mosip/pixelpass-jar 
+**Java:** Index of /repositories/snapshots/io/mosip/pixelpass-jar
 
 **Maven repo:** [pixelpass](https://repo1.maven.org/maven2/io/mosip/pixelpass/)
-
 
 ### Installation
 
 1. As a node project:
-   
+
 npm i @mosip/pixelpass
 
 [npm](https://www.npmjs.com/package/@mosip/pixelpass)
 
 2. To include PixelPass in your Swift project, follow the below steps:
-
-    1.    Clone the PixelPass library locally.
-
-    2.    Create a new Swift project.
-
-    3.    Add package dependency: PixelPass
-
+   1. Clone the PixelPass library locally.
+   2. Create a new Swift project.
+   3. Add package dependency: PixelPass
 
 ### APIs
 
@@ -51,9 +46,11 @@ Below are the APIs provided by the PixelPass library:
 
 **generateQRData( data, header )**
 
-    data - Data needs to be compressed and encoded
+```
+data - Data needs to be compressed and encoded
 
-    header - Data header needs to be prepended to identify the encoded data. It defaults to ""
+header - Data header needs to be prepended to identify the encoded data. It defaults to ""
+```
 
 ```
 import { generateQRData } from '@mosip/pixelpass';
@@ -72,11 +69,13 @@ The API returns a zlib compressed and base45 encoded string with header prepende
 
 **generateQRCode( data, ecc , header )**
 
-    data - Data needs to be compressed and encoded
+```
+data - Data needs to be compressed and encoded
 
-    ecc - Error Correction Level for the QR generated. defaults to "L"
+ecc - Error Correction Level for the QR generated. defaults to "L"
 
-    header - Data header needs to be prepended to identify the encoded data. defaults to ""
+header - Data header needs to be prepended to identify the encoded data. defaults to ""
+```
 
 ```
 import { generateQRCode } from '@mosip/pixelpass';
@@ -94,7 +93,9 @@ The API returns a base64 encoded PNG image with header prepended if provided.
 
 **decode(data)**
 
-    data - Data needs to be decoded and decompressed without header
+```
+data - Data needs to be decoded and decompressed without header
+```
 
 ```
 import { decode } from '@mosip/pixelpass';
@@ -128,13 +129,9 @@ const cborEncodedString = byteBuffer.toString('hex');
 
 The getMappedData function accepts three arguments: a JSON object and a map used to create a new set of key-value pairs based on the provided mapper. The third argument is a boolean value and an optional parameter that enables or disables CBOR encoding for the newly mapped data.
 
-**Eg:** The converted map would look like, 
+**Eg:** The converted map would look like,
 
-{ 
-"1": "207",
-"2": "Jhon",
-"3": "Honay"
-}
+{ "1": "207", "2": "Jhon", "3": "Honay" }
 
 ### To decode mapped CBOR data:
 
@@ -155,36 +152,28 @@ const jsonData = decodeMappedData(cborEncodedString, mapper);
 
 The decodeMappedData function accepts two arguments: a string that can be either CBOR-encoded or a mapped JSON, and a map used to create a JSON by mapping the keys and values. If the input string is CBOR-encoded, the API will first decode it using CBOR, and then proceed with re-mapping the data based on the provided map.
 
-**Eg:** The returned JSON would look like, 
+**Eg:** The returned JSON would look like,
 
-{
-"name": "Jhon",
-"id": "207",
-"l_name": "Honay"
-}
+{ "name": "Jhon", "id": "207", "l\_name": "Honay" }
 
 ### Errors / Exceptions
 
 Shall you encounter any errors while using the APIs, please refer to the below:
 
-1. **Cannot read properties of null (reading 'length')** - This error denotes that the string passed to encode is null.&#x20;
-2. **Cannot read properties of undefined (reading 'length')** - This error denotes that the string passed to encode is undefined.&#x20;
-3. **byteArrayArg is null or undefined.** - This error denotes that the string passed to encode is null or undefined.&#x20;
-4. **utf8StringArg is null or undefined**. - This error denotes that the string passed to decode is null or undefined.&#x20;
-5. **utf8StringArg has incorrect length**. - This error denotes that the string passed to decode is of invalid length.&#x20;
-6. **Invalid character at position X**. - This error denotes that the string passed to decode is invalid with an unknown character then base45 character set. Also denotes the invalid character position.&#x20;
+1. **Cannot read properties of null (reading 'length')** - This error denotes that the string passed to encode is null.
+2. **Cannot read properties of undefined (reading 'length')** - This error denotes that the string passed to encode is undefined.
+3. **byteArrayArg is null or undefined.** - This error denotes that the string passed to encode is null or undefined.
+4. **utf8StringArg is null or undefined**. - This error denotes that the string passed to decode is null or undefined.
+5. **utf8StringArg has incorrect length**. - This error denotes that the string passed to decode is of invalid length.
+6. **Invalid character at position X**. - This error denotes that the string passed to decode is invalid with an unknown character then base45 character set. Also denotes the invalid character position.
 7. **incorrect data check** - This error denotes that the string passed to decode is invalid.
 
 ## PixelPass & Inji Wallet Integration:
 
 The below diagram shows how Inji Wallet utilises PixelPass library.
 
-<figure><img src="../../.gitbook/assets/inji_mobile_wallet_integration_guides_pixel_pass_1.png" alt=""><figcaption></figcaption></figure>
-
-
+<figure><img src="../../../.gitbook/assets/inji_mobile_wallet_integration_guides_pixel_pass_1.png" alt=""><figcaption></figcaption></figure>
 
 \
 \
-\
-
-
+\\

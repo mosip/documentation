@@ -4,7 +4,7 @@ This document delineates the workflow for essential functionalities of Inji Wall
 
 ### 1. First App Launch
 
-After installing the application for the first time, the user will be asked to set up unlock method for it. The app supports biometric or PIN-based locks. For more details, refer to the [End User Guide](../../end-user-guide.md).
+After installing the application for the first time, the user will be asked to set up unlock method for it. The app supports biometric or PIN-based locks. For more details, refer to the [End User Guide](../end-user-guide.md).
 
 #### Launch with passcode unlock method
 
@@ -50,7 +50,7 @@ This method of VC download illustrates the **OpenID4VCI** method of download usi
 
 ### 3. Sharing of credentials
 
-The credentials are shared in a peer-to-peer model with the verifier application. The data exchange between devices is done using the BLE Protocol. For more information, refer to [Tuvali](../../integration-guide/tuvali/) documentation.
+The credentials are shared in a peer-to-peer model with the verifier application. The data exchange between devices is done using the BLE Protocol. For more information, refer to [Tuvali](../../technical-overview/integration-guide/tuvali/) documentation.
 
 <figure><img src="../../../.gitbook/assets/vc_share (1).png" alt=""><figcaption></figcaption></figure>
 

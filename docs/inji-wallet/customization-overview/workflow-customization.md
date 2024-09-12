@@ -85,11 +85,11 @@ This state machine helps to view the audit log of the different activities on th
 
 ## requestMachine.ts
 
-This state machine is instantiated when the user launches the verification section which displays the QR code. This QR is generated with content from a low-level [offline VC-sharing component](../components.md#offline-vc-sharing-component). The content of the QR code is scanned by a wallet Inji Wallet application to establish connection with verifier and share the VC credential. Once the VC is received on the Verifier side, the state machine allows seeing the received VC details as well for Verification.
+This state machine is instantiated when the user launches the verification section which displays the QR code. This QR is generated with content from a low-level [offline VC-sharing component](../technical-overview/components.md#offline-vc-sharing-component). The content of the QR code is scanned by a wallet Inji Wallet application to establish connection with verifier and share the VC credential. Once the VC is received on the Verifier side, the state machine allows seeing the received VC details as well for Verification.
 
 ## scanMachine.ts
 
-This state machine is instantiated when the user launches the scanner section which opens up the camera to scan the QR code presented by the Verifier. The scanned data is fed into the underlying [offline VC sharing component](../components.md#offline-vc-sharing-component) to allow the discovery of the Verifier device and establish a connection to it. Once the connection is established, the user is allowed to select the downloaded VCs that can be shared with Verifier. The state machine also allows selfie/face verification before sharing VC.
+This state machine is instantiated when the user launches the scanner section which opens up the camera to scan the QR code presented by the Verifier. The scanned data is fed into the underlying [offline VC sharing component](../technical-overview/components.md#offline-vc-sharing-component) to allow the discovery of the Verifier device and establish a connection to it. Once the connection is established, the user is allowed to select the downloaded VCs that can be shared with Verifier. The state machine also allows selfie/face verification before sharing VC.
 
 ## revoke.ts
 

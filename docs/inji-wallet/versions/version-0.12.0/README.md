@@ -12,20 +12,20 @@ We are delighted to announce the release of Inji Wallet Version 0.12.0 . This re
 
 **1. Features added to the Download Functionality:**
 
-   * Credential Type Selection
-   * VC Verification
-   * QR Code Generation for VC
+* Credential Type Selection
+* VC Verification
+* QR Code Generation for VC
 
 **2. Library:**
 
-   * QR Code Generation: PixelPass
+* QR Code Generation: PixelPass
 
 **3. UI/UX Enhancements:**
 
-   * Card View UI Changes
-   * VC Share Optimization
-   * Activity Log Enhancements
-   * GenderMag Fixes
+* Card View UI Changes
+* VC Share Optimization
+* Activity Log Enhancements
+* GenderMag Fixes
 
 **4. Data Backup Enhancements**
 
@@ -41,13 +41,13 @@ Please find below the details for the **Inji Version 0.12.0** release:
 
 #### Credential Type Selection:
 
-Inji Wallet now allows users to select the type of credential they need, giving them the option to choose from a list of Credential Types issued by the ID provider. This enables users to download Verifiable Credentials that match their selection.&#x20;
+Inji Wallet now allows users to select the type of credential they need, giving them the option to choose from a list of Credential Types issued by the ID provider. This enables users to download Verifiable Credentials that match their selection.
 
 #### VC Verification:
 
 Inji Wallet provides the functionality to verify Verifiable Credentials using the Digital Bazaar library. The issuer's signature is verified based on the proof type provided by the issuer. Currently, we support the RSA signature type, and we will soon add support for the Ed25519 proof type.
 
-To prevent failures during download caused by verification of Verifiable Credentials with any other signature type, this step needs to be bypassed. Learn more about the steps [**here**](../../customization-overview/credential_providers.md).
+To prevent failures during download caused by verification of Verifiable Credentials with any other signature type, this step needs to be bypassed. Learn more about the steps [**here**](../../customization-overview/credential\_providers.md).
 
 #### QR code generation for VC:
 
@@ -59,7 +59,7 @@ To know more about QR code verification, read about Inji Verify [**here**](https
 
 QR Code Generation: PixelPass
 
-To read more about PixelPass library refer [**here**](../../integration-guide/pixelpass.md).
+To read more about PixelPass library refer [**here**](../../technical-overview/integration-guide/pixelpass.md).
 
 ### UI/UX enhancements:
 
@@ -103,8 +103,6 @@ As part of the 0.12.0 release, the following enhancements have been made to the 
 
 * When the user initiates a Backup or Restore process, a banner will be displayed to inform users about the ongoing process.
 
-
-
 ### Repository Released
 
 | **Repositories** | **Tags Released**                                                                                |
@@ -113,14 +111,11 @@ As part of the 0.12.0 release, the following enhancements have been made to the 
 | mimoto           | <p><a href="https://github.com/mosip/mimoto/releases/tag/v0.12.0">v0.12.0</a><br></p>            |
 | mosip-config     | <p><a href="https://github.com/mosip/mosip-config/releases/tag/v0.12.0-INJI">v0.12.0</a><br></p> |
 
-
-
 ### Known Issues
 
 Redmi devices are not supported in this release. To know more, refer[ here](https://mosip.atlassian.net/issues/?filter=-4\&jql=labels%20%3D%20redmi%20order%20by%20created%20DESC).
 
 Mentioned below is the list of other known issues.
-
 
 | Jira issue                                                      | Issue description                                                                                                          |
 | --------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
@@ -147,7 +142,6 @@ Mentioned below is the list of other known issues.
 ### Bug Fixes
 
 Below are the list of fixes as part of 0.12.0 release:
-
 
 | Jira issue                                                      | Severity | Issue description                                                                                                                                   |
 | --------------------------------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -185,4 +179,3 @@ Below are the list of fixes as part of 0.12.0 release:
 * [User Guide](https://docs.mosip.io/inji/inji-mobile-wallet/end-user-guide)
 * [QA Report](test-report.md)
 * [API Documentation](https://github.com/mosip/mimoto/tree/release-0.10.0/docs/postman-collections)
-

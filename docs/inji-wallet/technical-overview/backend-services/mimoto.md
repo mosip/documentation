@@ -22,14 +22,14 @@ Credentials have to be activated in order to use them for online login. When a u
 
 * To send an OTP to a user, the below API is called.
 
-{% swagger src="../../.gitbook/assets/mimoto (1).json" path="/binding-otp" method="post" %}
-[mimoto (1).json](<../../.gitbook/assets/mimoto (1).json>)
+{% swagger src="../../../.gitbook/assets/mimoto (1).json" path="/binding-otp" method="post" %}
+[mimoto (1).json](<../../../.gitbook/assets/mimoto (1).json>)
 {% endswagger %}
 
 * After successful OTP validation, a keypair is generated in the phone and the public key is synced with server. The mimoto receives a certificate and create thumbprint which it stores in the keystore securely. This is called as the **activation process.**
 
-{% swagger src="../../.gitbook/assets/mimoto (1).json" path="/wallet-binding" method="post" %}
-[mimoto (1).json](<../../.gitbook/assets/mimoto (1).json>)
+{% swagger src="../../../.gitbook/assets/mimoto (1).json" path="/wallet-binding" method="post" %}
+[mimoto (1).json](<../../../.gitbook/assets/mimoto (1).json>)
 {% endswagger %}
 
 ## Configuration
@@ -44,12 +44,12 @@ The implementers can choose to use the existing configurations or add new config
 
 The user is currently on the `+` button on the Home screen, which will open `Add new card` screen, where all the issuers are displayed Below issuers list API gives out all the issuers list
 
-{% swagger src="../../.gitbook/assets/mimoto (1).json" path="/issuers" method="get" %}
-[mimoto (1).json](<../../.gitbook/assets/mimoto (1).json>)
+{% swagger src="../../../.gitbook/assets/mimoto (1).json" path="/issuers" method="get" %}
+[mimoto (1).json](<../../../.gitbook/assets/mimoto (1).json>)
 {% endswagger %}
 
 To get complete configuration of the specific issuer, below api is called.
 
-{% swagger src="../../.gitbook/assets/mimoto (1).json" path="/issuers/{issuer-id}" method="get" %}
-[mimoto (1).json](<../../.gitbook/assets/mimoto (1).json>)
+{% swagger src="../../../.gitbook/assets/mimoto (1).json" path="/issuers/{issuer-id}" method="get" %}
+[mimoto (1).json](<../../../.gitbook/assets/mimoto (1).json>)
 {% endswagger %}

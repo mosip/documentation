@@ -10,18 +10,18 @@ The user is required to open the portal integrated with eSignet and utilize the 
 
 After successfully scanning the QR code, Inji Wallet will access the API below and transmit the link code.
 
-{% swagger src="../../.gitbook/assets/Identity-Provider.yaml" path="/linked-authorization/link-transaction" method="post" %}
-[Identity-Provider.yaml](../../.gitbook/assets/Identity-Provider.yaml)
+{% swagger src="../../../.gitbook/assets/Identity-Provider.yaml" path="/linked-authorization/link-transaction" method="post" %}
+[Identity-Provider.yaml](../../../.gitbook/assets/Identity-Provider.yaml)
 {% endswagger %}
 
 * After successfully completing the offline face authentication and selecting the required and optional information, the two specified APIs are invoked.
 
-{% swagger src="../../.gitbook/assets/Identity-Provider.yaml" path="/linked-authorization/authenticate" method="post" %}
-[Identity-Provider.yaml](../../.gitbook/assets/Identity-Provider.yaml)
+{% swagger src="../../../.gitbook/assets/Identity-Provider.yaml" path="/linked-authorization/authenticate" method="post" %}
+[Identity-Provider.yaml](../../../.gitbook/assets/Identity-Provider.yaml)
 {% endswagger %}
 
-{% swagger src="../../.gitbook/assets/Identity-Provider.yaml" path="/linked-authorization/consent" method="post" %}
-[Identity-Provider.yaml](../../.gitbook/assets/Identity-Provider.yaml)
+{% swagger src="../../../.gitbook/assets/Identity-Provider.yaml" path="/linked-authorization/consent" method="post" %}
+[Identity-Provider.yaml](../../../.gitbook/assets/Identity-Provider.yaml)
 {% endswagger %}
 
 ### Download VC
@@ -33,6 +33,6 @@ The user is currently on the `Add new card` screen and chooses the option to `Do
 
 For credential request, refer credential\_endpoint attribute in issuer's configuration response.
 
-{% swagger src="../../.gitbook/assets/Identity-Provider.yaml" path="/vci/credential" method="post" %}
-[Identity-Provider.yaml](../../.gitbook/assets/Identity-Provider.yaml)
+{% swagger src="../../../.gitbook/assets/Identity-Provider.yaml" path="/vci/credential" method="post" %}
+[Identity-Provider.yaml](../../../.gitbook/assets/Identity-Provider.yaml)
 {% endswagger %}
