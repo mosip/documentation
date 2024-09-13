@@ -81,11 +81,11 @@ The Inji repo is renamed to [inji-wallet](https://github.com/mosip/inji-wallet)
 
 The following table outlines the tested and certified compatibility of Inji Wallet 0.13.0 with other modules.
 
-| Module      | Version |
-| ----------- | ------- |
-| Mimoto      | 0.13.1  |
-| eSignet     | 1.4.0   |
-| Inji Verify | 0.9.0   |
+| Module      | Version                                                        |
+| ----------- | -------------------------------------------------------------- |
+| Mimoto      | [0.13.1](https://github.com/mosip/mimoto/releases/tag/v0.13.1) |
+| eSignet     | [1.4.0](https://github.com/mosip/esignet)                      |
+| Inji Verify | [0.9.0](https://github.com/mosip/inji-verify/tree/v0.9.0)      |
 
 ## **Known Issues**
 
