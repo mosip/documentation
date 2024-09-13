@@ -3,6 +3,9 @@
 * [Inji](README.md)
   * [Try It Out](readme/try-it-out.md)
   * [Use case](readme/use-case.md)
+  * [Resources](readme/resources.md)
+  * [Roadmap](readme/roadmap/README.md)
+    * [Roadmap 2024](readme/roadmap/roadmap-2024.md)
   * [Supported Integrations](readme/supported-integrations/README.md)
     * [MOSIP](https://docs.mosip.io)
   * [Project Governance](readme/project-governance.md)
@@ -136,9 +139,3 @@
 * [Build & Deploy](inji-verify/build-and-deploy/README.md)
   * [Local Setup](inji-verify/build-and-deploy/local-setup.md)
   * [Generate QR Code](inji-verify/build-and-deploy/creating-verifiable-credentials-and-generating-qr-codes.md)
-
-***
-
-* [Resources](resources.md)
-* [Roadmap](roadmap/README.md)
-  * [Roadmap 2024](roadmap/roadmap-2024.md)
