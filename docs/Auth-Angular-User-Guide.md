@@ -126,4 +126,6 @@ To activate/deactivate => show/hide element all we need to do is add the appRole
 
 In the above sample, the add button will only be visible for users with DIVISION\_ADMIN or SUPERVISOR role.
 
-**Note:** Above mentioned code snippets are not the final implementations. Based on the API spec's and few other factors the method implementations might change a bit. But the component structures remain the same.
+{% hint style="info" %}
+**Note:** Above mentioned code snippets are not the final implementations. Based on the API specs and a few other factors the method implementations might change a bit. However, the component structures remain the same.
+{% endhint %}
