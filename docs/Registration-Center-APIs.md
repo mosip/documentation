@@ -1,17 +1,17 @@
 # Registration Center APIs
 
-This section contains detail about the service APIs in the Registration Center Masterdata module
+This section contains details about the service APIs in the Registration Center Masterdata module
 
 * [Registration Centers API](Registration-Center-APIs.md#registration-centers-api)
 * [Registration Center - Device Mapping API](Registration-Center-APIs.md#registration-center-device-api)
 * [Registration Center - Machine Mapping API](Registration-Center-APIs.md#registration-center-machine-api)
 * [Registration Center - User - Machine Mapping API](Registration-Center-APIs.md#registration-center-user-machine-mapping-api)
 * [Registration Center - Machine - Device API](Registration-Center-APIs.md#registration-center-machine-device-api)
-* [Registration Center - Search API](Registration-Center-APIs.md#post-registrationcenterssearch)
+* [Registration Center - Search API](Registration-Center-APIs.md#registration-center-search-apis)
 * [Registration Center - Filter values](Registration-Center-APIs.md#registration-center-filter-values)
-* [Registration Center Type - Search API](Registration-Center-APIs.md#post-registrationcentertypessearch)
-* [Registration Center Type - Filter values](Registration-Center-APIs.md#post-regcentertypesfiltervalues)
-* [Create/Update API](Registration-Center-APIs.md#createupdate-api)
+* [Registration Center Type - Search API](Registration-Center-APIs.md#registration-center-type-search-apis)
+* [Registration Center Type - Filter values](Registration-Center-APIs.md#registration-center-types-filter-values)
+* [Create/Update API](Registration-Center-APIs.md#create-update-api)
 * [Search API](Registration-Center-APIs.md#search-api)
 
 ## Registration Centers API
