@@ -1,23 +1,23 @@
 # Registration Processor APIs
 
-This section details about the service APIs in the Registration-Processor modules
+This section details the service APIs in the Registration-Processor modules
 
-1. [Packet receiver API](Registration-Processor-APIs.md#1-packet-receiver-api)
-2. [Registration status API](Registration-Processor-APIs.md#2-registration-status-api)
-3. [Sync Registration API](Registration-Processor-APIs.md#3-sync-registration-api)
-4. [Manual Adjudication APIs](Registration-Processor-APIs.md#4-manual-adjudication-apis)
-5. [Bio Dedupe API](Registration-Processor-APIs.md#5-bio-dedupe-api)
-6. [Packet Generator API](Registration-Processor-APIs.md#6-packet-generator-api)
-7. [Packet Uploader API](Registration-Processor-APIs.md#7-packet-uploader-api)
-8. [Request Handler API](Registration-Processor-APIs.md#8-request-handler-api)
-9. [Registration Transaction API](Registration-Processor-APIs.md#9-registration-transaction-api)
-10. [UIN Card API](Registration-Processor-APIs.md#10-uin-card-api)
-11. [Lost UIN Or RID API](Registration-Processor-APIs.md#11-lost-uin-or-rid-api)
-12. [Update UIN API](Registration-Processor-APIs.md#12-update-uin-api)
+1. [Packet receiver API](Registration-Processor-APIs.md#id-1-packet-receiver-api)
+2. [Registration status API](Registration-Processor-APIs.md#id-2-registration-status-api)
+3. [Sync Registration API](Registration-Processor-APIs.md#id-3-sync-registration-api)
+4. [Manual Adjudication APIs](Registration-Processor-APIs.md#id-4-manual-adjudication-apis)
+5. [Bio Dedupe API](Registration-Processor-APIs.md#id-5-bio-dedupe-api)
+6. [Packet Generator API](Registration-Processor-APIs.md#id-6-packet-generator-api)
+7. [Packet Uploader API](Registration-Processor-APIs.md#id-7-packet-uploader-api)
+8. [Request Handler API](Registration-Processor-APIs.md#id-8-request-handler-api)
+9. [Registration Transaction API](Registration-Processor-APIs.md#id-9-registration-transaction-api)
+10. [UIN Card API](Registration-Processor-APIs.md#id-10-uin-card-api)
+11. [Lost UIN Or RID API](Registration-Processor-APIs.md#id-11-lost-uin-or-rid-api)
+12. [Update UIN API](Registration-Processor-APIs.md#id-12-update-uin-api)
 
 ## 1 Packet Receiver API
 
-This API receives registration packet from reg-client. Before moving packet to landing zone virus scan is performed and then trustworthiness of the packet is validated using hash value and size.
+This API receives a registration packet from the reg-client. Before moving the packet to the landing zone virus scan, the packet's trustworthiness is validated using hash value and size.
 
 `POST /registrationprocessor/v1/packetreceiver/registrationpackets`
 
