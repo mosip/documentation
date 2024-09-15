@@ -1,10 +1,10 @@
 # Machine APIs
 
-This section contains detail about the service APIs in the Machine Master data module
+This section contains details about the service APIs in the Machine Master data module
 
-* [Machines API](Machine-APIs.md#machines-master-api) These APIs includes create, update and fetch APIs. Create and Update API is used by the Administrator Portal for the Create and Update Machine functionality. Fetch APIs are used by Registration Processor to validate the Machine data received in packet to make sure the packet is generated in an authorized Machine.
-* [Machine Types Master API](Machine-APIs.md#machine-types-master-api) These APIs includes Create, Update, Search and Filter API which are used by the Administrator Portal. Create and Update API is used for the Create and Update Machine Type functionality. Search API is used by the portal to fetch the list of Machine Types based on a filter criterion to display the list of Machine Types on the UI and Filter API is used by the portal to populate Machine Type Filter Drop downs on the Portal UI.
-* [Machine Specification API](Machine-APIs.md#machine-specification) These APIs include Create, Update, Search and Filter API which are used by the Administrator Portal. Create and Update API is used for the Create and Update Machine Specification functionality. Search API is used by the portal to fetch the list of Machine Specification based on a filter criterion to display the list of Machine Specification on the UI and Filter API is used to populate Machine Specification Filter Drop downs on the Portal UI.
+* [Machines API](Machine-APIs.md#machines-master-api) These APIs include create, update, and fetch APIs. Create and Update API is used by the Administrator Portal for the Create and Update Machine functionality. Fetch APIs are used by Registration Processor to validate the Machine data received in packet to make sure the packet is generated in an authorized Machine.
+* [Machine Types Master API](Machine-APIs.md#machine-types-master-api) These APIs include Create, Update, Search and Filter API which the Administrator Portal uses. Create and Update API is used for the Create and Update Machine Type functionality. Search API is used by the portal to fetch the list of Machine Types based on a filter criterion to display the list of Machine Types on the UI and Filter API is used by the portal to populate Machine Type Filter Drop downs on the Portal UI.
+* [Machine Specification API](Machine-APIs.md#machine-specifications) These APIs include Create, Update, Search and Filter API which are used by the Administrator Portal. Create and Update API is used for the Create and Update Machine Specification functionality. Search API is used by the portal to fetch the list of Machine Specification based on a filter criterion to display the list of Machine Specification on the UI and Filter API is used to populate Machine Specification Filter Drop downs on the Portal UI.
 
 ## Machines Master API
 
@@ -74,7 +74,7 @@ This service will create the list of Machines which are used in the MOSIP platfo
 }
 ```
 
-**Response Code : 200 (OK)**
+**Response Code: 200 (OK)**
 
 #### Example Response
 
@@ -105,11 +105,11 @@ This service will create the list of Machines which are used in the MOSIP platfo
 }
 ```
 
-**Response Code : 200 (OK)**
+**Response Code: 200 (OK)**
 
 ## GET /machines
 
-This service will provides the service to fetch the complete List of machines with the machine details.
+This service will provide the service to fetch the complete List of machines with the machine details.
 
 #### Resource URL
 
@@ -156,11 +156,11 @@ This service will provides the service to fetch the complete List of machines wi
 }
 ```
 
-**Response Code : 200 (OK)**
+**Response Code: 200 (OK)**
 
 ### GET /machines/{languagecode}
 
-This service will provides the service to fetch the List of machines with the machine details based on the language.
+This service will provide the service to fetch the List of machines with the machine details based on the language.
 
 #### Resource URL
 
@@ -207,11 +207,11 @@ This service will provides the service to fetch the List of machines with the ma
 }
 ```
 
-**Response Code : 200 (OK)**
+**Response Code: 200 (OK)**
 
 ### GET /machineshistory/{id}/{languagecode}/{eff\_dtimes}
 
-This service will provides the service will verify if a machine (id) was active at a particular time (eff\_dtime).
+This service will provide a service that will verify if a machine (id) was active at a particular time (eff\_dtime).
 
 #### Resource URL
 

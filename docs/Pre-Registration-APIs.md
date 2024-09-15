@@ -14,7 +14,7 @@ This section details about the service API in the Pre-Registration modules.
 * [Captcha Service](Pre-Registration-APIs.md#captcha-service-public)
 
 {% hint style="info" %}
-id, version and requesttime in request and responsetime in response bodies are optional fields and not consumed by pre-registration application unless defined. Though we need to pass these as part of the request, it should not be tested. Few of the error messages are intended for API consumer, who are mostly SI and developers. User friendly messages need to be mapped in the UI reference implementation.
+**Note:** The id, version and requesttime in request and responsetime in response bodies are optional fields and not consumed by pre-registration application unless defined. Though we need to pass these as part of the request, it should not be tested. Few of the error messages are intended for API consumer, who are mostly SI and developers. User friendly messages need to be mapped in the UI reference implementation.
 {% endhint %}
 
 {% hint style="info" %}
