@@ -133,13 +133,13 @@ You have to change _**acr-amr-mapping.json**_ in the _**mosip-config**_ repo; de
 }
 ```
 
-For details on ISO 639-1 and ISO 639-2, please follow the [documentation here](https://www.loc.gov/standards/iso639-2/php/English\_list.p).
+For details on ISO 639-1 and ISO 639-2, please follow the [documentation here](https://www.loc.gov/standards/iso639-2/php/English\_list.php).
 
 **Adding a new language in the production setup**
 
 Similar to the local mentioned above, you need to create a new language JSON file (as per ISO 639-1 and then update language configurations in _the **default.json**_ file.
 
-Apart from that, you have to make the above changes in the `develop` branch of your [_**artifactory-ref-impl**_](https://github.com/mosip/artifactory-ref-impl/tree/develop) repository. In order to do so,
+Apart from that, you have to make the above changes in the `develop` branch of your [_**artifactory-ref-impl**_](https://github.com/mosip/artifactory-ref-impl/tree/develop) repository. To do so,
 
 1. Clone the repo and switch to the `develop` branch.
 2. Go to the folder location:\
