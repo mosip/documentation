@@ -67,5 +67,6 @@
   * [Code Contribution](contribution/code-contribution.md)
   * [Code of Conduct](contribution/code-of-conduct.md)
 * [License](license.md)
+* [Resources](resources.md)
 * [Roadmap](roadmap/README.md)
   * [Roadmap 2024](roadmap/roadmap-2024.md)
