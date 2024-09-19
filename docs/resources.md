@@ -16,9 +16,7 @@ Perfect for anyone looking to master eSignet quickly! 🚀
 
 ## Unlocking the values of integration with Inji and eSignet <a href="#unlocking-the-values-of-integration-with-inji-and-esignet" id="unlocking-the-values-of-integration-with-inji-and-esignet"></a>
 
-Join our webinar to see how national IDs empower citizens in the digital age:
-
-🌐 **Join our webinar to see how national IDs empower citizens in the digital age:**
+Join our webinar to see how national IDs empower citizens in the digital age 🌐
 
 * **National ID as an Enabler:** Learn how IDs unlock access to various services.
 * **Digital Transformation:** Discover how IDs streamline processes for citizens and governments.
