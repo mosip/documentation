@@ -110,6 +110,7 @@
   * [Components](inji-certify/technical-overview/components.md)
   * [Tested Operating Systems](inji-certify/technical-overview/supported-browsers.md)
 * [Releases](inji-certify/releases/README.md)
+  * [Version 0.9.1](inji-certify/releases/version-0.9.1.md)
   * [Version 0.9.0](inji-certify/releases/version-0.9.0/README.md)
     * [Test Report](inji-certify/releases/version-0.9.0/test-report.md)
   * [Version 0.8.1](inji-certify/releases/release-notes.md)
