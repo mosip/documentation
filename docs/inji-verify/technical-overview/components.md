@@ -3,7 +3,9 @@
 * **Inji Verify** serves as a verification platform for verifiable credentials, offering an intuitive web portal designed to streamline the process of verifying VC for users.
 * **Technical Components of Verify:** The following component diagram illustrates the structure and components of Inji Verify. It offers a comprehensive explanation of how the platform operates and how its various elements interact to deliver its functionalities.
 
-<figure><img src="../../.gitbook/assets/Inji Verify Arch 2 (1).jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/inji_verify_0.10.0_arch_diagram_1.png" alt="" width="375"><figcaption></figcaption></figure>
+
+
 
 ### Components:
 
