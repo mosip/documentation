@@ -1,0 +1,37 @@
+# 1.2.0.1
+
+## Release Notes
+
+**Release Version**: 1.2.0.1
+
+**Release Date**: 19th March, 2024
+
+The **1.2.0.1** release incorporates all features previously released in beta, including the upgrade of the platform to V3 architecture and several significant fixes requested by the countries. It prioritizes enhancements in testability, usability, and security.
+
+To learn more about the upgrade, please refer to the information below.
+
+Also included in this release are Domain Specific Language (DSL) automation scripts, which facilitate platform testing. Additionally, several security-related issues have been addressed. Click [here](https://docs.mosip.io/1.2.0/test-automation) for more information on test automation.
+
+Another major highlight of this patch release is the Print Stage. The Print Stage, now renamed as **Credential Requestor Stage**, additionally manages the initiation of credential requests tailored to partner-specific information needs. Click [here](https://docs.mosip.io/1.2.0/modules/registration-processor/credential-requestor-stage) to learn more about the Credential Requestor Stage.
+
+Implementation of handles in ID Repository is also included as part of this release. Refer [here](https://docs.mosip.io/1.2.0/modules/id-repository/custom-handle) to learn more about handles and their implementation.
+
+**Major Areas of Work**
+
+* Credential Requestor Stage
+* Introduction of Handles in ID Repository
+* Functional bug fixes
+* Security bug fixes
+* Test Automation
+* Performance fixes
+* Sonar bug fixes
+
+## Repository Released
+
+<table data-header-hidden><thead><tr><th width="262"></th><th></th></tr></thead><tbody><tr><td><strong>Repositories</strong></td><td><strong>Tags Released</strong></td></tr><tr><td>admin-ui</td><td><a href="https://github.com/mosip/admin-ui/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>artifactory-ref-impl</td><td><a href="https://github.com/mosip/artifactory-ref-impl/tree/v1.2.0.1">v1.2.0.1</a></td></tr><tr><td>admin-services</td><td><a href="https://github.com/mosip/admin-services/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>audit-manager</td><td><a href="https://github.com/mosip/audit-manager/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>biosdk-client</td><td><a href="https://github.com/mosip/biosdk-client/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>commons</td><td><a href="https://github.com/mosip/commons/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>id-authentication</td><td><a href="https://github.com/mosip/id-authentication/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>id-repository</td><td><a href="https://github.com/mosip/id-repository/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>otp-manager</td><td><a href="https://github.com/mosip/otp-manager/tree/v1.2.0.1">v1.2.0.1</a></td></tr><tr><td>packet-manager</td><td><a href="https://github.com/mosip/packet-manager/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>demosdk</td><td><a href="https://github.com/mosip/demosdk/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>durian</td><td><a href="https://github.com/mosip/durian/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>keymanager</td><td><a href="https://github.com/mosip/keymanager/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>packet-manager</td><td><a href="https://github.com/mosip/packet-manager/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>postres-init</td><td><a href="https://github.com/mosip/postgres-init/tree/v1.2.0.1">v1.2.0.1</a></td></tr><tr><td>partner-management-services</td><td><a href="https://github.com/mosip/partner-management-services/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>partner-management-portal</td><td><a href="https://github.com/mosip/partner-management-services/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>pre-registration</td><td><a href="https://github.com/mosip/pre-registration/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>print</td><td><a href="https://github.com/mosip/print/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>resident-services</td><td><a href="https://github.com/mosip/resident-services/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>registration</td><td><a href="https://github.com/mosip/registration/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>registration-client</td><td><a href="https://github.com/mosip/registration-client/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>mosip-openid-bridge</td><td><a href="https://github.com/mosip/mosip-openid-bridge/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>mosip-functional-test</td><td><a href="https://github.com/mosip/mosip-functional-tests/tree/v1.2.0.1">v1.2.0.1</a></td></tr><tr><td>biosdk-services</td><td><a href="https://github.com/mosip/biosdk-services/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>bio-utils</td><td><a href="https://github.com/mosip/bio-utils/tree/v1.2.0.2">v1.2.0.2</a></td></tr><tr><td>mosip-config</td><td><a href="https://github.com/mosip/mosip-config/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>mosip-helm</td><td><a href="https://github.com/mosip/mosip-helm/tree/v1.2.0.1">v1.2.0.1</a></td></tr><tr><td>keyclock</td><td><a href="https://github.com/mosip/keycloak/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>khazana</td><td><a href="https://github.com/mosip/khazana/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>mosip-automation-tests</td><td><a href="https://github.com/mosip/mosip-automation-tests/tree/v1.2.0.1">v1.2.0.1</a></td></tr><tr><td>mosip-onboarding</td><td><a href="https://github.com/mosip/mosip-onboarding/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>mosip-data</td><td><a href="https://github.com/mosip/mosip-data/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>mosip-infra</td><td><a href="https://github.com/mosip/mosip-infra/tree/v1.2.0.1">v1.2.0.1</a></td></tr><tr><td>mosip-ref-impl</td><td><a href="https://github.com/mosip/mosip-ref-impl/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>mosip-file-server</td><td><a href="https://github.com/mosip/mosip-file-server/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>mosip-mock-services</td><td><a href="https://github.com/mosip/mosip-mock-services/tree/v1.2.0.1">v1.2.0.1</a></td></tr><tr><td>mock-smtp-sms</td><td><a href="https://github.com/mosip/mock-smtp-sms/tree/v1.0.0">v1.0.0</a></td></tr><tr><td>migration-utility</td><td><a href="https://github.com/mosip/migration-utility/tree/v1.0.0">1.0.0</a></td></tr><tr><td>k8s-infra</td><td><a href="https://github.com/mosip/k8s-infra/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>reporting</td><td><a href="https://github.com/mosip/reporting/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>demosdk</td><td><a href="https://github.com/mosip/demosdk/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>pre-registration-ui</td><td><a href="https://github.com/mosip/pre-registration-ui/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>digital-card-service</td><td><a href="https://github.com/mosip/digital-card-service/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>tusd-server</td><td><a href="https://github.com/mosip/tusd-server/tree/v1.2.0.1">v1.2.0.1</a></td></tr><tr><td>converters</td><td><a href="https://github.com/mosip/converters/tree/v1.2.0.1/">v1.2.0.1</a></td></tr><tr><td>websub</td><td><a href="https://github.com/mosip/websub/tree/v1.2.0.1">v1.2.0.1</a></td></tr></tbody></table>
+
+## Documentation
+
+* [Enhancements and bug fixes](https://docs.mosip.io/1.2.0/releases/release-notes-1.2.0.1/enhancements-and-bug-fixes)
+* [Functional test report](https://docs.mosip.io/1.2.0/releases/release-notes-1.2.0.1/test-report-1.2.0.1)
+* [Known Issues](https://mosip.atlassian.net/issues/?filter=11385)

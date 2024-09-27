@@ -15,21 +15,21 @@ Provides various partner services like onboarding partners and providing partner
 
 The diagram below illustrates the relationship of this service to other MOSIP services.
 
-![](../../../\_images/pms.png)
+![](../../../.gitbook/assets/pms.png)
 
-1. Certificates of partner are uploaded to [Key Manager](../../../keymanager.md) as part of onboarding.
+1. Certificates of partner are uploaded to [Key Manager](../../keymanager/) as part of onboarding.
 2. Registration processor fetches ABIS datashare policy from PMS.
 3. PMS sends notification messages to partners via notification service (of Kernel).
 4. Audit logs are logged into Auditmanager.
-5. [ID Repository](../../../id-repository.md) fetches credential data share partners and their polices from PMS.
+5. [ID Repository](../../id-repository/) fetches credential data share partners and their polices from PMS.
 6. All PMS data is stored in `mosip_pms` DB.
-7. Certificates of Authentication Partners are sent to IDA module as IDA runs independently. The certs are shared using [Datashare](../../../datashare.md) (which futher uses Websub to share data with IDA).
+7. Certificates of Authentication Partners are sent to IDA module as IDA runs independently. The certs are shared using [Datashare](../../datashare.md) (which futher uses Websub to share data with IDA).
 
 ## Policy Management Service
 
 This service manages partner policies.
 
-![](../../../\_images/policymanager.png)
+![](../../../.gitbook/assets/policymanager.png)
 
 1. Audit logs are logged into Auditmanager.
 2. All policies are stored stored in `mosip_pms` DB.

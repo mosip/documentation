@@ -10,7 +10,7 @@ MOSIP's partner management is used to create and manage OIDC clients. Hence, thr
 
 <summary>How can we create a OIDC client using partner management?</summary>
 
-In order to create a OIDC client,&#x20;
+In order to create a OIDC client,
 
 * The relying party, needs to get onboarded into MOSIP using the partner management portal as a authentication partner
 * The relying party needs to be mapped to a policy in MOSIP
@@ -105,14 +105,14 @@ Below is a sample policy for a relying party who is interested in authentication
 
 ## Appendix - Create, Retrieve and Update OIDC Client APIs
 
-{% swagger src="../../../api/partner-management-service-openapi.json" path="/oidc/client" method="post" %}
-[partner-management-service-openapi.json](../../../api/partner-management-service-openapi.json)
+{% swagger src="../../.gitbook/assets/partner-management-service-openapi (1).json" path="/oidc/client" method="post" %}
+[partner-management-service-openapi (1).json](<../../.gitbook/assets/partner-management-service-openapi (1).json>)
 {% endswagger %}
 
-{% swagger src="../../../api/partner-management-service-openapi.json" path="/oidc/client/{client_id}" method="put" %}
-[partner-management-service-openapi.json](../../../api/partner-management-service-openapi.json)
+{% swagger src="../../.gitbook/assets/partner-management-service-openapi (1).json" path="/oidc/client/{client_id}" method="put" %}
+[partner-management-service-openapi (1).json](<../../.gitbook/assets/partner-management-service-openapi (1).json>)
 {% endswagger %}
 
-{% swagger src="../../../api/partner-management-service-openapi.json" path="/oidc/client/{client_id}" method="get" %}
-[partner-management-service-openapi.json](../../../api/partner-management-service-openapi.json)
+{% swagger src="../../.gitbook/assets/partner-management-service-openapi (1).json" path="/oidc/client/{client_id}" method="get" %}
+[partner-management-service-openapi (1).json](<../../.gitbook/assets/partner-management-service-openapi (1).json>)
 {% endswagger %}

@@ -31,12 +31,12 @@ Follow the steps below to set up Partner Management Services on your local syste
 * Unzip Apache Maven and move the unzipped folder in `C:\Program Files` and `settings.xml` to `conf` folder `C:\Program Files\apache-maven-3.8.4\conf`.
 * Install Eclipse, open the `lombok.jar` file and wait for some time until it completes the scan for Eclipse IDE and then click `Install/Update`.
 
-![](../../../\_images/lombok-configuration.png)
+![](../../../.gitbook/assets/lombok-configuration.png)
 
 * Check the Eclipse installation folder `C:\Users\userName\eclipse\jee-2021-12\eclipse` to see if the `lombok.jar` is added. By doing this, you don't have to add the dependency of `lombok` in your `pom.xml` file separately as it is auto-configured by Eclipse.
 * Configure the JDK (Standard VM) with your Eclipse by traversing through `Preferences → Java → Installed JREs`.
 
-![](../../../\_images/installed-jre.png)
+![](../../../.gitbook/assets/installed-jre.png)
 
 ## Code setup
 
@@ -50,13 +50,13 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 4. After building of a project, open Eclipse and select `Import Projects → Maven → Existing Maven Projects → Next → Browse to project directory → Finish`.
 5. After successful importing of project, update the project by right-click on `Project → Maven → Update Project`.
 
-![](../../../\_images/import-project.png)
+![](../../../.gitbook/assets/import-project.png)
 
 ## Environment setup
 
 * For the environment setup, you need an external JAR that is available [here](https://oss.sonatype.org/#nexus-search;gav\~\~kernel-auth-adapter\~1.2.0-SNAPSHOT\~\~) with different versions. (E.g.: You can download `kernel-auth-adapter.jar` and add to project `Libraries → Classpath → Add External JARs → Select Downloaded JAR → Add → Apply and Close`).
 
-![](../../../\_images/add-external-library.png)
+![](../../../.gitbook/assets/add-external-library.png)
 
 * Clone [mosip-config repository](https://github.com/mosip/mosip-config).
 * Create an empty folder inside the `mosip-config` with `sandbox-local` name and then copy and paste all config files inside `sandbox-local` folder except `.gitignore, README and LICENSE`.
@@ -72,7 +72,7 @@ As mentioned in the steps above, you may have to make some changes in the two pr
 
 * Run the server by opening the `config-server-start.bat` file.
 
-![](../../../\_images/run-server.png)
+![](../../../.gitbook/assets/run-server.png)
 
 The server should now be up and running.
 
@@ -80,13 +80,13 @@ Below are the configurations to be done in Eclipse:
 
 1\. Open Eclipse and run the project for one time as `Java application`, so that it will create a Java application which you can see in debug configurations and then change its name. (e.g.: project name with environment - "partner-management-dev").
 
-![](../../../\_images/partner-management-dev.PNG)
+![](../../../.gitbook/assets/partner-management-dev.PNG)
 
 2\. Open the arguments and pass this `-Ddomain.url=dev.mosip.net -Dapplication.base.url=http://localhost:8090 -Dspring.profiles.active=default -Dspring.cloud.config.uri=http://localhost:51000/config -Dspring.cloud.config.label=master` in VM arguments.
 
 3\. Here, the domain URL represents the environment on which you are working (eg., it can be `dev2.mosip.net` or `qa3.mosip.net`).
 
-![](../../../\_images/vm-arguments.png)
+![](../../../.gitbook/assets/vm-arguments.png)
 
 4\. Click Apply and then debug it (starts running). In the console, you can see a message like `"Started PartnerManagementService in 34.078 seconds (JVM running for 38.361)"`.
 

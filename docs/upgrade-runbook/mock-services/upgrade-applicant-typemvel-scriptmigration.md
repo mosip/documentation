@@ -70,4 +70,4 @@ The steps to be followed are mentioned below:
 
 Attaching screenshot for reference:
 
-![](../../\_images/upgrade-application-mvel.png)
+![](../../.gitbook/assets/upgrade-application-mvel.png)

@@ -4,7 +4,7 @@
 
 The MOSIP platform requires integration with several other systems. Typically, a System Integrator (SI) would assemble all the pieces together to build a complete national ID solution. All entities that participate in providing the external components are called MOSIP Partners.
 
-![](\_images/mosip-ecosystem.jpg)
+![](.gitbook/assets/mosip-ecosystem.jpg)
 
 ## Partner types
 
@@ -14,9 +14,9 @@ The MOSIP platform requires integration with several other systems. Typically, a
 | Online Verification Partner          | Authorised and entrusted partners who host [IDA](id-authentication.md) module to provide authentication service to various partners. Even MOSIPs IDA module an is an Online Verification Partner. | `Online_Verification_Partner` |
 | Credential Partner                   | Provider of credentials like printed ID card, QR code etc. to residents                                                                                                                           | `Credential_Partner`          |
 | Device Provider                      | Provider of biometric devices that connect to registration client and authentication apps                                                                                                         | `Device_Provider`             |
-| FTM Provider                         | Providers of [L1](biometric-devices.md#l1) compatible [FTM](ftm.md) integrated in biometric devices                                                                                               | `FTM_Provider`                |
+| FTM Provider                         | Providers of [L1](biometrics/biometric-devices.md#l1) compatible [FTM](biometrics/ftm.md) integrated in biometric devices                                                                         | `FTM_Provider`                |
 | Manual Adjudication                  | Providers of Manual Adjudication Systems(MAS); enrollment data is shared with MAS                                                                                                                 | `Manual_Adjudication`         |
-| ABIS Partner                         | Provider of [ABIS](abis.md)                                                                                                                                                                       | `ABIS_Partner`                |
+| ABIS Partner                         | Provider of [ABIS](biometrics/abis.md)                                                                                                                                                            | `ABIS_Partner`                |
 | MISP Partner                         | MOSIP Infra Service Provider (MISP) provide network infrastructure/channel/pipe to various Authentication Partners to connect to the MOSIP system. Example, broadband service providers.          | `MISP_Partner`                |
 
 \* Label: Reference in `partner_type` table of `mosip_pms` database.
@@ -91,4 +91,4 @@ Refer [MPP document](https://mosip.io/program\_partner/MOSIP-Partner-Programme-R
 
 ## PMS module
 
-Refer to [Partner Management Services](partner-management-services.md).
+Refer to [Partner Management Services](modules/partner-management-services/).

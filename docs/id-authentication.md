@@ -2,9 +2,9 @@
 
 ## Overview
 
-MOSIP offers identity verification services that enable the usage of identity in various contexts. After the successful issue of the ID, identity verification services become available for the resident. Online identity verification is enabled through MOSIP's [ID Authentication (IDA)](id-authentication-services.md) module. As MOSIP is a foundational ID system, different services (both government and private) may rely on the foundational ID system to validate the identity of a resident rather than implementing multiple authentication systems. A typical authentication flow is illustrated below:
+MOSIP offers identity verification services that enable the usage of identity in various contexts. After the successful issue of the ID, identity verification services become available for the resident. Online identity verification is enabled through MOSIP's [ID Authentication (IDA)](modules/id-authentication-services/) module. As MOSIP is a foundational ID system, different services (both government and private) may rely on the foundational ID system to validate the identity of a resident rather than implementing multiple authentication systems. A typical authentication flow is illustrated below:
 
-![](\_images/ida-process.png)
+![](.gitbook/assets/ida-process.png)
 
 Refer to the video below to learn more!
 
@@ -35,13 +35,13 @@ Biometric authentication is performed using third-party matcher SDK that perform
 
 All authentications in MOSIP essentially perform 1:1 matches. This essentially requires the authentication call to specify an identifier of the person and the authentication factors to perform the match on the individual referred to by the identifier. MOSIP supports the usage of multiple identifiers for a person. This promotes anonymity and also acts as a deterrent to profiling the individual. The individual can be identified in the authentication transaction by the UIN or other alias identifiers/ VIDs. When a VID is used there are additional checks to see if the VID has not expired or has not been revoked. The expiry of the VID is governed by the policy chosen at the time of its creation of the VID.
 
-For understanding VIDs and their characteristics, read more about [VID](identifiers.md#vid).
+For understanding VIDs and their characteristics, read more about [VID](id-lifecycle-management/identifiers.md#vid).
 
 ## Tokenization
 
 In one-off usage contexts, identity verification can be anonymous. In cases where identity verification is linked to transactions that need identity assurance, there is a need to tie the user identity of the user to the transaction. This is achieved by way of providing such relying parties with a "sticky" token identifier that can be used as a reference ID for the individual in their system. The authentication APIs return a token when the authentication is successful. Based on the type of relying party and their policy, the token is either random or sticky. The expected usage is for the relying party to remember the token returned by the authentication API for referring to their customer and for audit/redressal purposes.
 
-Learn more about the [Token ID](identifiers.md#token).
+Learn more about the [Token ID](id-lifecycle-management/identifiers.md#token).
 
 ## Relying parties and policies
 

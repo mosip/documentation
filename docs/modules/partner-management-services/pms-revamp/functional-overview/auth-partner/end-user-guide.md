@@ -138,7 +138,7 @@ To be able to access the services by PMP and to validate that the partner is fro
    4. Address, Phone number
    5. e-mail, Username and password
 
-<figure><img src="../../../../../_images/pms_register_as_partner.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/pms_register_as_partner.png" alt=""><figcaption></figcaption></figure>
 
 2. **Click** on **Register**, a popup comes up which asks you to '**Choose a Policy Group**' and seeks you to '**Agree to Terms and Conditions**' before you can be considered as 'Authentication Partner.
 3. Select the relevant/applicable **Policy Group** on **Select Policy Group** popup using **Policy Group** dropdown by reading through policy group description in dropdown.

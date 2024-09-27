@@ -6,16 +6,16 @@ This is a guide to implement MOSIP for a country. It is advised that Government 
 
 ## Key decisions
 
-1. Choice of deployment of [Pre-registration](id-lifecycle-management.md#pre-registration).
+1. Choice of deployment of [Pre-registration](id-lifecycle-management/#pre-registration).
 2. Rate of enrolment desired.
 3. Rate of authentication expected.
-4. [Languages](module-configuration.md#languages).
-5. Customisation and procurement of components as given [here](reference-implementations.md).
-6. [ID schema](id-schema.md) (as prescribed by the country's regulatory authority).
+4. [Languages](modules/module-configuration.md#languages).
+5. Customisation and procurement of components as given [here](modules/reference-implementations.md).
+6. [ID schema](id-lifecycle-management/id-schema.md) (as prescribed by the country's regulatory authority).
 7. Hardware requirements estimate.
    * [Server side](https://github.com/mosip/documentation/tree/develop/docs/\_files)
    * [Devices](\_files/mosip-devices-calculator.xlsx)
-8. [Credential choices](id-repository.md#credential-types).
+8. [Credential choices](modules/id-repository/#credential-types).
 9. ID Card print design.
 10. MOSIP versions.
 11. MOSIP support (scope).
@@ -42,7 +42,7 @@ This is a guide to implement MOSIP for a country. It is advised that Government 
 
 ## Deployment
 
-1. [Certifcate/key generation](keys.md)
+1. [Certifcate/key generation](modules/keymanager/keys.md)
 2. [Deployment design](https://docs.mosip.io/1.2.0/deploymentnew/getting-started).
 3. Disaster recover set up
 4. Biometric thresholding

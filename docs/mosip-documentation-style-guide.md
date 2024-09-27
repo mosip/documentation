@@ -14,9 +14,9 @@ It is recommended to follow the guidelines mentioned below.
 4. File names should be as descriptive and meaningful as possible. It is better to avoid using any special characters (& # \* !) in the names.
 5. In general, ensure that the filenames match the main heading on the page. Example, name of this file is `mosip-documentation-sytle-guid.md`.
 
-![](\_images/filename-example1.png)
+![](.gitbook/assets/filename-example1.png)
 
-![](\_images/filename-example2.png)
+![](.gitbook/assets/filename-example2.png)
 
 ## How to write in a markdown file?
 
@@ -30,7 +30,7 @@ Markdown files are text files with `.md` extension.
 * For the "Overview" section, use double ## (use sentence case).
 * For the other topics, use double hash or triple hashes, based on the importance of a topic or sub-topic.
 
-![](\_images/headers.png)
+![](.gitbook/assets/headers.png)
 
 ### Bold
 
@@ -70,7 +70,7 @@ To provide links to other pages, you may use:
 2. See [title of other document](link/).
 3. Refer [title of other document](link/) for ….
 
-Example: For more information on Packet Manager, see [Packet Manager](packet-manager.md).
+Example: For more information on Packet Manager, see [Packet Manager](modules/packet-manager/).
 
 ### Images
 
@@ -84,7 +84,7 @@ Example: `![](_images/image-settings.png)`
 
 Below is an example of an diagram created using [draw.io](https://app.diagrams.net/) which is a free diagramming browser app.
 
-![Packer Manager](\_images/packet-manager.png)
+![Packer Manager](.gitbook/assets/packet-manager.png)
 
 Recommended settings to generate a PNG file on draw.io:
 
@@ -93,7 +93,7 @@ Recommended settings to generate a PNG file on draw.io:
 3. Uncheck _**Transparent**_ option.
 4. Click **Export**.
 
-![](\_images/image-settings.png)
+![](.gitbook/assets/image-settings.png)
 
 Another way to adjust the height and width of the image is by using the HTML tag:
 
@@ -131,16 +131,16 @@ E.g.: `mosip_idrepo` DB
 
 For code blocks, you can use three backticks ( \`\`\` ) or three tildes ( \~\~\~ ) on the lines before and after the code block.
 
-To know more, refer [here](registration-client-ui-specifications.md).
+To know more, refer [here](modules/registration-client/registration-client-ui-specifications.md).
 
 ## Writing style
 
 1.  **Language and Grammar**: In general, use second person in documents rather than first person — _you_ instead of _we_. Also, avoid using _our_ in documentation. Also, use active voice as much to make clear who's performing the action.
 
-    | Not recommended                                  | Recommended                                                     |
-    | ------------------------------------------------ | --------------------------------------------------------------- |
-    | If we are deleting multiple entries at a time... | If you are deleting multiple entries at a time...               |
-    | For details, read our documentation.             | For details, see [Operator Onboarding](operator-onboarding.md). |
+    | Not recommended                                  | Recommended                                                                                 |
+    | ------------------------------------------------ | ------------------------------------------------------------------------------------------- |
+    | If we are deleting multiple entries at a time... | If you are deleting multiple entries at a time...                                           |
+    | For details, read our documentation.             | For details, see [Operator Onboarding](modules/registration-client/operator-onboarding.md). |
 2. **Clarity**: Content needs to be concise and we need to write sentences that are short and crisp. Unordered bullet points can be used to simply content. If paragraphs are present, remember to make it short with close to 5-6 sentences (about 100-200 words).
 3. **Consistency**: Maintain consistency in words and usage. For example, use "ID Repository" instead of "id repo", "WebSub" instead of "websub", "Registration Client" instead of reg client, "Pre-registration" as the concept and Pre-Registration if we are referring to the module.
 4.  **Punctuations**: The right use of commas and period/full stop is extremely important. Sentences should end with a period and connecting phrases to have commas.
@@ -162,11 +162,11 @@ To know more, refer [here](registration-client-ui-specifications.md).
 
     **Initial draft**
 
-    <img src="_images/admin-content.png" alt="" data-size="original">
+    <img src=".gitbook/assets/admin-content.png" alt="" data-size="original">
 
     **Final draft**
 
-    <img src="_images/admin-content-updated.png" alt="" data-size="original">
+    <img src=".gitbook/assets/admin-content-updated.png" alt="" data-size="original">
 11. **Spacing**: Avoid leaving unnecessary empty spaces between words or sentences. You may leave one line space between each paragraph or as needed incase of multiple paragraphs.
 12. Avoid using the terms like **blacklist, black list, black-list, whitelist**.
 

@@ -2,7 +2,7 @@
 
 ## About MOSIP
 
-The **Modular Open Source Identity Platform** is an open-source, open standards-based foundational identity platform. MOSIP is an API-first platform that can be used by countries to build their own national ID platform. MOSIP offers [ID Lifecycle Management](id-lifecycle-management.md) features and identity verification capabilities out of the box. Conceived to help build global digital public goods in the space of digital identification and governance, MOSIP is anchored at the International Institute of Information Technology, Bangalore ([IIIT-B](https://www.iiitb.ac.in)). It harnesses the power of open-source technologies and embraces the best practices of scalability, security and privacy. [Learn more >>](https://www.mosip.io)
+The **Modular Open Source Identity Platform** is an open-source, open standards-based foundational identity platform. MOSIP is an API-first platform that can be used by countries to build their own national ID platform. MOSIP offers [ID Lifecycle Management](id-lifecycle-management/) features and identity verification capabilities out of the box. Conceived to help build global digital public goods in the space of digital identification and governance, MOSIP is anchored at the International Institute of Information Technology, Bangalore ([IIIT-B](https://www.iiitb.ac.in)). It harnesses the power of open-source technologies and embraces the best practices of scalability, security and privacy. [Learn more >>](https://www.mosip.io)
 
 The key objectives of MOSIP are to:
 
@@ -15,7 +15,7 @@ The key objectives of MOSIP are to:
 
 The latest release of MOSIP, version **1.2.0 LTS** is here! Check out the exciting new services and enhancements in the documentation.
 
-To learn more, see our [Releases Notes](releases.md).
+To learn more, see our [Releases Notes](releases/).
 
 To read through the previous version of the documentation, see the [Older version documentation (1.1.5)](https://docs.mosip.io/1.1.5).
 
