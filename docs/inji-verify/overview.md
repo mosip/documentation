@@ -16,36 +16,46 @@ In each scenario, Inji Verify leverages QR codes embedded with verifiable creden
 2. **Claims:** Immutable set of claims made about the credential subject, such as employee number and job title.
 3. **Proofs:** Utilizes cryptographic methods to verify the data source and ensure data integrity.
 
-**Importance of Interoperability:** Interoperability is pivotal in the realm of Verifiable Credentials, enabling seamless verification across diverse systems and organizations.
+#### **Benefits of Using Inji Verify for Seamless and Secure Credential Verification:**
 
-**Usage of Inji Verify:**&#x20;
+* **Interoperability:**
+  * Inji Verify integrates seamlessly with a wide range of existing platforms, including employee portals, health portals, agricultural portals, and more. It can be added as an additional layer to existing verifier systems, ensuring smooth interaction between users, and verifiers across different platforms and verification frameworks. This flexibility enhances compatibility and streamlines the verification process without disrupting current systems.
+* **Modularity:**
+  * The modular design of Inji Verify allows for easy customization and the addition of new features, ensuring flexibility to adapt to specific industry needs.
+  * Each module functions independently, enabling seamless updates and scalability without affecting the core functionality of the system.
+* **Enhanced Security with Verifiable QR Codes:**
+  * Verifiable QR codes utilize digital signatures to safeguard the authenticity and integrity of the data, ensuring secure handling of sensitive information such as personal IDs, financial records, and medical data.
+* **Seamless PixelPass library Integration:**
+  * The integration of the [**PixelPass**](https://www.npmjs.com/package/@mosip/pixelpass/v/0.5.0) library enables Inji Verify to efficiently decode CBOR-encoded QR codes, ensuring a smooth and reliable verification process.
+* **Optimized Device Requirements for Scanning:**
+  * To ensure accurate and reliable verification, devices used for scanning QR codes should meet certain criteria, including:
+    * A camera with at least 12 megapixels and 1020p quality.
+    * Scanning without visual effects or enhancements.
+    * Browser compatibility for camera access.
+    * Adequate lighting conditions without filters or dark mode.
+* **QR Code Version Compatibility:**
+  * For successful verification using the scan feature, the verifiable credential (VC) should be encoded in QR code versions 27 and below.
+
+#### **Usage of Inji Verify:**
 
 Inji Verify offers a comprehensive set of features tailored to meet the verification needs of both users and relying parties:
 
 * **QR Code Scanning:** Users can easily scan QR codes embedded within documents using their devices.
 * **QR Code Uploading:** Alternatively, users can upload QR codes or documents which has the QR code printed on them for verification, providing flexibility in the verification process.
+* **Verifying QR Codes Using OpenID4VP Standards(Online Sharing):**
+  * **Streamlined Credential Sharing**: Inji Verify uses OpenID4VP standards for online sharing, embedding a URL in the QR code instead of dense Verifiable Credentials (VCs).
+  * **Efficient Scanning**: Users can scan the QR code, which points to a secure VC storage location like [**Inji Web**](https://docs.mosip.io/inji/inji-web/functional-overview/features#store-verifiable-credentials-vc) or any similar portal like Inji Web which adheres to OpenIDVP standards.
+  * **Secure Authorization Flow**: Upon scanning, Inji Verify initiates an authorization request, retrieving and verifying the credential securely from Inji Web.
+  * **Cross-Device Sharing**: Supports cross-device sharing, reducing QR code complexity and enabling seamless verification.
+  * **Enhanced User Experience**: Simplifies the verification process, ensuring efficient and secure credential validation.
 
-**Verifiable QR Codes:**
+#### **Future Implementations Planned for Inji Verify**
 
-Verifiable QR codes employ digital signatures to guarantee the authenticity and integrity of the data they contain, offering heightened security measures. They are commonly used for sensitive information such as personal identification details, financial records, medical data, etc.
-
-#### **PixelPass Integration:**
-
-The PixelPass library now supports decoding CBOR-encoded QR codes, ensuring compatibility with Inji Verify for seamless verification through the portal.
-
-#### **Device Requirements:**
-
-To ensure successful verification, devices used for scanning QR codes must meet specific requirements:
-
-* The device must have a camera with a minimum resolution of 12 megapixels and be capable of capturing images with at least 1020p quality.
-* Disabling of visual effects and enhancements during scanning.
-* Compatibility with internet browsers that support the device's camera.
-* Scanning should be performed in a well-lit environment without any filters or dark mode settings.
-
-#### **QR Code Version Compatibility:**
-
-For successful verification using the scan feature, the verifiable credential (VC) should be encoded in QR code versions 27 and below. More details on QR code compatibility can be found in the [Functional Overview Section](functional-overview/).
+* **Online Verification using OpenID4VP Flow**:\
+  Inji Verify is planning to implement a streamlined online verification process using the [**OpenID4VP**](https://openid.net/specs/openid-4-verifiable-presentations-1\_0.html#name-cross-device-flow) flow. The Verifier prepares an Authorization Request and renders it as a QR code, which the User (Holder) scans using their wallet, such as Inji Wallet. This process utilizes the response type vp\_token along with the response mode direct\_post, ensuring a secure exchange of credentials. To keep the QR code compact and secure, the actual Authorization Request includes only a Request URI, which the wallet uses to retrieve the full request data. This streamlined online verification process allows users to maintain privacy while providing cryptographic proof of their credentials.
+* **Offline Verification using BLE Technology**:\
+  Future updates will also include the ability to verify credentials offline using Bluetooth Low Energy (BLE) technology, adhering to OpenID standards. This approach is designed for environments where internet connectivity is limited or unavailable. Holders can share their credentials with verifiers via BLE, allowing for quick and secure credential validation without the need for an online connection. This offline solution will ensure flexibility and accessibility in remote or network-constrained areas, expanding the use cases for Inji Verify in various sectors.
 
 #### **Conclusion**
 
-Inji Verify stands as a powerful solution for authenticating and verifying verifiable credentials encoded in QR codes. With its user-friendly interface and robust features such as QR code scanning, uploading, and support for CBOR-encoded QR codes through PixelPass integration, Inji Verify ensures secure and reliable credential verification across various industries. By leveraging cryptographic methods and adhering to standardized formats, Inji Verify guarantees the authenticity and integrity of credential data, facilitating efficient and trustworthy verification processes for both users and relying parties alike.
+Inji Verify is a powerful tool for securely verifying credentials encoded in QR codes. With an easy-to-use interface and features like QR code scanning, file uploads, and support for CBOR encoded and JSON-LD QR codes via PixelPass, it provides reliable credential verification across industries. Using cryptographic methods and standardized formats, Inji Verify ensures the authenticity of credentials, making verification simple and trustworthy for both users and service providers. Future updates will include offline verification, and enhancing security and privacy with advanced OpenID standards.

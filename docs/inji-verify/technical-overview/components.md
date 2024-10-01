@@ -15,7 +15,8 @@ Let's briefly explore the key components that constitute Inji Verify:
 
 * Inji Verify offers functionalities for both scanning QR codes and uploading QR code files. Users interact with the portal to initiate the verification process and view the results.
 
-2. **Pixel-Pass Library:** The [**Pixel-Pass Library** ](https://www.npmjs.com/package/@mosip/pixelpass/v/0.1.6)is a set of software tools and utilities designed to assist in the decoding of QR codes. It provides functions and algorithms to interpret the data encoded within QR codes accurately.&#x20;
+2. **ZXing:** It is an open-source library that's used to read the QR code VC data.
+3. **Pixel-Pass Library:** The [**Pixel-Pass Library** ](https://www.npmjs.com/package/@mosip/pixelpass/v/0.1.6)is a set of software tools and utilities designed to assist in the decoding of QR codes. It provides functions and algorithms to interpret the data encoded within QR codes accurately.&#x20;
 
 * The [**Pixel-Pass Library**](https://www.npmjs.com/package/@mosip/pixelpass/v/0.1.6) is integrated into Inji Verify to handle the decoding of QR code data received from scanned images or uploaded files.
 

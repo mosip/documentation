@@ -24,6 +24,25 @@ $ nvm install 18
 
 Click on the [**ReadMe file**](https://github.com/mosip/inji-verify/blob/v0.8.0/README.md) to explore more!
 
+#### **Docker Compose:** <a href="#docker-compose" id="docker-compose"></a>
+
+Docker Compose provides two types of setup options: one for **developer setup**, enabling full-featured access for development and testing, and another for **demo setup**, optimized for showcasing specific use cases with simplified configuration.
+
+**Developer Setup:**
+
+* To set it up for the developer, follow the steps outlined in the [**README**](https://github.com/mosip/inji-verify/blob/release-0.10.x/README.md#developer-setup) file for configuring Docker Compose for development, including necessary dependencies and configurations.
+
+**Demo Setup:**
+
+* To set up the application on your local system for specific use cases or demo purposes, follow the steps provided in the [**README**](https://github.com/mosip/inji-verify/blob/release-0.10.x/README.md#demo-setup) file. The [**README**](https://github.com/mosip/inji-verify/blob/release-0.10.x/README.md#demo-setup) contains detailed instructions tailored to your requirements for easy setup and deployment.
+* **Refer to the README for Docker Compose Instructions:**
+  * Inside the Inji Verify project directory, you will find a [**README**](https://github.com/mosip/inji-verify/blob/release-0.10.x/README.md#installations) file. This file contains detailed steps for setting up the project using Docker Compose.
+  * Review the steps under the "Docker Compose" section for instructions on how to build and run the containers.
+* **Run Docker Compose:**
+  * Use Docker Compose to build and deploy the application.
+* **Access the Application:**
+  * Once the build is complete, the application will be available to access via the configured endpoint.
+
 ### **Running the application:**
 
 Let's explore how to initiate Inji Verify locally after completing the setup in your local environment.
