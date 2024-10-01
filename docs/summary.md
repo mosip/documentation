@@ -241,6 +241,7 @@
   * [Resident Portal](collab-getting-started-guide/collab-resident-portal-guide.md)
   * [Partner Management Portal](collab-getting-started-guide/collab-pmp-guide.md)
   * [Android Registration Client](collab-getting-started-guide/collab-android-reg-client.md)
+* [📒 Resources](resources.md)
 * [🛣️ Roadmap](roadmap/README.md)
   * [Roadmap 2023](roadmap/roadmap-2023-2024.md)
   * [Roadmap 2024](roadmap/roadmap-2024-2025.md)
