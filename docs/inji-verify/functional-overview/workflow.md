@@ -2,7 +2,7 @@
 
 #### **Sequence Diagram**
 
-<figure><img src="../../.gitbook/assets/inji-verify-workflow-sequence-diagram (1).png" alt="" width="563"><figcaption><p>Sequence Diagram</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/inji_verify_0.10.0_workflow.png" alt=""><figcaption></figcaption></figure>
 
 ### **Understanding the workflow**:
 

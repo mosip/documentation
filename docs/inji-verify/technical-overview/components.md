@@ -3,7 +3,7 @@
 * **Inji Verify** serves as a verification platform for verifiable credentials, offering an intuitive web portal designed to streamline the process of verifying VC for users.
 * **Technical Components of Verify:** The following component diagram illustrates the structure and components of Inji Verify. It offers a comprehensive explanation of how the platform operates and how its various elements interact to deliver its functionalities.
 
-<figure><img src="../../.gitbook/assets/inji_verify_0.10.0_arch_diagram_1.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/inji_verify_0.10.0_components.png" alt="" width="375"><figcaption></figcaption></figure>
 
 
 
@@ -29,3 +29,4 @@ Let's briefly explore the key components that constitute Inji Verify:
 * The Verification SDK is employed within Inji Verify to perform verification checks on the decoded data obtained from QR codes. It validates the information against predefined criteria and standards to determine the legitimacy of the presented credentials and shows the VC properties.
 * **Assumptions or Limitations:**
   * **Verification Method**: We are assuming the verification method currently only works with DID (Decentralized Identifier). However, it can also be a direct URL key reference. This distinction is crucial for correct implementation and usage. You can look at the specific code handling this verification method [here](https://github.com/mosip/inji-verify/blob/c32f37b1df3c99fc9ecda12af573e73083e02111/inji-verify/src/utils/verification-utils.js#L7).
+
