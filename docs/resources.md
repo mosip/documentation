@@ -6,7 +6,7 @@ In this video, we’ll explore the importance of digital identification. We'll d
 
 MOSIP stands out as a powerful solution, offering scalable, secure, and inclusive identification systems that address these challenges head-on.
 
-We'll also take you through MOSIP’s key offerings, modules, features, and technology stack. Plus, you'll see how it integrates into various real-world use cases, providing governments with a flexible and adaptable framework for building effective ID systems.
+We’ll guide you through MOSIP’s core offerings, innovative modules, powerful features, and cutting-edge technology stack. You’ll also discover how it seamlessly integrates into various real-world applications, providing governments with a flexible and scalable framework for building secure and efficient ID systems.
 
 So, let’s get started!🚀
 
