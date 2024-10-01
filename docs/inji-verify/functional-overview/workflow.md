@@ -102,3 +102,5 @@
 {% hint style="info" %}
 **Note**: To understand the Inji Verify components in detail please refer to the topic [**Components**](../technical-overview/components.md) under [**Technical Overview**](../technical-overview/) section.
 {% endhint %}
+
+Glossary should be the last section \<!--- Comments are Fun --->
