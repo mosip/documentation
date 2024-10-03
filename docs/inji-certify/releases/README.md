@@ -1,5 +1,11 @@
 # Releases
 
+**Version: 0.9.1**
+
+* Name: Inji Certify 0.9.1 (Patch)
+* Date: 3rd October, 2024
+* Release Notes
+
 **Version: 0.9.0**
 
 * Name: Inji Certify 0.9.0

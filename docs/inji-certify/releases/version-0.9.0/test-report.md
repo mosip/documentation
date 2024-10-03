@@ -9,12 +9,12 @@ The scope of testing is to verify fitment to the specification from the perspect
 * Configurability
 * Customizability
 
-Verification is performed not only from the end user perspective but also from the System Integrator (SI) point of view. Hence Configurability and Extensibility of the software is also assessed. This ensures readiness of software for use in multiple countries. Since MOSIP is an “API First” product platform.
+Verification is performed not only from the end user perspective but also from the System Integrator (SI) point of view. Hence Configurability and Extensibility of the software are also assessed. This ensures the readiness of software for use in multiple countries. Since MOSIP is an “API First” product platform.
 
-Testing scope has been focused around the below features:
+Testing scope has been focused on the below features:
 
 * Inji certify Docker compose testing(VCI segregations)
-* Docker compose testing for Insurance and Mock Id use case
+* Docker compose testing for Insurance and Mock ID use case
 * Inji certify - Insurance use case using namespace
 * Inji certify - Mock IDA use case using namespace
 * Inji certify - MOSIP ID use case using namespace(verified using idrepo UIN/VIDs only)
@@ -32,7 +32,7 @@ Testing scope has been focused around the below features:
 
 Persona based approach has been adopted to perform the IV\&V, by simulating test scenarios that resemble a real-time implementation.
 
-A Persona is a fictional character/user profile created to represent a user type that might use a product/or a service in a similar way. Persona based testing is a software testing technique that puts software testers in the customer's shoes, assesses their needs from the software and thereby determines use cases/scenarios that the customers will execute. The persona needs may be addressed through any of the following.
+A Persona is a fictional character/user profile created to represent a user type that might use a product/or a service in a similar way. Persona based testing is a software testing technique that puts software testers in the customer's shoes, assesses their needs from the software, and thereby determines use cases/scenarios that the customers will execute. The persona's needs may be addressed through any of the following.
 
 * Functionality
 * Deployability
@@ -67,7 +67,7 @@ Verification is performed on configurations as mentioned below
 
 ### Functional test results
 
-Below are the test metrics by performing functional testing. The process followed was black box testing which based its test cases on the specifications of the software component under test. Functional test was performed in combination of individual module testing as well as integration testing. Test data were prepared in line with the user stories. Expected results were monitored by examining the user interface. The coverage includes GUI testing, System testing, End-To-End flows across multiple configurations. The testing cycle included simulation of multiple identity schema and respective UI schema configurations.
+Below are the test metrics by performing functional testing. The process followed was black box testing which based its test cases on the specifications of the software component under test. The functional test was performed in combination with individual module testing as well as integration testing. Test data were prepared in line with the user stories. Expected results were monitored by examining the user interface. The coverage includes GUI testing, System testing, End-To-End flows across multiple configurations. The testing cycle included the simulation of multiple identity schema and respective UI schema configurations.
 
 | **Total**                                               | **Passed** | **Failed** | **NA** |
 | ------------------------------------------------------- | ---------- | ---------- | ------ |
@@ -76,7 +76,7 @@ Below are the test metrics by performing functional testing. The process followe
 
 ### Detailed Test metrics
 
-Below are the detailed test metrics by performing manual/automation testing. The project metrics are derived from Defect density, Test coverage, Test execution coverage, test tracking and efficiency.
+Below are the detailed test metrics by performing manual/automation testing. The project metrics are derived from Defect density, Test coverage, Test execution coverage, test tracking, and efficiency.
 
 The various metrics that assist in test tracking and efficiency are as follows:
 
@@ -119,4 +119,4 @@ The various metrics that assist in test tracking and efficiency are as follows:
 
 
 
-Git hub link for the xls file is **here**.
+The Github link for the xls file is **here**.
