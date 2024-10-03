@@ -4,7 +4,7 @@
 
 * Name: Inji Certify 0.9.1 (Patch)
 * Date: 3rd October, 2024
-* Release Notes
+* [Release Notes](https://docs.mosip.io/inji/inji-certify/releases/version-0.9.1)
 
 **Version: 0.9.0**
 
