@@ -10,6 +10,10 @@ The ID Authentication (IDA) module of MOSIP consists of the following services:
 2. OTP Service
 3. Internal Services
 
+To learn more about it, refer to the below video:
+
+{% embed url="https://www.youtube.com/watch?ab_channel=MOSIPAcademy&t=2s&v=kBJ_l6043Pw" %}
+
 ## Authentication Services
 
 The services mentioned below are used by Authentication or e-KYC Partners.
