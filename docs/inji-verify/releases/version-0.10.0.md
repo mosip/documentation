@@ -27,6 +27,12 @@ We are excited to announce the release of Inji Verify version 0.10.0, which brin
   The React scanner library has been upgraded for improved performance and reliability in scanning QR codes.
   * HTML5
   * PDF5 Integration
+* **React-scanner-lib Upgrade**\
+  The React scanner library has been upgraded for improved performance and reliability in scanning QR codes.
+  * ZXing-cpp
+  * PDF.js Integration
+* **Updation of Pixel Pass library for Sunbird QR Code**
+  * To properly manage binary data by unzipping it before sending it back, the Pixel pass library has been updated to ensure backward compatibility of Sunbird QR codes.
 * **Critical Bug Fixes**
   * Several critical bugs have been resolved, including issues with QR code generation and scanning, ensuring a smoother verification experience.
 
