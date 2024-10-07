@@ -142,37 +142,21 @@ When the scan is initiated, you will be prompted to grant the necessary camera p
 
 **Scenario 5:** When a PDF containing VC is uploaded and the QR Code is not valid, then the following error message is displayed- ‘Something went wrong with your request. Please check and try again.’
 
-
-
-\<Screenshot>
-
-
+<figure><img src="../../.gitbook/assets/inji-verify-error-handling_scenario_5.png" alt=""><figcaption></figcaption></figure>
 
 **Scenario 6:** If there is no internet connectivity, the following error message is displayed while using Inji Verify - ‘No Internet Connection! Oops! We can’t seem to connect. Check your internet connection and try again'
 
-
-
-\<Screenshot>
-
-
+<figure><img src="../../.gitbook/assets/inji-verify-error-handling_scenario_6.png" alt=""><figcaption></figcaption></figure>
 
 **Scenario 7:** When the request in the application url is invalid, the error message displayed- ‘The requested resource is invalid’.
 
 
 
-\<Screenshot>
-
-
+<figure><img src="../../.gitbook/assets/inji-verify-error-handling_scenario_7.png" alt=""><figcaption></figcaption></figure>
 
 **Scenario 8:** When the server is done, then the error message displayed is- ‘The service is currently unavailable. Please try again later’.
 
-
-
-\<Screenshot>
-
-
-
-
+<figure><img src="../../.gitbook/assets/inji-verify-error-handling_scenario_8.png" alt=""><figcaption></figcaption></figure>
 
 ### **Header Section:** <a href="#header-section" id="header-section"></a>
 
