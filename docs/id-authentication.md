@@ -2,7 +2,7 @@
 
 ## Overview
 
-MOSIP provides robust identity verification services allowing residents to use their identities across various contexts securely. Once an ID is successfully issued, residents gain access to these verification services. Online identity verification is facilitated through [eSignet](https://docs.esignet.io/), offering a seamless and secure way to authenticate identity. eSignet leverages MOSIP's internal [ID Authentication (IDA)](https://docs.mosip.io/1.2.0/modules/id-authentication-services) module, which operates as a backend process. As a foundational ID system, MOSIP allows various services—both governmental and private—to validate a resident's identity using a single, unified system, eliminating the need for multiple authentication solutions. The typical authentication flow is illustrated below:
+MOSIP provides robust identity verification services allowing residents to use their identities across various contexts securely. Once an ID is successfully issued, residents gain access to various services, that can be leveraged through the verification process. Online identity verification is facilitated through [eSignet](https://docs.esignet.io/), offering a seamless and secure way to authenticate the identity. eSignet leverages MOSIP's internal [ID Authentication (IDA)](https://docs.mosip.io/1.2.0/modules/id-authentication-services) module, which operates as a backend process. As a foundational ID system, MOSIP allows various services—both governmental and private—to validate a resident's identity using a single, unified system, eliminating the need for multiple authentication solutions. The typical authentication flow is illustrated below:
 
 ![Authentication Process](.gitbook/assets/ida-process.png)
 
