@@ -25,10 +25,6 @@ We are excited to announce the release of Inji Verify version 0.10.0, which brin
   * This release simplifies deployment with Docker Compose, allowing users to easily set up and configure the Inji Verify environment.
 * **React-scanner-lib Upgrade**\
   The React scanner library has been upgraded for improved performance and reliability in scanning QR codes.
-  * HTML5
-  * PDF5 Integration
-* **React-scanner-lib Upgrade**\
-  The React scanner library has been upgraded for improved performance and reliability in scanning QR codes.
   * ZXing-cpp
   * PDF.js Integration
 * **Updation of Pixel Pass library for Sunbird QR Code**
