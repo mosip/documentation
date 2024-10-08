@@ -89,13 +89,13 @@ Change Controller: MOSIP
 
 Specification Document(s): [Section 3](https://docs.mosip.io/1.2.0/overview/standards-and-specifications/169-qr-code-specification#id-3.-semantics), [Section 4](https://docs.mosip.io/1.2.0/overview/standards-and-specifications/169-qr-code-specification#id-4.-iana-considerations)
 
-### References
+### 5. References
 
 \[1] C. Bormann, and P. Hoffman. "Concise Binary Object Representation (CBOR)". [RFC 7049](https://tools.ietf.org/html/rfc7049), October 2013.
 
 \[2] Mike Jones, Hannes Tschofenig, Ludwig Seitz "CBOR Web Token (CWT)". [RFC 8392](https://www.iana.org/go/rfc8392), March 2018.
 
-### Author(s)
+### 6. Author(s)
 
 Mahammed Taheer ([mohd.taheer@gmail.com](mailto:mohd.taheer@gmail.com))
 
