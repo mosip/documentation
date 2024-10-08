@@ -42,7 +42,7 @@ All the fields here are OPTIONAL.
 
 
 
-<table><thead><tr><th width="161">Attribute</th><th width="183">Type</th><th>Attribute Name</th><th>Description</th></tr></thead><tbody><tr><td><code>0</code></td><td><code>bstr</code></td><td>Data</td><td>Biometrics binary data</td></tr><tr><td><code>1</code></td><td><code>int</code></td><td><a href="169-qr-code-specification.md#data-formats">Data format</a></td><td>Optional biometrics data format.</td></tr><tr><td><code>2</code></td><td><code>int</code></td><td><a href="169-qr-code-specification.md#data-sub-formats">Data sub format</a></td><td>Optional biometrics data sub format.</td></tr><tr><td><code>3</code></td><td><code>tstr</code></td><td>Data issuer</td><td>Optional biometric data issuer.</td></tr></tbody></table>
+<table><thead><tr><th width="161">Attribute</th><th width="183">Type</th><th>Attribute Name</th><th>Description</th></tr></thead><tbody><tr><td><code>0</code></td><td><code>bstr</code></td><td>Data</td><td>Biometrics binary data</td></tr><tr><td><code>1</code></td><td><code>int</code></td><td><a href="169-qr-code-specification.md#data-formats">Data format</a></td><td>Optional biometrics data format</td></tr><tr><td><code>2</code></td><td><code>int</code></td><td><a href="169-qr-code-specification.md#data-sub-formats">Data sub format</a></td><td>Optional biometrics data sub format</td></tr><tr><td><code>3</code></td><td><code>tstr</code></td><td>Data issuer</td><td>Optional biometric data issuer</td></tr></tbody></table>
 
 #### **Data formats**
 
