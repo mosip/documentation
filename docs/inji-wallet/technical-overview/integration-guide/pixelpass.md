@@ -13,27 +13,29 @@ PixelPass has NPM, Kotlin, Swift and Java artifacts available.
 * For JSON data, applies CBOR encoding/decoding to achieve additional size reduction.
 * With JSON and a Mapper provided, maps the JSON and then performs CBOR encoding/decoding to further shrink the data size.
 
-### Snapshots
-
-Below snapshots provide the mobile platform native artifacts along with the java library:
-
-**Kotlin**: Index of /repositories/snapshots/io/mosip/pixelpass-aar
-
-**Swift**: GitHub - mosip/pixelpass-ios-swift: Swift library to generate QR code from VC and decode the data
-
-**Java:** Index of /repositories/snapshots/io/mosip/pixelpass-jar
-
-**Maven repo:** [pixelpass](https://repo1.maven.org/maven2/io/mosip/pixelpass/)
-
-### Installation
+### Usage
 
 1. As a node project:
 
-npm i @mosip/pixelpass
+```npm i @mosip/pixelpass```
 
-[npm](https://www.npmjs.com/package/@mosip/pixelpass)
+2. As a Kotlin/Java dependency:
 
-2. To include PixelPass in your Swift project, follow the below steps:
+*Gradle*
+
+```implementation("io.mosip:pixelpass:0.5.0")```
+
+*Maven*
+
+```
+<dependency>
+  <groupId>io.mosip</groupId>
+  <artifactId>pixelpass</artifactId>
+  <version>0.5.0</version>
+</dependency>
+```
+
+3. To include PixelPass in your Swift project, follow the below steps:
    1. Clone the PixelPass library locally.
    2. Create a new Swift project.
    3. Add package dependency: PixelPass
