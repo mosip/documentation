@@ -5,7 +5,7 @@
 The scope of testing is to verify fitment to the specification from the perspective of
 
 * Functionality
-* Deployability
+* Deploy ability
 * Configurability
 * Customizability
 
@@ -64,7 +64,7 @@ Verification is performed on various configurations as mentioned below
 
 ## Feature Health
 
-<figure><img src="../../../.gitbook/assets/inji_web_0.10.0_test_report_feature_health_1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/inji_web_0.10.0_test_report_feature_health_2.png" alt=""><figcaption></figcaption></figure>
 
 ## Test execution statistics
 
@@ -72,39 +72,49 @@ Verification is performed on various configurations as mentioned below
 
 Below are the test metrics by performing functional testing. The process followed was black box testing which based its test cases on the specifications of the software component under test. Functional test was performed in combination of individual module testing as well as integration testing. Test data were prepared in line with the user stories. Expected results were monitored by examining the user interface. The coverage includes GUI testing, System testing, End-To-End flows across multiple configurations. The testing cycle included simulation of multiple identity schema and respective UI schema configurations.
 
-<table data-header-hidden><thead><tr><th width="252"></th><th></th><th></th><th></th></tr></thead><tbody><tr><td><strong>Total</strong></td><td><strong>Passed</strong></td><td><strong>Failed</strong></td><td><strong>Skipped</strong></td></tr><tr><td>251</td><td>215</td><td>36</td><td>0</td></tr><tr><td>Test Rate: 100%, With Pass Rate: 85%</td><td></td><td></td><td></td></tr></tbody></table>
+|                                      |            |            |             |
+| :----------------------------------: | :--------: | :--------: | :---------: |
+|               **Total**              | **Passed** | **Failed** | **Skipped** |
+|                  251                 |     215    |     36     |      0      |
+| Test Rate: 100%, With Pass Rate: 85% |            |            |             |
 
 Here is the detailed breakdown of metrics for each module:
 
+|                          |         |                |
+| :----------------------: | :-----: | :------------: |
 |                          |         | **Test cases** |
-| ------------------------ | ------- | -------------- |
-| INJI Web UI Verification | Total   | 277            |
-|                          | Passed  | 215            |
-|                          | Failed  | 36             |
-|                          | Skipped | 0              |
+| INJI Web UI Verification |  Total  |       251      |
+|                          |  Passed |       215      |
+|                          |  Failed |       36       |
+|                          | Skipped |        0       |
 
 ### UI Automation and API Test Rig test results
 
 Below are the test metrics by performing UI Automation and API Test rig.
 
-<table data-header-hidden><thead><tr><th width="231"></th><th width="208"></th><th></th><th></th></tr></thead><tbody><tr><td><strong>Total</strong></td><td><strong>Passed</strong></td><td><strong>Failed</strong></td><td><strong>Skipped</strong></td></tr><tr><td>161</td><td>140</td><td>13</td><td>8</td></tr><tr><td>Test Rate: 95%, With Pass Rate: 91%</td><td></td><td></td><td></td></tr></tbody></table>
+|                                     |            |            |             |
+| :---------------------------------: | :--------: | :--------: | :---------: |
+|              **Total**              | **Passed** | **Failed** | **Skipped** |
+|                 159                 |     152    |      4     |      3      |
+| Test Rate: 98%, With Pass Rate: 97% |            |            |             |
 
 Here is the detailed breakdown of metrics for each module:
 
+|                        |         |                |
+| :--------------------: | :-----: | :------------: |
 |                        |         | **Test cases** |
-| ---------------------- | ------- | -------------- |
-| INJI Web UI Automation | Total   | 18             |
-|                        | Passed  | 18             |
-|                        | Failed  | 0              |
-|                        | Skipped | 0              |
-| INJI Web API Test Rig  | Total   | 143            |
-|                        | Passed  | 122            |
-|                        | Failed  | 13             |
-|                        | Skipped | 8              |
+| INJI Web UI Automation |  Total  |       18       |
+|                        |  Passed |       18       |
+|                        |  Failed |        0       |
+|                        | Skipped |        0       |
+|  INJI Web API Test Rig |  Total  |       141      |
+|                        |  Passed |       134      |
+|                        |  Failed |        4       |
+|                        | Skipped |        3       |
 
 Functional and test rig code base branch which is used for the above metrics is:
 
-Hash Tag: fb520bf4f80eeca4e624bd434c4d05c65b84439f
+Hash Tag: 58e77d26fc1b98884c11638bba70c128d27994e3
 
 ### Detailed Test metrics
 
