@@ -86,6 +86,6 @@ Below is the list of fixes as part of the **0.10.0** release:
 
 ### **Documentation**
 
-* [Feature Documentation](../functional-overview/features.md)
-* [User guide](../functional-overview/end-user-guide.md)
+* [Feature Documentation](../../functional-overview/features.md)
+* [User guide](../../functional-overview/end-user-guide.md)
 * QA Report
