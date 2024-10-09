@@ -41,10 +41,21 @@ We are excited to announce the release of Inji Verify version 0.10.0, which brin
 
 ### **Repositories: Released/Dependent**
 
-| **Repositories**   | **Tags: Released/Dependent**                                         |
-| ------------------ | -------------------------------------------------------------------- |
-| Inji Verify        | **v0.10.0**                                                          |
-| Pixel-Pass Library | [**v0.1.6**](https://www.npmjs.com/package/@mosip/pixelpass/v/0.1.6) |
+| **Repositories**   | **Tags: Released/Dependent** |
+| ------------------ | ---------------------------- |
+| Inji Verify        | **v0.10.0**                  |
+| Pixel-Pass Library | **v0.5.0**                   |
+
+### **Compatible modules:** <a href="#compatible-modules" id="compatible-modules"></a>
+
+The following table outlines the tested and certified compatibility of Inji Verify 0.10.0 with other modules.
+
+| Module          | Version |
+| --------------- | ------- |
+| **Inji Wallet** | 0.13.1  |
+| **Inji Web**    | 0.10.0  |
+
+
 
 ### **Known Issues**
 
@@ -88,4 +99,4 @@ Below is the list of fixes as part of the **0.10.0** release:
 
 * [Feature Documentation](../../functional-overview/features.md)
 * [User guide](../../functional-overview/end-user-guide.md)
-* QA Report
+* [QA Report](test-report.md)
