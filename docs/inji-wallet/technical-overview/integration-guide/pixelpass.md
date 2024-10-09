@@ -42,17 +42,36 @@ npm i @mosip/pixelpass
 
 Below are the APIs provided by the PixelPass library:
 
+## APIs
 ### To Generate QR Data:
+
+**generateQRCode( data, ecc , header )**
+
+ - `data` - Data needs to be compressed and encoded.
+
+ - `ecc` - Error Correction Level for the QR generated. defaults to `"L"`.
+
+ - `header` - Data header need to be prepend to identify the encoded data. defaults to `""`.
+
+```javascript
+import { generateQRCode } from '@mosip/pixelpass';
+
+const data = "Hello";
+const qrCode = generateQRCode(data, ecc, header);
+
+// ecc is Error Correction Level for the QR generated. defaults to "L".
+// header defaults to empty string if not passed.
+```
+The `generateQRCode` takes a data, ECC (Error correction level) which when not passed defaults to L and header which defaults to empty string if not passed.
+Returns a base64 encoded PNG image.
 
 **generateQRData( data, header )**
 
-```
-data - Data needs to be compressed and encoded
+- `data` - Data needs to be compressed and encoded.
 
-header - Data header needs to be prepended to identify the encoded data. It defaults to ""
-```
+- `header` - Data header need to be prepend to identify the encoded data. defaults to `""`.
 
-```
+```javascript
 import { generateQRData } from '@mosip/pixelpass';
 
 const jsonString = "{\"name\":\"Steve\",\"id\":\"1\",\"l_name\":\"jobs\"}";
@@ -62,61 +81,44 @@ const encodedCBORData = generateQRData(jsonString, header);
 
 // header defaults to empty string if not passed.
 ```
+The `generateQRData` takes a valid JSON string and a header which when not passed defaults to an empty string.
+This API will return a base45 encoded string which is `Compressed > CBOR Encoded > Base45 Encoded`.
 
-The API returns a zlib compressed and base45 encoded string with header prepended if provided.
+### To Decode QR Data:
 
-### To Generate QR Code:
+**decode( data )**
 
-**generateQRCode( data, ecc , header )**
+- `data` - Data needs to be decoded and decompressed without header.
 
-```
-data - Data needs to be compressed and encoded
-
-ecc - Error Correction Level for the QR generated. defaults to "L"
-
-header - Data header needs to be prepended to identify the encoded data. defaults to ""
-```
-
-```
-import { generateQRCode } from '@mosip/pixelpass';
-
-const data = "Hello";
-const qrCode = generateQRCode(data, ecc, header);
-
-// ecc is Error Correction Level for the QR generated. defaults to "L".
-// header defaults to empty string if not passed.
-```
-
-The API returns a base64 encoded PNG image with header prepended if provided.
-
-### To Decode the QR Code:
-
-**decode(data)**
-
-```
-data - Data needs to be decoded and decompressed without header
-```
-
-```
+```javascript
 import { decode } from '@mosip/pixelpass';
 
-const encodedData = "NCFWTL$PPB$PN$AWGAE%5UW5A%ADFAHR9 IE:GG6ZJJCL2.AJKAMHA100+8S.1";
-const jsonString = decode(encodedData);
+const b45EncodedData = "NCFWTL$PPB$PN$AWGAE%5UW5A%ADFAHR9 IE:GG6ZJJCL2.AJKAMHA100+8S.1";
+const jsonString = decode(b45EncodedData);
 ```
+The `decode` will take a `string`  as parameter and gives us decoded JSON string which is Base45 `Decoded > CBOR Decoded > Decompressed`.
 
-The API returns a base45 decoded and zlib decompressed string.
+**decodeBinary( data )**
+
+- `data` - Data needs to be decoded and decompressed without header.
+
+```javascript
+import { decodeBinary } from '@mosip/pixelpass';
+
+const zipdata = <zip-byte-array>;
+const decompressedData = decodeBinary(zipdata);
+```
+The `decodeBinary` will take a `UInt8ByteArray`  as parameter and gives us unzipped string. Currently only zip binary data is only supported.
 
 ### To get Mapped CBOR data from JSON:
 
-**getMappedData( jsonData, mapper, cborEnable );**
+**getMappedData( jsonData, mapper, cborEnable )**
 
-jsonData - A JSON data.
+- `jsonData` - A JSON data.
+- `mapper` - A Map which is used to map with the JSON.
+- `cborEnable` - A Boolean which is used to enable or disable CBOR encoding on mapped data. Defaults to `false` if not provided.
 
-mapper - A Map which is used to map with the JSON.
-
-cborEnable - A Boolean which is used to enable or disable CBOR encoding on mapped data. Defaults to false if not provided.
-
-```
+```javascript
 import { getMappedData } from '@mosip/pixelpass';
 
 const jsonData = {"name": "Jhon", "id": "207", "l_name": "Honay"};
@@ -126,22 +128,15 @@ const byteBuffer = getMappedData(jsonData, mapper,true);
 
 const cborEncodedString = byteBuffer.toString('hex');
 ```
-
-The getMappedData function accepts three arguments: a JSON object and a map used to create a new set of key-value pairs based on the provided mapper. The third argument is a boolean value and an optional parameter that enables or disables CBOR encoding for the newly mapped data.
-
-**Eg:** The converted map would look like,
-
-{ "1": "207", "2": "Jhon", "3": "Honay" }
-
-### To decode mapped CBOR data:
+The `getMappedData` takes 3 arguments a JSON and a map with which we will be creating a new map with keys and values mapped based on the mapper. The third parameter is an optional value to enable or disable CBOR encoding on the mapped data.  
+The example of a converted map would look like, `{ "1": "207", "2": "Jhon", "3": "Honay"}`
 
 **decodeMappedData( data, mapper )**
 
-data - A CBOREncoded string or a mapped JSON.
+- `data` - A CBOREncoded string or a mapped JSON.
+- `mapper` - A Map which is used to map with the JSON.
 
-mapper - A Map which is used to map with the JSON.
-
-```
+```javascript
 import { decodeMappedData } from '@mosip/pixelpass';
 
 const cborEncodedString = "a302644a686f6e01633230370365486f6e6179";
@@ -150,11 +145,10 @@ const mapper = {"1": "id", "2": "name", "3": "l_name"};
 const jsonData = decodeMappedData(cborEncodedString, mapper);
 ```
 
-The decodeMappedData function accepts two arguments: a string that can be either CBOR-encoded or a mapped JSON, and a map used to create a JSON by mapping the keys and values. If the input string is CBOR-encoded, the API will first decode it using CBOR, and then proceed with re-mapping the data based on the provided map.
+The `decodeMappedData` takes 2 arguments a string which is CBOR Encoded or a mapped JSON and a map with which we will be creating a JSON by mapping the keys and values. If the data provided is CBOR encoded string the API will do a CBOR decode first ad then proceed with re-mapping the data.
+The example of the returned JSON would look like, `{"name": "Jhon", "id": "207", "l_name": "Honay"}`
 
-**Eg:** The returned JSON would look like,
 
-{ "name": "Jhon", "id": "207", "l\_name": "Honay" }
 
 ### Errors / Exceptions
 
