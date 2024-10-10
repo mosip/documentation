@@ -70,6 +70,6 @@ Below is the list of **known** issues. To read in detail click [**here**](https:
 
 * [Feature documentation](../../functional-overview/features.md)
 * [User guide](../../functional-overview/end-user-guide.md)
-* QA Report
+* [QA Report](test-report.md)
 * [API Documentation](https://docs.mosip.io/inji/inji-web/technical-overview/backend-services/mimoto-bff)
 
