@@ -2,7 +2,7 @@
 
 **Release Name:** Inji Web 0.10.0
 
-**Release Type:** Developer
+**Support:** Developer
 
 **Release Date:** Coming Soon
 
