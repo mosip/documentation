@@ -2,7 +2,7 @@
 
 **Release Name**: Inji Verify v0.10.0
 
-**Support**: Developer Release
+**Support**: Developer
 
 **Release Date**: Coming Soon
 
@@ -25,7 +25,7 @@ We are excited to announce the release of Inji Verify version 0.10.0, which brin
   * This release simplifies deployment with Docker Compose, allowing users to easily set up and configure the Inji Verify environment.
 * **React-scanner-lib Upgrade**\
   The React scanner library has been upgraded for improved performance and reliability in scanning QR codes.
-  * ZXing-cpp
+  * ZXing-cpp library
   * PDF.js Integration
 * **Updation of Pixel Pass library for Sunbird QR Code**
   * To properly manage binary data by unzipping it before sending it back, the Pixel pass library has been updated to ensure backward compatibility of Sunbird QR codes.
@@ -41,21 +41,19 @@ We are excited to announce the release of Inji Verify version 0.10.0, which brin
 
 ### **Repositories: Released/Dependent**
 
-| **Repositories**   | **Tags: Released/Dependent** |
-| ------------------ | ---------------------------- |
-| Inji Verify        | **v0.10.0**                  |
-| Pixel-Pass Library | **v0.5.0**                   |
+| **Repositories**   | **Tags: Released/Dependent**                                     |
+| ------------------ | ---------------------------------------------------------------- |
+| Inji Verify        | [**v0.10.0**](https://github.com/mosip/inji-verify/tree/v0.10.0) |
+| Pixel-Pass Library | [**v0.5.0**](https://github.com/mosip/pixelpass/tree/v0.5.0)     |
 
 ### **Compatible modules:** <a href="#compatible-modules" id="compatible-modules"></a>
 
 The following table outlines the tested and certified compatibility of Inji Verify 0.10.0 with other modules.
 
-| Module          | Version |
-| --------------- | ------- |
-| **Inji Wallet** | 0.13.1  |
-| **Inji Web**    | 0.10.0  |
-
-
+| Module          | Version                                                         |
+| --------------- | --------------------------------------------------------------- |
+| **Inji Wallet** | [**0.13.1**](https://github.com/mosip/inji-wallet/tree/v0.13.1) |
+| **Inji Web**    | 0.10.0                                                          |
 
 ### **Known Issues**
 
@@ -63,11 +61,15 @@ Below is the list of known issues. To read in detail and view all the issues rel
 
 | **Jira ID**                                                       | **Description**                                                                                        |
 | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| [**INJIVER-639**](https://mosip.atlassian.net/browse/INJIVER-639) | Upload Feature Not Functioning on Lower-End iPhones in Chrome Browser                                  |
+| [**INJIVER-639**](https://mosip.atlassian.net/browse/INJIVER-639) | Upload feature not functioning on Lower-End iPhones in Chrome Browser                                  |
 | [**INJIVER-638**](https://mosip.atlassian.net/browse/INJIVER-638) | Inji Verify - Page Fails to Load on Lower-End iPhones in Safari Browser                                |
-| [**INJIVER-625**](https://mosip.atlassian.net/browse/INJIVER-625) | Inji Verify - Upload Not Functioning on Mac Safari Browser Versions 16 and Below                       |
+| [**INJIVER-625**](https://mosip.atlassian.net/browse/INJIVER-625) | Inji Verify - Upload not functioning on Mac Safari Browser Versions 16 and Below                       |
+| [**INJIVER-610**](https://mosip.atlassian.net/browse/INJIVER-610) | QR Code scan fails on Windows devices.                                                                 |
+| [**INJIVER-237**](https://mosip.atlassian.net/browse/INJIVER-237) | Unable to scan sunbird QR code through Mobile/Windows/Mac                                              |
 | [**INJIVER-387**](https://mosip.atlassian.net/browse/INJIVER-387) | INJIVER- When the user turns on the internet connection, they encounter a 'no internet' error screen." |
 | [**INJIVER-422**](https://mosip.atlassian.net/browse/INJIVER-422) | Inji Verify- The alignment on the no internet error screen is not correct on mobile                    |
+
+
 
 ### **Bug Fixes**
 
