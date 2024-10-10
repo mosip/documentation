@@ -45,7 +45,6 @@ PixelPass has NPM, Kotlin, Swift and Java artifacts available.
 Below are the APIs provided by the PixelPass library:
 
 ## APIs
-### To Generate QR Data:
 
 **generateQRCode( data, ecc , header )**
 
@@ -89,8 +88,6 @@ const encodedCBORData = generateQRData(jsonString, header);
 // header defaults to empty string if not passed.
 ```
 
-### To Decode QR Data:
-
 **decode( data )**
 
 The `decode` will take a `string`  as parameter and gives us decoded JSON string which is Base45 `Decoded > CBOR Decoded > Decompressed`.
@@ -116,8 +113,6 @@ import { decodeBinary } from '@mosip/pixelpass';
 const zipdata = <zip-byte-array>;
 const decompressedData = decodeBinary(zipdata);
 ```
-
-### To get Mapped CBOR data from JSON:
 
 **getMappedData( jsonData, mapper, cborEnable )**
 
@@ -183,7 +178,3 @@ The below diagram shows how Inji Wallet utilises PixelPass library.
 The below diagram shows how Inji Verify utilises PixelPass library.
 
 <figure><img src="../../../.gitbook/assets/verify-decode.png" alt=""><figcaption></figcaption></figure>
-
-\
-\
-\\
