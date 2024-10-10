@@ -2,7 +2,7 @@
 
 **Release Name:** Inji Web 0.10.0
 
-**Release Type:** Developer Release
+**Release Type:** Developer
 
 **Release Date:** Coming Soon
 
@@ -41,12 +41,13 @@ Below are the key features as part of this release:
 
 The following table outlines the tested and certified compatibility of Inji Web 0.10.0 with other modules.
 
-| **Module**       | **Version** |
-| ---------------- | ----------- |
-| **Mimoto**       | 0.14.0      |
-| **eSignet**      | 1.4.1       |
-| **Inji Verify**  | 0.10.0      |
-| **Inji Certify** | 0.9.0       |
+| **Module**   | **Version**                                                     |
+| ------------ | --------------------------------------------------------------- |
+| eSignet      | [**1.4.1**](https://github.com/mosip/esignet/tree/v1.4.1)       |
+| Inji Verify  | [**0.10.0**](https://github.com/mosip/inji-verify/tree/v0.10.0) |
+| Inji Certify | [**0.9.1**](https://github.com/mosip/inji-certify/tree/v0.9.1)  |
+
+
 
 ### **Bugs/Security Fixes**
 
