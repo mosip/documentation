@@ -40,11 +40,10 @@ PixelPass has NPM, Kotlin, Swift and Java artifacts available.
    2. Create a new Swift project.
    3. Add package dependency: PixelPass
 
-### APIs
+## APIs
 
 Below are the APIs provided by the PixelPass library:
 
-## APIs
 
 **generateQRCode( data, ecc , header )**
 
