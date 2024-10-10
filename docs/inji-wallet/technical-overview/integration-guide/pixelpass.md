@@ -2,9 +2,9 @@
 
 ## PixelPass
 
-PixelPass is a versatile and easy-to-use node library designed to simplify working with QR codes and data compression. It allows you to generate QR codes from any given data with just a single function. If you’re working with JSON, PixelPass can take that data, compress it, and convert it into a compact format using CBOR encoding, making it smaller and more efficient for QR code generation. The library can also decode this compressed data, turning CBOR back into the original JSON format. Additionally, for more complex use cases, PixelPass offers the ability to map your JSON data to a specific structure, compress it, and encode it into CBOR. Later, you can also reverse this process, decoding the CBOR back into its mapped JSON structure. With these capabilities, PixelPass makes managing, compressing, and encoding data for QR codes easy and efficient.
+PixelPass is a versatile and easy-to-use library designed to simplify working with QR codes and data compression. It allows you to generate QR codes from any given data with just a single function. If you’re working with JSON, PixelPass can take that data, compress it, and convert it into a compact format using CBOR encoding, making it smaller and more efficient for QR code generation. The library can also decode this compressed data, turning CBOR back into the original JSON format. Additionally, for more complex use cases, PixelPass offers the ability to map your JSON data to a specific structure, compress it, and encode it into CBOR. Later, you can also reverse this process, decoding the CBOR back into its mapped JSON structure. With these capabilities, PixelPass makes managing, compressing, and encoding data for QR codes easy and efficient.
 
-PixelPass also has Kotlin, Swift and Java artifacts available.
+PixelPass has NPM, Kotlin, Swift and Java artifacts available.
 
 ### Features
 
@@ -13,46 +13,70 @@ PixelPass also has Kotlin, Swift and Java artifacts available.
 * For JSON data, applies CBOR encoding/decoding to achieve additional size reduction.
 * With JSON and a Mapper provided, maps the JSON and then performs CBOR encoding/decoding to further shrink the data size.
 
-### Snapshots
-
-Below snapshots provide the mobile platform native artifacts along with the java library:
-
-**Kotlin**: Index of /repositories/snapshots/io/mosip/pixelpass-aar
-
-**Swift**: GitHub - mosip/pixelpass-ios-swift: Swift library to generate QR code from VC and decode the data
-
-**Java:** Index of /repositories/snapshots/io/mosip/pixelpass-jar
-
-**Maven repo:** [pixelpass](https://repo1.maven.org/maven2/io/mosip/pixelpass/)
-
-### Installation
+### Usage
 
 1. As a node project:
 
-npm i @mosip/pixelpass
+```npm i @mosip/pixelpass```
 
-[npm](https://www.npmjs.com/package/@mosip/pixelpass)
+2. As a Kotlin/Java dependency:
 
-2. To include PixelPass in your Swift project, follow the below steps:
+*Gradle*
+
+```implementation("io.mosip:pixelpass:0.5.0")```
+
+*Maven*
+
+```
+<dependency>
+  <groupId>io.mosip</groupId>
+  <artifactId>pixelpass</artifactId>
+  <version>0.5.0</version>
+</dependency>
+```
+
+3. To include PixelPass in your Swift project, follow the below steps:
    1. Clone the PixelPass library locally.
    2. Create a new Swift project.
    3. Add package dependency: PixelPass
 
-### APIs
+## APIs
 
 Below are the APIs provided by the PixelPass library:
 
-### To Generate QR Data:
+
+**generateQRCode( data, ecc , header )**
+
+The `generateQRCode` takes a data, ECC (Error correction level) which when not passed defaults to L and header which defaults to empty string if not passed.
+Returns a base64 encoded PNG image.
+
+ - `data` - Data needs to be compressed and encoded.
+
+ - `ecc` - Error Correction Level for the QR generated. defaults to `"L"`.
+
+ - `header` - Data header need to be prepend to identify the encoded data. defaults to `""`.
+
+```javascript
+import { generateQRCode } from '@mosip/pixelpass';
+
+const data = "Hello";
+const qrCode = generateQRCode(data, ecc, header);
+
+// ecc is Error Correction Level for the QR generated. defaults to "L".
+// header defaults to empty string if not passed.
+```
 
 **generateQRData( data, header )**
 
-```
-data - Data needs to be compressed and encoded
+The `generateQRData` takes a valid JSON string and a header which when not passed defaults to an empty string.
+This API will return a base45 encoded string which is `Compressed > CBOR Encoded > Base45 Encoded`.
 
-header - Data header needs to be prepended to identify the encoded data. It defaults to ""
-```
 
-```
+- `data` - Data needs to be compressed and encoded.
+
+- `header` - Data header need to be prepend to identify the encoded data. defaults to `""`.
+
+```javascript
 import { generateQRData } from '@mosip/pixelpass';
 
 const jsonString = "{\"name\":\"Steve\",\"id\":\"1\",\"l_name\":\"jobs\"}";
@@ -63,60 +87,41 @@ const encodedCBORData = generateQRData(jsonString, header);
 // header defaults to empty string if not passed.
 ```
 
-The API returns a zlib compressed and base45 encoded string with header prepended if provided.
+**decode( data )**
 
-### To Generate QR Code:
+The `decode` will take a `string`  as parameter and gives us decoded JSON string which is Base45 `Decoded > CBOR Decoded > Decompressed`.
 
-**generateQRCode( data, ecc , header )**
+- `data` - Data needs to be decoded and decompressed without header.
 
-```
-data - Data needs to be compressed and encoded
-
-ecc - Error Correction Level for the QR generated. defaults to "L"
-
-header - Data header needs to be prepended to identify the encoded data. defaults to ""
-```
-
-```
-import { generateQRCode } from '@mosip/pixelpass';
-
-const data = "Hello";
-const qrCode = generateQRCode(data, ecc, header);
-
-// ecc is Error Correction Level for the QR generated. defaults to "L".
-// header defaults to empty string if not passed.
-```
-
-The API returns a base64 encoded PNG image with header prepended if provided.
-
-### To Decode the QR Code:
-
-**decode(data)**
-
-```
-data - Data needs to be decoded and decompressed without header
-```
-
-```
+```javascript
 import { decode } from '@mosip/pixelpass';
 
-const encodedData = "NCFWTL$PPB$PN$AWGAE%5UW5A%ADFAHR9 IE:GG6ZJJCL2.AJKAMHA100+8S.1";
-const jsonString = decode(encodedData);
+const b45EncodedData = "NCFWTL$PPB$PN$AWGAE%5UW5A%ADFAHR9 IE:GG6ZJJCL2.AJKAMHA100+8S.1";
+const jsonString = decode(b45EncodedData);
 ```
 
-The API returns a base45 decoded and zlib decompressed string.
+**decodeBinary( data )**
 
-### To get Mapped CBOR data from JSON:
+The `decodeBinary` will take a `UInt8ByteArray`  as parameter and gives us unzipped string. Currently only zip binary data is only supported.
 
-**getMappedData( jsonData, mapper, cborEnable );**
+- `data` - Data needs to be decoded and decompressed without header.
 
-jsonData - A JSON data.
+```javascript
+import { decodeBinary } from '@mosip/pixelpass';
 
-mapper - A Map which is used to map with the JSON.
-
-cborEnable - A Boolean which is used to enable or disable CBOR encoding on mapped data. Defaults to false if not provided.
-
+const zipdata = <zip-byte-array>;
+const decompressedData = decodeBinary(zipdata);
 ```
+
+**getMappedData( jsonData, mapper, cborEnable )**
+
+The `getMappedData` takes 3 arguments a JSON and a map with which we will be creating a new map with keys and values mapped based on the mapper. The third parameter is an optional value to enable or disable CBOR encoding on the mapped data.  
+
+- `jsonData` - A JSON data.
+- `mapper` - A Map which is used to map with the JSON.
+- `cborEnable` - A Boolean which is used to enable or disable CBOR encoding on mapped data. Defaults to `false` if not provided.
+
+```javascript
 import { getMappedData } from '@mosip/pixelpass';
 
 const jsonData = {"name": "Jhon", "id": "207", "l_name": "Honay"};
@@ -126,22 +131,16 @@ const byteBuffer = getMappedData(jsonData, mapper,true);
 
 const cborEncodedString = byteBuffer.toString('hex');
 ```
-
-The getMappedData function accepts three arguments: a JSON object and a map used to create a new set of key-value pairs based on the provided mapper. The third argument is a boolean value and an optional parameter that enables or disables CBOR encoding for the newly mapped data.
-
-**Eg:** The converted map would look like,
-
-{ "1": "207", "2": "Jhon", "3": "Honay" }
-
-### To decode mapped CBOR data:
+The example of a converted map would look like, `{ "1": "207", "2": "Jhon", "3": "Honay"}`
 
 **decodeMappedData( data, mapper )**
 
-data - A CBOREncoded string or a mapped JSON.
+The `decodeMappedData` takes 2 arguments a string which is CBOR Encoded or a mapped JSON and a map with which we will be creating a JSON by mapping the keys and values. If the data provided is CBOR encoded string the API will do a CBOR decode first ad then proceed with re-mapping the data.
 
-mapper - A Map which is used to map with the JSON.
+- `data` - A CBOREncoded string or a mapped JSON.
+- `mapper` - A Map which is used to map with the JSON.
 
-```
+```javascript
 import { decodeMappedData } from '@mosip/pixelpass';
 
 const cborEncodedString = "a302644a686f6e01633230370365486f6e6179";
@@ -150,11 +149,9 @@ const mapper = {"1": "id", "2": "name", "3": "l_name"};
 const jsonData = decodeMappedData(cborEncodedString, mapper);
 ```
 
-The decodeMappedData function accepts two arguments: a string that can be either CBOR-encoded or a mapped JSON, and a map used to create a JSON by mapping the keys and values. If the input string is CBOR-encoded, the API will first decode it using CBOR, and then proceed with re-mapping the data based on the provided map.
+The example of the returned JSON would look like, `{"name": "Jhon", "id": "207", "l_name": "Honay"}`
 
-**Eg:** The returned JSON would look like,
 
-{ "name": "Jhon", "id": "207", "l\_name": "Honay" }
 
 ### Errors / Exceptions
 
@@ -172,8 +169,11 @@ Shall you encounter any errors while using the APIs, please refer to the below:
 
 The below diagram shows how Inji Wallet utilises PixelPass library.
 
-<figure><img src="../../../.gitbook/assets/inji_mobile_wallet_integration_guides_pixel_pass_1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/wallet-encode.png" alt=""><figcaption></figcaption></figure>
 
-\
-\
-\\
+
+## PixelPass & Inji Verify Integration:
+
+The below diagram shows how Inji Verify utilises PixelPass library.
+
+<figure><img src="../../../.gitbook/assets/verify-decode.png" alt=""><figcaption></figcaption></figure>
