@@ -1,7 +1,9 @@
 # Version 0.10.0
 
-**Release Name:** Inji Web 0.10.0\
-**Release Type:** Developer\
+**Release Name:** Inji Web 0.10.0
+
+**Release Type:** Developer Release
+
 **Release Date:** Coming Soon
 
 ### Overview
