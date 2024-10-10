@@ -3,8 +3,8 @@
 **Version: 0.10.0**
 
 * Name: Inji Verify v0.10.0 (Developer Release)
-* Date: Coming Soon
-* Release Notes
+* Date: 10th Oct, 2024
+* [Release Notes](version-0.10.0/)
 
 **Version: 0.9.0**
 

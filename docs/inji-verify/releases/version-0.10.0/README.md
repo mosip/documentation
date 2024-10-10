@@ -4,7 +4,7 @@
 
 **Support**: Developer
 
-**Release Date**: Coming Soon
+**Release Date**: 10th Oct, 2024
 
 ### **Overview**
 
