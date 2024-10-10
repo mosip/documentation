@@ -175,7 +175,14 @@ Shall you encounter any errors while using the APIs, please refer to the below:
 
 The below diagram shows how Inji Wallet utilises PixelPass library.
 
-<figure><img src="../../../.gitbook/assets/inji_mobile_wallet_integration_guides_pixel_pass_1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/wallet-encode.png" alt=""><figcaption></figcaption></figure>
+
+
+## PixelPass & Inji Verify Integration:
+
+The below diagram shows how Inji Verify utilises PixelPass library.
+
+<figure><img src="../../../.gitbook/assets/verify-decode.png" alt=""><figcaption></figcaption></figure>
 
 \
 \
