@@ -2,7 +2,13 @@
 
 ## Overview
 
-MOSIP recommends using eSignet for authentication, which leverages MOSIP's internal [ID Authentication (IDA)](https://docs.mosip.io/1.2.0/modules/id-authentication-services) module, operating as a backend service to ensure seamless and secure identity verification. This integration enhances security by providing a unified authentication flow, allowing residents to verify their identities easily. eSignet is recommended for its ease of integration and interoperability, enabling partners to adopt its features without complexity. It simplifies the authentication process while ensuring compliance with MOSIP's security protocols. By leveraging eSignet, governmental and private entities can securely and reliably authenticate residents' identities. Read more about eSignet and its capabilities [here](https://docs.esignet.io/).\
+### What is ID Authentication?
+
+[IDA (ID Authentication)](https://docs.mosip.io/1.2.0/modules/id-authentication-services) module in MOSIP is an independent service that enables seamless identity verification using data from any system. Multiple IDA modules can run from a single issuer, providing services like authentication, OTP generation, and internal processes.
+
+MOSIP recommends using eSignet for authentication, which leverages the IDA module to ensure secure and unified identity verification. eSignet simplifies the process by streamlining authentication across services, ensuring compliance with MOSIP’s security protocols. This enables both governmental and private entities to securely authenticate residents without needing multiple solutions.
+
+Read more about eSignet and its capabilities [here](https://docs.esignet.io/).\
 \
 The typical authentication flow is illustrated below:
 
@@ -12,15 +18,15 @@ The typical authentication flow is illustrated below:
 
 The following types of authentication are offered by MOSIP's ID Authentication (IDA) module and are utilized through **eSignet** for ID verification by external parties:
 
-### Yes/No Authentication
+### 1. Yes/No Authentication
 
 MOSIP offers a _yes/no_ API that can be used for the verification of attributes supplied along with authentication factors. The API verifies the identifier and the provided demographic attributes and also validates other authentication factors such as the OTP or biometrics and responds with a _yes_ or a _no_. Successful verification of the data results in a _yes_. This kind of API can be typically used to support the verification of a limited set of demographic data about the person or for simple presence verification when biometrics are used.
 
-### KYC Authentication
+### 2. KYC Authentication
 
 MOSIP additionally offers a KYC API, which can be used to get an authorized set of attributes for the resident in the response of the API. This API is intended for use by authorized relying parties to perform KYC requests. The authentication includes an identifier along with authentication factors such as OTP and biometrics. The information returned is governed by a policy. Different relying parties can be provided with different KYC data based on their needs. The policy helps implement selective disclosure as part of the KYC data. The data thus returned is digitally signed by the server and can be used by the relying party with confidence.
 
-### Multifactor authentication
+### 3. Multifactor authentication
 
 The authentication APIs support multiple factors. These can be:
 
