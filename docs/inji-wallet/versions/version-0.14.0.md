@@ -38,10 +38,10 @@ The following table outlines the tested and certified compatibility of Inji Wall
 
 | **Module**                | **Version**                                                                      |
 | ------------------------- | -------------------------------------------------------------------------------- |
-| Mimoto                    | 0.14.0                                                                           |
-| Inji-config               |  v0.3.0                                                                          |
-| eSignet                   | 1.4.1                                                                            |
-| Inji Verify               | 0.10.0                                                                           |
+| Mimoto                    | v0.14.0                                                                          |
+| Inji-config               | v0.3.0                                                                           |
+| eSignet                   | v1.4.1                                                                           |
+| Inji Verify               | v0.10.0                                                                          |
 | tuvali                    | [v0.5.0](https://github.com/mosip/tuvali/releases/tag/v0.5.0)                    |
 | tuvali-ios-swift          | [v0.5.0](https://github.com/mosip/tuvali-ios-swift/releases/tag/v0.5.0)          |
 | secure-Keystore           | [v0.2.0](https://github.com/mosip/secure-keystore/releases/tag/v0.2.0)           |
