@@ -55,8 +55,6 @@ Verification is performed on various configurations as mentioned below
   * 2 Lang configuration
   * 3 Lang configuration
 
-##
-
 ## Feature Health
 
 On Android Device:
