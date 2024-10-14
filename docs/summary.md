@@ -41,6 +41,7 @@
     * [Mimoto](inji-wallet/technical-overview/backend-services/mimoto.md)
     * [eSignet](inji-wallet/technical-overview/backend-services/esignet.md)
 * [Releases](inji-wallet/versions/README.md)
+  * [Version 0.14.0](inji-wallet/versions/version-0.14.0.md)
   * [Version 0.13.1](inji-wallet/versions/version-0.13.1.md)
   * [Version 0.13.0](inji-wallet/versions/version-0.13.0/README.md)
     * [Test Report](inji-wallet/versions/version-0.13.0/test-report.md)

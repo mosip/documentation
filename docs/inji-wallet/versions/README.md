@@ -1,5 +1,12 @@
 # Releases
 
+## Version: 0.14.0
+
+* Name: Inji Wallet 0.14.0
+* Date: Coming Soon
+* Type: Developer
+* Release Notes
+
 ## Version: 0.13.1
 
 * Name: Inji Wallet 0.13.1 Patch release
