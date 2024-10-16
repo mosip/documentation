@@ -1,6 +1,6 @@
 # Functional Overview
 
-**Overview**: Resident Portal is a self-help web-b portal that can be used by the residents of a country to avail the services related to their Unique Identification Number (UIN). The architecture, interface overview and key services provided are discussed as below:
+Resident Portal is a self-help web-b portal that can be used by the residents of a country to avail of the services related to their Unique Identification Number (UIN). The architecture, interface overview, and key services provided are discussed below:
 
 1. Architecture
 2. Interface overview
@@ -20,9 +20,7 @@
    4. Get My UIN
    5. Booking an Appointment
 
-Below is the detailed explanation of each of the features along with the list of relevant APIs.&#x20;
-
-
+Below is a detailed explanation of each of the features along with the list of relevant APIs.&#x20;
 
 <figure><img src="../../.gitbook/assets/fo-1.png" alt=""><figcaption><p>Modules/services that Resident services depends on</p></figcaption></figure>
 
@@ -50,7 +48,7 @@ The Resident Portal menu bar contains the following:
 
 ### Workspace
 
-A dashboard view to quicly locate the 'Key Services'
+A dashboard view to quickly locate the 'Key Services'
 
 ## **Key Services**
 
@@ -92,7 +90,7 @@ On clicking “Secure My ID”, the residents can view the status of all the aut
 
 ### **Manage My VID**
 
-On clicking “Manage My VID”, the resident will be taken to a page where they can view details of the existing VIDs, generate new VID, revoke existing VID or download a VID card.
+On clicking “Manage My VID”, the resident will be taken to a page where they can view details of the existing VIDs, generate new VID, revoke existing VIDs, or download a VID card.
 
 The following types of VIDs can be seen based on the VID policy:
 
@@ -172,7 +170,7 @@ On clicking “Share My Data”, the residents can choose the data to be shared 
 
 
 
-## **Login With E-Signet (OpenID Connect)**
+## **Login With eSignet (OpenID Connect)**
 
 * **Validate the Access token and ID token**
 

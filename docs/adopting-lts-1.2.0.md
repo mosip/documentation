@@ -61,7 +61,7 @@ MOSIP's current LONG TERM SUPPORT RELEASE is v1.2.0. The section below highlight
 
 **Newer Modules Compatible with LTS**
 
-* e-Signet
+* eSignet
 * Inji
 * OpenG2P
 * OpenCRVS
@@ -172,19 +172,19 @@ To learn more, read through [Deployment](https://docs.mosip.io/1.2.0/deploymentn
 #### Test Automation
 
 * We now have a dockerized API test automation as opposed to the jar file execution due to which the entire process of automation has become faster owing to
-  * Cron jobs that handle daily automation report eliminating any need of manual trigger for test report generation.
-  * Automatic language, environment and secret keys configuration.
+  * Cron jobs that handle daily automation reports eliminating any need for manual trigger for test report generation.
+  * Automatic language, environment, and secret key configuration.
 
 To know more, read through [Automation Testing](https://docs.mosip.io/1.2.0/modules/automation-testing).
 
 #### Enhanced Security
 
-* Security should be built-in and not bolt-on. Taking our security checks to the next level, we successfully completed security audit as part of MOSIP 1.2.0 LTS (Asymmetric Amoeba), which was certified by Aujas.
-* The components have been significantly tested for scale and performance. The adopting countries can now cater to it's millions of customers with confidence.
+* Security should be built-in and not bolt-on. Taking our security checks to the next level, we completed a security audit as part of MOSIP 1.2.0 LTS (Asymmetric Amoeba), which was certified by Aujas.
+* The components have been significantly tested for scale and performance. The adopting countries can now cater to their millions of customers with confidence.
 
 #### Finer Documentation
 
-* Documentation has evolved over time, thereby making a huge difference in resolving the issues of accessibility and assistive technology.
+* Documentation has evolved, thereby making a huge difference in resolving the issues of accessibility and assistive technology.
 * The availability of comprehensive and well-devised user guides for all modules has helped the community to move one step closer towards simplified ways of working autonomously.
 
 #### Performance Enhancements
@@ -194,19 +194,19 @@ To know more, read through [Automation Testing](https://docs.mosip.io/1.2.0/modu
 
 ## Newer Modules Compatible with LTS
 
-#### e-Signet
+#### eSignet
 
-* e-Signet allows easy login to any of the government services using a single credential and passwordless login using the supported authentication factors
-* To know more, read through the [e-Signet](https://docs.esignet.io/) documentation.
+* eSignet allows easy login to any of the government services using a single credential and passwordless login using the supported authentication factors
+* To know more, read through the [eSignet](https://docs.esignet.io/) documentation.
 
 #### Inji
 
-* A safe, trusted & inclusive mobile wallet and authenticator, that enables you to carry your digital IDs, prove your presence, (offline and online) and avail services in a snap.
+* A safe, trusted & inclusive mobile wallet and authenticator, that enables you to carry your digital IDs, prove your presence, (offline and online), and avail services in a snap.
 * To know more, read through the [Inji](https://docs.mosip.io/inji/) documentation.
 
 #### Compliance Tool Kit (CTK)
 
-* Compliance Tool Kit (CTK) is an online portal that can be used by MOSIP partners to test the compliance of their product developed as per specifications (specs) published/adopted by MOSIP.
+* the Compliance Tool Kit (CTK) is an online portal that can be used by MOSIP partners to test the compliance of their product developed as per specifications (specs) published/adopted by MOSIP.
 * To know more, read through [Compliance Tool Kit](https://docs.mosip.io/compliance-tool-kit/versions/version-0.0.9) documentation.
 
 #### OpenG2P

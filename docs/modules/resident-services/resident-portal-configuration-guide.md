@@ -235,9 +235,9 @@ resident.ui.propertyKeys=mosip.mandatory-languages,mosip.optional-languages,mosi
 auth.allowed.urls=https://${mosip.resident.host}/,https://${mosip.resident.host}/resident-ui/,https://${mosip.resident.host}/resident-ui/**
 ```
 
-### MOSIP E-Signet config
+### MOSIP eSignet config
 
-When enabling MOSIP E-Signet comment Mock Keycloak config, vise versa.
+When enabling MOSIP eSignet comment Mock Keycloak config, vise versa.
 
 ```
 mosip.iam.module.clientID=******
@@ -257,7 +257,7 @@ mosip.resident.oidc.userinfo.jwt.signed=true
 
 ### Auth Adapter ValidateTokenHelper
 
-This property will directly apply the certs URL without need for constructing the path from issuer URL. This is useful to keep a different certs URL for integrating with MOSIP IDP for offline token validation.
+This property will directly apply the certs URL without the need for constructing the path from the issuer URL. This is useful to keep a different certs URL for integrating with MOSIP IDP for offline token validation.
 
 ```
 auth.server.admin.oidc.certs.url=${mosip.iam.certs_endpoint}
@@ -266,7 +266,7 @@ auth.server.admin.validate.url=
 mosip.resident.oidc.userinfo.jwt.verify.enabled=false
 ```
 
-### Resident login configuration for E-Signet
+### Resident login configuration for eSignet
 
 ```
 mosip.iam.module.redirecturi=${mosip.api.internal.url}/resident/v1/login-redirect/
@@ -288,7 +288,7 @@ mosip.resident.identity.claim.ida-token=ida_token
 
 ### Scopes
 
-Used for login purpose
+Used for login purposes
 
 ```
 mosip.scope.resident.getinputattributevalues=Manage-Identity-Data

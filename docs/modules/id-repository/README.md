@@ -2,7 +2,7 @@
 
 ## Overview
 
-ID Repository contains the records of identity of an individual, and provides API based mechanism to store, retrieve and update identity details by other MOSIP modules. ID Repository is used by [Registration Processor](../registration-processor/), [ID Authentication](../id-authentication-services/) and [Resident Services](../resident-services/).
+ID Repository contains the records of the identity of an individual and provides API based mechanism to store, retrieve, and update identity details by other MOSIP modules. ID Repository is used by [Registration Processor](../registration-processor/), [ID Authentication](../id-authentication-services/), and [Resident Services](../resident-services/).
 
 {% embed url="https://www.youtube.com/watch?v=hLI-p7yUnZI&list=PLF83tgjxrJvh6QVM27lxIYq5nlZx8rY8Z&index=8" %}
 
@@ -21,19 +21,19 @@ ID Repository module consists of the following components:
 
 ## Identity service
 
-* Stores, updates, retrieves identity information.
+* Stores, updates, and retrieves identity information.
 * Also, retrieves and updates [UIN](../../id-lifecycle-management/identifiers.md#uin) status.
 
 Identity service uses Biometric SDK (server) to extract templates from provided biometric data.
 
 ![](../../.gitbook/assets/identity-service.png)
 
-Above is the entity relationship diagram illustrated for Identity service. _NOTE:_ The numbers do not signify sequence of operations or control flow. Arrows indicate the data flow.
+Above is the entity relationship diagram illustrated for the Identity service. _NOTE:_ The numbers do not signify a sequence of operations or control flow. Arrows indicate the data flow.
 
 1. [Key Manager](../keymanager/) encrypts/decrypts data.
-2. Credential request generator issues credentials for new/updated UIN data.
+2. The credential request generator issues credentials for new/updated UIN data.
 3. [Object Store](../persistence/object-store.md) stores/retrieves biometrics and demographic documents.
-4. All demographic data of UIN and references to biometric and demographic files stored in object store are stored in `mosip_idrepo` DB.
+4. All demographic data of UIN and references to biometric and demographic files stored in the object store are stored in `mosip_idrepo` DB.
 5. [Partner management service](../partner-management-services/) retrieves online verification partners to issue credentials.
 6. Audit logs are logged into Audit Manager.
 7. Biometric SDK extracts the templates for input biometric data.
@@ -45,18 +45,19 @@ Above is the entity relationship diagram illustrated for Identity service. _NOTE
 
 ## VID service
 
-VID Service provides functionality to create/update Virtual IDs mapped against an UIN. It also provides the facility to update status of VID. VIDs are created based on the VID policy defined in the configuration.
+VID Service provides functionality to create/update Virtual IDs mapped against a UIN. It also provides the facility to update the status of VID. VIDs are created based on the VID policy defined in the configuration.
 
 ![](<../../.gitbook/assets/VID-service (1).png>)
 
 1. Key Manager encrypts/decrypts data.
-2. Credential request generator issues credentials for new/updated UIN data. 3 All VID related data is stored in `mosip_idmap` DB.
-3. Partner management service retrieves online verification partners to issue credentials.
-4. Audit logs are logged into Audit Manager.
-5. Auth Adapter integrates with KeyCloak for authentication.
-6. WebSub publish events related to VID updation.
-7. Kernel ID generator generates VID.
-8. Identity service checks the status of UIN to create VID.
+2. The credential request generator issues credentials for new/updated UIN data.&#x20;
+3. All VID related data is stored in `mosip_idmap` DB.
+4. Partner management service retrieves online verification partners to issue credentials.
+5. Audit logs are logged into Audit Manager.
+6. The Auth Adapter integrates with KeyCloak for authentication.
+7. WebSub publishes events related to VID updation.
+8. The kernel ID generator generates VID.
+9. The identity service checks the status of UIN to create a VID.
 
 ## Credential service
 
@@ -94,11 +95,11 @@ This service creates request for credential issuance.
 ![](<../../.gitbook/assets/credential-request-generator (1).png>)
 
 1. Key Manager encrypts/decrypts data.
-2. Auth Adapter integrates with KeyCloak for authentication.
+2. The Auth Adapter integrates with KeyCloak for authentication.
 
 ## Credential feeder
 
-This job will feed the existing UIN/ VID identity information to newly deployed IDA instance.
+This job will feed the existing UIN/ VID identity information to the newly deployed IDA instance.
 
 ## Salt generator
 
@@ -107,7 +108,7 @@ This is a one-time job that populates salts that are used to hash and encrypt da
 * `uin_hash_salt` in `mosip_idrepo` DB.
 * `uin_encrypt_salt` in `mosip_idmap` DB.
 
-In MOSIP sandbox, the job is run [here](https://github.com/mosip/mosip-infra/blob/release-1.2.0/deployment/v3/mosip/idrepo/install.sh).
+In the MOSIP sandbox, the job is run [here](https://github.com/mosip/mosip-infra/blob/release-1.2.0/deployment/v3/mosip/idrepo/install.sh).
 
 ## Developer Guide
 
@@ -116,10 +117,11 @@ To know more about the developer setups, read:
 1. [Credential Request Generator Service Developers Guide](https://docs.mosip.io/1.2.0/modules/id-repository/id-repository-credential-request-generator-service-developer-guide)
 2. [Identity Service Developers Guide](https://docs.mosip.io/1.2.0/modules/id-repository/id-repository-identity-service-developer-guide)
 3. [VID Service Developers Guide](https://docs.mosip.io/1.2.0/modules/id-repository/id-repository-vid-service-developer-guide)
+4. [Handle Implementation Guide](https://docs.mosip.io/1.2.0/modules/id-repository/custom-handle)
 
 ## API
 
-Refer [API Documentation](https://mosip.github.io/documentation/1.2.0/1.2.0.html).
+Refer to [API Documentation](https://mosip.github.io/documentation/1.2.0/1.2.0.html).
 
 ## Source code
 
