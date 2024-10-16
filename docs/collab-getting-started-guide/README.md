@@ -76,8 +76,8 @@ Why wait to register at the centers?
 
 #### eSignet - Simple and Secure Online Authentication:
 
-* Signing-in online shouldn't be a hassle now. e-Signet simplifies online authentication by allowing users to identify themselves and share profile information with just a few clicks. Secure and user-friendly, e-signet streamlines online interactions and protects user privacy. To learn more about e-signet, click [here](https://docs.esignet.io/).
-* For the end-to-end process of how to run e-Signet in our Collab environment, click [here](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-esignet-setup-guide).
+* Signing-in online shouldn't be a hassle now. eSignet simplifies online authentication by allowing users to identify themselves and share profile information with just a few clicks. Secure and user-friendly, eSignet streamlines online interactions and protects user privacy. To learn more about eSignet, click [here](https://docs.esignet.io/).
+* For the end-to-end process of how to run eSignet in our Collab environment, click [here](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-esignet-setup-guide).
 * For details on how to use the application, refer to our [end user guide](https://docs.esignet.io/esignet-end-user-guide).
 
 ## Services
