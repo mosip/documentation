@@ -117,7 +117,7 @@ To know more about the developer setups, read:
 1. [Credential Request Generator Service Developers Guide](https://docs.mosip.io/1.2.0/modules/id-repository/id-repository-credential-request-generator-service-developer-guide)
 2. [Identity Service Developers Guide](https://docs.mosip.io/1.2.0/modules/id-repository/id-repository-identity-service-developer-guide)
 3. [VID Service Developers Guide](https://docs.mosip.io/1.2.0/modules/id-repository/id-repository-vid-service-developer-guide)
-4. [Handle Implementation Guide](https://docs.mosip.io/1.2.0/modules/id-repository/custom-handle)
+4. [Custom Handle Implementation Guide](https://docs.mosip.io/1.2.0/modules/id-repository/custom-handle)
 
 ## API
 
@@ -125,4 +125,4 @@ Refer to [API Documentation](https://mosip.github.io/documentation/1.2.0/1.2.0.h
 
 ## Source code
 
-[Github repo](https://github.com/mosip/id-repository/tree/release-1.2.0).
+[Github repo](https://github.com/mosip/id-repository/tree/release-1.2.0)
