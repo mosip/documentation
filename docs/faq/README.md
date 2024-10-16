@@ -133,13 +133,13 @@ You have to change _**acr-amr-mapping.json**_ in the _**mosip-config**_ repo; de
 }
 ```
 
-For details on ISO 639-1 and ISO 639-2, please follow the [documentation here](https://www.loc.gov/standards/iso639-2/php/English\_list.php).
+For details on ISO 639-1 and ISO 639-2, please follow the [documentation here](https://www.loc.gov/standards/iso639-2/php/English\_list.p).
 
 **Adding a new language in the production setup**
 
 Similar to the local mentioned above, you need to create a new language JSON file (as per ISO 639-1 and then update language configurations in _the **default.json**_ file.
 
-Apart from that, you have to make the above changes in the `develop` branch of your [_**artifactory-ref-impl**_](https://github.com/mosip/artifactory-ref-impl/tree/develop) repository. To do so,
+Apart from that, you have to make the above changes in the `develop` branch of your [_**artifactory-ref-impl**_](https://github.com/mosip/artifactory-ref-impl/tree/develop) repository. In order to do so,
 
 1. Clone the repo and switch to the `develop` branch.
 2. Go to the folder location:\
@@ -265,40 +265,5 @@ To know more, click [here](../integration/relying-party.md).
 The VC Issuance plugin interface provides methods to return Verifiable Credentials (VCs) of an individual (here, the holder of the credential) when authorized. Today, this interface supports methods for returning linked data-proof VC (as JSON-LD) and VC as JWT.
 
 To know more, click [here](../integration/vc-issuance.md).
-
-</details>
-
-<details>
-
-<summary>How to configure Knowledge Based Identification Form?</summary>
-
-#### Configuration required to display KBI form.
-
-```
-#individual-id-field is set with field id which should be considered as an individual ID in the authenticate request.
-#form-details holds the list of field details like below:
-#id -> unique field Id, type -> holds datatype, format -> only supported for date fields, regex -> pattern to validate the input value, maxLength -> number of allowed characters
-#Example: mosip.esignet.authenticator.default.auth-factor.kba.field-details={{'id': '${mosip.esignet.authenticator.default.auth-factor.kba.individual-id-field}', 'type':'text', 'format':'', 'maxLength': 50, 'regex': '^\s*[+-]?(\d+|\d*\.\d+|\d+\.\d*)([Ee][+-]?\d*)?\s*$'},{'id':'fullName', 'type':'text', 'format':'', 'maxLength': 50, 'regex': '^[A-Za-z\s]{1,}[\.]{0,1}[A-Za-z\s]{0,}$'},{'id':'dob', 'type':'date', 'format':'dd/mm/yyyy'}}
-mosip.esignet.authenticator.default.auth-factor.kba.field-details={{'id':'policyNumber', 'type':'text', 'format':'', 'maxLength': 50, 'regex': '^\s*[+-]?(\d+|\d*\.\d+|\d+\.\d*)([Ee][+-]?\d*)?\s*$'},{'id':'fullName', 'type':'text', 'format':'', 'maxLength': 50, 'regex': '\S*'},{"id":"dob", "type":"date", "format":"dd/mm/yyyy"}} 
-mosip.esignet.authenticator.default.auth-factor.kba.individual-id-field=policyNumber
-```
-
-
-
-</details>
-
-<details>
-
-<summary>How to configure KBI form in eSignet UI</summary>
-
-KBI form can be configured based on the fields required to identify a user via Knowledge based identification, please refer to the use case [example](https://docs.esignet.io/end-user-guide/knowledge-based-authentication) here and please find the below properties to be changed to reflect the fields in the KBI form on eSignet UI.
-
-```
-Update the below sub properties inside mosip.esignet.ui.config.key-values property
-'auth.factor.kba.individual-id-field' : '${mosip.esignet.authenticator.sunbird-rc.auth-factor.kba.individual-id-field}',\
-'auth.factor.kba.field-details':${mosip.esignet.authenticator.sunbird-rc.auth-factor.kba.field-details}
-```
-
-To know more about how to configure the KBI Form in eSignet please refer [here](https://github.com/mosip/digital-credential-plugins/blob/master/sunbird-rc-esignet-integration-impl/README.md)
 
 </details>

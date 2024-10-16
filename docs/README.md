@@ -2,7 +2,7 @@
 
 In today's era of digital transformation, there has been a global shift towards moving most services online. To facilitate personalized access to these online services, a secure and trusted digital identity is crucial. **eSignet** strives to provide a user-friendly and effective method for individuals to authenticate themselves and utilize online services while also having the option to share their profile information. Moreover, eSignet supports multiple modes of identity verification to ensure inclusivity and broaden access, thereby reducing potential digital barriers.
 
-Additionally, eSignet offers a seamless and straightforward solution for incorporating an existing trusted identity database into the digital realm. By enabling digital identities and providing identity verification and service access, e-Signet delivers a sophisticated and user-friendly experience.
+Additionally, eSignet offers a seamless and straightforward solution for incorporating an existing trusted identity database into the digital realm. By enabling digital identities and providing identity verification and service access, eSignet delivers a sophisticated and user-friendly experience.
 
 {% hint style="info" %}
 There is a need to expand the range of verification methods to be more inclusive. The current approaches to verification do not adequately address privacy concerns. We are continually exploring ways to address the digital divide while also prioritizing privacy. Here is a short introduction to [identity verification](glossary.md#identity-verification) methods. Additionally, read through [Inji](https://docs.mosip.io/inji/) to gain insight into contemporary approaches to identity verification through the use of verifiable credentials for decentralized verification.

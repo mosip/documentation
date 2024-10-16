@@ -26,14 +26,14 @@ _Note_: Please use 111111 as the OTP, for any OTP-based feature in the Collab en
 
 **Mock biometrics setup**
 
-* To enable biometrics-based login, ensure that your machine is running Windows.
-* Make sure you have Java 11 or a higher version installed on your computer.
-* Download the `collab-mock-mds-auth.zip` file from the link provided [here](https://drive.google.com/drive/folders/14q7E5pZtfj0eimF3JGzlVfU4eV-MRPCQ).
-* Unzip the downloaded file to extract its content.
-* Locate the `run_auth.bat` file within the extracted folder.
-* Double-click on the `run_auth.bat` file to start the authentication MDS.
+   * To enable biometrics-based login, ensure that your machine is running Windows.
+   * Make sure you have Java 11 or a higher version installed on your computer.
+   * Download the `collab-mock-mds-auth.zip` file from the link provided [here](https://drive.google.com/drive/folders/14q7E5pZtfj0eimF3JGzlVfU4eV-MRPCQ).
+   * Unzip the downloaded file to extract its content.
+   * Locate the `run_auth.bat` file within the extracted folder.
+   * Double-click on the `run_auth.bat` file to start the authentication MDS.
 
-Experience the process of logging in using biometrics, by following the instructions provided [here](../end-user-guide/login-with-biometrics/).
+Experience the process of logging in using biometrics, by following the instructions provided [here](https://docs.esignet.io/esignet-end-user-guide/login-with-biometrics).
 
 _Note_: Biometric-based login with Mock MDS is currently unavailable in the Collab environment. Stay tuned to MOSIP [Community](https://community.mosip.io/) for updates!
 
@@ -56,7 +56,8 @@ Once you are done with the above steps, you can use the Inji wallet to log into 
 * Watch [Running eSignet Locally](https://youtu.be/nmIZl6Tmt68?si=odKFq3UUQrV1kb6H) - A quick comprehensive guide for local implementation.
 * Click [here](https://docs.esignet.io/) for detailed information about eSignet.
 
-> By adhering to these guidelines and making use of the available resources, you will be able to smoothly experience the different methods of login and authentication offered by eSignet. This will guarantee secure and efficient access to the services you require.
+> By adhering to these guidelines and making use of the available resources, you will be able to smoothly experience the different methods of login and authentication offered by eSignet. 
+> This will guarantee secure and efficient access to the services you require.
 
 ### Get in Touch
 
@@ -66,3 +67,6 @@ If you require any assistance or encounter any issues during the testing and int
 * Provide a detailed description about the support you require or provide detailed information about the issue you have encountered, including steps to reproduce, error messages, logs and any other relevant details.
 
 _Thank you. Wishing you a pleasant experience!_
+
+
+

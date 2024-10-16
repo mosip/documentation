@@ -1,6 +1,6 @@
 # v1.3.0
 
-**Release Number**: v.1.3.0
+**Release Name**: v.1.3.0
 
 **Release Date**: 14th March, 2024
 
@@ -12,7 +12,7 @@ The 1.3.0 version of eSignet focuses on launching new features in authentication
 
 1.  **Password based Authentication**
 
-    We are thrilled to share that eSignet has expanded its authentication capabilities with the introduction of a password-based authentication factor which is a robust and reliable authentication factor secure with Captcha.
+    We are thrilled to share that eSignet has expanded its authentication capabilities with the introduction of password-based authentication factor which is robust and reliable authentication factor secure with Captcha.
 2.  **Support for Sign-up service**
 
     Users now have the convenience of registering through our Sign-Up Service, seamlessly integrated with the ID repository without complete deployment of MOSIP Identity. In isolation with the Sign-Up Service, efficiently manages user registrations.
