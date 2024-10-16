@@ -4,7 +4,7 @@
 
 **Support:** Developer
 
-**Release Date:** Coming Soon
+**Release Date:** 16th October, 2024
 
 ### Overview
 
@@ -16,7 +16,7 @@ We are pleased to announce the release of Inji Web Version 0.10.0! This release 
 * **Compliance with OpenID4VCI Draft 13**: Full support for the Draft 13 changes of the OpenID4VCI specification, aligning Inji Web with the latest standards for Verifiable Credentials.
 * **Integration with Certify & eSignet**: Streamlined credential issuance through Inji Certify and eSignet authentication, enabling smoother, secure interactions with trusted credential issuers.
 
-#### **Features Covered**
+#### **Features Covered:**
 
 Below are the key features as part of this release:
 
@@ -26,16 +26,19 @@ Below are the key features as part of this release:
   Inji Web now adheres to the latest Draft 13 of the OpenID4VCI spec, making it fully compatible with the most recent standards in credential issuance and verification.
 * **Integration with Certify and eSignet**:
   * **Authentication**: eSignet is integrated for user authentication, providing a robust and secure method to authenticate and authorize users in compliance with OpenID4VCI.
-  * **Credential Issuance**: Inji Certify is responsible for issuing credentials in accordance with the new standards, ensuring a smooth issuance process after successful authentication.
+  * **Credential Issuance**: Inji Certify is responsible for issuing credentials by the new standards, ensuring a smooth issuance process after successful authentication.
 
-### **Repositories Released**
+### **Repositories Released:**
 
-| **Repositories** | **Tags Released** |
-| ---------------- | ----------------- |
-| inji-web         |  0.10.x           |
-| mimoto           | 0.14.x            |
-| inji-config      | 0.3.x             |
-| data share       | 1.3.x             |
+| **Repositories**    | **Tags Released**                                                                    |
+| ------------------- | ------------------------------------------------------------------------------------ |
+| inji-web            | [**v0.10.0**](https://github.com/mosip/inji-web/tree/v0.10.0)                        |
+| mimoto              | [**v0.14.0**](https://github.com/mosip/mimoto/tree/v0.14.0)                          |
+| inji-config         | [**v0.3.0**](https://github.com/mosip/inji-config/tree/v0.3.0)                       |
+| durian(data share)  | [**v1.3.0-beta.1**](https://github.com/mosip/durian/tree/v1.3.0-beta.1)              |
+| mosip-openid-bridge | [**v1.3.0-beta.1**](https://github.com/mosip/mosip-openid-bridge/tree/v1.3.0-beta.1) |
+| khazana             | [**v1.3.0-beta.1**](https://github.com/mosip/khazana/tree/v1.3.0-beta.1)             |
+| bio-utils           | [**v1.3.0-beta.1**](https://github.com/mosip/bio-utils/tree/v1.3.0-beta.1)           |
 
 ### **Compatible Modules:**
 
@@ -62,10 +65,10 @@ Below is the list of **known** issues. To read in detail click [**here**](https:
 | [**INJIWEB-594**](https://mosip.atlassian.net/browse/INJIWEB-594) | Injiweb: If the browser zoom-in increases then the some of options are not visible                                                              |
 | [**INJIWEB-593**](https://mosip.atlassian.net/browse/INJIWEB-593) | INJIWEB: After navigating to the Issuer type page, the close/back button is missing in the eSignet page                                         |
 | [**INJIWEB-590**](https://mosip.atlassian.net/browse/INJIWEB-590) | Injiweb: credential strings are not properly displayed for different dimensions under mosip issuer                                              |
-| [**INJIWEB-570**](https://mosip.atlassian.net/browse/INJIWEB-570) | Injiweb: If the filed values are not provided during policy creation, in downloaded VC getting expressions directly                             |
-| [**INJIWEB-568**](https://mosip.atlassian.net/browse/INJIWEB-568) | Injiweb: Observed access violation when "IBM Equal Access Accessibility Checker" executed on inji-web portal                                    |
+| [**INJIWEB-570**](https://mosip.atlassian.net/browse/INJIWEB-570) | Inji-web: If the filed values are not provided during policy creation, in downloaded VC getting expressions directly                            |
+| [**INJIWEB-568**](https://mosip.atlassian.net/browse/INJIWEB-568) | Inji-web: Observed access violation when "IBM Equal Access Accessibility Checker" executed on inji-web portal                                   |
 | [**INJIWEB-290**](https://mosip.atlassian.net/browse/INJIWEB-290) | Inji-web: The QR code is not working on the VC card                                                                                             |
-| [**INJIWEB-180**](https://mosip.atlassian.net/browse/INJIWEB-180) | Inji-web: : Not getting proper error message when the website is down                                                                           |
+| [**INJIWEB-180**](https://mosip.atlassian.net/browse/INJIWEB-180) | Inji-web: Not getting proper error message when the website is down                                                                             |
 
 ### Documentation
 

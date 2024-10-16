@@ -3,7 +3,7 @@
 ## Version: 0.10.0
 
 * Name: Inji Web 0.10.0
-* Date: Coming Soon
+* Date: 16th October, 2024
 * [Release Notes](version-0.10.0/)
 
 ## Version: 0.9.0
