@@ -13,7 +13,7 @@ The sequence diagram below illustrates the steps involved in the authorization c
 * The `private-key-jwt` is supported to enforce better security.
 
 {% hint style="info" %}
-To gain a better understanding of the VC Issuance flow in eSignet, please refer to the [activity diagram ](../vc-issuance.md#appendix-vc-issuance-flow)provided in the [VC Issuance Plugin](../vc-issuance.md) document.
+To gain a better understanding of the VC Issuance flow in eSignet, please refer to the [activity diagram ](../vc-issuance.md#appendix-vc-issuance)provided in the [VC Issuance Plugin](../vc-issuance.md) document.
 {% endhint %}
 
 Below are the steps for on-boarding a digital wallet as an OAuth Client and using the eSignet APIs to download verifiable credentials.

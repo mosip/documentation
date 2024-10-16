@@ -39,7 +39,7 @@ Verification is performed on various configurations as mentioned below:
 * Forgot Password
 * Login with OTP
 * Login with Biometrics
-* Login with Inji Mobile App
+* Login with Inji Wallet App
 * SubirdRC Integration (Using Inji App)
 * KBA Downloading and Sharing
 * KBA Pinning and Unpinning

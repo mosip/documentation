@@ -1,6 +1,6 @@
 # Audit Plugin
 
-Audit plugin interface provides two methods to audit any action in eSignet. An instance of this audit plugin is injected into all the services of eSignet, and almost all the events are audited using this plugin.
+The audit plugin interface provides two methods to audit any action in eSignet. An instance of this audit plugin is injected into all the services of eSignet, and almost all the events are audited using this plugin.
 
 Below is the eSignet audit interface,
 
@@ -8,7 +8,7 @@ Below is the eSignet audit interface,
 public interface AuditPlugin {
 
     /**
-     + Plugin method to audit all the actions in e-Signet service.
+     + Plugin method to audit all the actions in the eSignet service.
      +
      +  @param action Action to audit @{@link Action}
      +  @param actionStatus Action status to audit @{@link ActionStatus}
@@ -18,7 +18,7 @@ public interface AuditPlugin {
     void logAudit(Action action, ActionStatus status, AuditDTO audit, Throwable t);
 
     /**
-    + Plugin method to audit all the actions in e-Signet service.
+    + Plugin method to audit all the actions in the eSignet service.
     +
     +  @param username Session username for audit
     +  @param action Action to audit @{@link Action}

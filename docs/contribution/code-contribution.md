@@ -2,7 +2,7 @@
 
 ## Overview
 
-The recommended Github workflow here is for developers to submit code and documentation contributions to e-Signet open-source repositories.
+The below recommended Github workflow allows developers to submit code and documentation contributions to eSignet open-source repositories.
 
 ### Repositories
 
@@ -47,7 +47,7 @@ The recommended Github workflow here is for developers to submit code and docume
 $ git fetch upstream
 ```
 
-3\. On your local repo, switch to a branch if you are working on an older release (like the 1.0.0 branch) or stay in `main/develop` branch.&#x20;
+3\. On your local repo, switch to a branch if you are working on an older release (like the 1.0.0 branch) or stay in `main/develop` branch.
 
 ```
 $ git checkout upstream/<branch> 
@@ -76,10 +76,10 @@ You should do this quite often to ensure you are up to date.
 6\. Now feel free to make the change in the code or documentation. Reach out to [our community](https://community.mosip.io) for any queries. Once done with the work, commit your changes by referring to the Issue ID in the commit message. Eg:
 
 ```
-$ git commit -m "[#1234] Adding new upload feature in e-Signet service"
+$ git commit -m "[#1234] Adding new upload feature in eSignet service"
 ```
 
-7\. Once again ensure that you are up-to-date with the upstream repo as it may have moved forward.
+7\. Once again, ensure you are up-to-date with the upstream repo as it may have moved forward.
 
 ```
 $ git pull upstream <branch> 

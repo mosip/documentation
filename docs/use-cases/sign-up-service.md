@@ -1,16 +1,16 @@
 # Sign Up Service
 
-**eSignet** serves as an authentication layer for relying parties, offering various authentication methods aligned with functional identity and stored credentials. Integration with the ID Authentication service and ID repository under MOSIP allows the migration of existing accounts or creation of new user accounts and credentials.
+eSignet serves as an authentication layer for relying parties, offering various authentication methods aligned with functional identity and stored credentials. Integration with the ID Authentication service and ID repository under MOSIP allows the migration of existing accounts or the creation of new user accounts and credentials.
 
 ## Sign Up Service
 
-* Generates ID object based on the user inputs.
+* Generates ID objects based on the user inputs.
 * Shares ID object with ID repository for account creation.
 
 ## ID Repository
 
 * Maintains the [identity object schema](https://docs.mosip.io/1.2.0/id-lifecycle-management/id-schema).
-* Validates declared Handle and Password object.
+* Validates declared Handle and Password objects.
 * For more details, visit [ID Repository](https://docs.mosip.io/1.2.0/modules/id-repository).
 
 ## ID Authentication Service

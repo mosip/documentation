@@ -18,7 +18,7 @@ These are very basic configuration properties of the eSignet service. Most of th
   `mosip.esignet.link-code-expire-in-secs=600`
 * Regex to validate the input client ID\
   `mosip.esignet.supported-id-regex=\\S*`
-* e-Signet uses logback for logging. The **log level** of the application can be easily changed with this property.\
+* eSignet uses logback for logging. The **log level** of the application can be easily changed with this property.\
   `logging.level.io.mosip.esignet=INFO`
 
 ### OAuth and OpenID
@@ -42,15 +42,15 @@ To know more about the claims supported by eSignet, go through our [claims docum
 * Property to define the list of **supported credential scopes** `mosip.esignet.supported.credential.scopes={'sample_vc_ldp'}`
 * **Client nonce** used in VCI flow **expiry** in seconds\
   `mosip.esignet.cnonce-expire-seconds=20`
-* **OIDC** **VCI** configuration **well known** **endpoint** is based on the below configuration property. This holds the map which is exactly the same as the [openid-credential-issuer](https://openid.github.io/OpenID4VCI/openid-4-verifiable-credential-issuance-wg-draft.html#name-credential-issuer-metadata) well-known spec.\
+* **OIDC** **VCI** configuration **well known** **endpoint** is based on the below configuration property. This holds the map which is the same as the [openid-credential-issuer](https://openid.github.io/OpenID4VCI/openid-4-verifiable-credential-issuance-wg-draft.html#name-credential-issuer-metadata) well-known spec.\
   `mosip.esignet.vci.key-values`
 
 ## Cache
 
-eSignet uses a cache to store all the details about UI transactions which are identified with a transactionId. eSignet uses the spring-cache abstraction library. Hence e-Signet could be connected with any spring-cache abstraction supported cache server.
+eSignet uses a cache to store all the details about UI transactions that are identified with a transaction ID. eSignet uses the spring-cache abstraction library. Hence eSignet could be connected with any spring-cache abstraction supported cache server.
 
 * By default, it is set to simple to use springs **default in-memory cache** `spring.cache.type=simple`
-* e-Signet transitions the transaction details from one cache to another cache based on the transaction stage. Here is the list of **caches maintained in eSignet**\
+* eSignet transitions the transaction details from one cache to another cache based on the transaction stage. Here is the list of **caches maintained in eSignet**\
   `mosip.esignet.cache.names=clientdetails,preauth,authenticated,authcodegenerated,userinfo,linkcodegenerated,linked,linkedcode,linkedauth,consented,authtokens,bindingtransaction,vcissuance`
 * Property to set the **max size of cache**\
   `mosip.esignet.cache.size`

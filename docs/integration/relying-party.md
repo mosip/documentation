@@ -69,9 +69,9 @@ Setup your development environment. Once done you need to follow the following s
 * Invoking eSignet authorize URL
   * Add a button on your login screen. The button might have standards in terms of logo, colour, and size. The ID provider usually provides these guidelines.
 
-Here is the[ UI storybook](https://mosip.github.io/mosip-plugins/?path=/docs/javascript-sign-in-with-esignet--docs) deployed by eSignet which can help relying party developers build the buttons for their website.
+Here is the[ UI storybook](https://mosip.github.io/mosip-sdk/?path=/docs/javascript-sign-in-with-esignet--docs) deployed by eSignet which can help relying party developers build the buttons for their website.
 
-*   The button upon click should get a unique state (a random value) & nonce (a random value) from the server and redirect to the "/authorize" endpoint of the ID provider. A sample URL is listed here. The details of what is supported are listed on the [.well-known](../build-and-deploy/configuration/.well-known/openid-configuration.md) file in the respective eSignet provider.
+*   The button upon click should get a unique state (a random value) & nonce (a random value) from the server and redirect to the "/authorize" endpoint of the ID provider. A sample URL is listed here. The details of what is supported are listed on the [.well-known](../build-and-deploy/configuration/.well-known/) file in the respective eSignet provider.
 
     * Sample /authorize Request:
 
