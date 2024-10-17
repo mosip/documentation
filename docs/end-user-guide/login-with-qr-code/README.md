@@ -9,15 +9,15 @@
 
 1\. Resident launches the relying party's portal and clicks on _**Sign In with eSignet**_.
 
-![](\_images/new1-healthservices.png)
+<figure><img src="../../.gitbook/assets/Health services home page otp.png" alt=""><figcaption><p>Health Portal Home Page</p></figcaption></figure>
 
 2\. Resident selects the _**Login with Inji Mobile App**_ option.
 
-![](\_images/new2-esignetlogin.png)
+<figure><img src="../../.gitbook/assets/login with Inji.png" alt=""><figcaption><p>Login with Inji</p></figcaption></figure>
 
 3. Now, the resident can scan the QR code displayed on the portal using Inji (on their mobile device).
 
-![](\_images/new3-esignetlogin-inji.png)
+<figure><img src="../../.gitbook/assets/Inji scanner.png" alt=""><figcaption><p>Inji QR code</p></figcaption></figure>
 
 As seen below, the authentication is in progress.
 
@@ -35,7 +35,7 @@ As seen below, the authentication is in progress.
 
 ![](\_images/6-consent.png)
 
-7. The resident is able to log into the relying party portal and view their details on the user profile page.
+7. The resident can log into the relying party portal and view their details on the user profile page.
 
 ![](\_images/7.final.png)
 

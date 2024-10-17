@@ -8,7 +8,7 @@ The resident is registered with a username and password using eSignet's Signup p
 
 1\. On the portal, the resident clicks on the button **Sign In with eSignet**.
 
-<figure><img src="../../.gitbook/assets/health services (1).png" alt=""><figcaption><p>Sign in to the Health portal</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Health services home page.png" alt=""><figcaption><p>Sign in with eSignet page</p></figcaption></figure>
 
 The login screen appears, and the resident is displayed with the options they can choose for login.
 
@@ -28,8 +28,8 @@ The password-based authentication is secured with a captcha.
 {% hint style="info" %}
 Note:
 
-* Login with password form also has link **Sign Up With Unified Login** to navigate to the Signup portal, if the resident is still not registered.
-* **Forgot password** link is also available for resident to navigate to signup portal to reset the password.
+* The login with Password form also has a link to **Sign Up With Unified Login** to navigate to the Signup portal, if the resident is still not registered.
+* **Forgot password** link is also available for resident to navigate to the signup portal to reset the password.
 * Resident can resume back login after successful registration as well as after successful reset of password.
 {% endhint %}
 
