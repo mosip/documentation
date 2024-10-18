@@ -53,7 +53,7 @@ The following table outlines the tested and certified compatibility of Inji Veri
 | Module          | Version                                                         |
 | --------------- | --------------------------------------------------------------- |
 | **Inji Wallet** | [**0.13.1**](https://github.com/mosip/inji-wallet/tree/v0.13.1) |
-| **Inji Web**    | 0.10.0                                                          |
+| **Inji Web**    | [**0.10.0**](https://github.com/mosip/inji-web/tree/v0.10.0)    |
 
 ### **Known Issues**
 
