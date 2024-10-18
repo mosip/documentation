@@ -24,6 +24,7 @@
   * [End User Guide](inji-wallet/functional-overview/end-user-guide.md)
 * [Technical Overview](inji-wallet/technical-overview/README.md)
   * [Architecture](inji-wallet/technical-overview/architecture.md)
+  * [Technical Stack](inji-wallet/technical-overview/technical-stack.md)
   * [Components](inji-wallet/technical-overview/components.md)
   * [Integration Guides](inji-wallet/technical-overview/integration-guide/README.md)
     * [Face Match](inji-wallet/technical-overview/integration-guide/face-match.md)
