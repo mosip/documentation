@@ -2,12 +2,12 @@
 
 ### Repositories
 
-{% embed url="https://github.com/mosip/inji" %}
+{% embed url="https://github.com/mosip/inji-wallet" %}
 
 ### Prerequisite
 
 * [Gradle](https://gradle.org/install/)
-* [Java 8](https://www.oracle.com/ph/java/technologies/javase/javase8-archive-downloads.html)
+* [Java 17](https://www.oracle.com/ph/java/technologies/downloads/#java17)
 * [Expo](https://docs.expo.dev/home/get-started/installation/)
 * [Android SDK](https://developer.android.com/)
 * [Node](https://nodejs.org/en/download)
@@ -51,9 +51,9 @@ Configure Gradle & Java
 ```
 curl -s "https://get.sdkman.io" | bash
 
-sdk install gradle 8.0.2
+sdk install gradle 7.5.1
 
-sdk install java 11.0.18-amzn
+sdk install java 17.0.13-amzn
 ```
 
 #### Step 4:
@@ -139,7 +139,7 @@ curl -s "<https://get.sdkman.io>" | bash
 * Use the command below in Git terminal.
 
 ```
-sdk install gradle 8.5
+sdk install gradle 7.5.1
 ```
 
 * To check the installed gradle version.
@@ -148,7 +148,7 @@ sdk install gradle 8.5
 
 #### Step 4:
 
-* Install Java JDK, refer [here](https://www.oracle.com/ph/java/technologies/javase/javase8-archive-downloads.html).
+* Install Java JDK, refer [here](https://www.oracle.com/ph/java/technologies/downloads/#java17).
 
 ```
 [!TIP]
