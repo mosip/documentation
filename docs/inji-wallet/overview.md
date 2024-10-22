@@ -1,35 +1,37 @@
 # Overview
 
-**Inji Wallet** is a mobile application specifically created to streamline all types of identification and credentials into one digital wallet. This innovative solution allows for identity verification through a straightforward selfie.
+The **Inji Mobile application** is designed to securely store all types of digital credentials, from national IDs to certificates, in one easy-to-use mobile wallet. It offers a simple way to manage and share trusted data through Verifiable Credentials (VCs), making it portable, convenient, secure, and private for users.
 
-It offers a secure, trustworthy, and dependable mobile Verifiable Credentials wallet designed to fulfil the following functions:
+Key features of Inji Mobile include secure storage, seamless sharing, and offline verification capabilities including face authentication, making it an essential tool for users managing digital credentials.
 
-* Download and **store Verifiable Credentials (VC)** securely within the wallet. Also, serves as a secure **user wallet** for storing and managing ID credentials. Additionally, it streamlines the process of **obtaining authenticated ID credentials**.
-* **Share Verifiable Credentials** with the relying parties without requiring an internet connection, utilizing Bluetooth Low Energy (BLE). Supports **decentralized ID verification** through offline sharing.
-* Conduct **offline face authentication** against the stored VCs to verify the user's presence while sharing the Vcs to the 'Service Providers'.
-* Enable users to **log in to online portals** of relying parties by scanning a QR code, facilitating seamless access to their services.Facilitates seamless access to multiple websites and services using the same login information, enhancing convenience and security.
-* Allows users to have full control over the data shared with service providers, ensuring **privacy protection**.
-* **Simplifies the registration process** for government benefits, such as pensions or healthcare services, and enhances efficiency in situations where users need to provide their identification credentials. For example, it enables the presentation of VCs during airport security checks.
+#### **Key Features and Capabilities:**
 
-The application is constructed using the [React Native framework](https://reactnative.dev/), ensuring compatibility with both Android and iOS mobile operating systems. It leverages [Xstate state machines](https://xstate.js.org/docs/) for efficient application state management. The digital credentials produced by the mobile app adhere to the [Verifiable Credentials (VC) Data Model](https://www.w3.org/TR/vc-data-model/).
+* **Secure Download and Storage of Verifiable Credentials (VCs):** The Inji Mobile allows users to download, store, and manage their Verifiable Credentials securely. This makes it a dependable mobile solution for keeping identity credentials, ensuring users have access to their digital IDs anytime, anywhere.
+* **Seamless Offline Credential Sharing:** Users can share their credentials with service providers without requiring internet connectivity by utilizing **Bluetooth Low Energy (BLE)** technology. This offline sharing supports decentralized ID verification, making it possible to share VCs even in areas with limited to no internet connectivity, ensuring the user’s credentials are always accessible. This offline capability makes it ideal for users in rural or low-connectivity areas.
+* **Offline Face Authentication for Secure Transactions:** The app offers offline face authentication, verifying the user’s presence during credential sharing with service providers. This feature adds an additional layer of security when sharing credentials, ensuring the identity of the user is authenticated in real-time.
+* **QR Code-Based Access to Online Services:** The wallet enables users to log in to service provider portals by scanning QR codes, simplifying access to various services. It also supports **single sign-on (SSO)** capabilities, allowing users to access multiple services with the same credentials securely.
+* **Privacy and Control Over Data Shared:** Inji Mobile puts users in control of their data, allowing them to decide what information is shared with service providers. This consent-driven approach ensures that users' privacy is protected throughout all interactions.
+* **Enhanced Efficiency for Government Services:** Inji Mobile streamlines the registration process for government benefits, such as pensions and healthcare services. It also facilitates the use of VCs during travel and at security checkpoints, such as airports, ensuring that digital IDs are always readily accessible.
+* **Robust Security with Verifiable Credentials:** The digital credentials managed within Inji Mobile adhere to the **Verifiable Credentials (VC) Data Model**, ensuring the adherence to global standards for security and authenticity. Before downloading to the device, each credential is authenticated by the issuer's digital signature, and a unique **HASH** is generated to verify the integrity of the credential at any time.
 
-**How does Inji Wallet work?**
+#### **How Inji Mobile Works:**
 
-* Inji Wallet users can obtain their Verifiable credential by utilizing their unique ID (e.g., UIN or VID in case of a National ID issued by the government) or using the card details/information they possess (KBI method).
-* Users are required to authenticate their request through an OTP sent to their registered mobile number or email address.
-* Only upon successful validation, the Verifiable credential will be downloaded and securely stored within the app.
-* Once a Verifiable credential is downloaded, users can share it with relying parties via Bluetooth, using the [BLE protocol](https://tlodderstedt.github.io/openid-for-verifiable-presentations-offline-1\_0-00.html).
-* To further authenticate the digital VC, users can opt for offline face authentication during transactions.
-* Inji Wallet also offers integration with eSignet, allowing residents to log in to relying party portals by scanning a QR code.
-* Users have control over the information shared with the relying party through user consent.
-* Inji Wallet is compatible with [**OpenID**](https://openid.net/developers/how-connect-works/) protocol and has the capability to onboard a variety of Identity Providers (IdP). This, in turn, provides users with multiple options for Verifiable Credential (VC) issuers.
-* Inji Wallet ensures the authenticity of digital signatures provided by the issuer for each ID before downloading it to the local device. Subsequently, it generates a HASH for each digital ID stored, utilizing it to verify the integrity of the ID before displaying it within the app at any time.
+* Inji Mobile allows users to securely obtain and manage their verifiable credentials through a simple process. Users can download their credentials by using their unique ID (such as UIN or VID for a government-issued National ID) or the card details they already have (via the KBI method).
+* To validate their identity, users authenticate their request with a one-time password (OTP) sent to their registered mobile number or email.
+* Once validated, the verifiable credential is securely downloaded and stored in the app.
+* These credentials can then be shared with relying parties via Bluetooth, using the [**BLE protocol**](https://tlodderstedt.github.io/openid-for-verifiable-presentations-offline-1\_0-00.html).
+* For added security, users have the option to authenticate their credentials through offline face verification during transactions.
+* Inji Mobile also integrates with [**eSignet**](https://docs.esignet.io/versions/v1.2.0), enabling users to log in to service provider portals by simply scanning a QR code.
+* Users maintain full control over what information is shared, through the consent mechanism that comes along.
+* Inji Mobile is compatible with the [**OpenID**](https://openid.net/developers/how-connect-works/) protocol, offering a wide range of Identity Providers (IdP) for users to select from when downloading their verifiable credentials.
+* Inji Mobile ensures that the digital signatures of the issuer are verified before the credential is stored, and it generates a unique HASH for each ID to confirm its integrity before displaying it in the app.
 
-Moreover, Inji Wallet serves individuals in remote locations with limited network accessibility. The credentials stored within the Inji Wallet app only require a one-time download, allowing the app to verify both online and offline IDs at any given moment, eliminating the need for network connectivity.
+#### **Technology and Integration:**
 
-#### Backend Systems
+* The app leverages [**Mimoto APIs**](https://mosip.stoplight.io/docs/mimoto) for generating, downloading and activating Verifiable Credentials (VCs).
+* Additionally, it utilizes [**eSignet APIs**](https://mosip.stoplight.io/docs/identity-provider/jlmszj6dlxigw-e-signet) to enable seamless online login for users.\
 
-* The app uses [Mimoto APIs](https://mosip.stoplight.io/docs/mimoto) for generating VCs, downloading and activation.
-* It uses [eSignet APIs](https://mosip.stoplight.io/docs/identity-provider/jlmszj6dlxigw-e-signet) for online login.
 
-For any queries or contributions, please engage with us [here](https://community.mosip.io/c/inji/16).
+To summarize, Inji Mobile is an all-in-one mobile solution for securely managing and sharing Verifiable Credentials. By offering both online and offline features, privacy protection, and seamless integration with service providers, it empowers individuals to have complete control over their digital credentials, wherever they are.
+
+**For any queries or contributions, please engage with us** [**here**](https://community.mosip.io/c/inji/16)**.**

@@ -2,6 +2,8 @@
 
 ## Inji Wallet
 
+### Inji Mobile
+
 Q1: Jan24 - Mar24
 
 Q2: Apr24 - Jun24
@@ -38,7 +40,7 @@ Q4: Oct24 - Dec24
 | Q4          | Wallet Login                                                                                                       | <mark style="background-color:orange;">**In-progress**</mark> | [Holder Login](https://mosip.atlassian.net/issues/?jql=project%20%3D%20injimob%20and%20%22Feature%5BLabels%5D%22%20in%20%28WalletLogin%29%20order%20by%20created%20DESC)                                                 | v1.1.0                                                                                                                                                                                                      |
 | Q4          | BBS+ support                                                                                                       | <mark style="background-color:orange;">**In-progress**</mark> | [BBS+](https://mosip.atlassian.net/issues/?jql=project%3D%22Inji%20Mobile%22%20and%20%22Feature%5BLabels%5D%22%20in%20%28%22BBS%2B%22%29%20order%20by%20created%20DESC)                                                  | v1.1.0                                                                                                                                                                                                      |
 
-## Inji Web
+### Inji Web
 
 Q1: Jan24 - Mar24
 
