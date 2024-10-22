@@ -14,6 +14,8 @@ The libraries are as follows:
 6. VCI-client
 7. Telemetry (coming soon)
 
+<figure><img src="../../../.gitbook/assets/InjiWalletComponents.png" alt=""><figcaption></figcaption></figure>
+
 ### **1. Tuvali - Sharing via BLE**
 
 * The transfer of downloaded Verifiable Credential from the Wallet to Verifier is facilitated by a React Native library named Tuvali.
