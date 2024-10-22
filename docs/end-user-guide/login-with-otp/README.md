@@ -25,15 +25,15 @@ The OTP-based authentication is now secured with a captcha.
 
 <figure><img src="../../.gitbook/assets/Enter VID.png" alt=""><figcaption><p>Get OTP Page</p></figcaption></figure>
 
-5\. The resident receives the OTP on the registered channel (either the phone or email).
+5\. The resident receives the OTP on the registered channel (either by phone or email).
 
 6\. The resident needs to enter the valid OTP received and click on the _**Verify**_ button.
 
-<figure><img src="../../.gitbook/assets/Verify OTP.png" alt=""><figcaption><p>Verify OTP</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Verify OTP.png" alt=""><figcaption><p>Verify OTP </p></figcaption></figure>
 
 7\. The resident is then navigated to the Consent page. On this page, the **Essential** and **Voluntary** claims are displayed.
 
-![](\_images/new6-esignetconsent.png)
+<figure><img src="../../.gitbook/assets/voluntary cliams.png" alt=""><figcaption><p>Voluntary Claims page</p></figcaption></figure>
 
 {% hint style="info" %}
 The consent screen is presented solely to the resident if consent has not previously been obtained. Additionally, a timer is incorporated into the Consent screen, allowing the resident to respond within the designated time frame. If the allotted time elapses, residents will be redirected to the relying party user interface.
@@ -41,8 +41,8 @@ The consent screen is presented solely to the resident if consent has not previo
 
 8\. The resident is given the option to choose from a list of Authorized scopes and Voluntary claims. The Essential claims are mandatory and cannot be modified. A **master toggle button** has been added to allow residents to select all the options at once if desired.
 
-![](\_images/new7-esignet-consent-claims.png)
+<figure><img src="../../.gitbook/assets/Claims.png" alt=""><figcaption><p>Vlountary Claims page</p></figcaption></figure>
 
 9\. The resident should now click the _**Allow**_ button. The system navigates the resident to the **User Profile** page which displays all the personal information based on the consent provided.
 
-![](\_images/new8-healthservices-user-profile.png)
+<figure><img src="../../.gitbook/assets/Profile page.png" alt=""><figcaption><p>Profile page</p></figcaption></figure>
