@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Inji
 
 In today's fast-paced, interconnected world, ensuring seamless access to essential services—such as healthcare, financial inclusion, global mobility, and social support—has never been more critical. The need for **trusted identity authentication and secure data exchange** is at the heart of accessing these services. Traditionally, individuals have relied on multiple physical identification documents and certificates to prove their eligibility for various rights and services. However, managing physical documents is cumbersome and exposes individuals to risks of loss, fraud, and inefficiencies. Additionally, millions of people remain excluded from the formal economy due to an outdated reliance on paper-based credentials that cannot be verified digitally.
