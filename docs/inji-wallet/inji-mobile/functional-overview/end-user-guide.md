@@ -1,5 +1,11 @@
 # End User Guide
 
+{% hint style="warning" %}
+**Important**: We are in the process of updating screenshots and content in the End User Guide to reflect our new branding. These updates will be available soon, thank you for your patience!
+{% endhint %}
+
+
+
 This document serves as a concise user guide for end users, providing comprehensive information on the features and functionalities offered by Inji Wallet.
 
 ## Installing Inji Wallet
