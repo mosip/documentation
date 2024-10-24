@@ -7,7 +7,7 @@ Inji Web currently provides support for following credential providers:
 * National ID
 * Insurance
 
-To set up a new provider that can issue VC, it can be accomplished by making a few configuration changes. 
+To set up a new provider that can issue VC, it can be accomplished by making a few configuration changes.
 
 **Steps:**
 
@@ -29,10 +29,9 @@ After adding the provider in configuration, it will be displayed on the UI on `A
 
 3. At present, Inji Wallet supports verification of VCs which has RSA proof type. If VC is issued with any other proof type, verification will fail and VC will not be downloaded. To bypass this VC verification, we need to use issuer id as "Sunbird".
 
-> Refer https://github.com/mosip/mosip-config/blob/collab1/mimoto-issuers-config.json#L71 as reference. Here, credential_issuer should be "Sunbird" and then add all the configuration.
+> Refer https://github.com/mosip/mosip-config/blob/collab1/mimoto-issuers-config.json#L71 as reference. Here, credential\_issuer should be "Sunbird" and then add all the configuration.
 
 4. Token endpoint should also use same issuer id. Refer https://github.com/mosip/mosip-config/blob/collab1/mimoto-issuers-config.json#L143
-   
 5. Onboarding Mimoto as OIDC Client for a new Issuer:
 
 * Mimoto OIDC client is now added as an optional partner, which can be onboarded through partner onboarder as per requirement.

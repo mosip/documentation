@@ -7,5 +7,3 @@ Inji Wallet is a product of the combined efforts of multiple stakeholders. Contr
 For code contributions, refer [here](code-contribution.md).
 
 To engage with us on our community forum, visit [here](https://community.mosip.io/).
-
-

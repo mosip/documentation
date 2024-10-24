@@ -11,7 +11,7 @@ Inji Web's user-friendly interface simplifies the process of downloading your VC
 * **Verification Process**: Verification ensures that only authorized individuals can access and download the requested VCs. This adds an extra layer of security, preventing unauthorized access and ensuring that credentials are obtained only by the rightful owner
 * **Download Credential**: Users can securely download and store their digital VCs in PDF format
 
-_For more detailed information on each step and the underlying systems, click [here](https://docs.mosip.io/inji/inji-web/functional-overview/workflow)._
+_For more detailed information on each step and the underlying systems, click_ [_here_](https://docs.mosip.io/inji/inji-web/functional-overview/workflow)_._
 
 ## Store Verifiable Credentials (VC):
 
@@ -19,7 +19,7 @@ Inji Web provides users with a secure and reliable way to store Verifiable Crede
 
 The stored credentials are available anytime, enabling users to retrieve them quickly without having to repeat the download process. Whether for personal use or to meet credential presentation requests, Inji Web ensures your VCs are always securely stored and readily available.
 
-_For more detailed information on each step and the underlying systems, click [here](https://docs.mosip.io/inji/inji-web/functional-overview/workflow)._
+_For more detailed information on each step and the underlying systems, click_ [_here_](https://docs.mosip.io/inji/inji-web/functional-overview/workflow)_._
 
 ## Share Verifiable Credentials (VC):
 
@@ -27,4 +27,4 @@ Inji Web makes it easy for users to share their Verifiable Credentials with serv
 
 For added convenience, Inji Web supports online sharing methods where users can respond to a verifier’s presentation request, allowing seamless sharing of the VC. This flexible sharing feature empowers users to share their credentials securely and effortlessly, adapting to different verification environments.
 
-_For more detailed information on each step and the underlying systems, click [here](https://docs.mosip.io/inji/inji-web/functional-overview/workflow)._
+_For more detailed information on each step and the underlying systems, click_ [_here_](https://docs.mosip.io/inji/inji-web/functional-overview/workflow)_._

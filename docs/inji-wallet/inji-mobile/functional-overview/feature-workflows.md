@@ -66,7 +66,7 @@ The credentials are shared in a peer-to-peer model with the verifier application
 
 <div>
 
-<img src="../../../architecture/_images/vc_activation.png" alt="">
+<img src="https://github.com/mosip/documentation/blob/inji/docs/architecture/_images/vc_activation.png" alt="">
 
  
 

@@ -64,7 +64,7 @@ This library is available as Kotlin artefact in maven as well as npm module for 
 
 In order to reduce the key size during credential download request, Inji Wallet is using RSA-2048 instead of RSA-4096 bits keys.
 
-To check all the APIs supported by this module, refer [here](../../technical-overview/components.md).
+To check all the APIs supported by this module, refer [here](https://github.com/mosip/documentation/blob/inji/docs/inji-wallet/technical-overview/components.md?plain=1).
 
 {% hint style="info" %}
 Note:

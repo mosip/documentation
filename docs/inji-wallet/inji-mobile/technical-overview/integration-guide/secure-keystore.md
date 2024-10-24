@@ -6,9 +6,8 @@ Secure Keystore is a **library exclusively for Android platform**. The devices w
 
 ## Artifacts
 
-  *  Maven Snapshots are available [here](https://repo1.maven.org/maven2/io/mosip/secure-keystore/)
-
-  *  NPM modules are available [here](https://www.npmjs.com/package/@mosip/secure-keystore)
+* Maven Snapshots are available [here](https://repo1.maven.org/maven2/io/mosip/secure-keystore/)
+* NPM modules are available [here](https://www.npmjs.com/package/@mosip/secure-keystore)
 
 ## Installation
 

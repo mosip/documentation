@@ -8,7 +8,7 @@ The architecture diagram below illustrates the structure and components of Inji 
 
 <figure><img src="../../../.gitbook/assets/inji_web_0.10.0_architecture_1.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/INJIWEB-ARCHITECTURE.svg" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://github.com/mosip/documentation/blob/inji/docs/.gitbook/assets/INJIWEB-ARCHITECTURE.svg" alt=""><figcaption></figcaption></figure>
 
 ### Architecture Components
 

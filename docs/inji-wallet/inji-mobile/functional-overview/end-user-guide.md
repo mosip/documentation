@@ -663,7 +663,7 @@ To backup VCs, the user has to choose their preference for the cloud based on th
 
 ### Data backup - Android
 
-<figure><img src="../../../.gitbook/assets/Untitled design (1) (5).png" alt="" width="563"><figcaption><p>Data Backup on Android</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Untitled design (1) (6).png" alt="" width="563"><figcaption><p>Data Backup on Android</p></figcaption></figure>
 
 <figure><img src="../../../.gitbook/assets/Untitled design (11).png" alt="" width="563"><figcaption><p>Data Backup on Android</p></figcaption></figure>
 
@@ -713,4 +713,4 @@ To restore backed-up VCs, the user has to choose their preference of the cloud b
 
 ### Restore - ios
 
-<figure><img src="../../../.gitbook/assets/Untitled design (1) (7).png" alt="" width="563"><figcaption><p>Restore on iOS</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Untitled design (1) (8).png" alt="" width="563"><figcaption><p>Restore on iOS</p></figcaption></figure>
