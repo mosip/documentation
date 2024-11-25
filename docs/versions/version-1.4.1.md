@@ -4,7 +4,7 @@
 
 **Support:** Patch Release
 
-**Release Date**: 22nd Nov, 2024
+**Release Date**: 25th Nov, 2024
 
 ## **Overview**
 
