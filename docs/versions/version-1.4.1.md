@@ -38,10 +38,10 @@ Post installation, follow the setup steps available [here](https://docs.mosip.io
 
 ### **Repositories Released**
 
-| **Repositories**            | **Tags Released** |
-| --------------------------- | ----------------- |
-| mosip-compliance-toolkit    | v1.4.1            |
-| mosip-compliance-toolkit-ui | v1.4.1            |
+| **Repositories**            | **Tags Released**                                                          |
+| --------------------------- | -------------------------------------------------------------------------- |
+| mosip-compliance-toolkit    | [v1.4.1](https://github.com/mosip/mosip-compliance-toolkit/tree/v1.4.1)    |
+| mosip-compliance-toolkit-ui | [v1.4.1](https://github.com/mosip/mosip-compliance-toolkit-ui/tree/v1.4.1) |
 
 ### **Documentation**
 

@@ -6,7 +6,7 @@
 
 * Name: CTK 1.4.1
 * Date: 22nd Nov, 2024
-* [Release Notes](versions/version-1.4.0/)
+* [Release Notes](versions/version-1.4.1.md)
 
 ### Version: 1.4.0
 
