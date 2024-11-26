@@ -8,11 +8,11 @@
 
 ## **Overview**
 
-### **The 1.4.1 version of CTK includes the following Hotfix Summary:**
+### **The 1.4.1 version of CTK includes the following Hotfixes:**
 
 * Modified the collection ID generation logic to ensure unique collection IDs are created for every new project.
-* Conducted extensive testing to validate the fix and ensure the system's responsiveness and data consistency.
-* Updated the error handling mechanism in the Dashboard to address issues with projects that encounter errors while fetching their last test run’s status.
+* Refined the error-handling mechanism in the Dashboard, to address issues with projects encountering errors while fetching the status of their most recent test run.
+* Performed extensive testing to validate the fix, ensuring system responsiveness and maintaining data consistency.
 
 ### **Technical Enhancements**
 
