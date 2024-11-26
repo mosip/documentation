@@ -12,7 +12,8 @@
 
 * Modified the collection ID generation logic to ensure unique collection IDs are created for every new project.
 * Refined the error-handling mechanism in the Dashboard, to address issues with projects encountering errors while fetching the status of their most recent test run.
-* Performed extensive testing to validate the fix, ensuring system responsiveness and maintaining data consistency.
+
+These fixes have undergone extensive testing to ensure system responsiveness, validate their effectiveness, and maintain data consistency.
 
 ### **Technical Enhancements**
 
