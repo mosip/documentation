@@ -1,12 +1,16 @@
-# FAQs
+---
+description: 'Here are a few of the frequently asked questions (FAQs) on eSignet:'
+---
 
-Here are a few of the frequently asked questions (FAQs) on eSignet:
+# FAQs
 
 ## About eSignet
 
 <details>
 
 <summary>What is eSignet?</summary>
+
+**eSignet** is a digital identity verification tool that simplifies access to online services. It allows users to identify themselves using various [authentication methods](https://docs.esignet.io/overview/features#support-for-various-authentication-modalities) and supports multiple forms of IDs as handles (e.g. National ID, Phone Number, Email ID, etc.).
 
 In today's era of digital transformation, there has been a global shift towards moving most services online. To facilitate personalized access to these online services, a secure and trusted digital identity is crucial. **eSignet** strives to provide a user-friendly and effective method for individuals to authenticate themselves and utilize online services while also having the option to share their profile information. Moreover, eSignet supports multiple modes of identity verification to ensure inclusivity and broaden access, thereby reducing potential digital barriers.
 
@@ -29,6 +33,50 @@ The core features of eSignet are available [here](../overview/features/).
 Based on the type of entity, such as an ID system, a relying party, or a digital wallet, you can integrate with eSignet. For more details, go through our [integration guide](../integration/).
 
 If you are looking at trying out eSignet right away, then you can use our sandbox for testing. Please go through our [Try it out section](../try-it-out/) for more details.
+
+</details>
+
+<details>
+
+<summary>What are the various modes of authentication that eSignet supports?</summary>
+
+eSignet provides multiple authentication methods, as listed below.
+
+1. [OTP Authentication](https://docs.esignet.io/end-user-guide/login-with-otp)
+2. [Biometric Authentication](https://docs.esignet.io/end-user-guide/login-with-biometrics)
+3. [Wallet-based Authentication](https://docs.esignet.io/end-user-guide/login-with-qr-code)
+4. [Password-based Authentication](https://docs.esignet.io/end-user-guide/login-with-password)
+5. [Knowledge Based Identification](https://docs.esignet.io/end-user-guide/knowledge-based-authentication)
+
+To know more about it click [here](https://docs.esignet.io/overview/features).
+
+</details>
+
+<details>
+
+<summary><strong>Who are the intended users of eSignet?</strong></summary>
+
+The intended users of eSignet include:
+
+* Government ID Agencies that need secure verification mechanisms, to deliver services to their residents.
+* Individuals or residents accessing online services.
+* Businesses and or Service Providers that require streamlined methods to authenticate beneficiaries and provide services
+
+</details>
+
+<details>
+
+<summary><strong>How scalable is eSignet? Can it handle a significant increase in user volume?</strong></summary>
+
+eSignet is simple, lightweight, and powerful. It easily integrates with any service provider’s portal, using minimal resources, and can scale effortlessly to handle large user volumes, acting as a middle layer for identity verification.&#x20;
+
+</details>
+
+<details>
+
+<summary><strong>How does eSignet ensure the security and privacy of user data?</strong></summary>
+
+eSignet minimizes data storage by using access tokens linked to user IDs for login, ensuring identity verification without capturing personal information. The login process occurs exclusively on the eSignet platform, with mandatory user consent through a built-in consent flow that allows users to grant or withhold explicit access to their personal information.
 
 </details>
 
@@ -133,7 +181,7 @@ You have to change _**acr-amr-mapping.json**_ in the _**mosip-config**_ repo; de
 }
 ```
 
-For details on ISO 639-1 and ISO 639-2, please follow the [documentation here](https://www.loc.gov/standards/iso639-2/php/English\_list.php).
+For details on ISO 639-1 and ISO 639-2, please follow the [documentation here](https://www.loc.gov/standards/iso639-2/php/English_list.php).
 
 **Adding a new language in the production setup**
 
