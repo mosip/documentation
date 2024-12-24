@@ -183,9 +183,11 @@ Yes, comprehensive documentation is available to guide you through setting up eS
 Relying parties are considered to be **Auth** partners in MOSIP, and hence should go through authentication partner onboarding steps. The partners can onboard themselves either through self-onboarding or assisted onboarding. Please keep reading for further details.
 
 1. **Self Onboarding**\
-   To self-onboard, the partners can register directly on the MOSIP PMS portal. Please refer [here](https://docs.mosip.io/1.2.0/modules/partner-management-services/pms-revamp/functional-overview/auth-partner/end-user-guide#authentication-partner-workflow) for step by step process.
+   To self-onboard, the partners can register directly on the MOSIP [PMS](https://docs.mosip.io/1.2.0/modules/partner-management-services) portal. Please refer [here](https://docs.mosip.io/1.2.0/modules/partner-management-services/pms-revamp/functional-overview/auth-partner/end-user-guide#authentication-partner-workflow) for a step by step process.
 2. **Assisted Onboarding**\
-   Alternatively, partners can also initiate the onboarding process by filling out the [form](https://docs.google.com/forms/d/1YQKcBDR92uqy_0m6oIV5yLmCPQCGOqJYx043ZOWQnX8/edit) here. Once submitted, partners will receive their credentials via email shortly.
+   Alternatively, partners can also initiate the onboarding process by filling out the form [here](https://docs.google.com/forms/d/1YQKcBDR92uqy_0m6oIV5yLmCPQCGOqJYx043ZOWQnX8/closedform). Once submitted, partners will receive their credentials via email shortly.
+
+Please refer [here](https://docs.esignet.io/integration/relying-party#register-onboard-as-oidc-client-with-id-provider) for more details.
 
 </details>
 
