@@ -12,9 +12,9 @@ description: 'Here are some of the frequently asked questions (FAQs) on eSignet:
 
 **eSignet** is a digital identity verification tool that simplifies access to online services. It allows users to identify themselves using various [authentication methods](https://docs.esignet.io/overview/features#support-for-various-authentication-modalities) and supports multiple forms of IDs as handles (e.g. National ID, Phone Number, Email ID, etc.).
 
-In today's era of digital transformation, there has been a global shift towards moving most services online. To facilitate personalized access to these online services, a secure and trusted digital identity is crucial. **eSignet** strives to provide a user-friendly and effective method for individuals to authenticate themselves and utilize online services while also having the option to share their profile information. Moreover, eSignet supports multiple modes of identity verification to ensure inclusivity and broaden access, thereby reducing potential digital barriers.
+In today's era of digital transformation, there has been a global shift towards moving most services online. To facilitate personalized access to these online services, a secure and trusted digital identity is crucial. eSignet strives to provide a user-friendly and effective method for individuals to authenticate themselves and utilize online services while also having the option to share their profile information. Moreover, eSignet supports multiple modes of identity verification to ensure inclusivity and broaden access, thereby reducing potential digital barriers.
 
-To know more, click [here](../).
+To know more eSignet please refer [here](../).
 
 </details>
 
@@ -22,9 +22,9 @@ To know more, click [here](../).
 
 <summary><strong>How can I use eSignet?</strong></summary>
 
-Based on the type of entity, such as an ID system, a relying party, or a digital wallet, you can integrate with eSignet. For more details, go through our [integration guide](../integration/).
+You can integrate with eSignet based on the type of entity, such as an ID system, a relying party, or a digital wallet. For more details, please go through our [integration guide](../integration/).
 
-If you are looking at trying out eSignet right away, then you can use our sandbox for testing. Please go through our [Try it out section](../try-it-out/) for more details.
+If you are interested in trying out eSignet right away, you can use our sandbox for testing. Please go through our [Try it out section](../try-it-out/) for more details.
 
 </details>
 
