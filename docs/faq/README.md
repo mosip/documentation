@@ -1,5 +1,5 @@
 ---
-description: 'Here are a few of the frequently asked questions (FAQs) on eSignet:'
+description: 'Here are some of the frequently asked questions (FAQs) on eSignet:'
 ---
 
 # FAQs
@@ -18,8 +18,6 @@ To know more, click [here](../).
 
 </details>
 
-
-
 <details>
 
 <summary><strong>How can I use eSignet?</strong></summary>
@@ -29,8 +27,6 @@ Based on the type of entity, such as an ID system, a relying party, or a digital
 If you are looking at trying out eSignet right away, then you can use our sandbox for testing. Please go through our [Try it out section](../try-it-out/) for more details.
 
 </details>
-
-
 
 <details>
 
@@ -121,7 +117,7 @@ eSignet stands out by offering a comprehensive suite of advanced features that e
 
 <details>
 
-<summary>What standards does eSignet follows?</summary>
+<summary><strong>What standards does eSignet follows?</strong></summary>
 
 * eSignet is highly inspired by OpenID Connect and OAuth 2.0 standards for secure authentication and data privacy. It employs a Secure Biometric Interface (SBI) for compatibility with various biometric devices and integrates verifiable credentials to enhance functionality and security.
 * To know more about eSignet standards, please refer [here](https://docs.esignet.io/overview/standards).
@@ -130,7 +126,7 @@ eSignet stands out by offering a comprehensive suite of advanced features that e
 
 <details>
 
-<summary>How many types of authentication methods does eSignet support today?</summary>
+<summary><strong>How many types of authentication methods does eSignet support today</strong>?</summary>
 
 The types of authentication methods supported by eSignet are [available here](../overview/features/#support-for-various-authentication-modalities).
 
