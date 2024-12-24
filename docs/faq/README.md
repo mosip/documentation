@@ -8,7 +8,7 @@ description: 'Here are a few of the frequently asked questions (FAQs) on eSignet
 
 <details>
 
-<summary>What is eSignet?</summary>
+<summary>What i<strong>s eSignet?</strong></summary>
 
 **eSignet** is a digital identity verification tool that simplifies access to online services. It allows users to identify themselves using various [authentication methods](https://docs.esignet.io/overview/features#support-for-various-authentication-modalities) and supports multiple forms of IDs as handles (e.g. National ID, Phone Number, Email ID, etc.).
 
@@ -20,15 +20,7 @@ To know more, click [here](../).
 
 <details>
 
-<summary>What are the core features of eSignet?</summary>
-
-The core features of eSignet are available [here](../overview/features/).
-
-</details>
-
-<details>
-
-<summary>How can I use eSignet?</summary>
+<summary><strong>How can I use eSignet?</strong></summary>
 
 Based on the type of entity, such as an ID system, a relying party, or a digital wallet, you can integrate with eSignet. For more details, go through our [integration guide](../integration/).
 
@@ -38,7 +30,7 @@ If you are looking at trying out eSignet right away, then you can use our sandbo
 
 <details>
 
-<summary>What are the various modes of authentication that eSignet supports?</summary>
+<summary><strong>What are the various modes of authentication that eSignet supports?</strong></summary>
 
 eSignet provides multiple authentication methods, as listed below.
 
@@ -54,7 +46,7 @@ To know more about it click [here](https://docs.esignet.io/overview/features).
 
 <details>
 
-<summary><strong>Who are the intended users of eSignet?</strong></summary>
+<summary><strong>Who are the intended users of eSignet</strong>?</summary>
 
 The intended users of eSignet include:
 
@@ -80,7 +72,57 @@ eSignet minimizes data storage by using access tokens linked to user IDs for log
 
 </details>
 
+<details>
+
+<summary><strong>What technologies are used in the development of eSignet?</strong></summary>
+
+* eSignet uses the latest technologies for development.
+* To learn more about the technologies eSignet uses click [here](https://docs.esignet.io/overview/technology-stack)
+
+</details>
+
+<details>
+
+<summary><strong>Why should an entity adopt eSignet?</strong> </summary>
+
+eSignet is an open-source, flexible solution that follows [standard](https://docs.esignet.io/overview/standards) protocols for easy integration and high [security](https://docs.esignet.io/overview/principles), ensuring no vendor lock-in. As a MOSIP product, it integrates with any trusted ID, offering a secure and adaptable identity verification solution.
+
+</details>
+
 ## Features and Functionality
+
+<details>
+
+<summary><strong>What are the core features of eSignet?</strong></summary>
+
+* eSignet offers features such as user-friendly identity verification, flexible login options, and multiple secure authentication methods like OTP,  biometrics, wallet, and knowledge-based authentication. It integrates with existing identity databases for eKYC compliance and supports multiple languages. Users can access various services with a single credential, consent must be ensured before sharing personal information. Further, eSignet is compatible with smartphones and feature phones.
+* To know more about features, please refer [here](https://docs.esignet.io/overview/features).
+
+</details>
+
+<details>
+
+<summary><strong>What unique features does eSignet offer that others do not?</strong></summary>
+
+eSignet stands out by offering a comprehensive suite of advanced features that ensure seamless integrations and secure user verification. eSignet also incorporates robust authorization code flow to prevent fraud, ensuring a higher level of security. Below are some unique features
+
+* **Enhancing authentication methods through secure standards**\
+  This solution leverages OAuth 2.0-based OpenID Connect flows for easy integration, incorporates the Secure Biometric Interface (SBI) for biometric-based verification, and supports secure options like authorization code flow to prevent fraud.
+* **User centricity**\
+  User-centric features include single identity credential access across government and private services, mandatory user consent for sharing personal information, multiple authentication methods for user preference and enhanced liveness checks, and credential protection through exclusive handling on the eSignet platform to safeguard user data unless explicitly consented.
+* **Go digital quickly**\
+  Accelerate your digital transformation with eSignet, enabling secure, high-assurance digital verification across services. Leveraging various methods such as OTP, biometric authentication, and cryptographic keys, eSignet empowers governments to offer streamlined e-KYC services, driving financial inclusion. With seamless relying party integration and diverse verification modes, it helps bridge the digital divide effectively and efficiently.
+
+</details>
+
+<details>
+
+<summary>What standards does eSignet follows?</summary>
+
+* eSignet is highly inspired by OpenID Connect and OAuth 2.0 standards for secure authentication and data privacy. It employs a Secure Biometric Interface (SBI) for compatibility with various biometric devices and integrates verifiable credentials to enhance functionality and security.
+* To know more about eSignet standards, please refer [here](https://docs.esignet.io/overview/standards).
+
+</details>
 
 <details>
 
@@ -90,11 +132,20 @@ The types of authentication methods supported by eSignet are [available here](..
 
 </details>
 
+## Partner Integrations
+
 <details>
 
-<summary>What are the standards followed by eSignet?</summary>
+<summary><strong>Can you provide examples of successful integrations with potential partners?</strong></summary>
 
-The standards followed by eSignet are listed [here](../overview/Standards/).
+eSignet will be deployed across various platforms, focusing on secure authentication. The solution is actively exploring integration opportunities with new partners and countries, with proof of concept (POC) completed in multiple countries. Below are some examples of eSignet integrations:
+
+* **Health Management**: The POC for eSignet integration with the Health Management portal is complete, enabling OTP and biometric-based authentication for seamless access to health services, with user verification against migrated ID data.
+* **SuperApp Integration**: eSignet will be integrated into a multi-service SuperApp for basic registration, login, and enhanced eKYC, with development in progress and completion expected soon.
+* **Insurance Portal**: Integration of eSignet with a health insurance portal is underway, using migrated ID data for secure authentication and quick access to insurance services.
+* **University Authentication**: eSignet is being implemented for face authentication of students and staff, verified against university ID data for access to services like exams, hostel assignments, and meal identification.
+* **Government and Private Services**: A brownfield implementation of MOSIP is in progress, with eSignet integration planned to authenticate users with National ID data across government and private services.
+* **Self-Service Portal for Benefits Delivery**: The POC for eSignet integration with OpenG2P is complete, allowing residents to authenticate via National ID data and register for Benefits Delivery.
 
 </details>
 
@@ -102,13 +153,51 @@ The standards followed by eSignet are listed [here](../overview/Standards/).
 
 <details>
 
+<summary><strong>Which version of eSignet can be used?</strong></summary>
+
+* Currently, eSignet uses[ v1.4.1](https://docs.esignet.io/versions/v1.4.1).
+* Please refer [here ](https://docs.esignet.io/versions)for all the latest releases.
+
+</details>
+
+<details>
+
+<summary><strong>Where can I access the source code?</strong></summary>
+
+You can access the source code from our [eSignet GitHub repository](https://github.com/mosip/esignet/tree/master).
+
+</details>
+
+<details>
+
+<summary><strong>Is there documentation available for setting up eSignet locally?</strong></summary>
+
+Yes, comprehensive documentation is available to guide you through setting up eSignet locally. You can find step-by-step instructions in the [eSignet GitHub repository](https://github.com/mosip/esignet/blob/master/docker-compose/README.md)
+
+</details>
+
+<details>
+
+<summary><strong>How is a relying party onboarded to eSignet - integrated with MOSIP?</strong></summary>
+
+Relying parties are considered to be **Auth** partners in MOSIP, and hence should go through authentication partner onboarding steps. The partners can onboard themselves either through self-onboarding or assisted onboarding. Please keep reading for further details.
+
+1. **Self Onboarding**\
+   To self-onboard, the partners can register directly on the MOSIP PMS portal. Please refer [here](https://docs.mosip.io/1.2.0/modules/partner-management-services/pms-revamp/functional-overview/auth-partner/end-user-guide#authentication-partner-workflow) for step by step process.
+2. **Assisted Onboarding**\
+   Alternatively, partners can also initiate the onboarding process by filling out the [form](https://docs.google.com/forms/d/1YQKcBDR92uqy_0m6oIV5yLmCPQCGOqJYx043ZOWQnX8/edit) here. Once submitted, partners will receive their credentials via email shortly.
+
+</details>
+
+<details>
+
 <summary>How to configure password authentication in eSignet?</summary>
 
 To enable password authentication in Signet for a client, you must first set the ACR value as “**mosip:idp:acr:password**” in the _**authContextRefs**_ array during client creation or update.
 
-Then, **during local testing**,
+During local testing follow the below forma&#x74;**:**
 
-You must modify or add a file _**amr-acr-mapping.json**_ in _**esignet-service >> src >> main >> resources,**_ which should contain all ACR and AMR mapping where you can add **“mosip:idp:acr:password”** and **“PWD”** as shown below.
+You must modify or add a file named "_**amr-acr-mapping.json"**_ in _**esignet-service >> src >> main >> resources,**_ which should contain all ACR and AMR mapping where you can add **“mosip:idp:acr:password”** and **“PWD”** as shown below.
 
 ```json
 {
@@ -125,7 +214,7 @@ You must modify or add a file _**amr-acr-mapping.json**_ in _**esignet-service >
 }
 ```
 
-Once these properties have been added to the file, you can refer to this file in _**application-local.properties**_ in the same folder location.
+Once these properties have been added to the file, you can refer to this file in "_**application-local.properties"**_ in the same folder location.
 
 ```properties
 mosip.esignet.amr-acr-mapping-file-url=classpath:amr-acr-mapping.json
@@ -139,7 +228,7 @@ You can directly point to a URL from the deployed version using the _**mosip-con
 mosip.esignet.amr-acr-mapping-file-url=https://raw.githack.com/mosip/mosip-config/develop-v3/amr-acr-mapping.json
 ```
 
-Similarly, **for** **production**,
+Similarly, for production follow the below format:
 
 You have to change _**acr-amr-mapping.json**_ in the _**mosip-config**_ repo; depending on your environment, switch to that branch and add the **“PWD”** property in the _**amr**_ and **“mosip:idp:acr:password”** in the _**acr\_amr**_.
 
@@ -149,7 +238,7 @@ You have to change _**acr-amr-mapping.json**_ in the _**mosip-config**_ repo; de
 
 <summary>How to add a new language in eSignet?</summary>
 
-**Adding a new language for local eSignet setup**
+To add a new language for the local eSignet setup follow the below step&#x73;**:**
 
 1. Go to your Signet project and then open the folder:\
    **oidc-ui >> public >> locales**
@@ -208,11 +297,11 @@ To remove a language from the default eSignet setup, you have to remove or delet
 
 After that, you need to remove the mapping and details from the _**default.json**_ file of that particular language.
 
-**For local setup,**
+**For local setup:**
 
 Go to the folder _**oidc-ui >> public >> locales**_ in the e-Signet project and perform the above steps.
 
-**In production,**
+**In production:**
 
 Go to the develop branch of your [_**artifactory-ref-impl**_](https://github.com/mosip/artifactory-ref-impl/tree/develop) and perform the above steps in this location: _**artifacts >> src >> i18n >> esignet-i18n-bundle**._ Once the artifactory is modified, then you can deploy the latest version in production.
 
@@ -222,22 +311,24 @@ Go to the develop branch of your [_**artifactory-ref-impl**_](https://github.com
 
 <summary>How to integrate wallets with eSignet to provide wallet-based authentication?</summary>
 
-To integrate a wallet in eSignet, first, you have to add wallet details in _**application-local.properties**_ in the _**esignet-service**_ module in your esignet project.
+To integrate a wallet in eSignet:
+
+You have to add wallet details in _**application-local.properties**_ in the _**esignet-service**_ module in your esignet project.
 
 ```properties
 mosip.esignet.ui.wallet.config={{'wallet.name': 'Inji', 'wallet.logo-url': 'inji_logo.png', 'wallet.download-uri': '#', 'wallet.deep-link-uri': 'inji://landing-page-name?linkCode=LINK_CODE&linkExpireDateTime=LINK_EXPIRE_DT' }}
 ```
 
-Here, you need to specify the
+Here, you need to specify the below mentioned properties:
 
 * wallet.name
 * wallet.logo-url
 * wallet.download-uri
 * wallet.deep-link-uri
 
-_**Note**_: In this property, you can also configure multiple wallets.
+**Note**: In this property, you can also configure multiple wallets.
 
-After adding the above details you should add this variable in _**wallet.config**_ properties of _**mosip.esignet.ui.config.key-values**_ configuration as shown below.
+After adding the above details you should add this variable in the _**wallet.config**_ properties of _**mosip.esignet.ui.config.key-values**_ configuration as shown below.
 
 ```properties
 mosip.esignet.ui.config.key-values={…
