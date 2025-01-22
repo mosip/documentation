@@ -115,6 +115,6 @@ The various metrics that assist in test tracking and efficiency are as follows:
 
 #### &#x20;eSignet Signup Repo:
 
-<figure><img src="../../.gitbook/assets/eSignet signup repo.png" alt=""><figcaption><p>eSignet Signup Repo</p></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption><p>eSignet Signup Repo</p></figcaption></figure>
 
 &#x20;

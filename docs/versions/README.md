@@ -1,8 +1,14 @@
 ---
-description: Here you can find all the latest release details 🌟
+description: Please refer below for all the latest release details 🌟
 ---
 
 # Releases
+
+## Version: 1.5.0
+
+* **Name:** eSignet
+* **Date:** Coming Soon
+* **Release Notes**
 
 ## Version: 1.4.2
 

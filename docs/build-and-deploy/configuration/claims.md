@@ -25,10 +25,10 @@ Below is the list of standard OIDC user claims supported when eSignet is integra
 * picture
 
 {% hint style="info" %}
-The list of supported claims is given out in the _**openid-configuration .well-known**_ endpoint.
+**Note:** The list of supported claims is given out in the _**openid-configuration .well-known**_ endpoint.
 {% endhint %}
 
-The below properties in the _**esignet-default.properties**_ hold the supported values:
+The below properties in the _**application-default.properties**_ hold the supported values:
 
 ```properties
 mosip.esignet.discovery.key-values=

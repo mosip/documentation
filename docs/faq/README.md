@@ -1,5 +1,5 @@
 ---
-description: 'Here are some of the frequently asked questions (FAQs) on eSignet:'
+description: Below are some of the FAQs about eSignet
 ---
 
 # FAQs
@@ -132,6 +132,14 @@ The types of authentication methods supported by eSignet are [available here](..
 
 </details>
 
+<details>
+
+<summary></summary>
+
+
+
+</details>
+
 ## Partner Integrations
 
 <details>
@@ -187,7 +195,7 @@ Relying parties are considered to be **Auth** partners in MOSIP, and hence shoul
 2. **Assisted Onboarding**\
    Alternatively, partners can also initiate the onboarding process by filling out the form [here](https://docs.google.com/forms/d/1YQKcBDR92uqy_0m6oIV5yLmCPQCGOqJYx043ZOWQnX8/closedform). Once submitted, partners will receive their credentials via email shortly.
 
-Please refer [here](https://docs.esignet.io/integration/relying-party#register-onboard-as-oidc-client-with-id-provider) for more details.
+Please refer [here](https://docs.esignet.io/try-it-out/integrate-with-e-signet) for more details.
 
 </details>
 
@@ -401,36 +409,17 @@ To know more, click [here](../integration/relying-party.md).
 
 <details>
 
-<summary><strong>How to configure a VC issuer in eSignet?</strong></summary>
+<summary>How to configure a VC issuer in eSignet?</summary>
 
 The VC Issuance plugin interface provides methods to return Verifiable Credentials (VCs) of an individual (here, the holder of the credential) when authorized. Today, this interface supports methods for returning linked data-proof VC (as JSON-LD) and VC as JWT.
 
-To know more, click [here](../integration/vc-issuance.md).
+**Note:** Verifiable Credentials Issuance (VCI) is now supported by[ Inji Certify](https://docs.mosip.io/inji/inji-certify/overview), to know more about VCI please refer [here.](https://docs.inji.io/inji-certify/overview#segregation-of-esignet-vci-component-to-inji-certify)
 
 </details>
 
 <details>
 
-<summary><strong>How to configure Knowledge Based Identification Form?</strong></summary>
-
-#### Configuration required to display KBI form.
-
-```
-#individual-id-field is set with field id which should be considered as an individual ID in the authenticate request.
-#form-details holds the list of field details like below:
-#id -> unique field Id, type -> holds datatype, format -> only supported for date fields, regex -> pattern to validate the input value, maxLength -> number of allowed characters
-#Example: mosip.esignet.authenticator.default.auth-factor.kba.field-details={{'id': '${mosip.esignet.authenticator.default.auth-factor.kba.individual-id-field}', 'type':'text', 'format':'', 'maxLength': 50, 'regex': '^\s*[+-]?(\d+|\d*\.\d+|\d+\.\d*)([Ee][+-]?\d*)?\s*$'},{'id':'fullName', 'type':'text', 'format':'', 'maxLength': 50, 'regex': '^[A-Za-z\s]{1,}[\.]{0,1}[A-Za-z\s]{0,}$'},{'id':'dob', 'type':'date', 'format':'dd/mm/yyyy'}}
-mosip.esignet.authenticator.default.auth-factor.kba.field-details={{'id':'policyNumber', 'type':'text', 'format':'', 'maxLength': 50, 'regex': '^\s*[+-]?(\d+|\d*\.\d+|\d+\.\d*)([Ee][+-]?\d*)?\s*$'},{'id':'fullName', 'type':'text', 'format':'', 'maxLength': 50, 'regex': '\S*'},{"id":"dob", "type":"date", "format":"dd/mm/yyyy"}} 
-mosip.esignet.authenticator.default.auth-factor.kba.individual-id-field=policyNumber
-```
-
-
-
-</details>
-
-<details>
-
-<summary><strong>How to configure KBI form in eSignet UI</strong></summary>
+<summary><strong>How to configure Knowledge Based Identification (KBI) form in eSignet UI?</strong></summary>
 
 KBI form can be configured based on the fields required to identify a user via Knowledge based identification, please refer to the use case [example](https://docs.esignet.io/end-user-guide/knowledge-based-authentication) here and please find the below properties to be changed to reflect the fields in the KBI form on eSignet UI.
 
@@ -441,5 +430,17 @@ Update the below sub properties inside mosip.esignet.ui.config.key-values proper
 ```
 
 To know more about how to configure the KBI Form in eSignet please refer [here](https://github.com/mosip/digital-credential-plugins/blob/master/sunbird-rc-esignet-integration-impl/README.md)
+
+</details>
+
+<details>
+
+<summary>How is authenticator plugin implemented for KBI with Sunbird RC?</summary>
+
+The Authenticator plugin allows the user to identify the user with the details provided in the KBI form in the eSignet UI and Identifies the user based on the details from the registry called Sunbird RC.\
+\
+The fields part of the KBI is completely dependent on the registry schema. Fields configured to be part of the KBI form should identify the end user. Denies the identification if more than one entry is found in the registry.\
+\
+The current compatible Sunbird RC version is v2.0.0-rc3. Please refer [here](https://github.com/mosip/digital-credential-plugins/blob/master/sunbird-rc-esignet-integration-impl/README.md) for more details.
 
 </details>

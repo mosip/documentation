@@ -2,7 +2,7 @@
 
 The audit plugin interface provides two methods to audit any action in eSignet. An instance of this audit plugin is injected into all the services of eSignet, and almost all the events are audited using this plugin.
 
-Below is the eSignet audit interface,
+Below is the eSignet audit interface:
 
 ```java
 public interface AuditPlugin {
@@ -31,10 +31,10 @@ public interface AuditPlugin {
 ```
 
 {% hint style="info" %}
-For the latest version of the interface please check our code base - [AuditPlugin.java](https://github.com/mosip/esignet/blob/master/esignet-integration-api/src/main/java/io/mosip/esignet/api/spi/AuditPlugin.java)
+Note: For the latest version of the interface please check our code base - [AuditPlugin.java](https://github.com/mosip/esignet/blob/master/esignet-integration-api/src/main/java/io/mosip/esignet/api/spi/AuditPlugin.java)
 {% endhint %}
 
-## How to implement this plugin?
+## How do you implement this plugin?
 
 The Audit plugin implementation class must be annotated with `ConditionalOnProperty` with `mosip.esignet.integration.audit-plugin` property.
 

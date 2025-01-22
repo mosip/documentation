@@ -2,7 +2,7 @@
 
 This guide helps in setting up the mock OIDC-relying party portal. This portal uses the authorization code flow with private key JWT client authentication to fetch the user profile.
 
-The mock relying party portal is built with reactJS. This consists of two components:
+The mock relying party portal is built with reactJS. This consists of the below two components:
 
 1. mock-relying-party-ui
 2. mock-relying-party-service
@@ -27,6 +27,6 @@ On receiving the id-token and access-token from the "_**/token**_" endpoint, the
 
 ## How to build and run the mock relying party portal locally?
 
-Please consult the accompanying Readme files in their respective repositories for instructions on how to build and run the mock relying party portal.
+To build and run the mock relying party portal please refer to the below README.md file
 
-{% embed url="https://github.com/mosip/esignet-mock-services/tree/master/mock-relying-party-service#build--run-for-developers" %}
+{% embed url="https://github.com/mosip/esignet-mock-services/blob/master/docker-compose/README.md" %}

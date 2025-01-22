@@ -2,7 +2,7 @@
 
 This page has the proposed deployment architecture for eSignet in production.
 
-<figure><img src="../.gitbook/assets/deployment-diagram.png" alt=""><figcaption><p><em>eSignet Deployment Diagram</em></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/deployment-diagram.png" alt=""><figcaption><p>eSignet Deployment Diagram</p></figcaption></figure>
 
 ## Firewall
 

@@ -1,6 +1,6 @@
 # openid-configuration
 
-eSignet's `openid-configuration` well-known endpoint holds the map, which is exactly the same as the [openid-configuration's](https://openid.net/specs/openid-connect-discovery-1\_0.html#ProviderConfigurationResponse) well-known specification.
+eSignet's `openid-configuration` well-known endpoint holds the map, which is the same as the [openid-configuration's](https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderConfigurationResponse) well-known specification.
 
 ```json
 {
@@ -64,6 +64,15 @@ eSignet's `openid-configuration` well-known endpoint holds the map, which is exa
   ],
   "ui_locales_supported": [
     "en"
+  ],
+  "claims_in_verified_claims_supported" : [
+  "name",
+  "address",
+  "gender",
+  "birthdate",
+  "picture",
+  "email",
+  "phone_number" 
   ]
 }
 ```
@@ -91,3 +100,4 @@ eSignet's `openid-configuration` well-known endpoint holds the map, which is exa
 * `acr_values_supported`: The supported authentication context class references (ACR). The value is an empty object {}, indicating that no specific ACR values are supported.
 * `request_parameter_supported`: Specifies whether the request parameter is supported in authorization requests. The value is false, indicating that the request parameter is not supported.
 * `ui_locales_supported`: The supported user interface locales. The value is an empty object {}, suggesting that no specific UI locales are supported.
+* `claims_in_verified_claims_supported:` Supported verified claim names.

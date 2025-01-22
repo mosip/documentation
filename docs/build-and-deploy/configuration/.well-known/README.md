@@ -19,4 +19,3 @@ eSignet's ".well-know" directory contains the four files mentioned below:
 * [jwks.json](jwks.json.md)
 * [oauth-configuration](oauth-configuration.md)
 * [openid-configuration](openid-configuration.md)
-* [openid-credential-issuer](openid-credential-issuer.md)

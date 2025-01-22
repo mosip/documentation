@@ -43,7 +43,7 @@ public interface KeyBinder {
 ```
 
 {% hint style="info" %}
-For the latest version of the interface please check our code base - [KeyBinder.java](https://github.com/mosip/esignet/blob/master/esignet-integration-api/src/main/java/io/mosip/esignet/api/spi/KeyBinder.java)
+Not&#x65;**:** For the latest version of the interface please check our code base - [KeyBinder.java](https://github.com/mosip/esignet/blob/master/esignet-integration-api/src/main/java/io/mosip/esignet/api/spi/KeyBinder.java)
 {% endhint %}
 
 ## Who uses this interface?

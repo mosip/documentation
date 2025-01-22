@@ -1,6 +1,6 @@
 # Credential Holder
 
-A digital wallet that aims to function as a credential holder application in eSignet must go through the onboarding process as a relying party. This document outlines the necessary steps for a wallet to utilize eSignet for downloading credentials issued by a VC Issuer using the[ OpenID4VCI authorization code flow](https://openid.net/specs/openid-4-verifiable-credential-issuance-1\_0.html#name-authorization-code-flow).
+A digital wallet that aims to function as a credential holder application in eSignet must go through the onboarding process as a relying party. This document outlines the necessary steps for a wallet to utilize eSignet for downloading credentials issued by a VC Issuer using the[ OpenID4VCI authorization code flow](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html#name-authorization-code-flow).
 
 The sequence diagram below illustrates the steps involved in the authorization code flow that are required for downloading a verified credential.
 
@@ -8,12 +8,12 @@ The sequence diagram below illustrates the steps involved in the authorization c
 
 **Note**:
 
-* Currently, only the `ldp_vc` format in the [Credential request](https://openid.net/specs/openid-4-verifiable-credential-issuance-1\_0.html#name-credential-request-4) is supported.
-* Also, the [Pre-Authorized Code Flow](https://openid.net/specs/openid-4-verifiable-credential-issuance-1\_0.html#name-pre-authorized-code-flow) is not supported as yet.
+* Currently, only the `ldp_vc` format in the [Credential request](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html#name-credential-request-4) is supported.
+* Also, the [Pre-Authorized Code Flow](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html#name-pre-authorized-code-flow) is not supported as yet.
 * The `private-key-jwt` is supported to enforce better security.
 
 {% hint style="info" %}
-To gain a better understanding of the VC Issuance flow in eSignet, please refer to the [activity diagram ](../vc-issuance.md#appendix-vc-issuance)provided in the [VC Issuance Plugin](../vc-issuance.md) document.
+To gain a better understanding of the VC Issuance flow in eSignet, please refer to the activity diagram provided in the [VC Issuance Plugin](https://docs.inji.io/inji-certify/overview#verifiable-credentials-issuance-through-inji-certify) document.
 {% endhint %}
 
 Below are the steps for on-boarding a digital wallet as an OAuth Client and using the eSignet APIs to download verifiable credentials.
@@ -22,7 +22,7 @@ Below are the steps for on-boarding a digital wallet as an OAuth Client and usin
 
 #### 1. Get a valid redirect deep link
 
-eSignet adheres to the OpenID4VCI wallet-initiated flow. Consequently, after authentication is successfully completed, eSignet will provide the wallet with an authorization code. Thus, in order to integrate, the wallet must first generate a valid redirect deep link.
+eSignet adheres to the OpenID4VCI wallet-initiated flow. Consequently, after authentication is completed, eSignet will provide the wallet with an authorization code. Thus, to integrate, the wallet must first generate a valid redirect deep link.
 
 #### 2. Get OAuth client credentials
 
@@ -36,7 +36,7 @@ To register the client in our Sandbox environment, click [here](../../try-it-out
 
 ### **Authorization Code flow**
 
-#### 1. Call the authorize endpoint
+#### 1. Call the authorized endpoint
 
 In order to initiate the credential issuance flow, the credential holder needs to authenticate and provide consent. Hence, the wallet needs to create a button to initiate authentication using eSignet by calling the "_**/authorize**_" endpoint.
 
@@ -62,7 +62,7 @@ Many OAuth 2.0 client libraries are available in most programming languages to p
 
 #### 3. Generate key pair
 
-The wallet now needs to generate a key pair for the wallet holder and use the private key from the key pair to sign the _**c\_nonce**_. This will be used to determine that the [Proof of Possession](https://openid.net/specs/openid-4-verifiable-credential-issuance-1\_0.html#name-proof-types) (PoP) of the private key is the wallet holder.
+The wallet now needs to generate a key pair for the wallet holder and use the private key from the key pair to sign the _**c\_nonce**_. This will be used to determine that the [Proof of Possession](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html#name-proof-types) (PoP) of the private key is the wallet holder.
 
 Corresponding public key is accepted as `did:jwk` in the PoP.
 
@@ -73,12 +73,12 @@ Corresponding public key is accepted as `did:jwk` in the PoP.
 
 #### 4. Get the credential using VCI credential API
 
-Now, the wallet can invoke the "_**/vci/credential**_" endpoint of eSignet with PoP (Proof of Possession) and share the credential format metadata to get the Verifiable Credential in the requested format.
+Now, the wallet can invoke the "_**/vci/credential**_" endpoint of credential service with PoP (Proof of Possession) and share the credential format metadata to get the Verifiable Credential in the requested format.
 
-Only the `ldp_vc` format in the [Credential request](https://openid.net/specs/openid-4-verifiable-credential-issuance-1\_0.html#name-credential-request-4) is supported.
+Only the `ldp_vc` format in the [Credential request](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html#name-credential-request-4) is supported.
 
-{% swagger src="../../.gitbook/assets/esignet-1.2.0 (1).yml" path="/vci/credential" method="post" %}
-[esignet-1.2.0 (1).yml](<../../.gitbook/assets/esignet-1.2.0 (1).yml>)
-{% endswagger %}
+{% hint style="info" %}
+
+{% endhint %}
 
 Once the credential is obtained, the wallet should be responsible for securely storing it.

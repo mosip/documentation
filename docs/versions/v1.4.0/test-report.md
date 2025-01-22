@@ -119,4 +119,4 @@ Link for the [detailed test report](https://github.com/mosip/test-management/tre
 
 ### eSignet Signup Repository
 
-<figure><img src="../../.gitbook/assets/eSignet Signup Repo.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>

@@ -20,11 +20,13 @@ eSignet currently supports the below ACR values:
   For wallet-based authentication, which requires the wallet to be bound to the server. Thereafter, the binding key could be used to sign the JWT with the server-signed certificate in the header as an authentication factor.
 * **mosip:idp:acr:password**\
   For password-based authentication.
+* **mosip:idp:acr:knowledge**\
+  For Knowledge Based identification(KBI), demographic data based authentication.&#x20;
 
 {% hint style="info" %}
-acr\_values request parameter in the `/authorize` request takes the above values as a space-separated list in any combination.
+**Note:** acr\_values request parameter in the `/authorize` request takes the above values as a space-separated list in any combination.
 {% endhint %}
 
 {% hint style="info" %}
-Wallet binding is a separate process where the RSA public key and the individual ID are shared with the server, and the server then returns the signed certificate to the wallet.
+**Note:** Wallet binding is a separate process where the RSA public key and the individual ID are shared with the server, and the server then returns the signed certificate to the wallet.
 {% endhint %}

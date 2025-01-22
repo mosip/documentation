@@ -10,40 +10,49 @@ These are very basic configuration properties of the eSignet service. Most of th
   `mosip.esignet.id-token-expire-seconds=3600`
 * Generated **access token expiry** time in seconds\
   `mosip.esignet.access-token-expire-seconds=3600`
-* Switch off or on the **captcha** token validation in the send OTP request\
-  `mosip.esignet.send-otp.captcha-required=false`
+*   Captcha validation is enabled for the auth-factors - otp, password, biometrics, and pin.
+
+    `mosip.esignet.captcha.required=send-otp,pwd,kbi`
 * **Time** gap allowed **between** **authentication** **and** **consent** capture in seconds\
   `mosip.esignet.authentication-expire-in-secs`
 * Applicable for QR code-based login: QR code is embedded with link-code which is used by wallet apps to link transactions between the wallet app and the browser. This is the property to define the **lifetime of a link code** in seconds.\
   `mosip.esignet.link-code-expire-in-secs=600`
 * Regex to validate the input client ID\
   `mosip.esignet.supported-id-regex=\\S*`
+* One can configure wallet details that will be used to render as one of the login options. By default eSignet is setup with Inji wallet details.\
+  `mosip.esignet.ui.wallet.config={{'wallet.name': 'walletName', 'wallet.logo-url': '/images/qr_code.png', 'wallet.download-uri': '#',`\
+  `'wallet.deep-link-uri': 'io.mosip.residentapp.inji://wla-auth?linkCode=LINK_CODE&linkExpireDateTime=LINK_EXPIRE_DT' }}`
+* Configuration required to display KBI form. individual-id-field is set with field id which should be considered as an individual ID in the authenticate request.
+* form-details holds the list of field details like below:
+
+id -> unique field id, type -> holds datatype, format -> only supported for date fields, regex -> pattern to validate the input value, maxLength -> number of allowed characters.
+
+`mosip.esignet.authenticator.default.auth-factor.kbi.individual-id-field=policyID`
+
+`mosip.esignet.authenticator.default.auth-factor.kba.field-details={{'id': '${mosip.esignet.authenticator.default.auth-factor.kba.individual-id-field}', 'type':'text', 'format':'', 'maxLength': 50, 'regex': '^\s*[+-]?(\d+|\d*\.\d+|\d+\.\d*)([Ee][+-]?\d*)?\s*$'},{'id':'fullName', 'type':'text', 'format':'', 'maxLength': 50, 'regex': '^[A-Za-z\s]{1,}[\.]{0,1}[A-Za-z\s]{0,}$'},{'id':'dob', 'type':'date', 'format':'dd/mm/yyyy'}}`
+
+* Prefix and Postfix support is added to support the MOSIP handle feature, Prefix will be visible in the oidc-ui, but postfix is automatically added to the entered individual. Finally, the individual sent to the backend has both prefix and postfix appended if configured.
+
+`mosip.esignet.ui.config.username.prefix= mosip.esignet.ui.config.username.postfix=`
+
 * eSignet uses logback for logging. The **log level** of the application can be easily changed with this property.\
   `logging.level.io.mosip.esignet=INFO`
 
 ### OAuth and OpenID
 
-* Property to define the list of **authorize scopes**\
+* Property to define the list of **authorized scopes**\
   `mosip.esignet.supported.authorize.scopes={'manage-resident-vid'}`
 * Property to define the list of **OpenId scopes**\
   `mosip.esignet.supported.openid.scopes={'profile','email','phone'}`
 * Property to define the **OpenId scopes and user claim mappings** `mosip.esignet.openid.scope.claims={'profile' : {'name','picture','gender','birthdate','address'},'email' : {'email'}, 'phone' : {'phone_number'}}`
 
 {% hint style="info" %}
-To know more about the claims supported by eSignet, go through our [claims documentation](claims.md).
+**Note**: To know more about the claims supported by eSignet, go through our [claims documentation](claims.md).
 {% endhint %}
 
-* **OAuth** configuration's **well-known endpoint** is based on the below configuration property. This holds the map which is exactly the same as the [oauth-authorization-server](https://www.rfc-editor.org/rfc/rfc8414.html#section-2)'s well-known spec.\
+* **OAuth** configuration's **well-known endpoint** is based on the below configuration property. This holds the map which is the same as the [oauth-authorization-server](https://www.rfc-editor.org/rfc/rfc8414.html#section-2)'s well-known spec.\
   `mosip.esignet.oauth.key-values`
-* **OIDC** configuration **well known endpoint** is based on the below configuration property. This holds the map which is exactly the same as the [openid-configuration](https://openid.net/specs/openid-connect-discovery-1\_0.html#ProviderConfigurationResponse)'s well-known spec. `mosip.esignet.discovery.key-values`
-
-### VC Issuance
-
-* Property to define the list of **supported credential scopes** `mosip.esignet.supported.credential.scopes={'sample_vc_ldp'}`
-* **Client nonce** used in VCI flow **expiry** in seconds\
-  `mosip.esignet.cnonce-expire-seconds=20`
-* **OIDC** **VCI** configuration **well known** **endpoint** is based on the below configuration property. This holds the map which is the same as the [openid-credential-issuer](https://openid.github.io/OpenID4VCI/openid-4-verifiable-credential-issuance-wg-draft.html#name-credential-issuer-metadata) well-known spec.\
-  `mosip.esignet.vci.key-values`
+* **OIDC** configuration **well known endpoint** is based on the below configuration property. This holds the map which is the same as the [openid-configuration](https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderConfigurationResponse)'s well-known spec. `mosip.esignet.discovery.key-values`
 
 ## Cache
 
@@ -56,18 +65,18 @@ eSignet uses a cache to store all the details about UI transactions that are ide
   `mosip.esignet.cache.size`
 
 {% hint style="info" %}
-This is applicable only for `simple` cache type
+**Note:** This is applicable only for `simple` cache type
 {% endhint %}
 
 * Property to set the **Time To Live(TTL) per cache**, applicable to both `Redis` and `simple` cache `mosip.esignet.cache.expire-in-seconds`
 
 {% hint style="info" %}
-For cache other than `redis` and `simple`, based on the cache native TTL support a separate cache configuration should be added. Find the Redis cache config [here](https://github.com/mosip/esignet/blob/master/esignet-core/src/main/java/io/mosip/esignet/core/config/RedisCacheConfig.java).
+**Note:** For cache other than `redis` and `simple`, based on the cache native TTL support a separate cache configuration should be added. Find the Redis cache config [here](https://github.com/mosip/esignet/blob/master/esignet-core/src/main/java/io/mosip/esignet/core/config/RedisCacheConfig.java).
 {% endhint %}
 
 ## Plugin Integrations
 
-In eSignet, we use runtime plugins to connect with external ID systems or VC Issuers. As per design we only load one implementation of the plugin interface.
+In eSignet, we use runtime plugins to connect with external ID systems. As per design we only load one implementation of the plugin interface.
 
 The below properties define the plugin packages to be scanned and which implementations should be loaded into the spring context.
 
@@ -76,12 +85,11 @@ The below properties define the plugin packages to be scanned and which implemen
   `mosip.esignet.integration.authenticator=MockAuthenticationService`
 * **Key binder plugin** implementation is a conditional scanned bean based on the property below `mosip.esignet.integration.key-binder=MockKeyBindingWrapperService`
 * **Audit plugin** implementation is a conditional scanned bean based on the property below `mosip.esignet.integration.audit-plugin=LoggerAuditService`
-* **VCI plugin** implementation is a conditional scanned bean based on the property below `mosip.esignet.integration.vci-plugin=MockVCIssuancePlugin`
-
-Plugins may also have configurations defined. All those properties should be added in the [esignet-default.properties](https://github.com/mosip/mosip-config/blob/master/esignet-default.properties).
 
 {% hint style="info" %}
-Configuration properties with respect to mock plugins and MOSIP IDA plugins are by default added in the [esignet-default.properties](https://github.com/mosip/mosip-config/blob/master/esignet-default.properties) file in [mosip-config](https://github.com/mosip/mosip-config/tree/master) repository.
+**Note:** Configuration properties for mock plugins and MOSIP IDA plugins are by default added to the application.properties file. Please refer to the below links:\
+1\. [Mock Plugin properties](https://github.com/mosip/esignet-plugins/blob/release-1.3.x/mock-plugin/src/main/resources/application.properties) \
+2\. [MOSIP Plugin properties](https://github.com/mosip/esignet-plugins/blob/release-1.3.x/mosip-identity-plugin/src/main/resources/application.properties)
 {% endhint %}
 
 ## Key Manager
@@ -95,7 +103,7 @@ The key manager connects with the configured keystore. Below are the configurati
   `mosip.kernel.keymanager.hsm.keystore-pass`
 
 {% hint style="info" %}
-Most of the other key manager configurations need not be changed.
+**Note:** Most of the other key manager configurations need not be changed.
 {% endhint %}
 
 ## eSignet UI

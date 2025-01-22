@@ -16,6 +16,7 @@ With this release, we support the login flow for the following authentication fa
 3. [Login flow for Biometrics based authentication](https://docs.esignet.io/end-user-guide/login-with-biometrics)
 4. [Login flow with QR code (Inji)](https://docs.esignet.io/end-user-guide/login-with-qr-code)
 5. [Knowledge Based Identification](https://docs.esignet.io/end-user-guide/knowledge-based-authentication)
+6. [Sign up and Login with OTP for Verified Claims](signup-and-login-with-otp-for-verified-claims.md)
 
 > Note: The screenshots and the steps mentioned in each of the flows are for demonstration purpose only and are likely to change based on the use case.
 

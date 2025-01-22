@@ -6,39 +6,40 @@ The two main functionalities of the authenticator interface, **KYC Auth** and **
 
 <figure><img src="../.gitbook/assets/activity-diagrams-authenticator (1).png" alt=""><figcaption></figcaption></figure>
 
-Below is the eSignet authenticator interface,
+Below is the eSignet authenticator interface:
 
 ```java
 public interface Authenticator {
 
     /**
      * Delegate request to authenticate the user, and get KYC token
-     * @param relyingPartyId Relying Party (RP) ID. This ID will be provided during the partner self registration process
-     * @param clientId OIDC client Id. Auto-generated while creating OIDC client in PMS
+     * @param relyingPartyId relying Party (RP) ID. This ID will be provided during partner self registration process
+     * @param clientId OIDC client Id. Auto generated while creating OIDC client in PMS
      * @param kycAuthDto
-     * @return KYC Token and Partner-specific User Token (PSUT)
+     * @return KYC Token and Partner specific User Token (PSUT)
      * @throws KycAuthException
      */
+    @Deprecated
     KycAuthResult doKycAuth(String relyingPartyId, String clientId, KycAuthDto kycAuthDto)
             throws KycAuthException;
 
     /**
      * Delegate request to exchange KYC token with encrypted user data
-     * @param relyingPartyId Relying Party (RP) ID. This ID will be provided during partner self registration process
-     * @param clientId OIDC client Id. Auto-generated while creating OIDC client in PMS
+     * @param relyingPartyId relying Party (RP) ID. This ID will be provided during partner self registration process
+     * @param clientId OIDC client Id. Auto generated while creating OIDC client in PMS
      * @param kycExchangeDto
-     * @return signed and encrypted KYC data.
+     * @return signed and encrypted kyc data.
      * @throws KycExchangeException
      */
     KycExchangeResult doKycExchange(String relyingPartyId, String clientId, KycExchangeDto kycExchangeDto)
             throws KycExchangeException;
 
     /**
-     * Delegate request to send out OTP to provided individual ID on the configured channel
-     * @param relyingPartyId Relying Party (RP) ID. This ID will be provided during partner self registration process
-     * @param clientId OIDC client Id. Auto-generated while creating OIDC client in PMS
+     * Delegate request to send out OTP to provided individual Id on the configured channel
+     * @param relyingPartyId relying Party (RP) ID. This ID will be provided during partner self registration process
+     * @param clientId OIDC client Id. Auto generated while creating OIDC client in PMS
      * @param sendOtpDto
-     * @return status of send OTP response.
+     * @return status of send otp response.
      * @throws SendOtpException
      */
     SendOtpResult sendOtp(String relyingPartyId, String clientId, SendOtpDto sendOtpDto)
@@ -51,25 +52,49 @@ public interface Authenticator {
     boolean isSupportedOtpChannel(String channel);
 
     /**
-     * Get the list of KYC signing certificates and their details.
-     * List of certificates used for verifying KYC JWT will be published in /.well-known/jwks.json, as per OIDC standards
-     * @return list of certificates
+     * Get list of KYC signing certificate and its details.
+     * @return list
      */
     List<KycSigningCertificateData> getAllKycSigningCertificates() throws KycSigningCertificateException;
+
+    /**
+     * Authenticate and return individual's claims metadata if requested
+     * @param relyingPartyId
+     * @param clientId
+     * @param claimsMetadataRequired
+     * @param kycAuthDto
+     * @return
+     * @throws KycAuthException
+     */
+    default KycAuthResult doKycAuth(String relyingPartyId, String clientId, boolean claimsMetadataRequired, KycAuthDto kycAuthDto)
+            throws KycAuthException {
+        return doKycAuth(relyingPartyId, clientId, kycAuthDto);
+    }
+
+    /**
+     * Providioned to return verified userinfo based on the provided verification requirement
+     * @param relyingPartyId
+     * @param clientId
+     * @param kycExchangeDto
+     * @return
+     * @throws KycExchangeException
+     */
+    default KycExchangeResult doVerifiedKycExchange(String relyingPartyId, String clientId, VerifiedKycExchangeDto kycExchangeDto)
+            throws KycExchangeException {
+        return doKycExchange(relyingPartyId, clientId, kycExchangeDto);
+    }
 }
 ```
 
 {% hint style="info" %}
-For the latest version of the interface please check our code base - [Authenticator.java](https://github.com/mosip/esignet/blob/master/esignet-integration-api/src/main/java/io/mosip/esignet/api/spi/Authenticator.java)
+**Note:** For the latest version of the interface please check our code base - [Authenticator.java](https://github.com/mosip/esignet/blob/master/esignet-integration-api/src/main/java/io/mosip/esignet/api/spi/Authenticator.java)
 {% endhint %}
 
+## Who should implement the Authenticator plugin interface?
 
-## Who should implement Authenticator plugin interface?
+The authenticator plugin is implemented by [Identity Systems](../glossary.md#identity-systems), which wishes to integrate with eSignet to leverage the digital usage of identities.
 
-The authenticator plugin is implemented by [Identity Systems](../glossary.md#identity-systems) that wish to integrate with eSignet to leverage the digital usage of identities.
-
-An Identity system can be as simple as a table in a database or an Excel file storing user identity data, or can be a complex Identity System.
-
+An Identity system can be as simple as a table in a database or an Excel file storing user identity data or it can be a complex Identity System.
 
 ## How to implement this plugin?
 
@@ -86,14 +111,14 @@ public class MockAuthenticationService implements Authenticator {
 }
 ```
 
-For example, if OTP is one of the supported authentication factors in your identity system, authenticator interface provides method to,
+For example, if OTP is one of the supported authentication factors in your identity system, the authenticator interface provides a method to,
 
 * Define the supported OTP channels,
 * Implement the send-OTP functionality
 
-If the identity system does not support OTP based authentication then you could throw exception with appropriate error code.
+If the identity system does not support OTP based authentication then you could throw an exception with the appropriate error code.
 
-```java    
+```java
     SendOtpResult sendOtp(String relyingPartyId, String clientId, SendOtpDto sendOtpDto) {
         throw new SendOtpException("not_supported");
     }
@@ -104,8 +129,3 @@ If the identity system does not support OTP based authentication then you could 
 ```
 
 And also configure eSignet to expose only supported auth factors in the well-known endpoint.
-
-
-
-
-

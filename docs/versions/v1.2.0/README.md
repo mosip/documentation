@@ -8,7 +8,7 @@
 
 ## Overview
 
-The 1.2.0 version of eSignet focuses on the [**VC Issuance**](../../integration/vc-issuance.md) feature.
+The 1.2.0 version of eSignet focuses on the [**VC Issuance**](broken-reference) feature.
 
 * **Verifiable Credentials Issuance**: eSignet is an OAuth 2.0 and OIDC-based solution that has been enhanced to support OID4VCI flows. Integrating the eSignet VCI solution into a traditional issuer, allows the issuer application to become compliant with OID4VCI standards, ensuring interoperability with all OID4VCI compatible wallets.
 * **Signed Consent**: eSignet securely saves the consent in a dedicated consent registry that is specifically designed to store user consent for claims and scopes requested during the initial login to a relying party's application using eSignet.

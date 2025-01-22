@@ -2,28 +2,14 @@
 
 This document details the steps for running eSignet locally on your system for local development and integration.
 
-For the local deployment, eSignet is integrated with [mock identity system](https://github.com/mosip/esignet-mock-services/tree/master/mock-identity-system) using eSignet plugins specifically developed to connect with mock identity system. You can find the mock plugin implementation [here](https://github.com/mosip/esignet-mock-services/tree/master/mock-esignet-integration-impl).
+For the local deployment, eSignet is integrated with the [mock identity system](https://github.com/mosip/esignet-mock-services/tree/master/mock-identity-system) using eSignet plugins specifically developed to connect with the mock identity system.
 
-![](../../.gitbook/assets/esignet-with-mock-identity-system.png)
+We have a [docker-compose](https://github.com/mosip/esignet/tree/master/docker-compose) setup to start eSignet and its dependent services. Kindly refer to the [readme](https://github.com/mosip/esignet/blob/master/docker-compose/README.md) file to know the steps to run the docker-compose in detail.
 
-We have [docker-compose](https://github.com/mosip/esignet/tree/develop/docs/docker-compose) setup to start eSignet and its dependent services.
+### API Documentation <a href="#api-documentation" id="api-documentation"></a>
 
-You may find it helpful to watch the video below, which provides instructions on how to setup and run eSignet along with its dependent services locally.
+To know about the query parameters that are required to test the OIDC flow, refer to our stoplight [API documentation](https://mosip.stoplight.io/docs/identity-provider/branches/1.5.0/7oz4lmhu3pf6b-e-signet).
 
-{% embed url="https://www.youtube.com/watch?v=nmIZl6Tmt68" %}
+### Postman Collection <a href="#postman-collection" id="postman-collection"></a>
 
-## API Documentation
-
-To know about the query parameters that are required to test the OIDC flow, refer to our stoplight [API documentation](https://mosip.stoplight.io/docs/identity-provider/jlmszj6dlxigw-e-signet).
-
-## Postman Collection
-
-We also have Postman scripts available under [docs/postman-collections](https://github.com/mosip/esignet/tree/master/docs/postman-collections) folder in the eSignet GitHub repository.
-
-**Collection**
-
-{% embed url="https://github.com/mosip/esignet/blob/master/docs/postman-collections/esignet-OIDC-flow-with-mock.postman_collection.json" %}
-
-**Environment Configuration**
-
-{% embed url="https://github.com/mosip/esignet/blob/master/docs/postman-collections/esignet-OIDC-flow-with-mock.postman_environment.json" %}
+We also have Postman scripts available under the [postman-collections](https://github.com/mosip/esignet/tree/master/postman-collection) folder in the eSignet GitHub repository.

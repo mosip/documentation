@@ -98,11 +98,11 @@ https://relyingparty.domain.name/callbackurl is based on the domain pattern you 
 
 * Once the redirection happens the relying party is expected to perform the following
   * Send the state to the server. Validate if they are the same as expected. The server should also ensure the combination of state is valid.
-  * On Success, proceed with exchanging authorization code for access token using token endpoint.
+  * On Success, proceed with exchanging the authorization code for an access token using the token endpoint.
   * On failure, use the error and error description to decide on the user flow in your portal.
-* Exchange authorization code for Access token using token endpoint.
-  * Token endpoint should include client\_assertion (JWT signed using OAuth Client private key). As this needs a private key to build the request, we suggest relying party should delegate token request to backend server.
-  * eSignet only supports `private_key_jwt` client authentication method.
+* Exchange authorization code for an Access token using the token endpoint.
+  * The token endpoint should include client\_assertion (JWT signed using OAuth Client private key). As this needs a private key to build the request, we suggest the relying party should delegate the token request to the backend server.
+  * eSignet only supports `private_key_jwt` client authentication methods.
   *   The server should generate a JWT with the following payload.
 
       ```
@@ -167,14 +167,14 @@ https://relyingparty.domain.name/callbackurl is based on the domain pattern you 
 The access token & ID token are considered as a piece of confidential information and its expected to be kept safe by the relying party.
 {% endhint %}
 
-* Get userinfo with access token
+* Get userinfo with the access token
   * In case the developer is interested in the user’s information (eKYC) like given\_name or anything that the claim has then Using the access token you can call the user info endpoint to get the user information as a signed JWT.
 
 {% swagger src="../.gitbook/assets/esignet-1.2.0.yml" path="/oidc/userinfo" method="get" %}
 [esignet-1.2.0.yml](../.gitbook/assets/esignet-1.2.0.yml)
 {% endswagger %}
 
-*   User info endpoints response example listed below:
+*   User info endpoints response example is listed below:
 
     ```
     Example 1: 
@@ -225,14 +225,14 @@ The above command would ask you for a passphrase. Please provide a complex passp
 
 openssl rsa -pubout -in esignet\_private.pem -out esignet\_public.der
 
-The above command would extract the public key to esignet\_public.der file. When prompted for password, enter the same passphrase as before.
+The above command would extract the public key to esignet\_public.der file. When prompted for the password, enter the same passphrase as before.
 
 #### Tools to convert Public key to JWK format
 
-Use any of the online platforms or tools of your choice to convert the `esignet_public.der` to JWK format. You can open the file in any text editor and copy its contents and use the tools listed below to conver to JWK.
+Use any of the online platforms or tools of your choice to convert the `esignet_public.der` to JWK format. You can open the file in any text editor, and copy its contents, and use the tools listed below to convert to JWK.
 
 * install `pem-jwk` tool
-* Use the below command to convert public key in PEM format to JWK
+* Use the below command to convert the public key in PEM format to JWK
 
 `pem-jwk esignet_public.der > ./esignet_public.jwk`
 

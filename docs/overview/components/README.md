@@ -2,11 +2,11 @@
 
 The image below is a block diagram of the eSignet comprising various components along with the different layers and external systems.
 
-<figure><img src="../../.gitbook/assets/eSignet-Components.png" alt=""><figcaption><p>eSignet Components</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/eSignet_components.png" alt=""><figcaption><p>eSignet Components</p></figcaption></figure>
 
 ### Relying Party System
 
-The [Relying Party](../../glossary.md#relying-party) Systems depend on identity providers, such as eSignet, to authenticate and verify the identities of users before granting them access to protected resources or services.
+The [Relying Party](https://docs.esignet.io/glossary#relying-party) Systems depend on identity providers, such as eSignet, to authenticate and verify the identities of users before granting them access to protected resources or services.
 
 Clients utilizing OpenID Connect within the OAuth 2.0 framework are commonly referred to as Relying Parties (RPs).
 
@@ -14,9 +14,10 @@ In the case of VC issuance, they are simply OAuth 2.0 clients. To ensure enhance
 
 ### Digital Wallet
 
-[Digital Wallets](../../glossary.md#digital-id-wallet) are software-based platforms used to securely store and share the certified credentials of the wallet holder. These credentials are verified claims about the individual, typically certified by the identification system.
+[Digital Wallets](https://docs.esignet.io/glossary#digital-id-wallet) are software-based platforms used to securely store and share the certified credentials of the wallet holder.\
+Stored credentials can be used for login with the eSignet, once the credentials are binded with the RSA key pair and the corresponding public key is shared with eSignet.
 
-The eSignet VCI service offers a feature that allows the issuance of verifiable credentials to any digital wallet that adheres to the OpenID4VCI protocol.
+To know more about the key binding process please refer to [Key Binder Integration Guide](https://docs.esignet.io/integration/key-binder).
 
 ### **eSignet UI**
 
@@ -26,10 +27,10 @@ This is the user interface component of eSignet, developed using React JS. Its m
 * eSignet UI also offers QR code-based login with support for multiple digital wallets.
 * In addition, eSignet UI is compatible with MOSIP SBI 2.0 for biometric capture.
 * Furthermore, the eSignet UI provides flag-based captcha validation for OTP login.
-* Lastly, the landing page of the eSignet UI showcases the available "[.well-known](https://docs.esignet.io/build-and-deploy/configuration/.well-known)_"_ endpoints.
+* Lastly, the landing page of the eSignet UI showcases the available [.well-known](https://docs.esignet.io/build-and-deploy/configuration/.well-known) endpoints.
 
 {% hint style="info" %}
-Here are a few frequently asked questions on the eSignet UI.
+**Note:** Here are a few frequently asked questions on the eSignet UI.
 
 * [How to enable multiple digital wallet support for authentication?](../../faq/#how-to-integrate-wallets-with-esignet-to-provide-wallet-based-authentication)
 * [How to configure the expected quality score, timeouts, and number of bio attributes to be captured?](../../faq/#how-to-configure-the-expected-quality-score-timeouts-and-number-of-biometric-attributes-to-be-captur)
@@ -52,19 +53,16 @@ This service is the primary backend Spring Java application that incorporates va
    * Typically, Key Manager is run as a service, but it is used as a library in the eSignet Service to minimize the effort of managing extra containers.
    * It depends on the data layer for maintaining the metadata on keys.
 5. **Plugins**: Integration points with external systems are designed to be pluggable, allowing easy integration with any ID system. The pluggable integration points are as follows:
-   * [**Authenticator**](../../integration/authenticator.md) - for identity verification
-   * [**VCIssuancePlugin**](../../integration/vc-issuance.md) - for constructing Verifiable Credentials (VCs)
-   * [**AuditPlugin**](../../integration/audit.md) - for auditing all events
-   * [**KeyBinderPlugin**](../../integration/key-binder.md) - for key binding of a user and wallet
+   * [**Authenticator Plugin**](https://docs.esignet.io/integration/authenticator)- for identity verification
+   * [**Audit Plugin** ](https://docs.esignet.io/integration/audit)- for auditing all events
+   * [**Key Binder Plugin**](https://docs.esignet.io/integration/key-binder) - for key binding of a user and wallet
 
-{% hint style="info" %}
 All plugin interfaces are defined in the [esignet-integration-api](https://github.com/mosip/esignet/tree/master/esignet-integration-api) module.
-{% endhint %}
+
+### Sign up Portal
+
+The [SignUp portal](../../signup-portal/) is a user-friendly interface designed to facilitate the registration process. It allows users to securely create and manage their accounts by providing the necessary details.
 
 ### **Identification System (ID system)**
 
 This system refers to any operational or fundamental identification system that houses the user's demographic and biometric details (if applicable). It could be a database or a system equipped with suitable mechanisms to facilitate identity verification and the sharing of verified user data.
-
-### VC Issuer
-
-VC Issuer is an entity that can assert claims of a subject (here the holder), create verifiable credentials from these claims, and transmit the verifiable credentials to the holder.

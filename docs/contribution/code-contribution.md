@@ -10,6 +10,10 @@ The below recommended Github workflow allows developers to submit code and docum
 
 {% embed url="https://github.com/mosip/esignet-mock-services" %}
 
+{% embed url="https://github.com/mosip/esignet-signup" %}
+
+{% embed url="https://github.com/mosip/esignet-plugins" %}
+
 ## Setup your development machine
 
 1. Fork repository of interest.
@@ -47,7 +51,7 @@ The below recommended Github workflow allows developers to submit code and docum
 $ git fetch upstream
 ```
 
-3\. On your local repo, switch to a branch if you are working on an older release (like the 1.0.0 branch) or stay in `main/develop` branch.
+3\. On your local repo, switch to a branch if you are working on an older release (like the 1.0.0 branch) or stay in `main/develop` the branch.
 
 ```
 $ git checkout upstream/<branch> 

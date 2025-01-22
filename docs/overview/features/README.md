@@ -26,34 +26,22 @@ Mobile wallet-based authentication can be utilized to scan a QR code and finaliz
 
 eSignet also offers password authentication as one of its authentication factors. With eSignet's integration capabilities, existing ID repositories storing user accounts with passwords can now be easily integrated with eSignet. This integration enables OpenID based login, allowing users to access relying party services seamlessly.
 
-[How to enable password-based authentication in eSignet?](../../faq/#how-to-configure-password-authentication-in-esignet)
+[**How to enable password-based authentication in eSignet?**](../../faq/#how-to-configure-password-authentication-in-esignet)
 
-## Knowledge Based Identification
+### Knowledge Based Identification
 
 eSignet has expanded its authentication options to include Knowledge-Based Identification (KBI) as one of its factors. With eSignet's integration capabilities, existing ID repositories storing user-specific details can now be easily integrated with eSignet thereby enabling service providers to authenticate users.
 
-#### KBI form configuration for eSignet UI
+#### [How to configure KBI form in eSignet UI?](./#how-to-configure-kbi-form-in-esignet-ui)
 
-Knowledge based Identification has been developed in such a way that the form filled by the user on the UI can be configured. Please refer to the link [here](https://docs.esignet.io/end-user-guide/knowledge-based-authentication) for more information about KBI with a use case of Insurance VC Issuance.
-
-Please refer to the [FAQ](../../faq/#how-to-configure-kbi-form-in-esignet-ui) section for more details on how to configure the KBI form in eSignet UI.
-
-#### Authenticator plugin implementation for KBI with Sunbird RC
-
-Authenticator plugin: This Authenticator plugin allows the user to identify the user with the details provided in the KBI form in the eSignet UI and Identifies the user based on the details from the registry called Sunbird RC.
-
-For more technical details about Sunbird  RC find the below information and refer to the link provided below:
-
-#### **Sunbird RC version:** v2.0.0-rc3
-
-The authenticator plugin for the Sunbird registry only supports the “Knowledge Based Identification” (KBI) of the end user. The fields part of the KBI is completely dependent on the registry schema. Fields configured to be part of the KBI form should identify the end user. Denies the identification if more than one entry is found in the registry. Support is added for text and date fields. For more details on 'eSignet and Sunbird RC Integration Implementation' please refer [here](https://github.com/mosip/digital-credential-plugins/blob/master/sunbird-rc-esignet-integration-impl/README.md).&#x20;
+[**How is the authenticator plugin implemented for KBI with Sunbird RC?**](../../faq/#how-is-authenticator-plugin-implemented-for-kbi-with-sunbird-rc)
 
 #### Verifiable Credentials&#x20;
 
 Verifiable credentials (VCs) are digital representations of physical credentials like passports or licenses. They are digitally signed, making them tamper-resistant and instantly verifiable. Issued by trusted entities, VCs are stored in digital wallet apps and used by individuals to access various services.
 
 {% hint style="info" %}
-📝**Note:** VCI is supported up to [eSignet v1.4.2](https://docs.esignet.io/versions/v1.4.2) but will no longer be supported in future versions.
+**Note:** VCI is supported up to [eSignet v1.4.2](https://docs.esignet.io/versions/v1.4.2) but will no longer be supported in future versions.
 {% endhint %}
 
 Verifiable Credentials Issuance (VCI) is now supported by[ Inji Certify](https://docs.mosip.io/inji/inji-certify/overview), to know more about VCI please refer [here](https://docs.mosip.io/inji/inji-certify/overview#verifiable-credentials-issuance-through-inji-certify).
@@ -65,6 +53,24 @@ User consent refers to the voluntary and informed agreement provided by an indiv
 Consent mechanisms are often used in the form of checkboxes, pop-up notifications, or consent forms on applications to ensure that the users understand and agree to data processing practices.\
 \
 eSignet stores the consent in a built-in **consent registry** which is specifically designed to store user consent on claims and scopes that are requested during the first login into a relying party's application using eSignet.
+
+### **Identity Assurance Flow(eKYC verification)**
+
+eSignet has been enhanced to integrate the OpenID Connect (OIDC) protocol extension for identity assurance and verification metadata, enabling a video-based eKYC verification process during user sign in. This enhancement allows relying parties (e.g., banks, insurance companies, and other regulated entities) to authenticate users and verify their identity claims with a high level of confidence, combining video verification with traditional methods like document scanning and biometric checks.
+
+#### **OpenID Connect Assurance Extension**
+
+The [OpenID Connect Assurance Extension](https://openid.net/specs/openid-connect-4-identity-assurance-1_0.html) is an enhancement to the OpenID Connect (OIDC) protocol that adds assurance data to identity claims. While OpenID Connect enables secure authentication, the assurance extension provides additional metadata about the trustworthiness and verification of claims. This assurance data includes:
+
+* **Verification Status**: Whether the claim is self-asserted or verified (e.g., by government-issued IDs, document validation, or biometric checks).
+* **Verification Process Details**: Information about who and how the claim was verified, such as the trust framework, process, and method used (e.g., in-person document check, video verification, or biometric validation).
+* **Assurance Level**: The level of confidence or trust in the claim's accuracy.
+
+This extension is particularly useful in scenarios requiring strong identity verification, such as eKYC (electronic Know Your Customer) processes in regulated industries like banking and finance.
+
+#### **Claim level status** <a href="#claim-level-status" id="claim-level-status"></a>
+
+Based on the request for verified claims, eSignet displays fine-grained details for each claim about its availability and its verification status to the end user. With this, the end-user is well informed about the claim details and is enabled to go through the verification process or deny the request.
 
 ## Language Support for eSignet
 
