@@ -132,24 +132,16 @@ The types of authentication methods supported by eSignet are [available here](..
 
 </details>
 
-<details>
-
-<summary></summary>
-
-
-
-</details>
-
 ## Partner Integrations
 
 <details>
 
 <summary><strong>Can you provide examples of successful integrations with potential partners?</strong></summary>
 
-eSignet will be deployed across various platforms, focusing on secure authentication. The solution is actively exploring integration opportunities with new partners and countries, with proof of concept (POC) completed in multiple countries. Below are some examples of eSignet integrations:
+eSignet will be deployed across various platforms, focusing on secure authentication. The solution actively explores integration opportunities with new partners and countries, with proof of concept (POC) completed in multiple countries. Below are some examples of eSignet integrations:
 
 * **Health Management**: The POC for eSignet integration with the Health Management portal is complete, enabling OTP and biometric-based authentication for seamless access to health services, with user verification against migrated ID data.
-* **SuperApp Integration**: eSignet will be integrated into a multi-service SuperApp for basic registration, login, and enhanced eKYC, with development in progress and completion expected soon.
+* **SuperApp Integration:** eSignet will be integrated into a multi-service SuperApp for basic registration, login, and enhanced eKYC. Development is underway, and completion is expected soon.
 * **Insurance Portal**: Integration of eSignet with a health insurance portal is underway, using migrated ID data for secure authentication and quick access to insurance services.
 * **University Authentication**: eSignet is being implemented for face authentication of students and staff, verified against university ID data for access to services like exams, hostel assignments, and meal identification.
 * **Government and Private Services**: A brownfield implementation of MOSIP is in progress, with eSignet integration planned to authenticate users with National ID data across government and private services.

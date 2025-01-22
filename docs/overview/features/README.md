@@ -4,15 +4,11 @@
 
 eSignet offers a convenient feature called Unified Login, which allows users to access applications and various services through a single interface thus eliminating the need for multiple logins. Additionally, eSignet enables seamless login to any government service by utilizing a single credential through the existing ID repository.
 
-## Password-less Authentication
-
-eSignet implements a password-less login method that leverages authentication factors supported by our system. This approach enhances security by mitigating the potential risks associated with password-related security vulnerabilities, such as weak passwords, password reuse, and phishing attacks.
-
 ## Support for various Authentication Modalities
 
 ### OTP Authentication
 
-OTP authentication offers an additional level of security due to the short validity period of the OTP. In the case of logging into eSignet with OTP as the chosen method, our system generates a unique OTP and delivers it to the user via a registered communication channel, such as SMS or email. Upon receiving the OTP, the user can input it into the login interface. The system then compares the entered OTP with the generated one. If they match, the user is granted access to the system.
+OTP authentication offers an additional level of security due to its short validity period. When logging into eSignet with OTP as the chosen method, our system generates a unique OTP and delivers it to the user via a registered communication channel, such as SMS or email. Upon receiving the OTP, the user can input it into the login interface. The system then compares the entered OTP with the generated one. If they match, the user is granted access to the system.
 
 ### Biometric Authentication
 
