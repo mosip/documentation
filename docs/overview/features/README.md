@@ -75,13 +75,13 @@ The eSignet user interface (UI) offers comprehensive language support to facilit
 Furthermore, eSignet has undergone meticulous testing to ensure seamless compatibility with right-to-left (RTL) languages. This means that users can rely on eSignet to confidently navigate and interact with RTL content.
 
 {% hint style="info" %}
-📝 **Note:** \
-1\. To add more language bundles in eSignet, you can go through the below article.
+📝 **Note:**&#x20;
+
+1. To add more language bundles in eSignet, please refer to the below FAQ.
 
 [How to add a new language to eSignet?](https://docs.esignet.io/faq#how-to-add-a-new-language-in-esignet)
 
-2. To remove a language from eSignet, you can go through the below article.
+2. To remove a language from eSignet, please refer to the below FAQ.
 
 [How to remove a language from the eSignet default setup?](../../faq/#how-to-remove-a-language-from-the-esignet-default-setup)
 {% endhint %}
-

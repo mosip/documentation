@@ -1,5 +1,5 @@
 ---
-description: Below are some of the FAQs about eSignet
+description: Below are some frequently asked questions (FAQs) about eSignet
 ---
 
 # FAQs
@@ -401,7 +401,7 @@ To know more, click [here](../integration/relying-party.md).
 
 <details>
 
-<summary>How to configure a VC issuer in eSignet?</summary>
+<summary><strong>How to configure a VC issuer in eSignet?</strong></summary>
 
 The VC Issuance plugin interface provides methods to return Verifiable Credentials (VCs) of an individual (here, the holder of the credential) when authorized. Today, this interface supports methods for returning linked data-proof VC (as JSON-LD) and VC as JWT.
 
@@ -427,7 +427,7 @@ To know more about how to configure the KBI Form in eSignet please refer [here](
 
 <details>
 
-<summary>How is authenticator plugin implemented for KBI with Sunbird RC?</summary>
+<summary><strong>How is authenticator plugin implemented for KBI with Sunbird RC?</strong></summary>
 
 The Authenticator plugin allows the user to identify the user with the details provided in the KBI form in the eSignet UI and Identifies the user based on the details from the registry called Sunbird RC.\
 \

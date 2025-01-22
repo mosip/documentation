@@ -114,7 +114,7 @@ The various metrics that assist in test tracking and efficiency are as follows:
 
 <table><thead><tr><th>Device</th><th>Browser</th><th>OS version</th><th width="167">Display resolution</th><th>Screen size</th></tr></thead><tbody><tr><td>Oppo A96 v11.0</td><td>Chrome</td><td>Android, v11.0</td><td>1080x2412 px</td><td>6.59</td></tr><tr><td>Samsung Galaxy S8 v7.0</td><td>Fire fox</td><td>Android, v7.0</td><td>1440 x 2960 px</td><td>5.8</td></tr><tr><td>Redmi 6A</td><td>edge, chrome &#x26; firefox</td><td>Android, v9.0</td><td>1440 x 720 px</td><td>5.45</td></tr><tr><td>iPhone XS v15.3</td><td>safari</td><td>iOS, v15.3</td><td>1125 x 2436 px</td><td>5.8</td></tr><tr><td>iphone 7</td><td>safari, chrome, firefox &#x26; edge</td><td>15.6</td><td>750x 1334 px</td><td>4.7</td></tr><tr><td>Oppo Reno12 Pro</td><td>chrome</td><td>Android 14</td><td>1080 x 2412 pixels</td><td>6.7</td></tr><tr><td>Redmi A1</td><td>chrome</td><td>Android 12</td><td>720 x 1600 pixels</td><td>6.52</td></tr><tr><td>Iphone 15 Plus</td><td>Safari</td><td>IOS 18</td><td>2796x1290 pixels</td><td>6.7</td></tr><tr><td>MOSIP's MacBook Air</td><td>Safari</td><td>Sonoma 14.6.1</td><td>2560*1664</td><td>13.6</td></tr><tr><td>Nokia T10</td><td>chrome</td><td>Android 14</td><td>800 x 1280 pixels</td><td>8</td></tr></tbody></table>
 
-#### **Desktop browser specification**
+### **Desktop browser specification**
 
 Browser Compatibility for desktop and mobile:
 
@@ -127,4 +127,4 @@ Browser Compatibility for desktop and mobile:
 
 ### **Sonar Report**
 
-<table data-full-width="true"><thead><tr><th width="144">Repo Name</th><th width="143">Branch Name</th><th width="155">Release Version (POM)</th><th width="108">Coverage (>80%)</th><th width="112">Reliability (0)</th><th>Security (0)</th><th width="109">Hotspots (0)</th><th>Duplications  (Less than 3%)</th></tr></thead><tbody><tr><td>eSignet</td><td>release-1.5.x</td><td>v1.5.0</td><td>86.8%</td><td>0</td><td>0</td><td>0</td><td>0%</td></tr><tr><td>eSignet Signup</td><td>release-1.1.x</td><td>v1.1.0</td><td>81.2%</td><td>0</td><td>0</td><td>0</td><td>0%</td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="180">Repository Name</th><th width="143">Branch Name</th><th width="155">Release Version (POM)</th><th width="108">Coverage (>80%)</th><th width="112">Reliability (0)</th><th>Security (0)</th><th width="109">Hotspots (0)</th><th>Duplications  (Less than 3%)</th></tr></thead><tbody><tr><td>eSignet</td><td>release-1.5.x</td><td>v1.5.0</td><td>86.8%</td><td>0</td><td>0</td><td>0</td><td>0%</td></tr><tr><td>eSignet Signup</td><td>release-1.1.x</td><td>v1.1.0</td><td>81.2%</td><td>0</td><td>0</td><td>0</td><td>0%</td></tr></tbody></table>
