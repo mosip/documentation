@@ -2,7 +2,7 @@
 
 **Release Name**: v.1.5.0
 
-**Release Date**: Coming Soon
+**Release Date**: 23rd Jan, 2025
 
 ### **Overview**
 
@@ -57,13 +57,22 @@ Please refer to [this link](https://mosip.atlassian.net/issues/?filter=11689) fo
 
 ### **Repositories Released**
 
-| **Repository Released** | **Tags**       |
-| ----------------------- | -------------- |
-| esignet                 |  v1.5.0        |
-| esignet-signup          |  v1.1.0        |
-| esignet-mock-services   |  v0.10.0       |
-| esignet-plugins         |  v1.3.0        |
-| mosip-onboarding        |  v1.3.0-beta.1 |
+| Repository Released   | Tags                                                                           |
+| --------------------- | ------------------------------------------------------------------------------ |
+| esignet               | [ v1.5.0](https://github.com/mosip/esignet/tree/v1.5.0)                        |
+| esignet-signup        | [ v1.1.0](https://github.com/mosip/esignet-signup/tree/v1.1.0)                 |
+| esignet-mock-services |  [v0.10.0](https://github.com/mosip/esignet-mock-services/tree/v0.10.0)        |
+| esignet-plugins       |  [v1.3.0](https://github.com/mosip/esignet-plugins/tree/v1.3.0)                |
+| mosip-onboarding      | [ v1.3.0-beta.1](https://github.com/mosip/mosip-onboarding/tree/v1.3.0-beta.1) |
+
+### **Compatible Modules**
+
+| Module/Repository | Compatible Version |
+| ----------------- | ------------------ |
+| IDA               | 1.2.1.0            |
+| ID Repository     | 1.2.1.0            |
+| Kernel            | 1.2.0.1            |
+| Sunbird           | v2.0.0-rc3         |
 
 ### **Documentation**
 

@@ -7,7 +7,7 @@ description: Please refer below for all the latest release details 🌟
 ## Version: 1.5.0
 
 * **Name:** eSignet
-* **Date:** Coming Soon
+* **Date:** 23rd Jan, 2025
 * [**Release Notes**](https://docs.esignet.io/versions/v1.5.0)
 
 ## Version: 1.4.2
