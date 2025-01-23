@@ -46,7 +46,7 @@ We believe this release will greatly improve eSignet's security, efficiency, and
 
 ### **Key Known Issues**
 
-| **Jira Issue**                                        | **Issue Description**                                                                                                              |
+| Jira Issue                                            | Issue Description                                                                                                                  |
 | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | [ES-1992](https://mosip.atlassian.net/browse/ES-1992) | OAuth Details API is initiating the transaction despite a mismatch between the aud claim in the provided ID token and the clientId |
 | [ES-1986](https://mosip.atlassian.net/browse/ES-1986) | IDT based authentication is successful on using reused challenge.                                                                  |

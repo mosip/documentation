@@ -4,6 +4,10 @@
 
 eSignet offers a convenient feature called Unified Login, which allows users to access applications and various services through a single interface thus eliminating the need for multiple logins. Additionally, eSignet enables seamless login to any government service by utilizing a single credential through the existing ID repository.
 
+### Password-less Authentication <a href="#password-less-authentication" id="password-less-authentication"></a>
+
+eSignet implements a password-less login method that leverages authentication factors supported by our system. This approach enhances security by mitigating the potential risks associated with password-related security vulnerabilities, such as weak passwords, password reuse, and phishing attacks.
+
 ## Support for various Authentication Modalities
 
 ### OTP Authentication
@@ -16,13 +20,7 @@ eSignet can connect to any biometric device that complies with IEEE P3167 SBI 2.
 
 ### Wallet-based Authentication
 
-Mobile wallet-based authentication can be utilized to scan a QR code and finalize the authentication process using the previously activated credentials for online login. Additionally, facial authentication can happen on the wallet to make sure the presence is verified.
-
-### Password-based Authentication
-
-eSignet also offers password authentication as one of its authentication factors. With eSignet's integration capabilities, existing ID repositories storing user accounts with passwords can now be easily integrated with eSignet. This integration enables OpenID based login, allowing users to access relying party services seamlessly.
-
-[**How to enable password-based authentication in eSignet?**](../../faq/#how-to-configure-password-authentication-in-esignet)
+Mobile wallet-based authentication can be utilized to scan a QR code and finalize the authentication process using the previously activated credentials for online login. Additionally, facial authentication can be performed on the wallet to verify the presence.
 
 ### Knowledge Based Identification
 
@@ -40,7 +38,7 @@ Verifiable credentials (VCs) are digital representations of physical credentials
 **Note:** VCI is supported up to [eSignet v1.4.2](https://docs.esignet.io/versions/v1.4.2) but will no longer be supported in future versions.
 {% endhint %}
 
-Verifiable Credentials Issuance (VCI) is now supported by[ Inji Certify](https://docs.mosip.io/inji/inji-certify/overview), to know more about VCI please refer [here](https://docs.mosip.io/inji/inji-certify/overview#verifiable-credentials-issuance-through-inji-certify).
+**Verifiable Credentials Issuance (VCI)** is now supported by[ Inji Certify](https://docs.mosip.io/inji/inji-certify/overview), to know more about VCI please refer [here](https://docs.mosip.io/inji/inji-certify/overview#verifiable-credentials-issuance-through-inji-certify).
 
 ## Consent
 
