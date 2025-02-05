@@ -1,5 +1,5 @@
 ---
-description: The power of secure access.
+description: Explore eSignet’s powerful features for secure access.
 ---
 
 # Features
