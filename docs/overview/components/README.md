@@ -1,3 +1,7 @@
+---
+description: Connecting secure components for seamless identity verification.
+---
+
 # Components
 
 The image below is a block diagram of the eSignet comprising various components along with the different layers and external systems.

@@ -1,4 +1,8 @@
-# Overview
+---
+description: Empowering secure and seamless identity verification.
+---
+
+# 📖 Overview
 
 eSignet is envisioned as a thin add-on system to any existing digital ID solution to bring in additional capabilities and enhance functionalities.
 

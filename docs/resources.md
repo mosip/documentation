@@ -1,4 +1,8 @@
-# Resources
+---
+description: Dive into eSignet with interactive workshops and webinars!
+---
+
+# 📚 Resources
 
 ### eSignet - A Technical Deep Dive
 

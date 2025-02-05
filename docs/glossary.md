@@ -1,6 +1,8 @@
-# Glossary
+---
+description: This section lists key identity domain terms with concise definitions.
+---
 
-This section mainly comprises a list of terms in the identity domain along with their definitions.
+# 📑 Glossary
 
 <details>
 
@@ -39,7 +41,6 @@ Identity systems, in the context of digital identity and access management, refe
 <details>
 
 <summary>Identity Verification</summary>
-
 
 Identity verification is the important process of ensuring that a person is who they claim to be to avail of various government and private sector services.
 

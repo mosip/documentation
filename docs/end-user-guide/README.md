@@ -1,4 +1,8 @@
-# End User Guide
+---
+description: Fast, secure authentication for residents made easy!
+---
+
+# 👨‍💻 End User Guide
 
 In this user guide, we are taking an example of a health services portal that acts as a relying party using eSignet to provide services and benefits to the residents. Also, in turn, the residents can quickly identify themselves using their country's foundation ID system (here MOSIP), thereby avoiding the hassles of repeatedly filling up their account or personal information.
 

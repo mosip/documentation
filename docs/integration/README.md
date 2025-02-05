@@ -1,4 +1,10 @@
-# Integration Guides
+---
+description: >-
+  Explore seamless eSignet integration with guides on authentication, digital
+  wallets, and more
+---
+
+# 🧩 Integration Guides
 
 This section contains various guides and information that could benefit:
 
