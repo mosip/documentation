@@ -19,9 +19,9 @@ While existing verification methods offer security, they often lack inclusivity 
 
 The images below depict the eSignet user login process, showcasing different authentication methods:
 
-![Login using QR code](_images/e-signet-qr.jpg) ![Login using fingerprint](_images/e-signet-bio.jpg)
+<div data-full-width="true"><img src="_images/e-signet-qr.jpg" alt="Login using QR code"> <img src="_images/e-signet-bio.jpg" alt="Login using fingerprint"></div>
 
-#### **What can eSignet be used for?**
+**What can eSignet be used for?**
 
 ✅ **Seamless Login:** eSignet is a reliable login provider for a relying party application that allows access to the service without the need for additional login credentials.
 
@@ -45,4 +45,4 @@ eSignet re-imagines authentication services to factor in emerging trends and the
 
 eSignet is a contemporary and adaptable system for verifying digital identities. This solution is not involved with the issuance and management of IDs. It is designed to be compatible with any ID repository through a straightforward integration model.&#x20;
 
-🚀 **Any ID repository that provides authentication and attribute retrieval capabilities can utilize eSignet ease!**
+🚀 **Any ID repository that provides authentication and attribute retrieval capabilities can utilize eSignet with ease!**
