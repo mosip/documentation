@@ -1,5 +1,5 @@
 ---
-description: Your gateway to secure, seamless digital identity verification.
+description: Empowering secure and seamless digital identity verification.
 ---
 
 # 🌐 eSignet
