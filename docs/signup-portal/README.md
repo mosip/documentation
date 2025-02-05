@@ -11,11 +11,11 @@ The signup portal offers features for creating a user profile and a way to verif
 The user profile created via the signup portal is stored in an ID registry. The signup portal connects to the ID registry via a runtime plugin, making it completely flexible to use any kind of ID registry. The signup portal comes with an out-of-the-box MOSIP ID repository plugin.
 
 {% hint style="info" %}
-Note: The signup portal can also used with any existing ID registries only leveraging the eKYC verification feature.
+**Note:** The signup portal can also used with any existing ID registries only leveraging the eKYC verification feature.
 {% endhint %}
 
 1. **Signup Service**: This is the backend component that manages the registration logic. It supports the creation of new user accounts by processing user inputs, performing necessary validations, securely storing user data in the ID registry, and integrating with external systems as needed. The service is built with flexibility in mind, allowing it to connect seamlessly to any external ID registry system through a well-defined [Profile Registry Plugin](integration-guide/profile-registry-plugin.md).
-2. **Signup UI**: The Signup UI is the front-end component that provides a web-based interface through which end users can submit their registration know more about Signup UI please refer here.
+2. **Signup UI**: The Signup UI is the front-end component that provides a web-based interface for end users to submit their registration. To learn more about the Signup UI, please refer [here](https://docs.esignet.io/signup-portal/components#signup-ui).
 
 Together, the Signup Portal streamlines the user registration process, enabling new users to quickly gain access to digital services via eSignet.
 

@@ -28,11 +28,13 @@ Mobile wallet-based authentication can be utilized to scan a QR code and finaliz
 
 ### Knowledge Based Identification
 
-eSignet has expanded its authentication options to include Knowledge-Based Identification (KBI) as one of its factors. With eSignet's integration capabilities, existing ID repositories storing user-specific details can now be easily integrated with eSignet thereby enabling service providers to authenticate users. Below are some of the FAQs on KBI:
+eSignet has expanded its authentication options to include Knowledge-Based Identification (KBI) as one of its factors. With eSignet's integration capabilities, existing ID repositories storing user-specific details can now be easily integrated with eSignet thereby enabling service providers to authenticate users.&#x20;
 
-#### [How to configure KBI form in eSignet UI?](./#how-to-configure-kbi-form-in-esignet-ui)
+Below are some of the FAQs on KBI:
 
-#### [**How is the authenticator plugin implemented for KBI with Sunbird RC?**](../../faq/#how-is-authenticator-plugin-implemented-for-kbi-with-sunbird-rc)
+[**How to configure KBI form in eSignet UI?**](./#how-to-configure-kbi-form-in-esignet-ui)
+
+[**How is the authenticator plugin implemented for KBI with Sunbird RC?**](../../faq/#how-is-authenticator-plugin-implemented-for-kbi-with-sunbird-rc)
 
 #### Verifiable Credentials&#x20;
 
