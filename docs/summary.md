@@ -1,7 +1,7 @@
 # Table of contents
 
 * [🌐 eSignet](README.md)
-* [📖 Overview](overview/README.md)
+* [🔍 Overview](overview/README.md)
   * [Features](overview/features/README.md)
   * [Principles](overview/principles/README.md)
   * [Standards](overview/Standards/README.md)

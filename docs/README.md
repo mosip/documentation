@@ -4,32 +4,45 @@ description: Empowering secure and seamless digital identity verification.
 
 # 🌐 eSignet
 
-In today's digital transformation era, there has been a global shift towards moving most services online. A secure and trusted digital identity is crucial to facilitate personalized access to these online services. **eSignet** strives to provide a user-friendly and effective method for individuals to authenticate themselves and utilize online services while also having the option to share their profile information. Moreover, eSignet supports multiple modes of identity verification to ensure inclusivity and broaden access, thereby reducing potential digital barriers.
+In today’s digital-first world, most services are transitioning online, making a secure and trusted digital identity more important than ever. A secure and trusted digital identity is crucial to facilitate personalized access to these online services.&#x20;
+
+**eSignet** strives to provide a user-friendly and effective method for individuals to authenticate themselves and utilize online services while also having the option to share their profile information. Moreover, eSignet supports multiple modes of identity verification to ensure inclusivity and broaden access, thereby reducing potential digital barriers.
 
 Additionally, eSignet offers a seamless and straightforward solution for incorporating an existing trusted identity database into the digital realm. By enabling digital identities and providing identity verification and service access, eSignet delivers a sophisticated and user-friendly experience.
 
-{% hint style="info" %}
-* There is a need to expand the range of verification methods to be more inclusive. The current approaches to verification do not adequately address privacy concerns. We are continually exploring ways to address the digital divide while also prioritizing privacy. \
-  Here is a short introduction to [**identity verification**](glossary.md#identity-verification) methods.&#x20;
-* Additionally, read through [**Inji**](https://docs.mosip.io/inji/) to gain insight into contemporary approaches to identity verification through the use of verifiable credentials for decentralized verification.
-{% endhint %}
+#### **Addressing Privacy & Inclusivity**
 
-![](_images/e-signet-qr.jpg) ![](_images/e-signet-bio.jpg)
+While existing verification methods offer security, they often lack inclusivity and do not fully address privacy concerns. At eSignet, we are continuously exploring ways to **bridge the digital divide** while prioritizing **user privacy and control** over personal data.
 
-**What can eSignet be used for?**
+👉 Learn more about[ **identity verification**](https://docs.esignet.io/glossary#identity-verification) methods.\
+👉 Explore[ **Inji** ](https://docs.inji.io/)to understand modern verification techniques using verifiable credentials for decentralized authentication.
 
-* eSignet is a reliable login provider for a relying party application that allows access to the service without the need for additional login credentials.
-* eSignet also offers a secure method for verifying an individual's identity against trusted identity providers such as national identity databases, driver's license systems, passport systems, or other reputable sources. The level of assurance is determined by the authentication factor utilized, with biometric authentication providing an added layer of user presence confirmation.
-* Additionally, eSignet facilitates consented data sharing for profile creation or meeting electronic Know Your Customer (eKYC) requirements for relying parties. When a relying party requests authentication, they can also request a specific set of attributes needed for profile creation or compliance with eKYC norms. The user's requested information is shared only after they have provided consent during the eSignet login process.
+The images below depict the eSignet user login process, showcasing different authentication methods:
 
-**How is eSignet different from other services?**
+![Login using QR code](_images/e-signet-qr.jpg) ![Login using fingerprint](_images/e-signet-bio.jpg)
 
-eSignet re-imagines authentication services to factor in emerging trends and the need for assured digital identities. It brings critical capabilities to the authentication process:
+#### **What can eSignet be used for?**
 
-* Framework to seamlessly integrate existing identity stores for authentication and KYC (Know Your Customer) requirements.
-* Robust support for biometric authentication.
-* Comprehensive support for wallet-based authentication.
+✅ **Seamless Login:** eSignet is a reliable login provider for a relying party application that allows access to the service without the need for additional login credentials.
 
-**Who is the intended user of this product?**
+✅ **Identity Verification:** eSignet also offers a secure method for verifying an individual's identity against trusted identity providers such as national identity databases, driver's license systems, passport systems, or other reputable sources. The level of assurance is determined by the authentication factor utilized, with biometric authentication providing an added layer of user presence confirmation.
 
-eSignet is a contemporary and adaptable system for verifying digital identities. This solution is not involved with the issuance and management of IDs. It is designed to be compatible with any ID repository through a straightforward integration model. Any ID repository that provides authentication and attribute retrieval capabilities can utilize eSignet.
+✅ **Consented Data Sharing:** Additionally, eSignet facilitates consented data sharing for profile creation or meeting electronic Know Your Customer (eKYC) requirements for relying parties. When a relying party requests authentication, they can also request a specific set of attributes needed for profile creation or compliance with eKYC norms.
+
+🔒 User data is only shared with explicit consent during the authentication process.
+
+#### **How is eSignet different from other services?**
+
+eSignet re-imagines authentication services to factor in emerging trends and the need for assured digital identities. It brings critical capabilities to the authentication process.
+
+**Key features include:**
+
+* **Seamless integration** - Framework to seamlessly integrate existing identity stores for authentication and KYC (Know Your Customer) requirements.
+* **Advanced biometric authentication** - for enhanced security.
+* **Comprehensive support** - for wallet-based authentication.
+
+#### **Who is the intended user of this product?**
+
+eSignet is a contemporary and adaptable system for verifying digital identities. This solution is not involved with the issuance and management of IDs. It is designed to be compatible with any ID repository through a straightforward integration model.&#x20;
+
+🚀 **Any ID repository that provides authentication and attribute retrieval capabilities can utilize eSignet ease!**
