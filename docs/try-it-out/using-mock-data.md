@@ -19,7 +19,7 @@ Please select the appropriate image file corresponding to the chosen UIN above.
 {% file src="../.gitbook/assets/Jane Thompson (1).jpeg" %}
 
 {% hint style="info" %}
-**Note**: The data used in the above VIDs is fictitious and the images returned are AI-generated from the website: [https://thispersondoesnotexist.com/](https://thispersondoesnotexist.com/)
+**Note**: The data used in the above VIDs is fictitious and the images shown are AI-generated from [this](https://this-person-does-not-exist.com/en) website.
 {% endhint %}
 
 ## Steps to use eSignet

@@ -1,5 +1,5 @@
 ---
-description: Empowering secure and seamless identity verification.
+description: Ensuring secure and seamless identity verification.
 ---
 
 # 🔍 Overview
