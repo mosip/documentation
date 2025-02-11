@@ -1,5 +1,5 @@
 ---
-description: Experience eSignet in our Collab sandbox – try, integrate, and explore!
+description: Experience eSignet in our Collab sandbox – try, integrate, and explore.
 ---
 
 # 🎮 Try It Out

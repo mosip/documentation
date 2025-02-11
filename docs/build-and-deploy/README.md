@@ -1,5 +1,5 @@
 ---
-description: Effortlessly build and deploy eSignet with our simple setup!
+description: Effortlessly build and deploy eSignet with our simple setup.
 ---
 
 # 🛠️ Build & Deployment

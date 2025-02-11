@@ -1,5 +1,5 @@
 ---
-description: Fast, secure authentication for residents made easy!
+description: Fast, secure authentication for residents made easy.
 ---
 
 # 👨‍💻 End User Guide

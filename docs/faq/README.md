@@ -1,5 +1,5 @@
 ---
-description: Below are some frequently asked questions (FAQs) about eSignet
+description: Below are some frequently asked questions (FAQs) about eSignet.
 ---
 
 # ❓ FAQs

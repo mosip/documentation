@@ -1,5 +1,5 @@
 ---
-description: Dive into eSignet with interactive workshops and webinars!
+description: Dive into eSignet with interactive workshops and webinars.
 ---
 
 # 📚 Resources

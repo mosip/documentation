@@ -1,5 +1,5 @@
 ---
-description: Core principles that define eSignet
+description: Core principles that define eSignet.
 ---
 
 # Principles

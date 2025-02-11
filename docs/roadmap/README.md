@@ -1,7 +1,7 @@
 ---
 description: >-
   Explore eSignet roadmap for key milestones, objectives, and highlights every
-  year!
+  year.
 ---
 
 # 🛣️ Roadmap

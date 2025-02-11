@@ -1,7 +1,7 @@
 ---
 description: >-
   Explore seamless eSignet integration with guides on authentication, digital
-  wallets, and more
+  wallets, and more.
 ---
 
 # 🧩 Integration Guides
