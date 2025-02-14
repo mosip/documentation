@@ -4,6 +4,12 @@ description: Please refer below for all the latest release details 🌟
 
 # 📖 Releases
 
+## Version: 1.5.1
+
+* **Name:** eSignet(Patch)
+* **Date:** Coming Soon!
+* **Release Notes**
+
 ## Version: 1.5.0
 
 * **Name:** eSignet
