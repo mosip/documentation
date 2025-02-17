@@ -1,6 +1,6 @@
 # Using Mock Data
 
-If you are looking to try out eSignet, here are a few personas that you can use in our Collab environment for testing.
+If you want to explore eSignet, you can use the following test personas in our Collab environment.
 
 ## Personas
 
@@ -19,17 +19,20 @@ Please select the appropriate image file corresponding to the chosen UIN above.
 {% file src="../.gitbook/assets/Jane Thompson (1).jpeg" %}
 
 {% hint style="info" %}
-**Note**: The data used in the above VIDs is fictitious and the images shown are AI-generated from [this](https://this-person-does-not-exist.com/en) website.
+**Note:** The data used for these Virtual IDs (VIDs) is entirely fictitious, and the images displayed are AI-generated from an [external website](https://this-person-does-not-exist.com/en).
 {% endhint %}
 
-## Steps to use eSignet
+### Steps to use eSignet
 
-We have built a mock health portal that acts as a relying party web portal. Here, as an end user, you are trying to avail of online health services by logging into the health portal using your national ID.
+We have developed a **mock health portal** that functions as a **relying party web portal**. As an end user, you can simulate accessing online health services by logging in with your **national ID** via eSignet.
 
-You can visit the Collab health portal using [this link](https://healthservices-esignet-mock.collab.mosip.net/).
+🔗 Access the Collab Health Portal [**here**](https://healthservices-esignet-mock.collab.mosip.net/).
 
 ### OTP Authentication
 
-As you are going to use mock data for testing, you can try out OTP authentication. Any of the provided [personas](using-mock-data.md#personas) above can be used for testing, and the default OTP for testing is "111111" (six ones).
+To simplify testing with mock data, eSignet supports OTP authentication.
 
-A detailed step-by-step guide on how to log in with OTP using eSignet is also available [here](../end-user-guide/login-with-otp/).
+* You can use any of the provided [personas](https://docs.esignet.io/try-it-out/using-mock-data#personas) above for testing.
+* The default OTP for testing is "111111" (six ones).
+
+For a step-by-step guide on logging in with OTP using eSignet, refer to [this](https://docs.esignet.io/end-user-guide/login-with-otp) detailed guide.

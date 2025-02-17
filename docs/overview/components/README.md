@@ -4,11 +4,13 @@ description: Connecting secure components for seamless identity verification.
 
 # Components
 
-The image below is a block diagram of the eSignet comprising various components along with the different layers and external systems.
+The image below represents a **block diagram of eSignet**, illustrating various **components, layers, and external systems** that work together to provide secure identity verification.
 
 <figure><img src="../../.gitbook/assets/eSignet_components.png" alt=""><figcaption><p>eSignet Components</p></figcaption></figure>
 
-### Relying Party System
+### eSignet Components
+
+#### Relying Party System
 
 The [Relying Party](https://docs.esignet.io/glossary#relying-party) Systems depend on identity providers, such as eSignet, to authenticate and verify the identities of users before granting them access to protected resources or services.
 
@@ -16,14 +18,14 @@ Clients utilizing OpenID Connect within the OAuth 2.0 framework are commonly ref
 
 In the case of VC issuance, they are simply OAuth 2.0 clients. To ensure enhanced security, eSignet exclusively supports confidential clients.
 
-### Digital Wallet
+#### Digital Wallet
 
 [Digital Wallets](https://docs.esignet.io/glossary#digital-id-wallet) are software-based platforms used to securely store and share the certified credentials of the wallet holder.\
 Stored credentials can be used for login with the eSignet, once the credentials are binded with the RSA key pair and the corresponding public key is shared with eSignet.
 
 To know more about the key binding process please refer to [Key Binder Integration Guide](https://docs.esignet.io/integration/key-binder).
 
-### **eSignet UI**
+#### **eSignet UI**
 
 This is the user interface component of eSignet, developed using React JS. Its main functionality is to handle user authentication and obtain user consent. eSignet UI seamlessly integrates with the UI REST endpoints provided by **esignet-service**.
 
@@ -65,8 +67,11 @@ All plugin interfaces are defined in the [esignet-integration-api](https://githu
 
 ### Sign up Portal
 
-The [SignUp portal](../../signup-portal/) is a user-friendly interface designed to facilitate the registration process. It allows users to securely create and manage their accounts by providing the necessary details.
+The [SignUp portal](../../signup-portal/) provides a user-friendly registration interface that allows users to securely create and manage accounts.
 
 ### **Identification System (ID system)**
 
-This system refers to any operational or fundamental identification system that houses the user's demographic and biometric details (if applicable). It could be a database or a system equipped with suitable mechanisms to facilitate identity verification and the sharing of verified user data.
+The ID System is a fundamental identity repository that stores demographic and biometric details (if applicable).
+
+* **Storage Options:** This can be a database or a dedicated system.
+* **Verification & Data Sharing:** Facilitates identity verification and enables secure data exchange with eSignet.
