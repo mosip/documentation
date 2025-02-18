@@ -23,7 +23,7 @@ We believe that this release will greatly improve the security, efficiency, and 
 
 #### **Key Known Issues** <a href="#key-known-issues" id="key-known-issues"></a>
 
-| **Jira Issue**                                        | **Summary**                                                                           |
+| Jira Issue                                            | Summary                                                                               |
 | ----------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | [ES-2222](https://mosip.atlassian.net/browse/ES-2222) | User is not getting registered with 8 digit UIN in MOSIP IDA                          |
 | [ES-2023](https://mosip.atlassian.net/browse/ES-2023) | Intermittent: Signup register and reset password are throwing error but able to login |
@@ -32,27 +32,27 @@ Please refer to [this link](https://mosip.atlassian.net/issues/MOSIP-35494?jql=l
 
 #### **Repositories Released** <a href="#repositories-released" id="repositories-released"></a>
 
-| Repository Released       | Tags         |
-| ------------------------- | ------------ |
-| **esignet**               |  **v1.5.1**  |
-| **esignet-signup**        |  **v1.1.1**  |
-| **esignet-mock-services** |  **v0.10.1** |
-| **esignet-plugins**       |  **v1.3.1**  |
+| Repository Released   | Tags                                                                    |
+| --------------------- | ----------------------------------------------------------------------- |
+| esignet               |  [v1.5.1](https://github.com/mosip/esignet/tree/v1.5.1)                 |
+| esignet-signup        | [ v1.1.1](https://github.com/mosip/esignet-signup/tree/v1.1.1)          |
+| esignet-mock-services | [ v0.10.1](https://github.com/mosip/esignet-mock-services/tree/v0.10.1) |
+| esignet-plugins       | [ v1.3.1](https://github.com/mosip/esignet-plugins/tree/v1.3.1)         |
 
 #### **Compatible Modules** <a href="#compatible-modules" id="compatible-modules"></a>
 
-| Module/Repo   | Compatible Version |
-| ------------- | ------------------ |
-| IDA           | 1.2.1.0            |
-| ID Repository | 1.2.1.0            |
-| Kernel        | 1.2.0.1            |
-| Sunbird       | v2.0.0-rc3         |
+| Module/Repositories | Compatible Version |
+| ------------------- | ------------------ |
+| IDA                 | 1.2.1.0            |
+| ID Repository       | 1.2.1.0            |
+| Kernel              | 1.2.0.1            |
+| Sunbird             | v2.0.0-rc3         |
 
 ### **DB Changes** <a href="#db-changes" id="db-changes"></a>
 
 **eSignet**
 
-* Changed public\_key column data type to JSONB in the client\_details table. Please refer [here](https://github.com/mosip/esignet/blob/release-1.5.x/db_upgrade_script/mosip_esignet/sql/1.5.0_to_1.5.1_upgrade.sql) for details.
+* Changed public\_key column data type to JSONB in the client\_details table. Please refer [here](https://github.com/mosip/esignet/blob/release-1.5.x/db_upgrade_script/mosip_esignet/sql/1.5.0_to_1.5.1_upgrade.sql) for more details.
 
 **eSignet mock services**
 
