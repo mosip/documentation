@@ -2,7 +2,7 @@
 description: Explore eSignet’s powerful features for secure access.
 ---
 
-# Features
+# ✨ Features
 
 ## Unified Login
 
@@ -34,7 +34,7 @@ Below are some of the FAQs on KBI:
 
 [**How to configure KBI form in eSignet UI?**](./#how-to-configure-kbi-form-in-esignet-ui)
 
-[**How is the authenticator plugin implemented for KBI with Sunbird RC?**](../../faq/#how-is-authenticator-plugin-implemented-for-kbi-with-sunbird-rc)
+[**How is the authenticator plugin implemented for KBI with Sunbird RC?**](../../general/faq.md#how-is-authenticator-plugin-implemented-for-kbi-with-sunbird-rc)
 
 #### Verifiable Credentials&#x20;
 
@@ -87,5 +87,5 @@ Furthermore, eSignet has undergone meticulous testing to ensure seamless compati
 
 2. To remove a language from eSignet, please refer to the below FAQ.
 
-[How to remove a language from the eSignet default setup?](../../faq/#how-to-remove-a-language-from-the-esignet-default-setup)
+[How to remove a language from the eSignet default setup?](../../general/faq.md#how-to-remove-a-language-from-the-esignet-default-setup)
 {% endhint %}

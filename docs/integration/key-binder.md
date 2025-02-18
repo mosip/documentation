@@ -48,7 +48,7 @@ Not&#x65;**:** For the latest version of the interface please check our code bas
 
 ## Who uses this interface?
 
-The APIs exposed by this interface are used by [Digital Wallets](../glossary.md#digital-id-wallet) to perform wallet binding while it is implemented by [Identity Systems](../glossary.md#identity-systems).
+The APIs exposed by this interface are used by [Digital Wallets](../general/glossary.md#digital-id-wallet) to perform wallet binding while it is implemented by [Identity Systems](../general/glossary.md#identity-systems).
 
 ## How to implement this plugin?
 

@@ -2,7 +2,7 @@
 description: Experience eSignet in our Collab sandbox – try, integrate, and explore.
 ---
 
-# 🎮 Try It Out
+# 🕹️ Try It Out
 
 The latest stable version of the eSignet solution is deployed in our [Collab](https://collab.mosip.net/) environment. featuring the most up-to-date **QA-certified Docker images**.&#x20;
 

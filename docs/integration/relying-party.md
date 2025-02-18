@@ -26,7 +26,7 @@ Once the above steps are completed the relying parties developers/managers are r
 
 * Work with the respective ID provider (eSignet provider) and request a client ID. You would need to share your public key to obtain your client ID. It is the same public key created in the above steps.
 * Provide the name that you want to register with the ID provider, the same name will be displayed on the eSignet authentication and consent page to the end user.
-* List the fields/attributes that you need from the eSignet ID provider upon the user’s consent. This is also called a claim. It's expected that the relying party indicates the mandatory and optional claims. The possible values can be discovered from the eSignet [.well-known](../build-and-deploy/configuration/.well-known/openid-configuration.md).
+* List the fields/attributes that you need from the eSignet ID provider upon the user’s consent. This is also called a claim. It's expected that the relying party indicates the mandatory and optional claims. The possible values can be discovered from the eSignet [.well-known](../develop/configuration/.well-known/openid-configuration.md).
 * Provide the logo for your application and organization to be utilized for display on the eSignet authentication page.
 * Provide any of the following callback URL patterns for local development & QA.
 
@@ -71,7 +71,7 @@ Setup your development environment. Once done you need to follow the following s
 
 Here is the[ UI storybook](https://mosip.github.io/mosip-sdk/?path=/docs/javascript-sign-in-with-esignet--docs) deployed by eSignet which can help relying party developers build the buttons for their website.
 
-*   The button upon click should get a unique state (a random value) & nonce (a random value) from the server and redirect to the "/authorize" endpoint of the ID provider. A sample URL is listed here. The details of what is supported are listed on the [.well-known](../build-and-deploy/configuration/.well-known/) file in the respective eSignet provider.
+*   The button upon click should get a unique state (a random value) & nonce (a random value) from the server and redirect to the "/authorize" endpoint of the ID provider. A sample URL is listed here. The details of what is supported are listed on the [.well-known](../develop/configuration/.well-known/) file in the respective eSignet provider.
 
     * Sample /authorize Request:
 

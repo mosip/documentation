@@ -92,7 +92,7 @@ public interface Authenticator {
 
 ## Who should implement the Authenticator plugin interface?
 
-The authenticator plugin is implemented by [Identity Systems](../glossary.md#identity-systems), which wishes to integrate with eSignet to leverage the digital usage of identities.
+The authenticator plugin is implemented by [Identity Systems](../general/glossary.md#identity-systems), which wishes to integrate with eSignet to leverage the digital usage of identities.
 
 An Identity system can be as simple as a table in a database or an Excel file storing user identity data or it can be a complex Identity System.
 

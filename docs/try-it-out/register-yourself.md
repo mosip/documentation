@@ -18,7 +18,7 @@ Navigate to the relying party’s demo [**Health Services** ](https://healthserv
 
 Once you receive your UIN/VID, you can navigate to the [**health portal**](https://healthservices-mosipid.collab.mosip.net/) and try authenticating using your UIN/VID and the default OTP, i.e. "111111" (six ones).
 
-A detailed step-by-step guide on how to log in with OTP using eSignet is also available [here](../end-user-guide/login-with-otp/).
+A detailed step-by-step guide on how to log in with OTP using eSignet is also available [here](../test/end-user-guide/health-portal/login-with-otp.md).
 
 {% hint style="info" %}
 **Note:** Please use 111111 as the OTP, for any OTP-based feature in the Collab environment.
@@ -35,7 +35,7 @@ A detailed step-by-step guide on how to log in with OTP using eSignet is also av
 * Locate the `run_auth.bat` file within the extracted folder.
 * Double-click on the `run_auth.bat` file to start the authentication MDS.
 
-Experience the process of logging in using biometrics, by following the instructions provided [here](../end-user-guide/login-with-biometrics/).
+Experience the process of logging in using biometrics, by following the instructions provided [here](../test/end-user-guide/health-portal/login-with-biometrics.md).
 
 {% hint style="info" %}
 **Note**: Biometric-based login with Mock MDS is currently unavailable in the Collab environment. Stay tuned to the MOSIP [Community](https://community.mosip.io/) for updates!
@@ -51,7 +51,7 @@ To get your credentials onboarded on Inji and enable them for authentication, fo
 2. Download your credentials on Inji. For details on how to download the credential, click [here](https://docs.inji.io/inji-wallet/inji-mobile/sandbox-details/inji-setup-guide#step-by-step-process) (Refer to step 3 in the guide)
 3. Ensure that you have activated your credentials for online login. This step is crucial for wallet-based authentication to work smoothly. For a comprehensive guide on how to activate the VC for online login, refer [here](https://docs.inji.io/inji-wallet/inji-mobile/functional-overview/end-user-guide#activating-a-vc) &#x20;
 
-Once you are done with the above steps, you can use the Inji wallet to log into the health portal. The detailed steps to log into the health portal using the Inji wallet are available [here](../end-user-guide/login-with-qr-code/).
+Once you are done with the above steps, you can use the Inji wallet to log into the health portal. The detailed steps to log into the health portal using the Inji wallet are available [here](../test/end-user-guide/health-portal/login-with-qr-code.md).
 
 ### Additional Video Resource
 

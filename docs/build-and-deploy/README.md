@@ -1,8 +1,10 @@
 ---
-description: Effortlessly build and deploy eSignet with our simple setup.
+description: >-
+  Effortlessly deploy and configure eSignet with comprehensive guides,
+  architecture insights, and mock environments.
 ---
 
-# 🛠️ Build & Deployment
+# 🛠️ Deploy
 
 The eSignet solution is designed to be easily deployed and tested locally. The latest stable codebase is available under the **master** branch of the **eSignet repository**.  All feature development or bug fixes are typically carried out on specific feature or development branches.
 
