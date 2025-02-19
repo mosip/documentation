@@ -45,7 +45,7 @@
       * [Credential Holder](integration/wallet/credential-holder.md)
       * [Wallet Authenticator](integration/wallet/wallet-authenticator.md)
     * [Relying Party](integration/relying-party.md)
-* [⚒️ Deploy](build-and-deploy/README.md)
+* [🛠️ Deploy](build-and-deploy/README.md)
   * [⛴️ Deployment Architecture](build-and-deploy/deployment-arch/README.md)
     * [On-Prem Installation Guidelines](build-and-deploy/deployment-arch/on-prem-installation-guidelines.md)
   * [⚓ Local Deployment](build-and-deploy/local-deployment/README.md)
