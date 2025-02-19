@@ -41,12 +41,12 @@ Please refer to [this link](https://mosip.atlassian.net/issues/MOSIP-35494?jql=l
 
 #### **Compatible Modules** <a href="#compatible-modules" id="compatible-modules"></a>
 
-| Module/Repositories | Compatible Version |
-| ------------------- | ------------------ |
-| IDA                 | 1.2.1.0            |
-| ID Repository       | 1.2.1.0            |
-| Kernel              | 1.2.0.1            |
-| Sunbird             | v2.0.0-rc3         |
+| Module/Repositories | Compatible Version                                                  |
+| ------------------- | ------------------------------------------------------------------- |
+| IDA                 | [1.2.1.0](https://github.com/mosip/id-authentication/tree/v1.2.1.0) |
+| ID Repository       | [1.2.1.0](https://github.com/mosip/id-repository/tree/v1.2.1.0)     |
+| Kernel              | [1.2.0.1](https://github.com/mosip/keymanager/tree/v1.2.0.1/kernel) |
+| Sunbird             | v2.0.0-rc3                                                          |
 
 ### **DB Changes** <a href="#db-changes" id="db-changes"></a>
 
@@ -73,4 +73,4 @@ Please refer [here](https://github.com/mosip/esignet-mock-services/blob/release-
 1. [API Documentation](https://mosip.stoplight.io/docs/identity-provider/branches/1.5.0/7oz4lmhu3pf6b-e-signet)
 2. [Integration Guides](https://docs.esignet.io/integration)
 3. [End User Guide](https://docs.esignet.io/end-user-guide)
-4. QA Report(To be updated soon)
+4. [QA Report](https://docs.esignet.io/roadmap-and-releases/versions/v1.5.1/test-report)
