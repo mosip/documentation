@@ -4,7 +4,7 @@ description: >-
   architecture insights, and mock environments.
 ---
 
-# 🛠️ Deploy
+# ⚒️ Deploy
 
 The eSignet solution is designed to be easily deployed and tested locally. The latest stable codebase is available under the **master** branch of the **eSignet repository**.  All feature development or bug fixes are typically carried out on specific feature or development branches.
 

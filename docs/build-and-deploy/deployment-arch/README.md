@@ -1,4 +1,4 @@
-# Deployment Architecture
+# ⛴️ Deployment Architecture
 
 This page has the proposed deployment architecture for eSignet in production.
 
