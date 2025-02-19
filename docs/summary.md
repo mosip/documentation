@@ -17,7 +17,7 @@
     * [⚙️ Components - eSignet](develop/technology/components.md)
     * [📲 API](develop/technology/api.md)
   * [🤳 Components - Signup Portal](develop/components-signup-portal.md)
-  * [🗒️ Configure eSignet](develop/configuration/README.md)
+  * [⚙️ Configure eSignet](develop/configuration/README.md)
     * [ACR](develop/configuration/acr.md)
     * [Claims](develop/configuration/claims.md)
     * [.well-known](develop/configuration/.well-known/README.md)

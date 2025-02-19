@@ -1,4 +1,4 @@
-# 🗒️ Configure eSignet
+# ⚙️ Configure eSignet
 
 In this section, we have listed the properties that may change from implementation to implementation. All the properties used by eSignet with their default values can be found in the [esignet-default.properties](https://github.com/mosip/mosip-config/blob/master/esignet-default.properties).
 
