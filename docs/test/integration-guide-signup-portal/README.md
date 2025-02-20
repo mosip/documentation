@@ -1,3 +1,9 @@
+---
+description: >-
+  Comprehensive guides for seamless SignUp portal integration with external
+  systems.
+---
+
 # 🔐 Integration Guide - Signup Portal
 
 The section containing integration guides for the SignUp portal offers valuable resources to help integrate the portal with external systems. These guides provide detailed instructions for seamless communication between the SignUp portal and various third-party services.
