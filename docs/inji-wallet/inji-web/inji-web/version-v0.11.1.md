@@ -1,27 +1,23 @@
 # Version v0.11.1
 
+**Release Name:** Inji Web 0.11.1(Patch)
 
+**Release Type:** Patch
 
+**Release Date:** 19th Feb, 2025
 
-
-**Release Name:** Inji Wallet 0.11.1(Patch)
-
-**Release Type:** Developer
-
-**Release Date:** Coming Soon
-
-**Overview:**
+## **Overview**
 
 This patch release focuses on **enhancing UI automation for multi-language support** within Inji Web. It includes updates to automated test cases where text assertions have been modified to align with the latest translations, ensuring accuracy and consistency across different languages.
 
-**Key Highlights:**
+## **Key Highlights:**
 
-✅ **Multi-Language Support Fixes:**
+### **Multi-Language Support Fixes:**
 
 * Updated automated test cases to reflect the correct translated text.
 * Ensures consistency across different language settings in UI.
 
-✅ **Test Case Enhancements:**
+### **Test Case Enhancements:**
 
 * Adjusted automated scripts to accommodate the new translations.
 * Improved localization handling in UI automation workflows.
@@ -55,14 +51,14 @@ The following table outlines the tested and certified compatibility of **Inji We
 
 ### **Repositories Released**
 
-| **Repositories** | **Tags Released** |
-| ---------------- | ----------------- |
-| **Inji-web**     |  **v0.11.1**      |
+| **Repositories** | **Tags Released**                                              |
+| ---------------- | -------------------------------------------------------------- |
+| **Inji-web**     | [ **v0.11.1**](https://github.com/mosip/inji-web/tree/v0.11.1) |
 
 ### Documentation
 
 * [**Build and Deployment**](https://docs.inji.io/inji-wallet/inji-web/build-and-deploy)
 * [**Feature Documentation**](https://docs.mosip.io/inji/inji-web/functional-overview/features)
 * [**User Guide**](https://docs.mosip.io/inji/inji-web/functional-overview/end-user-guide)
-* [**QA Report**](https://docs.inji.io/inji-wallet/inji-web/inji-web/version-0.11.0/test-report)
-* [**API Documentation**](https://docs.mosip.io/inji/inji-web/technical-overview/backend-services/mimoto-bff)
+* [**QA Report**](https://docs.inji.io/inji-wallet/inji-web/inji-web/version-v0.11.1/test-report)
+
