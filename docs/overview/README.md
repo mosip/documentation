@@ -6,7 +6,7 @@ description: Ensuring secure and seamless identity verification.
 
 eSignet is envisioned as a thin add-on system to any existing digital ID solution to bring in additional capabilities and enhance functionalities.
 
-Take a moment to watch the video below to explore valuable insights into eSignet and its wide array of powerful features! 🚀✨
+Please take a moment to watch the video below to explore valuable insights into eSignet and its wide array of powerful features! 🚀✨
 
 {% embed url="https://www.youtube.com/watch?v=ZfUPRv71s_0" %}
 
@@ -28,7 +28,7 @@ At eSignet, our core goals are to prioritize inclusion and accessibility. We pla
 * **One ID**: Gain access to multiple services with ease. Users can log in to integrated government and private sector services using a single identity credential.
 * **Mandatory User Consent**: Before allowing access to personal information, we require users to provide explicit consent. Our platform incorporates a built-in consent flow.
 * **Multiple modes of authentication**: We offer various methods for identity verification to accommodate individual preferences.
-* **Credential protection**: We ensure that login credentials are not shared with relying parties. The login process takes place exclusively on the eSignet platform.
+* **Credential protection**: We ensure login credentials are not shared with relying parties. The login process takes place exclusively on the eSignet platform.
 
 ### Go digital quickly
 
@@ -40,4 +40,16 @@ At eSignet, our core goals are to prioritize inclusion and accessibility. We pla
 
 For more details on eSignet, please go through the below documentation.
 
-<table data-view="cards"><thead><tr><th></th><th data-hidden></th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><strong>Core principles that govern eSignet</strong></td><td></td><td></td><td><a href="principles/">principles</a></td><td><a href="../.gitbook/assets/principles (1).png">principles (1).png</a></td></tr><tr><td><strong>Key eSignet features</strong></td><td></td><td></td><td><a href="features/">features</a></td><td><a href="../.gitbook/assets/features.png">features.png</a></td></tr><tr><td><strong>Core components of eSignet</strong></td><td></td><td></td><td><a href="../develop/technology/components.md">components.md</a></td><td><a href="../.gitbook/assets/componenets (1).png">componenets (1).png</a></td></tr><tr><td><strong>eSignet technology stack</strong></td><td></td><td></td><td><a href="../develop/technology/technology-stack.md">technology-stack.md</a></td><td><a href="../.gitbook/assets/tech-stack.png">tech-stack.png</a></td></tr><tr><td><strong>Use and experience eSignet</strong></td><td></td><td></td><td><a href="../try-it-out/">try-it-out</a></td><td><a href="../.gitbook/assets/try-it-out.png">try-it-out.png</a></td></tr><tr><td><strong>Integration Guides</strong></td><td></td><td></td><td><a href="../integration/">integration</a></td><td><a href="../.gitbook/assets/inetgrate.png">inetgrate.png</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th data-hidden></th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><strong>Core principles that govern eSignet</strong></td><td></td><td></td><td><a href="principles/">principles</a></td><td><a href="../.gitbook/assets/principles (1).png">principles (1).png</a></td></tr><tr><td><strong>Key eSignet features</strong></td><td></td><td></td><td><a href="features/">features</a></td><td><a href="../.gitbook/assets/features.png">features.png</a></td></tr><tr><td><strong>Building on the most trusted security protocols.</strong></td><td></td><td></td><td><a href="Standards/">Standards</a></td><td><a href="../.gitbook/assets/componenets (1).png">componenets (1).png</a></td></tr></tbody></table>
+
+### Additional Resources
+
+Explore the following resources for more details on eSignet:
+
+👉 [Technology Stack](../develop/technology/technology-stack.md)
+
+👉 [Components](../develop/technology/components.md)
+
+👉 [Try It Out](../try-it-out/)
+
+👉 [Integrate with eSignet](../try-it-out/integrate-with-e-signet.md)

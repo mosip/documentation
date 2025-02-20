@@ -7,7 +7,7 @@ description: Please refer below for all the latest release details ✨
 ## Version: 1.5.1
 
 * **Name:** eSignet(Patch)
-* **Date:** Coming Soon!
+* **Date:** 20th Feb, 2025
 * [**Release Notes**](v1.5.1/)
 
 ## Version: 1.5.0
