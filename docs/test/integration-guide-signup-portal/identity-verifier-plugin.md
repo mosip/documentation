@@ -43,7 +43,7 @@ Refer to signup-idv\_mock-identity-verifier.json the sample workflow details fil
 
 Please refer to the sequence diagram below for the detailed working flow of the identity verifier plugin.
 
-<figure><img src="../../../.gitbook/assets/Integration_Verifier.png" alt=""><figcaption><p>Integration Verifier</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Integration_Verifier.png" alt=""><figcaption><p>Integration Verifier</p></figcaption></figure>
 
 Please refer below for the Identity Verifier Plugin reference implementation:
 

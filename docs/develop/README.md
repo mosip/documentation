@@ -12,10 +12,6 @@ Explore the sections below to get started:
 
 Understand the technologies behind eSignet, including architecture diagrams, frameworks used, and system design considerations.
 
-### [Components - Signup Portal](https://docs.esignet.io/develop/technology/components)
-
-Explore the core components that power eSignet, including the Signup Portal, Signup UI, Signup Service, eKYC Verifiers, and ID Registry.
-
 ### [Configure eSignet](https://docs.esignet.io/develop/configuration)
 
 Learn how to configure eSignet’s properties for different implementations, covering authentication, cache, plugins, and key management.

@@ -14,7 +14,7 @@ The user profile created via the signup portal is stored in an ID registry. The 
 **Note:** The signup portal can also used with any existing ID registries only leveraging the eKYC verification feature.
 {% endhint %}
 
-1. **Signup Service**: This is the backend component that manages the registration logic. It supports the creation of new user accounts by processing user inputs, performing necessary validations, securely storing user data in the ID registry, and integrating with external systems as needed. The service is built with flexibility in mind, allowing it to connect seamlessly to any external ID registry system through a well-defined [Profile Registry Plugin](integration-guide-signup-portal/profile-registry-plugin.md).
+1. **Signup Service**: This is the backend component that manages the registration logic. It supports the creation of new user accounts by processing user inputs, performing necessary validations, securely storing user data in the ID registry, and integrating with external systems as needed. The service is built with flexibility in mind, allowing it to connect seamlessly to any external ID registry system through a well-defined [Profile Registry Plugin](../../test/integration-guide-signup-portal/profile-registry-plugin.md).
 2. **Signup UI**: The Signup UI is the front-end component that provides a web-based interface for end users to submit their registration. To learn more about the Signup UI, please refer [here](https://docs.esignet.io/signup-portal/components#signup-ui).
 
 Together, the Signup Portal streamlines the user registration process, enabling new users to quickly gain access to digital services via eSignet.
@@ -27,4 +27,4 @@ Currently, the Signup portal supports the following features:
 
 To know more about the components refer [here](../../develop/technology/components-signup-portal.md).
 
-To learn more about the integration of the Signup portal with eSignet please refer [here](integration-guide-signup-portal/integration-with-esignet-portal.md).
+To learn more about the integration of the Signup portal with eSignet please refer [here](../../test/integration-guide-signup-portal/integration-with-esignet-portal.md).

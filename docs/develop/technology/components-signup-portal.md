@@ -16,8 +16,8 @@ This service is the primary backend spring Java application that incorporates va
 2. **Rest APIs:** This layer exposes REST endpoints for the functionality implemented in the service layer.
 3. **Cache Layer:** The signup service maintains complete transaction details in the cache. Currently, supports “simple” and “redis” cache types.
 4. **Plugins**: Integration points with external systems are designed to be pluggable, allowing easy integration. The pluggable integration points are as follows:
-   * [**Profile Registry Plugin**](../../overview/features/integration-guide-signup-portal/profile-registry-plugin.md)- To create and update user identity data
-   * [**Identity Verifier Plugin**](../../overview/features/integration-guide-signup-portal/identity-verifier-plugin.md) - Plugin to verify the user identity data, basically the backend for the eKYC verification process.
+   * [**Profile Registry Plugin**](../../test/integration-guide-signup-portal/profile-registry-plugin.md)- To create and update user identity data
+   * [**Identity Verifier Plugin**](../../test/integration-guide-signup-portal/identity-verifier-plugin.md) - Plugin to verify the user identity data, basically the backend for the eKYC verification process.
    * [**Audit Plugin**](../../integration/audit.md) - For auditing all events
 5. **Reused**: Modules from the MOSIP platform and eSignet are reused in the Signup service instead of rewriting the existing logic.
 

@@ -6,7 +6,7 @@ The dependency on the MOSIP ID repository has been removed in eSignet Sign Up Se
 
 Please refer to the sequence diagram below for the detailed working flow of the profile registry plugin.
 
-<figure><img src="../../../.gitbook/assets/Profile_refgistry.png" alt=""><figcaption><p>Profile Registry Plugin</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Profile_refgistry.png" alt=""><figcaption><p>Profile Registry Plugin</p></figcaption></figure>
 
 Please refer below for the Profile Registry Plugin interface:
 
