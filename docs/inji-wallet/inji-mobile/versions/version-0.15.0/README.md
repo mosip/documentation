@@ -45,7 +45,7 @@ We are excited to announce the release of Inji Wallet Version 0.15.0! This updat
 | ------------------------- | ---------------------------------------------------------------------------- |
 | Inji Mobile Wallet        | [**v0.15.0**](https://github.com/mosip/inji-wallet/tree/v0.15.0)             |
 | mimoto                    | [**v0.15.2**](https://github.com/mosip/mimoto/tree/v0.15.2)                  |
-| vc-verifier               | [**v0.1.0**](https://github.com/mosip/vc-verifier/tree/v1.1.0)               |
+| vc-verifier               | [**v1.1.0**](https://github.com/mosip/vc-verifier/tree/v1.1.0)               |
 | inji-openid4vp-ios-swift  | [**v0.1.0**](https://github.com/mosip/inji-openid4vp-ios-swift/tree/v0.1.0)  |
 | inji-openid4vp            | [**v0.1.0**](https://github.com/mosip/inji-openid4vp/tree/v0.1.0)            |
 | inji-vci-client-ios-swift | [**v0.2.0**](https://github.com/mosip/inji-vci-client-ios-swift/tree/v0.2.0) |

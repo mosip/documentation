@@ -4,7 +4,7 @@
 
 * Name: Inji Certify 0.10.2
 * Date: Coming Soon
-* [Release Notes](version-0.10.2.md)
+* [Release Notes](version-0.10.2/)
 
 **Version: 0.10.1**
 
