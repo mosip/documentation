@@ -3,7 +3,7 @@
 **Version: 0.10.2**
 
 * Name: Inji Certify 0.10.2
-* Date: Coming Soon
+* Date: 21st Feb, 2025
 * [Release Notes](version-0.10.2/)
 
 **Version: 0.10.1**

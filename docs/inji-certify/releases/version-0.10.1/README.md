@@ -47,7 +47,7 @@ Below is the list of known issues. To read in detail and view all the topics rel
 | Repositories               | Tags Released                                                                       |
 | -------------------------- | ----------------------------------------------------------------------------------- |
 |  inji-certify              | [ **v0.10.1**](https://github.com/mosip/inji-certify/tree/v0.10.1)                  |
-| digital-credential-plugins | [**v0.3.0**](https://github.com/mosip/digital-credential-plugins/tree/v0.3.0)       |
+| digital-credential-plugins | [**v0.10.0**](https://github.com/mosip/esignet-mock-services/tree/v0.10.0)          |
 | artifactory                | [**v0.10.0-INJI**](https://github.com/mosip/digital-credential-plugins/tree/v0.3.0) |
 | inji-config                | [**v0.5.0**](https://github.com/mosip/inji-config/tree/v0.5.0)                      |
 | keymanager                 | [**v1.3.0-beta.2**](https://github.com/mosip/keymanager/tree/v1.3.0-beta.2)         |
