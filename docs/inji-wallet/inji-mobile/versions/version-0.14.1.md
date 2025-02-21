@@ -42,7 +42,7 @@ This patch ensures that iOS builds remain functional and available for testing a
 
 **Known Issues:**
 
-The list of known issues can be found [**here**](https://mosip.atlassian.net/jira/software/c/projects/INJIMOB/issues/INJIMOB-2902?jql=project%20%3D%20%22INJIMOB%22%20AND%20type%20%3D%20Bug%20AND%20status%20IN%20%28New%2C%20Assigned%29%20ORDER%20BY%20created%20DESC)**.**
+The list of known issues can be found [**here**](https://mosip.atlassian.net/jira/software/c/projects/INJIMOB/issues/?jql=project%20%3D%20%22INJIMOB%22%20AND%20type%20%3D%20Bug%20AND%20status%20IN%20%28New%2C%20Assigned%29%20ORDER%20BY%20created%20DESC)**.**
 
 **Bug Fixes:**
 
@@ -55,4 +55,4 @@ The list of known issues can be found [**here**](https://mosip.atlassian.net/jir
 * [**Feature Documentation**](https://docs.mosip.io/inji/inji-mobile-wallet/overview/features)
 * [**Integration Guides**](https://docs.mosip.io/inji/inji-mobile-wallet/integration-guide)
 * [**User Guide**](https://docs.mosip.io/inji/inji-mobile-wallet/end-user-guide)
-* [**API Documentation**](https://github.com/mosip/mimoto/tree/release-0.10.0/docs/postman-collections)
+* [**API Documentation**](https://github.com/mosip/mimoto/tree/v0.14.0/docs/postman-collections)
