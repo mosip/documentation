@@ -17,7 +17,7 @@ We are excited to announce eSignet v1.5.1, which resolves critical issues to imp
 
 #### **Bug Fixes** <a href="#bug-fixes" id="bug-fixes"></a>
 
-* Several known issues from v1.5.0 have been resolved to improve platform stability. A detailed list of fixes is available [here](https://mosip.atlassian.net/issues/INJIMOB-489?jql=%22Release%20Number%5BLabels%5D%22%20%3D%20esignet_v1.5.1%20and%20issuetype%20%3D%20Bug%20and%20status%20not%20in%20%28Cancelled%2CCanceled%29).
+* Several known issues from v1.5.0 have been resolved to improve platform stability. A detailed list of fixes is available [here](https://mosip.atlassian.net/issues/ES-2224?jql=%22Release%20Number%5BLabels%5D%22%20%3D%20esignet_v1.5.1%20and%20issuetype%20%3D%20Bug%20and%20status%20not%20in%20%28Cancelled%2CCanceled%29%20ORDER%20BY%20cf%5B10017%5D%20desc).
 
 We believe this release will greatly improve eSignet's security, efficiency, and user experience.&#x20;
 
