@@ -1,4 +1,4 @@
-# Inji Web Guide
+# Inji Web - Collab Guide
 
 Welcome to the Inji Web Guide tailored specifically to our Collab Environment!
 
@@ -11,10 +11,6 @@ Whether you're a Developer, System Integrator, or an enthusiast eager to dive in
 If you are looking to try out Inji Web in our Collab environment, please follow the below procedure:
 
 1. To get sample National ID credentials, we request you to initiate the process by completing the form available[ here](https://forms.gle/WvKajxxZ6Jy2K5TM6).
-2. For sample Insurance Credentials (StayProtected), please provide the below details in the eSignet authentication page:
-   * Policy Number: 170-620-124
-   * Name: Abhishek G
-   * DoB: 07/07/1995
 
 **Steps to use**:
 

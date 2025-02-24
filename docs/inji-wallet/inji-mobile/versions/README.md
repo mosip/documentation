@@ -11,7 +11,7 @@ Date: 18th Feb, 2025
 ## Version: 0.14.1
 
 * Name: Inji Wallet 0.14.1(Patch)
-* Date: Coming Soon
+* Date: 24th Feb, 2025
 * [Release Notes](version-0.14.1.md)
 
 ## Version: 0.14.0
