@@ -10,9 +10,13 @@ Whether you're a Developer, System Integrator, or an enthusiast eager to dive in
 
 If you are looking to try out Inji Web in our Collab environment, please follow the below procedure:
 
-1. To get sample National ID credentials, we request you to initiate the process by completing the form available[ here](https://forms.gle/WvKajxxZ6Jy2K5TM6).
+1. To get sample National ID credentials, we request you to initiate the process by completing the form available here (To be updated) .
+2. For sample Insurance Credentials (StayProtected), please provide the below details in the eSignet authentication page:\
+   \- Policy id 7070 \
+   \- Name aswin\
+   \-  19/02/2025
 
-**Steps to use**:
+#### **Steps to use**:
 
 * Launch [link](https://collab.mosip.net/) to access collab environment resources.
 * Click on the INJIWEB link which will launch the Inji Web portal in the browser.
