@@ -53,7 +53,7 @@ Below are the detailed test metrics by performing automation testing. The projec
 
 \[The various metrics that assist in test tracking and efficiency are as follows:]{.mark}
 
-* \[Passed Test Cases Coverage: It measures the percentage of passed test cases. (Number of passed tests / Total number of tests executed) x 100]{.mark}
-* \[Failed Test Case Coverage: It measures the percentage of all the failed test cases. (Number of failed tests / Total number of test cases executed) x 100]{.mark}
+* \[Passed Test Cases Coverage: It measures the percentage of passed test cases. (Number of passed tests / Total number of tests executed) x 100]
+* \[Failed Test Case Coverage: It measures the percentage of all the failed test cases. (Number of failed tests / Total number of test cases executed) x 100]
 
 Git hub link for the xls file is [**here**](https://github.com/mosip/test-management/tree/master/inji-web/inji%20web%200.11.1).
