@@ -18,6 +18,10 @@ This patch release addresses a critical issue related to iOS dependency manageme
 
 This patch ensures that iOS builds remain functional and available for testing and deployment.
 
+{% hint style="info" %}
+**Note**: The current release does not alter the android-build, it stays unchanged and is same as with Inji 0.14.0.
+{% endhint %}
+
 ## **Repository Released**
 
 | **Module**         | **Version**                                                     |

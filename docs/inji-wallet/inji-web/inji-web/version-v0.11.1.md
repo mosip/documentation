@@ -2,7 +2,7 @@
 
 **Release Name:** Inji Web 0.11.1(Patch)
 
-**Release Type:** Patch
+**Release Type:** Developer
 
 **Release Date:** 19th Feb, 2025
 
