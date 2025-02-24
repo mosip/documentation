@@ -47,7 +47,7 @@ This guide is applicable only for eSignet version 1.5.0 and above.
 
 ### Architecture  <a href="#architecture-todo" id="architecture-todo"></a>
 
-(To be updated soon)
+<figure><img src="../../.gitbook/assets/eSigent-deployment-diagram-2.drawio.png" alt=""><figcaption><p>eSignet Architecture diagram</p></figcaption></figure>
 
 ### Deployment Repos <a href="#deployment-repos" id="deployment-repos"></a>
 
