@@ -47,9 +47,11 @@ This guide is applicable only for eSignet version 1.5.0 and above.
 
 ### Architecture  <a href="#architecture-todo" id="architecture-todo"></a>
 
+The below diagram shows the **deployment architecture** of the eSignet, highlighting secure user access via VPN, traffic routing through firewalls and load balancers, and service orchestration within a Kubernetes cluster. Key components include the **eSignet Service**, **OIDC UI**, databases, and secure cryptographic operations via an **HSM**. Deployment is managed with **Rancher**, Helm charts, and a private Git repo, with monitoring tools like **Grafana** and **Prometheus** ensuring observability.
+
 <figure><img src="../../.gitbook/assets/eSigent-deployment-diagram-2.drawio.png" alt=""><figcaption><p>eSignet Architecture diagram</p></figcaption></figure>
 
-### Deployment Repos <a href="#deployment-repos" id="deployment-repos"></a>
+### Deployment Repositories <a href="#deployment-repos" id="deployment-repos"></a>
 
 * [k8s-infra](https://github.com/mosip/k8s-infra/tree/v1.2.0.1) : contains the scripts to install and configure Kubernetes cluster with required monitoring, logging, and alerting tools.
 * [eSignet](https://github.com/mosip/esignet/blob/release-1.5.x/) : Contains deployment scripts and source code for :
@@ -67,7 +69,7 @@ This guide is applicable only for eSignet version 1.5.0 and above.
   * eSignet signup onboarding pre-requisites.
   * eSignet signup onboarding.
 
-### Pre-requisites: <a href="#pre-requisites" id="pre-requisites"></a>
+### Pre-requisites <a href="#pre-requisites" id="pre-requisites"></a>
 
 Ensure all required hardware and software dependencies are prepared before proceeding with the installation.
 
@@ -76,22 +78,22 @@ Ensure all required hardware and software dependencies are prepared before proce
 * Virtual Machines (VMs) can use any operating system as per convenience.
 * For this installation guide, Ubuntu OS is referenced throughout.
 
-<table data-full-width="true"><thead><tr><th width="84">Sl no.</th><th width="137">Purpose</th><th width="98">vCPU's</th><th width="79">RAM</th><th width="152">Storage (HDD)</th><th width="104">No. of VM's</th><th>HA</th></tr></thead><tbody><tr><td>1.</td><td>Wireguard Bastion Host</td><td>2</td><td>4 GB</td><td>8 GB</td><td>1</td><td>(ensure to setup active-passive)</td></tr><tr><td>2.</td><td>Observation Cluster nodes</td><td>2</td><td>8 GB</td><td>32 GB</td><td>2</td><td>2</td></tr><tr><td>3.</td><td>Observation Nginx server (use Loadbalancer if required)</td><td>2</td><td>4 GB</td><td>16 GB</td><td>1</td><td>Nginx+</td></tr><tr><td>4.</td><td>eSignet Cluster nodes</td><td>8</td><td>32 GB</td><td>128 GB</td><td>3</td><td>Allocate etcd, control plane and worker accordingly</td></tr><tr><td>5.</td><td>eSignet Nginx server ( use Loadbalancer if required)</td><td>2</td><td>4 GB</td><td>16 GB</td><td>1</td><td>Nginx+</td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="91">Sl no.</th><th width="137">Purpose</th><th width="86">vCPU's</th><th width="79">RAM</th><th width="152">Storage (HDD)</th><th width="108">No. of VM's</th><th>HA</th></tr></thead><tbody><tr><td>1.</td><td>Wireguard Bastion Host</td><td>2</td><td>4 GB</td><td>8 GB</td><td>1</td><td>(ensure to setup active-passive)</td></tr><tr><td>2.</td><td>Observation Cluster nodes</td><td>2</td><td>8 GB</td><td>32 GB</td><td>2</td><td>2</td></tr><tr><td>3.</td><td>Observation Nginx server (use Loadbalancer if required)</td><td>2</td><td>4 GB</td><td>16 GB</td><td>1</td><td>Nginx+</td></tr><tr><td>4.</td><td>eSignet Cluster nodes</td><td>8</td><td>32 GB</td><td>128 GB</td><td>3</td><td>Allocate etcd, control plane and worker accordingly</td></tr><tr><td>5.</td><td>eSignet Nginx server ( use Loadbalancer if required)</td><td>2</td><td>4 GB</td><td>16 GB</td><td>1</td><td>Nginx+</td></tr></tbody></table>
 
 #### Network Requirements <a href="#network-requirements" id="network-requirements"></a>
 
 * All the VMs should be able to communicate with each other.
-* Need stable Intra network connectivity between these VMs.
+* Need stable intra-network connectivity between these VMs.
 * All the VMs should have stable internet connectivity for docker image download (in case of local setup ensure to have a locally accessible docker registry).
 * Server Interface requirements as mentioned in below table:
 
 <table data-full-width="false"><thead><tr><th width="89">Sl no.</th><th width="172">Purpose</th><th>Network Interfaces</th></tr></thead><tbody><tr><td>1.</td><td>Wireguard Bastion Host</td><td><em>One Private interface</em>: that is on the same network as all the rest of nodes (e.g.: inside local NAT Network).<br><br><em>One public interface</em>: Either has a direct public IP, or a firewall NAT (global address) rule that forwards traffic on 51820/udp port to this interface IP.</td></tr><tr><td>2.</td><td>K8 Cluster nodes</td><td>One internal interface: with internet access and that is on the same network as all the rest of nodes (e.g.: inside local NAT Network).</td></tr><tr><td>3.</td><td>Observation Nginx server</td><td>One internal interface: with internet access and that is on the same network as all the rest of nodes (e.g.: inside local NAT Network).</td></tr><tr><td>4.</td><td>eSignet Nginx server</td><td><em>One internal interface</em>: that is on the same network as all the rest of nodes (e.g.: inside local NAT Network).<br><br><em>One public interface</em>: Either has a direct public IP, or a firewall NAT (global address) rule that forwards traffic on 443/tcp port to this interface IP.</td></tr></tbody></table>
 
-#### DNS requirements (To be updated) <a href="#dns-requirements-todo" id="dns-requirements-todo"></a>
+#### DNS requirements <a href="#dns-requirements-todo" id="dns-requirements-todo"></a>
 
 <table><thead><tr><th width="126">Sl no.</th><th width="177">Domain Name</th><th>Mapping details</th><th>Purpose</th></tr></thead><tbody><tr><td>1.</td><td>rancher.xyz.net</td><td>Private IP of Nginx server or load balancer for Observation cluster</td><td>Rancher dashboard to monitor and manage the kubernetes cluster.</td></tr><tr><td>2.</td><td>keycloak.xyz.net</td><td>Private IP of Nginx server for Observation cluster</td><td>Administrative IAM tool (keycloak). This is for the kubernetes administration.</td></tr><tr><td>3.</td><td>sandbox.xyx.net</td><td>Private IP of Nginx server for MOSIP cluster</td><td>Index page for links to different dashboards of MOSIP env. (This is just for reference, please do not expose this page in a real production or UAT environment)</td></tr><tr><td>4.</td><td>api-internal.sandbox.xyz.net</td><td>Private IP of Nginx server for MOSIP cluster</td><td>Internal API’s are exposed through this domain. They are accessible privately over wireguard channel</td></tr><tr><td>5.</td><td>api.sandbox.xyx.net</td><td>Public IP of Nginx server for MOSIP cluster</td><td>All the API’s that are publically usable are exposed using this domain.</td></tr><tr><td>6.</td><td>kibana.sandbox.xyx.net</td><td>Private IP of Nginx server for MOSIP cluster</td><td>Optional installation. Used to access kibana dashboard over wireguard.</td></tr><tr><td>7.</td><td>kafka.sandbox.xyz.net</td><td>Private IP of Nginx server for MOSIP cluster</td><td>Kafka UI is installed as part of the MOSIP’s default installation. We can access kafka UI over wireguard. Mostly used for administrative needs.</td></tr><tr><td>8.</td><td>iam.sandbox.xyz.net</td><td>Private IP of Nginx server for MOSIP cluster</td><td>MOSIP uses an OpenID Connect server to limit and manage access across all the services. The default installation comes with Keycloak. This domain is used to access the keycloak server over wireguard</td></tr><tr><td>9.</td><td>postgres.sandbox.xyz.net</td><td>Private IP of Nginx server for MOSIP cluster</td><td>This domain points to the postgres server. You can connect to postgres via port forwarding over wireguard</td></tr><tr><td>10.</td><td>onboarder.sandbox.xyz.net</td><td>Private IP of Nginx server for MOSIP cluster</td><td>Accessing reports of MOSIP partner onboarding over wireguard</td></tr><tr><td>11.</td><td>eSignet.sandbox.xyz.net</td><td>Public IP of Nginx server for MOSIP cluster</td><td>Accessing eSignet portal publically</td></tr><tr><td>12.</td><td>healthservices.sandbox.xyz.net</td><td>Public IP of Nginx server for MOSIP cluster</td><td>Accessing Health portal publically</td></tr><tr><td>13.</td><td>smtp.sandbox.xyz.net</td><td>Private IP of Nginx server for MOSIP cluster</td><td>Accessing mock-smtp UI over wireguard</td></tr></tbody></table>
 
-#### Certificate requirements: <a href="#certificate-requirements" id="certificate-requirements"></a>
+#### Certificate requirements <a href="#certificate-requirements" id="certificate-requirements"></a>
 
 As only secured https connections are allowed via nginx server will need below mentioned valid ssl certificates:
 
@@ -116,7 +118,9 @@ Below is a step-by-step guide to set up and configure the required components fo
 
 Secure access solution that establishes private channels to Observation and eSignet clusters.
 
-_If you already have a Wireguard bastion host then you may skip this step._
+{% hint style="info" %}
+**Note:** If you already have a Wireguard bastion host then you may skip this step.
+{% endhint %}
 
 * A Wireguard bastion host (Wireguard server) provides a secure private channel to access the Observation and eSignet cluster.
 * The host restricts public access and enables access to only those clients who have their public key listed in the Wireguard server.
@@ -239,7 +243,7 @@ sudo systemctl status wg-quick@wg0
 * Clone [`k8s-infra`](https://github.com/mosip/k8s-infra/tree/v1.2.0.2/rancher/on-prem) and move to the required directory as per the hyperlink.
 {% endhint %}
 
-3. Set up the Observation cluster following [steps](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/on-prem-installation-guidelines#observation-k8s-cluster-setup-and-configuration).
+3. Set up the observation cluster by following the steps given [here](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/on-prem-installation-guidelines#observation-k8s-cluster-setup-and-configuration).
 4. Once cluster setup is completed, setup k8's cluster ingress and storage class following [steps](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/on-prem-installation-guidelines#observation-k8s-cluster-ingress-and-storage-class-setup).
 5. Once the Observation K8 cluster is created and configured set up the nginx server for the same using the [steps](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/on-prem-installation-guidelines#setting-up-nginx-server-for-observation-k8s-cluster).
 6. Once the Nginx server for observation place is done continue with the [installation of required apps:](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/on-prem-installation-guidelines#observation-k8s-cluster-apps-installation).

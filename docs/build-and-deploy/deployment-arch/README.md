@@ -1,6 +1,8 @@
 # ⛴️ Deployment Architecture
 
-This page has the proposed deployment architecture for eSignet in production.
+### Architecture Overview
+
+The below diagram illustrates the deployment architecture of the **eSignet service** with secure, scalable, and monitored infrastructure components.
 
 <figure><img src="../../.gitbook/assets/deployment-diagram.png" alt=""><figcaption><p>eSignet Deployment Diagram</p></figcaption></figure>
 
@@ -46,13 +48,13 @@ This pod is responsible for serving the external property files to application s
 
 This pod will expose all the UI component files that are requested from the browser once the eSignet portal is accessed.
 
-**eSigent Service**
+**eSignet Service**
 
-This is the actual backend service which exposes all the RESTful API endpoints, which includes all endpoints related to OIDC, VCI, UI and client management. This service has a plugin-based mechanism to integrate with the ID system for actual user verification. It also connects to the below cluster for various needs.
+This is the actual backend service that exposes all the RESTful API endpoints, which includes all endpoints related to OIDC, VCI, UI, and client management. This service has a plugin-based mechanism to integrate with the ID system for actual user verification. It also connects to the below cluster for various needs.
 
 **PostgreSQL DB Cluster**
 
-All the data related to client policies, consent etc. are stored in this cluster. It should be a highly available cluster with necessary replication levels using solutions like Citus.
+All the data related to client policies, consent, etc. are stored in this cluster. It should be a highly available cluster with necessary replication levels using solutions like Citus.
 
 **Redis Cache Cluster**
 
@@ -63,7 +65,7 @@ All transactional caching needs are taken care of by the Redis cluster.
 This cluster provides the necessary security to the cryptographic keys used in the application. Access to this cluster should be allowed only from a few selected nodes to control access and improve security.
 
 {% hint style="info" %}
-_Below additional Kubernetes, compatible tools are also configured into the Kubernetes cluster to take care of security and routing needs._
+_**Note:**_ Below additional Kubernetes-compatible tools are also configured into the Kubernetes cluster to take care of security and routing needs.
 {% endhint %}
 
 **Ingress Gateway**
@@ -80,7 +82,7 @@ Local docker registry is used to improve restart timings of containers where the
 
 **Kubernetes Secrets**
 
-Kubernetes Secret is used for storing and managing sensitive information like DB passwords, keycloak secrets etc.. that is required by application pods. It gives us more control over how sensitive information is used and reduces the risk of accidental exposure.
+Kubernetes Secret is used for storing and managing sensitive information like DB passwords, keycloak secrets, etc.. that is required by application pods. It gives us more control over how sensitive information is used and reduces the risk of accidental exposure.
 
 ### Control Panel
 
