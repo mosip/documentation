@@ -2,6 +2,12 @@
 
 ## Latest Release
 
+### Version: 1.4.2
+
+* Name: CTK 1.4.2(Patch)
+* Date: Coming Soon!
+* [Release Notes](versions/version-1.4.2.md)
+
 ### Version: 1.4.1
 
 * Name: CTK 1.4.1
