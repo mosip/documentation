@@ -10,7 +10,7 @@ This guide is applicable only for eSignet version 1.5.0 and above.
 
 * The deployment process includes the following key components and configurations:
   * **Wireguard**: [Wireguard](https://www.wireguard.com/) is used as a trust network extension to access the admin, control, and observation pane along with on-field registration client connectivity to the backend server.
-  * **Nginx Server**: eSignet uses [Nginx](https://www.nginx.com/) server for:
+  * **Nginx Server**: eSignet uses the Nginx server for:
     * SSL termination
     * Reverse Proxy
     * CDN/Cache management
@@ -47,7 +47,11 @@ This guide is applicable only for eSignet version 1.5.0 and above.
 
 ### Architecture  <a href="#architecture-todo" id="architecture-todo"></a>
 
-The below diagram shows the **deployment architecture** of the eSignet, highlighting secure user access via VPN, traffic routing through firewalls and load balancers, and service orchestration within a Kubernetes cluster. Key components include the **eSignet Service**, **OIDC UI**, databases, and secure cryptographic operations via an **HSM**. Deployment is managed with **Rancher**, Helm charts, and a private Git repo, with monitoring tools like **Grafana** and **Prometheus** ensuring observability.
+The diagram below illustrates the **deployment architecture** of the eSignet, highlighting secure user access via VPN, traffic routing through firewalls and load balancers, and service orchestration within a Kubernetes cluster.&#x20;
+
+* **Key Components**: eSignet Service, OIDC UI, databases, and secure cryptographic operations via HSM.
+* **Deployment**: Managed with Rancher, Helm charts, and a private Git repository.
+* **Monitoring**: Ensured using Grafana and Prometheus for observability.
 
 <figure><img src="../../.gitbook/assets/eSigent-deployment-diagram-2.drawio.png" alt=""><figcaption><p>eSignet Architecture diagram</p></figcaption></figure>
 

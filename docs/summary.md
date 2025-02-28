@@ -85,4 +85,4 @@
 * [📌 General](general/README.md)
   * [📚 Resources](general/resources.md)
   * [❓ FAQs](general/faq.md)
-  * [📑 Glossary](general/glossary.md)
+  * [💡 Glossary](general/glossary.md)
