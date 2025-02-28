@@ -4,7 +4,7 @@
 
 **Support:** Patch Release
 
-**Release Date**: Coming Soon!
+**Release Date**: 27th Feb, 2025
 
 ### **Overview**
 
@@ -41,10 +41,10 @@ Post installation, follow the setup steps available [**here**](https://docs.mosi
 
 #### **Repositories Released**
 
-| Repositories                | Tags Released |
-| --------------------------- | ------------- |
-| mosip-compliance-toolkit    | v1.4.2        |
-| mosip-compliance-toolkit-ui | v1.4.2        |
+| Repositories                | Tags Released                                                              |
+| --------------------------- | -------------------------------------------------------------------------- |
+| mosip-compliance-toolkit    | [v1.4.1](https://github.com/mosip/mosip-compliance-toolkit/tree/v1.4.1)    |
+| mosip-compliance-toolkit-ui | [v1.4.2](https://github.com/mosip/mosip-compliance-toolkit-ui/tree/v1.4.2) |
 
 ### **Bug Fixes**
 
