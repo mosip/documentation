@@ -12,8 +12,8 @@ If you are looking to try out Inji Web in our Collab environment, please follow 
 
 1. To get sample National ID credentials, we request you to initiate the process by completing the form available [**here**](https://docs.google.com/forms/d/e/1FAIpQLSc2I0CQqlYRIrEmcJ3J3tKlYOVNcYNj88YZe4MMwU2RZTrjOA/viewform).
 2. For sample Insurance Credentials (StayProtected), please provide the below details in the eSignet authentication page:\
-   \- Policy id 7070 \
-   \- Name aswin\
+   \- Policy id: 7070 \
+   \- Name: aswin\
    \-  19/02/2025
 
 #### **Steps to use**:

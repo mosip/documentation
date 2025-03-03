@@ -19,9 +19,9 @@ Before you start with setting up Inji Mobile, ensure you have the following in p
 
     _Note_: Please use 111111 as the OTP, for any OTP based feature in Collab environment.
 4. For sample Insurance Credentials, please provide the below details in the eSignet authentication page:
-   * Policy Number: 170-620-124
-   * Name: Abhishek G
-   * DoB: 07/07/1995
+   * Policy id: 7070&#x20;
+   * Name: aswin
+   * 19/02/2025
 
 ### Step-by-Step Process
 
