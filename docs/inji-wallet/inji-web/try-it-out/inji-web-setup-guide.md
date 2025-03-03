@@ -14,7 +14,7 @@ If you are looking to try out Inji Web in our Collab environment, please follow 
 2. For sample Insurance Credentials (StayProtected), please provide the below details in the eSignet authentication page:\
    \- Policy id: 7070 \
    \- Name: aswin\
-   \-  19/02/2025
+   \-  DOB: 19/02/2025
 
 #### **Steps to use**:
 

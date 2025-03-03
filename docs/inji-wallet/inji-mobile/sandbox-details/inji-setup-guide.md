@@ -21,7 +21,7 @@ Before you start with setting up Inji Mobile, ensure you have the following in p
 4. For sample Insurance Credentials, please provide the below details in the eSignet authentication page:
    * Policy id: 7070&#x20;
    * Name: aswin
-   * 19/02/2025
+   * DOB: 19/02/2025
 
 ### Step-by-Step Process
 
