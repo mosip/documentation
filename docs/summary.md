@@ -16,6 +16,7 @@
   * [License](readme/license.md)
   * [Announcement](readme/announcement.md)
   * [Deploy](readme/deploy.md)
+  * [Using Mock Data](readme/using-mock-data.md)
 
 ## Inji Wallet
 
