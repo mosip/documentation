@@ -5,7 +5,7 @@
   * [✨ Features](overview/features/README.md)
     * [Signup Portal](overview/features/signup-portal.md)
   * [⚖️ Principles](overview/principles/README.md)
-  * [📏 Standards](overview/Standards/README.md)
+  * [📏 Standards & Security](overview/Standards/README.md)
   * [📜 License](license.md)
 * [💻 Develop](develop/README.md)
   * [🦾 Technology](develop/technology/README.md)
