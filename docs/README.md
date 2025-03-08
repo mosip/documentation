@@ -10,7 +10,7 @@ In today’s digital-first world, most services are transitioning online, making
 
 Additionally, eSignet offers a seamless and straightforward solution for incorporating an existing trusted identity database into the digital realm. By enabling digital identities and providing identity verification and service access, eSignet delivers a sophisticated and user-friendly experience.
 
-#### **Addressing Privacy & Inclusivity**
+#### **Addressing Privacy & Inclusivity**🔒
 
 While existing verification methods offer security, they often lack inclusivity and do not fully address privacy concerns. At eSignet, we are continuously exploring ways to **bridge the digital divide** while prioritizing **user privacy and control** over personal data.
 
@@ -27,19 +27,21 @@ The images below depict the eSignet user login process, showcasing different aut
 
 ✅ **Identity Verification:** eSignet also offers a secure method for verifying an individual's identity against trusted identity providers such as national identity databases, driver's license systems, passport systems, or other reputable sources. The level of assurance is determined by the authentication factor utilized, with biometric authentication providing an added layer of user presence confirmation.
 
-✅ **Consented Data Sharing:** Additionally, eSignet facilitates consented data sharing for profile creation or meeting electronic Know Your Customer (eKYC) requirements for relying parties. When a relying party requests authentication, they can also request a specific set of attributes needed for profile creation or compliance with eKYC norms.
+✅ **Consented Data Sharing:** Additionally, eSignet facilitates consented data sharing for profile creation or meeting **Electronic Know Your Customer (eKYC)** requirements for relying parties. When a relying party requests authentication, they can also request a specific set of attributes needed for profile creation or compliance with eKYC norms.
 
-🔒 User data is only shared with explicit consent during the authentication process.
+User data is only shared with explicit consent during the authentication process.
 
 #### **How is eSignet different from other services?**
 
 eSignet re-imagines authentication services to factor in emerging trends and the need for assured digital identities. It brings critical capabilities to the authentication process.
 
-**Key features include:**
+**Key features include** ✨
 
-* **Seamless integration** - Framework to seamlessly integrate existing identity stores for authentication and KYC (Know Your Customer) requirements.
-* **Advanced biometric authentication** - for enhanced security.
-* **Comprehensive support** - for wallet-based authentication.
+✅ **Seamless integration** - Framework to seamlessly integrate existing identity stores for authentication and KYC (Know Your Customer) requirements.
+
+✅ **Advanced biometric authentication** - for enhanced security.
+
+✅ **Comprehensive support** - for wallet-based authentication.
 
 #### Who Can Use eSignet?
 
