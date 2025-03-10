@@ -23,11 +23,11 @@ The images below depict the eSignet user login process, showcasing different aut
 
 #### **What can eSignet be used for?**
 
-✅ **Seamless Login:** eSignet is a reliable login provider for a relying party application that allows access to the service without the need for additional login credentials.
+✅ **Seamless Login:** eSignet is a reliable login provider for a relying party application that allows access to the service without additional login credentials.
 
 ✅ **Identity Verification:** eSignet also offers a secure method for verifying an individual's identity against trusted identity providers such as national identity databases, driver's license systems, passport systems, or other reputable sources. The level of assurance is determined by the authentication factor utilized, with biometric authentication providing an added layer of user presence confirmation.
 
-✅ **Consented Data Sharing:** Additionally, eSignet facilitates consented data sharing for profile creation or meeting **Electronic Know Your Customer (eKYC)** requirements for relying parties. When a relying party requests authentication, they can also request a specific set of attributes needed for profile creation or compliance with eKYC norms.
+✅ **Consented Data Sharing: e**Signet facilitates consented data sharing for profile creation or meeting **Electronic Know Your Customer (eKYC)** requirements for relying parties. When a relying party requests authentication, they can also request specific attributes needed for profile creation or compliance with eKYC norms.
 
 User data is only shared with explicit consent during the authentication process.
 
