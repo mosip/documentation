@@ -16,7 +16,7 @@ It is recommended to follow the guidelines mentioned below.
 2. Filenames to start with lowercase. For longer and meaningful names, start with lowercase and then add hyphens (-) instead of underscores (\_). The are a few exceptions like `README`, `LICENSE`.
 3. Use dots only for extensions in filenames and not for joining words.
 4. File names should be as descriptive and meaningful as possible. It is better to avoid using any special characters (& # \* !) in the names.
-5. In general, ensure that the filenames match the main heading on the page. Example, name of this file is `mosip-documentation-sytle-guid.md`.
+5. In general, ensure that the filenames match the main heading on the page. Example, name of this file is `mosip-documentation-style-guide.md`.
 
 ![](../.gitbook/assets/filename-example1.png)
 
