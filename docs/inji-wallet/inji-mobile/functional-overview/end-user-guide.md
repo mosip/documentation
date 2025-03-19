@@ -31,6 +31,8 @@ The below screenshots explain the next steps after you get access.
 ![Installation of Inji Wallet on iOS mobile device](../../../.gitbook/assets/Testflight_Inji Wallet_Installation_Step1.png)
 
 
+![Installation of Inji Wallet on iOS mobile device](../../../../.gitbook/assets/Testflight_Inji Wallet_Installation_Step1.png)
+
 
 <div align="center">
 
