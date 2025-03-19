@@ -25,6 +25,34 @@ The below sections explain the steps for installing the Inji Wallet application 
 
 The below screenshots explain the next steps after you get access.
 
+
+# keshav test
+
+![Installation of Inji Wallet on iOS mobile device](../../../.gitbook/assets/Testflight_Inji Wallet_Installation_Step1.png)
+
+
+
+<div align="center">
+
+
+
+
+
+<figure><img src="../../../.gitbook/assets/Testflight_Inji Wallet_Installation_Step2 (1).png" alt="" width="188"><figcaption><p>Installation of Inji Wallet on iOS mobile device</p></figcaption></figure>
+
+ 
+
+<figure><img src="../../../.gitbook/assets/Testflight_Inji Wallet_Installation_Step3.png" alt="" width="188"><figcaption></figcaption></figure>
+
+</div>
+
+
+
+
+
+
+
+
 <div align="center">
 
 <figure><img src="../../../.gitbook/assets/Testflight_Inji Wallet_Installation_Step1.png" alt="" width="188"><figcaption></figcaption></figure>
