@@ -30,11 +30,11 @@ The below screenshots explain the next steps after you get access.
 
 <div align="center">
 
-![Installation](../../../.gitbook/assets/Testflight_Inji%20Wallet_Installation_Step1.png)
+![Installation](../../../.gitbook/assets/Testflight_Inji%20Wallet_Installation_Step1.png){width="188"}
 
-![Installation](../../../.gitbook/assets/Testflight_Inji%20Wallet_Installation_Step2%20(1).png)
+![Installation](../../../.gitbook/assets/Testflight_Inji%20Wallet_Installation_Step2%20(1).png){width="188"}
 
-![Installation](../../../.gitbook/assets/Testflight_Inji%20Wallet_Installation_Step3.png)
+![Installation](../../../.gitbook/assets/Testflight_Inji%20Wallet_Installation_Step3.png){width="188"}
 
 
 </div>
