@@ -25,22 +25,6 @@ The below sections explain the steps for installing the Inji Wallet application 
 
 The below screenshots explain the next steps after you get access.
 
-
-# keshav test
-
-<div align="center">
-
-![Installation](../../../.gitbook/assets/Testflight_Inji%20Wallet_Installation_Step1.png){width="188"}
-
-
-![Installation](../../../.gitbook/assets/Testflight_Inji%20Wallet_Installation_Step2%20(1).png){width="188"}
-
-
-![Installation](../../../.gitbook/assets/Testflight_Inji%20Wallet_Installation_Step3.png){width="188"}
-</div>
-
-
-
 <div align="center">
 
 <figure><img src="../../../.gitbook/assets/Testflight_Inji Wallet_Installation_Step1.png" alt="" width="188"><figcaption></figcaption></figure>
