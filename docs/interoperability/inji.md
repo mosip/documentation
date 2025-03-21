@@ -4,8 +4,9 @@ Inji enables the secure issuance, storage, exchange, and verification of data as
 
 ### **Inji Sub-modules**
 
-* **Inji Web:** Access digital credentials via a web platform.
 * **Inji Wallet:** Securely store and manage verifiable credentials.
+  * **Mobile:** Access and manage digital credentials via the Inji Wallet mobile app.
+  * **Web:** Securely interact with verifiable credentials through the web platform.
 * **Inji Certify:** Issue and certify trusted digital credentials.
 * **Inji Verify:** Confirm the validity of issued credentials.
 
@@ -24,6 +25,8 @@ eSignet leverages below plugins to achieve credential downloading and sharing:
 
 #### **eSignet Integration with INJI Wallet for Secure Login** <a href="#use-case-esignet-integration-with-inji-wallet-for-secure-login" id="use-case-esignet-integration-with-inji-wallet-for-secure-login"></a>
 
-eSignet supports the download of user credentials as verifiable credentials (VC) into the INJI wallet after authenticating the user against the MOSIP national ID system. These VCs can then be used for secure login to the health services portal by scanning the QR code with the INJI wallet, providing a seamless and verified access experience.
+eSignet supports the download of user credentials as verifiable credentials (VC) into the INJI wallet after authenticating the user against the MOSIP national ID system. These VCs can then be used for secure login to the [health services portal](https://healthservices-esignet-mock.collab.mosip.net/) by scanning the QR code with the INJI wallet, providing a seamless and verified access experience.
 
 👉 Learn more about[ Inji](https://docs.inji.io/).
+
+To try it out yourself in our sandbox [Collab](https://collab.mosip.net/) environment, click [here ](https://docs.esignet.io/test/try-it-out)to access the eSignet Try It Out section. For step-by-step instructions, refer to our [end user guide](../test/end-user-guide/health-portal/login-with-qr-code.md).

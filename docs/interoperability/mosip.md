@@ -16,3 +16,5 @@ eSignet integrates with MOSIP through the **ID Authentication module**, enabling
 A patient with a national ID can log in to an online health portal to check appointments and health records. The login process is handled by eSignet, which authenticates the patient’s identity against the MOSIP national ID system, ensuring secure access to personal health data. This integration provides seamless, secure, and scalable access to healthcare services while maintaining data privacy and authenticity.
 
 👉 Learn more about integration with [MOSIP](https://docs.mosip.io/1.2.0/integrations/e-signet).
+
+👉 To try it out yourself in our sandbox [Collab](https://collab.mosip.net/) environment, click [here ](https://docs.esignet.io/test/try-it-out)to access the eSignet Try It Out section.
