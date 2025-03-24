@@ -1,3 +1,98 @@
+
+
+
+
+
+# End User Guide
+
+{% hint style="warning" %}
+**Important**: We are in the process of updating screenshots and content in the End User Guide to reflect our new branding. These updates will be available soon, thank you for your patience!
+{% endhint %}
+
+
+
+This document serves as a concise user guide for end users, providing comprehensive information on the features and functionalities offered by Inji Wallet. 
+
+## Installing Inji Wallet
+
+The below sections explain the steps for installing the Inji Wallet application on Android and iOS platforms.
+
+#### On Android device
+
+1. To install the Inji Wallet app on an Android smartphone, click [here](https://drive.google.com/drive/folders/1SRHhFxQBNfOc-cdPU8VlKecIdc-WkuGZ) to get the Inji Wallet `apk` file for installation.
+2. Transfer the `apk` file onto the smartphone on which it is to be installed.
+3. Click on the `apk` file and follow the OS installation instructions.
+
+#### On iOS device
+
+1. Install the test flight app on your device.
+2. Follow the steps mentioned [here](https://docs.mosip.io/inji/inji-wallet/sandbox-details/inji-setup-guide#pre-requisites).
+
+The below screenshots explain the next steps after you get access.
+
+Figure-Caption - Installation of Inji Wallet on iOS mobile
+
+<div align="center">
+
+![media](media/Testflight-Inji-Wallet-Installation-Step1.png){width=30%} , ![media](media/Testflight-Inji-Wallet-Installation-Step2-(1).png){width=30%} , ![media](media/Testflight-Inji-Wallet-Installation-Step3.png){width=30%} 
+
+</div>
+
+<div align="center">
+
+![media](media/Testflight-Inji-Wallet-Installation-Step4.png){width=30%} , ![media](media/Testflight-Inji-Wallet-Installation-Step6.png){width=30%} , ![media](media/Testflight-Inji-Wallet-Installation-Step7.png){width=30%} 
+
+</div>
+
+### First launch of the app
+
+* The chosen language will be reflected within the app interface. Subsequently, a five-page tutorial for the Inji Wallet will be presented, followed by the option to secure the app.
+* This can be achieved through a PIN or the device's Biometrics (such as fingerprint or facial recognition). Once the setting is done, users will be directed to the app's home page.
+
+Figure-Caption - First-Launch-of-the-App
+
+<div align="center">
+
+![media](media/First-Launch-of-the-App-Step1.png){width=30%} , ![media](media/First-Launch-of-the-App-Step2.png){width=30%}, ![media](media/First-Launch-of-the-App-Step3.png){width=30%} 
+
+</div>
+
+<div align="center">
+
+![media](media/First-Launch-of-the-App-Step4.png){width=30%} , ![media](media/First-Launch-of-the-App-Step5.png){width=30%}, ![media](media/First-Launch-of-the-App-Step6.png){width=30%} 
+
+</div>
+
+<div align="center">
+
+![media](media/First-Launch-of-the-App-Step7.png){width=30%} , ![media](media/First-Launch-of-the-App-Step8.png){width=30%} , ![media](media/First-Launch-of-the-App-Step9.png){width=30%} 
+
+</div>
+
+<div>
+
+![media](media/First-Launch-of-the-App-Step10.png){width=30%} , ![media](media/First-Launch-of-the-App-Step11.png){width=30%} , ![media](media/First-Launch-of-the-App-Step12.png){width=30%} 
+
+</div>
+
+<div>
+
+![media](media/First-Launch-of-the-App-Step15.png){width=30%} , ![media](media/First-Launch-of-the-App-Step13.png){width=30%} , ![media](media/First-Launch-of-the-App-Step14.png){width=30%} 
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 # End User Guide
 
 {% hint style="warning" %}
