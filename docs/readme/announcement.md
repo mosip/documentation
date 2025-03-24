@@ -6,5 +6,3 @@ Please note! Documentation has now moved to a new address and that is [**docs.in
 
 For now, both the addresses are active helping through this transition untill every user comes to know of this update.
 
-<figure><img src="../.gitbook/assets/first-launch-of-the-app-step1.png" alt=""><figcaption></figcaption></figure>
-
