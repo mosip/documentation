@@ -1,4 +1,4 @@
-### First launch of the app
+# First launch of the app
 
 * The chosen language will be reflected within the app interface. Subsequently, a five-page tutorial for the Inji Wallet will be presented, followed by the option to secure the app.
 * This can be achieved through a PIN or the device's Biometrics (such as fingerprint or facial recognition). Once the setting is done, users will be directed to the app's home page.
@@ -36,14 +36,6 @@ Figure-Caption - First-Launch-of-the-App
 ![media](media/First-Launch-of-the-App-Step15.png){width=30%} , ![media](media/First-Launch-of-the-App-Step13.png){width=30%} , ![media](media/First-Launch-of-the-App-Step14.png){width=30%} 
 
 </div>
-
-
-
-
-
-
-
-
 
 
 
