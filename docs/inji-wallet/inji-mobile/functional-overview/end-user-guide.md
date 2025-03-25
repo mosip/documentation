@@ -325,17 +325,26 @@ Let us understand the process of sharing credentials using an example and see th
 
 <div>
 
-<figure><img src="../../../.gitbook/assets/resident_step1.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-resident-1.png" alt="" width="45%"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../../../.gitbook/assets/resident_step2.png" alt="" width="188"><figcaption><p>On Resident's wallet</p></figcaption></figure>
-
- 
-
-<figure><img src="../../../.gitbook/assets/resident_step3.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-resident-2.png" alt="" width="45%"><figcaption><p>On Resident's wallet</p></figcaption></figure>
 
 </div>
+
+<div>
+
+<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-resident-3.png" alt="" width="45%"><figcaption></figcaption></figure>
+
+
+<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-resident-3.png" alt="" width="45%"><figcaption></figcaption></figure>
+
+
+</div>
+
+
+<!--
 
 <div>
 
@@ -350,6 +359,9 @@ Let us understand the process of sharing credentials using an example and see th
 <figure><img src="../../../.gitbook/assets/resident_step6.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
+
+
+
 
 <div>
 
@@ -367,12 +379,36 @@ Let us understand the process of sharing credentials using an example and see th
 
 <figure><img src="../../../.gitbook/assets/resident_step10.png" alt="" width="188"><figcaption><p>On Resident's wallet</p></figcaption></figure>
 
+-->
+
+
+
 **On the Relying Party's phone**
 
 * This functionality is only available on Android devices. To access it, the receiver needs to navigate to the settings page and locate the `Receive Cards` option.
 * On selecting this option, it will open the QR code page. For the relying party to be able to receive a card, the resident needs to scan the QR code using a shared phone. Once the QR code is scanned and shared, the relying party will receive the VC and be able to preview its contents.
 * To view the received cards, they would need to access the settings page and find the `Received Cards` section. Clicking on this section will display the received cards. If the receiver has not received any card, this section will be empty.
 * Please note that the relying party can only view the received cards and will not be able to share or perform other actions with them.
+
+
+<div>
+
+
+<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-relying-party-1.png" alt="" width="31%"><figcaption></figcaption></figure>
+
+
+<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-relying-party-2.png" alt="" width="31%"><figcaption></figcaption></figure>
+
+
+<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-relying-party-3.png" alt="" width="31%"><figcaption></figcaption></figure>
+
+
+</div>
+
+
+<!--
+
+
 
 <div>
 
@@ -401,6 +437,12 @@ Let us understand the process of sharing credentials using an example and see th
 <figure><img src="../../../.gitbook/assets/relying party_step6.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
+
+
+-->
+
+
+
 
 ### **Share / Share with Selfie from Home Page Quick Access menu**
 
