@@ -64,53 +64,55 @@ The below screenshots explain the next steps after you get access.
 
  
 
-<figure><img src="../../../.gitbook/assets/first-launch-of-the-app_step2.png" alt="" width="188"><figcaption><p>First launch of app</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step2.png" alt="" width="188"><figcaption><p>First launch of app</p></figcaption></figure>
 
  
 
-<figure><img src="../../../.gitbook/assets/first launch of the app_step3.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step3.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
 <div align="center">
 
-<figure><img src="../../../.gitbook/assets/first launch of the app_step4.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step4.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../../../.gitbook/assets/first launch of the app_step5.png" alt="" width="188"><figcaption><p>First launch of app</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step5.png" alt="" width="188"><figcaption><p>First launch of app</p></figcaption></figure>
 
  
 
-<figure><img src="../../../.gitbook/assets/first launch of the app_step6.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step6.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
 <div align="center">
 
-<figure><img src="../../../.gitbook/assets/first launch of the app_step7.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step7.png" alt="" width="188"><figcaption></figcaption></figure>
+
+ 
+<!--
+<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step8.png" alt="" width="188"><figcaption><p>First launch of app</p></figcaption></figure>
 
  
 
-<figure><img src="../../../.gitbook/assets/first launch of the app_step8.png" alt="" width="188"><figcaption><p>First launch of app</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step9.png" alt="" width="188"><figcaption></figcaption></figure>
 
- 
-
-<figure><img src="../../../.gitbook/assets/first launch of the app_step9.png" alt="" width="188"><figcaption></figcaption></figure>
+-->
 
 </div>
 
 <div>
 
-<figure><img src="../../../.gitbook/assets/first launch of the app_step10.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step10.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../../../.gitbook/assets/first launch of the app_step11.png" alt="" width="188"><figcaption><p>First launch of app</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step11.png" alt="" width="188"><figcaption><p>First launch of app</p></figcaption></figure>
 
  
 
-<figure><img src="../../../.gitbook/assets/first launch of the app_step12.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step12.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
@@ -179,26 +181,7 @@ Inji Wallet integrates with eSignet as an authorization layer to perform VC down
 <figure><img src="../../../.gitbook/assets/download national id vc_step7.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
-
 <figure><img src="../../../.gitbook/assets/download national id vc_step8.png" alt="" width="188"><figcaption><p>Download National ID</p></figcaption></figure>
-
- 
-
-<figure><img src="../../../.gitbook/assets/download national id vc_step9.png" alt="" width="188"><figcaption></figcaption></figure>
-
-</div>
-
-<div>
-
-<figure><img src="../../../.gitbook/assets/download national id vc_step10.png" alt="" width="188"><figcaption></figcaption></figure>
-
- 
-
-<figure><img src="../../../.gitbook/assets/download national id vc_step11.png" alt="" width="188"><figcaption><p>Download National ID</p></figcaption></figure>
-
- 
-
-<figure><img src="../../../.gitbook/assets/download national id vc_step12.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
@@ -239,21 +222,6 @@ Inji Wallet integrates with eSignet as an authorization layer to perform VC down
 
 </div>
 
-<div>
-
-<figure><img src="../../../.gitbook/assets/download stayprotected insurance vc_step7.png" alt="" width="188"><figcaption></figcaption></figure>
-
- 
-
-<figure><img src="../../../.gitbook/assets/download stayprotected insurance vc_step8.png" alt="" width="188"><figcaption><p>Download insurance VC</p></figcaption></figure>
-
- 
-
-<figure><img src="../../../.gitbook/assets/download stayprotected insurance vc_step9.png" alt="" width="188"><figcaption></figcaption></figure>
-
-</div>
-
-<figure><img src="../../../.gitbook/assets/download insurance vc.png" alt="" width="375"><figcaption><p>Download insurance VC</p></figcaption></figure>
 
 ## Detailed view of the downloaded VC
 
