@@ -240,23 +240,32 @@ Once we click on the downloaded VC on the Home Page, the detailed view opens up 
 
 Users can see all the details of the National ID in the detailed view. In addition, the user can access the quick access menu (...) on the top right to perform actions such as Pin/Unpin, Share, Share with Selfie, QR Code Login, view Activity Log, and Remove from the detailed view of the VC.
 
-<figure><img src="../../../.gitbook/assets/detailed view of national id (1).png" alt="" width="375"><figcaption><p>Detailed view of National ID</p></figcaption></figure>
+<div align="center">
+
+<figure><img src="../../../.gitbook/assets/iw-android-detailed-view-of-national-id-vc-01.png" alt="" width="49%"><figcaption><p>Detailed view of National ID</p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/iw-android-detailed-view-of-national-id-vc-02.png" alt="" width="49%"><figcaption><p>Detailed view of National ID</p></figcaption></figure>
+
+
+</div>
+
+
 
 ### Detailed View of Insurance VC
 
 Users can see all the Insurance policy details in the detailed view along with the QR Code. The QR Code can be magnified which can be presented to the verifier for scanning. Through the quick access menu (...) on the top right user can also perform other actions like Share, Pin, Remove and Activity log on the VC.
 
-<div>
+<div align="center">
 
-<figure><img src="../../../.gitbook/assets/detailed view of insurance vc_step1.png" alt="" width="188"><figcaption></figcaption></figure>
-
- 
-
-<figure><img src="../../../.gitbook/assets/detailed view of insurance vc_step2.png" alt="" width="188"><figcaption><p>Detailed view of insurance VC</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-detailed-view-of-insurance-vc-step-1.png" alt="" width="31%"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../../../.gitbook/assets/detailed view of insurance vc_step3.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-detailed-view-of-insurance-vc-step-2.png" alt="" width="31%"><figcaption><p>Detailed view of insurance VC</p></figcaption></figure>
+
+ 
+
+<figure><img src="../../../.gitbook/assets/iw-android-detailed-view-of-insurance-vc-step-3.png" alt="" width="31%"><figcaption></figcaption></figure>
 
 </div>
 
@@ -266,7 +275,7 @@ After completing several scenarios, we can find it by selecting the third icon i
 
 <div align="center">
 
-<figure><img src="../../../.gitbook/assets/history tab.png" alt="" width="188"><figcaption><p>Viewing History</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-viewing-history-1.png" alt="" width="31%"><figcaption><p>Viewing History</p></figcaption></figure>
 
 </div>
 
@@ -274,17 +283,17 @@ After completing several scenarios, we can find it by selecting the third icon i
 
 Users can view the activity logs of a VC from the Home Page or the detailed view by choosing the menu option "View Activity Log" from the quick access menu (...).
 
-<div>
+<div align="center">
 
-<figure><img src="../../../.gitbook/assets/view activity log for a vc_step1.png" alt="" width="188"><figcaption></figcaption></figure>
-
- 
-
-<figure><img src="../../../.gitbook/assets/view activity log for a vc_step2.png" alt="" width="188"><figcaption><p>Activity Log for a VC</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-view-activity-log-of-a-vc-1.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../../../.gitbook/assets/view activity log for a vc_step3.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-view-activity-log-of-a-vc-3.png" alt="" width="188"><figcaption><p>Activity Log for a VC</p></figcaption></figure>
+
+ 
+
+<figure><img src="../../../.gitbook/assets/iw-android-view-activity-log-of-a-vc-3.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
@@ -559,6 +568,7 @@ Let us understand the process of sharing credentials using an example and see th
 
 </div>
 
+
 <div>
 
 <figure><img src="../../../.gitbook/assets/relying party_step4 (2).png" alt="" width="188"><figcaption></figcaption></figure>
@@ -584,9 +594,12 @@ After clicking on the ellipsis button on the downloaded VC, a button will appear
 
 <figure><img src="../../../.gitbook/assets/iw-android-pinning-a-vc-1.png" alt="" width="31%"><figcaption><p>Pinning a VC</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/iw-pinning-a-vc-2.png" alt="" width="31%"><figcaption><p>Pinning a VC</p></figcaption></figure>
 
 <figure><img src="../../../.gitbook/assets/iw-pinning-a-vc-2.png" alt="" width="31%"><figcaption><p>Pinning a VC</p></figcaption></figure>
+
+
+<figure><img src="../../../.gitbook/assets/iw-pinning-a-vc-2.png" alt="" width="31%"><figcaption><p>Pinning a VC</p></figcaption></figure>
+
 
 </div>
 
