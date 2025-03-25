@@ -122,15 +122,15 @@ The below screenshots explain the next steps after you get access.
 
 <div align="center">
 
-<figure><img src="../../../.gitbook/assets/first launch of the app_Step15.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step15.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../../../.gitbook/assets/first launch of the app_step13.png" alt="" width="188"><figcaption><p>First launch of app</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step13.png" alt="" width="188"><figcaption><p>First launch of app</p></figcaption></figure>
 
  
 
-<figure><img src="../../../.gitbook/assets/first launch of the app_step14.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step14.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
