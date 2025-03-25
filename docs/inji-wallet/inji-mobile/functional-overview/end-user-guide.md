@@ -5,7 +5,6 @@
 {% endhint %}
 
 
-
 This document serves as a concise user guide for end users, providing comprehensive information on the features and functionalities offered by Inji Wallet.
 
 ## Installing Inji Wallet
@@ -338,7 +337,7 @@ Let us understand the process of sharing credentials using an example and see th
 <figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-resident-3.png" alt="" width="45%"><figcaption></figcaption></figure>
 
 
-<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-resident-3.png" alt="" width="45%"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-resident-4.png" alt="" width="45%"><figcaption></figcaption></figure>
 
 
 </div>
@@ -382,7 +381,6 @@ Let us understand the process of sharing credentials using an example and see th
 -->
 
 
-
 **On the Relying Party's phone**
 
 * This functionality is only available on Android devices. To access it, the receiver needs to navigate to the settings page and locate the `Receive Cards` option.
@@ -394,21 +392,23 @@ Let us understand the process of sharing credentials using an example and see th
 <div>
 
 
-<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-relying-party-1.png" alt="" width="31%"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-relying-party-1.png" alt="" width="24%"><figcaption></figcaption></figure>
 
 
-<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-relying-party-2.png" alt="" width="31%"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-relying-party-2.png" alt="" width="24%"><figcaption></figcaption></figure>
 
 
-<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-relying-party-3.png" alt="" width="31%"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-relying-party-3.png" alt="" width="24%"><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-relying-party-4.png" alt="" width="22%"><figcaption></figcaption></figure>
+
+
 
 
 </div>
 
 
 <!--
-
-
 
 <div>
 
@@ -440,8 +440,6 @@ Let us understand the process of sharing credentials using an example and see th
 
 
 -->
-
-
 
 
 ### **Share / Share with Selfie from Home Page Quick Access menu**
@@ -637,10 +635,10 @@ After clicking on the ellipsis button on the downloaded VC, a button will appear
 <figure><img src="../../../.gitbook/assets/iw-android-pinning-a-vc-1.png" alt="" width="31%"><figcaption><p>Pinning a VC</p></figcaption></figure>
 
 
-<figure><img src="../../../.gitbook/assets/iw-pinning-a-vc-2.png" alt="" width="31%"><figcaption><p>Pinning a VC</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-pinning-a-vc-3.png" alt="" width="31%"><figcaption><p>Pinning a VC</p></figcaption></figure>
 
 
-<figure><img src="../../../.gitbook/assets/iw-pinning-a-vc-2.png" alt="" width="31%"><figcaption><p>Pinning a VC</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-pinning-a-vc-2.png" alt="" width="31%"><figcaption><p>Pinning a VC</p></figcaption></figure>
 
 
 </div>
