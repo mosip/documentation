@@ -582,11 +582,11 @@ After clicking on the ellipsis button on the downloaded VC, a button will appear
 
 <div align="center">
 
-<figure><img src="../../../.gitbook/assets/iw-android-pinning-a-vc-1.png" alt="" width="413"><figcaption><p>Pinning a VC</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-pinning-a-vc-1.png" alt="" width="31%"><figcaption><p>Pinning a VC</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/iw-pinning-a-vc-2.png" alt="" width="399"><figcaption><p>Pinning a VC</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-pinning-a-vc-2.png" alt="" width="31%"><figcaption><p>Pinning a VC</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/iw-pinning-a-vc-2.png" alt="" width="399"><figcaption><p>Pinning a VC</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-pinning-a-vc-2.png" alt="" width="31%"><figcaption><p>Pinning a VC</p></figcaption></figure>
 
 </div>
 
@@ -627,11 +627,11 @@ There are two ways to remove/delete a VC from the wallet:
 
 <div align="center">
 
-<figure><img src="../../../.gitbook/assets/iw-android-deleting-a-vc-1.png" alt="" width="375"><figcaption><p>Deleting a VC</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-deleting-a-vc-1.png" alt="" width="31%"><figcaption><p>Deleting a VC</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/iw-android-deleting-a-vc-2.png" alt="" width="375"><figcaption><p>Deleting a VC</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-deleting-a-vc-2.png" alt="" width="31%"><figcaption><p>Deleting a VC</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/iw-android-deleting-a-vc-3.png" alt="" width="375"><figcaption><p>Deleting a VC</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-deleting-a-vc-3.png" alt="" width="31%"><figcaption><p>Deleting a VC</p></figcaption></figure>
 
 </div>
 
@@ -643,11 +643,11 @@ Users can now search for a VC by providing a search string in the search bar. VC
 
 <div align="center">
 
-<figure><img src="../../../.gitbook/assets/iw-android-search-vc-1.png" alt="" width="375"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-search-vc-1.png" alt="" width="31%"><figcaption><p></p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/iw-android-search-vc-2.png" alt="" width="375"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-search-vc-2.png" alt="" width="31%"><figcaption><p></p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/iw-android-search-vc-3.png" alt="" width="375"><figcaption><p>Search for a VC</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-search-vc-3.png" alt="" width="31%"><figcaption><p>Search for a VC</p></figcaption></figure>
 
 </div>
 
