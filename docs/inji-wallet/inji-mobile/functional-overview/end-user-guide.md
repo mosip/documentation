@@ -579,9 +579,18 @@ Let us understand the process of sharing credentials using an example and see th
 
 After clicking on the ellipsis button on the downloaded VC, a button will appear allowing for the VC to be pinned. Selecting this option will pin the specific VC to the top of the screen.
 
-<figure><img src="../../../.gitbook/assets/pinning a vc 1.png" alt="" width="413"><figcaption><p>Pinning a VC</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/Poinning a vc 2.png" alt="" width="399"><figcaption><p>Pinning a VC</p></figcaption></figure>
+<div align="center">
+
+<figure><img src="../../../.gitbook/assets/iw-android-pinning-a-vc-1.png" alt="" width="413"><figcaption><p>Pinning a VC</p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/iw-pinning-a-vc-2.png" alt="" width="399"><figcaption><p>Pinning a VC</p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/iw-pinning-a-vc-2.png" alt="" width="399"><figcaption><p>Pinning a VC</p></figcaption></figure>
+
+</div>
+
+
 
 ### Activating a VC
 
@@ -615,17 +624,33 @@ There are two ways to remove/delete a VC from the wallet:
 * The second option is to choose the Remove from Wallet menu option from the quick access menu (...) of the card from the detailed view of the VC.
 * Upon clicking this option, the user will be prompted with a pop-up for confirmation. If the user chooses, “Yes, I confirm” the VC will be removed from the wallet.
 
-<figure><img src="../../../.gitbook/assets/deleting a vc 1.png" alt="" width="375"><figcaption><p>Deleting a VC</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/deleting a vc 2.png" alt="" width="375"><figcaption><p>Deleting a VC</p></figcaption></figure>
+<div align="center">
+
+<figure><img src="../../../.gitbook/assets/iw-android-deleting-a-vc-1.png" alt="" width="375"><figcaption><p>Deleting a VC</p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/iw-android-deleting-a-vc-2.png" alt="" width="375"><figcaption><p>Deleting a VC</p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/iw-android-deleting-a-vc-3.png" alt="" width="375"><figcaption><p>Deleting a VC</p></figcaption></figure>
+
+</div>
+
 
 ## Search
 
 Users can now search for a VC by providing a search string in the search bar. VCs that match the search criteria will be displayed.
 
-<figure><img src="../../../.gitbook/assets/searching a vc 1.png" alt="" width="375"><figcaption><p>Search for a VC</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/search a vc 2.png" alt="" width="375"><figcaption><p>Search for a VC</p></figcaption></figure>
+<div align="center">
+
+<figure><img src="../../../.gitbook/assets/iw-android-search-vc-1.png" alt="" width="375"><figcaption><p></p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/iw-android-search-vc-2.png" alt="" width="375"><figcaption><p></p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/iw-android-search-vc-3.png" alt="" width="375"><figcaption><p>Search for a VC</p></figcaption></figure>
+
+</div>
+
 
 ## Data backup and restore
 
