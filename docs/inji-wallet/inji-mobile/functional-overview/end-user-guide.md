@@ -58,6 +58,7 @@ The below screenshots explain the next steps after you get access.
 * The chosen language will be reflected within the app interface. Subsequently, a five-page tutorial for the Inji Wallet will be presented, followed by the option to secure the app.
 * This can be achieved through a PIN or the device's Biometrics (such as fingerprint or facial recognition). Once the setting is done, users will be directed to the app's home page.
 
+
 <div align="center">
 
 <figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step1.png" alt="" width="31%"><figcaption></figcaption></figure>
@@ -72,7 +73,7 @@ The below screenshots explain the next steps after you get access.
 
 
 
-<div align="center">
+<div>
 
 <figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step4.png" alt="" width="188"><figcaption></figcaption></figure>
 
@@ -86,7 +87,7 @@ The below screenshots explain the next steps after you get access.
 
 
 
-<div align="center">
+<div>
 
 <figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step7.png" alt="" width="188"><figcaption></figcaption></figure>
 
@@ -104,7 +105,7 @@ The below screenshots explain the next steps after you get access.
 
 
 
-<div align="center">
+<div>
 
 <figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step10.png" alt="" width="188"><figcaption></figcaption></figure>
 
@@ -120,7 +121,7 @@ The below screenshots explain the next steps after you get access.
 
 
 
-<div align="center">
+<div>
 
 <figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step15.png" alt="" width="188"><figcaption></figcaption></figure>
 
@@ -133,6 +134,8 @@ The below screenshots explain the next steps after you get access.
 <figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step14.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
+
+
 
 ## Downloading VC
 
@@ -642,17 +645,17 @@ To backup VCs, the user has to choose their preference for the cloud based on th
 
 ### Data backup - Android
 
-<figure><img src="../../../.gitbook/assets/untitled design (1) (5).png" alt="" width="563"><figcaption><p>Data Backup on Android</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-backup-1.png" alt="" width="563"><figcaption><p>Data Backup on Android</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/untitled design (11).png" alt="" width="563"><figcaption><p>Data Backup on Android</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-backup-2.png" alt="" width="563"><figcaption><p>Data Backup on Android</p></figcaption></figure>
 
 ### Data backup- ios
 
-<figure><img src="../../../.gitbook/assets/data backup_ios_step1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/data-backup-ios-step1.png" alt=""><figcaption></figcaption></figure>
 
 
 
-<figure><img src="../../../.gitbook/assets/data backup_ios_step2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/data-backup-ios-step2.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -668,8 +671,8 @@ To restore backed-up VCs, the user has to choose their preference of the cloud b
 
 ### Restore - Android
 
-<figure><img src="../../../.gitbook/assets/untitled design (12).png" alt="" width="563"><figcaption><p>Restore on Android</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-ios-backup-and-restore-1.png" alt="" width="563"><figcaption><p>Restore on Android</p></figcaption></figure>
 
 ### Restore - ios
 
-<figure><img src="../../../.gitbook/assets/untitled design (1) (7).png" alt="" width="563"><figcaption><p>Restore on iOS</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-backup-and-restore-1.png" alt="" width="563"><figcaption><p>Restore on iOS</p></figcaption></figure>
