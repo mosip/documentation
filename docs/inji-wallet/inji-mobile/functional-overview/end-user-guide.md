@@ -60,17 +60,18 @@ The below screenshots explain the next steps after you get access.
 
 <div align="center">
 
-<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step1.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step1.png" alt="" width="31%"><figcaption></figcaption></figure>
+
+ 
+<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step2.png" alt=""width="31%"><figcaption><p>First launch of app</p></figcaption></figure>
 
  
 
-<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step2.png" alt="" width="188"><figcaption><p>First launch of app</p></figcaption></figure>
-
- 
-
-<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step3.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step3.png" alt="" width="31%"><figcaption></figcaption></figure>
 
 </div>
+
+
 
 <div align="center">
 
@@ -85,6 +86,7 @@ The below screenshots explain the next steps after you get access.
 <figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step6.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
+
 
 <div align="center">
 
