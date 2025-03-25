@@ -241,9 +241,9 @@ Users can see all the details of the National ID in the detailed view. In additi
 
 <div align="center">
 
-<figure><img src="../../../.gitbook/assets/iw-android-detailed-view-of-national-id-vc-01.png" alt="" width="49%"><figcaption><p>Detailed view of National ID</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-detailed-view-of-national-id-vc-01.png" alt="" width="188%"><figcaption><p>Detailed view of National ID</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/iw-android-detailed-view-of-national-id-vc-02.png" alt="" width="49%"><figcaption><p>Detailed view of National ID</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-detailed-view-of-national-id-vc-02.png" alt="" width="188%"><figcaption><p>Detailed view of National ID</p></figcaption></figure>
 
 
 </div>
@@ -274,7 +274,7 @@ After completing several scenarios, we can find it by selecting the third icon i
 
 <div align="center">
 
-<figure><img src="../../../.gitbook/assets/iw-android-viewing-history-1.png" alt="" width="31%"><figcaption><p>Viewing History</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-viewing-history-1.png" alt="" width="188%"><figcaption><p>Viewing History</p></figcaption></figure>
 
 </div>
 
@@ -324,20 +324,20 @@ Let us understand the process of sharing credentials using an example and see th
 
 <div>
 
-<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-resident-1.png" alt="" width="45%"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-resident-1.png" alt="" width="188%"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-resident-2.png" alt="" width="45%"><figcaption><p>On Resident's wallet</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-resident-2.png" alt="" width="188%"><figcaption><p>On Resident's wallet</p></figcaption></figure>
 
 </div>
 
 <div>
 
-<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-resident-3.png" alt="" width="45%"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-resident-3.png" alt="" width="188%"><figcaption></figcaption></figure>
 
 
-<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-resident-4.png" alt="" width="45%"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-resident-4.png" alt="" width="188%"><figcaption></figcaption></figure>
 
 
 </div>
@@ -631,6 +631,7 @@ After clicking on the ellipsis button on the downloaded VC, a button will appear
 
 
 <div align="center">
+
 
 <figure><img src="../../../.gitbook/assets/iw-android-pinning-a-vc-1.png" alt="" width="31%"><figcaption><p>Pinning a VC</p></figcaption></figure>
 
