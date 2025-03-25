@@ -274,7 +274,7 @@ After completing several scenarios, we can find it by selecting the third icon i
 
 <div align="center">
 
-<figure><img src="../../../.gitbook/assets/iw-android-viewing-history-1.png" alt="" width="188%"><figcaption><p>Viewing History</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-viewing-history-1.png" alt="" width="188"><figcaption><p>Viewing History</p></figcaption></figure>
 
 </div>
 
@@ -324,20 +324,20 @@ Let us understand the process of sharing credentials using an example and see th
 
 <div>
 
-<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-resident-1.png" alt="" width="188%"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-resident-1.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-resident-2.png" alt="" width="188%"><figcaption><p>On Resident's wallet</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-resident-2.png" alt="" width="188"><figcaption><p>On Resident's wallet</p></figcaption></figure>
 
 </div>
 
 <div>
 
-<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-resident-3.png" alt="" width="188%"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-resident-3.png" alt="" width="188"><figcaption></figcaption></figure>
 
 
-<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-resident-4.png" alt="" width="188%"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-resident-4.png" alt="" width="188"><figcaption></figcaption></figure>
 
 
 </div>
@@ -452,6 +452,9 @@ Let us understand the process of sharing credentials using an example and see th
 * Once the QR code is successfully scanned, both phones will establish a Bluetooth connection.
 * The Share button will solely share the VC, while the Share with Selfie option will verify if the sender's face matches the photo in the VC before proceeding to share.
 
+<!-- 
+
+
 <div>
 
 <figure><img src="../../../.gitbook/assets/resident_step1 (1).png" alt="" width="188"><figcaption></figcaption></figure>
@@ -496,12 +499,16 @@ Let us understand the process of sharing credentials using an example and see th
 
 <figure><img src="../../../.gitbook/assets/On Resident&#x26;#x27;s wallet.png" alt=""><figcaption><p>On Resident's wallet</p></figcaption></figure>
 
+-->
+
 **On the Relying Party's phone**:
 
 * This functionality is only available on Android devices. To access it, the receiver needs to navigate to the settings page and locate the `Receive Cards` option.
 * On selecting this option, it will open the QR code page. For the relying party to be able to receive a card, the resident needs to scan the QR code using a shared phone. Once the QR code is scanned and shared, the relying party will receive the VC and be able to preview its contents.
 * To view the received cards, they would need to access the settings page and find the `Received Cards` section. Clicking on this section will display the received cards. If the receiver has not received any card, this section will be empty.
 * Please note that the relying party can only view the received cards and will not be able to share or perform other actions with them.
+
+<!--
 
 <div>
 
@@ -533,6 +540,11 @@ Let us understand the process of sharing credentials using an example and see th
 
 <figure><img src="../../../.gitbook/assets/relying party_step7 (1).png" alt="" width="188"><figcaption><p>Relying party's device</p></figcaption></figure>
 
+
+--> 
+
+
+
 ### **Share with a selfie from VC Detailed View Quick Access menu**
 
 **On the Sharing Party's phone**
@@ -542,6 +554,8 @@ Let us understand the process of sharing credentials using an example and see th
 * Upon granting the necessary permissions, the app opens a camera where the resident can scan the QR code of the recipient's (Verifier/Relying Party) phone.
 * Once the QR code is successfully scanned, both phones will establish a Bluetooth connection.
 * The Share button will solely share the VC, while the Share with Selfie option will verify if the sender's face matches the photo in the VC before proceeding to share.
+
+<!--
 
 <div>
 
@@ -587,12 +601,18 @@ Let us understand the process of sharing credentials using an example and see th
 
 <figure><img src="../../../.gitbook/assets/resident app_step10.png" alt="" width="188"><figcaption><p>On Resident's wallet</p></figcaption></figure>
 
+-->
+
+
+
 **On the Relying Party's phone:**
 
 * This functionality is only available on Android devices. To access it, the receiver needs to navigate to the settings page and locate the `Receive Cards` option.
 * On selecting this option, it will open the QR code page. For the relying party to be able to receive a card, the resident needs to scan the QR code using a shared phone. Once the QR code is scanned and shared, the relying party will receive the VC and be able to preview its contents.
 * To view the received cards, they would need to access the settings page and find the `Received Cards` section. Clicking on this section will display the received cards. If the receiver has not received any card, this section will be empty.
 * Please note that the relying party can only view the received cards and will not be able to share or perform other actions with them.
+
+<!--
 
 <div>
 
@@ -624,6 +644,8 @@ Let us understand the process of sharing credentials using an example and see th
 </div>
 
 <figure><img src="../../../.gitbook/assets/relying party_step6 (2).png" alt="" width="188"><figcaption><p>Relying party's device</p></figcaption></figure>
+
+--> 
 
 ### Pinning a VC
 
