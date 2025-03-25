@@ -66,7 +66,6 @@ The below screenshots explain the next steps after you get access.
 <figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step2.png" alt=""width="31%"><figcaption><p>First launch of app</p></figcaption></figure>
 
  
-
 <figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step3.png" alt="" width="31%"><figcaption></figcaption></figure>
 
 </div>
@@ -78,14 +77,13 @@ The below screenshots explain the next steps after you get access.
 <figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step4.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
-
 <figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step5.png" alt="" width="188"><figcaption><p>First launch of app</p></figcaption></figure>
 
  
-
 <figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step6.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
+
 
 
 <div align="center">
@@ -104,7 +102,9 @@ The below screenshots explain the next steps after you get access.
 
 </div>
 
-<div>
+
+
+<div align="center">
 
 <figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step10.png" alt="" width="188"><figcaption></figcaption></figure>
 
@@ -118,7 +118,9 @@ The below screenshots explain the next steps after you get access.
 
 </div>
 
-<div>
+
+
+<div align="center">
 
 <figure><img src="../../../.gitbook/assets/first launch of the app_Step15.png" alt="" width="188"><figcaption></figcaption></figure>
 
@@ -150,7 +152,8 @@ Inji Wallet integrates with eSignet as an authorization layer to perform VC down
 * On the authorization page (eSignet page), the user has to enter the UIN / VID and provide the OTP sent to the registered mobile number/email.
 * Upon successful validation of OTP, the user will be taken back to the application and land on the loading screen. After the download process is completed, the user will be returned to the home page, where the Downloaded Credential will be available.
 
-<div>
+
+<div align="center">
 
 <figure><img src="../../../.gitbook/assets/download national id vc_step1.png" alt="" width="188"><figcaption></figcaption></figure>
 
@@ -164,7 +167,9 @@ Inji Wallet integrates with eSignet as an authorization layer to perform VC down
 
 </div>
 
-<div>
+
+
+<div align="center">
 
 <figure><img src="../../../.gitbook/assets/download national id vc_step4.png" alt="" width="188"><figcaption></figcaption></figure>
 
@@ -178,7 +183,9 @@ Inji Wallet integrates with eSignet as an authorization layer to perform VC down
 
 </div>
 
-<div>
+
+
+<div align="center">
 
 <figure><img src="../../../.gitbook/assets/download national id vc_step7.png" alt="" width="188"><figcaption></figcaption></figure>
 
@@ -186,6 +193,8 @@ Inji Wallet integrates with eSignet as an authorization layer to perform VC down
 <figure><img src="../../../.gitbook/assets/download national id vc_step8.png" alt="" width="188"><figcaption><p>Download National ID</p></figcaption></figure>
 
 </div>
+
+
 
 ### 2. Download Insurance VC
 
