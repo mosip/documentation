@@ -123,18 +123,13 @@ The below screenshots explain the next steps after you get access.
 
 <div>
 
-<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step15.png" alt="" width="188"><figcaption></figcaption></figure>
-
- 
 
 <figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step13.png" alt="" width="188"><figcaption><p>First launch of app</p></figcaption></figure>
 
  
-
 <figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step14.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
-
 
 
 ## Downloading VC
@@ -158,15 +153,15 @@ Inji Wallet integrates with eSignet as an authorization layer to perform VC down
 
 <div align="center">
 
-<figure><img src="../../../.gitbook/assets/download national id vc_step1.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-download-national-id-vc-step1.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../../../.gitbook/assets/download national id vc_step2.png" alt="" width="188"><figcaption><p>Download National ID</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-download-national-id-vc-step2.png" alt="" width="188"><figcaption><p>Download National ID</p></figcaption></figure>
 
  
 
-<figure><img src="../../../.gitbook/assets/download national id vc_step3.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-download-national-id-vc-step3.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
@@ -174,15 +169,15 @@ Inji Wallet integrates with eSignet as an authorization layer to perform VC down
 
 <div align="center">
 
-<figure><img src="../../../.gitbook/assets/download national id vc_step4.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-download-national-id-vc-step4.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../../../.gitbook/assets/download national id vc_step5.png" alt="" width="188"><figcaption><p>Download National ID</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-download-national-id-vc-step5.png" alt="" width="188"><figcaption><p>Download National ID</p></figcaption></figure>
 
  
 
-<figure><img src="../../../.gitbook/assets/download national id vc_step6.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-download-national-id-vc-step6.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
@@ -190,10 +185,10 @@ Inji Wallet integrates with eSignet as an authorization layer to perform VC down
 
 <div align="center">
 
-<figure><img src="../../../.gitbook/assets/download national id vc_step7.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-download-national-id-vc-step7.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
-<figure><img src="../../../.gitbook/assets/download national id vc_step8.png" alt="" width="188"><figcaption><p>Download National ID</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-download-national-id-vc-step8.png" alt="" width="188"><figcaption><p>Download National ID</p></figcaption></figure>
 
 </div>
 
@@ -210,29 +205,29 @@ Inji Wallet integrates with eSignet as an authorization layer to perform VC down
 
 <div>
 
-<figure><img src="../../../.gitbook/assets/download stayprotected insurance vc_step1.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-download-stayprotected-insurance-vc-step1.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../../../.gitbook/assets/download stayprotected insurance vc_step2.png" alt="" width="188"><figcaption><p>Download insurance VC</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-download-stayprotected-insurance-vc-step2.png" alt="" width="188"><figcaption><p>Download insurance VC</p></figcaption></figure>
 
  
 
-<figure><img src="../../../.gitbook/assets/download stayprotected insurance vc_step3.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-download-stayprotected-insurance-vc-step3.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
 <div>
 
-<figure><img src="../../../.gitbook/assets/download stayprotected insurance vc_step4.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-download-stayprotected-insurance-vc-step4.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../../../.gitbook/assets/download stayprotected insurance vc_step5.png" alt="" width="188"><figcaption><p>Download insurance VC</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-download-stayprotected-insurance-vc-step5.png" alt="" width="188"><figcaption><p>Download insurance VC</p></figcaption></figure>
 
  
 
-<figure><img src="../../../.gitbook/assets/download stayprotected insurance vc_step6.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-download-stayprotected-insurance-vc-step6.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
