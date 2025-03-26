@@ -198,7 +198,7 @@ Inji Wallet integrates with eSignet as an authorization layer to perform VC down
 **Download credentials using KBI:**
 
 * A plus "+" symbol on the home page will display the list of issuers from which you can download VCs.
-* Select the issuer that states **Veridonia Insurance Company** and choose a credential type (Health Insurance, Life Insurance). Once clicked, the browser will open and take you to the eSignet page.
+* Select the issuer that states **Stay Protected Insurance** and choose a credential type (Health Insurance, Life Insurance). Once clicked, the browser will open and take you to the eSignet page.
 * On the authorization page (eSignet page), the user has to enter the Policy Number, Full Name, and Date Of Birth(D.O.B).
 * Upon successful validation, the user will return to the application and land on the loading screen. Following the completion of the download process, the user will be returned to the home page, where the Downloaded Credential will be available.
 
