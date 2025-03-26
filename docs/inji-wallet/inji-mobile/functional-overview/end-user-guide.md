@@ -63,7 +63,7 @@ The below screenshots explain the next steps after you get access.
 <figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step1.png" alt="" width="31%"><figcaption></figcaption></figure>
 
  
-<figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step2.png" alt=""width="31%"><figcaption><p>First launch of app</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step2.png" alt=""width="31%"><figcaption><p></p></figcaption></figure>
 
  
 <figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step3.png" alt="" width="31%"><figcaption></figcaption></figure>
@@ -77,7 +77,7 @@ The below screenshots explain the next steps after you get access.
 <figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step4.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
-<figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step5.png" alt="" width="188"><figcaption><p>First launch of app</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step5.png" alt="" width="188"><figcaption><p></p></figcaption></figure>
 
  
 <figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step6.png" alt="" width="188"><figcaption></figcaption></figure>
@@ -110,7 +110,7 @@ The below screenshots explain the next steps after you get access.
 
  
 
-<figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step11.png" alt="" width="188"><figcaption><p>First launch of app</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step11.png" alt="" width="188"><figcaption><p></p></figcaption></figure>
 
  
 
@@ -123,7 +123,7 @@ The below screenshots explain the next steps after you get access.
 <div>
 
 
-<figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step13.png" alt="" width="188"><figcaption><p>First launch of app</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step13.png" alt="" width="188"><figcaption><p></p></figcaption></figure>
 
  
 <figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step14.png" alt="" width="188"><figcaption></figcaption></figure>
@@ -156,7 +156,7 @@ Inji Wallet integrates with eSignet as an authorization layer to perform VC down
 
  
 
-<figure><img src="../../../.gitbook/assets/iw-android-download-national-id-vc-step2.png" alt="" width="188"><figcaption><p>Download National ID</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-download-national-id-vc-step2.png" alt="" width="188"><figcaption><p></p></figcaption></figure>
 
  
 
@@ -172,7 +172,7 @@ Inji Wallet integrates with eSignet as an authorization layer to perform VC down
 
  
 
-<figure><img src="../../../.gitbook/assets/iw-android-download-national-id-vc-step5.png" alt="" width="188"><figcaption><p>Download National ID</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-download-national-id-vc-step5.png" alt="" width="188"><figcaption><p></p></figcaption></figure>
 
  
 
@@ -187,7 +187,7 @@ Inji Wallet integrates with eSignet as an authorization layer to perform VC down
 <figure><img src="../../../.gitbook/assets/iw-android-download-national-id-vc-step7.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
-<figure><img src="../../../.gitbook/assets/iw-android-download-national-id-vc-step8.png" alt="" width="188"><figcaption><p>Download National ID</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-download-national-id-vc-step8.png" alt="" width="188"><figcaption><p></p></figcaption></figure>
 
 </div>
 
@@ -208,7 +208,7 @@ Inji Wallet integrates with eSignet as an authorization layer to perform VC down
 
  
 
-<figure><img src="../../../.gitbook/assets/iw-android-download-stayprotected-insurance-vc-step2.png" alt="" width="188"><figcaption><p>Download insurance VC</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-download-stayprotected-insurance-vc-step2.png" alt="" width="188"><figcaption><p></p></figcaption></figure>
 
  
 
@@ -222,7 +222,7 @@ Inji Wallet integrates with eSignet as an authorization layer to perform VC down
 
  
 
-<figure><img src="../../../.gitbook/assets/iw-android-download-stayprotected-insurance-vc-step5.png" alt="" width="188"><figcaption><p>Download insurance VC</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-download-stayprotected-insurance-vc-step5.png" alt="" width="188"><figcaption><p></p></figcaption></figure>
 
  
 
@@ -241,9 +241,9 @@ Users can see all the details of the National ID in the detailed view. In additi
 
 <div align="center">
 
-<figure><img src="../../../.gitbook/assets/iw-android-detailed-view-of-national-id-vc-01.png" alt="" width="188%"><figcaption><p>Detailed view of National ID</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-detailed-view-of-national-id-vc-01.png" alt="" width="188%"><figcaption><p></p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/iw-android-detailed-view-of-national-id-vc-02.png" alt="" width="188%"><figcaption><p>Detailed view of National ID</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-detailed-view-of-national-id-vc-02.png" alt="" width="188%"><figcaption><p></p></figcaption></figure>
 
 
 </div>
@@ -260,7 +260,7 @@ Users can see all the Insurance policy details in the detailed view along with t
 
  
 
-<figure><img src="../../../.gitbook/assets/iw-android-detailed-view-of-insurance-vc-step-2.png" alt="" width="31%"><figcaption><p>Detailed view of insurance VC</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-detailed-view-of-insurance-vc-step-2.png" alt="" width="31%"><figcaption><p></p></figcaption></figure>
 
  
 
@@ -274,7 +274,7 @@ After completing several scenarios, we can find it by selecting the third icon i
 
 <div align="center">
 
-<figure><img src="../../../.gitbook/assets/iw-android-viewing-history-1.png" alt="" width="188"><figcaption><p>Viewing History</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-viewing-history-1.png" alt="" width="188"><figcaption><p></p></figcaption></figure>
 
 </div>
 
@@ -288,7 +288,7 @@ Users can view the activity logs of a VC from the Home Page or the detailed view
 
  
 
-<figure><img src="../../../.gitbook/assets/iw-android-view-activity-log-of-a-vc-3.png" alt="" width="188"><figcaption><p>Activity Log for a VC</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-view-activity-log-of-a-vc-3.png" alt="" width="188"><figcaption><p></p></figcaption></figure>
 
  
 
@@ -328,7 +328,7 @@ Let us understand the process of sharing credentials using an example and see th
 
  
 
-<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-resident-2.png" alt="" width="188"><figcaption><p>On Resident's wallet</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-share-nid-vc-resident-2.png" alt="" width="188"><figcaption><p></p></figcaption></figure>
 
 </div>
 
@@ -452,12 +452,6 @@ Let us understand the process of sharing credentials using an example and see th
 * Once the QR code is successfully scanned, both phones will establish a Bluetooth connection.
 * The Share button will solely share the VC, while the Share with Selfie option will verify if the sender's face matches the photo in the VC before proceeding to share.
 
-<!-
-
-
-
-
-
 
 <div>
 
@@ -520,15 +514,25 @@ Let us understand the process of sharing credentials using an example and see th
 
 <div>
 
-<figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-rp-1.png" alt="" width="24%"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-rp-1.png" alt="" width="188"><figcaption></figcaption></figure>
 
 
-<figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-rp-2.png" alt="" width="24%"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-rp-2.png" alt="" width="188"><figcaption></figcaption></figure>
 
 
-<figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-rp-3.png" alt="" width="24%"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-rp-3.png" alt="" width="188"><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-rp-3.png" alt="" width="24%"><figcaption></figcaption></figure>
+</div>
+
+
+
+<div>
+
+<figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-rp-5.png" alt="" width="188"><figcaption></figcaption></figure>
+
+
+<figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-rp-4.png" alt="" width="188"><figcaption></figcaption></figure>
+
 
 </div>
 
@@ -667,16 +671,16 @@ There are two ways to activate the VC:
 
 <div>
 
-<figure><img src="../../../.gitbook/assets/iw-android-activate-a-vc-1.png" alt="" width="24%"><figcaption><p>Activating a VC</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-activate-a-vc-1.png" alt="" width="24%"><figcaption><p></p></figcaption></figure>
 
 
-<figure><img src="../../../.gitbook/assets/iw-android-activate-a-vc-2.png" alt="" width="24%"><figcaption><p>Activating a VC</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-activate-a-vc-2.png" alt="" width="24%"><figcaption><p></p></figcaption></figure>
 
 
-<figure><img src="../../../.gitbook/assets/iw-android-activate-a-vc-3.png" alt="" width="24%"><figcaption><p>Activating a VC</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-activate-a-vc-3.png" alt="" width="24%"><figcaption><p></p></figcaption></figure>
 
 
-<figure><img src="../../../.gitbook/assets/iw-android-activate-a-vc-4.png" alt="" width="24%"><figcaption><p>Activating a VC</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-activate-a-vc-4.png" alt="" width="24%"><figcaption><p></p></figcaption></figure>
 
 
 </div>
@@ -693,11 +697,11 @@ There are two ways to remove/delete a VC from the wallet:
 
 <div align="center">
 
-<figure><img src="../../../.gitbook/assets/iw-android-deleting-a-vc-1.png" alt="" width="31%"><figcaption><p>Deleting a VC</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-deleting-a-vc-1.png" alt="" width="31%"><figcaption><p></p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/iw-android-deleting-a-vc-2.png" alt="" width="31%"><figcaption><p>Deleting a VC</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-deleting-a-vc-2.png" alt="" width="31%"><figcaption><p></p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/iw-android-deleting-a-vc-3.png" alt="" width="31%"><figcaption><p>Deleting a VC</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-deleting-a-vc-3.png" alt="" width="31%"><figcaption><p></p></figcaption></figure>
 
 </div>
 
@@ -713,7 +717,7 @@ Users can now search for a VC by providing a search string in the search bar. VC
 
 <figure><img src="../../../.gitbook/assets/iw-android-search-vc-2.png" alt="" width="31%"><figcaption><p></p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/iw-android-search-vc-3.png" alt="" width="31%"><figcaption><p>Search for a VC</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-search-vc-3.png" alt="" width="31%"><figcaption><p></p></figcaption></figure>
 
 </div>
 
@@ -731,9 +735,9 @@ To backup VCs, the user has to choose their preference for the cloud based on th
 
 ### Data backup - Android
 
-<figure><img src="../../../.gitbook/assets/iw-android-backup-1.png" alt="" width="563"><figcaption><p>Data Backup on Android</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-backup-1.png" alt="" width="563"><figcaption><p></p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/iw-android-backup-2.png" alt="" width="563"><figcaption><p>Data Backup on Android</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-backup-2.png" alt="" width="563"><figcaption><p></p></figcaption></figure>
 
 ### Data backup- ios
 
@@ -757,8 +761,8 @@ To restore backed-up VCs, the user has to choose their preference of the cloud b
 
 ### Restore - Android
 
-<figure><img src="../../../.gitbook/assets/iw-ios-backup-and-restore-1.png" alt="" width="563"><figcaption><p>Restore on Android</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-ios-backup-and-restore-1.png" alt="" width="563"><figcaption><p></p></figcaption></figure>
 
 ### Restore - ios
 
-<figure><img src="../../../.gitbook/assets/iw-android-backup-and-restore-1.png" alt="" width="563"><figcaption><p>Restore on iOS</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-backup-and-restore-1.png" alt="" width="563"><figcaption><p></p></figcaption></figure>
