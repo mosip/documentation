@@ -676,21 +676,22 @@ There are two ways to activate the VC:
 * The second option is to click on the "Activate for online login" menu option by clicking on the quick access menu (...) of the card from the detailed view of the VC.
 * A confirmation alert message will be prompted upon clicking the "Activate for online login" option. Once permission is granted, the user will be directed to an OTP screen. After entering the correct OTP, the VC will be activated and projected on the screen with the same message.
 
-<figure><img src="../../../.gitbook/assets/activating a vc.png" alt="" width="375"><figcaption><p>Activating a VC</p></figcaption></figure>
-
 <div>
 
-<figure><img src="../../../.gitbook/assets/veridonia national id vc activation_step3.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-activate-a-vc-1.png" alt="" width="24%"><figcaption><p>Activating a VC</p></figcaption></figure>
 
- 
 
-<figure><img src="../../../.gitbook/assets/veridonia national id vc activation_step4.png" alt="" width="188"><figcaption><p>Activating a VC</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-activate-a-vc-2.png" alt="" width="24%"><figcaption><p>Activating a VC</p></figcaption></figure>
 
- 
 
-<figure><img src="../../../.gitbook/assets/veridonia national id vc activation_step5.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-activate-a-vc-3.png" alt="" width="24%"><figcaption><p>Activating a VC</p></figcaption></figure>
+
+
+<figure><img src="../../../.gitbook/assets/iw-android-activate-a-vc-4.png" alt="" width="24%"><figcaption><p>Activating a VC</p></figcaption></figure>
+
 
 </div>
+
 
 ### Deleting a VC
 
