@@ -32,7 +32,7 @@ export const DefaultTheme = {
 }
 ```
 
-Profile logo is part of downloaded verifiable credential. If credential doesn't face/photo attribute, default profile icon is being used. 
+Profile logo is part of downloaded verifiable credential. If credential doesn't face/photo attribute, default profile icon is being used.
 
 To change the profile logo, In `ProfileIcon.tsx`, refer
 
@@ -41,8 +41,7 @@ import {Icon} from 'react-native-elements';
 use `person` as icon from the library
 ```
 
-Card background is driven by wellknown exposed by issuing authoriy. If background details are not exposed, default background is being used.
-To change card background on home screen if not provided by issuer:
+Card background is driven by wellknown exposed by issuing authoriy. If background details are not exposed, default background is being used. To change card background on home screen if not provided by issuer:
 
 ```
 CloseCard: require(path of the image you want to use, in string format)
@@ -68,7 +67,7 @@ export const DefaultTheme = {
 
 To change the top header icons:
 
-![](../../../.gitbook/assets/header\_icons.png)
+![](../../../.gitbook/assets/header_icons.png)
 
 In `HomeScreenLayout.tsx`, refer
 
@@ -90,7 +89,7 @@ In `HomeScreenLayout.tsx`, refer
 
 To change the text, colour and logo for Tabs:
 
-![](../../../.gitbook/assets/bottom\_tabs.png)
+![](../../../.gitbook/assets/bottom_tabs.png)
 
 In `main.ts`, there are 4 tab screens variables
 
@@ -117,10 +116,9 @@ const history: TabScreen = {
 };
 ```
 
-Card content text color is driven by wellknown exposed by issuing authoriy. If text color is not exposed, default color is being used.
-To change default Label text color if not provided by issuer:
+Card content text color is driven by wellknown exposed by issuing authoriy. If text color is not exposed, default color is being used. To change default Label text color if not provided by issuer:
 
-![](../../../.gitbook/assets/details-label.png)
+![](broken-reference)
 
 ```
 export const DefaultTheme = {
@@ -133,7 +131,7 @@ export const DefaultTheme = {
 
 To change default Label value color if not provided by issuer:
 
-![](../../../.gitbook/assets/details-value.png)
+![](broken-reference)
 
 ```
 export const DefaultTheme = {
@@ -146,7 +144,7 @@ export const DefaultTheme = {
 
 To change the colour of `+` icon colour:
 
-![](../../../.gitbook/assets/add-id-button.png)
+![](broken-reference)
 
 In `HomeScreen.tsx`, refer `DownloadFABIcon` component
 
@@ -159,7 +157,7 @@ const DownloadFABIcon: React.FC = () => {
 
 To change the colours of Label in Settings:
 
-![](../../../.gitbook/assets/settings-labels.png)
+![](broken-reference)
 
 ```
 export const DefaultTheme = {
@@ -194,7 +192,7 @@ export const DefaultTheme = {
 
 To change colour on add new card page:
 
-![](../../../.gitbook/assets/add-new-card.png)
+![](broken-reference)
 
 ```
 export const DefaultTheme = {

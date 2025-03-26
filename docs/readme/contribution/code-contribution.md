@@ -10,7 +10,7 @@ The recommended Github workflow here is for developers to submit code and docume
 
 ## Setup your development machine
 
-1.  Fork the repository.
+1. Fork the repository.
 2.  Clone the fork to your local machine. E.g.:
 
     ```
@@ -32,6 +32,7 @@ The recommended Github workflow here is for developers to submit code and docume
     ```
     $ git remote -v
     ```
+
     This should display origin and upstream as below:
 
     ```
@@ -44,10 +45,10 @@ The recommended Github workflow here is for developers to submit code and docume
 ## Code changes
 
 1\. Create a new issue in GitHub.
-   1. Follow the issue template provided.
-   2. Please provide as much information as possible.
-   3. If you want to develop a new feature, please elaborate on the idea and discuss the design before starting development.
-2\. In your local repository, fetch the upstream.
+
+1. Follow the issue template provided.
+2. Please provide as much information as possible.
+3. If you want to develop a new feature, please elaborate on the idea and discuss the design before starting development. 2. In your local repository, fetch the upstream.
 
 ```
 $ git fetch upstream

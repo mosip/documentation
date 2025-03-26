@@ -48,6 +48,8 @@
       * [Mimoto](inji-wallet/inji-mobile/technical-overview/backend-services/mimoto.md)
       * [eSignet](inji-wallet/inji-mobile/technical-overview/backend-services/esignet.md)
   * [Releases](inji-wallet/inji-mobile/versions/README.md)
+    * [Version 0.15.1](inji-wallet/inji-mobile/versions/version-0.15.1/README.md)
+      * [Test Report](inji-wallet/inji-mobile/versions/version-0.15.1/test-report.md)
     * [Version 0.15.0](inji-wallet/inji-mobile/versions/version-0.15.0/README.md)
       * [Test Report](inji-wallet/inji-mobile/versions/version-0.15.0/test-report.md)
     * [Version 0.14.1](inji-wallet/inji-mobile/versions/version-0.14.1/README.md)

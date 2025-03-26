@@ -15,7 +15,6 @@ The libraries are as follows:
 7. BLE Verifier SDK
 8. Telemetry SDK(coming soon)
 
-
 <figure><img src="../../../.gitbook/assets/InjiWalletComponents.png" alt=""><figcaption></figcaption></figure>
 
 ### **1. Tuvali - Sharing via BLE SDK**
@@ -27,8 +26,8 @@ The libraries are as follows:
 
 <table><thead><tr><th width="134">Wallet</th><th width="131">Verifier</th><th>VC transfer support</th></tr></thead><tbody><tr><td>Android</td><td>Android</td><td>Yes</td></tr><tr><td>iOS</td><td>Android</td><td>Yes</td></tr><tr><td>Android</td><td>iOS</td><td>No</td></tr><tr><td>iOS</td><td>iOS</td><td>No</td></tr></tbody></table>
 
-* Tuvali is actively developed and maintained by MOSIP. 
-  * [Kotlin Implementation](https://github.com/mosip/tuvali) 
+* Tuvali is actively developed and maintained by MOSIP.
+  * [Kotlin Implementation](https://github.com/mosip/tuvali)
   * [Swift Implementation](https://github.com/mosip/tuvali-ios-swift)
 * It does not support iOS for initiating the BLE exchanges, hence preventing two iOS devices from transferring VC.
 
@@ -61,8 +60,8 @@ The secure-keystore library is designed for creating and storing key pairs in th
 
 This library is available for both Android and iOS platforms:
 
-- **For Android**: Refer to the [secure-keystore Kotlin library](https://github.com/mosip/secure-keystore).
-- **For iOS**: Refer to the [secure-keystore-iOS Swift library](https://github.com/mosip/secure-keystore-ios-swift).
+* **For Android**: Refer to the [secure-keystore Kotlin library](https://github.com/mosip/secure-keystore).
+* **For iOS**: Refer to the [secure-keystore-iOS Swift library](https://github.com/mosip/secure-keystore-ios-swift).
 
 Inji Wallet integrates with the secure-keystore library to ensure secure key management. To optimize the key size during credential download requests, Inji Wallet uses RSA-2048, ECR1, ECK1, ED25519 keys.
 
@@ -76,7 +75,6 @@ To check all the APIs supported by this module, refer [here](../../technical-ove
 * Maven snapshots are available [here](https://oss.sonatype.org/content/repositories/snapshots/io/mosip/secure-keystore/).
 {% endhint %}
 
-
 ### **4. PixelPass SDK**
 
 The PixelPass library offers a powerful solution for creating and decoding QR codes for Verifiable Credentials (VCs). It is designed to optimize the size of the data encoded within a QR code, making it easier to store and share credential information. The library achieves this by utilizing advanced compression and encoding techniques, ensuring smaller QR codes that maintain the integrity and security of the data.
@@ -88,7 +86,7 @@ Additionally, for a JSON data, the library employs CBOR encoding and decoding to
 {% hint style="info" %}
 Note:
 
-* Refer to the PixelPass repository 
+* Refer to the PixelPass repository
   * [Kotlin Implementation](https://github.com/mosip/pixelpass/tree/master/kotlin)
   * [JS Implementation](https://github.com/mosip/pixelpass/tree/master/js)
   * [Swift Implementation](https://github.com/mosip/pixelpass-ios-swift)
@@ -105,42 +103,35 @@ VCI-Client library carries out the credential request from the consumer applicat
 {% hint style="info" %}
 Note:
 
-* Refer to the VCI-Client repository 
+* Refer to the VCI-Client repository
   * [Kotlin Implementation](https://github.com/mosip/inji-vci-client/blob/master/kotlin/README.md)
   * [Swift Implementation](https://github.com/mosip/inji-vci-client-ios-swift)
 * To understand about the installation and the API documentation, refer [here](https://docs.mosip.io/inji/inji-mobile-wallet/integration-guide/vci-client).
 * Maven snapshots are available [here](https://oss.sonatype.org/content/repositories/snapshots/io/mosip/inji-vci-client/)
 {% endhint %}
 
-
 ### **6. OpenID4VP - Online Sharing SDK**
-This OpenID4VP library enables consumer applications (mobile wallet) to share users Verifiable Credentials with
-Verifiers who request them online. It adheres to the OpenID4VP specification which outlines the standards for
-requesting and presenting Verifiable Credentials.
+
+This OpenID4VP library enables consumer applications (mobile wallet) to share users Verifiable Credentials with Verifiers who request them online. It adheres to the OpenID4VP specification which outlines the standards for requesting and presenting Verifiable Credentials.
+
 #### **This library follows the below steps to share the Verifiable Presentation with the Requested Verifier:**
+
 1. Receives the Verifier's Authorization Request sent by the consumer application (mobile wallet).
-2. Authenticates the Verifier using the received **client_id** and validates the whole Request to check if the required
-   details are present or not and then returns the Authorization Request to the consumer application if all the
-   validations are successful.
-3. Receives the list of Verifiable Credentials from the consumer application which are selected by the consumer
-   application end-user based on the credentials requested as part of Verifier Authorization request.
-4. Constructs the vp_token without proof section and sends it back to the consumer application for generating
-   Json Web Signature (JWS).
-5. Receives the generated signature along with the other details and generates vp_token with proof section &
-   presentation_submission.
-6. Sends a POST request with generated vp_token and presentation_submission to the received Verifier's response_uri
-   endpoint.
-   {% hint style="info" %}
-   Note:
+2. Authenticates the Verifier using the received **client\_id** and validates the whole Request to check if the required details are present or not and then returns the Authorization Request to the consumer application if all the validations are successful.
+3. Receives the list of Verifiable Credentials from the consumer application which are selected by the consumer application end-user based on the credentials requested as part of Verifier Authorization request.
+4. Constructs the vp\_token without proof section and sends it back to the consumer application for generating Json Web Signature (JWS).
+5. Receives the generated signature along with the other details and generates vp\_token with proof section & presentation\_submission.
+6. Sends a POST request with generated vp\_token and presentation\_submission to the received Verifier's response\_uri endpoint.
+
+{% hint style="info" %}
+Note:
+
 * Refer to the inji-openid4vp repository
   * [Kotlin Repository](https://github.com/mosip/inji-openid4vp)
   * [Swift Repository](https://github.com/mosip/inji-openid4vp-ios-swift)
-* To understand about the installation and the API documentation,
-  refer [here](https://docs.mosip.io/inji/inji-wallet/inji-mobile/technical-overview/integration-guide/openid4vp).
-* Maven snapshots are
-  available [here](https://oss.sonatype.org/content/repositories/snapshots/io/mosip/inji-openid4vp/)
-  {% endhint %}
-
+* To understand about the installation and the API documentation, refer [here](https://docs.mosip.io/inji/inji-wallet/inji-mobile/technical-overview/integration-guide/openid4vp).
+* Maven snapshots are available [here](https://oss.sonatype.org/content/repositories/snapshots/io/mosip/inji-openid4vp/)
+{% endhint %}
 
 ### **7. BLE Verifier SDK**
 
@@ -152,13 +143,12 @@ To know more about API and how to integrate, refer [here](integration-guide/ble-
 Note:
 
 * To check the NPM module, click [here](https://www.npmjs.com/package/@mosip/ble-verifier-sdk).
-  {% endhint %}
+{% endhint %}
 
 ### **8. Telemetry SDK**
 
 The [telemetry](https://github.com/mosip/sunbird-telemetry-sdk) module is derived from the [sunbird telemetry](https://github.com/project-sunbird/sunbird-telemetry-sdk) module. It is responsible for generating events that can provide valuable analytics.
 
 _**Note**_: _The publication of this project is currently a work in progress and has not been released yet. Stay tuned for further announcements!_
-
 
 > To know more about each of these, refer [Integration Guides](https://docs.mosip.io/inji/integration-guide).

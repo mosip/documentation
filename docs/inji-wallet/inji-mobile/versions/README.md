@@ -1,5 +1,13 @@
 # Releases
 
+## Version: 0.15.1
+
+Name: Inji Wallet 0.15.1
+
+Date: 27th March, 2025
+
+Release Notes
+
 ## Version: 0.15.0
 
 Name: Inji Wallet 0.15.0
