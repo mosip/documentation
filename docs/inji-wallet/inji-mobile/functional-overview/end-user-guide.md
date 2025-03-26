@@ -60,13 +60,13 @@ The below screenshots explain the next steps after you get access.
 
 <div align="center">
 
-<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step1.png" alt="" width="31%"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step1.png" alt="" width="31%"><figcaption></figcaption></figure>
 
  
-<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step2.png" alt=""width="31%"><figcaption><p>First launch of app</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step2.png" alt=""width="31%"><figcaption><p>First launch of app</p></figcaption></figure>
 
  
-<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step3.png" alt="" width="31%"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step3.png" alt="" width="31%"><figcaption></figcaption></figure>
 
 </div>
 
@@ -74,13 +74,13 @@ The below screenshots explain the next steps after you get access.
 
 <div>
 
-<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step4.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step4.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
-<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step5.png" alt="" width="188"><figcaption><p>First launch of app</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step5.png" alt="" width="188"><figcaption><p>First launch of app</p></figcaption></figure>
 
  
-<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step6.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step6.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
@@ -88,7 +88,7 @@ The below screenshots explain the next steps after you get access.
 
 <div>
 
-<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step7.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step7.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 <!--
@@ -106,15 +106,15 @@ The below screenshots explain the next steps after you get access.
 
 <div>
 
-<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step10.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step10.png" alt="" width="188"><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step11.png" alt="" width="188"><figcaption><p>First launch of app</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step11.png" alt="" width="188"><figcaption><p>First launch of app</p></figcaption></figure>
 
  
 
-<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step12.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step12.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
@@ -123,10 +123,10 @@ The below screenshots explain the next steps after you get access.
 <div>
 
 
-<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step13.png" alt="" width="188"><figcaption><p>First launch of app</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step13.png" alt="" width="188"><figcaption><p>First launch of app</p></figcaption></figure>
 
  
-<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step14.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step14.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
@@ -452,54 +452,63 @@ Let us understand the process of sharing credentials using an example and see th
 * Once the QR code is successfully scanned, both phones will establish a Bluetooth connection.
 * The Share button will solely share the VC, while the Share with Selfie option will verify if the sender's face matches the photo in the VC before proceeding to share.
 
-<!-- 
+<!-
+
+
+
+
 
 
 <div>
 
-<figure><img src="../../../.gitbook/assets/resident_step1 (1).png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-resident-1.png" alt="" width="188"><figcaption></figcaption></figure>
 
- 
 
-<figure><img src="../../../.gitbook/assets/resident_step2 (1).png" alt="" width="188"><figcaption><p>On Resident's wallet</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-resident-2.png" alt="" width="188"><figcaption></figcaption></figure> 
 
- 
 
-<figure><img src="../../../.gitbook/assets/resident_step3 (1).png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-resident-3.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
+
 
 <div>
 
-<figure><img src="../../../.gitbook/assets/resident_step4 (1).png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-resident-4.png" alt="" width="188"><figcaption></figcaption></figure>
 
- 
 
-<figure><img src="../../../.gitbook/assets/resident_step5 (1).png" alt="" width="188"><figcaption><p>On Resident's wallet</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-resident-5.png" alt="" width="188"><figcaption></figcaption></figure> 
 
- 
 
-<figure><img src="../../../.gitbook/assets/resident_step6 (1).png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-resident-6.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
+
 
 <div>
 
-<figure><img src="../../../.gitbook/assets/resident_step7 (1).png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-resident-7.png" alt="" width="188"><figcaption></figcaption></figure>
 
- 
 
-<figure><img src="../../../.gitbook/assets/resident_step8 (1).png" alt="" width="188"><figcaption><p>On Resident's wallet</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-resident-8.png" alt="" width="188"><figcaption></figcaption></figure> 
 
- 
 
-<figure><img src="../../../.gitbook/assets/resident_step9 (1).png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-resident-9.png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
-<figure><img src="../../../.gitbook/assets/On Resident&#x26;#x27;s wallet.png" alt=""><figcaption><p>On Resident's wallet</p></figcaption></figure>
 
--->
+
+<div>
+
+<figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-resident-10.png" alt="" width="188"><figcaption></figcaption></figure>
+
+
+<figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-resident-12.png" alt="" width="188"><figcaption></figcaption></figure> 
+
+
+</div>
+
 
 **On the Relying Party's phone**:
 
@@ -508,40 +517,20 @@ Let us understand the process of sharing credentials using an example and see th
 * To view the received cards, they would need to access the settings page and find the `Received Cards` section. Clicking on this section will display the received cards. If the receiver has not received any card, this section will be empty.
 * Please note that the relying party can only view the received cards and will not be able to share or perform other actions with them.
 
-<!--
 
 <div>
 
-<figure><img src="../../../.gitbook/assets/relying party_step1 (1).png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-rp-1.png" alt="" width="24%"><figcaption></figcaption></figure>
 
- 
 
-<figure><img src="../../../.gitbook/assets/relying party_step2 (1).png" alt="" width="188"><figcaption><p>Relying party's device</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-rp-2.png" alt="" width="24%"><figcaption></figcaption></figure>
 
- 
 
-<figure><img src="../../../.gitbook/assets/relying party_step3 (1).png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-rp-3.png" alt="" width="24%"><figcaption></figcaption></figure>
 
-</div>
-
-<div>
-
-<figure><img src="../../../.gitbook/assets/relying party_step4 (1).png" alt="" width="188"><figcaption></figcaption></figure>
-
- 
-
-<figure><img src="../../../.gitbook/assets/relying party_step5 (1).png" alt="" width="188"><figcaption><p>Relying party's device</p></figcaption></figure>
-
- 
-
-<figure><img src="../../../.gitbook/assets/relying party_step6 (1).png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-rp-3.png" alt="" width="24%"><figcaption></figcaption></figure>
 
 </div>
-
-<figure><img src="../../../.gitbook/assets/relying party_step7 (1).png" alt="" width="188"><figcaption><p>Relying party's device</p></figcaption></figure>
-
-
---> 
 
 
 
