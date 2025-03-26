@@ -6,7 +6,7 @@ Name: Inji Wallet 0.15.1
 
 Date: 27th March, 2025
 
-Release Notes
+[Release Notes](https://docs.inji.io/inji-wallet/inji-mobile/versions/version-0.15.1)
 
 ## Version: 0.15.0
 
