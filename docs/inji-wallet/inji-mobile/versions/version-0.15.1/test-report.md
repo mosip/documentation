@@ -91,7 +91,7 @@ Test Rate: 100%, Pass Rate: 100%
 
 Test Rate: 100%, Pass Rate: 100%
 
-### Known issue:
+### Known issue
 
 1. The Home page help icon link is not working for activation and\
    remove VC, for these two links it is showing page not found.

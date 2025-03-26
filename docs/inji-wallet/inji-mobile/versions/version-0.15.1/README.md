@@ -10,12 +10,12 @@
 
 We are excited to announce the release of **Inji Wallet Version 0.15.1!** This update focuses on **branding enhancements**, including updated **logos and visual identity** across the wallet interface. While this is a minor update, it ensures consistency with our latest branding efforts and provides a refreshed user experience.
 
-## **Key Highlights**
+### **Key Highlights**
 
 * **Updated Branding Logo:** The Inji Wallet now features an updated **logo and branding elements** to align with the latest visual identity of the Inji ecosystem.
 * **UI Enhancements:** Adjustments have been made to ensure the **new logo is seamlessly integrated** across all screens.
 
-## **Features Updated**
+### **Features Updated**
 
 1. **Branding Updates:**
 
@@ -27,13 +27,13 @@ We are excited to announce the release of **Inji Wallet Version 0.15.1!** This u
 * Adjusted **logo positioning** for enhanced visibility.
 * Ensured seamless **branding consistency** across mobile and web versions.
 
-## **Repository Released**
+### **Repository Released**
 
 | **Module**         | **Version** |
 | ------------------ | ----------- |
 | Inji Mobile Wallet | **0.15.1**  |
 
-## **Compatible Modules:**
+### **Compatible Modules**
 
 | **Module**                | **Version**                                                                  |
 | ------------------------- | ---------------------------------------------------------------------------- |
@@ -55,15 +55,15 @@ We are excited to announce the release of **Inji Wallet Version 0.15.1!** This u
 | inji-vci-client-ios-swift | [**v0.2.0**](https://github.com/mosip/inji-vci-client-ios-swift/tree/v0.2.0) |
 | inji-openid4vp            | [**v0.1.0**](https://github.com/mosip/inji-openid4vp/tree/v0.1.0)            |
 
-## **Known Issues:**
+### **Known Issues**
 
 There are no new known issues introduced in this release. For existing known issues, refer to [**previous release notes**.](https://docs.inji.io/inji-wallet/inji-mobile/versions/version-0.15.0)
 
-## **Bug Fixes:**
+### **Bug Fixes**
 
 No functional & technical bug fixes were included in this release as it is focused exclusively on branding updates.
 
-## **Documentation Details:**
+### **Documentation Details**
 
 * [Feature Documentation](https://docs.mosip.io/inji/inji-mobile-wallet/overview/features)
 * [Integration Guides](https://docs.mosip.io/inji/inji-mobile-wallet/integration-guide)
