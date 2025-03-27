@@ -140,13 +140,8 @@
     * [Test Report](inji-certify/releases/version-0.9.0/test-report.md)
   * [Version 0.8.1](inji-certify/releases/release-notes.md)
   * [Version 0.8.0](inji-certify/releases/version-0.8.0.md)
-  * [Version 0.11.0](inji-certify/releases/version-0.11.0/README.md)
-    * [Test Report](inji-certify/releases/version-0.11.0/test-report.md)
 * [Build & Deploy](inji-certify/build-and-deploy/README.md)
   * [Local Setup](inji-certify/build-and-deploy/local-setup.md)
-* [Customization](inji-certify/customization/README.md)
-  * [UI Customizations](inji-certify/customization/ui-customizations.md)
-  * [Locale Customizations](inji-certify/customization/locale-customizations.md)
 
 ## INJI VERIFY
 
@@ -167,11 +162,16 @@
   * [Version 0.8.1](inji-verify/releases/version-0.8.1.md)
   * [Version 0.8.0](inji-verify/releases/release-notes/README.md)
     * [Test Report](inji-verify/releases/release-notes/test-report.md)
+  * [Version 0.11.0](inji-verify/releases/version-0.11.0/README.md)
+    * [Test Report](inji-verify/releases/version-0.11.0/test-report.md)
 * [Try It Out](inji-verify/releases-1/README.md)
   * [Inji Verify - Collab Guide](inji-verify/releases-1/inji-verify-collab-guide.md)
 * [Build & Deploy](inji-verify/build-and-deploy/README.md)
   * [Local Setup](inji-verify/build-and-deploy/local-setup.md)
   * [Generate QR Code](inji-verify/build-and-deploy/creating-verifiable-credentials-and-generating-qr-codes.md)
+* [Customization](inji-verify/customization/README.md)
+  * [UI Customizations](inji-verify/customization/ui-customizations.md)
+  * [Locale Customizations](inji-verify/customization/locale-customizations.md)
 
 ***
 
