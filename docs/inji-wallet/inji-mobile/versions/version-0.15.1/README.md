@@ -29,11 +29,11 @@ We are excited to announce the release of **Inji Wallet Version 0.15.1!** This u
 
 ### **Repository Released**
 
-| **Module**                | **Version**                                                                  |
-| ------------------------- | ---------------------------------------------------------------------------- |
-| Inji Mobile Wallet        | **0.15.1**                                                                   |
-| inji-vci-client-ios-swift | [**v0.2.1**](https://github.com/mosip/inji-vci-client-ios-swift/tree/v0.2.1) |
-| pixelpass-ios-swift       | **v0.6.1**                                                                   |
+| Module                    | Version                                                                        |
+| ------------------------- | ------------------------------------------------------------------------------ |
+| Inji Mobile Wallet        | [**0.15.1**](https://github.com/mosip/inji-wallet/tree/v0.15.1)                |
+| inji-vci-client-ios-swift | [**v0.2.1**](https://github.com/mosip/inji-vci-client-ios-swift/tree/v0.2.1)   |
+| pixelpass-ios-swift       | [**v0.6.1**](https://github.com/mosip/pixelpass-ios-swift/releases/tag/v0.6.1) |
 
 ### **Compatible Modules**
 
