@@ -47,7 +47,6 @@ We are excited to announce the release of **Inji Wallet Version 0.15.1!** This u
 | tuvali-ios-swift          | [**v0.5.0**](https://github.com/mosip/tuvali-ios-swift/releases/tag/v0.5.0)  |
 | mimoto                    | [**v0.15.2**](https://github.com/mosip/mimoto/tree/v0.15.2)                  |
 | vc-verifier               | [**v0.1.0**](https://github.com/mosip/inji-openid4vp-ios-swift/tree/v0.1.0)  |
-| inji-openid4vp-ios-swift  | [**v0.1.0**](https://github.com/mosip/inji-openid4vp-ios-swift/tree/v0.1.0)  |
 | inji-vci-client-ios-swift | [**v0.1.0**](https://github.com/mosip/inji-openid4vp/tree/v0.1.0)            |
 | pixelpass                 | [**v0.6.0**](https://github.com/mosip/pixelpass/tree/v0.6.0)                 |
 | secure-keystore           | [**v0.3.0**](https://github.com/mosip/secure-keystore/tree/v0.3.0)           |
