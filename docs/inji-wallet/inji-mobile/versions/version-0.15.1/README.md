@@ -29,9 +29,11 @@ We are excited to announce the release of **Inji Wallet Version 0.15.1!** This u
 
 ### **Repository Released**
 
-| **Module**         | **Version** |
-| ------------------ | ----------- |
-| Inji Mobile Wallet | **0.15.1**  |
+| **Module**                | **Version**                                                                  |
+| ------------------------- | ---------------------------------------------------------------------------- |
+| Inji Mobile Wallet        | **0.15.1**                                                                   |
+| inji-vci-client-ios-swift | [**v0.2.1**](https://github.com/mosip/inji-vci-client-ios-swift/tree/v0.2.1) |
+| pixelpass-ios-swift       | **v0.6.1**                                                                   |
 
 ### **Compatible Modules**
 
@@ -48,11 +50,9 @@ We are excited to announce the release of **Inji Wallet Version 0.15.1!** This u
 | inji-openid4vp-ios-swift  | [**v0.1.0**](https://github.com/mosip/inji-openid4vp-ios-swift/tree/v0.1.0)  |
 | inji-vci-client-ios-swift | [**v0.1.0**](https://github.com/mosip/inji-openid4vp/tree/v0.1.0)            |
 | pixelpass                 | [**v0.6.0**](https://github.com/mosip/pixelpass/tree/v0.6.0)                 |
-| pixelpass-ios-swift       | [**v0.6.0**](https://github.com/mosip/pixelpass-ios-swift/tree/v0.6.0)       |
 | secure-keystore           | [**v0.3.0**](https://github.com/mosip/secure-keystore/tree/v0.3.0)           |
 | secure-keystore-ios-swift | [**v0.3.0**](https://github.com/mosip/secure-keystore-ios-swift/tree/v0.3.0) |
 | inji-vci-client           | [**v0.2.0**](https://github.com/mosip/inji-vci-client/tree/v0.2.0)           |
-| inji-vci-client-ios-swift | [**v0.2.0**](https://github.com/mosip/inji-vci-client-ios-swift/tree/v0.2.0) |
 | inji-openid4vp            | [**v0.1.0**](https://github.com/mosip/inji-openid4vp/tree/v0.1.0)            |
 
 ### **Known Issues**

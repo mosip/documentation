@@ -6,6 +6,22 @@ The table below outlines the frameworks, tools, and technologies employed by Inj
 
 <table data-header-hidden><thead><tr><th width="182"></th><th></th><th></th><th></th></tr></thead><tbody><tr><td><strong>Tool/Technology</strong></td><td><strong>Version</strong></td><td><strong>Description</strong></td><td><strong>License</strong></td></tr><tr><td><a href="https://react.dev/">React JS</a></td><td>18.2v</td><td>React lets you build user interfaces out of individual pieces called components.</td><td><a href="https://github.com/facebook/react/blob/main/LICENSE">MIT License</a></td></tr><tr><td><a href="https://mui.com/material-ui/">Material UI</a></td><td>5.15.9</td><td>Material UI is <strong>an open-source React component library that implements Google's Material Design</strong>.</td><td> </td></tr><tr><td><a href="https://www.npmjs.com/package/@testing-library/react">@testing-library/react</a></td><td>14.2.1</td><td>The React Testing Library is a very lightweight solution for testing React components</td><td> </td></tr><tr><td><a href="https://jestjs.io/docs/tutorial-react">Jest</a></td><td>29.7.0</td><td>Jest is <strong>a well-known JavaScript testing framework</strong> and is extensively used to test React applications</td><td> </td></tr><tr><td><a href="https://nodejs.org/en">Node</a></td><td>v18.19.0</td><td>Node.js is a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools and scripts.</td><td></td></tr><tr><td><a href="https://www.typescriptlang.org/">Typescript</a></td><td>4.9.5</td><td>TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.</td><td></td></tr></tbody></table>
 
+
+
+**Service**
+
+The table below outlines the frameworks, tools, and technologies employed by Inji Verify backend Service:
+
+| Tool/Technology | Version | Description                                                                                                                                                                                                              | License                                                                    |
+| --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- |
+| JAVA            | 21      | Java is a high-level, object-oriented programming language known for its platform independence (write once, run anywhere), robustness, and wide use in enterprise applications.                                          |                                                                            |
+| Spring Boot     | 3.2.3   | Java-based framework that simplifies the creation of stand-alone, production-grade Spring applications. It emphasises convention over configuration, enabling rapid development with embedded servers and minimal setup. | Apache License 2.0                                                         |
+| JUnit           | 5.10.2  | JUnit is a widely used Java testing framework that provides tools and annotations for writing and running repeatable tests, ensuring code correctness and reliability.                                                   |  [EPL-1.0 license](https://github.com/junit-team/junit4#EPL-1.0-1-ov-file) |
+| Maven           | 3.8.1   | Maven is a build automation tool primarily used for Java projects. It simplifies dependency management, build processes, and project reporting through a declarative project object model (POM).                         | Apache License 2.0                                                         |
+| Lombok          | 1.18.30 | Lombok is a Java library that reduces boilerplate code by providing annotations that automatically generate common methods like getters, setters, constructors, and toString, leading to cleaner and more concise code.  |                                                                            |
+
+
+
 **Deployment:**
 
 The table below specifies the tools needed to deploy Inji Verify:

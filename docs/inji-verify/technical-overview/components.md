@@ -30,3 +30,26 @@ Let's briefly explore the key components that constitute Inji Verify:
 * **Assumptions or Limitations:**
   * **Verification Method**: We are assuming the verification method currently only works with DID (Decentralized Identifier). However, it can also be a direct URL key reference. This distinction is crucial for correct implementation and usage. You can look at the specific code handling this verification method [here](https://github.com/mosip/inji-verify/blob/c32f37b1df3c99fc9ecda12af573e73083e02111/inji-verify/src/utils/verification-utils.js#L7).
 
+
+
+* **Technical Components of Verify Backend:** The following component diagram illustrates the structure and components of Inji Verify backend. It offers a comprehensive explanation of how the platform operates and how its various elements interact to deliver its functionalities.
+
+\<Image>
+
+
+
+
+
+### Components: <a href="#components-.1" id="components-.1"></a>
+
+Let's briefly explore the key components that constitute Inji Verify Backend:
+
+1. **Inji Verify Backend:** This is the service developed on Java with Spring boot. It serves as the core backend for Inji verify proving backend APIs for online VC verification and OpenID4VP sharing.
+2. **JAVA Spring App :** This is the app which serves the APIs to users
+3. **H2 In Memory DB :** The database used to store details required for OpenID4VP sharing, such as Presentation Definition, Transactions and VP token. As of now Inji Verify Backend uses in memory DB which gets initiated with the app starting.
+4. **Controller :** The controller exposes APIs for different operations. The API docs can be found [here](https://mosip.stoplight.io/docs/inji-verify/branches/main/)
+5. **Service :** Performs all the logical operations.
+6. **Repository :** Communicates with the database and performs CRUD operations.
+
+
+
