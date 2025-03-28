@@ -6,26 +6,26 @@
 
 **Release Date**: Coming Soon
 
-### **Overview**
+## Overview
 
 We’re excited to announce the release of **Inji Verify 0.11.0**, packed with new capabilities and enhancements to improve verifiable credential authentication.
 
-#### **New Features:**
+## New Features
 
-✅ **OpenIDVP Cross-Device Flow** – ​The OpenID for Verifiable Presentations (OpenID4VP) Cross-Device Flow facilitates secure sharing of Verifiable Presentations (VPs) across different devices, allowing verifiers to request specific credentials and users to share the requested VCs from their digital wallets on one device while interacting with the verifier on another, with verification result displayed in Inji Verify.
+* **OpenIDVP Cross-Device Flow** – ​The OpenID for Verifiable Presentations (OpenID4VP) Cross-Device Flow facilitates secure sharing of Verifiable Presentations (VPs) across different devices, allowing verifiers to request specific credentials and users to share the requested VCs from their digital wallets on one device while interacting with the verifier on another, with verification result displayed in Inji Verify.
 
-✅ **Language Selection** – Users can now choose their preferred language from multiple international (Portuguese, Spanish, French, English, Arabic, Khmer) and Indian (Tamil, Hindi, Kannada) languages, enhancing accessibility and usability.
+* **Language Selection** – Users can now choose their preferred language from multiple international (Portuguese, Spanish, French, English, Arabic, Khmer) and Indian vernacular (Tamil, Hindi, Kannada), enhancing accessibility and usability.
 
-✅ **UI Theme Customization** – Integrators and countries can now personalize the UI theme to match their branding and preferences.
+* **UI Theme Customization** – Integrators and countries can now personalize the UI theme to match their branding and preferences.
 
-✅ **Server-Side VC Verification** – Integration of the vc-verifier library to support Ed25519 and RSA key verification, strengthening security of server-side verifications.
+* **Server-Side VC Verification** – Integration of the vc-verifier library to support Ed25519 and RSA key verification, strengthening security of server-side verifications.
 
-#### **Additional Enhancements:**
+## Additional Enhancements
 
-🔹 **Zoom Slider for Mobile Scanning** – A zoom slider is introduced to fine-tune magnification for better scanning and verification on mobile devices.\
-🔹 **Support for W3C VC Data Model 1.1 & 2.0** – Ensuring compatibility with the latest verifiable credential standards.
+**Zoom Slider for Mobile Scanning** – A zoom slider is introduced to fine-tune magnification for better scanning and verification on mobile devices.
+**Support for W3C VC Data Model 1.1 & 2.0** – Ensuring compatibility with the latest verifiable credential standards.
 
-🔹 **Upgrading of vc- verifier library (v1.2.0)** –
+**Upgrading of vc- verifier library (v1.2.0)**
 
 * VCs with ED25519 Signature 2018 are verifiable.
 * Usage of universal DID resolver library.
@@ -41,15 +41,15 @@ With these updates, **Inji Verify** continues to evolve, making credential verif
   * verificationMethod is did:web and in combination with proofValue or jws
   * verificationMethod is https:// and in combination with proofValue or jws
 
-### **Repositories: Released/Dependent**
+### Repositories Released
 
 | **Repositories**    | **Tags: Released/Dependent** |
 | ------------------- | ---------------------------- |
-| Inji Verify         | **v0.10.0**                  |
+| Inji Verify         | **v0.11.0**                  |
 | Pixel-Pass library  | **v0.5.0**                   |
 | vc-verifier library | **v1.2.0**                   |
 
-### **Compatible modules:**
+### Compatible modules
 
 The following table outlines the tested and certified compatibility of Inji Verify 0.10.0 with other modules.
 
@@ -58,7 +58,7 @@ The following table outlines the tested and certified compatibility of Inji Veri
 | **Inji Wallet** | 0.15.0  |
 | **Inji Web**    | 0.10.0  |
 
-### **Known Issues**
+### Known Issues
 
 Below is the list of known issues. To read in detail and view all the issues related to Inji Verify please click [**here.**](https://mosip.atlassian.net/issues/?jql=project%20%3D%20%22INJIVER%22%20AND%20status%20not%20in%20%28Closed%2C%20Canceled%29%20AND%20type%20%3D%20Bug%20ORDER%20BY%20created%20DESC)
 
@@ -74,7 +74,7 @@ Below is the list of known issues. To read in detail and view all the issues rel
 | [**INJIVER-859**](https://mosip.atlassian.net/browse/INJIVER-859)   | When a MOSIP VC is downloaded from Inji Web, the verification fails upon uploading the VC.                                                                 |
 | [**INJIVER-283**](https://mosip.atlassian.net/browse/INJIVER-283)   | Unable to scan QR codes under low light.                                                                                                                   |
 
-### **Bug Fixes**
+### Bug Fixes
 
 Below is the list of fixes as part of the **0.11.0** release:
 
@@ -102,4 +102,4 @@ Below is the list of fixes as part of the **0.11.0** release:
 * [API Documentation](https://mosip.stoplight.io/studio/inji-verify)
 * [Local Setup](https://github.com/mosip/inji-verify/tree/release-0.11.x?tab=readme-ov-file#developer-setup)
 * [Collab Guide](https://mosip.atlassian.net/wiki/spaces/PROD/pages/1306984580)
-* QA Report
+* [QA Report](docs/inji-verify/releases/version-0.11.0/test-report.md)

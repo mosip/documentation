@@ -1,5 +1,11 @@
 # Releases
 
+**Version: 0.11.0**
+
+* Name: Inji Verify v0.11.0 (Developer Release)
+* Date: Coming Soon
+* [Release Notes](version-0.11.0/)
+
 **Version: 0.10.0**
 
 * Name: Inji Verify v0.10.0 (Developer Release)
