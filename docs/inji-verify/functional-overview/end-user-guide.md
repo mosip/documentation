@@ -12,7 +12,7 @@ This document serves as a concise guide for end users, providing comprehensive s
 1. **Initiate Scan Request:** Go to the Inji Verify portal and select the tab "Scan the QR Code" where the Scan QR code section will come up.
 
 2. Click on the Scan button to initiate the scanning process.
-![Desktop View](media/media/image1.png){width=68%} , ![Mobile View](media/media/image2.png){width=22%}
+<figure><img src="../../.gitbook/assets/iv-eug-image1.png" alt="" width="400"><figcaption><p></p></figcaption></figure>, <figure><img src="../../.gitbook/assets/iv-eug-image2.png" alt="" width="100"><figcaption><p></p></figcaption></figure>
 
 3. Camera Permissions: When the scan is initiated, you will be prompted to grant the necessary camera permissions for the Inji Verify portal, Click the Allow button to give the portal access to your device's camera.
 ![Desktop View](media/media/image3.png){width=68%}, ![Mobile View](media/media/image4.png){width=22%}
