@@ -205,6 +205,12 @@ Feel free to scan or upload these QR codes to experience the functionality first
   * Use the provided mock data above:
     * Utilize the given QR codes to explore the upload feature of the Inji Verify portal as per the given instructions in the [**end-user guide**](https://docs.mosip.io/inji/inji-verify/functional-overview/end-user-guide).
     * These QR codes contain sample verifiable credentials for testing purposes.
+* **OpenID4VP Sharing Feature**:
+    * This feature follows the OpenID4VP cross device flow [specifications](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html).
+    * Utilize the [Inji Wallet - Try It Out](https://docs.inji.io/inji-wallet/inji-mobile/sandbox-details) page to setup the Inji wallet and download VCs.
+    * In the portal navigate to the VP Verification tab.
+    * Generate a QR code in same portal following the steps to share the VC wanted.
+    * Scan the QR with wallet and share the VC filtered based on the request.
 
 ### **Additional Resources** <a href="#additional-resources" id="additional-resources"></a>
 
@@ -213,5 +219,3 @@ Click [**here**](https://docs.mosip.io/inji/inji-verify/functional-overview/end-
 > By following these instructions, you will be equipped to seamlessly set up the Inji Verify portal and effectively verify your Verifiable Credentials.
 
 An informative video of Inji Verify for a visual walk-through of the features will be available soon.
-
-_Thank you. Wishing you a pleasant experience!_

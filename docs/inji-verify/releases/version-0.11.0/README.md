@@ -22,10 +22,10 @@ We’re excited to announce the release of **Inji Verify 0.11.0**, packed with n
 
 ## Additional Enhancements
 
-**Zoom Slider for Mobile Scanning** – A zoom slider is introduced to fine-tune magnification for better scanning and verification on mobile devices.
+**Zoom Slider for Mobile Scanning** – A zoom slider is introduced to adjust magnification for better scanning and verification on mobile devices.
 **Support for W3C VC Data Model 1.1 & 2.0** – Ensuring compatibility with the latest verifiable credential standards.
 
-**Upgrading of vc- verifier library (v1.2.0)**
+**Upgrading of vc-verifier library (v1.2.0)**
 
 * VCs with ED25519 Signature 2018 are verifiable.
 * Usage of universal DID resolver library.
@@ -46,7 +46,6 @@ With these updates, **Inji Verify** continues to evolve, making credential verif
 | **Repositories**    | **Tags: Released/Dependent** |
 | ------------------- | ---------------------------- |
 | Inji Verify         | **v0.11.0**                  |
-| Pixel-Pass library  | **v0.5.0**                   |
 | vc-verifier library | **v1.2.0**                   |
 
 ### Compatible modules
@@ -102,4 +101,4 @@ Below is the list of fixes as part of the **0.11.0** release:
 * [API Documentation](https://mosip.stoplight.io/studio/inji-verify)
 * [Local Setup](https://github.com/mosip/inji-verify/tree/release-0.11.x?tab=readme-ov-file#developer-setup)
 * [Collab Guide](https://mosip.atlassian.net/wiki/spaces/PROD/pages/1306984580)
-* [QA Report](docs/inji-verify/releases/version-0.11.0/test-report.md)
+* [QA Report](https://docs.inji.io/inji-verify/releases/version-0.11.0/test-report)
