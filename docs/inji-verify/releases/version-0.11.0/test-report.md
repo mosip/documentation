@@ -13,11 +13,7 @@ perspective of
 
 -   Customizability
 
-Verification is performed not only from the end user perspective but
-also from the System Integrator (SI) point of view. Hence
-Configurability and Extensibility of the software is also assessed. This
-ensures readiness of software for use in multiple countries. Since MOSIP
-is an "API First" product platform.
+Verification is performed not only from the end-user perspective but also from the System Integrator (SI) point of view. Hence, the configurability and extensibility of the software are also assessed. This ensures the readiness of the software for use in multiple countries. Since MOSIP is an "API First" product platform, these aspects are critical for its adaptability and scalability.
 
 Testing scope has been focused around the following features:
 
@@ -100,16 +96,9 @@ https://mosip.atlassian.net/browse/INJIVER-1086**.**
 
 # Test Approach
 
-Persona based approach has been adopted to perform the IV&V, by
-simulating test scenarios that resemble a real-time implementation.
+Persona-based approach has been adopted to perform the IV&V, by simulating test scenarios that resemble a real-time implementation.
 
-A Persona is a fictional character/user profile created to represent a
-user type that might use a product/or a service in a similar way.
-Persona based testing is a software testing technique that puts software
-testers in the customer\'s shoes, assesses their needs from the software
-and thereby determines use cases/scenarios that the customers will
-execute. The persona needs may be addressed through any of the
-following.
+A Persona is a fictional character/user profile created to represent a user type that might use a product or a service in a similar way. Persona-based testing is a software testing technique that puts software testers in the customer's shoes, assesses their needs from the software, and thereby determines use cases or scenarios that the customers will execute. The persona needs may be addressed through any of the following.
 
 -   Functionality
 
@@ -138,16 +127,7 @@ below
 
 ## Functional test results
 
-Below are the test metrics by performing functional testing. The process
-followed was black box testing which based its test cases on the
-specifications of the software component under test. Functional test was
-performed in combination of individual module testing as well as
-integration testing. Test data were prepared in line with the user
-stories. Expected results were monitored by examining the user
-interface. The coverage includes GUI testing, System testing, and
-End-To-End flows across multiple configurations. The testing cycle
-included simulation of multiple identity schema and respective UI schema
-configurations.
+Below are the test metrics by performing functional testing. The process followed was black box testing, which based its test cases on the specifications of the software component under test. Functional testing was performed in a combination of individual module testing as well as integration testing. Test data were prepared in line with the user stories. Expected results were monitored by examining the user interface. The coverage includes GUI testing, System testing, and End-To-End flows across multiple configurations. The testing cycle included the simulation of multiple identity schemas and respective UI schema configurations.
 
 | **Total** | **Passed** | **Failed** | **Skipped** |
 |-----------|------------|------------|-------------|
@@ -190,12 +170,9 @@ sha256:0c3e6307334a29a3dc82a15e80fd10ecf5b66b6eb0f8111bc1dff207bab6d933
 
 ## Detailed Test Metrics
 
-Below are the detailed test metrics by performing manual/automation
-testing. The project metrics are derived from Defect density, Test
-coverage, Test execution coverage, test tracking and efficiency.
+Below are the detailed test metrics by performing manual/automation testing. The project metrics are derived from Defect density, Test coverage, Test execution coverage, test tracking, and efficiency.
 
-The various metrics that assist in test tracking and efficiency are as
-follows:
+The various metrics that assist in test tracking and efficiency are as follows:
 
 -   Passed Test Cases Coverage: It measures the percentage of passed
     test cases. (Number of tests passed / Total number of tests

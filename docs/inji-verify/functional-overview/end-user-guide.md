@@ -13,34 +13,15 @@ This document serves as a concise guide for end users, providing comprehensive s
 
 2. Click on the Scan button to initiate the scanning process.
 
-<div align="center">
-
-<div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
-  <figure style="margin: 0;">
-    <img src="../../.gitbook/assets/image1.png" alt="" width="300">
-    <figcaption></figcaption>
-  </figure>
-  <figure style="margin: 0;">
-    <img src="../../.gitbook/assets/image2.png" alt="" width="150">
-    <figcaption></figcaption>
-  </figure>
-</div>
-
-
-<!-- 
-
-earlier one
-
-<figure><img src="../../.gitbook/assets/image1.png" alt="" width="400"><figcaption><p></p></figcaption></figure>, <figure><img src="../../.gitbook/assets/image2.png" alt="" width="100"><figcaption><p></p></figcaption></figure>
-
--->
-
+<figure><img src="../../.gitbook/assets/image1.png" alt="" width="500"><figcaption><p>Desktop View</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image2.png" alt="" width="150"><figcaption><p>Mobile View</p></figcaption></figure>
 
 3. Camera Permissions: When the scan is initiated, you will be prompted to grant the necessary camera permissions for the Inji Verify portal, Click the Allow button to give the portal access to your device's camera.
-<figure><img src="../../.gitbook/assets/image3.png" alt="" width="400"><figcaption><p></p></figcaption></figure>, <figure><img src="../../.gitbook/assets/image4.png" alt="" width="100"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image3.png" alt="" width="500"><figcaption><p>Desktop View</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image4.png" alt="" width="150"><figcaption><p>Mobile View</p></figcaption></figure>
 
 4. If camera access is denied the screen displays a message indicating the camera permission is denied.
-<figure><img src="../../.gitbook/assets/image5.png" alt="" width="400"><figcaption><p>Camera Permission Denied</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image5.png" alt="" width="150"><figcaption><p>Camera Permission Denied</p></figcaption></figure>
 
 5. **Scan the QR Code**
 * Scan QR Code
@@ -55,21 +36,22 @@ earlier one
     * Pixel Pass returns the decoded data to Inji Verify for further processing.
     * Inji Verify then verifies the decoded data using the Verification SDK.
 
-<figure><img src="../../.gitbook/assets/image6.png" alt="" width="400"><figcaption><p></p></figcaption></figure>, <figure><img src="../../.gitbook/assets/image7.png" alt="" width="100"><figcaption><p>Zoom Slider</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image6.png" alt="" width="500"><figcaption><p>Desktop View</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image7.png" alt="" width="150"><figcaption><p>Zoom Slider</p></figcaption></figure>
 
 6. **Display Credential Details:** - On successful verification, Inji Verify retrieves the display 
     properties of the credential from the issuer's configuration. The credential details are displayed on the portal's interface
     using the fetched display properties.
-<figure><img src="../../.gitbook/assets/image8.png" alt="" width="400"><figcaption><p></p></figcaption></figure>,  <figure><img src="../../.gitbook/assets/image9.png" alt="" width="100"><figcaption><p></p></figcaption></figure>
-
-
+<figure><img src="../../.gitbook/assets/image8.png" alt="" width="500"><figcaption><p>Desktop View</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image9.png" alt="" width="150"><figcaption><p>Mobile View</p></figcaption></figure>
 
 
 ## Verify by uploading the QR Code
 
 1. **Upload QR Code:** - Go to the Inji Verify portal and select the tab **Upload QR Code** where the Upload QR code section will come up and click on the **Upload** button to initiate the process.
 
-<figure><img src="../../.gitbook/assets/image10.png" alt="" width="400"><figcaption><p></p></figcaption></figure> , <figure><img src="../../.gitbook/assets/image11.png" alt="" width="100"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image10.png" alt="" width="500"><figcaption><p>Desktop View</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image11.png" alt="" width="150"><figcaption><p>Mobile View</p></figcaption></figure>
 
 2. Click on the **"Upload"** button on the **Upload QR Code** Page as you select the option to upload a file containing the QR code or credential document you wish to verify from your device's (Desktop or Mobile browser) file explorer. Click on the file to proceed.
 
@@ -78,15 +60,14 @@ earlier one
     * Pixel Pass returns the decoded data to Inji Verify for further processing.
     * Inji Verify then verifies the decoded data using the Verification SDK.
 
-<figure><img src="../../.gitbook/assets/image12.png" alt="" width="400"><figcaption><p></p></figcaption></figure>, <figure><img src="../../.gitbook/assets/image13.png" alt="" width="100"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image12.png" alt="" width="500"><figcaption><p>Desktop View</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image13.png" alt="" width="150"><figcaption><p>Mobile View</p></figcaption></figure>
 
 
 4. **Display Credential Details:** - Upon successful verification, Inji Verify retrieves the display properties of the credential and presents the details on the portal's interface.
 
-<figure><img src="../../.gitbook/assets/image14.png" alt="" width="400"><figcaption><p></p></figcaption></figure>, <figure><img src="../../.gitbook/assets/image9.png" alt="" width="100"><figcaption><p></p></figcaption></figure>
-
-
-
+<figure><img src="../../.gitbook/assets/image14.png" alt="" width="500"><figcaption><p>Desktop View</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image9.png" alt="" width="150"><figcaption><p>Mobile View</p></figcaption></figure>
 
 
 ## VP Verification (Cross Device Flow)
@@ -96,7 +77,7 @@ earlier one
 Initiate VP Request Process by clicking on '**Request Verifiable
 Credentials'** to begin the verification process.
 
-<figure><img src="../../.gitbook/assets/image15.png" alt="" width="400"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image15.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
 **Step 2:** **Select Credentials & Generate QR Code**
 
@@ -119,7 +100,7 @@ Credentials'** to begin the verification process.
         credential type (1 or more letters to be entered in the search
         box and filtered results appear in the dropdown).
 
-<figure><img src="../../.gitbook/assets/image16.png" alt="" width="400"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image16.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
 -   Choose the required verifiable credentials from the popup window and
     click '**Generate QR Code'**.
@@ -128,14 +109,14 @@ Credentials'** to begin the verification process.
         click on Go Back Button. Clicking on it navigates to main screen
         of 'VP Verification' tab in Inji Verify portal
 
-<figure><img src="../../.gitbook/assets/image17.png" alt="" width="400"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image17.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
 **Step 3: Scan QR Code from Mobile wallet (Use a Different Device)**
 
 Use a wallet containing verifiable credentials on a different device
 with QR code scanning capabilities to scan the QR code.
 
-<figure><img src="../../.gitbook/assets/image18.png" alt="" width="400"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image18.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
 Note: The steps that Inji wallet performs to support this interaction
 are:
@@ -157,35 +138,35 @@ but Expired', 'Invalid\' .
 
 -   **Single VC display- Valid VC**
 
-<figure><img src="../../.gitbook/assets/image19.png" alt="" width="400"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image19.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
 Click on full screen option to view the Verifiable Credentials data as
 an enlarged view.
 
-<figure><img src="../../.gitbook/assets/image20.png" alt="" width="400"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image20.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
 Click on download option to download the VC data as a json file.
 
-<figure><img src="../../.gitbook/assets/image21.png" alt="" width="400"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image21.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
 -   **Single VC display- Expired VC**
 
-<figure><img src="../../.gitbook/assets/image22.png" alt="" width="400"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image22.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
 -   **Single VC display- Invalid VC**
 
-<figure><img src="../../.gitbook/assets/image23.png" alt="" width="400"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image23.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
 -   **Multiple VCs display**
 
-<figure><img src="../../.gitbook/assets/image24.png" alt="" width="400"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image24.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
 -   **Partial sharing of requested credentials**
 
 If not all the requested VCs are shared from wallet, then the status of
 missing VC result area is displayed as 'Not Shared'
 
-<figure><img src="../../.gitbook/assets/image25.png" alt="" width="400"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image25.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
 As the verifier is informed of the missing credentials in VC result
 section, the verifier has to **either Generate Request for Missing
@@ -206,7 +187,7 @@ and rest of the process continues to be the same), if required.
     -   A new Verifiable Presentation (VP) request is generated,
         containing only the missing credentials.
 
-<figure><img src="../../.gitbook/assets/image26.png" alt="" width="400"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image26.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
 -   **QR Code/Link Display:**
 
@@ -215,7 +196,7 @@ and rest of the process continues to be the same), if required.
     -   The QR code is displayed on the Verifier portal and is ready for
         the Holder to scan or access.
 
-<figure><img src="../../.gitbook/assets/image27.png" alt="" width="400"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image27.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
 -   **Holder Interaction:**
 
@@ -227,7 +208,7 @@ and rest of the process continues to be the same), if required.
         list of previously verified credentials from our original
         request.
 
-<figure><img src="../../.gitbook/assets/image28.png" alt="" width="400"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image28.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
 -   **Credential Sharing and Verification:**
 
@@ -237,7 +218,7 @@ and rest of the process continues to be the same), if required.
     -   The Verifier receives the pending credentials and completes the
         verification process.
 
-<figure><img src="../../.gitbook/assets/image26.png" alt="" width="400"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image26.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
 -   **Final Verification Completion:**
 
@@ -247,7 +228,7 @@ and rest of the process continues to be the same), if required.
 
     -   The process is marked as complete.
 
-<figure><img src="../../.gitbook/assets/image29.png" alt="" width="400"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image29.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
 **Note:**
 
@@ -269,7 +250,7 @@ and rest of the process continues to be the same), if required.
 
 -   An error message stating "**QR code format not supported"** is displayed to the user.
 
-<figure><img src="../../.gitbook/assets/image1.png" alt="" width="400"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image1.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
 **Scenario 2:** If the QR code size or file size exceeds the permissible
 limit where the maximum size is 5MB, Inji Verify returns to the home
@@ -277,33 +258,33 @@ screen.
 
 -   An error message stating "**File size not supported. The file should be between 10Kb and 5 MB.**"
 
-<figure><img src="../../.gitbook/assets/image31.png" alt="" width="400"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image31.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
 **Scenario 3:** If the QR code is unreadable or blurry then Inji Verify
 returns to the home screen.
 
 -   An error message stating **"No multi-format readers were able to read the QR code."**
 
-<figure><img src="../../.gitbook/assets/image32.png" alt="" width="400"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image32.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
 
 **Scenario 4:** If the user fails to scan the QR code within the 60-second timeframe then Inji Verify returns to the home screen.
 
 -   An error message stating "**The scan session has expired due to inactivity. Please initiate a new scan**."
 
-<figure><img src="../../.gitbook/assets/image33.png" alt="" width="400"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image33.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
 
 **Scenario 5:** When a PDF containing VC is uploaded and the QR Code is not valid, then the following error message is  displayed- 'Something went wrong with your request. Please check and try again.'
 
 **Scenario 6:** If there is no internet connectivity, the following error message is displayed while using Inji Verify - 'No Internet Connection! Oops! We can't seem to connect. Check your internet connection and try again'
 
-<figure><img src="../../.gitbook/assets/image34.png" alt="" width="400"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image34.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
 
 **Scenario 7:** When the request in the application url is invalid, the error message displayed- 'The requested resource is invalid'.
 
-<figure><img src="../../.gitbook/assets/image35.png" alt="" width="400"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image35.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
 
 **Scenario 8:** When the server is down, then the error message displayed is - 'The service is currently unavailable. Please try again later'.
@@ -318,7 +299,7 @@ returns to the home screen.
 
 -   The Verify Credentials Page will showcase two main features of Inji Verify that is "Upload QR Code" and "Scan the QR Code".
 
-<figure><img src="../../.gitbook/assets/image36.png" alt="" width="400"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image36.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
 
 ### **Help**
@@ -331,13 +312,13 @@ The Help section includes three sub-sections or sub-menus:
 
     -   **FAQ**: This section is still under development.
 
-<figure><img src="../../.gitbook/assets/image37.png" alt="" width="400"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image37.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
 ### **Language Selection**
 
 Language dropdown is provided for verifier to select a language of his interest for better readability . The languages currently supported are: Portuguese, Spanish, French, English, Arabic, Tamil, Khmer, Hindi and Kannada.
 
-<figure><img src="../../.gitbook/assets/image38.png" alt="" width="400"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image38.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
 
 ## **Credential Display Capability**
@@ -346,23 +327,41 @@ Language dropdown is provided for verifier to select a language of his interest 
 
 -   These credentials are currently active and verified using the Inji Verify Portal.
 
-<figure><img src="../../.gitbook/assets/image14.png" alt="" width="400"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image14.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
 
 **Invalid Credentials**:
 
 -   These credentials are currently active but invalid.
 
-<figure><img src="../../.gitbook/assets/image39.png" alt="" width="400"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image39.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
 **Expired Credentials**
 
 -   These credentials have passed their validity period and are no longer active.
 
-<figure><img src="../../.gitbook/assets/image40.png" alt="" width="400"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image40.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
 
+<!-- 
+Image placement
+<div align="center">
 
+<div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+  <figure style="margin: 0;">
+    <img src="../../.gitbook/assets/image1.png" alt="" width="300">
+    <figcaption></figcaption>
+  </figure>
+  <figure style="margin: 0;">
+    <img src="../../.gitbook/assets/image2.png" alt="" width="150">
+    <figcaption></figcaption>
+  </figure>
+</div>
+
+>
+
+
+----------------------------------------------------------------
 <!--
 
 # End User Guide
