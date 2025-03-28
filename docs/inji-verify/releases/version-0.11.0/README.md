@@ -2,7 +2,7 @@
 
 **Release Name**: Inji Verify v0.11.0
 
-**Support**: Developer Release
+**Support**: Developer
 
 **Release Date**: Coming Soon
 
