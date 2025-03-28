@@ -1,5 +1,3 @@
-# Test Report
-
 # Testing Scope
 
 The scope of testing is to verify fitment to the specification from the
@@ -80,19 +78,14 @@ Below are the results for Upload, Scan and OVP flow functionality with
 Windows, Android phone, MAC, Android Tablet, iPad and iPhone with
 different browsers:
 
-
-
 <figure><img src="../../../.gitbook/assets/iv-0-11-0-test-report-image1.png" alt="" width="600"><figcaption><p></p></figcaption></figure>
 
 <figure><img src="../../../.gitbook/assets/iv-0-11-0-test-report-image2.png" alt="" width="600"><figcaption><p></p></figcaption></figure>
 
 <figure><img src="../../../.gitbook/assets/iv-0-11-0-test-report-image3.png" alt="" width="600"><figcaption><p></p></figcaption></figure>
 
-
-[Note: OVP flow supports **0.15.0 inji-mobile build only**
+Note: OVP flow supports **0.15.0 inji-mobile build only** 
 https://mosip.atlassian.net/browse/INJIVER-1086**.**
-
-# 
 
 # Test Approach
 
@@ -163,7 +156,7 @@ functional automation Framework.
 Test Rate: 100%, Pass Rate: 100%
 
 Functional and test rig code base branch which is used for the above
-metrics is:
+metrics is: 
 
 Hash Tag:
 sha256:0c3e6307334a29a3dc82a15e80fd10ecf5b66b6eb0f8111bc1dff207bab6d933
