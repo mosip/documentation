@@ -9,4 +9,20 @@ Inji Verify is currently compatible and certified with the following browsers:
 | 3         | Microsoft Edge  | Version 124.0.2478.51  |
 | 4         | Mac Safari      | version 17             |
 
-<table data-header-hidden><thead><tr><th width="249.88427734375"></th><th></th></tr></thead><tbody><tr><td><strong>Devices</strong></td><td><strong>Version</strong></td></tr><tr><td>Redmi 6A</td><td>Android 9 BLE 4.2</td></tr><tr><td>Redmi 7A</td><td>Android 10 BLE 4.2</td></tr><tr><td>Redmi note 10 lite</td><td>Android 10 BLE 5.0</td></tr><tr><td>Vivo Y73</td><td>Android 12 BLE 5.0</td></tr><tr><td>SS Galaxy A03 core</td><td>Android 11 BLE 4.2</td></tr><tr><td>redmi K20 pro</td><td>Android 13 BLE 5.0</td></tr><tr><td>vivo Y73</td><td>Android 13 BLE 5.0</td></tr><tr><td>Pixel 9</td><td>Android 15 BLE 5.3</td></tr><tr><td>iphone 11</td><td>ios 15 BLE 5.0</td></tr><tr><td>iphone 8</td><td>ios 16 BLE 5.0</td></tr><tr><td>iphone 7</td><td>ios 8 iphone 16 BLE 5.0</td></tr></tbody></table>
+## Supported Devices
+
+The following devices are compatible and certified for use:
+
+| **Device**           | **Version**            |
+|-----------------------|------------------------|
+| Redmi 6A             | Android 9 BLE 4.2     |
+| Redmi 7A             | Android 10 BLE 4.2    |
+| Redmi Note 10 Lite   | Android 10 BLE 5.0    |
+| Vivo Y73             | Android 12 BLE 5.0    |
+| SS Galaxy A03 Core   | Android 11 BLE 4.2    |
+| Redmi K20 Pro        | Android 13 BLE 5.0    |
+| Vivo Y73             | Android 13 BLE 5.0    |
+| Pixel 9              | Android 15 BLE 5.3    |
+| iPhone 11            | iOS 15 BLE 5.0        |
+| iPhone 8             | iOS 16 BLE 5.0        |
+| iPhone 7             | iOS 8 BLE 5.0         |

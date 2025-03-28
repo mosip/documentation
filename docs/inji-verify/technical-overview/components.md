@@ -16,9 +16,9 @@ Let's briefly explore the key components that constitute Inji Verify:
 * Inji Verify offers functionalities for both scanning QR codes and uploading QR code files. Users interact with the portal to initiate the verification process and view the results.
 
 2. **ZXing:** It is an open-source library that's used to read the QR code VC data.
-3. **Pixel-Pass Library:** The [**Pixel-Pass Library** ](https://www.npmjs.com/package/@mosip/pixelpass/v/0.1.6)is a set of software tools and utilities designed to assist in the decoding of QR codes. It provides functions and algorithms to interpret the data encoded within QR codes accurately.&#x20;
+3. **Pixel-Pass Library:** The [**Pixel-Pass Library** ](https://www.npmjs.com/package/@mosip/pixelpass/v/0.5.0)is a set of software tools and utilities designed to assist in the decoding of QR codes. It provides functions and algorithms to interpret the data encoded within QR codes accurately.&#x20;
 
-* The [**Pixel-Pass Library**](https://www.npmjs.com/package/@mosip/pixelpass/v/0.1.6) is integrated into Inji Verify to handle the decoding of QR code data received from scanned images or uploaded files.
+* The [**Pixel-Pass Library**](https://www.npmjs.com/package/@mosip/pixelpass/v/0.5.0) is integrated into Inji Verify to handle the decoding of QR code data received from scanned images or uploaded files.
 
 3. **Pixel-Pass SDK:** The Pixel-Pass SDK is a comprehensive package of software tools, and libraries provided to developers to facilitate the integration of Pixel-Pass functionality into their applications.&#x20;
 
@@ -34,22 +34,17 @@ Let's briefly explore the key components that constitute Inji Verify:
 
 * **Technical Components of Verify Backend:** The following component diagram illustrates the structure and components of Inji Verify backend. It offers a comprehensive explanation of how the platform operates and how its various elements interact to deliver its functionalities.
 
-\<Image>
+
+<figure><img src="../../.gitbook/assets/iv-backend.png" alt="" width="400"><figcaption><p>Scan QR Code Desktop View</p></figcaption></figure>
 
 
-
-
-
-### Components: <a href="#components-.1" id="components-.1"></a>
+### Components
 
 Let's briefly explore the key components that constitute Inji Verify Backend:
 
 1. **Inji Verify Backend:** This is the service developed on Java with Spring boot. It serves as the core backend for Inji verify proving backend APIs for online VC verification and OpenID4VP sharing.
-2. **JAVA Spring App :** This is the app which serves the APIs to users
-3. **H2 In Memory DB :** The database used to store details required for OpenID4VP sharing, such as Presentation Definition, Transactions and VP token. As of now Inji Verify Backend uses in memory DB which gets initiated with the app starting.
-4. **Controller :** The controller exposes APIs for different operations. The API docs can be found [here](https://mosip.stoplight.io/docs/inji-verify/branches/main/)
-5. **Service :** Performs all the logical operations.
-6. **Repository :** Communicates with the database and performs CRUD operations.
-
-
-
+2. **JAVA Spring App:** This is the app which serves the APIs to users
+3. **H2 In Memory DB:** The database used to store details required for OpenID4VP sharing, such as Presentation Definition, Transactions and VP token. As of now Inji Verify Backend uses in memory DB which gets initiated with the app starting.
+4. **Controller:** The controller exposes APIs for different operations. The API docs can be found [here](https://mosip.stoplight.io/docs/inji-verify/branches/main/)
+5. **Service:** Performs all the logical operations.
+6. **Repository:** Communicates with the database and performs CRUD operations.

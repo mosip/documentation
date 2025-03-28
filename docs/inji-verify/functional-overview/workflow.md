@@ -3,7 +3,27 @@
 ## Sequence Diagram: OpenID4VP Cross Device Flow
 In this flow, Inji Verify prepares an Authorization Request and renders it as a QR Code. The End-User then uses the Wallet to scan the QR Code. The Verifiable Presentations are sent to the Inji Verify  backed in a direct HTTP POST request to a URL controlled by Inji Verify. The flow uses the Response Type `vp_token` in conjunction with the Response Mode `direct_post`, both defined in this specification.
 
-<figure><img src="../../.gitbook/assets/inji_verify_0.10.0_workflow.png" alt=""><figcaption><p>Change this image <p></figcaption></figure>
+```mermaid    
+sequenceDiagram
+    participant Verify Backend
+    participant Verify UI
+    participant Wallet
+
+
+    Verify UI->>Verify Backend: 1. Create a Authorization Request (BACKEND_URL/vp-request)
+    Verify Backend--)Verify Backend: 2. Process the request,<br> create and return Authorization Request response
+    Verify Backend->>Verify UI: 3. Authorization Request Response
+    Verify UI--)Verify UI: 4. Generate QR Code with response
+    Verify UI--)Verify UI: 5. Polling Status BACKEND_URL/vp-request/${reqId}/status (ACTIVE, VP_SUBMITTED, EXPIRED)
+    Wallet--)Wallet: 6. Scan QR Code
+    Wallet--)Wallet: 7. Process the QR Data and List the matching VC's
+    Wallet->>Verify Backend: 8.Authenticate User & Submitts VP Token <br> (BACKEND_URL/vp-submission/direct-post)
+    Verify Backend--)Verify UI: 9. Status == VP_SUBMITTED
+    Verify UI->>Verify Backend: 10. Request the response from the respective endpoints <br> Ex- (BACKEND_URL/vp-result/${txnId})
+    Verify Backend->>Verify UI: 11. Using txn_Id the server will fetch the data from DB and validate it using vc-verifier and return the response
+    Verify UI--)Verify UI: 12. Render VC and its statuses accordingly
+    
+```
 
 
 1. Inji Verify UI sends a POST request to create a new Authorization Request with 
