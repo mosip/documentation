@@ -53,7 +53,7 @@ Inji Verify offers a comprehensive set of features tailored to meet the verifica
 **Note**: Currently the scope of VCs that can be verified are:
 
 * VCs adhering to **W3C VC Data Model** 1.1 and 2.0 standards, promoting interoperability and adherence to industry specifications.
-* **Algorithms** supported: Ed25519 Verification Key 2018, Ed25519 Verification Key 2020, RSA Verification Key 2018 <!-- can hyperlink the algorithms>
+* **Algorithms** supported: Ed25519 Verification Key 2018, Ed25519 Verification Key 2020, RSA Verification Key 2018
 * **VC format** support: JSON-LD
 * **Verification methods** supported:
   * verificationMethod is `did:web` and in combination with proofValue or jws

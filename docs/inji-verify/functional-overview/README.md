@@ -23,7 +23,7 @@ The below given are the list of features for the Inji Verify Portal:
    1. Inji Verify offers a streamlined installation process by supporting Docker Compose. This containerization tool allows users to quickly set up and deploy the application without complex configuration steps.
 5. **Validation and Verification:**
    * Upon scanning a QR code or uploading the QR Code, Inji Verify validates the authenticity of the credential data.
-   * Advanced algorithms and cryptographic methods ensure that the QR code has not been tampered with and consumes [**pixel pass library v0.1.6**](https://www.npmjs.com/package/@mosip/pixelpass/v/0.1.6)**.**
+   * Advanced algorithms and cryptographic methods ensure that the QR code has not been tampered with and consumes [**pixel pass library v0.5.0**](https://www.npmjs.com/package/@mosip/pixelpass/v/0.5.0)**.**
    * Real-time verification provides instant feedback on the validity of the credential, giving users confidence in its authenticity.
    * PixelPass library now supports decoding of CBOR-encoded QR codes, enabling Inji Verify to verify CBO&#x52;**-**&#x65;ncoded QR codes. However, CBOR encoding capability within the PixelPass library is still under development.
 6. **Credential Display:**
