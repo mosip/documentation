@@ -94,7 +94,7 @@ Below is the list of fixes as part of the **0.11.0** release:
 | [INJIVER-737](https://mosip.atlassian.net/browse/INJIVER-737) | In Firefox, the bullet points on the left side of upload page are not displaying correctly.                             |
 | [INJIVER-726](https://mosip.atlassian.net/browse/INJIVER-726) | Scan screen view is reduced (width and height) within the scan area.                                                    |
 
-### **Documentation**
+### Documentation
 
 * [Feature documentation](https://docs.mosip.io/inji/inji-verify/functional-overview/features)
 * [User guide](https://docs.mosip.io/inji/inji-verify/functional-overview/end-user-guide)
