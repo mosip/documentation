@@ -48,13 +48,34 @@ Inji Verify offers a comprehensive set of features tailored to meet the verifica
   * **Secure Authorization Flow**: Upon scanning, Inji Verify initiates an authorization request, retrieving and verifying the credential securely from Inji Web.
   * **Cross-Device Sharing**: Supports cross-device sharing, reducing QR code complexity and enabling seamless verification.
   * **Enhanced User Experience**: Simplifies the verification process, ensuring efficient and secure credential validation.
+* **Online Verification using OpenID4VP Flow**: Inji Verify streamlines online verification with the OpenID4VP flow. The verifier generates an Authorization Request, presented as a QR code, which the user scans with their digital wallet, such as Inji Wallet. This method employs the `vp_token` response type and `direct_post` response mode to securely exchange credentials. To maintain a compact and secure QR code, the Authorization Request contains only a Request URI, allowing the wallet to fetch the complete request data. This process ensures users can privately and securely provide cryptographic proof of their credentials.
 
+**Note**: Currently the scope of VCs that can be verified are:
+
+* VCs adhering to **W3C VC Data Model** 1.1 and 2.0 standards, promoting interoperability and adherence to industry specifications.
+* **Algorithms** supported: Ed25519 Verification Key 2018, Ed25519 Verification Key 2020, RSA Verification Key 2018 <!-- can hyperlink the algorithms>
+* **VC format** support: JSON-LD
+* **Verification methods** supported:
+  * verificationMethod is `did:web` and in combination with proofValue or jws
+  * verificationMethod is `https://` and in combination with proofValue or jws
+
+**Future Implementations Planned for Inji Verify**
+
+ * **Offline Verification using BLE Technology**: Future updates will also include the ability to verify credentials offline using Bluetooth Low Energy (BLE) technology, adhering to OpenID standards. This approach is designed for environments where internet connectivity is limited or unavailable. Holders can share their credentials with verifiers via BLE, allowing for quick and secure credential validation without the need for an online connection. This offline solution will ensure flexibility and accessibility in remote or network-constrained areas, expanding the use cases for Inji Verify in various sectors.
+ 
 #### **Future Implementations Planned for Inji Verify**
 
-* **Online Verification using OpenID4VP Flow**:\
+<!-- 
+
+Comment note: This has now been implemented with Inji Verify 0.11.0 release so being commented and will be removed!
+
+* **Online Verification using OpenID4VP Flow**:
   Inji Verify is planning to implement a streamlined online verification process using the [**OpenID4VP**](https://openid.net/specs/openid-4-verifiable-presentations-1\_0.html#name-cross-device-flow) flow. The Verifier prepares an Authorization Request and renders it as a QR code, which the User (Holder) scans using their wallet, such as Inji Wallet. This process utilizes the response type vp\_token along with the response mode direct\_post, ensuring a secure exchange of credentials. To keep the QR code compact and secure, the actual Authorization Request includes only a Request URI, which the wallet uses to retrieve the full request data. This streamlined online verification process allows users to maintain privacy while providing cryptographic proof of their credentials.
-* **Offline Verification using BLE Technology**:\
+
+-->
+* **Offline Verification using BLE Technology** (Without the need for an internet/online connection):
   Future updates will also include the ability to verify credentials offline using Bluetooth Low Energy (BLE) technology, adhering to OpenID standards. This approach is designed for environments where internet connectivity is limited or unavailable. Holders can share their credentials with verifiers via BLE, allowing for quick and secure credential validation without the need for an online connection. This offline solution will ensure flexibility and accessibility in remote or network-constrained areas, expanding the use cases for Inji Verify in various sectors.
+
 
 #### **Conclusion**
 

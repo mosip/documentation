@@ -30,7 +30,21 @@ The below given are the list of features for the Inji Verify Portal:
    * Valid credentials retrieved through QR code scanning or uploading QR codes are displayed securely within the Inji Verify portal.
    * Users can view detailed information about the credential, including name, DOB, gender, expiration date, and any associated claims.
    * The user-friendly interface facilitates a clear and concise data representation of the credential data for easy verification.
-7. **Cross-Platform Compatibility:**
+7. **Generate QR Code based VP request for sharing credentials from wallet to Inji Verify for verification in different devices**: The OpenID for Verifiable Presentations (OpenID4VP) standard introduces the VP Token which will enable the end-users to present Verifiable Presentations (VPs) to verifiers via a digital wallet. In scenarios where the verifier and the user's wallet operate on separate devices, the process unfolds as follows:​
+
+   * The Verifier formulates an Authorization Request, which is then rendered as a QR code. This QR code encapsulates a Request URI, allowing the wallet to retrieve the complete request data, thereby keeping the QR code concise.
+   * The user scans the QR code using their digital wallet (e.g., Inji Wallet), which fetches the Authorization Request data and prepares the requested credentials. Depending on the wallet's contents, the user can share all or a subset of the requested credentials.​
+   * Utilizing the `vp_token` response type and the `direct_post` response mode, the wallet securely transmits the VPs directly to the verifier's specified endpoint via an HTTP POST request.
+   * Upon receipt, the Verifier assesses <!-- asseses can be hyperlinked to topic where it is explained--> the authenticity and validity of the presented credentials. The verification results are then displayed within Inji Verify, providing immediate feedback on the credential status.​
+
+This cross-device flow ensures a secure and efficient method for users to share their verifiable credentials across different devices, enhancing both flexibility and user experience in credential verification processes.
+
+8. **Language Selection**: User can choose from the list of languages for a much better usability, hence the text description and VC result on the UI is displayed based on the language cosen. Inji Verify supports the following international languages which includes Portuguese, Spanish, French, English, Arabic, Khmer and the Indian vernacular langauges includes Tamil, Hindia and Kannada.
+
+9. **UI Theme Customization**:  
+   Inji Verify offers the flexibility to customize the user interface (UI) themes, allowing integrators or countries to tailor the appearance of the portal to meet their specific branding or regional requirements. This feature ensures a personalized and visually cohesive user experience.
+
+10. **Cross-Platform Compatibility:**
    * Compatible with a wide range of devices and operating systems, including desktops, mobile devices, and laptops.
    * A mobile responsive version with back camera capability is now available.
    * Responsive design ensures optimal performance and usability across different screen sizes and resolutions.

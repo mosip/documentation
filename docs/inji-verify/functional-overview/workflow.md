@@ -1,5 +1,30 @@
 # Workflow
 
+## Sequence Diagram: OpenID4VP Cross Device Flow
+In this flow, Inji Verify prepares an Authorization Request and renders it as a QR Code. The End-User then uses the Wallet to scan the QR Code. The Verifiable Presentations are sent to the Inji Verify  backed in a direct HTTP POST request to a URL controlled by Inji Verify. The flow uses the Response Type `vp_token` in conjunction with the Response Mode `direct_post`, both defined in this specification.
+
+<figure><img src="../../.gitbook/assets/inji_verify_0.10.0_workflow.png" alt=""><figcaption><p>Change this image <p></figcaption></figure>
+
+
+1. Inji Verify UI sends a POST request to create a new Authorization Request with 
+ * `clientId`: (required) - ID of the client requesting the Verifiable Presentation.
+ * `presentationDefinition`: One of **presentationDefinitionID** or **presentationDefinition** (required) -  Presentation Definition for the Verifiable Presentation.
+ * `presentationDefinitionID`: One of **presentationDefinitionID** or **presentationDefinition** (required) - Presentation Definition ID for the Verifiable Presentation requesting, which is saved in backend.
+ * `transactionID` - (optional) - A unique identifier for the current authorization request transaction.
+
+2. Inji Verify backend creates a new Authorization Request
+3. Inji Verify backend returns the newly created Authorization Request
+4. Inji Verify UI generates a QR code with response
+5. Inji Verify UI Starts polling for the current transaction status
+6. Wallet Scans QR code
+7. Wallet reads the QR code data and initiates a OpenId4VP flow on wallets end.
+8. Wallet creates a VP based on the VP selected VCs and POST it to responseUri from the QR code
+9. Inji Verify UI Starts polling status becomes `VP_SUBMITTED`
+10. Inji Verify UI requests for the submitted result with its verification statuses
+11. Using transactionId Inji v will fetch the data from DB and validate it using vc-verifier and return the response(11) Using transactionId Inji Verify Backed will fetch the data from DB and validate it using `vc-verifier` and returns the response
+12. Inji Verify UI renders the response accordingly
+
+
 #### **Sequence Diagram**
 
 <figure><img src="../../.gitbook/assets/inji_verify_0.10.0_workflow.png" alt=""><figcaption></figcaption></figure>
