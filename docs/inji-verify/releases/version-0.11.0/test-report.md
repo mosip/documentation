@@ -85,14 +85,13 @@ Windows, Android phone, MAC, Android Tablet, iPad and iPhone with
 different browsers:
 
 
-![](./media/media/iv-0-11-0-test-report-image1.png){width="6.151042213473316in"
-height="6.0976476377952755in"}
 
-![](./media/media/iv-0-11-0-test-report-image2.png){width="6.6271423884514435in"
-height="6.067708880139983in"}
+<figure><img src="../../../.gitbook/assets/iv-0-11-0-test-report-image1.png" alt="" width="600"><figcaption><p></p></figcaption></figure>
 
-![](./media/media/iv-0-11-0-test-report-image3.png){width="6.5in"
-height="3.1944444444444446in"}
+<figure><img src="../../../.gitbook/assets/iv-0-11-0-test-report-image2.png" alt="" width="600"><figcaption><p></p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/iv-0-11-0-test-report-image3.png" alt="" width="600"><figcaption><p></p></figcaption></figure>
+
 
 [Note: OVP flow supports **0.15.0 inji-mobile build only**
 https://mosip.atlassian.net/browse/INJIVER-1086**.**
@@ -133,8 +132,7 @@ below
 
 # Feature Health 
 
-![](./media/media/iv-0-11-0-test-report-image4.png){width="6.166666666666667in"
-height="3.6666666666666665in"}
+<figure><img src="../../../.gitbook/assets/iv-0-11-0-test-report-image4.png" alt="" width="600"><figcaption><p></p></figcaption></figure>
 
 # Test execution statistics 
 
