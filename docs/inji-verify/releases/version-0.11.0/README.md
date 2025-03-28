@@ -100,5 +100,5 @@ Below is the list of fixes as part of the **0.11.0** release:
 * [User guide](https://docs.mosip.io/inji/inji-verify/functional-overview/end-user-guide)
 * [API Documentation](https://mosip.stoplight.io/studio/inji-verify)
 * [Local Setup](https://github.com/mosip/inji-verify/tree/release-0.11.x?tab=readme-ov-file#developer-setup)
-* [Collab Guide](https://mosip.atlassian.net/wiki/spaces/PROD/pages/1306984580)
+* [Collab Guide](https://docs.inji.io/inji-verify/releases-1/inji-verify-collab-guide)
 * [QA Report](https://docs.inji.io/inji-verify/releases/version-0.11.0/test-report)
