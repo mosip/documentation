@@ -24,8 +24,6 @@ sequenceDiagram
     Verify UI--)Verify UI: 12. Render VC and its statuses accordingly
     
 ```
-
-
 1. Inji Verify UI sends a POST request to create a new Authorization Request with 
  * `clientId`: (required) - ID of the client requesting the Verifiable Presentation.
  * `presentationDefinition`: One of **presentationDefinitionID** or **presentationDefinition** (required) -  Presentation Definition for the Verifiable Presentation.

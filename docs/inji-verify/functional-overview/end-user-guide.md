@@ -72,174 +72,112 @@ This document serves as a concise guide for end users, providing comprehensive s
 
 ## VP Verification (Cross Device Flow)
 
-**Step 1:** **Initiate VP Request Process**
+1. **Initiate VP Request Process**
 
-Initiate VP Request Process by clicking on '**Request Verifiable
-Credentials'** to begin the verification process.
+* Initiate VP Request Process by clicking on '**Request Verifiable Credentials'** to begin the verification process.
 
 <figure><img src="../../.gitbook/assets/image15.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
-**Step 2:** **Select Credentials & Generate QR Code**
+2. ** Select Credentials & Generate QR Code**: The verifier is presented with a list of verifiable credential types with specific credentials already pre-selected(configurable) based on a specific usecase.
 
--   The verifier is presented with a list of verifiable credential types
-    with specific credentials already pre-selected(configurable) based
-    on a specific usecase.
-
--   Pre-selected credential types are listed on the top and rest of the
-    credentials (non-selected ones) are displayed in alphabetical order.
-
--   The list of VCs can also be sorted in ascending or descending order
-    using Sort option.
-
--   Each credential type is displayed with a checkbox next to it.
-
--   The verifier reviews the list and selects the desired credentials by
-    clicking the checkboxes provided in the list.
-
-    -   Verifier can also search for a credential by entering the
-        credential type (1 or more letters to be entered in the search
-        box and filtered results appear in the dropdown).
+* Pre-selected credential types are listed on the top and rest of the credentials (non-selected ones) are displayed in alphabetical order.
+* The list of VCs can also be sorted in ascending or descending order using Sort option.
+* Each credential type is displayed with a checkbox next to it.
+* The verifier reviews the list and selects the desired credentials by clicking the checkboxes provided in the list.
+* Verifier can also search for a credential by entering the credential type (1 or more letters to be entered in the search box and filtered results appear in the dropdown).
 
 <figure><img src="../../.gitbook/assets/image16.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
--   Choose the required verifiable credentials from the popup window and
-    click '**Generate QR Code'**.
-
-    -   If the verifier does not wish to select any credentials, he can
-        click on Go Back Button. Clicking on it navigates to main screen
-        of 'VP Verification' tab in Inji Verify portal
+* Choose the required verifiable credentials from the popup window and click '**Generate QR Code'**, If the verifier does not wish to select any credentials, he can click on Go Back Button. Clicking on it navigates to main screen of 'VP Verification' tab in Inji Verify portal
 
 <figure><img src="../../.gitbook/assets/image17.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
-**Step 3: Scan QR Code from Mobile wallet (Use a Different Device)**
-
-Use a wallet containing verifiable credentials on a different device
-with QR code scanning capabilities to scan the QR code.
+3. **Scan QR Code from Mobile wallet (Use a Different Device)**: Use a wallet containing verifiable credentials on a different device with QR code scanning capabilities to scan the QR code.
 
 <figure><img src="../../.gitbook/assets/image18.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
-Note: The steps that Inji wallet performs to support this interaction
-are:
+Note: The steps that Inji wallet performs to support this interaction are:
+* The Wallet interprets the VP request and lists all the matching credentials available in the Wallet.
+* The Wallet prompts the user to authenticate and then seeks consent to share the requested credential(s).
+* The Wallet sends the VP response via HTTPS POST to the Inji Verify portal.
 
--   The Wallet interprets the VP request and lists all the matching
-    credentials available in the Wallet.
+4. **View Verification Results in Inji Verify**: Inji Verify displays the verification results of the verifiable credentials shared from the wallet which could be either 'Valid', 'Valid
+but Expired', 'Invalid'.
 
--   The Wallet prompts the user to authenticate and then seeks consent
-    to share the requested credential(s).
+* **Single VC display** 
 
--   The Wallet sends the VP response via HTTPS POST to the Inji Verify
-    portal.
-
-**Step 4: View Verification Results in Inji Verify**
-
-Inji Verify displays the verification results of the verifiable
-credentials shared from the wallet which could be either 'Valid', 'Valid
-but Expired', 'Invalid\' .
-
--   **Single VC display- Valid VC**
+    * **Valid VC**
 
 <figure><img src="../../.gitbook/assets/image19.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
-Click on full screen option to view the Verifiable Credentials data as
+        * Click on full screen option to view the Verifiable Credentials data as
 an enlarged view.
 
 <figure><img src="../../.gitbook/assets/image20.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
-Click on download option to download the VC data as a json file.
+        * Click on download option to download the VC data as a json file.
 
 <figure><img src="../../.gitbook/assets/image21.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
--   **Single VC display- Expired VC**
+    * **Expired VC**
 
 <figure><img src="../../.gitbook/assets/image22.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
--   **Single VC display- Invalid VC**
+    * **Invalid VC**
 
 <figure><img src="../../.gitbook/assets/image23.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
--   **Multiple VCs display**
+* **Multiple VCs display**
 
 <figure><img src="../../.gitbook/assets/image24.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
--   **Partial sharing of requested credentials**
 
-If not all the requested VCs are shared from wallet, then the status of
-missing VC result area is displayed as 'Not Shared'
+#### **Partial sharing of requested credentials**
+
+If not all the requested VCs are shared from wallet, then the status of missing VC result area is displayed as 'Not Shared'
 
 <figure><img src="../../.gitbook/assets/image25.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
-As the verifier is informed of the missing credentials in VC result
-section, the verifier has to **either Generate Request for Missing
-Credentials or Generate a New Request for restarting the VP sharing
-flow.** The verifier can request for missing credentials by continuing
-the flow by clicking on \' Request Missing Credentials\' to generate
-another QR code that requests the missing credentials. Another button-
-\' Restart Process\' helps user to re-initiate the VP Request process
-all over again (by displaying the popup window to select the credentials
-and rest of the process continues to be the same), if required.
+As the verifier is informed of the missing credentials in VC result section, the verifier has to **either Generate Request for Missing Credentials or Generate a New Request for restarting the VP sharing flow.** The verifier can request for missing credentials by continuing the flow by clicking on 'Request Missing Credentials' to generate another QR code that requests the missing credentials. 
 
--   **Re-Generation of VP Request:**
+Another button - 'Restart Process' helps user to re-initiate the VP Request process
+all over again (by displaying the popup window to select the credentials and rest of the process continues to be the same), if required.
 
-    -   Upon clicking \"Request Missing Credentials\" button, the
-        Verifier portal automatically identifies the credentials that
-        were not received in the previous transaction.
-
-    -   A new Verifiable Presentation (VP) request is generated,
-        containing only the missing credentials.
+#### Re-Generate VP Request for missing VPs
+1. **Request Missing Credentials**: Upon clicking "Request Missing Credentials" button, the Verifier portal automatically identifies the credentials that were not received in the previous transaction. A new Verifiable Presentation (VP) request is generated, containing only the missing credentials.
 
 <figure><img src="../../.gitbook/assets/image26.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
--   **QR Code/Link Display:**
-
-    -   The new VP request is encoded into a QR code.
-
-    -   The QR code is displayed on the Verifier portal and is ready for
-        the Holder to scan or access.
+2. **QR Code/Link Display:**
+* The new VP request is encoded into a QR code.
+* The QR code is displayed on the Verifier portal and is ready for the Holder to scan or access.
 
 <figure><img src="../../.gitbook/assets/image27.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
--   **Holder Interaction:**
-
-    -   The Holder (Inji Wallet) scans the new QR code or accesses the
-        link.
-
-    -   The Wallet fetches the new VP request and lists the pending
-        credentials (if they are available in the Wallet) along with the
-        list of previously verified credentials from our original
-        request.
+3. **Holder Interaction:**
+* The Holder (Inji Wallet) scans the new QR code or accesses the link.
+* The Wallet fetches the new VP request and lists the pending credentials (if they are available in the Wallet) along with the list of previously verified credentials from our original request.
 
 <figure><img src="../../.gitbook/assets/image28.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
--   **Credential Sharing and Verification:**
-
-    -   The process of selecting credentials, providing user consent,
-        and sending the VP response follows the standard flow.
-
-    -   The Verifier receives the pending credentials and completes the
-        verification process.
+4. **Credential Sharing and Verification:**
+* The process of selecting credentials, providing user consent, and sending the VP response follows the standard flow.
+* The Verifier receives the pending credentials and completes the verification process.
 
 <figure><img src="../../.gitbook/assets/image26.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
--   **Final Verification Completion:**
+5. **Final Verification Completion:**
+* Once all credentials are received and verified, the Verifier portal displays a final confirmation message indicating that all requested credentials have been successfully verified.
+* The process is marked as complete.
 
-    -   Once all credentials are received and verified, the Verifier
-        portal displays a final confirmation message indicating that all
-        requested credentials have been successfully verified.
-
-    -   The process is marked as complete.
-
-<figure><img src="../../.gitbook/assets/image29.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image29.png" alt="" width="150"><figcaption><p></p></figcaption></figure>
 
 **Note:**
 
-1.  For any VCs displayed after verification, the verifier is provided
-    with an option to download the VCs in json format.
+1.  For any VCs displayed after verification, the verifier is provided with an option to download the VCs in json format.
 
 2.  For any VCs displayed after verification, the verifier is provided
     with an option to expand the VCs to full view.
-
-
-
 
 
 
@@ -252,16 +190,13 @@ and rest of the process continues to be the same), if required.
 
 <figure><img src="../../.gitbook/assets/image1.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
-**Scenario 2:** If the QR code size or file size exceeds the permissible
-limit where the maximum size is 5MB, Inji Verify returns to the home
-screen.
+**Scenario 2:** If the QR code size or file size exceeds the permissible limit where the maximum size is 5MB, Inji Verify returns to the home screen.
 
 -   An error message stating "**File size not supported. The file should be between 10Kb and 5 MB.**"
 
 <figure><img src="../../.gitbook/assets/image31.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
-**Scenario 3:** If the QR code is unreadable or blurry then Inji Verify
-returns to the home screen.
+**Scenario 3:** If the QR code is unreadable or blurry then Inji Verify returns to the home screen.
 
 -   An error message stating **"No multi-format readers were able to read the QR code."**
 
@@ -316,7 +251,7 @@ The Help section includes three sub-sections or sub-menus:
 
 ### **Language Selection**
 
-Language dropdown is provided for verifier to select a language of his interest for better readability . The languages currently supported are: Portuguese, Spanish, French, English, Arabic, Tamil, Khmer, Hindi and Kannada.
+Language dropdown is provided for verifier to select a language of his interest for better usability . The languages currently supported are: Portuguese, Spanish, French, English, Arabic, Tamil, Khmer, Hindi and Kannada.
 
 <figure><img src="../../.gitbook/assets/image38.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
