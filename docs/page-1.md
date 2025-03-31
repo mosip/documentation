@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # FAQ
 
 New Test 2
