@@ -54,8 +54,11 @@ The below screenshots explain the next steps after you get access.
 
 ### First launch of the app
 
-* The chosen language will be reflected within the app interface. Subsequently, a five-page tutorial for the Inji Wallet will be presented, followed by the option to secure the app.
-* This can be achieved through a PIN or the device's Biometrics (such as fingerprint or facial recognition). Once the setting is done, users will be directed to the app's home page.
+After installation when you launch the app for the first time:
+
+* Select the preferred language.
+* You can read though a five-page tutorial for the Inji Wallet which is presented.
+* Choose a secure login method to enter the app (Biometric / PIN). This can be achieved through a PIN or the device's Biometrics (such as fingerprint or facial recognition). Once the setting is done you will be directed to the app's home page.
 
 
 <div align="center">
