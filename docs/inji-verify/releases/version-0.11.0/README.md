@@ -54,8 +54,8 @@ The following table outlines the tested and certified compatibility of Inji Veri
 
 | Module          | Version |
 | --------------- | ------- |
-| **Inji Wallet** | 0.15.0  |
-| **Inji Web**    | 0.10.0  |
+| **Inji Wallet** | [**0.15.0**](https://github.com/mosip/inji-wallet/tree/v0.15.0) |
+| **Inji Web**    | [**0.10.0**](https://github.com/mosip/inji-web/tree/v0.10.0) |
 
 ### Known Issues
 
@@ -98,7 +98,7 @@ Below is the list of fixes as part of the **0.11.0** release:
 
 * [Feature documentation](https://docs.mosip.io/inji/inji-verify/functional-overview/features)
 * [User guide](https://docs.mosip.io/inji/inji-verify/functional-overview/end-user-guide)
-* [API Documentation](https://mosip.stoplight.io/studio/inji-verify)
+* [API Documentation](https://mosip.stoplight.io/docs/inji-verify/exiu5fepecoj7-open-id-4-vp-verifier-api-inji-verify)
 * [Local Setup](https://github.com/mosip/inji-verify/tree/release-0.11.x?tab=readme-ov-file#developer-setup)
 * [Collab Guide](https://docs.inji.io/inji-verify/releases-1/inji-verify-collab-guide)
 * [QA Report](https://docs.inji.io/inji-verify/releases/version-0.11.0/test-report)
