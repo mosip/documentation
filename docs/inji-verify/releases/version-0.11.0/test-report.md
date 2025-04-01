@@ -175,7 +175,5 @@ The various metrics that assist in test tracking and efficiency are as follows:
     failed test cases. (Number of failed tests / Total number of test
     cases executed) x 100
 
-Git hub link for the xls file:
-
-TBU
+Git hub link for all the report files is [**here**](https://github.com/mosip/test-management/tree/master/inji%20verify/0.11.0).
 
