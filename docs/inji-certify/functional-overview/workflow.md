@@ -1,6 +1,54 @@
 # Workflow
 
-<figure><img src="../../.gitbook/assets/inji_cert0.9.png" alt=""><figcaption></figcaption></figure>
+```mermaid
+sequenceDiagram
+    participant Client as 🌐 Client
+    participant AuthN_AuthZ as 🔑 AuthN/AuthZ
+    box Inji Certify #E6F3FF
+        participant CredentialAPI as 🔗 Credential API
+        participant TemplateEngine as ⚙️ Template Engine
+        participant VCSigner as 🔏 VC Signer
+        participant TemplateDB as 💾 Template Store
+    end
+    participant VCIssuancePlugin as 🔌 VC Issuance Plugin
+    participant DataProviderPlugin as 🔌 Data Provider Plugin
+    participant ExternalIssuer as 🏦 Ext. Issuer
+
+    Note over VCIssuancePlugin: External Plugin
+    Note over DataProviderPlugin: External Plugin
+
+    Client->>AuthN_AuthZ: Authentication Request (OAuth2/OIDC)
+    AuthN_AuthZ-->>Client: Authentication Response (Token)
+
+    Client->>CredentialAPI: Request VC Issuance (OIDC4VCI) with Token
+    alt Issuer Mode (DataProviderPlugin)
+        CredentialAPI->>DataProviderPlugin: Request Data
+        Note right of DataProviderPlugin: Get Data
+        DataProviderPlugin-->>CredentialAPI: Return Raw Data
+
+        CredentialAPI->>TemplateDB: Fetch Credential Template
+        TemplateDB-->>CredentialAPI: Return Template
+
+        CredentialAPI->>TemplateEngine: Process Template with Raw Data
+        TemplateEngine-->>CredentialAPI: Return unsigned Credential Data
+
+        CredentialAPI->>VCSigner: Sign Credential
+        Note right of VCSigner: Sign VC
+        VCSigner-->>CredentialAPI: Return Signed VC
+
+
+    else Proxy Mode (VCIssuancePlugin)
+        CredentialAPI->>VCIssuancePlugin: Forward Request
+        Note right of VCIssuancePlugin: Internal Process:<br/>1. Get VC from Ext. Issuer
+        VCIssuancePlugin->>ExternalIssuer: Request VC
+        ExternalIssuer-->>VCIssuancePlugin: Return Signed VC
+        VCIssuancePlugin-->>CredentialAPI: Return Signed VC
+
+    end
+
+    CredentialAPI-->>Client: Return Final VC (OIDC4VCI)
+
+```
 
 **Understanding the workflow:**
 
