@@ -3,7 +3,7 @@
 **Version: 0.11.0**
 
 * Name: Inji Verify v0.11.0
-* Date: Coming Soon
+* Date: 2nd April, 2025
 * [Release Notes](https://docs.inji.io/inji-verify/releases/version-0.11.0)
 
 **Version: 0.10.0**

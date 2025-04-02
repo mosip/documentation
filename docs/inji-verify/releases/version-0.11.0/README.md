@@ -4,7 +4,7 @@
 
 **Support**: Developer
 
-**Release Date**: Coming Soon
+**Release Date**: 2nd April, 2025
 
 ## Overview
 
@@ -13,11 +13,8 @@ We’re excited to announce the release of **Inji Verify 0.11.0**, packed with n
 ## New Features
 
 * **OpenIDVP Cross-Device Flow** – ​The OpenID for Verifiable Presentations (OpenID4VP) Cross-Device Flow facilitates secure sharing of Verifiable Presentations (VPs) across different devices, allowing verifiers to request specific credentials and users to share the requested VCs from their digital wallets on one device while interacting with the verifier on another, with verification result displayed in Inji Verify.
-
 * **Language Selection** – Users can now choose their preferred language from multiple international (Portuguese, Spanish, French, English, Arabic, Khmer) and Indian vernacular (Tamil, Hindi, Kannada), enhancing accessibility and usability.
-
 * **UI Theme Customization** – Integrators and countries can now personalize the UI theme to match their branding and preferences.
-
 * **Server-Side VC Verification** – Integration of the vc-verifier library to support Ed25519 and RSA key verification, strengthening security of server-side verifications.
 
 ## Additional Enhancements
@@ -31,11 +28,11 @@ We’re excited to announce the release of **Inji Verify 0.11.0**, packed with n
 * VCs with ED25519 Signature 2018 are verifiable.
 * Usage of universal DID resolver library.
 
-**Theme Upgrade** -  Introducing a sleek gradient-based design as the new default theme for Inji Verify UI. This theme offers a modern and visually appealing user experience, enhancing usability and aesthetic appeal. This theme can nevertheless be customized based on integrators/countries' preferences.
+**Theme Upgrade** - Introducing a sleek gradient-based design as the new default theme for Inji Verify UI. This theme offers a modern and visually appealing user experience, enhancing usability and aesthetic appeal. This theme can nevertheless be customized based on integrators/countries' preferences.
 
 With these updates, **Inji Verify** continues to evolve, making credential verification more secure, adaptable, and user-friendly!
 
-
+{% hint style="info" %}
 **Note:** Currently the scope of VCs that can be verified are:
 
 * VCs adhering to **W3C VC Data Model** 1.1 and 2.0 standards, promoting interoperability and adherence to industry specifications.
@@ -44,23 +41,24 @@ With these updates, **Inji Verify** continues to evolve, making credential verif
 * **Verification methods** supported:
   * verificationMethod is did:web and in combination with proofValue or jws
   * verificationMethod is https:// and in combination with proofValue or jws
+{% endhint %}
 
 ### Repositories Released
 
-| **Repositories**    | **Tags: Released** |
-| ------------------- | ---------------------------- |
-| Inji Verify         | **v0.11.0**                  |
-| vc-verifier library | **v1.2.0**                   |
+| Repositories        | Tags: Released                                                   |
+| ------------------- | ---------------------------------------------------------------- |
+| Inji Verify         | [**v0.11.0**](https://github.com/mosip/inji-verify/tree/v0.11.0) |
+| vc-verifier library | [**v1.2.0**](https://github.com/mosip/vc-verifier/tree/v1.2.0)   |
 
 ### Compatible modules
 
 The following table outlines the tested and certified compatibility of Inji Verify 0.10.0 with other modules.
 
-| Module          | Version |
-| --------------- | ------- |
+| Module          | Version                                                         |
+| --------------- | --------------------------------------------------------------- |
 | **Inji Wallet** | [**0.15.0**](https://github.com/mosip/inji-wallet/tree/v0.15.0) |
-| **Inji Web**    | [**0.10.0**](https://github.com/mosip/inji-web/tree/v0.10.0) |
-| **Pixel Pass**  | [**0.5.0**](https://github.com/mosip/pixelpass/tree/v0.5.0) |
+| **Inji Web**    | [**0.10.0**](https://github.com/mosip/inji-web/tree/v0.10.0)    |
+| **Pixel Pass**  | [**0.5.0**](https://github.com/mosip/pixelpass/tree/v0.5.0)     |
 
 ### Known Issues
 
