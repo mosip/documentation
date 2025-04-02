@@ -23,6 +23,7 @@ We’re excited to announce the release of **Inji Verify 0.11.0**, packed with n
 ## Additional Enhancements
 
 **Zoom Slider for Mobile Scanning** – A zoom slider is introduced to adjust magnification for better scanning and verification on mobile devices.
+
 **Support for W3C VC Data Model 1.1 & 2.0** – Ensuring compatibility with the latest verifiable credential standards.
 
 **Upgrading of vc-verifier library (v1.2.0)**
@@ -30,7 +31,10 @@ We’re excited to announce the release of **Inji Verify 0.11.0**, packed with n
 * VCs with ED25519 Signature 2018 are verifiable.
 * Usage of universal DID resolver library.
 
+**Theme Upgrade** -  Introducing a sleek gradient-based design as the new default theme for Inji Verify UI. This theme offers a modern and visually appealing user experience, enhancing usability and aesthetic appeal. This theme can nevertheless be customized based on integrators/countries' preferences.
+
 With these updates, **Inji Verify** continues to evolve, making credential verification more secure, adaptable, and user-friendly!
+
 
 **Note:** Currently the scope of VCs that can be verified are:
 
@@ -43,7 +47,7 @@ With these updates, **Inji Verify** continues to evolve, making credential verif
 
 ### Repositories Released
 
-| **Repositories**    | **Tags: Released/Dependent** |
+| **Repositories**    | **Tags: Released** |
 | ------------------- | ---------------------------- |
 | Inji Verify         | **v0.11.0**                  |
 | vc-verifier library | **v1.2.0**                   |
@@ -56,6 +60,7 @@ The following table outlines the tested and certified compatibility of Inji Veri
 | --------------- | ------- |
 | **Inji Wallet** | [**0.15.0**](https://github.com/mosip/inji-wallet/tree/v0.15.0) |
 | **Inji Web**    | [**0.10.0**](https://github.com/mosip/inji-web/tree/v0.10.0) |
+| **Pixel Pass**  | [**0.5.0**](https://github.com/mosip/pixelpass/tree/v0.5.0) |
 
 ### Known Issues
 

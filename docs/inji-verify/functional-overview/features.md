@@ -21,13 +21,14 @@ Here is a comprehensive summary of the features offered by Inji Verify.
    * **Valid Credential Display**: These credentials are currently active and verified using the Inji Verify Portal.
    * **Invalid Credential Display**: These credentials are active but invalid.
    * **Expired Credential Display**: These credentials have passed their validity period and are no longer active.
-8. **OpenIDVP Cross Device flow**: OpenID for Verifiable Presentations (OpenID4VP) enables users to securely share their Verifiable Credentials (VCs) from their digital wallet with a verifier, even when they are using different devices.
-   * A verifier requests specific credentials from the user.
-   * The user’s wallet (on a different device) allows them to share either all or only the available credentials.
-   * The shared credentials are then verified for authenticity and validity.
-   * The verification result is displayed on Inji Verify confirming whether the credentials are valid or not.
+8. **Generate QR Code based VP request for sharing credentials from wallet to Inji Verify for verification in different devices**: The OpenID for Verifiable Presentations (OpenID4VP) standard introduces the VP Token which will enable the end-users to present Verifiable Presentations (VPs) to verifiers via a digital wallet. In scenarios where the verifier and the user's wallet operate on separate devices, the process unfolds as follows:​
 
-This ensures a secure and flexible way of sharing credentials across different devices while maintaining privacy and control over what gets shared.
+   * The Verifier formulates an Authorization Request, which is then rendered as a QR code. This QR code encapsulates a Request URI, allowing the wallet to retrieve the complete request data, thereby keeping the QR code concise.
+   * The user scans the QR code using their digital wallet (e.g., Inji Wallet), which fetches the Authorization Request data and prepares the requested credentials. Depending on the wallet's contents, the user can share all or a subset of the requested credentials.​
+   * Utilizing the `vp_token` response type and the `direct_post` response mode, the wallet securely transmits the VPs directly to the verifier's specified endpoint via an HTTP POST request.
+   * Upon receipt, the Verifier assesses <!-- asseses can be hyperlinked to topic where it is explained--> the authenticity and validity of the presented credentials. The verification results are then displayed within Inji Verify, providing immediate feedback on the credential status.​
+
+This cross-device flow ensures a secure and efficient method for users to share their verifiable credentials across different devices, enhancing both flexibility and user experience in credential verification processes.
 
 9. **Language Selection**: User can choose from the listed languages for better usability such that the text description and VC result on the UI is displayed based on the chosen language. Inji Verify supports the following international languages which includes Portuguese, Spanish, French, English, Arabic, Khmer and the Indian vernacular langauges includes Tamil, Hindia and Kannada.
 

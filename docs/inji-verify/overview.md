@@ -62,19 +62,6 @@ Inji Verify offers a comprehensive set of features tailored to meet the verifica
 **Future Implementations Planned for Inji Verify**
 
  * **Offline Verification using BLE Technology**: Future updates will also include the ability to verify credentials offline using Bluetooth Low Energy (BLE) technology, adhering to OpenID standards. This approach is designed for environments where internet connectivity is limited or unavailable. Holders can share their credentials with verifiers via BLE, allowing for quick and secure credential validation without the need for an online connection. This offline solution will ensure flexibility and accessibility in remote or network-constrained areas, expanding the use cases for Inji Verify in various sectors.
- 
-#### **Future Implementations Planned for Inji Verify**
-
-<!-- 
-
-Comment note: This has now been implemented with Inji Verify 0.11.0 release so being commented and will be removed!
-
-* **Online Verification using OpenID4VP Flow**:
-  Inji Verify is planning to implement a streamlined online verification process using the [**OpenID4VP**](https://openid.net/specs/openid-4-verifiable-presentations-1\_0.html#name-cross-device-flow) flow. The Verifier prepares an Authorization Request and renders it as a QR code, which the User (Holder) scans using their wallet, such as Inji Wallet. This process utilizes the response type vp\_token along with the response mode direct\_post, ensuring a secure exchange of credentials. To keep the QR code compact and secure, the actual Authorization Request includes only a Request URI, which the wallet uses to retrieve the full request data. This streamlined online verification process allows users to maintain privacy while providing cryptographic proof of their credentials.
-
--->
-* **Offline Verification using BLE Technology** (Without the need for an internet/online connection):
-  Future updates will also include the ability to verify credentials offline using Bluetooth Low Energy (BLE) technology, adhering to OpenID standards. This approach is designed for environments where internet connectivity is limited or unavailable. Holders can share their credentials with verifiers via BLE, allowing for quick and secure credential validation without the need for an online connection. This offline solution will ensure flexibility and accessibility in remote or network-constrained areas, expanding the use cases for Inji Verify in various sectors.
 
 
 #### **Conclusion**
