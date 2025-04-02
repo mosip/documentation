@@ -13,7 +13,14 @@ This document serves as a concise guide for end users, providing comprehensive s
 
 2. Click on the Scan button to initiate the scanning process.
 
+<figure><img src="../../.gitbook/assets/image6.png" alt="" width="500"><figcaption><p>Desktop View</p></figcaption></figure>
+
+<!--
+
 <figure><img src="../../.gitbook/assets/image1.png" alt="" width="500"><figcaption><p>Desktop View</p></figcaption></figure>
+
+-->
+
 <figure><img src="../../.gitbook/assets/image2.png" alt="" width="150"><figcaption><p>Mobile View</p></figcaption></figure>
 
 3. Camera Permissions: When the scan is initiated, you will be prompted to grant the necessary camera permissions for the Inji Verify portal, Click the Allow button to give the portal access to your device's camera.
@@ -27,6 +34,7 @@ This document serves as a concise guide for end users, providing comprehensive s
 * Scan QR Code
     * Position the device's camera in front of the QR code you wish to
     scan.
+    * Zoom slider is used to adjust the magnification level of capturing QR code while scanning.
     * Capture the QR code by aligning it within the frame displayed on
     your device's screen.
     * Once the QR code is captured, the data is sent to the Inji Verify
@@ -36,7 +44,6 @@ This document serves as a concise guide for end users, providing comprehensive s
     * Pixel Pass returns the decoded data to Inji Verify for further processing.
     * Inji Verify then verifies the decoded data using the Verification SDK.
 
-<figure><img src="../../.gitbook/assets/image6.png" alt="" width="500"><figcaption><p>Desktop View</p></figcaption></figure>
 <figure><img src="../../.gitbook/assets/image7.png" alt="" width="150"><figcaption><p>Zoom Slider</p></figcaption></figure>
 
 6. **Display Credential Details:** - On successful verification, Inji Verify retrieves the display 
@@ -78,7 +85,7 @@ This document serves as a concise guide for end users, providing comprehensive s
 
 <figure><img src="../../.gitbook/assets/image15.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
-2. ** Select Credentials & Generate QR Code**: The verifier is presented with a list of verifiable credential types with specific credentials already pre-selected(configurable) based on a specific usecase.
+2. **Select Credentials & Generate QR Code**: The verifier is presented with a list of verifiable credential types with specific credentials already pre-selected(configurable) based on a specific usecase.
 
 * Pre-selected credential types are listed on the top and rest of the credentials (non-selected ones) are displayed in alphabetical order.
 * The list of VCs can also be sorted in ascending or descending order using Sort option.
@@ -106,28 +113,27 @@ but Expired', 'Invalid'.
 
 * **Single VC display** 
 
-    * **Valid VC**
+  * **Valid VC**
 
 <figure><img src="../../.gitbook/assets/image19.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
-        * Click on full screen option to view the Verifiable Credentials data as
-an enlarged view.
+   * Click on full screen option to view the Verifiable Credentials data as an enlarged view.
 
 <figure><img src="../../.gitbook/assets/image20.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
-        * Click on download option to download the VC data as a json file.
+   * Click on download option to download the VC data as a json file.
 
 <figure><img src="../../.gitbook/assets/image21.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
-    * **Expired VC**
+  * **Expired VC**
 
 <figure><img src="../../.gitbook/assets/image22.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
-    * **Invalid VC**
+  * **Invalid VC**
 
 <figure><img src="../../.gitbook/assets/image23.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
-* **Multiple VCs display**
+  * **Multiple VCs display**
 
 <figure><img src="../../.gitbook/assets/image24.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
@@ -143,7 +149,7 @@ As the verifier is informed of the missing credentials in VC result section, the
 Another button - 'Restart Process' helps user to re-initiate the VP Request process
 all over again (by displaying the popup window to select the credentials and rest of the process continues to be the same), if required.
 
-#### Re-Generate VP Request for missing VPs
+##### Re-Generate VP Request for missing VPs
 1. **Request Missing Credentials**: Upon clicking "Request Missing Credentials" button, the Verifier portal automatically identifies the credentials that were not received in the previous transaction. A new Verifiable Presentation (VP) request is generated, containing only the missing credentials.
 
 <figure><img src="../../.gitbook/assets/image26.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
@@ -241,11 +247,11 @@ all over again (by displaying the popup window to select the credentials and res
 
 The Help section includes three sub-sections or sub-menus:
 
-    -   **Contact Us**: This directs you to our MOSIP Community where you can write to us with any queries related to Inji  Verify or general inquiries.
+* **Contact Us**: This directs you to our MOSIP Community where you can write to us with any queries related to Inji  Verify or general inquiries.
 
-    -   **Documentation**: This directs you to the Inji Verify documentation page for detailed information about Inji Verify.
+* **Documentation**: This directs you to the Inji Verify documentation page for detailed information about Inji Verify.
 
-    -   **FAQ**: This section is still under development.
+* **FAQ**: This section is still under development.
 
 <figure><img src="../../.gitbook/assets/image37.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
