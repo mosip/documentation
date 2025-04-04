@@ -122,6 +122,7 @@
     * [UI Customizations](inji-wallet/inji-web/customizations/ui-customizations.md)
     * [Locale Customizations](inji-wallet/inji-web/customizations/locale-customization.md)
     * [Credential Providers](inji-wallet/inji-web/customizations/credential-providers.md)
+    * [Customize VC PDF Template](inji-wallet/inji-web/customizations/customize-vc-pdf-template.md)
 
 ## INJI CERTIFY
 
