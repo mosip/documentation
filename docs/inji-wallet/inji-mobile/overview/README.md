@@ -1,3 +1,7 @@
+---
+icon: house
+---
+
 # Overview
 
 The **Inji Mobile application** is designed to securely store all types of digital credentials, from national IDs to certificates, in one easy-to-use mobile wallet. It offers a simple way to manage and share trusted data through Verifiable Credentials (VCs), making it portable, convenient, secure, and private for users.
@@ -19,7 +23,7 @@ Key features of Inji Mobile include secure storage, seamless sharing, and offlin
 * Inji Mobile allows users to securely obtain and manage their verifiable credentials through a simple process. Users can download their credentials by using their unique ID (such as UIN or VID for a government-issued National ID) or the card details they already have (via the KBI method).
 * To validate their identity, users authenticate their request with a one-time password (OTP) sent to their registered mobile number or email.
 * Once validated, the verifiable credential is securely downloaded and stored in the app.
-* These credentials can then be shared with relying parties via Bluetooth, using the [**BLE protocol**](https://tlodderstedt.github.io/openid-for-verifiable-presentations-offline-1\_0-00.html).
+* These credentials can then be shared with relying parties via Bluetooth, using the [**BLE protocol**](https://tlodderstedt.github.io/openid-for-verifiable-presentations-offline-1_0-00.html).
 * For added security, users have the option to authenticate their credentials through offline face verification during transactions.
 * Inji Mobile also integrates with [**eSignet**](https://docs.esignet.io/versions/v1.2.0), enabling users to log in to service provider portals by simply scanning a QR code.
 * Users maintain full control over what information is shared, through the consent mechanism that comes along.

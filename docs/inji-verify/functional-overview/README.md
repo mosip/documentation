@@ -1,4 +1,8 @@
-# Functional Overview
+---
+icon: hand-pointer
+---
+
+# Test
 
 **Inji Verify** is a powerful tool for validating and verifying credentials through QR codes. Users can scan QR codes using smartphones or computers, retrieving credential information quickly. Advanced algorithms and the pixel pass library ensure QR code authenticity, providing real-time verification and instant feedback.
 
@@ -39,16 +43,15 @@ The below given are the list of features for the Inji Verify Portal:
 This ensures a secure and flexible way of sharing credentials across different devices while maintaining privacy and control over what gets shared.
 
 8. **Language Selection**: User can choose from the list of languages for a much better usability, hence the text description and VC result on the UI is displayed based on the language cosen. Inji Verify supports the following international languages which includes Portuguese, Spanish, French, English, Arabic, Khmer and the Indian vernacular langauges includes Tamil, Hindia and Kannada.
-
-9. **UI Theme Customization**:  
+9. **UI Theme Customization**:\
    Inji Verify offers the flexibility to customize the user interface (UI) themes, allowing integrators or countries to tailor the appearance of the portal to meet their specific branding or regional requirements. This feature ensures a personalized and visually cohesive user experience.
-
 10. **Cross-Platform Compatibility:**
-   * Compatible with a wide range of devices and operating systems, including desktops, mobile devices, and laptops.
-   * A mobile responsive version with back camera capability is now available.
-   * Responsive design ensures optimal performance and usability across different screen sizes and resolutions.
-   * Tablet responsiveness tested on specific devices; still under development.
-   * Accessible from anywhere with an internet connection for convenient on-the-go verification.
+
+* Compatible with a wide range of devices and operating systems, including desktops, mobile devices, and laptops.
+* A mobile responsive version with back camera capability is now available.
+* Responsive design ensures optimal performance and usability across different screen sizes and resolutions.
+* Tablet responsiveness tested on specific devices; still under development.
+* Accessible from anywhere with an internet connection for convenient on-the-go verification.
 
 {% hint style="info" %}
 **Scan Feature QR Code Compatibility**:

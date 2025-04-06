@@ -29,7 +29,7 @@ To effectively set up the Inji Mobile app and manage Verifiable Credentials (VCs
 
 **Step 1: Install the Inji Mobile App**
 
-1. For a step-by-step guide on how to install the Inji Mobile application, click [here](../functional-overview/end-user-guide.md).
+1. For a step-by-step guide on how to install the Inji Mobile application, click [here](../end-user-guide.md).
 2. You can visit this [section](https://docs.mosip.io/inji/inji-mobile-wallet/end-user-guide#installing-inji-mobile) for more detailed instructions in the guide.
 
 **Step 2: Install the Inji Mobile App - To be used as Verifier App**
@@ -40,21 +40,21 @@ To effectively set up the Inji Mobile app and manage Verifiable Credentials (VCs
 **Step 3: Download National ID VC Using UIN/VID**
 
 1. Download your credential (VC) onto the app by using your demo UIN.
-2. To learn how to download VCs using the Unique Identification Number (UIN) or Virtual ID (VID) feature, click [here](../functional-overview/end-user-guide.md#id-1.-download-national-id-mosip-vc). Refer to the section titled `Download credentials using UIN / VID` feature in the guide .
+2. To learn how to download VCs using the Unique Identification Number (UIN) or Virtual ID (VID) feature, click [here](../end-user-guide.md#id-1.-download-national-id-mosip-vc). Refer to the section titled `Download credentials using UIN / VID` feature in the guide .
 
 **Step 4**: **Download Insurance Credentials Using Policy Details**
 
 * Refer to the sample insurance credentials under 'Prerequisites' section.
-* Refer [here](../functional-overview/end-user-guide.md#id-2.-download-insurance-vc) for step-wise download.
+* Refer [here](../end-user-guide.md#id-2.-download-insurance-vc) for step-wise download.
 * You can view the QR Code for insurance credentials in the detailed view.
 
 **Step 5: Start Sharing the Credentials**
 
 1. **Quick Share**
-   * To understand the process of sharing credentials from the Resident app to the Verifier app, click [here](../functional-overview/end-user-guide.md#sharing-credentials).
+   * To understand the process of sharing credentials from the Resident app to the Verifier app, click [here](../end-user-guide.md#sharing-credentials).
    * Navigate to the section titled `Sharing Credentials` for detailed instructions.
 2. **Share with Face Verification**
-   * Discover how to share credentials with the added security of face verification by clicking [here](../functional-overview/end-user-guide.md#share-share-with-selfie-from-home-page-quick-access-menu).
+   * Discover how to share credentials with the added security of face verification by clicking [here](../end-user-guide.md#share-share-with-selfie-from-home-page-quick-access-menu).
    * Refer to the section titled `Face Authentication Flow` for a step-by-step guide.
 
 ### Creating your own credentials

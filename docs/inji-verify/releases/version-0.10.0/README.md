@@ -8,7 +8,7 @@
 
 ### **Overview**
 
-We are excited to announce the release of Inji Verify version 0.10.0, which brings significant improvements to the platform, including the implementation of OpenID for Verifiable Presentations ([**OpenID4VP**](https://openid.net/specs/openid-4-verifiable-presentations-1\_0.html)) specifications, enhanced error handling scenarios, and support for new QR code sharing mechanisms. This release also includes crucial bug fixes, Docker Compose enhancements, and scanner library upgrades.
+We are excited to announce the release of Inji Verify version 0.10.0, which brings significant improvements to the platform, including the implementation of OpenID for Verifiable Presentations ([**OpenID4VP**](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html)) specifications, enhanced error handling scenarios, and support for new QR code sharing mechanisms. This release also includes crucial bug fixes, Docker Compose enhancements, and scanner library upgrades.
 
 #### **New Features**
 
@@ -20,7 +20,7 @@ We are excited to announce the release of Inji Verify version 0.10.0, which brin
       * The user scans the QR code using Inji Verify.
       * Inji Verify redirects to Inji Web for authorization, retrieves the VC in VP format, and completes the verification.
 * **Error Handling Scenarios - OpenID4VP**
-  * Introduced comprehensive error handling scenarios as per the [**OpenID4VP** ](https://openid.net/specs/openid-4-verifiable-presentations-1\_0.html)specification to ensure robustness during Verifiable Presentation transactions. This ensures that issues such as invalid credentials or expired tokens are handled gracefully with informative error messages.
+  * Introduced comprehensive error handling scenarios as per the [**OpenID4VP** ](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html)specification to ensure robustness during Verifiable Presentation transactions. This ensures that issues such as invalid credentials or expired tokens are handled gracefully with informative error messages.
 * **Docker Compose**
   * This release simplifies deployment with Docker Compose, allowing users to easily set up and configure the Inji Verify environment.
 * **React-scanner-lib Upgrade**\
@@ -99,6 +99,6 @@ Below is the list of fixes as part of the **0.10.0** release:
 
 ### **Documentation**
 
-* [Feature Documentation](../../functional-overview/features.md)
+* [Feature Documentation](../../overview/features.md)
 * [User guide](../../functional-overview/end-user-guide.md)
 * [QA Report](test-report.md)

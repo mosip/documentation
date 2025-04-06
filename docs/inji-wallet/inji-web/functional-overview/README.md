@@ -1,4 +1,8 @@
-# Functional Overview
+---
+icon: hand-pointer
+---
+
+# Test
 
 Verifiable Credentials (VCs) are digital equivalents of physical documents such as passports or licenses. They are digitally signed, ensuring they are tamper-resistant and can be instantly verified. Issued by trusted entities, VCs can be stored in digital wallet apps like Inji Wallet or downloaded as a PDF file by individuals using Inji Web, a smart web-based solution.
 

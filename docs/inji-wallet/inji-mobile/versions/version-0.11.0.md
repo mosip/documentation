@@ -19,7 +19,7 @@ We are excited to announce the first independent release of **Mimoto**, official
 
 Please find below the details for the 0.11.0 release:
 
-* **Onboarding a new VC Issuer**: For each new VC Issuer, Mimoto must be onboarded as an OIDC client to [eSignet](https://docs.esignet.io/). To know more, refer [here](../customization-overview/credential\_providers.md).
+* **Onboarding a new VC Issuer**: For each new VC Issuer, Mimoto must be onboarded as an OIDC client to [eSignet](https://docs.esignet.io/). To know more, refer [here](../technical-overview/customization-overview/credential_providers.md).
 * **Mimoto-Issuer configuration changes**: Changes to authentication and well-known configuration details will be included in the mimoto-issuers configuration. To know more, refer [here](https://docs.mosip.io/inji/backend-services/mimoto#configuration).
 
 ## Repository Released
@@ -31,7 +31,7 @@ Please find below the details for the 0.11.0 release:
 
 ## Documentation
 
-* [Feature Documentation](../functional-overview/features.md)
+* [Feature Documentation](../overview/features.md)
 * [Integration Guides](../technical-overview/integration-guide/)
 * [User Guide](../functional-overview/end-user-guide.md)
 * [API Documentation](https://github.com/mosip/mimoto/tree/release-0.10.0/docs/postman-collections)

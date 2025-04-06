@@ -1,3 +1,7 @@
+---
+icon: rocket-launch
+---
+
 # Releases
 
 ## Version: 0.15.1

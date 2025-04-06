@@ -47,7 +47,7 @@ Inji Wallet now allows users to select the type of credential they need, giving 
 
 Inji Wallet provides the functionality to verify Verifiable Credentials using the Digital Bazaar library. The issuer's signature is verified based on the proof type provided by the issuer. Currently, we support the RSA signature type, and we will soon add support for the Ed25519 proof type.
 
-To prevent failures during download caused by verification of Verifiable Credentials with any other signature type, this step needs to be bypassed. Learn more about the steps [**here**](../../customization-overview/credential\_providers.md).
+To prevent failures during download caused by verification of Verifiable Credentials with any other signature type, this step needs to be bypassed. Learn more about the steps [**here**](../../technical-overview/customization-overview/credential_providers.md).
 
 #### QR code generation for VC:
 

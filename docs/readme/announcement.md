@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Announcement
 
 ## Docs got a new Address!

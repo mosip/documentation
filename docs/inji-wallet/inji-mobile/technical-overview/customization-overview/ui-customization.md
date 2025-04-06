@@ -67,7 +67,7 @@ export const DefaultTheme = {
 
 To change the top header icons:
 
-![](../../../.gitbook/assets/header_icons.png)
+![](../../../../.gitbook/assets/header_icons.png)
 
 In `HomeScreenLayout.tsx`, refer
 
@@ -89,7 +89,7 @@ In `HomeScreenLayout.tsx`, refer
 
 To change the text, colour and logo for Tabs:
 
-![](../../../.gitbook/assets/bottom_tabs.png)
+![](../../../../.gitbook/assets/bottom_tabs.png)
 
 In `main.ts`, there are 4 tab screens variables
 
@@ -171,7 +171,7 @@ export const DefaultTheme = {
 
 To change the background and label colour for version section:
 
-![](../../../.gitbook/assets/about-version.png)
+![](../../../../.gitbook/assets/about-version.png)
 
 ```
 export const DefaultTheme = {

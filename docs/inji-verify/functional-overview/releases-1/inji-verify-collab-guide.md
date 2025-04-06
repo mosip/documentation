@@ -1,56 +1,20 @@
-# Using Mock Data
+# Inji Verify - Collab Guide
 
-## Introduction
+Welcome to the Inji Verify Guide tailored specifically for our Collab Environment!\
+This guide is designed to assist you in exploring the [**Inji Verify**](https://docs.mosip.io/inji/inji-verify/overview) portal in our sandbox Collab environment. By following the steps outlined in this guide, you will be able to smoothly utilize the Inji Verify portal, empowering you to explore its features and functionalities effectively. Whether you're a Developer, System Integrator, or an enthusiast eager to dive into the world of verifiable credentials, this guide will provide you with the necessary information to get started with Inji Verify in our [**Collab**](https://collab.mosip.net/) environment. Let's begin this journey of seamless setup and exploration.
 
-Welcome to the Inji ecosystem, which encompasses the Inji Mobile Wallet, Inji Web Wallet, Inji Verify, and Inji Certify. These tools provide a powerful platform for managing and verifying digital credentials with ease. This document guides you through using mock data to explore the functionalities of each component, allowing you to understand and leverage their capabilities effectively. Read on to discover how you can interact with Inji's ecosystem, using demo credentials and mock data as explained below.
+### **Explore with mock data** <a href="#explore-with-mock-data" id="explore-with-mock-data"></a>
 
-Whether you're a Developer, System Integrator, or an Enthusiast eager to dive into the world of verifiable credentials, use this guide for necessary information to get started with Inji in our [**Collab**](https://collab.mosip.net/) environment. Let's begin this journey of seamless setup and exploration.
-
-This guide explains the use of mock data for following:
-
-* Inji Mobile Wallet
-* Inji Web Wallet
-* Inji Verify
-
-### Inji Mobile Wallet
-
-**What would you need?**&#x20;
-
-You will need UIN (Unique identification number) as a demo credential whic will allow you to explore Inji's capabilities and experience seamless VC sharing. You can also try this with 'Sample Insurance Credentials'.
-
-#### **UIN Credentials**
-
-* Issuance of UIN (Unique identification number) as a demo credential will allow you to explore Inji's capabilities and experience seamless VC sharing firsthand.
-* Fill out the [form ](https://docs.google.com/forms/d/e/1FAIpQLSc2I0CQqlYRIrEmcJ3J3tKlYOVNcYNj88YZe4MMwU2RZTrjOA/viewform)here and we will generate the demo credentials, which you can use subsequently on the Inji Mobile app to download and share Verifiable Credentials (VCs).
-
-**Note**: You can use 111111 as the OTP, for any OTP based feature in Collab environment.
-
-#### Insurance Credentials:
-
-For sample Insurance Credentials, please provide the below details in the eSignet authentication page:
-
-* Policy id: 7070&#x20;
-* Name: aswin
-* DOB: 19/02/2025
-
-### Inji Web Wallet
-
-The mock data you will need for Inji Web Wallet is same as that of Inji Mobile Wallet (Explained above).
-
-
-
-### Inji Verify
-
-Follow the procedure to try out Inji Verify in our collab environment:
+If you are looking to try out Inji Verify in our Collab environment, please follow the below procedure:
 
 1. To obtain sample verifiable credentials embedded in a QR code, please initiate the process by following the steps to generate the QR code, click [**here**](https://docs.mosip.io/inji/inji-verify/build-and-deploy/creating-verifiable-credentials-and-generating-qr-codes)!
 2. To use the QR code with verifiable credentials and test out the Inji Verify application, exploring the scan and upload features, please use the QR codes provided below:
 
 ### **Verifiable QR Code - Valid VC**
 
-<div align="center"><figure><img src="../.gitbook/assets/Birth Certificate.png" alt="" width="375"><figcaption><p>Valid Verifiable Credentials</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/Birth Certificate.png" alt="" width="375"><figcaption><p>Valid Verifiable Credentials</p></figcaption></figure></div>
 
-### **Sample QR code - Valid VC Data**&#x20;
+### **Sample QR code - Valid VC Data**
 
 ```json
 {
@@ -109,9 +73,9 @@ Follow the procedure to try out Inji Verify in our collab environment:
 
 ### **Verifiable QR Code - Expired VC**
 
-<div align="center"><figure><img src="../.gitbook/assets/response_2_v21.png" alt="" width="375"><figcaption><p>Expired Verifiable Credentials </p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/response_2_v21.png" alt="" width="375"><figcaption><p>Expired Verifiable Credentials</p></figcaption></figure></div>
 
-### **Sample QR code - Expired VC Data** &#x20;
+### **Sample QR code - Expired VC Data**
 
 ```json
 {
@@ -162,9 +126,9 @@ Follow the procedure to try out Inji Verify in our collab environment:
 
 ### **Verifiable QR Code - Invalid VC**
 
-<div align="center"><figure><img src="../.gitbook/assets/Verifiable QR Code - Invalid VC.png" alt="" width="375"><figcaption><p>Invalid Verifiable Credential</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/Verifiable QR Code - Invalid VC.png" alt="" width="375"><figcaption><p>Invalid Verifiable Credential</p></figcaption></figure></div>
 
-### **Sample QR code - Invalid VC Data**&#x20;
+### **Sample QR code - Invalid VC Data**
 
 ```json
 {
@@ -213,5 +177,45 @@ Follow the procedure to try out Inji Verify in our collab environment:
 Feel free to scan or upload these QR codes to experience the functionality firsthand.
 {% endhint %}
 
+### **Step-by-Step Process** <a href="#step-by-step-process" id="step-by-step-process"></a>
 
+### **Step 1: Access Collab Environment Resources**
 
+* **Launch the link**: [**Collab Environment**](https://collab.mosip.net/)
+  * Click the provided link to access the collab environment.
+
+### **Step 2: Launch Inji Verify Portal**
+
+* **Click on the Inji Verify link**:
+  * Click the [**Inji Verify Portal**](https://injiverify.collab.mosip.net/) to launch the Inji Verify portal in your browser.
+
+### **Step 3: Exploring Inji Verify Features** <a href="#step-3-exploring-inji-verify-features" id="step-3-exploring-inji-verify-features"></a>
+
+* **Refer to the end-user guide to explore the features of Inji Verify**:
+  * Navigate to the [**end-user guide**](https://docs.mosip.io/inji/inji-verify/functional-overview/end-user-guide) page.
+* **Scan QR Code Feature :**
+  * Use the provided steps to generate a QR code as mentioned above:
+    * Utilize this “[**Generate QR Code**](https://docs.mosip.io/inji/inji-verify/build-and-deploy/creating-verifiable-credentials-and-generating-qr-codes)” page to get the QR code to explore the scan feature as per the given instructions in the [**end-user guide**](https://docs.mosip.io/inji/inji-verify/functional-overview/end-user-guide).
+  * Use the provided mock data above:
+    * Utilize the given QR codes to explore the scan feature of the Inji Verify portal as per the given instructions in the [**end-user guide**](https://docs.mosip.io/inji/inji-verify/functional-overview/end-user-guide).
+    * These QR codes contain sample verifiable credentials for testing purposes.
+* **Upload QR Code Feature:**
+  * Use the provided steps to generate a QR code as mentioned above:
+    * Utilize this “[**Generate QR Code**](https://docs.mosip.io/inji/inji-verify/build-and-deploy/creating-verifiable-credentials-and-generating-qr-codes)” page to get the QR code to explore the upload feature as per the given instructions in the [**end-user guide**](https://docs.mosip.io/inji/inji-verify/functional-overview/end-user-guide).
+  * Use the provided mock data above:
+    * Utilize the given QR codes to explore the upload feature of the Inji Verify portal as per the given instructions in the [**end-user guide**](https://docs.mosip.io/inji/inji-verify/functional-overview/end-user-guide).
+    * These QR codes contain sample verifiable credentials for testing purposes.
+* **OpenID4VP Sharing Feature**:
+  * This feature follows the OpenID4VP cross device flow [specifications](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html).
+  * Utilize the [Inji Wallet - Try It Out](https://docs.inji.io/inji-wallet/inji-mobile/sandbox-details) page to setup the Inji wallet and download VCs.
+  * In the portal navigate to the VP Verification tab.
+  * Generate a QR code in same portal following the steps to share the VC wanted.
+  * Scan the QR with wallet and share the VC filtered based on the request.
+
+### **Additional Resources** <a href="#additional-resources" id="additional-resources"></a>
+
+Click [**here**](https://docs.mosip.io/inji/inji-verify/functional-overview/end-user-guide) for detailed information about Inji Verify.
+
+> By following these instructions, you will be equipped to seamlessly set up the Inji Verify portal and effectively verify your Verifiable Credentials.
+
+An informative video of Inji Verify for a visual walk-through of the features will be available soon.

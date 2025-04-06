@@ -72,7 +72,7 @@ Below is the list of **known** issues. To read in detail click [**here**](https:
 
 ### Documentation
 
-* [Feature documentation](../../functional-overview/features.md)
+* [Feature documentation](../../overview/features.md)
 * [User guide](../../functional-overview/end-user-guide.md)
 * [QA Report](test-report.md)
 * [API Documentation](https://docs.mosip.io/inji/inji-web/technical-overview/backend-services/mimoto-bff)

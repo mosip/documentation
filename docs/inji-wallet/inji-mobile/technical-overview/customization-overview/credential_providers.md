@@ -25,7 +25,7 @@ These values will be used by Inji Wallet via Mimoto. Mimoto exposes APIs which i
 
 After adding the provider in configuration, it will be displayed on the UI on `Add new card` screen.
 
-* If new provider supports [OpenID4VCI](https://openid.net/specs/openid-4-verifiable-credential-issuance-1\_0.html) protocol, it is recommended to use `issuerMachine.ts` for workflow to download VC.
+* If new provider supports [OpenID4VCI](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html) protocol, it is recommended to use `issuerMachine.ts` for workflow to download VC.
 
 3. At present, Inji Wallet supports verification of VCs which has RSA proof type. If VC is issued with any other proof type, VC verification is bypassed and it is marked as verified.
 4. Token endpoint should also use same issuer id. Refer https://github.com/mosip/inji-config/blob/collab/mimoto-issuers-config.json#L140
@@ -43,7 +43,7 @@ If you are looking to try out wallet and certify building locally, then you can 
 
 2. Use `wallet-demo` as client id in `mimoto-issuers-config.json`
 3. Use `wallet-demo-client` as client alias in `mimoto-issuers-config.json`
-4. oidckeystore.p12 file is attached [**here**](../../../.gitbook/assets/oidckeystore.p12) password to unlock this is `xy4gh6swa2i`
+4. oidckeystore.p12 file is attached [**here**](../../../../.gitbook/assets/oidckeystore.p12) password to unlock this is `xy4gh6swa2i`
 5. authorization server to use in `well-known` is `https://esignet-mock.collab.mosip.net`
 
 After configuring issuers and data as mentioned above, we will be able to successfully authenticate through esigent and download credential in wallet.
@@ -54,7 +54,7 @@ After configuring issuers and data as mentioned above, we will be able to succes
 
 Please find a zip file attached to this document called certgen.zip which will help the user in creating the p12 file as well as the public-key.jwk file.
 
-{% file src="../../../.gitbook/assets/certgen.zip" %}
+{% file src="../../../../.gitbook/assets/certgen.zip" %}
 
 
 
@@ -163,19 +163,19 @@ kubectl -n mimoto cp <mimoto-podname>:certs/..data/oidckeystore.p12 oidckeystore
 
 2. Add the esignet--partner's key as alias “esignet--partner“ onto the same p12 file using a tool like keystore-explorer. Use the password used while generating p12 file
 
-<figure><img src="../../../.gitbook/assets/Original_p12file_img1.png" alt=""><figcaption><p>Original p12 file as downloaded from environment</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Original_p12file_img1.png" alt=""><figcaption><p>Original p12 file as downloaded from environment</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/Import new keypair_img2.png" alt=""><figcaption><p>Importing a new keypair</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Import new keypair_img2.png" alt=""><figcaption><p>Importing a new keypair</p></figcaption></figure>
 
 3. The below image shows how to browse and select the client-id’s oidckeystore as the second alias. in the decryption password field should have the password of the p12 file. Note: we have used `esignet-sunbird-partner` as client id for reference in the attachment
 
-<figure><img src="../../../.gitbook/assets/OIDC keystore_img3.png" alt=""><figcaption><p>Selection of OIDC Keystore</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/OIDC keystore_img3.png" alt=""><figcaption><p>Selection of OIDC Keystore</p></figcaption></figure>
 
 4. The below image shows how to add an alias for the new key pair, here the value is esignet-sunbird-partner.
 
-<figure><img src="../../../.gitbook/assets/Alias_img4.png" alt=""><figcaption><p>Alias for the new keypair</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Alias_img4.png" alt=""><figcaption><p>Alias for the new keypair</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/Add keypairs_img5.png" alt=""><figcaption><p>Add keypairs to keystore.p12</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Add keypairs_img5.png" alt=""><figcaption><p>Add keypairs to keystore.p12</p></figcaption></figure>
 
 5. To take a backup of the original keystore.p12 use the following command
 

@@ -1,4 +1,5 @@
 ---
+icon: globe
 layout:
   title:
     visible: true

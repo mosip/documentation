@@ -1,4 +1,8 @@
-# Functional Overview
+---
+icon: hand-pointer
+---
+
+# Test
 
 **Inji Mobile** is a versatile digital wallet designed to securely manage, store, and share **trusted data as** **Verifiable Credentials (VCs)** through a seamless and user-friendly interface. This mobile application offers several key functionalities aimed at enhancing the user experience, ensuring robust data security, and simplifying digital credential management.
 

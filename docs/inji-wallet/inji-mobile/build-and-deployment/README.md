@@ -1,4 +1,8 @@
-# Build & Deploy
+---
+icon: code-compare
+---
+
+# Deploy
 
 ### Repositories
 
@@ -328,7 +332,7 @@ Once the Client ID has been created copy the client ID and add it as part of `.e
 
 The Internal testing version of the build can be uploaded to `PlayConsole` for testing. PlayConsole allows the creation of internal testers group.
 
-![Internal testers](../../../.gitbook/assets/internal\_testers\_android.png)
+![Internal testers](../../../.gitbook/assets/internal_testers_android.png)
 
 **Publishing build manually to PlayConsole**
 
@@ -341,17 +345,17 @@ A Google play console developer account is a must to publish builds in PlayConso
 
 **Upload in PlayConsole**
 
-![img.png](../../../.gitbook/assets/upload\_android.png)
+![img.png](../../../.gitbook/assets/upload_android.png)
 
-![img.png](../../../.gitbook/assets/uploading\_android.png)
+![img.png](../../../.gitbook/assets/uploading_android.png)
 
 1. Once the build is uploaded and saved you will be able to see the status of the release with version name, code, API level and some more details.
 
-![img.png](../../../.gitbook/assets/uploaded\_view\_android.png)
+![img.png](../../../.gitbook/assets/uploaded_view_android.png)
 
 2. Select the testers group you want to share with. Once saved, you can copy the link and share the same with the testers to test the APK or App bundle.
 
-![img.png](../../../.gitbook/assets/internal\_testers\_select\_android.png)
+![img.png](../../../.gitbook/assets/internal_testers_select_android.png)
 
 3. You are required to manually share the link with the testers as they will not receive any notifications when a new build is uploaded.
 
@@ -361,11 +365,11 @@ A Google play console developer account is a must to publish builds in PlayConso
 
 > Testers must be added to internal testers group in Play console.
 
-![img.png](../../../.gitbook/assets/internal\_testers\_select\_android.png)
+![img.png](../../../.gitbook/assets/internal_testers_select_android.png)
 
 2. To deploy the Android build to PlayConsole, select `Android Custom Build` workflow from github actions.
 
-![img.png](../../../.gitbook/assets/inji\_android\_github\_actions.png)
+![img.png](../../../.gitbook/assets/inji_android_github_actions.png)
 
 3. Choose the branch, backend url, theme and describe about build details.
 4. Click the `Run` workflow button.
@@ -447,7 +451,7 @@ First choose `Distribute App`.
 
 1. Login to TestFlight and check for the build upload status. Once the build is uploaded successfully, add `Groups` to provide access to testers.
 
-![img.png](../../../.gitbook/assets/testflight\_testers\_group.png)
+![img.png](../../../.gitbook/assets/testflight_testers_group.png)
 
 2. All the group members will be notified about the new build. Open TestFlight and install the new version.
 
@@ -457,14 +461,14 @@ An Apple developer account must be configured to Inji app to publish builds via 
 
 > Testers must be added to group in TestFlight.
 
-![img.png](../../../.gitbook/assets/testflight\_testers\_group.png)
+![img.png](../../../.gitbook/assets/testflight_testers_group.png)
 
 1. To deploy the iOS build to testflight, select `Inji iOS build` workflow from github actions.
 
-![img.png](../../../.gitbook/assets/inji\_ios\_github\_actions.png)
+![img.png](../../../.gitbook/assets/inji_ios_github_actions.png)
 
 2. Choose the branch, backend URL, theme, testers group from TestFlight to get the build and describe about build details.
 3. Click the `Run` workflow button.
 4. Once the pipeline has done with building the app (takes around \~25-30min), TestFlight notifies corresponding testers associated with the testers group in email about deployed build details.
 
-![img.png](../../../.gitbook/assets/testflight\_ios\_notification.png)
+![img.png](../../../.gitbook/assets/testflight_ios_notification.png)
