@@ -1,5 +1,5 @@
 ---
-icon: hand-pointer
+icon: gamepad-modern
 ---
 
 # Test
