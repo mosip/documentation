@@ -6,29 +6,26 @@
 
 **Release Date:** Coming Soon
 
-**Overview:**
+### **Overview**
 
-#### **Overview**
+This release delivers significant enhancements to the Inji Web Wallet experience, focusing on dynamic authorization configuration, improved credential PDF generation, support for multi-lingual templates, and a basic revamped homepage UI. These updates aim to streamline user interactions and offer a more visually enriched and localized interface.
 
-This release delivers significant enhancements to the Inji Web Wallet experience, focusing on dynamic authorization configuration, improved credential PDF generation, support for multi-lingual templates, and a basic revamped homepage UI. These updates aim to streamline user interactions, bolster standards compliance, and offer a more visually enriched and localized interface.
+### **Major Highlights/Features**
 
-#### **Major Highlights/Features**
-
-**Authorization Endpoint Discovery through Auth Server Well-Known**
+#### **Authorization Endpoint Discovery through Auth Server Well-Known**
 
 **Feature**: Dynamic Authorization Endpoint Retrieval\
 Inji Web now dynamically retrieves the authorization\_endpoint from the authorization server’s .well-known configuration, aligning with OAuth standards.
 
-**Key Enhancements**:
+#### **Key Enhancements**:
 
 * **Dynamic Retrieval**: Automatically fetches authorization\_endpoint during issuer selection.
 * **Backend Caching**: Calls handled via backend (mimoto) to avoid CORS issues and cache responses with configurable expiry using Spring Cache.
 * **New Endpoint Introduced**: /issuers/{issuer-id}/configuration for fetching issuer and authorization config.
-* **Deprecated**: /issuers/{issuer-id}/well-known-proxy and /issuers/{issuer-id} (scheduled for removal in next release).
-* **Improved Offline Handling**: “No Internet” scenarios addressed earlier during issuer selection.
+* **Deprecated**: /issuers/{issuer-id}/well-known-proxy (scheduled for removal in next release).
 * **Code Optimization**: Clean-up of issuer controller and service files for better maintainability.
 
-**New PDF Template Implementation for Existing Use-Cases**
+#### **New PDF Template Implementation for Existing Use-Cases**
 
 **Overview**:\
 A revamped PDF template is now used for National ID & TAN ID credential downloads use-cases, improving aesthetics, branding, and usability.
@@ -47,7 +44,7 @@ A revamped PDF template is now used for National ID & TAN ID credential download
 * Use-case specific tailoring (e.g., National ID, TAN ID).
 * QR readability verified via Inji Verify.
 
-**Multi-Lingual Support for Credential PDF Generation**
+#### **Multi-Lingual Support for Credential PDF Generation**
 
 **Feature Overview**:\
 Credential PDFs can now be generated in multiple languages using locale-specific templates and resources.
@@ -55,7 +52,10 @@ Credential PDFs can now be generated in multiple languages using locale-specific
 **Key Enhancements**:
 
 * **API Update**: Added locale parameter in credential generation APIs.
-* **Localized Templates**: Dynamically loads language-specific templates and fallback to defaults if unavailable.
+* **Localized Templates**:
+  * **Template Loading**: We load templates based on the combination of `issuerId` and `credentialType`, not based on language or locale.
+  * **Label Localization in PDF**: In the generated PDF, the labels for `displayProperties` will appear in the selected locale **if it is supported by the issuer**. If not, the system will default to using the **first available locale** defined in the `displayProperties`.\
+
 * **Code Updates**:
   * Enhanced CredentialController, CredentialService, and CredentialServiceImpl for locale handling.
   * Utility methods updated for template resolution.
@@ -65,7 +65,7 @@ Credential PDFs can now be generated in multiple languages using locale-specific
 
 **Stoplight API** - [https://mosip.stoplight.io/docs/mimoto/wb8oczgyliz0y-mimoto](https://mosip.stoplight.io/docs/mimoto/wb8oczgyliz0y-mimoto)
 
-#### **Enhancements**
+### **Enhancements**
 
 **UI Enhancements on the Inji Web Home Page**
 
@@ -120,8 +120,8 @@ The following table outlines the tested and certified compatibility of **Inji We
 
 ### Documentation
 
-* **Build and Deployment**
-* **Feature Documentation**
-* **User Guide**
-* **QA Report**
-* **API Documentation**
+* [**Build and Deployment**](../../build-and-deploy/)
+* [**Feature Documentation**](https://docs.mosip.io/inji/inji-web/functional-overview/features)
+* [**User Guide**](https://docs.mosip.io/inji/inji-web/functional-overview/end-user-guide)
+* [**QA Report**](https://docs.inji.io/inji-wallet/inji-web/inji-web/version-0.12.0/test-report)
+* [**API Documentation**](https://docs.mosip.io/inji/inji-web/technical-overview/backend-services/mimoto-bff)

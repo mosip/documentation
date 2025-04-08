@@ -88,21 +88,20 @@ Below are the test metrics by performing UI Automation and API Test rig.
 
 <table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Total</td><td valign="top">Passed</td><td valign="top">Failed</td><td valign="top">Skipped/Ignored</td></tr><tr><td valign="top">195</td><td valign="top">162</td><td valign="top">0</td><td valign="top">33</td></tr><tr><td valign="top">Test Rate: 83%, With Pass Rate: 100%</td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
 
-
-
 Here is the detailed breakdown of metrics for each module:
 
 <table><thead><tr><th valign="top"></th><th valign="top"></th><th>Test Cases</th></tr></thead><tbody><tr><td valign="top"><p> </p><p> </p><p> </p><p>INJI Web UI Automation</p></td><td valign="top">Total</td><td>19</td></tr><tr><td valign="top"></td><td valign="top">Passed</td><td>19</td></tr><tr><td valign="top"></td><td valign="top">Failed</td><td>0</td></tr><tr><td valign="top"></td><td valign="top">Skipped</td><td>0</td></tr><tr><td valign="top"><p> </p><p> </p><p> </p><p>INJI Web API Test Rig</p></td><td valign="top">Total</td><td>176</td></tr><tr><td valign="top"></td><td valign="top">Passed</td><td>143</td></tr><tr><td valign="top"></td><td valign="top">Failed</td><td>0</td></tr><tr><td valign="top"></td><td valign="top">Skipped/Ignored</td><td>33</td></tr></tbody></table>
 
 
 
-**Note**: Ignored 33 OTP related test cases which are descoped and not applicable
+{% hint style="info" %}
+**Note**: Ignored 33 OTP related test cases which are descoped and not applicable.
+{% endhint %}
 
 Functional and test rig code base branch which is used for the above metrics is:
 
-UI Automation: 93b15078140b6db88d30c91101369e14e326d3bf
-
-API automation: b61429f06ec50fc1dcc9eff1de67b016168c2f7c
+* UI Automation: 93b15078140b6db88d30c91101369e14e326d3bf
+* API automation: b61429f06ec50fc1dcc9eff1de67b016168c2f7c
 
 ### Detailed Test Metrics
 
