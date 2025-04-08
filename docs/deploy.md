@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Deploy
 
 ## Inji Deployment Guide
@@ -31,7 +27,7 @@ Architecture Diagram to be updated.
 #### Tools and utilities
 
 * [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html).
-* [Rancher](../../rancher/).
+* [Rancher](../rancher/).
 * Command line utilities:
   * kubectl
   * helm

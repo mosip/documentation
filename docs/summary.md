@@ -17,7 +17,6 @@
   * [GenderMag](readme/gendermag.md)
   * [License](readme/license.md)
   * [Announcement](readme/announcement.md)
-  * [Deploy](readme/deploy.md)
 
 ## Inji Wallet
 
@@ -185,3 +184,4 @@
 
 * [FAQ](page-1.md)
 * [Experiment](experiment.md)
+* [Deploy](deploy.md)
