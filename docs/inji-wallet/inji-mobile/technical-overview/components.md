@@ -131,6 +131,7 @@ Note:
   * [Swift Repository](https://github.com/mosip/inji-openid4vp-ios-swift)
 * To understand about the installation and the API documentation, refer [here](https://docs.mosip.io/inji/inji-wallet/inji-mobile/technical-overview/integration-guide/openid4vp).
 * Maven snapshots are available [here](https://oss.sonatype.org/content/repositories/snapshots/io/mosip/inji-openid4vp/)
+* Currently, the `vp_token` uses the `Ed25519Signature2020` type for digital signatures.
 {% endhint %}
 
 ### **7. BLE Verifier SDK**
