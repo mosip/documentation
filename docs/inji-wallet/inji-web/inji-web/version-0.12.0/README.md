@@ -4,7 +4,7 @@
 
 **Release Type:** Developer
 
-**Release Date:** Coming Soon
+**Release Date:** 8th April, 2025
 
 ### **Overview**
 
@@ -101,11 +101,11 @@ The list of known issues can be found [**here**](https://mosip.atlassian.net/iss
 
 ### **Repositories Released**
 
-| **Repositories** | **Tags Released** |
-| ---------------- | ----------------- |
-| **Inji Web**     |  **v0.12.0**      |
-| **Inji Config**  | **v0.7.0**        |
-| **Mimoto**       | **v0.17.0**       |
+| **Repositories** | **Tags Released**                                              |
+| ---------------- | -------------------------------------------------------------- |
+| **Inji Web**     |  [**v0.12.0**](https://github.com/mosip/inji-web/tree/v0.12.0) |
+| **Inji Config**  | [**v0.7.0**](https://github.com/mosip/inji-config/tree/v0.7.0) |
+| **Mimoto**       | [**v0.17.0**](https://github.com/mosip/mimoto/tree/v0.17.0)    |
 
 ### **Compatible Modules**
 
