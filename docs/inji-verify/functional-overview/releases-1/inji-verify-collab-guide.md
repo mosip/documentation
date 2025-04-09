@@ -12,7 +12,7 @@ If you are looking to try out Inji Verify in our Collab environment, please foll
 
 ### **Verifiable QR Code - Valid VC**
 
-<div align="left"><figure><img src="../../../.gitbook/assets/Birth Certificate.png" alt="" width="375"><figcaption><p>Valid Verifiable Credentials</p></figcaption></figure></div>
+<div align="center"><figure><img src="../../../.gitbook/assets/Birth Certificate.png" alt="" width="375"><figcaption><p>Valid Verifiable Credentials</p></figcaption></figure></div>
 
 ### **Sample QR code - Valid VC Data**
 
@@ -73,7 +73,7 @@ If you are looking to try out Inji Verify in our Collab environment, please foll
 
 ### **Verifiable QR Code - Expired VC**
 
-<div align="left"><figure><img src="../../../.gitbook/assets/response_2_v21.png" alt="" width="375"><figcaption><p>Expired Verifiable Credentials</p></figcaption></figure></div>
+<div align="center"><figure><img src="../../../.gitbook/assets/response_2_v21.png" alt="" width="375"><figcaption><p>Expired Verifiable Credentials</p></figcaption></figure></div>
 
 ### **Sample QR code - Expired VC Data**
 
@@ -126,7 +126,7 @@ If you are looking to try out Inji Verify in our Collab environment, please foll
 
 ### **Verifiable QR Code - Invalid VC**
 
-<div align="left"><figure><img src="../../../.gitbook/assets/Verifiable QR Code - Invalid VC.png" alt="" width="375"><figcaption><p>Invalid Verifiable Credential</p></figcaption></figure></div>
+<div align="center"><figure><img src="../../../.gitbook/assets/Verifiable QR Code - Invalid VC.png" alt="" width="375"><figcaption><p>Invalid Verifiable Credential</p></figcaption></figure></div>
 
 ### **Sample QR code - Invalid VC Data**
 
@@ -209,6 +209,12 @@ Feel free to scan or upload these QR codes to experience the functionality first
   * This feature follows the OpenID4VP cross device flow [specifications](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html).
   * Utilize the [Inji Wallet - Try It Out](https://docs.inji.io/inji-wallet/inji-mobile/sandbox-details) page to setup the Inji wallet and download VCs.
   * In the portal navigate to the VP Verification tab.
+  * Generate a QR code in same portal following the steps to share the VC wanted.
+  * Scan the QR with wallet and share the VC filtered based on the request.
+* **OpenID4VP Sharing Feature:**
+  * This feature follows the OpenID4VP cross device flow [specifications](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html).
+  * Utilize the “[**Inji Wallet - Try It Out**](https://docs.inji.io/inji-wallet/inji-mobile/sandbox-details)“ page to setup the Inji wallet and download VCs.
+  * In the portal navigate to the **VP Verification** tab.
   * Generate a QR code in same portal following the steps to share the VC wanted.
   * Scan the QR with wallet and share the VC filtered based on the request.
 

@@ -1,14 +1,15 @@
 # Workflow
 
 ## Sequence Diagram: OpenID4VP Cross Device Flow
-In this flow, Inji Verify prepares an Authorization Request and renders it as a QR Code. The End-User then uses the Wallet to scan the QR Code. The Verifiable Presentations are sent to the Inji Verify  backed in a direct HTTP POST request to a URL controlled by Inji Verify. The flow uses the Response Type `vp_token` in conjunction with the Response Mode `direct_post`, both defined in this specification.
 
-```mermaid    
+In this flow, Inji Verify prepares an Authorization Request and renders it as a QR Code. The End-User then uses the Wallet to scan the QR Code. The Verifiable Presentations are sent to the Inji Verify backed in a direct HTTP POST request to a URL controlled by Inji Verify. The flow uses the Response Type `vp_token` in conjunction with the Response Mode `direct_post`, both defined in this specification.
+
+```mermaid
 sequenceDiagram
+
     participant Verify Backend
     participant Verify UI
     participant Wallet
-
 
     Verify UI->>Verify Backend: 1. Create a Authorization Request (BACKEND_URL/vp-request)
     Verify Backend--)Verify Backend: 2. Process the request,<br> create and return Authorization Request response
@@ -24,11 +25,13 @@ sequenceDiagram
     Verify UI--)Verify UI: 12. Render VC and its statuses accordingly
     
 ```
-1. Inji Verify UI sends a POST request to create a new Authorization Request with 
- * `clientId`: (required) - ID of the client requesting the Verifiable Presentation.
- * `presentationDefinition`: One of **presentationDefinitionID** or **presentationDefinition** (required) -  Presentation Definition for the Verifiable Presentation.
- * `presentationDefinitionID`: One of **presentationDefinitionID** or **presentationDefinition** (required) - Presentation Definition ID for the Verifiable Presentation requesting, which is saved in backend.
- * `transactionID` - (optional) - A unique identifier for the current authorization request transaction.
+
+1. Inji Verify UI sends a POST request to create a new Authorization Request with
+
+* `clientId`: (required) - ID of the client requesting the Verifiable Presentation.
+* `presentationDefinition`: One of **presentationDefinitionID** or **presentationDefinition** (required) - Presentation Definition for the Verifiable Presentation.
+* `presentationDefinitionID`: One of **presentationDefinitionID** or **presentationDefinition** (required) - Presentation Definition ID for the Verifiable Presentation requesting, which is saved in backend.
+* `transactionID` - (optional) - A unique identifier for the current authorization request transaction.
 
 2. Inji Verify backend creates a new Authorization Request
 3. Inji Verify backend returns the newly created Authorization Request
@@ -42,8 +45,15 @@ sequenceDiagram
 11. Using transactionId Inji v will fetch the data from DB and validate it using vc-verifier and return the response(11) Using transactionId Inji Verify Backed will fetch the data from DB and validate it using `vc-verifier` and returns the response
 12. Inji Verify UI renders the response accordingly
 
-
 #### **Sequence Diagram**
+
+
+
+
+
+
+
+
 
 <figure><img src="../../.gitbook/assets/inji_verify_0.10.0_workflow.png" alt=""><figcaption></figcaption></figure>
 
@@ -65,8 +75,6 @@ sequenceDiagram
   * The [**pixel-pass library**](https://www.npmjs.com/package/@mosip/pixelpass/v/0.1.6) fails to decode the data
     * Inji verify goes back to the home screen and displays the _QR code format not supported_ error
 * The user denies the camera permissions and the _Camera permissions denied_ screen appears on the Inji verify portal
-
-
 
 **OpenID4VP (Online Sharing)**
 
@@ -93,8 +101,6 @@ sequenceDiagram
   * After successful verification, Inji Verify showcases the verified credential in the user interface.
 * **Completion of Verification:**
   * The user is presented with the verified credential, confirming successful online sharing and validation using OpenID4VP standards.
-
-
 
 #### **Upload QR flow:**
 
@@ -132,6 +138,7 @@ sequenceDiagram
   * It performs a thorough verification of the received VC by checking:
     * The validity of the VC against the issuer's key (issuer key verification).
     * The integrity of the credential, ensuring it has not been tampered with.
+    * The VC verification happens at Inji Verify Backend, the Verify UI sends the VC to its backend and performs the verification using [vc-verfier](https://github.com/mosip/vc-verifier/tree/master/vc-verifier/kotlin) library.
 * **Displaying the Verified Credential:**
   * After successful verification, Inji Verify showcases the verified credential in the user interface.
 * **Completion of Verification:**
