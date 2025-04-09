@@ -6,7 +6,7 @@ This guide is designed to help users set up Inji Verify in their local environme
 
 #### **Repositories:**
 
-Clone the repositories in the local to bring up your setup. Repository information can be fetched from [**here**](https://github.com/mosip/inji-verify/tree/v0.8.0)**.**
+Clone the repositories in the local to bring up your setup. Repository information can be fetched from [**here**](https://github.com/mosip/inji-verify/blob/v0.10.0/README.md)**.**
 
 #### **Installations:**
 
@@ -17,26 +17,37 @@ $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bas
 $ nvm install 18
 ```
 
+*   **JAVA 21**
+
+    Can be installed using [sdkman](https://sdkman.io/). Run following commands to install node
+
+    ```
+    $ curl -s "https://get.sdkman.io" | bash
+    $ sdk install java 21.0.5-tem
+    ```
+* [Maven](https://maven.apache.org/install.html)
+
 #### **Folder Structure:**
 
 * **Helm:** The folder contains helm charts required to deploy on K8S
-* **Inji Verify:** This contains the source code and Dockerfile
+* **verify-ui:** This folder contains the source code for Inji Verify UI
+* **verify-service:** This folder contains the source code for Inji Verify Backend Service
 
-Click on the [**ReadMe file**](https://github.com/mosip/inji-verify/blob/v0.8.0/README.md) to explore more!
+Click on the [**ReadMe file**](https://github.com/mosip/inji-verify/blob/v0.10.0/README.md) to explore more!
 
-#### **Docker Compose:** <a href="#docker-compose" id="docker-compose"></a>
+#### **Docker Compose:**
 
 Docker Compose provides two types of setup options: one for **developer setup**, enabling full-featured access for development and testing, and another for **demo setup**, optimized for showcasing specific use cases with simplified configuration.
 
 **Developer Setup:**
 
-* To set it up for the developer, follow the steps outlined in the [**README**](https://github.com/mosip/inji-verify/blob/release-0.10.x/README.md#developer-setup) file for configuring Docker Compose for development, including necessary dependencies and configurations.
+* To set it up for the developer, follow the steps outlined in the [**README**](https://github.com/mosip/inji-verify/blob/release-0.11.x/README.md#developer-setup) file for configuring Docker Compose for development, including necessary dependencies and configurations.
 
 **Demo Setup:**
 
-* To set up the application on your local system for specific use cases or demo purposes, follow the steps provided in the [**README**](https://github.com/mosip/inji-verify/blob/release-0.10.x/README.md#demo-setup) file. The [**README**](https://github.com/mosip/inji-verify/blob/release-0.10.x/README.md#demo-setup) contains detailed instructions tailored to your requirements for easy setup and deployment.
+* To set up the application on your local system for specific use cases or demo purposes, follow the steps provided in the [**README**](https://github.com/mosip/inji-verify/blob/v0.10.0/README.md) file. The [**README**](https://github.com/mosip/inji-verify/blob/v0.10.0/README.md) contains detailed instructions tailored to your requirements for easy setup and deployment.
 * **Refer to the README for Docker Compose Instructions:**
-  * Inside the Inji Verify project directory, you will find a [**README**](https://github.com/mosip/inji-verify/blob/release-0.10.x/README.md#installations) file. This file contains detailed steps for setting up the project using Docker Compose.
+  * Inside the Inji Verify project directory, you will find a [**README** ](https://github.com/mosip/inji-verify/blob/v0.10.0/README.md)file. This file contains detailed steps for setting up the project using Docker Compose.
   * Review the steps under the "Docker Compose" section for instructions on how to build and run the containers.
 * **Run Docker Compose:**
   * Use Docker Compose to build and deploy the application.
@@ -62,4 +73,4 @@ $ docker build -t <dockerImageName>:<tag> .
 $ docker run -it -d -p 3000:3000 <dockerImageName>:<tag>
 ```
 
-* Open URL:  [http://localhost:3000](http://localhost:3000/)
+* Open URL: [http://localhost:3000](http://localhost:3000/)
