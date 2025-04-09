@@ -48,7 +48,7 @@ sequenceDiagram
 #### **Sequence Diagram**
 
 
-<figure><img src="../../.gitbook/assets//Users/keshavsingh/Downloads/inji_verify_0.11.1_workflow.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/inji_verify_0.11.1_workflow.png" alt=""><figcaption></figcaption></figure>
 
 ### **Understanding the workflow**:
 
