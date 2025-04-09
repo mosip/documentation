@@ -44,13 +44,3 @@ Let's briefly explore the key components that constitute Inji Verify Backend:
 
 
 
-If this was deleted:&#x20;
-
-
-
-4. **Verification SDK:** The Verification SDK is a software toolkit used for verifying the authenticity and validity of Verifiable Credentials. It contains algorithms, cryptographic functions, and validation methods required to ensure the integrity of credential data.
-
-* The Verification SDK is employed within Inji Verify to perform verification checks on the decoded data obtained from QR codes. It validates the information against predefined criteria and standards to determine the legitimacy of the presented credentials and shows the VC properties.
-
-
-
