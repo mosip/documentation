@@ -1,8 +1,8 @@
 ---
-icon: code-compare
+icon: list-tree
 ---
 
-# Deploy
+# Setup
 
 ### Repositories
 

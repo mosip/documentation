@@ -1,8 +1,8 @@
 ---
-icon: code-compare
+icon: list-tree
 ---
 
-# Deploy
+# Setup
 
 The Build & Deploy section offers a detailed overview of the process and steps involved in building and deploying Inji Web.
 
