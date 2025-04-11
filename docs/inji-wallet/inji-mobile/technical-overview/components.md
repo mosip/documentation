@@ -12,17 +12,14 @@ The libraries are as follows:
 4. PixelPass SDK
 5. VCI-client SDK
 6. OpenID4VP - Online Sharing SDK
-7. BLE Verifier SDK
-8. Telemetry SDK(coming soon)
+7. Telemetry SDK(coming soon)
 
 <figure><img src="../../../.gitbook/assets/InjiWalletComponents.png" alt=""><figcaption></figcaption></figure>
 
 ### **1. Tuvali - Sharing via BLE SDK**
 
 * The transfer of downloaded Verifiable Credential from the Wallet to Verifier is facilitated by a React Native library named Tuvali.
-* Tuvali enables offline VC transfer between mobile devices via Bluetooth Low Energy (BLE).\
-  \
-  The below table represents the supported roles for Android and iOS devices.
+* Tuvali enables offline VC transfer between mobile devices via Bluetooth Low Energy (BLE). The below table represents the supported roles for Android and iOS devices.
 
 <table><thead><tr><th width="134">Wallet</th><th width="131">Verifier</th><th>VC transfer support</th></tr></thead><tbody><tr><td>Android</td><td>Android</td><td>Yes</td></tr><tr><td>iOS</td><td>Android</td><td>Yes</td></tr><tr><td>Android</td><td>iOS</td><td>No</td></tr><tr><td>iOS</td><td>iOS</td><td>No</td></tr></tbody></table>
 
@@ -134,6 +131,8 @@ Note:
 * Currently, the `vp_token` uses the `Ed25519Signature2020` type for digital signatures.
 {% endhint %}
 
+<!--
+
 ### **7. BLE Verifier SDK**
 
 The [BLE Verifier](https://github.com/mosip/ble-verifier-sdk/tree/develop) is the module built for verifiers for receiving VC via BLE. This is a wrapper built on Tuvali with simplified APIs.
@@ -146,7 +145,9 @@ Note:
 * To check the NPM module, click [here](https://www.npmjs.com/package/@mosip/ble-verifier-sdk).
 {% endhint %}
 
-### **8. Telemetry SDK**
+-->
+
+### **7. Telemetry SDK**
 
 The [telemetry](https://github.com/mosip/sunbird-telemetry-sdk) module is derived from the [sunbird telemetry](https://github.com/project-sunbird/sunbird-telemetry-sdk) module. It is responsible for generating events that can provide valuable analytics.
 
