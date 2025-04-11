@@ -1,106 +1,97 @@
-# Secure Keystore
 
-## Secure Keystore
+# Secure Keystore (Android & iOS)
 
-Secure Keystore is a **library exclusively for Android platform**. The devices which have a [Hardware Keystore](https://source.android.com/docs/security/features/keystore) can use this library to perform encryption, decryption and computation of HMAC on the native side using the Hardware backed security features.
+Secure Keystore is a cross-platform cryptographic key management library for **Android** and **iOS**, supporting secure key generation, encryption/decryption, HMAC, and digital signatures using native platform security features (Android Keystore and iOS Keychain/Secure Enclave).
+
+## Platforms Supported
+- Android 6.0+ (Hardware-backed keystore)
+- iOS 13.0+ (Secure Enclave + Keychain)
+
+---
 
 ## Artifacts
 
   *  Maven Snapshots are available [here](https://repo1.maven.org/maven2/io/mosip/secure-keystore/)
 
-  *  NPM modules are available [here](https://www.npmjs.com/package/@mosip/secure-keystore)
+## 📦 Installation
 
-## Installation
 
-The Secure Keystore is an independent module published as NPM module which provides Android APIs for the same on React. On a React Native application, this can be installed via
 
-```shell
-npm install @mosip/secure-keystore
-```
+### iOS (Swift)
 
-### Usage
+Using Swift Package Manager:
 
-1. For RSA based Key Pair
+1. Open Xcode
+2. Go to `File > Swift Packages > Add Package Dependency`
+3. Use the URL: https://github.com/mosip/secure-keystore-ios-swift.git
 
-```js
-import SecureKeyStore  from "@mosip/secure-keystore";
 
-// ...
+### Android (Kotlin)
 
-if(!SecureKeyStore.deviceSupportsHardware) {
-  return
+Add the following in your `settings.gradle.kts`:
+
+```kotlin
+dependencyResolutionManagement {
+  repositories {
+    google()
+    mavenCentral()
+    maven("https://oss.sonatype.org/content/repositories/snapshots/")
+  }
 }
-
-const alias = "1234ab";
-const data = "any data";
-
-const publicKey = await SecureKeyStore.generateKeyPair(alias);
-
-const signature = await SecureKeyStore.sign(alias, data)
-
 ```
 
-2. For symmetric key
+In `build.gradle.kts`:
 
-```js
-import SecureKeyStore  from "@mosip/secure-keystore";
-
-// ...
-
-if(!SecureKeyStore.deviceSupportsHardware) {
-  return
+```kotlin
+dependencies {
+  implementation("io.mosip:secure-keystore:0.3.0")
 }
-
-const alias = "1234ab";
-const data = "any data";
-
-await SecureKeyStore.generateKey(alias);
-
-const encryptedData = await SecureKeyStore.encryptData(alias, data)
-const decryptedData = await SecureKeyStore.decryptData(alias, encryptedData)
-
 ```
 
-## API documentation
+---
 
-#### deviceSupportsHardware
 
-`deviceSupportsHardware: boolean`
+## 📘 API Documentation
 
-Checks if the device supports hardware keystore.
+- `deviceSupportsHardware() => boolean`  
+   Checks if the device supports secure hardware-backed keystore.
 
-#### generateKey
+- `generateKey(alias, isAuthRequired, authTimeout?)`  
+   Generates a symmetric key for encryption/decryption with optional biometric auth.
 
-`generateKey(alias: string) => void`
+- `generateKeyPair(type, alias, isAuthRequired, authTimeout?)`  
+   Creates a public-private key pair (RSA or EC) with optional authentication.
 
-Generates a symmetric key for encryption and decryption.
+- `encryptData(alias, data, onSuccess, onFailure)`  
+   Encrypts data using a symmetric key associated with the given alias.
 
-#### generateKeyPair
+- `decryptData(alias, encryptedText, onSuccess, onFailure)`  
+   Decrypts previously encrypted data using the associated key alias.
 
-`generateKey(alias: string) => string`
+- `sign(signAlgorithm, alias, data, onSuccess, onFailure)`  
+   Signs data using the specified key and signature algorithm (RSA, ECDSA are supported).
 
-Generates an asymmetric RSA key Pair for signing.
+- `generateHmacSha(alias, data, onSuccess, onFailure)`  
+   Generates an HMAC signature using the specified alias and data.
 
-#### encryptData
+- `generateHmacSha256Key(alias)`  
+   Creates a symmetric key suitable for HMAC-SHA256 operations.
 
-`encryptData(alias: string, data: string) => string`
+- `hasAlias(alias) => boolean`  
+   Checks if a key exists for the specified alias.
 
-Encrypts the given data using the key that is assigned to the alias. Returns back encrypted data as a string.
+- `removeKey(alias)`  
+   Deletes the key associated with the given alias from the keystore.
 
-#### decryptData
+- `removeAllKeys()`  
+   Clears all keys stored in the keystore.
 
-`decryptData(alias: string, encryptionText: string) => string`
+- `retrieveKey(alias)`  
+   Retrieves the public key for the specified alias.
 
-Decrypts the given `encryptionText` using the key that is assigned to the alias. Returns back the data as a string.
+- `storeGenericKey(publicKey, privateKey, account)`  
+   Stores a custom key pair in the keychain/keystore linked to an account.
 
-#### sign
-
-`sign(alias: string, data: string) => string`
-
-Creates a signature for the given data using the key that is assigned to the alias. Returns back the signature as a string.
-
-#### hasAlias
-
-`hasAlias(alias: string) => boolean`
-
-Checks if the given alias is present in the keystore.
+- `retrieveGenericKey(account)`  
+   Retrieves the stored key pair associated with the specified account.
+---
