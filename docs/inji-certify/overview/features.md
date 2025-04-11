@@ -28,3 +28,32 @@ Users can easily integrate custom plugins into the Inji Certify Registry, This p
 Inji Certify streamlines the issuance of verifiable credentials with robust integration capabilities and a straightforward installation process. It supports multiple credential schemas and ensures compliance with industry standards, making it a versatile solution for organizations needing secure and efficient credential management.\
 \
 **Check** [**Inji Certify Repository**](https://github.com/mosip/inji-certify/tree/v0.9.0) **to explore these above features!**
+
+
+
+<!-- 
+
+1. Credential Issuance
+Verifiable Credential Issuance
+Integration Capabilities
+MOSIP Identity Plugin
+Sunbird Plugin
+Mock IDA Plugin
+Data Provider Plugins (e.g., Mock CSV, Postgres)
+Multiple Credential Schemas
+JSON-LD Format Compliance
+2. Integration and Extensibility
+Plugin Architecture
+Custom Plugin Integration
+External System and Data Source Support
+3. Ease of Installation
+Streamlined Setup (Shell Script, Docker Compose)
+Helm Support
+User-Friendly Deployment
+4. Standards and Compliance
+W3C VC v1.1 Standards
+Interoperability and Compatibility
+5. Additional Resources
+
+
+-->
