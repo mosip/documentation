@@ -1,10 +1,10 @@
 # Inji Certify
 
-## Inji Certify
+## Overview
 
 The Inji Certify service is utilized by Inji Wallet for downloading the VC.
 
-#### Download VC
+### Download VC
 
 The user is currently on the `Add new card` screen and chooses an issuer(For example, Republic of Veridonia National ID Department).
 
@@ -17,6 +17,10 @@ The user is currently on the `Add new card` screen and chooses an issuer(For exa
 
 For credential request, refer credential\_endpoint attribute in issuer's configuration response.
 
+<!--
+
 {% swagger src="../.gitbook/assets/Identity-Provider.yaml" path="/vci/credential" method="post" %}
 [Identity-Provider.yaml](../.gitbook/assets/Identity-Provider.yaml)
 {% endswagger %}
+
+-->
