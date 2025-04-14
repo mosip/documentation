@@ -43,6 +43,7 @@
     * [Backend Services](inji-wallet/inji-mobile/technical-overview/backend-services/README.md)
       * [Mimoto](inji-wallet/inji-mobile/technical-overview/backend-services/mimoto.md)
       * [eSignet](inji-wallet/inji-mobile/technical-overview/backend-services/esignet.md)
+      * [Inji Certify](inji-wallet/inji-mobile/technical-overview/backend-services/inji-certify.md)
     * [Customizations](inji-wallet/inji-mobile/technical-overview/customization-overview/README.md)
       * [Workflow customization](inji-wallet/inji-mobile/technical-overview/customization-overview/workflow-customization.md)
       * [UI customization](inji-wallet/inji-mobile/technical-overview/customization-overview/ui-customization.md)
