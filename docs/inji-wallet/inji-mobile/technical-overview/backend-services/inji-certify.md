@@ -16,3 +16,7 @@ The user is currently on the `Add new card` screen and chooses an issuer(For exa
 * Using the access token, Inji Wallet makes a request to the credential endpoint from Inji Certify to download the credential.
 
 For credential request, refer credential\_endpoint attribute in issuer's configuration response.
+
+{% swagger src="../.gitbook/assets/Identity-Provider.yaml" path="/vci/credential" method="post" %}
+[Identity-Provider.yaml](../.gitbook/assets/Identity-Provider.yaml)
+{% endswagger %}
