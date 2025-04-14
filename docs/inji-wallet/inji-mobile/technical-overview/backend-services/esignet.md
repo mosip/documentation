@@ -1,4 +1,3 @@
-<!-- New content - Updated on 14 April 2025 -->
 # eSignet
 
 The eSignet service is utilized by Inji Wallet for online login. Users have the ability to log in to any service provider portal that is integrated with eSignet.
@@ -25,6 +24,7 @@ After successfully scanning the QR code, Inji Wallet will access the API below a
 [Identity-Provider.yaml](../.gitbook/assets/Identity-Provider.yaml)
 {% endswagger %}
 
+<!-- New content (above content)- Updated on 14 April 2025 -->
 
 
 
