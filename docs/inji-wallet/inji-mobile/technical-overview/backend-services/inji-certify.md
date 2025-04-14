@@ -15,11 +15,11 @@ The user is currently on the `Add new card` screen and chooses an issuer(For exa
   * Inji Wallet then exchanges the authorization code for an access token.
 * Using the access token, Inji Wallet makes a request to the credential endpoint from Inji Certify to download the credential.
 
+#### VC Issuance endpoint
+
 {% openapi-operation spec="api" path="/vci/credential" method="post" %}
 [Broken link](broken-reference)
 {% endopenapi-operation %}
-
-
 
 For credential request, refer credential\_endpoint attribute in issuer's configuration response.
 
