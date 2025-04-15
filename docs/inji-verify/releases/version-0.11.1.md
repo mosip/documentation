@@ -26,11 +26,11 @@ Inji Verify 0.11.1 focuses on ensuring seamless interoperability with Inji Mobil
 
 The following table outlines the tested and certified compatibility of Inji Verify 0.11.1 with other modules.
 
-| Module             | Version     |
-| ------------------ | ----------- |
-| **Inji Wallet**    | **v0.16.0** |
-| Inji Web           | v0.10.0     |
-| Pixel-Pass library | v0.5.0      |
+| Module             | Version                                                       |
+| ------------------ | ------------------------------------------------------------- |
+| **Inji Wallet**    | **v0.16.0**                                                   |
+| Inji Web           | [**v0.10.0**](https://github.com/mosip/inji-web/tree/v0.10.0) |
+| Pixel-Pass library | [**v0.5.0**](https://github.com/mosip/pixelpass/tree/v0.5.0)  |
 
 ### **Bug Fixes**
 
@@ -43,9 +43,9 @@ Below is the list of fixes as part of the **0.11.1** release:
 
 ### **Documentation**
 
-* Feature documentation
-* User guide
-* Workflow
-* Local Setup
-* Collab Guide
+* [Feature documentation](https://docs.inji.io/inji-verify/overview)
+* [User guide](https://docs.inji.io/inji-verify/functional-overview/end-user-guide)
+* [Workflow](https://docs.inji.io/inji-verify/functional-overview/workflow)
+* [Local Setup](https://docs.inji.io/inji-verify/build-and-deploy/local-setup)
+* [Collab Guide](https://docs.inji.io/inji-verify/functional-overview/releases-1/inji-verify-collab-guide)
 * QA Report
