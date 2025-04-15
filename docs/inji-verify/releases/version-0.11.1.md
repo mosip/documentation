@@ -6,8 +6,6 @@
 
 **Release Date**: Coming Soon
 
-&#x20;
-
 ### **Overview**
 
 Inji Verify 0.11.1 focuses on ensuring seamless interoperability with Inji Mobile Wallet version 0.16.0 by aligning with the [OpenID4VP - Draft 21 specification](https://openid.net/specs/openid-4-verifiable-presentations-1_0-21.html#section-9.1). This patch incorporates the following key updates required for compatibility with the mobile wallets following OpenID4VP specification (Draft 21):
@@ -17,20 +15,20 @@ Inji Verify 0.11.1 focuses on ensuring seamless interoperability with Inji Mobil
 
 ### **Repositories: Released/Dependent**
 
-| **Repositories**    | **Tags: Released/Dependent** |
-| ------------------- | ---------------------------- |
-| Inji Verify         | **v0.11.1**                  |
-| vc-verifier library | v1.2.0                       |
+| **Repositories** | **Tags: Released/Dependent** |
+| ---------------- | ---------------------------- |
+| Inji Verify      | v0.11.1                      |
 
 ### **Compatible modules:**
 
 The following table outlines the tested and certified compatibility of Inji Verify 0.11.1 with other modules.
 
-| Module             | Version                                                       |
-| ------------------ | ------------------------------------------------------------- |
-| **Inji Wallet**    | **v0.16.0**                                                   |
-| Inji Web           | [**v0.10.0**](https://github.com/mosip/inji-web/tree/v0.10.0) |
-| Pixel-Pass library | [**v0.5.0**](https://github.com/mosip/pixelpass/tree/v0.5.0)  |
+| Module              | Version                                                    |
+| ------------------- | ---------------------------------------------------------- |
+| Inji Wallet         | v0.16.0                                                    |
+| Inji Web            | [v0.10.0](https://github.com/mosip/inji-web/tree/v0.10.0)  |
+| Pixel-Pass library  | [v0.5.0](https://github.com/mosip/pixelpass/tree/v0.5.0)   |
+| vc-verifier library | [v1.2.0](https://github.com/mosip/vc-verifier/tree/v1.2.0) |
 
 ### **Bug Fixes**
 
