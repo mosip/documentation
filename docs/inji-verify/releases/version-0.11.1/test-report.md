@@ -2,11 +2,11 @@
 
 ## Testing Scope
 
-The scope of testing is to verify fitment to the specification from the perspective of&#x20;
+The scope of testing is to verify fitment to the specification from the perspective of:
 
-* Functionality&#x20;
-* Deployability&#x20;
-* Configurability&#x20;
+* Functionality
+* Deployability
+* Configurability
 * Customizability
 
 Verification is performed not only from the end user perspective but also from the System Integrator (SI) point of view. Hence Configurability and Extensibility of the software is also assessed. This ensures readiness of software for use in multiple countries. Since MOSIP is an “API First” product platform.
@@ -18,28 +18,25 @@ Testing scope has been focused on sanity around the following features:
 * Verify Upload Feature
 * OVP Flow
 
-OVP functionality Verification:
+**OVP functionality Verification**:
 
 1. Windows: using Edge, Firefox and Chrome browsers.
 2. Android: using Edge, Firefox and Chrome browsers, 0.16.0 inji-mobile.
 3. iPhone: using Safari, Edge, Firefox and Chrome browsers, 0.16.0 inji-mobile.
 4. MAC: using Safari Edge, Firefox and Chrome browsers.
 
-### Testing results:
+### Testing results
 
 Below are the results for Upload, Scan and OVP flow functionality with Windows, Android phone, MAC, Android Tablet, iPad and iPhone with different browsers:
 
-![](file:///Users/keshavsingh/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image002.jpg)
+<figure><img src="../../../.gitbook/assets/iv-0-11-1-tr-1.png" alt="" width="600"><figcaption></figcaption></figure>
 
-&#x20;
+<figure><img src="../../../.gitbook/assets/iv-0-11-1-tr-2.png" alt="" width="600"><figcaption></figcaption></figure>
 
-![](file:///Users/keshavsingh/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image004.jpg)
+<figure><img src="../../../.gitbook/assets/iv-0-11-1-tr-3.png" alt="" width="600"><figcaption></figcaption></figure>
 
-![A screenshot of a computer
 
-AI-generated content may be incorrect.](file:///Users/keshavsingh/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image006.jpg)
-
-## Test Approach <a href="#toc195624679" id="toc195624679"></a>
+## Test Approach
 
 Persona based approach has been adopted to perform the IV\&V, by simulating test scenarios that resemble a real-time implementation.
 
@@ -61,7 +58,7 @@ Verification is performed on various configurations as mentioned below
 
 ## Feature Health
 
-![](file:///Users/keshavsingh/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image008.jpg)
+<figure><img src="../../../.gitbook/assets/iv-0-11-1-tr-4.png" alt="" width="600"><figcaption></figcaption></figure>
 
 ## Test execution statistics
 
@@ -71,18 +68,16 @@ The below section provides details on UI Automation by executing MOSIP functiona
 
 <table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Total</td><td valign="top">Passed</td><td valign="top">Failed</td><td valign="top">Skipped</td></tr><tr><td valign="top">10</td><td valign="top">10</td><td valign="top">0</td><td valign="top">0</td></tr><tr><td valign="top">Test Rate: 100% With Pass Rate: 100%</td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
 
-&#x20;
 
 Functional and test rig code base branch which is used for the above metrics is:
 
-Hash Tag: dee1915d76f02b9e85eb0afd14cbcb2b44bacb15&#x20;
+Hash Tag: dee1915d76f02b9e85eb0afd14cbcb2b44bacb15
 
 ### Verify API Test Rig Automation results
 
 The below section provides details on UI Automation by executing MOSIP functional automation Framework.
 
 <table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Total</td><td valign="top">Passed</td><td valign="top">Failed</td><td valign="top">Skipped</td></tr><tr><td valign="top">27</td><td valign="top">27</td><td valign="top">0</td><td valign="top">0</td></tr><tr><td valign="top">Test Rate: 100% With Pass Rate: 100%</td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
-
 
 
 Functional and test rig code base branch which is used for the above metrics is:
@@ -98,6 +93,5 @@ The various metrics that assist in test tracking and efficiency are as follows:
 * Passed Test Cases Coverage: It measures the percentage of passed test cases. (Number of tests passed / Total number of tests executed) x 100
 * Failed Test Case Coverage: It measures the percentage of all the failed test cases. (Number of failed tests / Total number of test cases executed) x 100
 
-Git hub link for the xls file:
+Git hub link for all the test report files is [here](coming up):
 
-\<TBD>&#x20;
