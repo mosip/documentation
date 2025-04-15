@@ -52,4 +52,4 @@ Below is the list of fixes as part of the **0.11.1** release:
 * [Workflow](https://docs.inji.io/inji-verify/functional-overview/workflow)
 * [Local Setup](https://docs.inji.io/inji-verify/build-and-deploy/local-setup)
 * [Collab Guide](https://docs.inji.io/inji-verify/functional-overview/releases-1/inji-verify-collab-guide)
-* QA Report
+* [QA Report](https://docs.inji.io/inji-verify/releases/version-0.11.1/test-report)
