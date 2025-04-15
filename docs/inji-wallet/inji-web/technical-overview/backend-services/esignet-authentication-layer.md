@@ -17,6 +17,6 @@ Once the access token is received via the token endpoint from eSignet, Mimoto in
 
 **Note**: The endpoint attribute is present in the issuer's well-known configuration.
 
-{% swagger src="../../../../.gitbook/assets/Identity-Provider.yaml" path="/vci/credential" method="post" %}
-[Identity-Provider.yaml](../../../../.gitbook/assets/Identity-Provider.yaml)
-{% endswagger %}
+{% openapi src="broken-reference" path="/vci/credential" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi %}

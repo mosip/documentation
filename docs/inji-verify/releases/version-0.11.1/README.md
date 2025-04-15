@@ -13,13 +13,19 @@ Inji Verify 0.11.1 focuses on ensuring seamless interoperability with Inji Mobil
 1. **QR Data Encoding:** QR data is now URL-encoded instead of Base64-encoded.
 2. **Mandatory** vp\_format&#x73;**:** When client\_metadata is provided, the vp\_formats parameter is now mandatory to ensure proper format negotiation between wallet and verifier.
 
+{% hint style="warning" %}
+**Note:** We reccommend users to upgrade to **Inji Verify v0.11.1** instead of using **v0.11.0**, as the **OpenID4VP Cross-Device Flow** does not function as expected in v0.11.0. _(Refer to_ [_MOSIP Community Announcement_](https://community.mosip.io/t/important-announcement-openid4vp-cross-device-flow-non-functional-in-inji-verify-v0-11-0/1990) _for more details.)_
+
+Additionally, please note that the OpenID4VP Cross-Device Flow is compatible only with Inji Mobile Wallet v0.16.0. It is not supported on v0.15.0, as the two key updates required for compatibility have been incorporated starting from v0.16.0 of Inji Mobile Wallet.
+{% endhint %}
+
 ### **Repositories: Released/Dependent**
 
 | **Repositories** | **Tags: Released/Dependent** |
 | ---------------- | ---------------------------- |
 | Inji Verify      | v0.11.1                      |
 
-### **Compatible modules:**
+### **Compatible modules**
 
 The following table outlines the tested and certified compatibility of Inji Verify 0.11.1 with other modules.
 
