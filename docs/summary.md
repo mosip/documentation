@@ -140,6 +140,8 @@
 ***
 
 * [Releases](releases/README.md)
+  * [Version 0.11.0](releases/version-0.11.0/README.md)
+    * [Test Report](releases/version-0.11.0/test-report.md)
   * [Version 0.10.2](releases/version-0.10.2/README.md)
     * [Test Report](releases/version-0.10.2/test-report.md)
   * [Version 0.10.1](releases/version-0.10.1/README.md)
