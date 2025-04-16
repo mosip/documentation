@@ -29,10 +29,11 @@ Inji Certify is a platform designed to manage and facilitate the issuance of Ver
  4. **Plugin interaction**:
  * This foundational layer consists of three plugins that provide essential services to the upper layers:
 
- * **Data Provider Plugins:** These plugins fetch relevant data from external sources or registries. They retrieve the necessary information and return it to Inji Certify as a JSON object. Inji Certify then utilizes this data to generate and issue the corresponding VCs..
+  * **Data Provider Plugins:** These plugins fetch relevant data from external sources or registries. They retrieve the necessary information and return it to Inji Certify as a JSON object. Inji Certify then utilizes this data to generate and issue the corresponding VCs..
 
- * **Audit Plugin**: Tracks and logs actions within the system for auditing purposes.
- * **VC Issuance Plugin**: Exposes API for VCI Issuance which internally connects with credential service and sends the Verifiable Credential (VC) issued by the service as a response.
+  * **Audit Plugin**: Tracks and logs actions within the system for auditing purposes.
+  
+  * **VC Issuance Plugin**: Exposes API for VCI Issuance which internally connects with credential service and sends the Verifiable Credential (VC) issued by the service as a response.
 
 Each layer builds upon the services provided by the layer below it, creating a modular and scalable architecture for the Inji Certify system.
 

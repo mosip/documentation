@@ -2,9 +2,9 @@
 
 Currently, Inji Certify offers the following features:
 
-#### **Key Features**
+## Key Features
 
-**Credential Issuance**
+### Credential Issuance
 
 * **Verifiable Credential Issuance**: Enables issuers to seamlessly issue verifiable credentials using the Inji Certify core component (This eSignet VCI segregated to Inji Certify)
 * **Integration Capabilities**: Supports integration with:
@@ -19,15 +19,17 @@ Currently, Inji Certify offers the following features:
 
 Users can easily integrate custom plugins into the Inji Certify Registry, This plugin architecture allows for seamless integration with various external systems and data sources, making Inji Certify a highly adaptable and customizable solution for diverse credentialing needs.
 
-**Ease of Installation**
+### Ease of Installation
 
 * **Streamlined Setup**: Simplifies installation with a single shell startup script connecting Docker-compose scripts.
 * **Helm Support**: Provides Helm support for deployment flexibility.
 * **User-Friendly**: Emphasizes ease of use, reducing complexity and deployment time.
 
-Inji Certify streamlines the issuance of verifiable credentials with robust integration capabilities and a straightforward installation process. It supports multiple credential schemas and ensures compliance with industry standards, making it a versatile solution for organizations needing secure and efficient credential management.\
-\
+Inji Certify streamlines the issuance of verifiable credentials with robust integration capabilities and a straightforward installation process. It supports multiple credential schemas and ensures compliance with industry standards, making it a versatile solution for organizations needing secure and efficient credential management.
+
 **Check** [**Inji Certify Repository**](https://github.com/mosip/inji-certify/tree/v0.9.0) **to explore these above features!**
+
+
 
 
 
