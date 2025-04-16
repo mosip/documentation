@@ -14,9 +14,9 @@ Inji Verify 0.11.1 focuses on ensuring seamless interoperability with Inji Mobil
 2. **Mandatory** vp\_format&#x73;**:** When client\_metadata is provided, the vp\_formats parameter is now mandatory to ensure proper format negotiation between wallet and verifier.
 
 {% hint style="warning" %}
-**Note:** We reccommend users to upgrade to **Inji Verify v0.11.1** instead of using **v0.11.0**, as the **OpenID4VP Cross-Device Flow** does not function as expected in v0.11.0. _(Refer to_ [_MOSIP Community Announcement_](https://community.mosip.io/t/important-announcement-openid4vp-cross-device-flow-non-functional-in-inji-verify-v0-11-0/1990) _for more details.)_
+**Note:** We reccommend users to upgrade to **Inji Verify v0.11.1** instead of using **v0.11.0**, as the **OpenID4VP Cross-Device Flow** does not function as expected in v0.11.0. _(Refer to_ [_MOSIP Community Announcement_](https://community.mosip.io/t/important-announcement-openid4vp-cross-device-flow-non-functional-in-inji-verify-v0-11-0/1990) _for more details)._
 
-Additionally, please note that the OpenID4VP Cross-Device Flow is compatible only with Inji Mobile Wallet v0.16.0. It is not supported on v0.15.0, as the two key updates required for compatibility have been incorporated starting from v0.16.0 of Inji Mobile Wallet.
+Additionally, please note that the OpenID4VP Cross-Device Flow is compatible only with Inji Mobile Wallet v0.16.0. It is not supported with v0.15.0 as the two key updates (**QR Data Encoding** and **Mandatory vp\_formats**), required for compatibility, have been incorporated starting v0.16.0 of Inji Mobile Wallet.
 {% endhint %}
 
 ### **Repositories: Released/Dependent**
