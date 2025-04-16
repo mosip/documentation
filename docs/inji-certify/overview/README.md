@@ -10,9 +10,9 @@ icon: house
 
 Traditionally, institutes and organizations spend considerable time and effort maintaining user data, yet users often encounter challenges accessing services and benefits requiring information about themselves, their assets, and achievements. Inji Certify addresses this gap by enabling organizations to issue verifiable credentials and empowering users to securely store, share, and manage their data based on open standards and specifications.
 
-### **Key Features of Inji Certify**
+# Key Features of Inji Certify
 
-#### **Generation and Signing of Verifiable Credentials**
+## Generation and Signing of Verifiable Credentials
 
 Inji Certify simplifies the creation of Verifiable Credentials (VCs) by enabling organizations to effortlessly generate and digitally sign them. This process ensures the authenticity and trustworthiness of each credential. By employing robust digital signatures, Inji Certify safeguards VCs against tampering and enables swift and reliable verification, enhancing trust and security for both issuers and recipients.
 
@@ -21,7 +21,7 @@ Inji Certify simplifies the creation of Verifiable Credentials (VCs) by enabling
 * **Secure Key Management**: Leverage robust cryptographic techniques and secure key management practices to protect sensitive information and ensure the integrity of issued credentials.
 * **Efficient Signing Process**: Efficiently sign credentials using digital signatures, ensuring their authenticity, integrity, and tamper-proof nature.
 
-#### **Interoperability**
+## Interoperability
 
 Inji Certify prioritizes interoperability by adhering to industry standards, specifically the OpenID specifications (OpenID4VCI Draft 13). This ensures that the generated Verifiable Credentials (VCs) are compatible with a wide range of systems and platforms that also support these standards. This interoperability offers several key advantages:
 
@@ -30,70 +30,71 @@ Inji Certify prioritizes interoperability by adhering to industry standards, spe
 * **Improved data exchange**=: Interoperability enables seamless data exchange between different systems and organizations, streamlining processes and improving efficiency.
 * **Increased trust and reliability**: Compliance with industry standards builds trust and reliability among users, as it ensures that VCs are compatible and can be verified across different platforms.
 
-### Plugin Support**
+## Plugin Support**
 
 Inji Certify supports the integration of custom plugins to enhance its flexibility and adaptability to diverse organizational needs. These plugins can be broadly categorized into two types:
 
 1. **VC Issuance Plugins:**
 
-**Functionality:** These plugins are responsible for generating and signing Verifiable Credentials (VCs) themselves. They typically interact with external identity or authentication systems to obtain necessary information and then generate the VC in JSON-LD format.
+**VC Issuance Plugins** are responsible for generating and signing Verifiable Credentials (VCs) themselves. They typically interact with external identity or authentication systems to obtain necessary information and then generate the VC in JSON-LD format.
 
-* **Current VC Issuance Plugins:**
+* **Current VC Issuance Plugins**:
   * Mock IDA Plugin
-  * Mosip Identity Plugin
+  * MOSIP Identity Plugin
   * Sunbird RC Plugin
 
 2. **Data Provider Plugins:**
 
-**Functionality:** These plugins fetch relevant data from external sources or registries. They retrieve the necessary information and return it to Inji Certify as a JSON object. Inji Certify then utilizes this data to generate and issue the corresponding VCs.
+**Data Provider Plugins** fetch relevant data from external sources or registries. They retrieve the necessary information and return it to Inji Certify as a JSON object. Inji Certify then utilizes this data to generate and issue the corresponding VCs.
 
-* **Current Data Provider Plugins:**
+* **Current Data Provider Plugins**:
   * Mock CSV Data Provider Plugin
   * Postgres Data Provider Plugin
 
 Users can easily integrate custom plugins into the Inji Certify Registry by following the detailed instructions provided in the Inji Certify Repository's README file. This plugin architecture allows for seamless integration with various external systems and data sources, making Inji Certify a highly adaptable and customizable solution for diverse credentialing needs.
 
 
-## Verifiable Credential Formats Support
+## Verifiable Credential formats which is supported
 
 Inji Certify supports a variety of widely used credential formats, including:
 
 * **JSON-LD:** A standardized format for representing linked data, enabling seamless data exchange and interoperability across different systems.
-* **Signed JWT (JWT):** A compact and self-contained format for securely transmitting claims between two parties, enhancing security and ease of use.
 
 This support for multiple credential formats ensures compatibility with a wide range of applications and systems, catering to diverse data format requirements.
 
 ### Future Support:
 
+#### Formats
+
 * **mDoc:** A mobile document format designed for secure and efficient storage and exchange of digital documents.
 * **mDL:** A mobile driver's license format that enables secure and convenient presentation of driver's licenses on mobile devices.
+* **Signed JWT (JWT):** A compact and self-contained format for securely transmitting claims between two parties, enhancing security and ease of use.
 
 By expanding its support to include these emerging formats, Inji Certify will further enhance its interoperability and adaptability to future advancements in digital credentialing technologies.
 
-## Revocation Mechanism
+#### Revocation Mechanism**
 
-* Inji Certify includes a revocation mechanism to ensure the integrity and trustworthiness of issued verifiable credentials (VCs):
+Inji Certify includes a revocation mechanism to ensure the integrity and trustworthiness of issued verifiable credentials (VCs):
+
   * **Revocation Mechanism**: Allows issuers to invalidate credentials that are no longer valid due to expiration, fraud, or changes in status.
   * **Revocation List**: Maintains a registry of revoked credentials.
   * **API Interfaces**: Provides Revocation API for issuers to revoke credentials and Verification API for third parties to check credential status.
   * **Discovery API**: Enables discovery of the revocation list to ensure verifications are based on the latest information.
 
-## **Multi-Tenancy Model**
+#### Multi-Tenancy Model
 
 * Multiple issuers can be onboarded on a single instance of Inji Certify, allowing diverse data providers to manage and issue credentials within the same platform while ensuring data security and integrity.
 
 
-
-
-
-
-# **How Inji Certify Works**
+# How does Inji Certify work?
 
 1. **Database Integration**: Inji Certify enables issuers to connect with existing databases to issue VCs. It assumes the source database has a primary key for each data record and information required to authenticate a user (e.g., phone, email, or other personal information).
 2. **Credential Schema Configuration**: Issuers can configure their credential schemas for various types of certificates they wish to issue, ensuring alignment with W3C VC v1.1 standards.
 3. **VC Issuance**: Authorized methods return VCs of an individual in linked data-proof (JSON-LD) and JWT formats.
 
+
 # Verifiable Credentials Issuance Through Inji Certify
+
 
 ## Overview
 
@@ -125,7 +126,7 @@ The plugins are categorized into two main types:
   * Finally, the plugin issues the generated VC to the recipient.
 * **Examples:**
   * **Mock Certify Plugin:** This plugin simulates a real-world scenario by interacting with the **Mosip Mock Identity System**. It retrieves sample identity data from the mock system and subsequently generates and issues VCs based on this data. This plugin is valuable for testing and development purposes.
-  * **Mosip IDA Certify Plugin:** This plugin integrates with the **Mosip National ID System**, a real-world identity platform. It retrieves verified identity information from the Mosip National ID System and utilizes this data to generate and issue VCs.
+  * **MOSIP IDA Certify Plugin:** This plugin integrates with the **Mosip National ID System**, a real-world identity platform. It retrieves verified identity information from the Mosip National ID System and utilizes this data to generate and issue VCs.
   * **Sunbird RC Certify Plugin:** This plugin interacts with the **Sunbird RC registry**, a platform for managing learning resources and learner data. It retrieves relevant data from the Sunbird RC registry, such as academic records and certifications, and generates and issues VCs based on this retrieved information.
 
 ### Data Provider Plugins
@@ -138,6 +139,7 @@ The plugins are categorized into two main types:
   * **Mock CSV Data Provider Plugin:** This plugin retrieves data from a **CSV file** that acts as a sample data source or a simplified registry. It extracts relevant information from the CSV file and provides it to a connected VC Issuance Plugin. This plugin is useful for testing and development purposes, allowing for easy simulation of data from various sources.
   * **Postgres Data Provider Plugin:** This plugin connects to a **PostgreSQL database** that acts as a data repository. It retrieves relevant data (e.g., user profiles, academic records) from the specified tables within the PostgreSQL database and provides this data to a connected VC Issuance Plugin for further processing.
 
+
 ### Authentication and Credential Transfer
 
 Inji Certify employs OpenID4VCI, an extension of the OAuth 2.0 protocol, for secure and interoperable credential issuance. This mechanism ensures:
@@ -145,6 +147,7 @@ Inji Certify employs OpenID4VCI, an extension of the OAuth 2.0 protocol, for sec
 1. **Standards-Based Interaction**: Establishes compatibility with various digital wallet providers.
 2. **Reliable User Authentication**: Authenticates individuals before issuing credentials.
 3. **Wallet-Initiated Flow**: Supports a streamlined flow where VCs are delivered just in time upon request from the user’s wallet.
+
 
 # **Segregation of eSignet VCI Component to Inji Certify**
 

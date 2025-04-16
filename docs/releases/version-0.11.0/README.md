@@ -10,13 +10,11 @@
 
 **Release** **Date**: Coming Up
 
-### Content
-
-#### **1. Overview**
+## Overview
 
 Inji Certify v0.11.0 brings major enhancements focused on improving security, standards compliance, and interoperability in verifiable credential issuance. This release expands cryptographic support, simplifies deployment, strengthens identity integration, and aligns closely with OpenID4VC and OpenID4VCI specifications. It also introduces initial support for third-party wallets and identity platforms, making Inji Certify more versatile and extensible in digital ID ecosystems.
 
-#### **2. Major Highlights/Features**
+## Major Highlights/Features
 
 * **ECC K1 2019 Key Support**: Support added for signing and verification using ECC K1 2019 keys.
 * **Ed25519 Signing (2018 & 2020)**: Enabled signing of VC requests using Ed25519 keys (compliant with both 2018 and 2020 specs).
@@ -26,14 +24,14 @@ Inji Certify v0.11.0 brings major enhancements focused on improving security, st
 * **OpenID4VCI Compliance Improvements**: Docker Compose now supports redirection of the .well-known endpoint as per spec.
 * **Simplified Setup**: Dependency on Artifactory removed for streamlined deployment.
 
-#### **3. Enhancements**
+### Enhancements
 
 * Improved cryptographic flexibility through support of ECC K1 2019 and Ed25519 key types.
 * Enhanced ecosystem integration by supporting Keycloak and eSignet 1.5.1.
 * Support for Talaos and Altme wallets expands adoption in OpenID4VC ecosystems.
 * Alignments made with OpenID4VCI specs to improve compatibility and standard adherence.
 
-#### **3. Bug Fixes**
+### Bug Fixes
 
 | **JIRA**                                                        | **Description**                                                                                     |
 | --------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
@@ -43,7 +41,7 @@ Inji Certify v0.11.0 brings major enhancements focused on improving security, st
 | [INJICERT-902](https://mosip.atlassian.net/browse/INJICERT-902) | kid Not Set Correctly for did:jwk Verification                                                      |
 | [INJICERT-933](https://mosip.atlassian.net/browse/INJICERT-933) | Certify docker compose should also support redirection of the well-known as per OpenID4VCI          |
 
-#### 4. **Known Issues**
+### Known Issues
 
 Below is the list of known issues. To read in detail and view all the topics related to Inji Certify please click [**here**](https://mosip.atlassian.net/issues/INJICERT-852?filter=11419\&jql=project%20%3D%20%22Inji%20Certify%22%20AND%20issuetype%20%3D%20Bug%20%20AND%20labels%20not%20in%20%28API_Automation%2C%20AWSdevicefarm%2C%20device_specific%2C%20qa-inji-UI-auto%29%20%20and%20status%20NOT%20IN%20%28Closed%2C%20Fixed%2C%20Canceled%2CCancelled%29%20%20ORDER%20BY%20created%20DESC%2C%20updated%20DESC)
 
@@ -52,7 +50,7 @@ Below is the list of known issues. To read in detail and view all the topics rel
 | [ES-2289](https://mosip.atlassian.net/browse/ES-2289)           | Esignet Oauth API is failing intermittently                                    |
 | [INJIVER-1069](https://mosip.atlassian.net/browse/INJIVER-1069) | The MOSIP UIN VC's created from reg-client are not verifiable from INJI-verify |
 
-#### 5. **Repository Released**
+## Repository Released
 
 | **Repositories**           | **Tags Released** |
 | -------------------------- | ----------------- |
@@ -62,7 +60,7 @@ Below is the list of known issues. To read in detail and view all the topics rel
 | inji-config                |                   |
 | keymanager                 |                   |
 
-#### **6. Compatible Modules**
+## Compatible Modules
 
 The following table outlines the tested and certified compatibility of \<release version> with other modules.
 
@@ -74,7 +72,7 @@ The following table outlines the tested and certified compatibility of \<release
 | commons              | [v1.3.0-beta.1](https://github.com/mosip/commons/tree/v1.3.0-beta.1)            |
 | mock-identity-system | [v0.10.1](https://github.com/mosip/esignet-mock-services/tree/v0.10.0)          |
 
-#### Documentation:
+# Documentation
 
 * **Functional Test Report (should cover Known Issues)**
 * **API Documentation**
