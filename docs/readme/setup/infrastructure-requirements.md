@@ -1,6 +1,6 @@
 # Infrastructure Requirements
 
-### **Overview**
+## **Overview**
 
 This document outlines the **infrastructure requirements** for deploying the **Inji Stack** in a **Proof of Concept (POC)** or **demo sandbox environment** or **small scale pilot**. It serves as a comprehensive reference for system architects, DevOps engineers, and IT administrators who are responsible for provisioning and configuring the virtualized infrastructure required to run Inji modules effectively.
 
@@ -8,51 +8,51 @@ The Inji Stack enables secure issuance, holding, and verification of **Verifiabl
 
 **This document outlines the necessary hardware, VM provisioning details, cluster roles, and optional components to support observability and access control.**
 
-#### **Purpose of this Document**
+### **Purpose of this Document**
 
 * Define the **minimum infrastructure** required for running all components of Inji Stack.
 * Specify **node roles**, **hardware configurations**, and **networking prerequisites**.
 * Provide **guidelines for optional tools** like Rancher and Keycloak, if Role-Based Access Control (RBAC) and observability are desired.
 * Highlight key considerations around **DNS setup**, **SSL certificates**, and **VM provisioning**.
 
-#### **Who Should Use This Document?**
+### **Who Should Use This Document?**
 
 * **DevOps Engineers** setting up and maintaining the Inji Stack environments.
 * **System Integrators** or **Partner Teams** participating in small scale pilots, POCs or sandbox testing.
 * **IT Teams** preparing demo infrastructure for showcasing Inji capabilities.
 * **Solution Architects** planning how to scale from demo to production-ready deployments.
 
-#### **How It Helps**
+### **How It Helps**
 
 * Reduces ambiguity by clearly stating **resource needs** and **cluster expectations**.
 * Supports **repeatable deployments** by defining baseline configurations.
 * Acts as a starting point to scale up to a **high-availability production architecture**.
 
-### **Cluster Roles**
+## **Cluster Roles**
 
 Refer to [**Kubernetes Core Components**](https://kubernetes.io/docs/concepts/overview/components/#core-components) for standard terminology.
 
-#### **Cluster Composition**
+### **Cluster Composition**
 
-* The environment consists of **4 Virtual Machines (VMs)** functioning as nodes in a Kubernetes cluster.
-* The cluster consists of four virtual machines (VMs), each functioning as a separate node.
+* The environment consists of **3 Virtual Machines (VMs)** functioning as separate nodes in a Kubernetes cluster.
+* Three nodes mentioned above respective two roles discussed below.
 
-**Control Plane Node**
+#### **Control Plane Node**
 
 * **Purpose**: Acts as both the master node and the etcd plane node.
 * **Role**: Hosts all essential Kubernetes components required to orchestrate and manage the cluster.
 
-**Worker Node**
+#### **Worker Node**
 
 * **Purpose**: Serves as a dedicated worker node for running the complete Inji Stack.
 * **Role**: Hosts all services across all modules of Inji.
 
-**Cluster-wide Role Assignment**:
+#### **Cluster-wide Role Assignment**:
 
 * All cluster nodes are assigned to all of the above-mentioned cluster roles.
   * Proper configuration and resource allocation ensure seamless functioning of the cluster.
 
-#### **Hardware Requirements**
+### **Hardware Requirements**
 
 | **Usage**                 | **VMs** | **vCPU** | **RAM** | **HDD** | **Network Interface** |
 | ------------------------- | ------- | -------- | ------- | ------- | --------------------- |
@@ -66,9 +66,7 @@ Refer to [**Kubernetes Core Components**](https://kubernetes.io/docs/concepts/ov
 **Note:** This configuration is for Proof of Concept, Small scale pilot, demonstration and evaluation purposes only. For production deployments, follow high availability best practices as outlined in the Kubernetes or RKE documentation to be able to sustain failures.
 {% endhint %}
 
-
-
-#### **Production Guidelines (Optional for POC)**
+## **Production Guidelines (Optional for POC)**
 
 For reference, follow Rancher’s production-ready checklist and instruction for RKE which are mentioned here : [**Recommended Cluster Architecture - Rancher**](https://ranchermanager.docs.rancher.com/how-to-guides/new-user-guides/kubernetes-clusters-in-rancher-setup/checklist-for-production-ready-clusters/recommended-cluster-architecture).
 
@@ -104,8 +102,9 @@ In case Rancher is used for cluster management and Keycloak is integrated for Ro
 * Subdomain mapping enables hosting of services and components such as:
   * verify.inji.example.org
   * certify.inji.example.org
-  * wallet.inji.example.org
+  * certify.web.example.org
+  * etc.
 
-### **Conclusion**
+## **Conclusion**
 
 This infrastructure specification provides the baseline setup needed to deploy the Inji Stack for showcasing its verifiable credentials capabilities as an end-to-end ecosystem. While the current configurations are optimized for Proof of Concept, Small scale pilot and demo scenarios, this document also points to production-ready practices for teams planning to transition to a fully operational environment.
