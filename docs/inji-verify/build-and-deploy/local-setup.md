@@ -6,7 +6,7 @@ This guide is designed to help users set up Inji Verify in their local environme
 
 #### **Repositories:**
 
-Clone the repositories in the local to bring up your setup. Repository information can be fetched from [**here**](https://github.com/mosip/inji-verify/blob/v0.10.0/README.md)**.**
+Clone the repositories in the local to bring up your setup. Repository information can be fetched from [**here**](https://github.com/mosip/inji-verify/tree/release-0.11.x)**.**
 
 #### **Installations:**
 
