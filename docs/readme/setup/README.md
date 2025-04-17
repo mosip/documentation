@@ -4,6 +4,6 @@ The Setup section of Inji Documentation will enable you (DevOps, Administrators 
 
 What all you will find here:
 
-* Infrastructure Planning and Estimation
+* [Infrastructure Requirements](infrastructure-requirements.md)
 * Deployment Architecture
 * Deploying Inji
