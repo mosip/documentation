@@ -17,7 +17,8 @@
   * [GenderMag](readme/gendermag.md)
   * [License](readme/license.md)
   * [Announcement](readme/announcement.md)
-  * [Setup](readme/setup.md)
+  * [Setup](readme/setup/README.md)
+    * [Infrastructure Requirements](readme/setup/infrastructure-requirements.md)
 
 ## Inji Wallet
 
