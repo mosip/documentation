@@ -1,9 +1,5 @@
 # Version 0.11.0
 
-{% hint style="danger" %}
-**Note**: **Content - In Progress**
-{% endhint %}
-
 **Release Version**: v0.11.0
 
 **Release Type**: Stable
@@ -16,13 +12,20 @@ Inji Certify v0.11.0 brings major enhancements focused on improving security, st
 
 ## Major Highlights/Features
 
-* **ECC K1 2019 Key Support**: Support added for signing and verification using ECC K1 2019 keys.
-* **Ed25519 Signing (2018 & 2020)**: Enabled signing of VC requests using Ed25519 keys (compliant with both 2018 and 2020 specs).
-* **Keycloak Integration**: Integrated with Keycloak for secure and standards-based authentication and authorization for VC issuance.
+* **Keycloak Integration**: Seamless integration with Keycloak has been introduced, providing secure, standards-based authentication aor verifiable credential issuance.
+
+* **Expanded Wallet Compatibility**: Inji Certify supports interoperability with other digital wallets that implement the OpenID for Verifiable Credentials (OpenID4VC) specification. We have successfully tested and now support integration with two such wallets: Talao and Altme.
+
+* **Expanded Cryptographic Algorithm Support in Inji Certify**
+Inji Certify now offers enhanced cryptographic flexibility through support for additional signing algorithms:
+ * **ECC K1 2019 Key Support**: Inji Certify supports signing and verification using ECC K1 2019 keys, enabling compatibility with a broader range of secure systems and ensuring robust security for verifiable credentials.
+ * **Ed25519 Signing (2018 & 2020)**: Verifiable credential requests can now be signed using Ed25519 keys, compliant with both 2018 and 2020 specifications. This enhancement ensures interoperability with diverse ecosystems and aligns with modern cryptographic standards.
+
 * **eSignet v1.5.1 Compatibility**: Full support for eSignet 1.5.1.
-* **Expanded Wallet Compatibility**: Inji Certify now supports wallets compliant with OpenID4VC specifications. We are currently supporting wallets such as Talaos and Altme.
+
 * **OpenID4VCI Compliance Improvements**: Docker Compose now supports redirection of the .well-known endpoint as per spec.
 * **Simplified Setup**: Dependency on Artifactory removed for streamlined deployment.
+
 
 ### Enhancements
 
@@ -30,6 +33,7 @@ Inji Certify v0.11.0 brings major enhancements focused on improving security, st
 * Enhanced ecosystem integration by supporting Keycloak and eSignet 1.5.1.
 * Support for Talaos and Altme wallets expands adoption in OpenID4VC ecosystems.
 * Alignments made with OpenID4VCI specs to improve compatibility and standard adherence.
+
 
 ### Bug Fixes
 
@@ -40,6 +44,7 @@ Inji Certify v0.11.0 brings major enhancements focused on improving security, st
 | [INJICERT-901](https://mosip.atlassian.net/browse/INJICERT-901) | Incorrect Required Claims in VC Issuance                                                            |
 | [INJICERT-902](https://mosip.atlassian.net/browse/INJICERT-902) | kid Not Set Correctly for did:jwk Verification                                                      |
 | [INJICERT-933](https://mosip.atlassian.net/browse/INJICERT-933) | Certify docker compose should also support redirection of the well-known as per OpenID4VCI          |
+
 
 ### Known Issues
 
@@ -74,8 +79,8 @@ The following table outlines the tested and certified compatibility of \<release
 
 # Documentation
 
-* **Functional Test Report (should cover Known Issues)**
-* **API Documentation**
+* **Functional Overview**
 * **Feature Documentation**
+* **API Documentation**
 * **Integration Guide**
-* **User Guide**
+* **QA Report**
