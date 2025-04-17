@@ -45,7 +45,7 @@ sequenceDiagram
 11. Using transactionId Inji v will fetch the data from DB and validate it using vc-verifier and return the response(11) Using transactionId Inji Verify Backed will fetch the data from DB and validate it using `vc-verifier` and returns the response
 12. Inji Verify UI renders the response accordingly
 
-#### **Sequence Diagram**
+#### Sequence Diagram - Upload/ Scan QR Code flow
 
 
 <figure><img src="../../.gitbook/assets/inji_verify_0.11.1_workflow.png" alt=""><figcaption></figcaption></figure>
