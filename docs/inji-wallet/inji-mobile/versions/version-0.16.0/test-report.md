@@ -57,11 +57,11 @@ Verification is performed on various configurations as mentioned below
 
 On Android Device:
 
-<figure><img src="../../../../.gitbook/assets/iwm-0.16.0-tr-1.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/iwm-0.16.0-tr-1.png" alt=""><figcaption></figcaption></figure>
 
 On iOS Device:
 
-<figure><img src="../../../../.gitbook/assets/iwm-0.16.0-tr-1.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/iwm-0.16.0-tr-1.png" alt=""><figcaption></figcaption></figure>
 
 ## Test execution statistics
 
@@ -71,16 +71,13 @@ Below are the test metrics by performing functional testing using mock MDS and m
 
 <table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Total</td><td valign="top">Passed</td><td valign="top">Failed</td><td valign="top">Skipped (N/A)</td></tr><tr><td valign="top">3163</td><td valign="top">2819</td><td valign="top">344</td><td valign="top">0</td></tr><tr><td valign="top">Test Rate: 100% With Pass Rate: 89%</td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
 
-
 Here is the detailed breakdown of metrics for each module:
 
-<table><thead><tr><th width="179.53265380859375" valign="top"></th><th valign="top"></th><th>Test cases</th></tr></thead><tbody><tr><td valign="top"><p> </p><p> </p><p> </p><p>On Android Device</p></td><td valign="top">Total</td><td>1675</td></tr><tr><td valign="top"></td><td valign="top">Passed</td><td>1502</td></tr><tr><td valign="top"></td><td valign="top">Failed</td><td>173</td></tr><tr><td valign="top"></td><td valign="top">Skipped (N/A)</td><td>0</td></tr><tr><td valign="top"><p> </p><p> </p><p> </p><p>On iOS Device</p><p> </p><p> </p></td><td valign="top">Total</td><td>1488</td></tr><tr><td valign="top"></td><td valign="top">Passed</td><td>1317</td></tr><tr><td valign="top"></td><td valign="top">Failed</td><td>171</td></tr><tr><td valign="top"></td><td valign="top">Skipped (N/A)</td><td>0</td></tr></tbody></table>
-
+<table><thead><tr><th width="179.53265380859375" valign="top"></th><th valign="top"></th><th>Test cases</th></tr></thead><tbody><tr><td valign="top">On Android Device</td><td valign="top">Total</td><td>1675</td></tr><tr><td valign="top"></td><td valign="top">Passed</td><td>1502</td></tr><tr><td valign="top"></td><td valign="top">Failed</td><td>173</td></tr><tr><td valign="top"></td><td valign="top">Skipped (N/A)</td><td>0</td></tr><tr><td valign="top">On iOS Device</td><td valign="top">Total</td><td>1488</td></tr><tr><td valign="top"></td><td valign="top">Passed</td><td>1317</td></tr><tr><td valign="top"></td><td valign="top">Failed</td><td>171</td></tr><tr><td valign="top"></td><td valign="top">Skipped (N/A)</td><td>0</td></tr></tbody></table>
 
 ### API verification results by modules
 
 The below section provides details on API test metrics by executing MOSIP functional automation Framework. All external API test executions were performed at module level isolation. Each end point is tested with the test data and expectations of each test data are mapped to assert the test case.
-
 
 <table data-header-hidden><thead><tr><th width="149.17474365234375" valign="top"></th><th width="158.32391357421875" valign="top"></th><th width="160.78125" valign="top"></th><th width="165.4027099609375" valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Total</td><td valign="top">Passed</td><td valign="top">Failed</td><td valign="top">Ignored</td><td valign="top">Skipped</td></tr><tr><td valign="top">176</td><td valign="top">143</td><td valign="top">0</td><td valign="top">33</td><td valign="top">0</td></tr><tr><td valign="top">Test Rate: 100% With Pass Rate: 100%</td><td valign="top"></td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
 
@@ -90,12 +87,9 @@ The below section provides details on Ui Automation by executing MOSIP functiona
 
 <table data-header-hidden><thead><tr><th width="258.0653076171875" valign="top"></th><th width="177.75286865234375" valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Total</td><td valign="top">Passed</td><td valign="top">Failed</td><td valign="top">Skipped</td></tr><tr><td valign="top">122</td><td valign="top">122</td><td valign="top">0</td><td valign="top">0</td></tr><tr><td valign="top">Test Rate: 100% With Pass Rate: 100%</td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
 
-
 Here is the detailed breakdown of metrics
 
-
-<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th></th></tr></thead><tbody><tr><td valign="top"> </td><td valign="top">Test cases</td><td></td></tr><tr><td valign="top"><p> </p><p> </p><p> </p><p>Android</p></td><td valign="top">Total</td><td>64</td></tr><tr><td valign="top">Passed</td><td valign="top">64</td><td></td></tr><tr><td valign="top">Failed</td><td valign="top">0</td><td></td></tr><tr><td valign="top">Skipped</td><td valign="top">0</td><td></td></tr><tr><td valign="top"><p> </p><p> </p><p>iOS</p></td><td valign="top">Total</td><td>58</td></tr><tr><td valign="top">Passed</td><td valign="top">58</td><td></td></tr><tr><td valign="top">Failed</td><td valign="top">0</td><td></td></tr><tr><td valign="top">Skipped</td><td valign="top">0</td><td></td></tr></tbody></table>
-
+<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th></th></tr></thead><tbody><tr><td valign="top"></td><td valign="top">Test cases</td><td></td></tr><tr><td valign="top">Android</td><td valign="top">Total</td><td>64</td></tr><tr><td valign="top">Passed</td><td valign="top">64</td><td></td></tr><tr><td valign="top">Failed</td><td valign="top">0</td><td></td></tr><tr><td valign="top">Skipped</td><td valign="top">0</td><td></td></tr><tr><td valign="top">iOS</td><td valign="top">Total</td><td>58</td></tr><tr><td valign="top">Passed</td><td valign="top">58</td><td></td></tr><tr><td valign="top">Failed</td><td valign="top">0</td><td></td></tr><tr><td valign="top">Skipped</td><td valign="top">0</td><td></td></tr></tbody></table>
 
 Functional and test rig code base branch which is used for the above metrics is:
 
@@ -107,141 +101,133 @@ Below are the test metrics by performing VC Sharing functionality on various dev
 
 <table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Total</td><td valign="top">Passed</td><td valign="top">Failed</td><td valign="top">Skipped</td></tr><tr><td valign="top">192</td><td valign="top">192</td><td valign="top">0</td><td valign="top">0</td></tr><tr><td valign="top">Test Rate: 100% With Pass Rate: 100%</td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
 
-
 ### Device and Component Details:
 
 ### Tested with Inji Components (qa-inji1)
 
-| Component Name                              | Version/Branch              |
-|---------------------------------------------|-----------------------------|
-| mosipdev/dsl-orchestrator                   | develop                     |
-| mosipdev/dsl-packetcreator                  | develop                     |
-| mosipid/data-share-service                  | 1.3.0-beta.2                |
-| mosipqa/dsl-orchestrator                    | develop                     |
-| mosipqa/dsl-packetcreator                   | develop                     |
-| mosipqa/inji-certify-with-plugins           | 0.11.x                      |
-| mosipqa/inji-verify-service                 | 0.11.x                      |
-| mosipqa/inji-verify-service                 | MOSIP-CONNECT-2025          |
-| mosipqa/inji-verify-service                 | develop                     |
-| mosipqa/inji-verify-ui                      | 0.11.x                      |
-| mosipqa/inji-verify-ui                      | MOSIP-CONNECT-2025          |
-| mosipqa/inji-verify-ui                      | develop                     |
-| mosipqa/inji-web                            | 0.12.x                      |
-| mosipqa/kernel-config-server                | develop                     |
-| mosipqa/keycloak-init                       | develop                     |
-| mosipqa/mimoto                              | 0.17.x                      |
-| mosipqa/postgres-init                       | develop                     |
-
-&#x20;
-
-&#x20;&#x20;
+| Component Name                    | Version/Branch     |
+| --------------------------------- | ------------------ |
+| mosipdev/dsl-orchestrator         | develop            |
+| mosipdev/dsl-packetcreator        | develop            |
+| mosipid/data-share-service        | 1.3.0-beta.2       |
+| mosipqa/dsl-orchestrator          | develop            |
+| mosipqa/dsl-packetcreator         | develop            |
+| mosipqa/inji-certify-with-plugins | 0.11.x             |
+| mosipqa/inji-verify-service       | 0.11.x             |
+| mosipqa/inji-verify-service       | MOSIP-CONNECT-2025 |
+| mosipqa/inji-verify-service       | develop            |
+| mosipqa/inji-verify-ui            | 0.11.x             |
+| mosipqa/inji-verify-ui            | MOSIP-CONNECT-2025 |
+| mosipqa/inji-verify-ui            | develop            |
+| mosipqa/inji-web                  | 0.12.x             |
+| mosipqa/kernel-config-server      | develop            |
+| mosipqa/keycloak-init             | develop            |
+| mosipqa/mimoto                    | 0.17.x             |
+| mosipqa/postgres-init             | develop            |
 
 ### Tested with Components - Released Environment
 
-| Component Name                              | Version/Branch              |
-|---------------------------------------------|-----------------------------|
-| mosipdev/authentication-demo-service        | develop                     |
-| mosipdev/captcha-validation-service         | develop                     |
-| mosipdev/credential-request-generator       | MOSIP-34070-v1210           |
-| mosipdev/dsl-orchestrator                   | develop                     |
-| mosipdev/dsl-packetcreator                  | develop                     |
-| mosipdev/id-repository-identity-service     | MOSIP-34070-v1210           |
-| mosipdev2/dsl-orchestrator                  | develop                     |
-| mosipdev2/dsl-packetcreator                 | develop                     |
-| mosipid/admin-service                       | 1.2.1.0                     |
-| mosipid/admin-ui                            | 1.2.0.1                     |
-| mosipid/artifactory-server                  | 0.10.0-INJI                 |
-| mosipid/artifactory-server                  | 1.4.1-ES                    |
-| mosipid/authentication-demo-service         | 1.2.0.1                     |
-| mosipid/authentication-internal-service     | 1.2.1.0                     |
-| mosipid/authentication-otp-service          | 1.2.1.0                     |
-| mosipid/authentication-service              | 1.2.1.0                     |
-| mosipid/biosdk-server                       | 1.2.0.1                     |
-| mosipid/commons-packet-service              | 1.2.0.1                     |
-| mosipid/compliance-toolkit-batch-job        | 1.4.0                       |
-| mosipid/compliance-toolkit-service          | 1.4.0                       |
-| mosipid/compliance-toolkit-ui               | 1.4.0                       |
-| mosipid/consolidator-websub-service         | 1.2.0.1                     |
-| mosipid/credential-service                  | 1.2.1.0                     |
-| mosipid/data-share-service                  | 1.2.0.1                     |
-| mosipid/data-share-service                  | 1.3.0-beta.2                |
-| mosipid/digital-card-service                | 1.2.0.1                     |
-| mosipid/dsl-orchestrator                    | 1.2.0.1                     |
-| mosipid/dsl-packetcreator                   | 1.2.0.1                     |
-| mosipid/esignet                             | 1.4.1                       |
-| mosipid/hotlist-service                     | 1.2.1.0                     |
-| mosipid/id-repository-vid-service           | 1.2.1.0                     |
-| mosipid/inji-certify                        | 0.10.0                      |
-| mosipid/inji-certify                        | 0.10.1                      |
-| mosipid/inji-verify                         | 0.10.0                      |
-| mosipid/inji-web                            | 0.11.1                      |
-| mosipid/kernel-auditmanager-service         | 1.2.0.1                     |
-| mosipid/kernel-auth-service                 | 1.2.0.1                     |
-| mosipid/kernel-idgenerator-service          | 1.2.0.1                     |
-| mosipid/kernel-keymanager-service           | 1.2.0.1                     |
-| mosipid/kernel-masterdata-service           | 1.2.1.0                     |
-| mosipid/kernel-notification-service         | 1.2.0.1                     |
-| mosipid/kernel-otpmanager-service           | 1.2.0.1                     |
-| mosipid/kernel-pridgenerator-service        | 1.2.0.1                     |
-| mosipid/kernel-ridgenerator-service         | 1.2.0.1                     |
-| mosipid/kernel-syncdata-service             | 1.2.1.0                     |
-| mosipid/mimoto                              | 0.15.0                      |
-| mosipid/mock-abis                           | 1.2.0.2                     |
-| mosipid/mock-identity-system                | 0.10.0                      |
-| mosipid/mock-mv                             | 1.2.0.2                     |
-| mosipid/mock-relying-party-service          | 0.10.0                      |
-| mosipid/mock-relying-party-ui               | 0.10.0                      |
-| mosipid/mock-smtp                           | 1.0.0                       |
-| mosipid/mosip-file-server                   | 1.2.0.1                     |
-| mosipid/oidc-ui                             | 1.4.1                       |
-| mosipid/partner-management-service          | 1.2.1.0                     |
-| mosipid/partner-onboarder                   | 1.2.0.1                     |
-| mosipid/pmp-ui                              | 1.2.0.2                     |
-| mosipid/policy-management-service           | 1.2.1.0                     |
-| mosipid/pre-registration-application-service| 1.2.0.1                     |
-| mosipid/pre-registration-batchjob           | 1.2.0.1                     |
-| mosipid/pre-registration-booking-service    | 1.2.0.1                     |
-| mosipid/pre-registration-captcha-service    | 1.2.0.1                     |
-| mosipid/pre-registration-datasync-service   | 1.2.0.1                     |
-| mosipid/pre-registration-ui                 | 1.2.0.1                     |
-| mosipid/print                               | 1.2.0.1                     |
-| mosipid/registration-client                 | 1.2.0.2                     |
-| mosipid/registration-processor-common-camel-bridge | 1.2.0.1              |
-| mosipid/registration-processor-dmz-packet-server | 1.2.0.1              |
-| mosipid/registration-processor-notification-service | 1.2.0.1            |
-| mosipid/registration-processor-registration-status-service | 1.2.0.1         |
-| mosipid/registration-processor-registration-transaction-service | 1.2.0.1      |
-| mosipid/registration-processor-reprocessor  | 1.2.0.1                     |
-| mosipid/registration-processor-stage-group-1| 1.2.0.1                     |
-| mosipid/registration-processor-stage-group-2| 1.2.0.1                     |
-| mosipid/registration-processor-stage-group-3| 1.2.0.1                     |
-| mosipid/registration-processor-stage-group-4| 1.2.0.1                     |
-| mosipid/registration-processor-stage-group-5| 1.2.0.1                     |
-| mosipid/registration-processor-stage-group-6| 1.2.0.1                     |
-| mosipid/registration-processor-stage-group-7| 1.2.0.1                     |
-| mosipid/registration-processor-workflow-manager-service | 1.2.0.1          |
-| mosipid/resident-service                    | 1.2.1.0                     |
-| mosipid/resident-ui                         | 0.9.0                       |
-| mosipid/websub-service                      | 1.2.0.1                     |
-| mosipqa/activemq-artemis                    | 1.1.5                       |
-| mosipqa/biosdk-server                       | develop                     |
-| mosipqa/mosip-artemis-keycloak              | develop                     |
-
+| Component Name                                                  | Version/Branch    |
+| --------------------------------------------------------------- | ----------------- |
+| mosipdev/authentication-demo-service                            | develop           |
+| mosipdev/captcha-validation-service                             | develop           |
+| mosipdev/credential-request-generator                           | MOSIP-34070-v1210 |
+| mosipdev/dsl-orchestrator                                       | develop           |
+| mosipdev/dsl-packetcreator                                      | develop           |
+| mosipdev/id-repository-identity-service                         | MOSIP-34070-v1210 |
+| mosipdev2/dsl-orchestrator                                      | develop           |
+| mosipdev2/dsl-packetcreator                                     | develop           |
+| mosipid/admin-service                                           | 1.2.1.0           |
+| mosipid/admin-ui                                                | 1.2.0.1           |
+| mosipid/artifactory-server                                      | 0.10.0-INJI       |
+| mosipid/artifactory-server                                      | 1.4.1-ES          |
+| mosipid/authentication-demo-service                             | 1.2.0.1           |
+| mosipid/authentication-internal-service                         | 1.2.1.0           |
+| mosipid/authentication-otp-service                              | 1.2.1.0           |
+| mosipid/authentication-service                                  | 1.2.1.0           |
+| mosipid/biosdk-server                                           | 1.2.0.1           |
+| mosipid/commons-packet-service                                  | 1.2.0.1           |
+| mosipid/compliance-toolkit-batch-job                            | 1.4.0             |
+| mosipid/compliance-toolkit-service                              | 1.4.0             |
+| mosipid/compliance-toolkit-ui                                   | 1.4.0             |
+| mosipid/consolidator-websub-service                             | 1.2.0.1           |
+| mosipid/credential-service                                      | 1.2.1.0           |
+| mosipid/data-share-service                                      | 1.2.0.1           |
+| mosipid/data-share-service                                      | 1.3.0-beta.2      |
+| mosipid/digital-card-service                                    | 1.2.0.1           |
+| mosipid/dsl-orchestrator                                        | 1.2.0.1           |
+| mosipid/dsl-packetcreator                                       | 1.2.0.1           |
+| mosipid/esignet                                                 | 1.4.1             |
+| mosipid/hotlist-service                                         | 1.2.1.0           |
+| mosipid/id-repository-vid-service                               | 1.2.1.0           |
+| mosipid/inji-certify                                            | 0.10.0            |
+| mosipid/inji-certify                                            | 0.10.1            |
+| mosipid/inji-verify                                             | 0.10.0            |
+| mosipid/inji-web                                                | 0.11.1            |
+| mosipid/kernel-auditmanager-service                             | 1.2.0.1           |
+| mosipid/kernel-auth-service                                     | 1.2.0.1           |
+| mosipid/kernel-idgenerator-service                              | 1.2.0.1           |
+| mosipid/kernel-keymanager-service                               | 1.2.0.1           |
+| mosipid/kernel-masterdata-service                               | 1.2.1.0           |
+| mosipid/kernel-notification-service                             | 1.2.0.1           |
+| mosipid/kernel-otpmanager-service                               | 1.2.0.1           |
+| mosipid/kernel-pridgenerator-service                            | 1.2.0.1           |
+| mosipid/kernel-ridgenerator-service                             | 1.2.0.1           |
+| mosipid/kernel-syncdata-service                                 | 1.2.1.0           |
+| mosipid/mimoto                                                  | 0.15.0            |
+| mosipid/mock-abis                                               | 1.2.0.2           |
+| mosipid/mock-identity-system                                    | 0.10.0            |
+| mosipid/mock-mv                                                 | 1.2.0.2           |
+| mosipid/mock-relying-party-service                              | 0.10.0            |
+| mosipid/mock-relying-party-ui                                   | 0.10.0            |
+| mosipid/mock-smtp                                               | 1.0.0             |
+| mosipid/mosip-file-server                                       | 1.2.0.1           |
+| mosipid/oidc-ui                                                 | 1.4.1             |
+| mosipid/partner-management-service                              | 1.2.1.0           |
+| mosipid/partner-onboarder                                       | 1.2.0.1           |
+| mosipid/pmp-ui                                                  | 1.2.0.2           |
+| mosipid/policy-management-service                               | 1.2.1.0           |
+| mosipid/pre-registration-application-service                    | 1.2.0.1           |
+| mosipid/pre-registration-batchjob                               | 1.2.0.1           |
+| mosipid/pre-registration-booking-service                        | 1.2.0.1           |
+| mosipid/pre-registration-captcha-service                        | 1.2.0.1           |
+| mosipid/pre-registration-datasync-service                       | 1.2.0.1           |
+| mosipid/pre-registration-ui                                     | 1.2.0.1           |
+| mosipid/print                                                   | 1.2.0.1           |
+| mosipid/registration-client                                     | 1.2.0.2           |
+| mosipid/registration-processor-common-camel-bridge              | 1.2.0.1           |
+| mosipid/registration-processor-dmz-packet-server                | 1.2.0.1           |
+| mosipid/registration-processor-notification-service             | 1.2.0.1           |
+| mosipid/registration-processor-registration-status-service      | 1.2.0.1           |
+| mosipid/registration-processor-registration-transaction-service | 1.2.0.1           |
+| mosipid/registration-processor-reprocessor                      | 1.2.0.1           |
+| mosipid/registration-processor-stage-group-1                    | 1.2.0.1           |
+| mosipid/registration-processor-stage-group-2                    | 1.2.0.1           |
+| mosipid/registration-processor-stage-group-3                    | 1.2.0.1           |
+| mosipid/registration-processor-stage-group-4                    | 1.2.0.1           |
+| mosipid/registration-processor-stage-group-5                    | 1.2.0.1           |
+| mosipid/registration-processor-stage-group-6                    | 1.2.0.1           |
+| mosipid/registration-processor-stage-group-7                    | 1.2.0.1           |
+| mosipid/registration-processor-workflow-manager-service         | 1.2.0.1           |
+| mosipid/resident-service                                        | 1.2.1.0           |
+| mosipid/resident-ui                                             | 0.9.0             |
+| mosipid/websub-service                                          | 1.2.0.1           |
+| mosipqa/activemq-artemis                                        | 1.1.5             |
+| mosipqa/biosdk-server                                           | develop           |
+| mosipqa/mosip-artemis-keycloak                                  | develop           |
 
 ### Devices Used For Testing
 
-| Device Name                  | Operating System | BLE Version |
-|------------------------------|------------------|-------------|
-| Vivo Y73                     | Android 12       | BLE 5.0     |
-| Samsung Galaxy A03 Core      | Android 11       | BLE 4.2     |
-| iPhone 11                    | iOS 15           | BLE 5.0     |
-| iPhone 8                     | iOS 16           | BLE 5.0     |
-| iPhone 7                     | iOS 15.6         | BLE 4.2     |
-| Redmi 7A                     | Android 10       | BLE 4.2     |
-| Redmi Note 10 Lite           | Android 10       | BLE 5.0     |
-| Redmi K20 Pro                | Android 11       | BLE 5.0     |
-
-
+| Device Name             | Operating System | BLE Version |
+| ----------------------- | ---------------- | ----------- |
+| Vivo Y73                | Android 12       | BLE 5.0     |
+| Samsung Galaxy A03 Core | Android 11       | BLE 4.2     |
+| iPhone 11               | iOS 15           | BLE 5.0     |
+| iPhone 8                | iOS 16           | BLE 5.0     |
+| iPhone 7                | iOS 15.6         | BLE 4.2     |
+| Redmi 7A                | Android 10       | BLE 4.2     |
+| Redmi Note 10 Lite      | Android 10       | BLE 5.0     |
+| Redmi K20 Pro           | Android 11       | BLE 5.0     |
 
 ### Detailed Test Metrics
 

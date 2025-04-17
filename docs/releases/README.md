@@ -4,6 +4,12 @@ icon: rocket-launch
 
 # Releases
 
+**Version: 0.11.0**
+
+* Name: Inji Certify 0.11.0
+* Date: Coming Soon
+* [Release Notes](https://docs.inji.io/releases/version-0.11.0)
+
 **Version: 0.10.2**
 
 * Name: Inji Certify 0.10.2
