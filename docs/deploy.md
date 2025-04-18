@@ -20,7 +20,12 @@ This Installation Guide is structured as below:
 
 ## Deployment Architecture \[TODO]
 
-Architecture Diagram to be updated.
+
+<figure><img src=".gitbook/assets/iww-deployment-diagram.png" alt=""><figcaption><p>Interface Overview</p></figcaption></figure>
+
+
+
+iww-deployment-diagram
 
 ## Prerequisites
 
