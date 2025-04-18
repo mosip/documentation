@@ -7,17 +7,17 @@ This Installation Guide is structured as below:
 
 1. System Requirements
 2. Deploy Prerequisites
-3. Deploy Inji ....
+3. Deploy Inji Web
 
-## Deployment Architecture \[TODO]
+### Deployment Architecture \[TODO]
 
 
 <figure><img src="../../../.gitbook/assets/iww-deployment-diagram.png" alt=""><figcaption><p>Inji Web Deployment Architecture</p></figcaption></figure>
 
 
-## Prerequisites
+# Prerequisites
 
-### Tools and utilities
+## Tools and utilities
 
 * [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html).
 * [Rancher](../rancher/).
@@ -34,20 +34,22 @@ This Installation Guide is structured as below:
 
     ```
 
-## System Requirements
+# System Requirements
 
 Ensure all required hardware and software dependencies are prepared before proceeding with the installation.
 
-* Hardware, network, certificate requirements
+* Hardware, Network and Certificate requirements
 
-### Hardware, network and certificate requirements
+## Hardware, network and certificate requirements
+
+## Hardware Requirements
 
 * Virtual Machines (VMs) can use any operating system as per convenience.
 * For this installation guide, Ubuntu OS is referenced throughout.
 
 <table><thead><tr><th width="78.82388305664062">Sl no.</th><th width="229.796875">Purpose</th><th width="86.9417724609375">vCPU's</th><th width="78.43328857421875">RAM</th><th width="93.8167724609375">Storage (HDD)</th><th width="70.8870849609375">no. of VM's</th><th>HA</th></tr></thead><tbody><tr><td>1.</td><td>Wireguard Bastion Host</td><td>2</td><td>4 GB</td><td>8 GB</td><td>1</td><td>(ensure to setup active-passive)</td></tr><tr><td>2.</td><td>Observation Cluster nodes</td><td>2</td><td>8 GB</td><td>32 GB</td><td>2</td><td>2</td></tr><tr><td>3.</td><td>Observation Nginx server (use Loadbalancer if required)</td><td>2</td><td>4 GB</td><td>16 GB</td><td>1</td><td>Nginx+</td></tr><tr><td>4.</td><td>Inji Stack Cluster nodes along with Nginx server, Use Loadbalancer if required</td><td>8</td><td>4 GB</td><td>32 GB</td><td>3</td><td>Allocate etcd, control plane and worker accordingly</td></tr></tbody></table>
 
-### Network Requirements
+## Network Requirements
 
 * All the VM's should be able to communicate with each other.
 * Need stable Intra network connectivity between these VM's.
@@ -56,11 +58,11 @@ Ensure all required hardware and software dependencies are prepared before proce
 
 <table><thead><tr><th width="98.49932861328125">Sl no.</th><th width="208.0589599609375">Purpose</th><th>Network Interfaces</th></tr></thead><tbody><tr><td>1.</td><td>Wireguard Bastion Host</td><td><em>One Private interface</em>: that is on the same network as all the rest of nodes (e.g.: inside local NAT Network).<br><br><em>One public interface</em>: Either has a direct public IP, or a firewall NAT (global address) rule that forwards traffic on 51820/udp port to this interface IP.</td></tr><tr><td>2.</td><td>K8 Cluster nodes</td><td>One internal interface: with internet access and that is on the same network as all the rest of nodes (e.g.: inside local NAT Network).</td></tr><tr><td>3.</td><td>Observation Nginx server</td><td>One internal interface: with internet access and that is on the same network as all the rest of nodes (e.g.: inside local NAT Network).</td></tr><tr><td>4.</td><td>Inji Nginx server</td><td><em>One internal interface</em>: that is on the same network as all the rest of nodes (e.g.: inside local NAT Network).<br><br><em>One public interface</em>: Either has a direct public IP, or a firewall NAT (global address) rule that forwards traffic on 443/tcp port to this interface IP.</td></tr></tbody></table>
 
-### DNS requirements \[TODO]
+## DNS requirements \[TODO]
 
 <table><thead><tr><th width="94.375732421875"></th><th width="165.60443115234375">Domain Name</th><th width="218.42828369140625">Mapping details</th><th>Purpose</th></tr></thead><tbody><tr><td>1.</td><td>rancher.xyz.net</td><td>Private IP of Nginx server or load balancer for Observation cluster</td><td>Rancher dashboard to monitor and manage the kubernetes cluster.</td></tr><tr><td>2.</td><td>keycloak.xyz.net</td><td>Private IP of Nginx server for Observation cluster</td><td>Administrative IAM tool (keycloak). This is for the kubernetes administration.</td></tr><tr><td>3.</td><td>sandbox.xyx.net</td><td>Private IP of Nginx server for MOSIP cluster</td><td>Index page for links to different dashboards of MOSIP env. (This is just for reference, please do not expose this page in a real production or UAT environment)</td></tr><tr><td>4.</td><td>api-internal.sandbox.xyz.net</td><td>Private IP of Nginx server for MOSIP cluster</td><td>Internal API’s are exposed through this domain. They are accessible privately over wireguard channel</td></tr><tr><td>5.</td><td>api.sandbox.xyx.net</td><td>Public IP of Nginx server for MOSIP cluster</td><td>All the API’s that are publically usable are exposed using this domain.</td></tr><tr><td>6.</td><td>iam.sandbox.xyz.net</td><td>Private IP of Nginx server for MOSIP cluster</td><td>MOSIP uses an OpenID Connect server to limit and manage access across all the services. The default installation comes with Keycloak. This domain is used to access the keycloak server over wireguard</td></tr><tr><td>7.</td><td>postgres.sandbox.xyz.net</td><td>Private IP of Nginx server for MOSIP cluster</td><td>This domain points to the postgres server. You can connect to postgres via port forwarding over wireguard</td></tr><tr><td>8.</td><td>onboarder.sandbox.xyz.net</td><td>Private IP of Nginx server for MOSIP cluster</td><td>Accessing reports of MOSIP partner onboarding over wireguard</td></tr><tr><td>9.</td><td>Web.sandbox.xyz.net</td><td>Public IP of Nginx server for MOSIP cluster</td><td>Accessing Inji Web portal publically</td></tr><tr><td>10.</td><td>certify.sandbox.xyz.net</td><td>Public IP of Nginx server for MOSIP cluster</td><td>Accessing Inji Certify portal publically</td></tr><tr><td>11.</td><td>verify.sandbox.xyz.net</td><td>Public IP of Nginx server for MOSIP cluster</td><td>Accessing Inji Verify portal publically</td></tr></tbody></table>
 
-### Certificate requirements
+## Certificate requirements
 
 As only secured https connections are allowed via nginx server will need below mentioned valid ssl certificates:
 
@@ -73,11 +75,12 @@ As only secured https connections are allowed via nginx server will need below m
    * This certificate must be stored inside the Nginx server VM for the inji cluster.
    * For example, a domain like \*.sandbox.xyz.net could serve as the corresponding example.
 
-## Tools to be installed on Personal Computers (Tools for Secure Access)
+
+# Tools to be installed on Personal Computers (Tools for Secure Access)
 
 Follow the steps mentioned [here](https://github.com/mosip/k8s-infra/tree/v1.2.0.2/mosip/on-prem#prerequisites) to install the required tools on your personal computer to create and manage the k8 cluster using RKE1.
 
-### Wireguard
+## Wireguard
 
 Secure access solution that establishes private channels to Observation and inji clusters.
 
@@ -139,7 +142,6 @@ _If you already have a Wireguard bastion host then you may skip this step._
     ```
 
 
-
 {% hint style="warning" %}
 **Note**:
 
@@ -179,11 +181,11 @@ sudo systemctl status wg-quick@wg0
 
 4. Once connected to wireguard, you should be now able to login using private IP’s.
 
-## Observation cluster setup and configuration
+# Observation cluster setup and configuration
 
 The observation cluster is a Kubernetes cluster used for monitoring and managing the overall infrastructure. It includes tools like Rancher for cluster management, Keycloak for IAM, and other monitoring and logging tools. Setting it up ensures that the infrastructure is properly monitored, managed, and secured.
 
-### Observation K8s Cluster setup:
+## Observation K8s Cluster setup:
 
 1. Install all the required tools mentioned in pre-requisites for the PC.
 
@@ -215,11 +217,11 @@ The observation cluster is a Kubernetes cluster used for monitoring and managing
 
 * Install Rancher UI.
 
-## Deploy Inji
+# Deploy Inji Web
 
-### Deployment Repos
+## Inji K8 Cluster setup
 
-#### Inji K8 Cluster setup:
+### K8 Cluster setup
 
 1. [k8s-infra](https://github.com/mosip/k8s-infra/tree/v1.2.0.1) : contains the scripts to install and configure Kubernetes cluster with required monitoring, logging and alerting tools.
 2. Clone the Kubernetes Infrastructure Repository:
@@ -238,27 +240,43 @@ cd k8s-infra/mosip/onprem
 5. Apply global config map: https://github.com/mosip/k8s-infra/blob/v1.2.0.2/mosip/global\_configmap.yaml.sample
 6. [Import](https://github.com/mosip/k8s-infra/tree/v1.2.0.2/mosip/on-prem#register-the-cluster-with-rancher) newly created K8 cluster to Rancher UI.
 
-**Nginx for Inji K8 Cluster**
+
+### Nginx for Inji K8 Cluster
 
 1. Setup [Nginx](https://github.com/mosip/k8s-infra/tree/v1.2.0.2/mosip/on-prem/nginx) for exposing services from newly created Inji K8 cluster.
 
-#### Inji K8 Cluster Configuration
+
+### K8 Cluster Configuration
 
 * Setup [NFS](https://github.com/mosip/k8s-infra/tree/v1.2.0.2/nfs#nfs-setup) for persistence in k8 cluster as well as standalone VM (Nginx VM).
 * Setup [Monitoring](https://github.com/mosip/k8s-infra/tree/v1.2.0.2/monitoring#cluster-monitoring) for K8 cluster Monitoring.
 * Setup [Logging](https://github.com/mosip/k8s-infra/tree/v1.2.0.2/logging#logging) for K8 cluster.
 * Setup [Istio](https://github.com/mosip/k8s-infra/tree/v1.2.0.2/mosip/on-prem/istio#istio) and kiali.
 
-## Deploying Inji
+
+# Deploying Inji
+
+## Postgres installation
 
 * Postgres installation: https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/external/postgres
+
+## conf-secret installation
 * conf-secret installation: https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/mosip/conf-secrets
+
+## config-server installation
+
 * config-server installation: https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/mosip/config-server
+
+## Artifactory installation
 * artifactory installation: https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/mosip/artifactory
-* NOTE: When installing Datashare,and Mimoto , ensure that the active\_profile\_env parameter in the config-map of the config-server-share is correctly set. Use the following environment profiles based on the respective services: default,inji-default,standalone
+  * **Note**: When installing Datashare and Mimoto, ensure that the active\_profile\_env parameter in the config-map of the config-server-share is correctly set. Use the following environment profiles based on the respective services: default,inji-default, standalone.
+
+## datashare installation
 * datashare installation: https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/mosip/datashare
+
+## mimoto installation
 * mimoto installation: https://github.com/mosip/mimoto/tree/develop/helm/mimoto
+
+## Inji web and datashare installation
 * Inji web and datashare installation: https://github.com/mosip/inji-web/tree/v0.10.0/helm/inji-web
-* Inji Verify installation: https://github.com/mosip/inji-verify/tree/v0.10.0
-* NOTE: When installing certify , ensure that the active\_profile\_env parameter in the config-map of the config-server-share is correctly set. Use the following environment profiles based on your requirment. For example : default,mock-identity
-* Inji Certify installation: https://github.com/mosip/inji-certify/tree/v0.9.1
+

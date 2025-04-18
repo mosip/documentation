@@ -265,10 +265,11 @@ cd k8s-infra/mosip/onprem
 * conf-secret installation: https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/mosip/conf-secrets
 * config-server installation: https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/mosip/config-server
 * artifactory installation: https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/mosip/artifactory
-* NOTE: When installing Datashare,and Mimoto , ensure that the active\_profile\_env parameter in the config-map of the config-server-share is correctly set. Use the following environment profiles based on the respective services: default,inji-default,standalone
+  * **Note**: When installing Datashare and Mimoto, ensure that the active\_profile\_env parameter in the config-map of the config-server-share is correctly set. Use the following environment profiles based on the respective services: default,inji-default, standalone.
 * datashare installation: https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/mosip/datashare
 * mimoto installation: https://github.com/mosip/mimoto/tree/develop/helm/mimoto
 * Inji web and datashare installation: https://github.com/mosip/inji-web/tree/v0.10.0/helm/inji-web
-* Inji Verify installation: https://github.com/mosip/inji-verify/tree/v0.10.0
-* NOTE: When installing certify , ensure that the active\_profile\_env parameter in the config-map of the config-server-share is correctly set. Use the following environment profiles based on your requirment. For example : default,mock-identity
 * Inji Certify installation: https://github.com/mosip/inji-certify/tree/v0.9.1
+  * **Note**: When installing certify , ensure that the active\_profile\_env parameter in the config-map of the config-server-share is correctly set. Use the following environment profiles based on your requirment. For example : default,mock-identity
+* Inji Verify installation: https://github.com/mosip/inji-verify/tree/v0.10.0
+
