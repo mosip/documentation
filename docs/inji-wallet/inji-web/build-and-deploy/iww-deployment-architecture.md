@@ -1,14 +1,16 @@
-# IWW Deployment Architecture
+# Deployment Architecture
 
-Inji Web Deployment Architecture
+## Deployment Architecture
 
 
+<figure><img src="../../../.gitbook/assets/iww-deployment-diagram.png" alt=""><figcaption><p>Inji Web Deployment Architecture</p></figcaption></figure>
 
-### Firewall <a href="#firewall" id="firewall"></a>
+
+### Firewall
 
 A firewall is a network security device that monitors and filters incoming and outgoing network traffic based on an organization's established security policies. It protects against outside cyberattacks by shielding the network from malicious or unnecessary network traffic. All incoming traffic from the internet is routed through the firewall.
 
-### Load Balancer <a href="#load-balancer" id="load-balancer"></a>
+### Load Balancer
 
 A load balancer is a network device or service that evenly distributes incoming network traffic across multiple servers or resources. It operates based on predetermined rules or algorithms and helps optimize the use of these resources. The primary purpose of a load balancer is to ensure that no single server becomes overwhelmed with traffic, thereby improving performance, availability, and reliability for users accessing a particular service or application.
 
@@ -20,17 +22,17 @@ Additionally, we use it in the following cases:
 4. UDP communication
 5. Reverse Proxy
 
-### IAM <a href="#iam" id="iam"></a>
+### IAM
 
 Wireguard is used as a trusted network extension to provide secure access to control and monitoring panels for operational team members, making sure that restricted APIs are not publically accessible.
 
 The internal IAM system is used to manage access control for the operation team and client management API calls from client management systems
 
-### Deployment Layers <a href="#deployment-layers" id="deployment-layers"></a>
+### Deployment Layers
 
 Deployment layers can be sectioned into the below three sections.
 
-#### Application Cluster <a href="#application-cluster" id="application-cluster"></a>
+#### Application Cluster
 
 eSignet application services are deployed in the form of pods in the Kubernetes cluster.
 
@@ -80,7 +82,7 @@ Local docker registry is used to improve restart timings of containers where the
 
 Kubernetes Secret is used for storing and managing sensitive information like DB passwords, keycloak secrets, etc.. that is required by application pods. It gives us more control over how sensitive information is used and reduces the risk of accidental exposure.
 
-#### Control Panel <a href="#control-panel" id="control-panel"></a>
+#### Control Panel
 
 Tools in the Control Panel will be used by operations team members to manage the deployment and maintain the uptime in the Kubernetes cluster
 
@@ -92,7 +94,7 @@ Rancher is a complete stack for managing containers. It addresses the operationa
 
 Helm chart is a package manager for Kubernetes-based Objects. For each module, multiple related components are grouped and their deployment scripts are packaged as hosted helm charts, so each module can be installed and upgraded independently.
 
-#### Monitoring Panel <a href="#monitoring-panel" id="monitoring-panel"></a>
+#### Monitoring Panel
 
 Monitoring Panel will be used by operations team members to observe the health of various application pods and debug specific issues using application logs.
 

@@ -21,11 +21,9 @@ This Installation Guide is structured as below:
 ## Deployment Architecture \[TODO]
 
 
-<figure><img src=".gitbook/assets/iww-deployment-diagram.png" alt=""><figcaption><p>Interface Overview</p></figcaption></figure>
+<figure><img src=".gitbook/assets/iww-deployment-diagram.png" alt=""><figcaption><p>Inji Web Deployment Architecture</p></figcaption></figure>
 
 
-
-iww-deployment-diagram
 
 ## Prerequisites
 
