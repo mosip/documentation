@@ -138,6 +138,8 @@
   * [Workflow](inji-certify/functional-overview/workflow.md)
 * [Setup](inji-certify/build-and-deploy/README.md)
   * [Local Setup](inji-certify/build-and-deploy/local-setup.md)
+  * [IWW Deployment Architecture](inji-certify/build-and-deploy/iww-deployment-architecture.md)
+  * [IWW Deployment Guide](inji-certify/build-and-deploy/iww-deployment-guide.md)
 
 ***
 
