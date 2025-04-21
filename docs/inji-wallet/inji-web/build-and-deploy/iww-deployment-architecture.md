@@ -1,10 +1,12 @@
+---
+hidden: true
+---
+
 # Deployment Architecture
 
 ## Deployment Architecture
 
-
 <figure><img src="../../../.gitbook/assets/iww-deployment-diagram.png" alt=""><figcaption><p>Inji Web Deployment Architecture</p></figcaption></figure>
-
 
 ### Firewall
 
@@ -48,13 +50,6 @@ This pod is responsible for serving the external property files to application s
 
 This pod will expose all the UI component files that are requested from the browser once the eSignet portal is accessed.
 
-<!-- 
-**eSignet Service**
-
-This is the actual backend service that exposes all the RESTful API endpoints, which includes all endpoints related to OIDC, VCI, UI, and client management. This service has a plugin-based mechanism to integrate with the ID system for actual user verification. It also connects to the below cluster for various needs.
-
--->
-
 **PostgreSQL DB Cluster**
 
 All the data related to client policies, consent, etc. are stored in this cluster. It should be a highly available cluster with necessary replication levels using solutions like Citus.
@@ -62,13 +57,6 @@ All the data related to client policies, consent, etc. are stored in this cluste
 **Redis Cache Cluster**
 
 All transactional caching needs are taken care of by the Redis cluster.
-
-<!-- 
-**HSM Cluster**
-
-This cluster provides the necessary security to the cryptographic keys used in the application. Access to this cluster should be allowed only from a few selected nodes to control access and improve security.
-
--->
 
 _**Note:**_ Below additional Kubernetes-compatible tools are also configured into the Kubernetes cluster to take care of security and routing needs.
 
