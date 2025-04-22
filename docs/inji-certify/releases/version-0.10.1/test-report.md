@@ -42,7 +42,7 @@ The verification methods may differ based on how the need was addressed.
 
 ## Feature Health
 
-<figure><img src="../../.gitbook/assets/inji_certify_components_0.10.0_release.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/inji_certify_components_0.10.0_release.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
 **Note**:

@@ -1,3 +1,7 @@
+---
+icon: circle-question
+---
+
 # FAQ
 
 <details>
