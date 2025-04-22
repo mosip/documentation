@@ -52,7 +52,7 @@ Verification is performed on configurations as mentioned below
 
 
 
-<figure><img src="../../../../.gitbook/assets/inji_certify_0.9.0_tr_feature_health.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/inji_certify_0.9.0_tr_feature_health.png" alt=""><figcaption></figcaption></figure>
 
 
 
