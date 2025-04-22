@@ -157,6 +157,8 @@
     * [Test Report](releases/version-0.9.0/test-report.md)
   * [Version 0.8.1](releases/release-notes.md)
   * [Version 0.8.0](releases/version-0.8.0.md)
+* [FAQ](faq/README.md)
+  * [FAQ](faq/faq.md)
 
 ## INJI VERIFY
 
