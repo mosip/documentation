@@ -4,7 +4,7 @@
 
 This guide is designed to help developers set up **Inji Certify** in their local environment, providing detailed instructions to replicate the platform's functionality for development or testing purposes.
 
-#### **1. Getting Started**
+## 1. Getting Started
 
 To begin, visit the **Inji Certify** repository on GitHub:
 
@@ -12,7 +12,7 @@ To begin, visit the **Inji Certify** repository on GitHub:
 
 The repository contains all the necessary files and instructions to set up Inji Certify on your local machine.
 
-#### **2. Prerequisites**
+## 2. Prerequisites
 
 Before proceeding with the installation, ensure you have the following installed:
 
@@ -24,11 +24,11 @@ Before proceeding with the installation, ensure you have the following installed
 
 Please visit the [**Pre-requisites**](https://github.com/mosip/inji-certify/blob/v0.10.1/docker-compose/docker-compose-injistack/README.md) section in the ReadME file to explore in detail.
 
-#### **3. Installation and Setup**
+## 3. Installation and Setup
 
 The setup involves deploying [**Inji Certify**](https://github.com/mosip/inji-certify/blob/v0.10.1/docker-compose/docker-compose-injistack/README.md) using Docker Compose. Follow the steps given in the [**README file**](https://github.com/mosip/inji-certify/blob/v0.10.1/README.md) within the Inji Certify repository.
 
-#### **4. Explore Inji Certify**
+## 4. Explore Inji Certify
 
 Once the setup is complete, you can start exploring the functionality of **Inji Certify**:
 
@@ -37,11 +37,11 @@ Once the setup is complete, you can start exploring the functionality of **Inji 
 
 For additional configuration and usage instructions, consult the documentation included in the repository.
 
-#### **5. Explore the APIs**
+## 5. Explore the APIs
 
 To explore all the available APIs of **Inji Certify**, refer to the [**API documentation**](https://mosip.stoplight.io/docs/inji-certify/25f435617408e-inji-certify) provided within the platform. This will allow you to interact with the various endpoints and understand their functionality in detail.
 
-#### **6. Additional Resources**
+## 6. Additional Resources
 
 For further insights and guidance on using **Inji Certify** effectively, refer to the following:
 
