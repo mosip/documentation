@@ -89,6 +89,6 @@ Inji Certify 0.9.0 represents a significant milestone in the evolution of the mo
 
 ### **Documentation**
 
-* [Feature Documentation](../../inji-certify/overview/features.md)
+* [Feature Documentation](../../features.md)
 * [QA Report](test-report.md)
-* [Local Setup](../../inji-certify/build-and-deploy/local-setup.md)
+* [Local Setup](../../../build-and-deploy/local-setup.md)

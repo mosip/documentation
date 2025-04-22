@@ -50,7 +50,7 @@ Verification is performed on configurations as mentioned below
 
 ## Feature Health
 
-<figure><img src="../../.gitbook/assets/inji-feature-health.jpg" alt=""><figcaption><p>Feature Health</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/inji-feature-health.jpg" alt=""><figcaption><p>Feature Health</p></figcaption></figure>
 
 {% hint style="info" %}
 **Note:**
