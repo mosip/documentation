@@ -3,11 +3,6 @@ icon: house
 ---
 
 # Overview
-
-## Empowering Users with Verifiable Credentials
-
-## Introduction
-
 Traditionally, institutes and organizations spend considerable time and effort maintaining user data, yet users often encounter challenges accessing services and benefits requiring information about themselves, their assets, and achievements. Inji Certify addresses this gap by enabling organizations to issue verifiable credentials and empowering users to securely store, share, and manage their data based on open standards and specifications.
 
 # Key Features of Inji Certify
@@ -16,10 +11,10 @@ Traditionally, institutes and organizations spend considerable time and effort m
 
 Inji Certify simplifies the creation of Verifiable Credentials (VCs) by enabling organizations to effortlessly generate and digitally sign them. This process ensures the authenticity and trustworthiness of each credential. By employing robust digital signatures, Inji Certify safeguards VCs against tampering and enables swift and reliable verification, enhancing trust and security for both issuers and recipients.
 
-* **Intuitive Credential Definition**: Easily define the structure and data fields of various credential types, such as diplomas, licenses, and certifications, through a user-friendly interface.
+* **Intuitive Credential Definition**: Easily define the structure and data fields of various credential types, such as diplomas, licenses, and certifications, through a user-friendly interface. <!-- Are we using some tool , Why say User Interface -->
 * **Data Integration**: Seamlessly integrate with existing databases and systems to automatically populate credential data, reducing manual entry and minimizing errors.
 * **Secure Key Management**: Leverage robust cryptographic techniques and secure key management practices to protect sensitive information and ensure the integrity of issued credentials.
-* **Efficient Signing Process**: Efficiently sign credentials using digital signatures, ensuring their authenticity, integrity, and tamper-proof nature.
+* **Efficient Signing Process**: Efficiently sign credentials using digital signatures, ensuring their authenticity, integrity, and tamper-proof nature. <!-- Here put the support for new signing algorithm IC - -->
 
 ## Interoperability
 
@@ -78,45 +73,11 @@ Inji Certify includes a revocation mechanism to ensure the integrity and trustwo
   * **Revocation List**: Maintains a registry of revoked credentials.
   * **API Interfaces**: Provides Revocation API for issuers to revoke credentials and Verification API for third parties to check credential status.
   * **Discovery API**: Enables discovery of the revocation list to ensure verifications are based on the latest information.
+  
 
 ## Multi-Tenancy Model
 
-* Multiple issuers can be onboarded on a single instance of Inji Certify, allowing diverse data providers to manage and issue credentials within the same platform while ensuring data security and integrity.
-
-
-# Segregation of eSignet VCI Component to Inji Certify
-Inji Certify, a platform for issuing and managing verifiable credentials (VCs), has enhanced its system by segregating the eSignet VCI component. This strategic move optimizes functionality and scalability.
-
-Important Update: Now eSignet VCI is known as Inji Certify Core!
-
-## What was eSignet VCI?
-
-**eSignet VCI** was a microservice for secure authentication, issuance, and verification of VCs, based on OAuth 2.0 and OpenID Connect protocols. It ensures reliable user authentication and promotes interoperability across systems.
-
-## Reasons for Segregation
-
-**1. Enhanced Specialization and Focus**
-
-* Separating eSignet VCI allows Inji Certify to focus on credential issuance while eSignet VCI concentrates on secure authentication and verification, improving efficiency.
-
-**2. Improved Scalability**
-
-* Each component can now scale independently based on demand, ensuring the platform handles varying loads effectively.
-
-**4. Streamlined Maintenance and Updates**
-
-* Independent updates and maintenance reduce downtime and allow for quicker deployment of enhancements and security patches.
-
-**5. Facilitating Multi-Tenancy**
-
-* The segregation will support multiple issuers on a single Inji Certify instance, ensuring data integrity and security for each issuer in the upcoming implementation of Inji Certify.
-
-## **How the Segregation Works**
-
-* **Modular Structure**: Now eSignet VCI is maintained as a separate module within the Inji Certify which offers an Inji Certify core under the Certify repository, ensuring a clear separation of concerns while maintaining a unified codebase.
-* **Enhanced Configuration**: Organizations can now configure Inji Certify core which offers the VC issuances independently to meet specific requirements, allowing for customized solutions.
-
-The segregation of eSignet VCI enhances Inji Certify’s performance and scalability, providing a robust solution for issuing and managing verifiable credentials. This strategic move ensures a more secure and efficient credentialing ecosystem for organizations and users.
+Multiple issuers can be onboarded on a single instance of Inji Certify, allowing diverse data providers to manage and issue credentials within the same platform while ensuring data security and integrity.
 
 
 # Conclusion

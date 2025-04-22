@@ -3,10 +3,10 @@
 ## How does Inji Certify work?
 
 1. **Database Integration**: Inji Certify enables issuers to connect with existing databases to issue VCs. It assumes the source database has a primary key for each data record and information required to authenticate a user (e.g., phone, email, or other personal information).
-2. **Credential Schema Configuration**: Issuers can configure their credential schemas for various types of certificates they wish to issue, ensuring alignment with W3C VC v1.1 standards.
+2. **Credential Schema Configuration**: Issuers can configure their credential schemas for various types of certificates they wish to issue, ensuring alignment with W3C VC v1.1 standards. <!-- Link this standard -->
 3. **VC Issuance**: Authorized methods return VCs of an individual in linked data-proof (JSON-LD) and JWT formats.
 
-## Verifiable Credentials Issuance Through Inji Certify
+## Verifiable Credentials Issuance with Inji Certify
 
 ### Overview
 
@@ -58,11 +58,3 @@ Inji Certify employs OpenID4VCI, an extension of the OAuth 2.0 protocol, for sec
 1. **Standards-Based Interaction**: Establishes compatibility with various digital wallet providers.
 2. **Reliable User Authentication**: Authenticates individuals before issuing credentials.
 3. **Wallet-Initiated Flow**: Supports a streamlined flow where VCs are delivered just in time upon request from the user’s wallet.
-
-## **Segregation of eSignet VCI Component to Inji Certify**
-
-Inji Certify, a platform for issuing and managing verifiable credentials (VCs), has enhanced its system by segregating the **eSignet VCI component**. This strategic move optimizes functionality and scalability.
-
-{% hint style="info" %}
-**Important Update: Now eSignet VCI is known as Inji Certify Core!**
-{% endhint %}
