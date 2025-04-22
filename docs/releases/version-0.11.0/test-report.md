@@ -43,7 +43,7 @@ Verification is performed on configurations as mentioned below
 
 ## Feature Health
 
-<figure><img src="../../../.gitbook/assets/ic-0-11-0-tr-1.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ic-0-11-0-tr-1.png" alt="" width="188"><figcaption></figcaption></figure>
 
 Note:
 

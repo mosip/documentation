@@ -53,7 +53,7 @@ The following table outlines the tested and certified compatibility of Inji Cert
 
 ### **Known Issues**
 
-Below is the list of known issues. To read in detail and view all the topics related to Inji Certify please click [here](https://mosip.atlassian.net/issues/?filter=11419\&jql=project%20%3D%20%22Inji%20Certify%22%20AND%20issuetype%20%3D%20Bug%20%20AND%20labels%20not%20in%20\(API\_Automation%2C%20AWSdevicefarm%2C%20device\_specific%2C%20qa-inji-UI-auto\)%20%20%20%20ORDER%20BY%20created%20DESC%2C%20updated%20DESC%2C%20cf%5B10039%5D%20)**.**
+Below is the list of known issues. To read in detail and view all the topics related to Inji Certify please click [here](https://mosip.atlassian.net/issues/?filter=11419\&jql=project%20%3D%20%22Inji%20Certify%22%20AND%20issuetype%20%3D%20Bug%20%20AND%20labels%20not%20in%20\(API_Automation%2C%20AWSdevicefarm%2C%20device_specific%2C%20qa-inji-UI-auto\)%20%20%20%20ORDER%20BY%20created%20DESC%2C%20updated%20DESC%2C%20cf%5B10039%5D%20)**.**
 
 | Jira ID                                                             | Description                                                                                                                                  |
 | ------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
