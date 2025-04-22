@@ -137,6 +137,7 @@
   * [Components](inji-certify/technical-overview/components.md)
   * [Tested Operating Systems](inji-certify/technical-overview/supported-browsers.md)
 * [Test](inji-certify/functional-overview/README.md)
+  * [Functional Overview](inji-certify/functional-overview/functional-overview.md)
   * [Workflow](inji-certify/functional-overview/workflow.md)
 * [Setup](inji-certify/build-and-deploy/README.md)
   * [Local Setup](inji-certify/build-and-deploy/local-setup.md)
