@@ -173,6 +173,7 @@
     * [Inji Verify - Collab Guide](inji-verify/functional-overview/releases-1/inji-verify-collab-guide.md)
   * [Workflow](inji-verify/functional-overview/workflow.md)
   * [End User Guide](inji-verify/functional-overview/end-user-guide.md)
+  * [Functional Overview](inji-verify/functional-overview/functional-overview.md)
 * [Setup](inji-verify/build-and-deploy/README.md)
   * [Local Setup](inji-verify/build-and-deploy/local-setup.md)
   * [Generate QR Code](inji-verify/build-and-deploy/creating-verifiable-credentials-and-generating-qr-codes.md)
