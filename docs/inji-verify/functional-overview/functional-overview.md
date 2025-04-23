@@ -4,7 +4,11 @@
 
 The portal displays valid credentials securely, including detailed information such as name, DOB, gender, expiration date, and associated claims, in a user-friendly interface. Inji Verify employs encryption techniques to protect sensitive information and prevent tampering.
 
+<!--
+
 _\<in 0.13.0 release- mention how Inji Verify components- Scan/Upload and VP verification components can be easily integrated to relying party apps instead of using Inji Verify as a standalone app>_
+
+-->
 
 Compatible with desktops, mobile devices, and laptops, Inji Verify includes a mobile responsive version with back camera capability. While tablet responsiveness is under development, users can access Inji Verify from anywhere with an internet connection.
 
