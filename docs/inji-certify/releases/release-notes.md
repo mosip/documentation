@@ -6,7 +6,7 @@
 
 **Release Date**: 17th May, 2024
 
-### **Overview**  <a href="#overview" id="overview"></a>
+## Overview
 
 Version 0.8.1 introduces significant enhancements to streamline the management and issuance of verifiable credentials using the Sunbird platform. Key updates include:
 

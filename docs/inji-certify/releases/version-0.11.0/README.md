@@ -8,15 +8,15 @@
 
 **Release** **Date**: Coming Up
 
-### Overview
+## Overview
 
 Inji Certify v0.11.0 brings major enhancements focused on improving security, standards compliance, and interoperability in verifiable credential issuance. This release expands cryptographic support, simplifies deployment, strengthens identity integration, and aligns closely with OpenID4VC and OpenID4VCI specifications. It also introduces initial support for third-party wallets and identity platforms, making Inji Certify more versatile and extensible in digital ID ecosystems.
 
-### Major Highlights/Features
+## Major Highlights/Features
 
 * **Keycloak Integration**: Seamless integration with Keycloak has been introduced, providing secure, standards-based authentication aor verifiable credential issuance.
 * **Expanded Wallet Compatibility**: Inji Certify supports interoperability with other digital wallets that implement the OpenID for Verifiable Credentials (OpenID4VC) specification. We have successfully tested and now support integration with two such wallets: Talao and Altme.
-* **Expanded Cryptographic Algorithm Support in Inji Certify**\
+* **Expanded Cryptographic Algorithm Support in Inji Certify**
   Inji Certify now offers enhanced cryptographic flexibility through support for additional signing algorithms:
   * **ECC K1 2019 Key Support**: Inji Certify supports signing and verification using ECC K1 2019 keys, enabling compatibility with a broader range of secure systems and ensuring robust security for verifiable credentials.
   * **Ed25519 Signing (2018 & 2020)**: Verifiable credential requests can now be signed using Ed25519 keys, compliant with both 2018 and 2020 specifications. This enhancement ensures interoperability with diverse ecosystems and aligns with modern cryptographic standards.
@@ -24,14 +24,14 @@ Inji Certify v0.11.0 brings major enhancements focused on improving security, st
 * **OpenID4VCI Compliance Improvements**: Docker Compose now supports redirection of the .well-known endpoint as per spec.
 * **Simplified Setup**: Dependency on Artifactory removed for streamlined deployment.
 
-#### Enhancements
+## Enhancements
 
 * Improved cryptographic flexibility through support of ECC K1 2019 and Ed25519 key types.
 * Enhanced ecosystem integration by supporting Keycloak and eSignet 1.5.1.
 * Support for Talaos and Altme wallets expands adoption in OpenID4VC ecosystems.
 * Alignments made with OpenID4VCI specs to improve compatibility and standard adherence.
 
-#### Bug Fixes
+## Bug Fixes
 
 | **JIRA**                                                        | **Description**                                                                                     |
 | --------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
@@ -50,7 +50,7 @@ Below is the list of known issues. To read in detail and view all the topics rel
 | [ES-2289](https://mosip.atlassian.net/browse/ES-2289)           | Esignet Oauth API is failing intermittently                                    |
 | [INJIVER-1069](https://mosip.atlassian.net/browse/INJIVER-1069) | The MOSIP UIN VC's created from reg-client are not verifiable from INJI-verify |
 
-### Repository Released
+## Repository Released
 
 | **Repositories**           | **Tags Released** |
 | -------------------------- | ----------------- |
@@ -60,7 +60,7 @@ Below is the list of known issues. To read in detail and view all the topics rel
 | inji-config                |                   |
 | keymanager                 |                   |
 
-### Compatible Modules
+## Compatible Modules
 
 The following table outlines the tested and certified compatibility of \<release version> with other modules.
 
@@ -72,7 +72,7 @@ The following table outlines the tested and certified compatibility of \<release
 | commons              | [v1.3.0-beta.1](https://github.com/mosip/commons/tree/v1.3.0-beta.1)            |
 | mock-identity-system | [v0.10.1](https://github.com/mosip/esignet-mock-services/tree/v0.10.0)          |
 
-## Documentation
+# Documentation
 
 * **Functional Overview**
 * **Feature Documentation**

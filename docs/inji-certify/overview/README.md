@@ -15,6 +15,9 @@ Inji Certify simplifies the creation of Verifiable Credentials (VCs) by enabling
 * **Data Integration**: Seamlessly integrate with existing databases and systems to automatically populate credential data, reducing manual entry and minimizing errors.
 * **Secure Key Management**: Leverage robust cryptographic techniques and secure key management practices to protect sensitive information and ensure the integrity of issued credentials.
 * **Efficient Signing Process**: Efficiently sign credentials using digital signatures, ensuring their authenticity, integrity, and tamper-proof nature. <!-- Here put the support for new signing algorithm IC - -->
+  * Inji Certify now offers enhanced cryptographic flexibility through support for additional signing algorithms:
+   * **ECC K1 2019 Key Support**: Inji Certify supports signing and verification using ECC K1 2019 keys, enabling compatibility with a broader range of secure systems and ensuring robust security for verifiable credentials.
+   * **Ed25519 Signing (2018 & 2020)**: Verifiable credential requests can now be signed using Ed25519 keys, compliant with both 2018 and 2020 specifications. This enhancement ensures interoperability with diverse ecosystems and aligns with modern cryptographic standards.
 
 ## Interoperability
 
@@ -73,9 +76,9 @@ Inji Certify includes a revocation mechanism to ensure the integrity and trustwo
   * **Revocation List**: Maintains a registry of revoked credentials.
   * **API Interfaces**: Provides Revocation API for issuers to revoke credentials and Verification API for third parties to check credential status.
   * **Discovery API**: Enables discovery of the revocation list to ensure verifications are based on the latest information.
-  
 
-## Multi-Tenancy Model
+
+## Multi-Tenancy Model (Coming Soon)
 
 Multiple issuers can be onboarded on a single instance of Inji Certify, allowing diverse data providers to manage and issue credentials within the same platform while ensuring data security and integrity.
 
