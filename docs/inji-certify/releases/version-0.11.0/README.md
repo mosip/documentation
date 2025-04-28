@@ -1,7 +1,5 @@
 # Version 0.11.0
 
-## Version 0.11.0
-
 **Release Version**: v0.11.0
 
 **Release Type**: Stable
