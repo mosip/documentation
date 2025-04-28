@@ -74,8 +74,7 @@ The following table outlines the tested and certified compatibility of \<release
 
 # Documentation
 
-* **Functional Overview**
-* **Feature Documentation**
-* **API Documentation**
-* **Integration Guide**
-* **QA Report**
+* [Functional Overview](https://docs.inji.io/inji-certify/overview)
+* [Feature Documentation](https://docs.inji.io/inji-certify/overview/features)
+* [API Documentation](https://mosip.stoplight.io/docs/inji-certify/25f435617408e-inji-certify)
+* [QA Report](https://docs.inji.io/inji-certify/releases/version-0.11.0/test-report)
