@@ -55,7 +55,7 @@ Ensure all required hardware and software dependencies are prepared before proce
 | 1.     | Wireguard Bastion Host                                                 | 2      | 4 GB  | 8 GB          | 1           | (ensure to setup active-passive)     |
 | 2.     | Observation Cluster nodes                                              | 2      | 8 GB  | 32 GB         | 2           | 2                                     |
 | 3.     | Observation Nginx server (use Loadbalancer if required)                | 2      | 4 GB  | 16 GB         | 1           | Nginx+                                |
-| 4.     | Inji Stack Cluster nodes along with Nginx server, Use Loadbalancer if required | 8      | 4 GB  | 32 GB         | 3           | Allocate etcd, control plane and worker accordingly |
+| 4.     | Inji Stack Cluster nodes along with Nginx server, Use Loadbalancer if required | 8      | 32 GB  | 64 GB         | 3           | Allocate etcd, control plane and worker accordingly |
 
 ### Network Requirements
 
@@ -83,9 +83,9 @@ Ensure all required hardware and software dependencies are prepared before proce
 | 6.     | iam.sandbox.xyz.net          | Private IP of Nginx server for MOSIP cluster             | MOSIP uses an OpenID Connect server (default: Keycloak) to manage access across services. Accessible over Wireguard. |
 | 7.     | postgres.sandbox.xyz.net     | Private IP of Nginx server for MOSIP cluster             | Points to the Postgres server. Connect via port forwarding over Wireguard.                 |
 | 8.     | onboarder.sandbox.xyz.net    | Private IP of Nginx server for MOSIP cluster             | Accessing reports of MOSIP partner onboarding over Wireguard.                              |
-| 9.     | web.sandbox.xyz.net          | Public IP of Nginx server for MOSIP cluster              | Accessing Inji Web portal publicly.                                                        |
-| 10.    | certify.sandbox.xyz.net      | Public IP of Nginx server for MOSIP cluster              | Accessing Inji Certify portal publicly.                                                    |
-| 11.    | verify.sandbox.xyz.net       | Public IP of Nginx server for MOSIP cluster              | Accessing Inji Verify portal publicly.                                                     |
+| 9.     | injiweb.sandbox.xyz.net      | Public IP of Nginx server for MOSIP cluster              | Accessing Inji Web portal publicly.                                                        |
+| 10.    | injicertify.sandbox.xyz.net  | Public IP of Nginx server for MOSIP cluster              | Accessing Inji Certify portal publicly.                                                    |
+| 11.    | injiverify.sandbox.xyz.net   | Public IP of Nginx server for MOSIP cluster              | Accessing Inji Verify portal publicly.                                                     |
 
 ### Certificate requirements
 
@@ -278,6 +278,10 @@ cd k8s-infra/mosip/onprem
 
 * Postgres installation: https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/external/postgres
 
+### Object store installation
+* Object store installation:  https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/external/object-store
+
+
 ### conf-secret installation
 
 * conf-secret installation: https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/mosip/conf-secrets
@@ -288,12 +292,15 @@ cd k8s-infra/mosip/onprem
 
 ### Artifactory installation
 
-* artifactory installation: https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/mosip/artifactory
+* artifactory installation: https://github.com/mosip/artifactory-ref-impl/tree/v0.10.0-INJI/deploy
+<!-- 
   * **Note**: When installing Datashare and Mimoto, ensure that the active\_profile\_env parameter in the config-map of the config-server-share is correctly set. Use the following environment profiles based on the respective services: default,inji-default, standalone.
 
 ### datashare installation
 
 * datashare installation: https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/mosip/datashare
+
+-->
 
 ### mimoto installation
 
@@ -302,3 +309,5 @@ cd k8s-infra/mosip/onprem
 ### Inji web and datashare installation
 
 * Inji web and datashare installation: https://github.com/mosip/inji-web/tree/v0.10.0/helm/inji-web
+
+* **Note**: After installing inji web and datashare, ensure that the active_profile_env parameter in the config-map of the config-server-share is correctly set to: default,inji-default,standalone.
