@@ -69,16 +69,31 @@ We are excited to announce the release of **Inji Wallet Version 0.16.0!** This u
 
 | **Module**                | **Version** |
 | ------------------------- | ----------- |
-| Inji Mobile Wallet        | **0.16.0**  |
+| Inji Mobile Wallet        | [0.16.0](https://github.com/mosip/inji-wallet/tree/v0.16.0)      |
+| inji-openid4vp-ios-swift  | [v1.2.0](https://github.com/mosip/inji-openid4vp-ios-swift/tree/v0.2.0)       |
+| inji-openid4vp            | [v1.2.0](https://github.com/mosip/inji-openid4vp/tree/v0.2.0)       |
+| tuvali                    | [v0.5.2](https://github.com/mosip/tuvali/tree/v0.5.2) |
+
+
+
+
+
+
 | vc-verifier               | 1.1.0       |
-| inji-openid4vp-ios-swift  | 0.1.0       |
-| inji-openid4vp            | 0.1.0       |
+
+
 | inji-vci-client-ios-swift | 0.2.0       |
 | inji-vci-client           | 0.2.0       |
 | secure-keystore-ios-swift | 0.3.0       |
 | secure-keystore           | 0.3.0       |
 | pixelpass-ios-swift       | 0.6.0       |
 | pixelpass                 | 0.6.0       |
+
+
+
+
+
+
 
 ### **Compatible Modules**
 
