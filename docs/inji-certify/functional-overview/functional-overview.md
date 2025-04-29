@@ -1,5 +1,9 @@
 # Functional Overview
 
+## Overview
+
+Verifiable Credentials (VCs) are digital representations of physical credentials such as passports and licenses. These credentials are cryptographically signed, ensuring tamper resistance and immediate verifiability. VCs empower users by allowing them to store credentials in digital wallets and seamlessly access various services.
+
 ## How does Inji Certify work?
 
 1. **Database Integration**: Inji Certify enables issuers to connect with existing databases to issue VCs. It assumes the source database has a primary key for each data record and information required to authenticate a user (e.g., phone, email, or other personal information).
@@ -7,12 +11,6 @@
 3. **VC Issuance**: Authorized methods return VCs of an individual in linked data-proof (JSON-LD) and JWT formats.
 
 ## Verifiable Credentials Issuance with Inji Certify
-
-### Overview
-
-Verifiable Credentials (VCs) are digital representations of physical credentials such as passports and licenses. These credentials are cryptographically signed, ensuring tamper resistance and immediate verifiability. VCs empower users by allowing them to store credentials in digital wallets and seamlessly access various services.
-
-### Inji Certify for VC Issuance
 
 Inji Certify is a powerful and versatile platform designed for seamless issuance of Verifiable Credentials (VCs). It leverages a robust architecture that integrates with existing credential registries, enabling organizations to efficiently and securely issue standards-compliant VCs.
 
@@ -23,13 +21,13 @@ Key features of Inji Certify for VC Issuance include:
 * **Efficient Issuance:** Enables the efficient issuance of VCs in the industry-standard JSON-LD format.
 * **Enhanced Security:** Incorporates robust security measures to protect the integrity and confidentiality of issued credentials.
 
-### Plugin Integration
+# Plugin Integration
 
 Inji Certify supports a flexible plugin architecture that allows for seamless integration with various external systems and data sources. This plugin architecture enhances the platform's adaptability and allows for customization to meet diverse credentialing needs.
 
 The plugins are categorized into two main types:
 
-#### VC Issuance Plugins:
+## VC Issuance Plugins
 
 * **Role:** VC Issuance Plugins are responsible for the core process of generating and issuing Verifiable Credentials (VCs).
 * **Functionality:**
@@ -41,7 +39,7 @@ The plugins are categorized into two main types:
   * **MOSIP IDA Certify Plugin:** This plugin integrates with the **Mosip National ID System**, a real-world identity platform. It retrieves verified identity information from the Mosip National ID System and utilizes this data to generate and issue VCs.
   * **Sunbird RC Certify Plugin:** This plugin interacts with the **Sunbird RC registry**, a platform for managing learning resources and learner data. It retrieves relevant data from the Sunbird RC registry, such as academic records and certifications, and generates and issues VCs based on this retrieved information.
 
-#### Data Provider Plugins
+## Data Provider Plugins
 
 * **Role:** Data Provider Plugins are responsible for fetching relevant data from external sources or registries.
 * **Functionality:**
@@ -51,7 +49,7 @@ The plugins are categorized into two main types:
   * **Mock CSV Data Provider Plugin:** This plugin retrieves data from a **CSV file** that acts as a sample data source or a simplified registry. It extracts relevant information from the CSV file and provides it to a connected VC Issuance Plugin. This plugin is useful for testing and development purposes, allowing for easy simulation of data from various sources.
   * **Postgres Data Provider Plugin:** This plugin connects to a **PostgreSQL database** that acts as a data repository. It retrieves relevant data (e.g., user profiles, academic records) from the specified tables within the PostgreSQL database and provides this data to a connected VC Issuance Plugin for further processing.
 
-#### Authentication and Credential Transfer
+# Authentication and Credential Transfer
 
 Inji Certify employs OpenID4VCI, an extension of the OAuth 2.0 protocol, for secure and interoperable credential issuance. This mechanism ensures:
 

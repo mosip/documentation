@@ -51,7 +51,8 @@ For regression check, “MOSIP Test Rig” - an automation testing suite - which
 
 Verification is performed on various configurations as mentioned below
 
-* Default configuration - with 1 Lang
+* Default configuration with 1 language (English).
+* Tested the application with languages including Filipino, Arabic, Kannada, Hindi and Tamil.
 
 ## Feature Health
 
@@ -243,3 +244,6 @@ Failed Test Case Coverage: It measures the percentage of all failed test cases. 
 
 * Well known story verification was performed against the collab env.
 * Other story verification performed against released env.
+
+
+Github link for the xls file is [**here**](https://github.com/mosip/test-management/tree/master/inji/0.16.0)
