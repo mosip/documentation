@@ -1,8 +1,7 @@
-# Deployment Guide
+# Inji Deployment Guide
 
-## Inji Web Deployment Guide
 
-### How is this guide organized?
+## How is this guide organized?
 
 This Installation Guide is structured as below:
 
