@@ -269,7 +269,7 @@ cd k8s-infra/mosip/onprem
 
 ## Deploying Inji
 
-###Pre-requisites
+### Pre-requisites
 * `inji-stack-config` configmap: For inji K8's env, `inji-stack-config` configmap in `default` namespace contains Domain related information. Follow below steps to add domain details for `inji-stack-config` configmap.
 * Update the domain names in `inji-stack-cm.yaml` correctly for your environment.
     ```
@@ -562,6 +562,6 @@ cd k8s-infra/mosip/onprem
 
 ### Inji web and datashare installation
 
-* [Inji web and datashare installation](https://github.com/mosip/inji-web/tree/v0.10.0/helm/inji-web)
+* [Inji web and datashare installation](https://github.com/mosip/inji-web/tree/develop/deploy)
 
 * **Note**: After installing inji web and datashare, ensure that the active_profile_env parameter in the config-map of the config-server-share is correctly set to: default,inji-default,standalone.
