@@ -303,17 +303,18 @@ cd k8s-infra/mosip/onprem
 
 ### Postgres installation
 
-* Postgres installation: https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/external/postgres
+* [Postgres installation](https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/external/postgres)
 
 ### Object store installation
-* Object store installation:  https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/external/object-store
+* [Object store installation](https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/external/object-store)
 
 
 ### conf-secret installation
 
-* conf-secret installation: https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/mosip/conf-secrets
+* [conf-secret installation](https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/mosip/conf-secrets)
 
 ### config-server installation
+
 * Create a `values.yaml` file that will contain the configuration for the chart and send it to your config-server installation.
   ```
    touch values.yaml
@@ -542,11 +543,9 @@ cd k8s-infra/mosip/onprem
   ./confiserver.sh
   ```
 
- 
-
 ### Artifactory installation
 
-* artifactory installation: https://github.com/mosip/artifactory-ref-impl/tree/v0.10.0-INJI/deploy
+* [artifactory installation](https://github.com/mosip/artifactory-ref-impl/tree/v0.10.0-INJI/deploy)
 <!-- 
   * **Note**: When installing Datashare and Mimoto, ensure that the active\_profile\_env parameter in the config-map of the config-server-share is correctly set. Use the following environment profiles based on the respective services: default,inji-default, standalone.
 
@@ -558,10 +557,11 @@ cd k8s-infra/mosip/onprem
 
 ### mimoto installation
 
+
 * mimoto installation: https://github.com/mosip/mimoto/tree/develop/deploy
 
 ### Inji web and datashare installation
 
-* Inji web and datashare installation: https://github.com/mosip/inji-web/tree/v0.10.0/helm/inji-web
+* [Inji web and datashare installation](https://github.com/mosip/inji-web/tree/v0.10.0/helm/inji-web)
 
 * **Note**: After installing inji web and datashare, ensure that the active_profile_env parameter in the config-map of the config-server-share is correctly set to: default,inji-default,standalone.
