@@ -474,11 +474,11 @@ cd k8s-infra/mosip/onprem
     
     ````
 
-* Create a file named configserver.sh:
+* Create a file named `configserver.sh`:
   ```
-  touch confiserver.sh
+  touch configserver.sh
   ```
-* Open the file and paste the following content into it in the same directory where values.yaml is created.
+* Open the file and paste the following content into it in the same directory where `values.yaml` is created.
     ````
     #!/bin/bash
     # Installs config-server
@@ -538,8 +538,8 @@ cd k8s-infra/mosip/onprem
 
 * Run the Script
   ```
-  chmod +x confiserver.sh
-  ./confiserver.sh
+  chmod +x configserver.sh
+  ./configserver.sh
   ```
 
  
