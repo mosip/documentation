@@ -269,6 +269,38 @@ cd k8s-infra/mosip/onprem
 
 ## Deploying Inji
 
+###Pre-requisites
+* `inji-stack-config` configmap: For inji K8's env, `inji-stack-config` configmap in `default` namespace contains Domain related information. Follow below steps to add domain details for `inji-stack-config` configmap.
+* Update the domain names in `inji-stack-cm.yaml` correctly for your environment.
+    ```
+    kubectl apply -f - <<EOF
+    ## The data here is of generic interest to modules in different namespaces hence this is marked as inji-stack-config.
+    ## Replace your domain names here.
+    ## api-host:  External public access. (Typically required only in production rollouts).
+    ## api-internal-host: Internal secure access over Wireguard.
+    ## By default all domains and subdomains listed below point to api-internal-host. Modify this default behavior ONLY in production rollout as follows:
+    apiVersion: v1
+    kind: ConfigMap
+    metadata:
+      name: inji-stack-config
+      namespace: default
+    data:
+      inji-version: develop
+      installation-domain: sandbox.xyz.net
+      api-host: api.sandbox.xyz.net
+      iam-external-host: iam.sandbox.xyz.net
+      api-internal-host: api-internal.sandbox.xyz.net
+      injiweb-host: injiweb.sandbox.xyz.net
+      injiverify-host: injiverify.sandbox.xyz.net
+      injicertify-host: injicertify.sandbox.xyz.net
+      inji-postgres-host: postgres.sandbox.xyz.net
+      esignet-mock-host: esignet-mock.sandbox.xyz.net
+      mosipid-identity-esignet-host: esignet-mosipid.sandbox.xyz.net
+      esignet-insurance-host: esignet-insurance.sandbox.xyz.net
+      minio-host: minio.sandbox.mosip.net
+    EOF
+    ```
+
 ### Postgres installation
 
 * [Postgres installation](https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/external/postgres)
@@ -283,7 +315,233 @@ cd k8s-infra/mosip/onprem
 
 ### config-server installation
 
-* [config-server installation](https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/mosip/config-server)
+* Create a `values.yaml` file that will contain the configuration for the chart and send it to your config-server installation.
+  ```
+   touch values.yaml
+  ```
+* Review `values.yaml` and make sure git repository parameters are as per your installation and enable only the required environment variables.
+
+    ````
+    gitRepo:
+      uri: https://github.com/mosip/inji-config
+      version: release-0.8.x
+      ## Folders within the base repo where properties may be found.
+      searchFolders: ""
+      private: false
+      ## User name of user who has access to the private repo. Ignore for public repo
+      username: ""
+      token: ""
+    
+    envVariables:
+      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_API_PUBLIC_HOST
+        valueFrom:
+          configMapKeyRef:
+            name: inji-stack-config
+            key: api-host
+        enabled: true
+    
+      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_API_INTERNAL_HOST
+        valueFrom:
+          configMapKeyRef:
+            name: inji-stack-config
+            key: api-internal-host
+        enabled: true
+    
+      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_PARTNER_CRYPTO_P12_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            key: mosip-partner-crypto-p12-password
+            name: conf-secrets-various
+        enabled: false
+    
+      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MPARTNER_DEFAULT_MOBILE_SECRET
+        valueFrom:
+          secretKeyRef:
+            key: mpartner_default_mobile_secret
+            name: keycloak-client-secrets
+        enabled: false
+    
+      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_KEYCLOAK_INTERNAL_URL
+        valueFrom:
+          configMapKeyRef:
+            name: keycloak-host
+            key: keycloak-internal-url
+        enabled: false
+    
+      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_KEYCLOAK_EXTERNAL_URL
+        valueFrom:
+          configMapKeyRef:
+            name: keycloak-host
+            key: keycloak-external-url
+        enabled: false
+    
+      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_KEYCLOAK_INTERNAL_HOST
+        valueFrom:
+          configMapKeyRef:
+            name: keycloak-host
+            key: keycloak-internal-host
+        enabled: false
+    
+      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_KEYCLOAK_EXTERNAL_HOST
+        valueFrom:
+          configMapKeyRef:
+            name: keycloak-host
+            key: keycloak-external-host
+        enabled: false
+    
+      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_DB_DBUSER_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            name: db-common-secrets
+            key: db-dbuser-password
+        enabled: false
+    
+      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_S3_ACCESSKEY
+        valueFrom:
+          configMapKeyRef:
+            name: s3
+            key: s3-user-key
+        enabled: false
+    
+      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_S3_REGION
+        valueFrom:
+          configMapKeyRef:
+            name: s3
+            key: s3-region
+        enabled: false
+    
+      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_S3_SECRETKEY
+        valueFrom:
+          secretKeyRef:
+            name: s3
+            key: s3-user-secret
+        enabled: false
+    
+      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_ESIGNET_HOST
+        valueFrom:
+          configMapKeyRef:
+            key: esignet-host
+            name: inji-stack-config
+        enabled: false
+        
+      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_ESIGNET_MOCK_HOST
+        valueFrom:
+          configMapKeyRef:
+            key: esignet-mock-host
+            name: inji-stack-config
+        enabled: true
+    
+      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIPID_IDENTITY_ESIGNET_HOST
+        valueFrom:
+          configMapKeyRef:
+            key: mosipid-identity-esignet-host
+            name: inji-stack-config
+        enabled: false
+    
+      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_ESIGNET_INSURANCE_HOST
+        valueFrom:
+          configMapKeyRef:
+            key: esignet-insurance-host
+            name: inji-stack-config
+        enabled: false  
+    
+      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_INJI_DATASHARE_HOST
+        valueFrom:
+          configMapKeyRef:
+            key: inji-datashare-host
+            name: inji-stack-config
+        enabled: false
+    
+      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_INJIWEB_HOST
+        valueFrom:
+          configMapKeyRef:
+            key: injiweb-host
+            name: inji-stack-config
+        enabled: true
+    
+      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_INJIVERIFY_HOST
+        valueFrom:
+          configMapKeyRef:
+            key: injiverify-host
+            name: inji-stack-config
+        enabled: true
+    
+      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_INJICERTIFY_HOST
+        valueFrom:
+          configMapKeyRef:
+            key: injicertify-host
+            name: inji-stack-config
+        enabled: true
+    
+    ````
+
+* Create a file named `configserver.sh`:
+  ```
+  touch configserver.sh
+  ```
+* Open the file and paste the following content into it in the same directory where `values.yaml` is created.
+    ````
+    #!/bin/bash
+    # Installs config-server
+    ## Usage: ./install.sh [kubeconfig]
+    
+    if [ $# -ge 1 ] ; then
+    export KUBECONFIG=$1
+    fi
+    
+    NS=config-server
+    CHART_VERSION=12.0.1
+    
+    read -p "Is conf-secrets module installed?(Y/n) " yn
+    if [ $yn = "Y" ]; then read -p "Is values.yaml for config-server chart set correctly as part of Pre-requisites?(Y/n) " yn; fi
+    if [ $yn = "Y" ]
+    then
+    echo Create $NS namespace
+    kubectl create ns $NS
+    
+        # set commands for error handling.
+        set -e
+        set -o errexit   ## set -e : exit the script if any statement returns a non-true return value
+        set -o nounset   ## set -u : exit the script if you try to use an uninitialised variable
+        set -o errtrace  # trace ERR through 'time command' and other functions
+        set -o pipefail  # trace ERR through pipes
+    
+        echo Istio label
+        kubectl label ns $NS istio-injection=enabled --overwrite
+        helm repo update
+    
+        UTIL_URL=https://raw.githubusercontent.com/mosip/mosip-infra/master/deployment/v3/utils/copy_cm_func.sh
+        COPY_UTIL=./copy_cm_func.sh
+        DST_NS=config-server # DST_NS: Destination namespace
+        wget -q $UTIL_URL -O copy_cm_func.sh && chmod +x copy_cm_func.sh
+        echo Copy configmaps and secrets
+        $COPY_UTIL configmap inji-stack-config default $NS
+        if kubectl -n conf-secrets get secret conf-secrets-various >/dev/null 2>&1; then
+            $COPY_UTIL secret conf-secrets-various conf-secrets $NS
+        else
+            echo "Skipping copy, conf-secrets-various secret not found"
+        fi
+        if kubectl -n s3 get configmap s3 >/dev/null 2>&1 && kubectl -n s3 get secret s3 >/dev/null 2>&1; then
+            $COPY_UTIL configmap s3 s3 $NS
+            $COPY_UTIL secret s3 s3 $NS
+        else
+            echo "Skipping copy, s3 config or secret not found"
+        fi
+    
+        echo Installing config-server
+        helm -n $NS install config-server mosip/config-server -f values.yaml --wait --version $CHART_VERSION
+        echo Installed Config-server.
+    else
+    echo Exiting the MOSIP installation. Please meet the pre-requisites and than start again.
+    kill -9 `ps --pid $$ -oppid=`; exit
+    fi
+    ````
+
+* Run the Script
+  ```
+  chmod +x configserver.sh
+  ./configserver.sh
+  ```
 
 ### Artifactory installation
 
@@ -299,7 +557,8 @@ cd k8s-infra/mosip/onprem
 
 ### mimoto installation
 
-* [mimoto installation](https://github.com/mosip/mimoto/tree/develop/helm/mimoto)
+
+* mimoto installation: https://github.com/mosip/mimoto/tree/develop/deploy
 
 ### Inji web and datashare installation
 
