@@ -565,3 +565,5 @@ cd k8s-infra/mosip/onprem
 * [Inji web and datashare installation](https://github.com/mosip/inji-web/tree/develop/deploy)
 
 * **Note**: After installing inji web and datashare, ensure that the active_profile_env parameter in the config-map of the config-server-share is correctly set to: default,inji-default,standalone.
+
+keshav git rename check
