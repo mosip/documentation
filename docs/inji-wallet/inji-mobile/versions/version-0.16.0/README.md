@@ -80,13 +80,8 @@ We are excited to announce the release of **Inji Wallet Version 0.16.0!** This u
 
 | **Module**       | **Version**                                                             |
 | ---------------- | ----------------------------------------------------------------------- |
-| Inji-config      | 0.5.0                                                                   |
-| eSignet          | 1.5.0                                                                   |
-| mimoto           | 0.17.0                                                                  |
-| Inji Certify     | 0.10.1                                                                  |
-| Inji Verify      | [v0.10.0](https://github.com/mosip/inji-verify/tree/v0.10.0)            |
-| tuvali           | [v0.5.1](https://github.com/mosip/tuvali/tree/v0.5.1)                   |
-| tuvali-ios-swift | [v0.5.0](https://github.com/mosip/tuvali-ios-swift/releases/tag/v0.5.0) |
+| TBA              | Coming Up                                                               |
+
 
 
 
