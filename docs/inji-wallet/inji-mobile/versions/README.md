@@ -4,6 +4,14 @@ icon: rocket-launch
 
 # Releases
 
+## Version: 0.16.0
+
+Name: Inji Wallet 0.16.0
+
+Date: 28th April, 2025
+
+[Release Notes](https://docs.inji.io/inji-wallet/inji-mobile/versions/version-0.16.0)
+
 ## Version: 0.15.1
 
 Name: Inji Wallet 0.15.1
