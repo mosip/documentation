@@ -76,25 +76,6 @@ We are excited to announce the release of **Inji Wallet Version 0.16.0!** This u
 
 
 
-
-
-
-| vc-verifier               | 1.1.0       |
-
-
-| inji-vci-client-ios-swift | 0.2.0       |
-| inji-vci-client           | 0.2.0       |
-| secure-keystore-ios-swift | 0.3.0       |
-| secure-keystore           | 0.3.0       |
-| pixelpass-ios-swift       | 0.6.0       |
-| pixelpass                 | 0.6.0       |
-
-
-
-
-
-
-
 ### **Compatible Modules**
 
 | **Module**       | **Version**                                                             |
@@ -107,6 +88,22 @@ We are excited to announce the release of **Inji Wallet Version 0.16.0!** This u
 | tuvali           | [v0.5.1](https://github.com/mosip/tuvali/tree/v0.5.1)                   |
 | tuvali-ios-swift | [v0.5.0](https://github.com/mosip/tuvali-ios-swift/releases/tag/v0.5.0) |
 
+
+
+<!-- 
+
+| vc-verifier               | 1.1.0       |
+
+
+| inji-vci-client-ios-swift | 0.2.0       |
+| inji-vci-client           | 0.2.0       |
+| secure-keystore-ios-swift | 0.3.0       |
+| secure-keystore           | 0.3.0       |
+| pixelpass-ios-swift       | 0.6.0       |
+| pixelpass                 | 0.6.0       |
+
+
+-->
 
 
 ### **Known Issues**
@@ -164,8 +161,6 @@ Below is the [**list**](https://mosip.atlassian.net/jira/software/c/projects/INJ
 | [**INJIMOB-1837**](https://mosip.atlassian.net/browse/INJIMOB-1837) | Search box close button is not working unless invoked on a specific point                                                                          |
 
 ### **Documentation Details**
-
-
 
 * [Feature Documentation](https://docs.mosip.io/inji/inji-mobile-wallet/overview/features)
 * [Integration Guides](https://docs.mosip.io/inji/inji-mobile-wallet/integration-guide)
