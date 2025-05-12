@@ -4,7 +4,7 @@
 
 **Support**: Developer Release
 
-**Release Date**: Coming Soon
+**Release Date**: 12th May, 2025
 
 ### **Overview**
 
@@ -21,26 +21,34 @@ Additionally, please note that the OpenID4VP Cross-Device Flow is compatible onl
 
 ### **Repositories: Released/Dependent**
 
-| **Repositories** | **Tags: Released/Dependent** |
-| ---------------- | ---------------------------- |
-| Inji Verify      | v0.11.1                      |
+| Repositories | Tags: Released/Dependent                                     |
+| ------------ | ------------------------------------------------------------ |
+| Inji Verify  | [v0.11.1](https://github.com/mosip/inji-verify/tree/v0.11.1) |
 
 ### **Compatible modules**
 
 The following table outlines the tested and certified compatibility of Inji Verify 0.11.1 with other modules.
 
-| Module              | Version                                                    |
-| ------------------- | ---------------------------------------------------------- |
-| Inji Wallet         | v0.16.0                                                    |
-| Inji Web            | [v0.10.0](https://github.com/mosip/inji-web/tree/v0.10.0)  |
-| Pixel-Pass library  | [v0.5.0](https://github.com/mosip/pixelpass/tree/v0.5.0)   |
-| vc-verifier library | [v1.2.0](https://github.com/mosip/vc-verifier/tree/v1.2.0) |
+| Module              | Version                                                      |
+| ------------------- | ------------------------------------------------------------ |
+| Inji Wallet         | [v0.16.0](https://github.com/mosip/inji-wallet/tree/v0.16.0) |
+| Inji Web            | [v0.10.0](https://github.com/mosip/inji-web/tree/v0.10.0)    |
+| Pixel-Pass library  | [v0.5.0](https://github.com/mosip/pixelpass/tree/v0.5.0)     |
+| vc-verifier library | [v1.2.0](https://github.com/mosip/vc-verifier/tree/v1.2.0)   |
+
+### **Known Issue**
+
+| Jira ID                                                         | Description                                                                                                                                                                              |
+| --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [INJIVER-1137](https://mosip.atlassian.net/browse/INJIVER-1137) | OpenID4VP - Cross device flow is not working in iOS (works only on Inji mobile wallet in Android phones currently). The supported fix will be provided in 0.12.0 which will be out soon. |
+
+
 
 ### **Bug Fixes**
 
 Below is the list of fixes as part of the **0.11.1** release:
 
-| **Jira ID**                                                     | **Description**                                                                                                                      |
+| Jira ID                                                         | Description                                                                                                                          |
 | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | [INJIVER-1084](https://mosip.atlassian.net/browse/INJIVER-1084) | VC result is incorrectly displayed under the **Upload** tab When a Verifiable Credential (VC) is scanned using the **Scan** feature. |
 | [INJIVER-1086](https://mosip.atlassian.net/browse/INJIVER-1086) | VP Verification is not compatible with Inji Mobile 0.16.0                                                                            |
