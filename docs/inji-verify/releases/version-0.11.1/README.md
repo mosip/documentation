@@ -19,6 +19,14 @@ Inji Verify 0.11.1 focuses on ensuring seamless interoperability with Inji Mobil
 Additionally, please note that the OpenID4VP Cross-Device Flow is compatible only with Inji Mobile Wallet v0.16.0. It is not supported with v0.15.0 as the two key updates (**QR Data Encoding** and **Mandatory vp\_formats**), required for compatibility, have been incorporated starting v0.16.0 of Inji Mobile Wallet.
 {% endhint %}
 
+
+{% hint style="important" %}
+
+The OpenID4VP Cross-Device Flow feature in Inji Verify 0.11.1 is currently supported only on the Android version of Inji Mobile Wallet v0.16.0. Compatibility with the iOS version of Inji Mobile Wallet v0.16.0 will be introduced in the upcoming Inji Verify 0.12.0 release.
+
+{% endhint %}
+
+
 ### **Repositories: Released/Dependent**
 
 | Repositories | Tags: Released/Dependent                                     |
