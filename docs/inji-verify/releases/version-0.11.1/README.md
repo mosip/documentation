@@ -21,12 +21,10 @@ Additionally, please note that the OpenID4VP Cross-Device Flow is compatible onl
 
 {% hint style="success" %}
 **Important**:\
-The OpenID4VP Cross-Device Flow feature in Inji Verify 0.11.1 is currently supported only on the Android version of Inji Mobile Wallet v0.16.0. Compatibility with the iOS version of Inji Mobile Wallet v0.16.0 will be introduced in the upcoming Inji Verify 0.12.0 release.
+OpenID4VP – Cross-Device Flow feature is not supported on iOS devices, it is coming up soon with next release i.e. Inji Verify v0.12.0. &#x20;
+
+It functions only on the Inji Mobile Wallet (v0.16.0) for Android. Support for iOS will be included in Inji Verify v0.12.0, which will be released soon.
 {% endhint %}
-
-> **IOS Support**: OpenID4VP Cross-Device Flow feature in Inji Verify 0.11.1 is currently supported only on the Android version of Inji Mobile Wallet v0.16.0. Compatibility with the iOS version of Inji Mobile Wallet v0.16.0 will be introduced in the upcoming Inji Verify 0.12.0 release.
-
-
 
 ### **Repositories: Released/Dependent**
 
