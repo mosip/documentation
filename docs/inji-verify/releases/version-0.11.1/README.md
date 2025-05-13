@@ -15,7 +15,7 @@ Inji Verify 0.11.1 focuses on ensuring seamless interoperability with **Inji Mob
 
 {% hint style="success" %}
 **Important**:\
-**OpenID4VP – Cross-Device Flow** feature is not supported on iOS devices, it is coming up soon with next release i.e. Inji Verify v0.12.0. &#x20; It functions only on the Inji Mobile Wallet (v0.16.0) for Android.
+**OpenID4VP – Cross-Device Flow** feature is not supported on iOS devices, currently it functions only on the Inji Mobile Wallet (v0.16.0) for Android. Support for IOS is coming up soon with next release i.e. Inji Verify v0.12.0. &#x20; 
 {% endhint %}
 
 {% hint style="warning" %}
