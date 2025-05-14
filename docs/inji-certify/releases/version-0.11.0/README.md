@@ -57,7 +57,7 @@ Below is the list of known issues. To read in detail and view all the topics rel
 | inji-certify               | [v0.11.0](https://github.com/mosip/inji-certify/tree/v0.11.0)             |
 | digital-credential-plugins | [v0.4.0](https://github.com/mosip/digital-credential-plugins/tree/v0.4.0) |
 | artifactory                |                                                                           |
-| inji-config                |                                                                           |
+| inji-config                | [v0.8.0](https://github.com/mosip/inji-config/tree/v0.8.0)                |
 
 ### Compatible Modules
 
