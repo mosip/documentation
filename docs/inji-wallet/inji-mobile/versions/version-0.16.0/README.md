@@ -75,8 +75,8 @@ We are excited to announce the release of **Inji Wallet Version 0.16.0!** This u
 
 | **List of New Features**                                                                                                                     | **Jira Links**                                                  |
 | -------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
-| <p><strong>Multiple client types (Swift)</strong></p><p><em>Support for Multiple Client ID Schemes in OpenID4VP Flow for Swif</em></p>       | [INJIMOB-2325](https://mosip.atlassian.net/browse/INJIMOB-2325) |
-| <p><strong>Multiple client types (Kotlin)</strong></p><p><em>Support for Multiple Client ID Schemes in OpenID4VP Flow for Kotlin</em></p>    | [INJIMOB-2491](https://mosip.atlassian.net/browse/INJIMOB-2491) |
+| <p><strong>Multiple client IDs (Swift)</strong></p><p><em>Support for Multiple Client ID Schemes in OpenID4VP Flow for Swif</em></p>         | [INJIMOB-2325](https://mosip.atlassian.net/browse/INJIMOB-2325) |
+| <p><strong>Multiple client IDs (Kotlin)</strong></p><p><em>Support for Multiple Client ID Schemes in OpenID4VP Flow for Kotlin</em></p>      | [INJIMOB-2491](https://mosip.atlassian.net/browse/INJIMOB-2491) |
 | <p><strong>Localized Intro Sliders on First Launch</strong></p><p><em>Intro Sliders Enhancement Language to Change as per Selection</em></p> | [INJIMOB-2337](https://mosip.atlassian.net/browse/INJIMOB-2337) |
 | <p><strong>Link-Based Presentation Request</strong></p><p><em>Support Request URI for authorization request in OpenIDVP</em></p>             | [INJIMOB-2761](https://mosip.atlassian.net/browse/INJIMOB-2761) |
 | **Technical Enhancement to Features**                                                                                                        | **Jira Links**                                                  |
@@ -91,8 +91,8 @@ We are excited to announce the release of **Inji Wallet Version 0.16.0!** This u
 | Module                   | Version                                                                 |
 | ------------------------ | ----------------------------------------------------------------------- |
 | Inji Mobile Wallet       | [0.16.0](https://github.com/mosip/inji-wallet/tree/v0.16.0)             |
-| inji-openid4vp-ios-swift | [v1.2.0](https://github.com/mosip/inji-openid4vp-ios-swift/tree/v0.2.0) |
-| inji-openid4vp           | [v1.2.0](https://github.com/mosip/inji-openid4vp/tree/v0.2.0)           |
+| inji-openid4vp-ios-swift | [v0.2.0](https://github.com/mosip/inji-openid4vp-ios-swift/tree/v0.2.0) |
+| inji-openid4vp           | [v0.2.0](https://github.com/mosip/inji-openid4vp/tree/v0.2.0)           |
 | Tuvali                   | [v0.5.2](https://github.com/mosip/tuvali/tree/v0.5.2)                   |
 
 ### **Compatible Modules**
