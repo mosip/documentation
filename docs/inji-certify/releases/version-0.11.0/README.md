@@ -14,9 +14,9 @@ Inji Certify v0.11.0 brings major enhancements focused on improving security, st
 
 ### Major Highlights/Features
 
-* **OAuth 2.0 Authentication Support:** Enhanced support for services following **OAuth 2.0** in addition to seamless integration with eSignet v1.5.1 thereby enabling a secure and standards-based authentication.
+* **Keycloak Integration**: Seamless integration with Keycloak has been introduced, providing secure, standards-based authentication aor verifiable credential issuance.
 * **Expanded Wallet Compatibility**: Inji Certify supports interoperability with other digital wallets that implement the OpenID for Verifiable Credentials (OpenID4VC) specification. We have successfully tested and now support integration with two such wallets: Talao and Altme.
-* **Expanded Cryptographic Algorithm Support in Inji Certify**\
+* **Expanded Cryptographic Algorithm Support in Inji Certify**
   Inji Certify now offers enhanced cryptographic flexibility through support for additional signing algorithms:
   * **ECC K1 2019 Key Support**: Inji Certify supports signing and verification using ECC K1 2019 keys, enabling compatibility with a broader range of secure systems and ensuring robust security for verifiable credentials.
   * **Ed25519 Signing (2018 & 2020)**: Verifiable credential requests can now be signed using Ed25519 keys, compliant with both 2018 and 2020 specifications. This enhancement ensures interoperability with diverse ecosystems and aligns with modern cryptographic standards.
