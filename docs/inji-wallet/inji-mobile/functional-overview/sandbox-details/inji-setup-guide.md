@@ -15,7 +15,9 @@ Before you start with setting up Inji Mobile, ensure you have the following in p
 3.  UIN Credentials:
 
     * Issuance of UIN (Unique identification number) as a demo credential will allow you to explore Inji Mobile's capabilities and experience seamless VC sharing firsthand.
-    * Fill out the [form ](https://docs.google.com/forms/d/e/1FAIpQLSc2I0CQqlYRIrEmcJ3J3tKlYOVNcYNj88YZe4MMwU2RZTrjOA/viewform)here and we will generate the demo credentials, which you can use subsequently on the Inji Mobile app to download and share Verifiable Credentials (VCs).
+    * Now you can self generate your own UIN Credential using the [Collab environment](https://collab.mosip.net/).
+    * Click on the **Get UIN** button located at the top-right corner of the page. This will open the [Self Registration Form](https://self-register.collab.mosip.net/), Alternatively, you can simply click on this [link](https://self-register.collab.mosip.net/) to self register. You need to duly fill the self registration form.
+    * On successful registration the UIN is sent to you over the email you used for registration, For more details you follow the [Generating Demo Credentials Guide](https://docs.mosip.io/1.2.0/general/collab-getting-started-guide/generating-demo-credentials).
 
     _Note_: Please use 111111 as the OTP, for any OTP based feature in Collab environment.
 4. For sample Insurance Credentials, please provide the below details in the eSignet authentication page:
