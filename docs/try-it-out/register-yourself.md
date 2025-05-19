@@ -1,8 +1,10 @@
 # Register Yourself
 
-You can get your credentials added to Collab by filling out this [form](https://docs.google.com/forms/d/e/1FAIpQLSc2I0CQqlYRIrEmcJ3J3tKlYOVNcYNj88YZe4MMwU2RZTrjOA/viewform). We generally take 1-2 working days to create your credentials.
+* Now you can self generate your own UIN Credential using the [Collab environment](https://collab.mosip.net/).
+    * Click on the **Get UIN** button located at the top-right corner of the page. This will open the [Self Registration Form](https://self-register.collab.mosip.net/), Alternatively, you can simply click on this [link](https://self-register.collab.mosip.net/) to self register. You need to duly fill the self registration form.
+    * On successful registration the UIN is sent to you over the email you used for registration, For more details you follow the [Generating Demo Credentials Guide](https://docs.mosip.io/1.2.0/general/collab-getting-started-guide/generating-demo-credentials).
 
-Once your credentials are generated, you will receive a [UIN](https://docs.mosip.io/1.2.0/id-lifecycle-management/identifiers#uin) from our collab environment at your registered email ID. After that, you will be able to explore eSignet’s capabilities and experience seamless authentication through various channels.
+You will be able to explore eSignet’s capabilities and experience seamless authentication through various channels.
 
 ## Step-by-Step Process
 
