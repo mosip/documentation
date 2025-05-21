@@ -21,6 +21,25 @@ Here is a comprehensive summary of the features offered by Inji Verify.
    * **Valid Credential Display**: These credentials are currently active and verified using the Inji Verify Portal.
    * **Invalid Credential Display**: These credentials are active but invalid.
    * **Expired Credential Display**: These credentials have passed their validity period and are no longer active.
+
+<!--
+8. * **Ease of Integration for Verifier Applications**: 
+
+Inji Verify SDK- OpenID4VP- VP verification component enables developers to easily embed OpenID4VP- VP verification capabilities into their verifier (relying party) applications. This plug-and-play TypeScript component is designed for seamless integration with React + TypeScript applications, enabling robust Verifiable Credential verification using OpenID4VP standards.
+
+      a) Modular NPM Package: The OpenID4VP component is available as a standalone NPM module, promoting modularity and simplifying integration. Developers can incorporate it into their projects without depending on the full Inji Verify repository. Comprehensive documentation (add link of the integration setup guide) is provided for installation, setup, and usage, ensuring a smooth integration process.
+
+     This flexibility empowers developers to accelerate their VC verification implementation with minimal setup, enabling faster time-to-market for digital identity-enabled services.
+
+Note: The Inji Verify SDK- Scan / Upload component to enable developers to easily embed VC verification capabilities into their verifier (relying party) applications will be coming out in future releases! Stay tuned!
+
+Note: **Inji Verify SDK- OpenID4VP- VP verification component supports React version- 18.2.0**
+
+Backend Setup : Inji Verify's backend supports robust and secure verification of Verifiable Credentials (VCs). The integration of the vc-verifier library facilitates server-side verification of VCs, accommodating both Ed25519 (Signature 2018 & 2020) and RSA (Signature 2018) cryptographic standards. To ensure persistent and reliable data storage, the backend has transitioned from an in-memory H2 database to a PostgreSQL database which enhances data durability.
+
+-->
+
+
 8. **Generate QR Code based VP request for sharing credentials from wallet to Inji Verify for verification in different devices**: The OpenID for Verifiable Presentations (OpenID4VP) standard introduces the VP Token which will enable the end-users to present Verifiable Presentations (VPs) to verifiers via a digital wallet. In scenarios where the verifier and the user's wallet operate on separate devices, the process unfolds as follows:​
    * The Verifier formulates an Authorization Request, which is then rendered as a QR code. This QR code encapsulates a Request URI, allowing the wallet to retrieve the complete request data, thereby keeping the QR code concise.
    * The user scans the QR code using their digital wallet (e.g., Inji Wallet), which fetches the Authorization Request data and prepares the requested credentials. Depending on the wallet's contents, the user can share all or a subset of the requested credentials.​
