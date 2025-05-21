@@ -22,24 +22,31 @@ In each scenario, Inji Verify leverages QR codes embedded with verifiable creden
 
 #### **Benefits of Using Inji Verify for Seamless and Secure Credential Verification:**
 
-* **Interoperability:**
+* **Interoperability**:
   * Inji Verify integrates seamlessly with a wide range of existing platforms, including employee portals, health portals, agricultural portals, and more. It can be added as an additional layer to existing verifier systems, ensuring smooth interaction between users, and verifiers across different platforms and verification frameworks. This flexibility enhances compatibility and streamlines the verification process without disrupting current systems.
-* **Modularity:**
+* **Modularity**:
   * The modular design of Inji Verify allows for easy customization and the addition of new features, ensuring flexibility to adapt to specific industry needs.
   * Each module functions independently, enabling seamless updates and scalability without affecting the core functionality of the system.
-* **Enhanced Security with Verifiable QR Codes:**
+* **Enhanced Security with Verifiable QR Codes**:
   * Verifiable QR codes utilize digital signatures to safeguard the authenticity and integrity of the data, ensuring secure handling of sensitive information such as personal IDs, financial records, and medical data.
 * **Seamless PixelPass library Integration:**
   * The integration of the [**PixelPass**](https://www.npmjs.com/package/@mosip/pixelpass/v/0.5.0) library enables Inji Verify to efficiently decode CBOR-encoded QR codes, ensuring a smooth and reliable verification process.
-* **Optimized Device Requirements for Scanning:**
+* **Optimized Device Requirements for Scanning**:
   * To ensure accurate and reliable verification, devices used for scanning QR codes should meet certain criteria, including:
     * A camera with at least 12 megapixels and 1020p quality.
     * Scanning without visual effects or enhancements.
     * Browser compatibility for camera access.
     * Adequate lighting conditions without filters or dark mode.
-* **QR Code Version Compatibility:**
+* **QR Code Version Compatibility**:
   * For successful verification using the scan feature, the verifiable credential (VC) should be encoded in QR code versions 27 and below.
+<!--
+* **Ease of Integration for Verifier Applications**:
+  * The Inji Verify SDK – OpenID4VP VP Verification component allows developers to seamlessly integrate OpenID4VP-based Verifiable Presentation (VP) verification into their verifier (relying party) applications. This plug-and-play TypeScript component  is designed for seamless integration with 'React + TypeScript' applications and enables robust verification of Verifiable Credentials (VCs) using OpenID4VP standards. It is available as a standalone NPM module, promoting modularity and simplifying the integration process.
 
+Note:
+The Inji Verify SDK - Scan / Upload component to enable developers to easily embed VC verification capabilities (via scanning or uploading) into their (relying party's) verifier applications will be coming out in future releases! Stay tuned!
+
+-->
 #### **Usage of Inji Verify:**
 
 Inji Verify offers a comprehensive set of features tailored to meet the verification needs of both users and relying parties:
