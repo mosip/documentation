@@ -168,6 +168,8 @@
   * [Customization](inji-verify/technical-overview/customization/README.md)
     * [UI Customizations](inji-verify/technical-overview/customization/ui-customizations.md)
     * [Locale Customizations](inji-verify/technical-overview/customization/locale-customizations.md)
+  * [Integration Guides](inji-verify/technical-overview/integration-guides/README.md)
+    * [OpenID4VP-VP Verification Integration Guide](inji-verify/technical-overview/integration-guides/openid4vp-vp-verification-integration-guide.md)
 * [Test](inji-verify/functional-overview/README.md)
   * [Try It Out](inji-verify/functional-overview/releases-1/README.md)
     * [Inji Verify - Collab Guide](inji-verify/functional-overview/releases-1/inji-verify-collab-guide.md)

@@ -1,12 +1,35 @@
 # Technology Stack
 
-**UI & Rest end points**
+### UI
 
-The table below outlines the frameworks, tools, and technologies employed by Inji Verify:
+The table below outlines the frameworks, tools, and technologies employed by Inji Verify UI:
 
-<table data-header-hidden><thead><tr><th width="182"></th><th></th><th></th><th></th></tr></thead><tbody><tr><td><strong>Tool/Technology</strong></td><td><strong>Version</strong></td><td><strong>Description</strong></td><td><strong>License</strong></td></tr><tr><td><a href="https://react.dev/">React JS</a></td><td>18.2v</td><td>React lets you build user interfaces out of individual pieces called components.</td><td><a href="https://github.com/facebook/react/blob/main/LICENSE">MIT License</a></td></tr><tr><td><a href="https://mui.com/material-ui/">Material UI</a></td><td>5.15.9</td><td>Material UI is <strong>an open-source React component library that implements Google's Material Design</strong>.</td><td></td></tr><tr><td><a href="https://www.npmjs.com/package/@testing-library/react">@testing-library/react</a></td><td>14.2.1</td><td>The React Testing Library is a very lightweight solution for testing React components</td><td></td></tr><tr><td><a href="https://jestjs.io/docs/tutorial-react">Jest</a></td><td>29.7.0</td><td>Jest is <strong>a well-known JavaScript testing framework</strong> and is extensively used to test React applications</td><td></td></tr><tr><td><a href="https://nodejs.org/en">Node</a></td><td>v18.19.0</td><td>Node.js is a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools and scripts.</td><td></td></tr><tr><td><a href="https://www.typescriptlang.org/">Typescript</a></td><td>4.9.5</td><td>TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.</td><td></td></tr></tbody></table>
+| **Tool/Technology**                                                            | **Version** | **Description**                                                                                                                                              | **License**                                                                         |
+| ------------------------------------------------------------------------------ | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------- |
+| [React JS](https://react.dev/)                                                 | 18.2.0      | React lets you build user interfaces out of individual pieces called components.                                                                             | [MIT](https://github.com/facebook/react/blob/main/LICENSE)                          |
+| [Material UI](https://mui.com/material-ui/)                                    | 6.1.2       | Material UI is **an open-source React component library that implements Google's Material Design**.                                                          |  [MIT](https://github.com/mui/material-ui/blob/master/LICENSE)                      |
+| [@testing-library/react](https://www.npmjs.com/package/@testing-library/react) | 13.4.0      | The React Testing Library is a very lightweight solution for testing React components                                                                        |  [MIT](https://github.com/testing-library/react-testing-library/blob/main/LICENSE)  |
+| [Jest](https://jestjs.io/docs/tutorial-react)                                  | 29.7.0      | Jest is **a well-known JavaScript testing framework** and is extensively used to test React applications                                                     |  [MIT](https://github.com/jestjs/jest/blob/main/LICENSE)                            |
+| [Node](https://nodejs.org/en)                                                  | v18.19.0    | Node.js is a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools and scripts. |                                                                                     |
+| [Typescript](https://www.typescriptlang.org/)                                  | 4.9.5       | TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.                                       | [Apache License 2.0](https://github.com/microsoft/TypeScript/blob/main/LICENSE.txt) |
 
-**Service**
+
+
+### **Inji Verify SDK**
+
+The table below outlines the frameworks, tools, and technologies employed by Inji Verify SDK:
+
+| **Tool/Technology**                                                            | **Version** | **Description**                                                                                                                                              | **License**                                                                         |
+| ------------------------------------------------------------------------------ | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------- |
+| [React JS](https://react.dev/)                                                 | 18.3.1      | React lets you build user interfaces out of individual pieces called components.                                                                             | [MIT License](https://github.com/facebook/react/blob/main/LICENSE)                  |
+| [@testing-library/react](https://www.npmjs.com/package/@testing-library/react) | 16.3.0      | The React Testing Library is a very lightweight solution for testing React components                                                                        |  [MIT](https://github.com/testing-library/react-testing-library/blob/main/LICENSE)  |
+| [Jest](https://jestjs.io/docs/tutorial-react)                                  | 29.7.0      | Jest is **a well-known JavaScript testing framework** and is extensively used to test React applications                                                     |   [MIT](https://github.com/jestjs/jest/blob/main/LICENSE)                           |
+| [Node](https://nodejs.org/en)                                                  | v18.19.0    | Node.js is a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools and scripts. |                                                                                     |
+| [Typescript](https://www.typescriptlang.org/)                                  | 4.9.5       | TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.                                       | [Apache License 2.0](https://github.com/microsoft/TypeScript/blob/main/LICENSE.txt) |
+
+
+
+### **Service**
 
 The table below outlines the frameworks, tools, and technologies employed by Inji Verify backend Service:
 
@@ -18,7 +41,7 @@ The table below outlines the frameworks, tools, and technologies employed by Inj
 | [Maven](https://maven.apache.org/guides/index.html)          | `3.8.1`   | Maven is a build automation tool primarily used for Java projects. It simplifies dependency management, build processes, and project reporting through a declarative project object model (POM).                         | Apache License 2.0                                                        |
 | [Lombok](https://projectlombok.org/features/)                | `1.18.30` | Lombok is a Java library that reduces boilerplate code by providing annotations that automatically generate common methods like getters, setters, constructors, and toString, leading to cleaner and more concise code.  |                                                                           |
 
-**Deployment:**
+### **Deployment**
 
 The table below specifies the tools needed to deploy Inji Verify:
 
