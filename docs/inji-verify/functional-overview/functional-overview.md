@@ -4,12 +4,6 @@
 
 The portal displays valid credentials securely, including detailed information such as name, DOB, gender, expiration date, and associated claims, in a user-friendly interface. Inji Verify employs encryption techniques to protect sensitive information and prevent tampering.
 
-<!--
-
-_\<in 0.13.0 release- mention how Inji Verify components- Scan/Upload and VP verification components can be easily integrated to relying party apps instead of using Inji Verify as a standalone app>_
-
--->
-
 Compatible with desktops, mobile devices, and laptops, Inji Verify includes a mobile responsive version with back camera capability. While tablet responsiveness is under development, users can access Inji Verify from anywhere with an internet connection.
 
 The below given are the list of features for Inji Verify Portal:
@@ -40,9 +34,9 @@ The below given are the list of features for Inji Verify Portal:
 <!--
 7.  **Ease of Integration for Verifier Applications:**
 
-    The **Inji Verify SDK- OpenID4VP- VP verification component** enables developers to easily embed OpenID4VP- VP verification capabilities into their verifier (relying party) applications. This plug-and-play TypeScript component is designed for seamless integration with React + TypeScript applications, enabling robust Verifiable Credential verification using OpenID4VP standards.
+    The **Inji Verify SDK's OpenID4VP-VP verification component** enables developers to easily embed OpenID4VP-VP verification capabilities into their (relying party) verifier applications. This plug-and-play TypeScript component is designed for seamless integration with React + TypeScript applications, enabling robust Verifiable Credential verification using OpenID4VP standards.
 
-    **a) Modular NPM Package**: The OpenID4VP component is available as a standalone NPM module, promoting modularity and simplifying integration. Developers can incorporate it into their projects without depending on the full Inji Verify repository. Comprehensive documentation (add link of the integration setup guide) is provided for installation, setup, and usage, ensuring a smooth integration process.
+    * a) **Modular NPM Package**: The OpenID4VP component is available as a standalone NPM module, promoting modularity and simplifying integration. Developers can incorporate it into their projects without depending on the full Inji Verify repository. Comprehensive documentation <!--(add link of the integration setup guide)--> is provided for installation, setup, and usage, ensuring a smooth integration process.-->
 
 This flexibility empowers developers to accelerate their VC verification implementation with minimal setup, enabling faster time-to-market for digital identity-enabled services.
 
@@ -53,7 +47,7 @@ This flexibility empowers developers to accelerate their VC verification impleme
 8. **Generate QR Code based VP request for sharing credentials from wallet to Inji Verify for verification in different devices:** The OpenID for Verifiable Presentations (OpenID4VP) standard introduces the VP Token, enabling end-users to present Verifiable Presentations (VPs) to verifiers via a digital wallet. In scenarios where the verifier and the user's wallet operate on separate devices, the process unfolds as follows:​
    1. The verifier formulates an Authorization Request, which is then rendered as a QR code. This QR code encapsulates a Request URI, allowing the wallet to retrieve the complete request data, thereby keeping the QR code concise.
    2. The user scans the QR code using their digital wallet (e.g., Inji Wallet), which fetches the Authorization Request data and prepares the requested credentials. Depending on the wallet's contents, the user can share all or a subset of the requested credentials.​
-   3. Utilizing the vp\_token response type and the direct\_post response mode, the wallet securely transmits the VPs directly to the verifier's specified endpoint via an HTTP POST request. ​
+   3. Utilizing the vp_token response type and the direct\_post response mode, the wallet securely transmits the VPs directly to the verifier's specified endpoint via an HTTP POST request. ​
    4. Upon receipt, the verifier assesses the authenticity and validity of the presented credentials. The verification results are then displayed within Inji Verify, providing immediate feedback on the credential status.​
 
 This cross-device flow ensures a secure and efficient method for users to share their verifiable credentials across different devices, enhancing both flexibility and user experience in credential verification processes.

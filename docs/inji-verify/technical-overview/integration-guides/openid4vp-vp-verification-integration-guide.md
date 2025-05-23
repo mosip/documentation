@@ -1,16 +1,16 @@
-# OpenID4VP-VP Verification Integration Guide
+# OpenID4VP - Verification Integration Guide - (Verifiable Presentation)
 
 ## INJI VERIFY SDK
 
-Inji Verify SDK is a library which exposes React components for integrating Inji Verify features seamlessly into any relaying party application.
+Inji Verify SDK is a library which exposes **React** components for integrating Inji Verify features seamlessly into any relaying party application.
 
 ### Features
 
-* OpenId4VP component that creates QR code and performs OpenId4Vp sharing backend flow. OpenID4VP cross device flow can be performed by following the steps provided in [End User Guide](https://mosip.atlassian.net/wiki/spaces/PROD/pages/1297285260)
+* OpenId4VP component that creates QR code and performs OpenId4Vp sharing backend flow. OpenID4VP cross device flow can be performed by following the steps provided in [End User Guide](https://mosip.atlassian.net/wiki/spaces/PROD/pages/1297285260)<!-- change the link -->
 
 ### Usage
 
-npm i @mosip/react-inji-verify-sdk
+`npm i @mosip/react-inji-verify-sdk`
 
 [npm](https://www.npmjs.com/package/@mosip/react-inji-verify-sdk)
 
@@ -24,49 +24,53 @@ npm i @mosip/react-inji-verify-sdk
 ### Local Publishing Guide
 
 Install the dependencies\
-npm install
+`npm install`
 
-Build the project\
-npm run build
+Build the project
+`npm run build`
 
-Publish the npm package using Verdaccio\
-We use [verdaccio](https://verdaccio.org/docs/what-is-verdaccio). npm link or yarn link won't work as we have peer dependencies. Follow the docs to setup Verdaccio. Then run\
-npm publish --registry \<http://localhost:\<VERADACCIO\_PORT>>
+Publish the npm package using Verdaccio
+We use [verdaccio](https://verdaccio.org/docs/what-is-verdaccio). npm link or yarn link won't work as we have peer dependencies. 
+Follow the docs to setup Verdaccio. 
+Then run npm publish --registry \<http://localhost:\<VERADACCIO\_PORT>>
 
 ### Integration Guide
 
 #### OpenID4VPVerification
 
-This guide walks you through integrating the OpenID4VPVerification component into your React TypeScript project. It facilitates Verifiable Presentation (VP) verification using the OpenID4VP protocol and supports flexible workflows, including client-side and backend-to-backend verification.
+This guide walks you through integrating the OpenID4VP verification component into your React TypeScript project. It facilitates Verifiable Presentation (VP) verification using the OpenID4VP protocol and supports flexible workflows, including client-side and backend-to-backend verification.
 
 **Prerequisites**
 
-* Ract Project Setup
+* React Project Setup
 
-> **NOTE**\
+> **NOTE**
 > The component does not support other frontend frameworks like Angular, Vue, or React Native.\
 > The component is written in React + TypeScript
 
 **Backend Requirements**
 
-To use the component, you must host a verification backend that implements the OpenID4VP protocol. This backend is referred to as the inji-verify-service. It also needs to adehere to the OpenAPI spec defined here in case if the backend service is not inji-verify-service.
+To use the component, you must host a verification backend that implements the OpenID4VP protocol. This backend is referred to as the inji-verify-service. It also needs to adhere to the OpenAPI spec defined here in case if the backend service is not inji-verify-service.
 
-> ⚠️ Important: The component expects these endpoints to be accessible via a base URL (verifyServiceUrl).\
-> Example:\
-> If you deploy the inji-verify/verify-service at:\
-> [https://injiverify-service.example.com](https://injiverify-service.example.com)\
-> Then use this as the verifyServiceUrl in the component:\
+⚠️ Important: 
+
+* The component expects these endpoints to be accessible via a base URL (verifyServiceUrl).
+
+Example:
+> If you deploy the inji-verify/verify-service at: 
+> [https://injiverify-service.example.com](https://injiverify-service.example.com)
+> Then use this as the verifyServiceUrl in the component:
 > verifyServiceUrl="[https://injiverify-service.example.com/v1/verify](https://injiverify-service.example.com/v1/verify)"
 
 **Installation**
 
-npm i @mosip/react-inji-verify-sdk
+`npm i @mosip/react-inji-verify-sdk`
 
 **Component Props**
 
 **Exclusive Verification Flows**
 
-> Only one of the following should be provided:
+Only one of the following should be provided:
 
 | Prop                                         | Description                                       |
 | -------------------------------------------- | ------------------------------------------------- |
@@ -75,7 +79,7 @@ npm i @mosip/react-inji-verify-sdk
 
 **Presentation Definition Options**
 
-> Only one of the following should be provided:
+Only one of the following should be provided:
 
 | Prop                     | Description                                         |
 | ------------------------ | --------------------------------------------------- |
@@ -86,7 +90,7 @@ npm i @mosip/react-inji-verify-sdk
 
 If you want to directly provide a Presentation Definition instead of fetching it by ID, you can pass it like this:
 
-```
+```js 
 presentationDefinition = {
   id: "c4822b58-7fb4-454e-b827-f8758fe27f9a",
   purpose:
@@ -120,7 +124,8 @@ presentationDefinition = {
 };
 ```
 
-⚡ Tip: If you use presentationDefinition, **do not** pass presentationDefinitionId, and vice versa.
+Tips: 
+If you use presentationDefinition, **do not** pass presentationDefinitionId, and vice versa.
 
 **Required Props**
 
@@ -143,7 +148,7 @@ presentationDefinition = {
 
 **VP Result via UI (frontend receives result)**
 
-```
+```jsx
 <OpenID4VPVerification
   triggerElement={<button>Start VP Verification</button>}
   protocol="openid4vp://"
@@ -159,7 +164,7 @@ presentationDefinition = {
 
 **VP Result via Backend (frontend just gets txnId)**
 
-```
+```jsx
 <OpenID4VPVerification
   triggerElement={<button>Verify using Wallet</button>}
   protocol="openid4vp://"
