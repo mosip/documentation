@@ -31,16 +31,16 @@ Let's briefly explore the key components that constitute Inji Verify:
 
 <figure><img src="../../.gitbook/assets/iv-backend.png" alt="" width="400"><figcaption><p>Scan QR Code Desktop View</p></figcaption></figure>
 
-6. **INJI verify SDK**\
+6. **INJI verify SDK**
    Inji Verify SDK is a library which exposes React components for integrating Inji Verify features seamlessly into any relaying party application. Currently the SDK exposes OpenID4VP component and the integration docs can be found [here](https://github.com/mosip/inji-verify/blob/release-0.12.x/inji-verify-sdk/Readme.md).
 
 ### Components
 
 Let's briefly explore the key components that constitute Inji Verify Backend:
 
-1. **Inji Verify Backend:** This is the service developed on Java with Spring boot. It serves as the core backend for Inji verify proving backend APIs for online VC verification and OpenID4VP sharing.
-2. **JAVA Spring App :** This is the app which serves the APIs to users
-3. **Postgres DB :** The database used to store details required for OpenID4VP sharing, such as Presentation Definition, Transactions and VP token.
-4. **Controller :** The controller exposes APIs for different operations. The API docs can be found [here](https://mosip.stoplight.io/docs/inji-verify/branches/main/)
-5. **Service :** Performs all the logical operations.
-6. **Repository :** Communicates with the database and performs CRUD operations.
+1. **Inji Verify Backend**: This is the service developed on Java with Spring boot. It serves as the core backend for Inji verify proving backend APIs for online VC verification and OpenID4VP sharing.
+2. **JAVA Spring App**: This is the app which serves the APIs to users.
+3. **Postgres DB**: The database used to store details required for OpenID4VP sharing, such as Presentation Definition, Transactions and VP token.
+4. **Controller**: The controller exposes APIs for different operations. The API docs can be found [here](https://mosip.stoplight.io/docs/inji-verify/branches/main/)
+5. **Service**: Performs all the logical operations.
+6. **Repository**: Communicates with the database and performs CRUD operations.
