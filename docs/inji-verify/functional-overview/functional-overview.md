@@ -30,8 +30,6 @@ The below given are the list of features for Inji Verify Portal:
    1. Valid credentials retrieved through QR code scanning or uploading QR codes are displayed securely within the Inji Verify portal.
    2. Users can view detailed information about the credential, including name, DOB, gender, expiration date, and any associated claims.
    3. The user-friendly interface provides a clear and concise representation of the credential data for easy verification.
-
-<!--
 7.  **Ease of Integration for Verifier Applications:**
 
     The **Inji Verify SDK's OpenID4VP-VP verification component** enables developers to easily embed OpenID4VP-VP verification capabilities into their (relying party) verifier applications. This plug-and-play TypeScript component is designed for seamless integration with React + TypeScript applications, enabling robust Verifiable Credential verification using OpenID4VP standards.
@@ -41,8 +39,6 @@ The below given are the list of features for Inji Verify Portal:
 This flexibility empowers developers to accelerate their VC verification implementation with minimal setup, enabling faster time-to-market for digital identity-enabled services.
 
 **Note:** The **Inji Verify SDK- Scan / Upload component** to enable developers to easily embed VC verification capabilities into their verifier (relying party) applications will be coming out in future releases! Stay tuned!
-
--->
 
 8. **Generate QR Code based VP request for sharing credentials from wallet to Inji Verify for verification in different devices:** The OpenID for Verifiable Presentations (OpenID4VP) standard introduces the VP Token, enabling end-users to present Verifiable Presentations (VPs) to verifiers via a digital wallet. In scenarios where the verifier and the user's wallet operate on separate devices, the process unfolds as follows:​
    1. The verifier formulates an Authorization Request, which is then rendered as a QR code. This QR code encapsulates a Request URI, allowing the wallet to retrieve the complete request data, thereby keeping the QR code concise.

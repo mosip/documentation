@@ -21,7 +21,6 @@ Here is a comprehensive summary of the features offered by Inji Verify.
    * **Valid Credential Display**: These credentials are currently active and verified using the Inji Verify Portal.
    * **Invalid Credential Display**: These credentials are active but invalid.
    * **Expired Credential Display**: These credentials have passed their validity period and are no longer active.
-<!--
 
 8. **OpenIDVP Cross Device flow**: OpenID for Verifiable Presentations (OpenID4VP) enables users to securely share their Verifiable Credentials (VCs) from their digital wallet with a verifier, even when they are using different devices.
 
@@ -49,7 +48,6 @@ Note: **Inji Verify SDK's OpenID4VP- VP verification component supports React ve
 
 Backend Setup : Inji Verify's backend supports robust and secure verification of Verifiable Credentials (VCs). The integration of the vc-verifier library facilitates server-side verification of VCs, accommodating both Ed25519 (Signature 2018 & 2020) and RSA (Signature 2018) cryptographic standards. To ensure persistent and reliable data storage, the backend has transitioned from an in-memory H2 database to a PostgreSQL database which enhances data durability.
 
--->
 9. **Generate QR Code based VP request for sharing credentials from wallet to Inji Verify for verification in different devices**: The OpenID for Verifiable Presentations (OpenID4VP) standard introduces the VP Token which will enable the end-users to present Verifiable Presentations (VPs) to verifiers via a digital wallet. In scenarios where the verifier and the user's wallet operate on separate devices, the process unfolds as follows:​
    * The Verifier formulates an Authorization Request, which is then rendered as a QR code. This QR code encapsulates a Request URI, allowing the wallet to retrieve the complete request data, thereby keeping the QR code concise.
    * The user scans the QR code using their digital wallet (e.g., Inji Wallet), which fetches the Authorization Request data and prepares the requested credentials. Depending on the wallet's contents, the user can share all or a subset of the requested credentials.​
