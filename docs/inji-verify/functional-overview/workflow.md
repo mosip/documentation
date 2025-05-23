@@ -151,6 +151,38 @@ sequenceDiagram
 
 **The below diagram illustrates the flow in which Relaying party backend is directly fetching the result from verify backend.**
 
+
+
+```mermaid
+%% Sequence diagram for VP Verification Process
+﻿sequenceDiagram
+    participant Relying Party Backend
+    participant Verify Backend
+    participant Relying Party UI
+    participant OPENID4VP UI Component
+    participant Wallet
+
+
+    Relying Party UI--)OPENID4VP UI Component: Provide : <br> triggerElement? <br> verifyServiceUrl <br> transactionId? <br>  presentationDefinitionId? <br> presentationDefinition? <br> onVpReceived? (CB) <br> onQrCodeExpired (CB) <br> onError (CB) 
+    Relying Party UI--)Relying Party UI: OnClick Trigger Element/upon opening the integrated component
+    OPENID4VP UI Component->>Verify Backend: Create a Autherization Request (verifyServiceUrl/vp-request) 
+    Verify Backend--)Verify Backend: Process the request,<br>Generate txnId if not provided<br> create and return Autherization Request response
+    Verify Backend->>OPENID4VP UI Component: Autherization Request Response
+    OPENID4VP UI Component--)OPENID4VP UI Component: Generate QR Code with response
+    OPENID4VP UI Component--)OPENID4VP UI Component: Polling Status verifyServiceUrl/vp-request/${reqId}/status (ACTIVE, VP_SUBMITTED, EXPIRED)
+    Wallet--)Wallet: Scan QR Code
+    Wallet--)Wallet: Process the QR Data and List the matching VC's
+    Wallet->>Verify Backend: Authenticate User & Submitts VP Token <br> (verifyServiceUrl/vp-submission/direct-post)
+    Verify Backend->>OPENID4VP UI Component: Status
+    OPENID4VP UI Component->>Relying Party UI: Status == VP_SUBMITTED and onVpReceived is passed <br>Trigger onVPReceived callback with transactionId
+    Note over OPENID4VP UI Component,Relying Party UI: flow Ends and controll possesed to Relying Party UI
+    Relying Party UI->>Relying Party Backend: Pass the transactionId to the relying party backend
+    Relying Party Backend->>Verify Backend: verifyServiceUrl/vp-result/${transactionId}
+    Note over Relying Party Backend,Relying Party UI: flow continues 
+```
+
+
+
 1. **Relying Party UI initiates the process:** The user interacts with the Relying Party's User Interface (UI) and triggers a verification action.
 2. **OPENID4VP UI Component communicates with Verify Backend:** Upon the user's action, the Relying Party UI sends a request to Verify Backend. This request contains information needed to initiate the verification.
 3. **Verify Backend processes the request:** The Verify Backend receives the request from the UI. It then processes this request. As part of the processing, the Verify Backend creates an Authorization Request.
@@ -167,6 +199,41 @@ sequenceDiagram
 
 #### **The below diagram illustrates the flow in which Relaying party UI is directly fetching the result from verify backend.**
 
+```mermaid
+%% Sequence diagram for VP Verification Process
+﻿sequenceDiagram
+    participant Relying Party Backend
+    participant Verify Backend
+    participant Relying Party UI
+    participant OPENID4VP UI Component
+    participant Wallet
+
+
+     Relying Party UI--)OPENID4VP UI Component: Provide : <br> triggerElement? <br> verifyServiceUrl <br> transactionId? <br>  presentationDefinitionId? <br> presentationDefinition? <br> onVpProcessed? (CB) <br> onQrCodeExpired (CB) <br> onError (CB) 
+    Relying Party UI--)Relying Party UI: OnClick Trigger Element/upon opening the integrated component
+    OPENID4VP UI Component->>Verify Backend: Create a Autherization Request (verifyServiceUrl/vp-request) 
+    Verify Backend--)Verify Backend: Process the request,<br> Generate txnId if not provided, <br> create and return Autherization Request response
+    Verify Backend->>OPENID4VP UI Component: Autherization Request Response
+    OPENID4VP UI Component--)OPENID4VP UI Component: Generate QR Code with response
+    OPENID4VP UI Component--)OPENID4VP UI Component: Polling Status verifyServiceUrl/vp-request/${reqId}/status (ACTIVE, VP_SUBMITTED, EXPIRED)
+    Wallet--)Wallet: Scan QR Code
+    Wallet--)Wallet: Process the QR Data and List the matching VC's
+    Wallet->>Verify Backend: Authenticate User & Submitts VP Token <br> (verifyServiceUrl/vp-submission/direct-post)
+    Verify Backend->>OPENID4VP UI Component: Status
+    OPENID4VP UI Component->>Verify Backend: Status == VP_SUBMITTED and onVpProcessed is passed then fetch result <br> (verifyServiceUrl/vp-result/${txnId})
+    Verify Backend->>OPENID4VP UI Component: Using txn_Id the server will fetch the data from DB and validate it using VC-Verifier library and return the response
+    OPENID4VP UI Component->>Relying Party UI: Trigger onVpProcessed callback with Result (claims)
+    Note over OPENID4VP UI Component,Relying Party UI: flow Ends and controll possesed to Relying Party UI
+
+
+
+
+```
+
+
+
+
+
 1. **Relying Party UI initiates the process:** The user interacts with the Relying Party's User Interface (UI) and triggers a verification action.
 2. **OPENID4VP UI Component communicates with Verify Backend:** Upon the user's action, the Relying Party UI sends a request to Verify Backend. This request contains information needed to initiate the verification.
 3. **Verify Backend processes the request:** The Verify Backend receives the request from the UI. It then processes this request. As part of the processing, the Verify Backend creates an Authorization Request.
@@ -182,6 +249,20 @@ sequenceDiagram
 13. **Flow Ends and Control is passed to the Relying Party UI:** The complete verification flow concludes, and the Relying Party UI can now use the validated claims to proceed with the application logic.
 
 #### **The below diagram illustrates the flow in which a authorization request gets expired.**
+
+```mermaid
+sequenceDiagram
+    participant Verify Backend
+    participant Relying Party UI
+    participant OPENID4VP UI Component
+    participant Wallet
+
+
+    Verify Backend->>OPENID4VP UI Component: Status
+    OPENID4VP UI Component->>Relying Party UI: Status == EXPIRED then onQrCodeExpired callback triggered.
+```
+
+
 
 1. **OPENID4VP UI Component sends a Status update:** The Verify Backend sends a Status update to the OPENID4VP UI Component. At this point, the status is something like EXPIRED or PENDING, indicating that the QR code is currently valid.
 2. **Time passes and the QR code expires:** The Verify Backend sends a Status update to the OPENID4VP UI Component. At this point, the status is EXPIRED, indicating that the authorization request is currently expired valid.
