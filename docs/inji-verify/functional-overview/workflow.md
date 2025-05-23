@@ -151,11 +151,10 @@ sequenceDiagram
 
 **The below diagram illustrates the flow in which Relaying party backend is directly fetching the result from verify backend.**
 
-
+Sequence diagram for VP Verification Process
 
 ```mermaid
-%% Sequence diagram for VP Verification Process
-﻿sequenceDiagram
+sequenceDiagram
     participant Relying Party Backend
     participant Verify Backend
     participant Relying Party UI
@@ -199,9 +198,10 @@ sequenceDiagram
 
 #### **The below diagram illustrates the flow in which Relaying party UI is directly fetching the result from verify backend.**
 
+Sequence diagram for VP Verification Process
+
 ```mermaid
-%% Sequence diagram for VP Verification Process
-﻿sequenceDiagram
+sequenceDiagram
     participant Relying Party Backend
     participant Verify Backend
     participant Relying Party UI
@@ -225,14 +225,7 @@ sequenceDiagram
     OPENID4VP UI Component->>Relying Party UI: Trigger onVpProcessed callback with Result (claims)
     Note over OPENID4VP UI Component,Relying Party UI: flow Ends and controll possesed to Relying Party UI
 
-
-
-
 ```
-
-
-
-
 
 1. **Relying Party UI initiates the process:** The user interacts with the Relying Party's User Interface (UI) and triggers a verification action.
 2. **OPENID4VP UI Component communicates with Verify Backend:** Upon the user's action, the Relying Party UI sends a request to Verify Backend. This request contains information needed to initiate the verification.
@@ -267,9 +260,10 @@ sequenceDiagram
 
 #### **The below diagram illustrates the flow in which an error occurs**
 
+Sequence Diagram for VP Verification Process
+
 ```mermaid
-%% Sequence diagram for VP Verification Process
-﻿sequenceDiagram
+sequenceDiagram
     participant Verify Backend
     participant Relying Party UI
     participant OPENID4VP UI Component
@@ -279,7 +273,6 @@ sequenceDiagram
     OPENID4VP UI Component--)OPENID4VP UI Component: If any error occurs before successful verification <br> (e.g., during QR code decoding, redirect issues, backend communication errors)
     OPENID4VP UI Component->>Relying Party UI: Trigger onError callback with error details.
 ```
-
 
 
 1. **An error occurs at OPENID4VP UI Component :** An error occurs at OPENID4VP UI Component due to some response error, exceptions or expected errors.
