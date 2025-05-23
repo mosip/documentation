@@ -270,6 +270,21 @@ sequenceDiagram
 
 #### **The below diagram illustrates the flow in which an error occurs**
 
+```mermaid
+%% Sequence diagram for VP Verification Process
+﻿sequenceDiagram
+    participant Verify Backend
+    participant Relying Party UI
+    participant OPENID4VP UI Component
+    participant Wallet
+
+
+    OPENID4VP UI Component--)OPENID4VP UI Component: If any error occurs before successful verification <br> (e.g., during QR code decoding, redirect issues, backend communication errors)
+    OPENID4VP UI Component->>Relying Party UI: Trigger onError callback with error details.
+```
+
+
+
 1. **An error occurs at OPENID4VP UI Component :** An error occurs at OPENID4VP UI Component due to some response error, exceptions or expected errors.
 2. **OPENID4VP UI Component triggers the** onError **callback:** Upon detecting the\
    error, the OPENID4VP UI Component triggers a callback function onError .
