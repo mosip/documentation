@@ -252,17 +252,14 @@ sequenceDiagram
 
 ```mermaid
 sequenceDiagram
-    participant Verify Backend
-    participant Relying Party UI
-    participant OPENID4VP UI Component
-    participant Wallet
+  participant Verify Backend
+  participant Relying Party UI
+  participant OPENID4VP UI Component
+  participant Wallet
 
-
-    Verify Backend->>OPENID4VP UI Component: Status
-    OPENID4VP UI Component->>Relying Party UI: Status == EXPIRED then onQrCodeExpired callback triggered.
+  Verify Backend->>OPENID4VP UI Component: Status (EXPIRED)
+  OPENID4VP UI Component->>Relying Party UI: Trigger onQrCodeExpired callback
 ```
-
-
 
 1. **OPENID4VP UI Component sends a Status update:** The Verify Backend sends a Status update to the OPENID4VP UI Component. At this point, the status is something like EXPIRED or PENDING, indicating that the QR code is currently valid.
 2. **Time passes and the QR code expires:** The Verify Backend sends a Status update to the OPENID4VP UI Component. At this point, the status is EXPIRED, indicating that the authorization request is currently expired valid.
