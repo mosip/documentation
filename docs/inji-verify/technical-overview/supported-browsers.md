@@ -2,7 +2,7 @@
 
 Inji Verify is currently compatible and certified with the following browsers:
 
-<table><thead><tr><th width="153.9254150390625">Sl No</th><th>Browser</th><th>Version</th></tr></thead><tbody><tr><td>1</td><td>Google Chrome</td><td>Version 123.0.6312.124</td></tr><tr><td>2</td><td>Mozilla Firefox</td><td>Version 125.0.1</td></tr><tr><td>3</td><td>Microsoft Edge</td><td>Version 124.0.2478.51</td></tr><tr><td>4</td><td>Mac Safari</td><td>Version 17</td></tr></tbody></table>
+<table><thead><tr><th width="90.257080078125">Sl No</th><th width="286.18890380859375">Browser</th><th>Version</th></tr></thead><tbody><tr><td>1</td><td>Google Chrome</td><td>Version 123.0.6312.124</td></tr><tr><td>2</td><td>Mozilla Firefox</td><td>Version 125.0.1</td></tr><tr><td>3</td><td>Microsoft Edge</td><td>Version 124.0.2478.51</td></tr><tr><td>4</td><td>Mac Safari</td><td>Version 17</td></tr></tbody></table>
 
 | Devices            | Version                 |
 | ------------------ | ----------------------- |
@@ -17,4 +17,3 @@ Inji Verify is currently compatible and certified with the following browsers:
 | iphone 11          | ios 15 BLE 5.0          |
 | iphone 8           | ios 16 BLE 5.0          |
 | iphone 7           | ios 8 iphone 16 BLE 5.0 |
-

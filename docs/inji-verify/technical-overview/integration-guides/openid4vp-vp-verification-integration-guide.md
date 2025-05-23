@@ -1,12 +1,12 @@
-# OpenID4VP - Verification Integration Guide - (Verifiable Presentation)
+# OpenID4VP-VP Verification Integration Guide
 
-## INJI VERIFY SDK
+## Inji Verify SDK
 
 Inji Verify SDK is a library which exposes **React** components for integrating Inji Verify features seamlessly into any relaying party application.
 
 ### Features
 
-* OpenId4VP component that creates QR code and performs OpenId4Vp sharing backend flow. OpenID4VP cross device flow can be performed by following the steps provided in [End User Guide](https://mosip.atlassian.net/wiki/spaces/PROD/pages/1297285260)<!-- change the link -->
+* OpenId4VP component that creates QR code and performs OpenId4Vp sharing backend flow. OpenID4VP cross device flow can be performed by following the steps provided in [End User Guide](https://mosip.atlassian.net/wiki/spaces/PROD/pages/1297285260)
 
 ### Usage
 
@@ -16,23 +16,20 @@ Inji Verify SDK is a library which exposes **React** components for integrating 
 
 ### Peer Dependencies
 
-| **Name**   | **Version** |
-| ---------- | ----------- |
-| React      | 18.2.0      |
-| Typescript | 4.9.5       |
+| Name       | Version |
+| ---------- | ------- |
+| React      | 18.2.0  |
+| Typescript | 4.9.5   |
 
 ### Local Publishing Guide
 
 Install the dependencies\
 `npm install`
 
-Build the project
-`npm run build`
+Build the project`npm run build`
 
-Publish the npm package using Verdaccio
-We use [verdaccio](https://verdaccio.org/docs/what-is-verdaccio). npm link or yarn link won't work as we have peer dependencies. 
-Follow the docs to setup Verdaccio. 
-Then run npm publish --registry \<http://localhost:\<VERADACCIO\_PORT>>
+Publish the npm package using Verdaccio, We use [verdaccio](https://verdaccio.org/docs/what-is-verdaccio). npm link or yarn link won't work as we have peer dependencies. Follow the docs to setup Verdaccio.\
+Then run npm publish `--registry <http://localhost:<VERADACCIO_PORT>>`
 
 ### Integration Guide
 
@@ -44,23 +41,26 @@ This guide walks you through integrating the OpenID4VP verification component in
 
 * React Project Setup
 
-> **NOTE**
-> The component does not support other frontend frameworks like Angular, Vue, or React Native.\
-> The component is written in React + TypeScript
+{% hint style="warning" %}
+**Note**\
+The component is written in **React** + **TypeScript**, The component does not support other frontend frameworks like Angular, Vue, or React Native.
+{% endhint %}
 
 **Backend Requirements**
 
 To use the component, you must host a verification backend that implements the OpenID4VP protocol. This backend is referred to as the inji-verify-service. It also needs to adhere to the OpenAPI spec defined here in case if the backend service is not inji-verify-service.
 
-⚠️ Important: 
+{% hint style="success" %}
+**Important**:
 
 * The component expects these endpoints to be accessible via a base URL (verifyServiceUrl).
+{% endhint %}
 
-Example:
-> If you deploy the inji-verify/verify-service at: 
-> [https://injiverify-service.example.com](https://injiverify-service.example.com)
-> Then use this as the verifyServiceUrl in the component:
-> verifyServiceUrl="[https://injiverify-service.example.com/v1/verify](https://injiverify-service.example.com/v1/verify)"
+**Example**:
+
+If you deploy the inji-verify/verify-service at:[https://injiverify-service.example.com](https://injiverify-service.example.com)\
+Then use this as the verifyServiceUrl in the component:\
+verifyServiceUrl="[https://injiverify-service.example.com/v1/verify](https://injiverify-service.example.com/v1/verify)"
 
 **Installation**
 
@@ -90,7 +90,7 @@ Only one of the following should be provided:
 
 If you want to directly provide a Presentation Definition instead of fetching it by ID, you can pass it like this:
 
-```js 
+```js
 presentationDefinition = {
   id: "c4822b58-7fb4-454e-b827-f8758fe27f9a",
   purpose:
@@ -124,7 +124,7 @@ presentationDefinition = {
 };
 ```
 
-Tips: 
+Tips:\
 If you use presentationDefinition, **do not** pass presentationDefinitionId, and vice versa.
 
 **Required Props**

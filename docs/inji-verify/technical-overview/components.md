@@ -1,11 +1,12 @@
 # Components
 
-* **Inji Verify** serves as a verification platform for verifiable credentials, offering an intuitive web portal designed to streamline the process of verifying VC for users.
-* **Technical Components of Verify:** The following component diagram illustrates the structure and components of Inji Verify. It offers a comprehensive explanation of how the platform operates and how its various elements interact to deliver its functionalities.
+**Inji Verify** serves as a verification platform for verifiable credentials, offering an intuitive web portal designed to streamline the process of verifying VC for users.
+
+**Technical Components of Verify:** The following component diagram illustrates the structure and components of Inji Verify. It offers a comprehensive explanation of how the platform operates and how its various elements interact to deliver its functionalities.
 
 <figure><img src="../../.gitbook/assets/inji_verify_0.11.1_components.png" alt="" width="375"><figcaption></figcaption></figure>
 
-### Components:
+### Components
 
 Let's briefly explore the key components that constitute Inji Verify:
 
@@ -31,7 +32,7 @@ Let's briefly explore the key components that constitute Inji Verify:
 
 <figure><img src="../../.gitbook/assets/iv-backend.png" alt="" width="400"><figcaption><p>Scan QR Code Desktop View</p></figcaption></figure>
 
-6. **INJI verify SDK**
+6. **INJI verify SDK**\
    Inji Verify SDK is a library which exposes React components for integrating Inji Verify features seamlessly into any relaying party application. Currently the SDK exposes OpenID4VP component and the integration docs can be found [here](https://github.com/mosip/inji-verify/blob/release-0.12.x/inji-verify-sdk/Readme.md).
 
 ### Components
