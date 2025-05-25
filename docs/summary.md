@@ -8,6 +8,7 @@
   * [Roadmap](readme/roadmap/README.md)
     * [Roadmap 2025](readme/roadmap/roadmap-2025.md)
     * [Roadmap 2024](readme/roadmap/roadmap-2024.md)
+  * [Standards and Specifications](readme/standards-and-specifications.md)
   * [Supported Integrations](readme/supported-integrations/README.md)
     * [MOSIP](https://docs.mosip.io)
   * [Project Governance](readme/project-governance.md)
