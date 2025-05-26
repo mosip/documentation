@@ -20,6 +20,7 @@
   * [Announcement](readme/announcement.md)
   * [Setup](readme/setup/README.md)
     * [Infrastructure Requirements](readme/setup/infrastructure-requirements.md)
+    * [Deploy](readme/setup/deploy.md)
 
 ## Inji Wallet
 
@@ -199,4 +200,3 @@
 
 * [FAQ](page-1.md)
 * [Experiment](experiment.md)
-* [Deploy](deploy.md)

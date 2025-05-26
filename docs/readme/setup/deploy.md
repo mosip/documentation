@@ -1,5 +1,4 @@
-# Inji Deployment Guide
-
+# Deploy
 
 ## How is this guide organized?
 
@@ -11,14 +10,14 @@ This Installation Guide is structured as below:
 
 ### Deployment Architecture \[TODO]
 
-<figure><img src=".gitbook/assets/iww-deployment-diagram.png" alt=""><figcaption><p>Inji Web Deployment Architecture</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/iww-deployment-diagram.png" alt=""><figcaption><p>Inji Web Deployment Architecture</p></figcaption></figure>
 
 ## Prerequisites
 
 ### Tools and utilities
 
 * [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html).
-* [Rancher](inji-wallet/inji-web/rancher).
+* [Rancher](../../inji-wallet/inji-web/rancher/).
 * Command line utilities:
   * kubectl
   * helm
@@ -45,12 +44,12 @@ Ensure all required hardware and software dependencies are prepared before proce
 * Virtual Machines (VMs) can use any operating system as per convenience.
 * For this installation guide, Ubuntu OS is referenced throughout.
 
-| Sl no. | Purpose                                                                 | vCPU's | RAM   | Storage (HDD) | no. of VM's | HA                                   |
-|--------|-------------------------------------------------------------------------|--------|-------|---------------|-------------|---------------------------------------|
-| 1.     | Wireguard Bastion Host                                                 | 2      | 4 GB  | 8 GB          | 1           | (ensure to setup active-passive)     |
-| 2.     | Observation Cluster nodes                                              | 2      | 8 GB  | 32 GB         | 2           | 2                                     |
-| 3.     | Observation Nginx server (use Loadbalancer if required)                | 2      | 4 GB  | 16 GB         | 1           | Nginx+                                |
-| 4.     | Inji Stack Cluster nodes along with Nginx server, Use Loadbalancer if required | 8      | 32 GB  | 64 GB         | 3           | Allocate etcd, control plane and worker accordingly |
+| Sl no. | Purpose                                                                        | vCPU's | RAM   | Storage (HDD) | no. of VM's | HA                                                  |
+| ------ | ------------------------------------------------------------------------------ | ------ | ----- | ------------- | ----------- | --------------------------------------------------- |
+| 1.     | Wireguard Bastion Host                                                         | 2      | 4 GB  | 8 GB          | 1           | (ensure to setup active-passive)                    |
+| 2.     | Observation Cluster nodes                                                      | 2      | 8 GB  | 32 GB         | 2           | 2                                                   |
+| 3.     | Observation Nginx server (use Loadbalancer if required)                        | 2      | 4 GB  | 16 GB         | 1           | Nginx+                                              |
+| 4.     | Inji Stack Cluster nodes along with Nginx server, Use Loadbalancer if required | 8      | 32 GB | 64 GB         | 3           | Allocate etcd, control plane and worker accordingly |
 
 ### Network Requirements
 
@@ -59,28 +58,11 @@ Ensure all required hardware and software dependencies are prepared before proce
 * All the VM's should have stable internet connectivity for docker image download (in case of local setup ensure to have a locally accessible docker registry).
 * Server Interface requirement as mentioned in below table:
 
-| Sl no. | Purpose                  | Network Interfaces                                                                                                                                                                                                 |
-|--------|--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.     | Wireguard Bastion Host   | *One Private interface*: that is on the same network as all the rest of nodes (e.g.: inside local NAT Network).<br><br>*One public interface*: Either has a direct public IP, or a firewall NAT (global address) rule that forwards traffic on 51820/udp port to this interface IP. |
-| 2.     | K8 Cluster nodes         | One internal interface: with internet access and that is on the same network as all the rest of nodes (e.g.: inside local NAT Network).                                                                          |
-| 3.     | Observation Nginx server | One internal interface: with internet access and that is on the same network as all the rest of nodes (e.g.: inside local NAT Network).                                                                          |
-| 4.     | Inji Nginx server        | *One internal interface*: that is on the same network as all the rest of nodes (e.g.: inside local NAT Network).<br><br>*One public interface*: Either has a direct public IP, or a firewall NAT (global address) rule that forwards traffic on 443/tcp port to this interface IP. |
+<table><thead><tr><th width="79.11361694335938">Sl no.</th><th width="178.93603515625">Purpose</th><th>Network Interfaces</th></tr></thead><tbody><tr><td>1.</td><td>Wireguard Bastion Host</td><td><em>One Private interface</em>: that is on the same network as all the rest of nodes (e.g.: inside local NAT Network).<br><br><em>One public interface</em>: Either has a direct public IP, or a firewall NAT (global address) rule that forwards traffic on 51820/udp port to this interface IP.</td></tr><tr><td>2.</td><td>K8 Cluster nodes</td><td>One internal interface: with internet access and that is on the same network as all the rest of nodes (e.g.: inside local NAT Network).</td></tr><tr><td>3.</td><td>Observation Nginx server</td><td>One internal interface: with internet access and that is on the same network as all the rest of nodes (e.g.: inside local NAT Network).</td></tr><tr><td>4.</td><td>Inji Nginx server</td><td><em>One internal interface</em>: that is on the same network as all the rest of nodes (e.g.: inside local NAT Network).<br><br><em>One public interface</em>: Either has a direct public IP, or a firewall NAT (global address) rule that forwards traffic on 443/tcp port to this interface IP.</td></tr></tbody></table>
 
 ### DNS requirements \[TODO]
 
-| Sl No. | Domain Name                  | Mapping Details                                           | Purpose                                                                                     |
-|--------|------------------------------|----------------------------------------------------------|---------------------------------------------------------------------------------------------|
-| 1.     | rancher.xyz.net              | Private IP of Nginx server or load balancer for Observation cluster | Rancher dashboard to monitor and manage the Kubernetes cluster.                            |
-| 2.     | keycloak.xyz.net             | Private IP of Nginx server for Observation cluster       | Administrative IAM tool (Keycloak). This is for the Kubernetes administration.             |
-| 3.     | sandbox.xyz.net              | Private IP of Nginx server for MOSIP cluster             | Index page for links to different dashboards of MOSIP environment. (Not for production/UAT use) |
-| 4.     | api-internal.sandbox.xyz.net | Private IP of Nginx server for MOSIP cluster             | Internal APIs are exposed through this domain. Accessible privately over Wireguard channel. |
-| 5.     | api.sandbox.xyz.net          | Public IP of Nginx server for MOSIP cluster              | All publicly usable APIs are exposed using this domain.                                     |
-| 6.     | iam.sandbox.xyz.net          | Private IP of Nginx server for MOSIP cluster             | MOSIP uses an OpenID Connect server (default: Keycloak) to manage access across services. Accessible over Wireguard. |
-| 7.     | postgres.sandbox.xyz.net     | Private IP of Nginx server for MOSIP cluster             | Points to the Postgres server. Connect via port forwarding over Wireguard.                 |
-| 8.     | onboarder.sandbox.xyz.net    | Private IP of Nginx server for MOSIP cluster             | Accessing reports of MOSIP partner onboarding over Wireguard.                              |
-| 9.     | injiweb.sandbox.xyz.net      | Public IP of Nginx server for MOSIP cluster              | Accessing Inji Web portal publicly.                                                        |
-| 10.    | injicertify.sandbox.xyz.net  | Public IP of Nginx server for MOSIP cluster              | Accessing Inji Certify portal publicly.                                                    |
-| 11.    | injiverify.sandbox.xyz.net   | Public IP of Nginx server for MOSIP cluster              | Accessing Inji Verify portal publicly.                                                     |
+<table><thead><tr><th width="77.13140869140625">Sl No.</th><th width="163.23797607421875">Domain Name</th><th>Mapping Details</th><th>Purpose</th></tr></thead><tbody><tr><td>1.</td><td>rancher.xyz.net</td><td>Private IP of Nginx server or load balancer for Observation cluster</td><td>Rancher dashboard to monitor and manage the Kubernetes cluster.</td></tr><tr><td>2.</td><td>keycloak.xyz.net</td><td>Private IP of Nginx server for Observation cluster</td><td>Administrative IAM tool (Keycloak). This is for the Kubernetes administration.</td></tr><tr><td>3.</td><td>sandbox.xyz.net</td><td>Private IP of Nginx server for MOSIP cluster</td><td>Index page for links to different dashboards of MOSIP environment. (Not for production/UAT use)</td></tr><tr><td>4.</td><td>api-internal.sandbox.xyz.net</td><td>Private IP of Nginx server for MOSIP cluster</td><td>Internal APIs are exposed through this domain. Accessible privately over Wireguard channel.</td></tr><tr><td>5.</td><td>api.sandbox.xyz.net</td><td>Public IP of Nginx server for MOSIP cluster</td><td>All publicly usable APIs are exposed using this domain.</td></tr><tr><td>6.</td><td>iam.sandbox.xyz.net</td><td>Private IP of Nginx server for MOSIP cluster</td><td>MOSIP uses an OpenID Connect server (default: Keycloak) to manage access across services. Accessible over Wireguard.</td></tr><tr><td>7.</td><td>postgres.sandbox.xyz.net</td><td>Private IP of Nginx server for MOSIP cluster</td><td>Points to the Postgres server. Connect via port forwarding over Wireguard.</td></tr><tr><td>8.</td><td>onboarder.sandbox.xyz.net</td><td>Private IP of Nginx server for MOSIP cluster</td><td>Accessing reports of MOSIP partner onboarding over Wireguard.</td></tr><tr><td>9.</td><td>injiweb.sandbox.xyz.net</td><td>Public IP of Nginx server for MOSIP cluster</td><td>Accessing Inji Web portal publicly.</td></tr><tr><td>10.</td><td>injicertify.sandbox.xyz.net</td><td>Public IP of Nginx server for MOSIP cluster</td><td>Accessing Inji Certify portal publicly.</td></tr><tr><td>11.</td><td>injiverify.sandbox.xyz.net</td><td>Public IP of Nginx server for MOSIP cluster</td><td>Accessing Inji Verify portal publicly.</td></tr></tbody></table>
 
 ### Certificate requirements
 
@@ -270,8 +252,10 @@ cd k8s-infra/mosip/onprem
 ## Deploying Inji
 
 ### Pre-requisites
+
 * `inji-stack-config` configmap: For inji K8's env, `inji-stack-config` configmap in `default` namespace contains Domain related information. Follow below steps to add domain details for `inji-stack-config` configmap.
-* Update the domain names in `inji-stack-cm.yaml` correctly for your environment.
+*   Update the domain names in `inji-stack-cm.yaml` correctly for your environment.
+
     ```
     kubectl apply -f - <<EOF
     ## The data here is of generic interest to modules in different namespaces hence this is marked as inji-stack-config.
@@ -306,8 +290,8 @@ cd k8s-infra/mosip/onprem
 * [Postgres installation](https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/external/postgres)
 
 ### Object store installation
-* [Object store installation](https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/external/object-store)
 
+* [Object store installation](https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/external/object-store)
 
 ### conf-secret installation
 
@@ -315,13 +299,14 @@ cd k8s-infra/mosip/onprem
 
 ### config-server installation
 
-* Create a `values.yaml` file that will contain the configuration for the chart and send it to your config-server installation.
-  ```
-   touch values.yaml
-  ```
-* Review `values.yaml` and make sure git repository parameters are as per your installation and enable only the required environment variables.
+*   Create a `values.yaml` file that will contain the configuration for the chart and send it to your config-server installation.
 
-    ````
+    ```
+     touch values.yaml
+    ```
+*   Review `values.yaml` and make sure git repository parameters are as per your installation and enable only the required environment variables.
+
+    ```
     gitRepo:
       uri: https://github.com/mosip/inji-config
       version: release-0.8.x
@@ -331,7 +316,7 @@ cd k8s-infra/mosip/onprem
       ## User name of user who has access to the private repo. Ignore for public repo
       username: ""
       token: ""
-    
+
     envVariables:
       - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_API_PUBLIC_HOST
         valueFrom:
@@ -339,84 +324,84 @@ cd k8s-infra/mosip/onprem
             name: inji-stack-config
             key: api-host
         enabled: true
-    
+
       - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_API_INTERNAL_HOST
         valueFrom:
           configMapKeyRef:
             name: inji-stack-config
             key: api-internal-host
         enabled: true
-    
+
       - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_PARTNER_CRYPTO_P12_PASSWORD
         valueFrom:
           secretKeyRef:
             key: mosip-partner-crypto-p12-password
             name: conf-secrets-various
         enabled: false
-    
+
       - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MPARTNER_DEFAULT_MOBILE_SECRET
         valueFrom:
           secretKeyRef:
             key: mpartner_default_mobile_secret
             name: keycloak-client-secrets
         enabled: false
-    
+
       - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_KEYCLOAK_INTERNAL_URL
         valueFrom:
           configMapKeyRef:
             name: keycloak-host
             key: keycloak-internal-url
         enabled: false
-    
+
       - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_KEYCLOAK_EXTERNAL_URL
         valueFrom:
           configMapKeyRef:
             name: keycloak-host
             key: keycloak-external-url
         enabled: false
-    
+
       - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_KEYCLOAK_INTERNAL_HOST
         valueFrom:
           configMapKeyRef:
             name: keycloak-host
             key: keycloak-internal-host
         enabled: false
-    
+
       - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_KEYCLOAK_EXTERNAL_HOST
         valueFrom:
           configMapKeyRef:
             name: keycloak-host
             key: keycloak-external-host
         enabled: false
-    
+
       - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_DB_DBUSER_PASSWORD
         valueFrom:
           secretKeyRef:
             name: db-common-secrets
             key: db-dbuser-password
         enabled: false
-    
+
       - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_S3_ACCESSKEY
         valueFrom:
           configMapKeyRef:
             name: s3
             key: s3-user-key
         enabled: false
-    
+
       - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_S3_REGION
         valueFrom:
           configMapKeyRef:
             name: s3
             key: s3-region
         enabled: false
-    
+
       - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_S3_SECRETKEY
         valueFrom:
           secretKeyRef:
             name: s3
             key: s3-user-secret
         enabled: false
-    
+
       - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_ESIGNET_HOST
         valueFrom:
           configMapKeyRef:
@@ -430,86 +415,87 @@ cd k8s-infra/mosip/onprem
             key: esignet-mock-host
             name: inji-stack-config
         enabled: true
-    
+
       - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIPID_IDENTITY_ESIGNET_HOST
         valueFrom:
           configMapKeyRef:
             key: mosipid-identity-esignet-host
             name: inji-stack-config
         enabled: false
-    
+
       - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_ESIGNET_INSURANCE_HOST
         valueFrom:
           configMapKeyRef:
             key: esignet-insurance-host
             name: inji-stack-config
         enabled: false  
-    
+
       - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_INJI_DATASHARE_HOST
         valueFrom:
           configMapKeyRef:
             key: inji-datashare-host
             name: inji-stack-config
         enabled: false
-    
+
       - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_INJIWEB_HOST
         valueFrom:
           configMapKeyRef:
             key: injiweb-host
             name: inji-stack-config
         enabled: true
-    
+
       - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_INJIVERIFY_HOST
         valueFrom:
           configMapKeyRef:
             key: injiverify-host
             name: inji-stack-config
         enabled: true
-    
+
       - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_INJICERTIFY_HOST
         valueFrom:
           configMapKeyRef:
             key: injicertify-host
             name: inji-stack-config
         enabled: true
-    
-    ````
 
-* Create a file named `configserver.sh`:
-  ```
-  touch configserver.sh
-  ```
-* Open the file and paste the following content into it in the same directory where `values.yaml` is created.
-    ````
+    ```
+*   Create a file named `configserver.sh`:
+
+    ```
+    touch configserver.sh
+    ```
+*   Open the file and paste the following content into it in the same directory where `values.yaml` is created.
+
+    ```
     #!/bin/bash
     # Installs config-server
     ## Usage: ./install.sh [kubeconfig]
-    
+
     if [ $# -ge 1 ] ; then
     export KUBECONFIG=$1
     fi
-    
+
     NS=config-server
     CHART_VERSION=12.0.1
-    
+
     read -p "Is conf-secrets module installed?(Y/n) " yn
     if [ $yn = "Y" ]; then read -p "Is values.yaml for config-server chart set correctly as part of Pre-requisites?(Y/n) " yn; fi
     if [ $yn = "Y" ]
     then
     echo Create $NS namespace
     kubectl create ns $NS
-    
+
         # set commands for error handling.
         set -e
         set -o errexit   ## set -e : exit the script if any statement returns a non-true return value
         set -o nounset   ## set -u : exit the script if you try to use an uninitialised variable
         set -o errtrace  # trace ERR through 'time command' and other functions
         set -o pipefail  # trace ERR through pipes
-    
+
         echo Istio label
         kubectl label ns $NS istio-injection=enabled --overwrite
         helm repo update
-    
+
         UTIL_URL=https://raw.githubusercontent.com/mosip/mosip-infra/master/deployment/v3/utils/copy_cm_func.sh
         COPY_UTIL=./copy_cm_func.sh
         DST_NS=config-server # DST_NS: Destination namespace
@@ -527,7 +513,7 @@ cd k8s-infra/mosip/onprem
         else
             echo "Skipping copy, s3 config or secret not found"
         fi
-    
+
         echo Installing config-server
         helm -n $NS install config-server mosip/config-server -f values.yaml --wait --version $CHART_VERSION
         echo Installed Config-server.
@@ -535,33 +521,23 @@ cd k8s-infra/mosip/onprem
     echo Exiting the MOSIP installation. Please meet the pre-requisites and than start again.
     kill -9 `ps --pid $$ -oppid=`; exit
     fi
-    ````
+    ```
+*   Run the Script
 
-* Run the Script
-  ```
-  chmod +x configserver.sh
-  ./configserver.sh
-  ```
+    ```
+    chmod +x configserver.sh
+    ./configserver.sh
+    ```
 
 ### Artifactory installation
 
 * [artifactory installation](https://github.com/mosip/artifactory-ref-impl/tree/v0.10.0-INJI/deploy)
-<!-- 
-  * **Note**: When installing Datashare and Mimoto, ensure that the active\_profile\_env parameter in the config-map of the config-server-share is correctly set. Use the following environment profiles based on the respective services: default,inji-default, standalone.
-
-### datashare installation
-
-* datashare installation: https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/mosip/datashare
-
--->
 
 ### mimoto installation
-
 
 * mimoto installation: https://github.com/mosip/mimoto/tree/develop/deploy
 
 ### Inji web and datashare installation
 
 * [Inji web and datashare installation](https://github.com/mosip/inji-web/tree/develop/deploy)
-
-* **Note**: After installing inji web and datashare, ensure that the active_profile_env parameter in the config-map of the config-server-share is correctly set to: default,inji-default,standalone.
+* **Note**: After installing inji web and datashare, ensure that the active\_profile\_env parameter in the config-map of the config-server-share is correctly set to: default,inji-default,standalone.
