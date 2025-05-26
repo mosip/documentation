@@ -1,3 +1,7 @@
+---
+icon: mistletoe
+---
+
 # Project Governance
 
 ### Open Source Governance Process at MOSIP <a href="#open-source-governance-process-at-mosip" id="open-source-governance-process-at-mosip"></a>

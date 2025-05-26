@@ -1,3 +1,7 @@
+---
+icon: nfc
+---
+
 # Standards and Specifications
 
 > **Building on open standards isn’t just about technology—it’s about creating a seamless, secure, and globally trusted way for people to own, share, and verify their credentials effortlessly, no matter where they are.**

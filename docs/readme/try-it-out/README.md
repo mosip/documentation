@@ -1,3 +1,7 @@
+---
+icon: gamepad-modern
+---
+
 # Try It Out
 
 ## Overview
