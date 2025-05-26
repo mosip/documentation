@@ -46,23 +46,14 @@ This flexibility empowers developers to accelerate their VC verification impleme
 **Note**: Inji Verify SDK's OpenID4VP-VP verification component supports React version - 18.2.0
 {% endhint %}
 
-**Backend Setup** : Inji Verify's backend supports robust and secure verification of Verifiable Credentials (VCs). The integration of the vc-verifier library facilitates server-side verification of VCs, accommodating both Ed25519 (Signature 2018 & 2020) and RSA (Signature 2018) cryptographic standards. To ensure persistent and reliable data storage, the backend has transitioned from an in-memory H2 database to a PostgreSQL database which enhances data durability.
-
-9. **Generate QR Code based VP request for sharing credentials from wallet to Inji Verify for verification in different devices**: The OpenID for Verifiable Presentations (OpenID4VP) standard introduces the VP Token which will enable the end-users to present Verifiable Presentations (VPs) to verifiers via a digital wallet. In scenarios where the verifier and the user's wallet operate on separate devices, the process unfolds as follows:​
-   * The Verifier formulates an Authorization Request, which is then rendered as a QR code. This QR code encapsulates a Request URI, allowing the wallet to retrieve the complete request data, thereby keeping the QR code concise.
-   * The user scans the QR code using their digital wallet (e.g., Inji Wallet), which fetches the Authorization Request data and prepares the requested credentials. Depending on the wallet's contents, the user can share all or a subset of the requested credentials.​
-   * Utilizing the `vp_token` response type and the `direct_post` response mode, the wallet securely transmits the VPs directly to the verifier's specified endpoint via an HTTP POST request.
-   * Upon receipt, the Verifier assesses the authenticity and validity of the presented credentials. The verification results are then displayed within Inji Verify, providing immediate feedback on the credential status.​
-
-This cross-device flow ensures a secure and efficient method for users to share their verifiable credentials across different devices, enhancing both flexibility and user experience in credential verification processes.
-
-10. **Language Selection**: User can choose from the listed languages for better usability such that the text description and VC result on the UI is displayed based on the chosen language. Inji Verify supports the following international languages which includes Portuguese, Spanish, French, English, Arabic, Khmer and the Indian vernacular langauges includes Tamil, Hindia and Kannada.
-11. **UI Theme customization**: UI themes can be customized so that any integrators/ country can change the UI theme based on their requirements.
-12. **Server setup for VC Verification**: The vc-verifier library has been integrated into Inji Verify to enable server-side verification of Verifiable Credentials (VCs) using Ed25519 key signatures 2018, 2020 and RSA key signature 2018.
-13. **Error Handling:** The portal features comprehensive error handling mechanisms, guiding users in case of invalid QR codes, or expired QR codes and decoding failures.
-14. **User-friendly Interface**: Inji Verify offers an intuitive interface, providing a seamless experience for users to navigate and verify credentials effortlessly. The new version includes a responsive design for mobile devices across various browsers, enhancing the ease of exploring, scanning, and uploading features.
-15. **Real-time Verification:** Users can verify credentials in real time, ensuring prompt validation and reducing verification delays.
-16. **Scalability:** Inji Verify is designed to scale efficiently, accommodating growing user demands and ensuring optimal performance under varying load conditions.
+10. **Backend Setup**: Inji Verify's backend supports robust and secure verification of Verifiable Credentials (VCs). The integration of the vc-verifier library facilitates server-side verification of VCs, accommodating both Ed25519 (Signature 2018 & 2020) and RSA (Signature 2018) cryptographic standards. To ensure persistent and reliable data storage, the backend has transitioned from an in-memory H2 database to a PostgreSQL database which enhances data durability.
+11. **Language Selection**: User can choose from the listed languages for better usability such that the text description and VC result on the UI is displayed based on the chosen language. Inji Verify supports the following international languages which includes Portuguese, Spanish, French, English, Arabic, Khmer and the Indian vernacular langauges includes Tamil, Hindia and Kannada.
+12. **UI Theme customization**: UI themes can be customized so that any integrators/ country can change the UI theme based on their requirements.
+13. **Server setup for VC Verification**: The vc-verifier library has been integrated into Inji Verify to enable server-side verification of Verifiable Credentials (VCs) using Ed25519 key signatures 2018, 2020 and RSA key signature 2018.
+14. **Error Handling:** The portal features comprehensive error handling mechanisms, guiding users in case of invalid QR codes, or expired QR codes and decoding failures.
+15. **User-friendly Interface**: Inji Verify offers an intuitive interface, providing a seamless experience for users to navigate and verify credentials effortlessly. The new version includes a responsive design for mobile devices across various browsers, enhancing the ease of exploring, scanning, and uploading features.
+16. **Real-time Verification:** Users can verify credentials in real time, ensuring prompt validation and reducing verification delays.
+17. **Scalability:** Inji Verify is designed to scale efficiently, accommodating growing user demands and ensuring optimal performance under varying load conditions.
 
 {% hint style="warning" %}
 **Note**: Currently the scope of VCs that can be verified are:
@@ -76,3 +67,20 @@ This cross-device flow ensures a secure and efficient method for users to share 
 {% endhint %}
 
 For more detailed information on each step and the underlying systems, click [**here**](../functional-overview/workflow.md)**.**
+
+
+<!-- 
+
+
+This got added by mistake, find where this cam from and why it might have been added here.
+
+11. **Generate QR Code based VP request for sharing credentials from wallet to Inji Verify for verification in different devices**: The OpenID for Verifiable Presentations (OpenID4VP) standard introduces the VP Token which will enable the end-users to present Verifiable Presentations (VPs) to verifiers via a digital wallet. In scenarios where the verifier and the user's wallet operate on separate devices, the process unfolds as follows:​
+   * The Verifier formulates an Authorization Request, which is then rendered as a QR code. This QR code encapsulates a Request URI, allowing the wallet to retrieve the complete request data, thereby keeping the QR code concise.
+   * The user scans the QR code using their digital wallet (e.g., Inji Wallet), which fetches the Authorization Request data and prepares the requested credentials. Depending on the wallet's contents, the user can share all or a subset of the requested credentials.​
+   * Utilizing the `vp_token` response type and the `direct_post` response mode, the wallet securely transmits the VPs directly to the verifier's specified endpoint via an HTTP POST request.
+   * Upon receipt, the Verifier assesses the authenticity and validity of the presented credentials. The verification results are then displayed within Inji Verify, providing immediate feedback on the credential status.​
+
+This cross-device flow ensures a secure and efficient method for users to share their verifiable credentials across different devices, enhancing both flexibility and user experience in credential verification processes.
+
+
+-->

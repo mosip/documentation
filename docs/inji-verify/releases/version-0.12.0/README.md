@@ -61,7 +61,7 @@ Additionally, please note that the OpenID4VP Cross-Device Flow is compatible onl
 
 The following table outlines the tested and certified compatibility of Inji Verify 0.12.0 with other modules.
 
-<table><thead><tr><th width="278.2222900390625">Module</th><th>Version</th></tr></thead><tbody><tr><td>Inji Wallet</td><td><a href="https://github.com/mosip/inji-wallet/tree/v0.16.0">0.16.0</a></td></tr><tr><td>Inji Web</td><td><a href="https://github.com/mosip/inji-web/tree/v0.11.0">0.11.0</a></td></tr><tr><td>Pixel-Pass library</td><td><a href="https://github.com/mosip/pixelpass/tree/v0.5.0">v0.5.0</a></td></tr><tr><td>vc-verifier library</td><td><a href="https://github.com/mosip/vc-verifier/tree/v1.2.0">v1.2.0</a></td></tr></tbody></table>
+<table><thead><tr><th width="278.2222900390625">Module</th><th>Version</th></tr></thead><tbody><tr><td>Inji Wallet</td><td><a href="https://github.com/mosip/inji-wallet/tree/v0.16.0">0.16.0</a></td></tr><tr><td>Inji Web</td><td><a href="https://github.com/mosip/inji-web/tree/v0.12.0">0.12.0</a></td></tr><tr><td>Pixel-Pass library</td><td><a href="https://github.com/mosip/pixelpass/tree/v0.5.0">v0.5.0</a></td></tr><tr><td>vc-verifier library</td><td><a href="https://github.com/mosip/vc-verifier/tree/v1.2.0">v1.2.0</a></td></tr></tbody></table>
 
 ### **Known Issues**
 
