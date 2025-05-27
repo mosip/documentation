@@ -17,13 +17,15 @@ The quarters are defined as follows:
 
 <summary>Vision</summary>
 
-We aim to evolve eSignet into a versatile, secure, and future-ready platform to support a wide range of diverse identity verification use cases. Below are the key milestones for eSignet's development from 2025 to 2026:
+* **Q1 2025:** Starting the year with major fixes, along with enhancements to IDA kyc-auth and kyc auth-exchange API’s.
+* **Q2 2025:** Introducing prefix postfix support for multiple login handles, customizable eSignet UI, and enhancing client management endpoint.
+*   **Q3 2025:** Adding FAPI 2.0 security compliance and SSO feature along with dynamic sign-up form. These upgrades enhance security, improve interoperability, and offer more flexibility in user onboarding.
 
-* **Q1 2025**: Starting the year with major fixes, along with enhancements to IDA kyc-auth and kyc auth-exchange api’s.
-* **Q2 2025**: Introducing prefix postfix support for multiple login handles, performance fixes, and enhancing client management endpoint.
-* **Q3 2025**: Upgrade the platform from Java 11 to Java 21 for better performance and security.
-* **Q4 2025:** Implement a dynamic sign-up UI with configurable consent options. Additionally, add support for obtaining consent from an external party.
-* **2025 and Beyond**: Focus on implementing identity brokering for seamless integration with external identity providers, ensuring secure user authentication. Transforming eSignet into an advanced eKYC verifier by leveraging plugins for ID verification with OIDC providers through web or mobile wallets, helping businesses comply with regulatory standards, and improving onboarding.
+    **Q4 2025:** Java platform migration from Java 11 to Java 21, and advanced consent management features including support for obtaining consent from external parties, and consent handling for child and deceased users.
+
+    **2025 and Beyond:** Focus on implementing identity brokering for seamless integration with external identity providers, ensuring secure user authentication. Transforming eSignet into an advanced eKYC verifier by leveraging plugins for ID verification with OIDC providers through web or mobile wallets, helping businesses comply with regulatory standards, and improving onboarding.
+
+.
 
 </details>
 
