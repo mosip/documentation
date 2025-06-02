@@ -46,7 +46,7 @@ Get ready for an interactive session where you’ll learn how to effortlessly in
 
 You’ll be ready to implement secure authentication and provide a seamless user experience by the end!
 
-Watch the video below for more insights!
+Watch the video below for more insights!!
 
 {% embed url="https://www.youtube.com/watch?ab_channel=MOSIP&t=7s&v=pcHux8GVrQE" %}
 eSignet Workshop
