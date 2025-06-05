@@ -35,15 +35,15 @@ After installation when you launch the app for the first time:
 * You can read though a five-page tutorial for the Inji Wallet which is presented.
 * Choose a secure login method to enter the app (Biometric / PIN). This can be achieved through a PIN or the device's Biometrics (such as fingerprint or facial recognition). Once the setting is done you will be directed to the app's home page.
 
-<div align="center"><figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step1.png" alt="" width="31%"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step2.png" alt="" width="31%"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step3.png" alt="" width="31%"><figcaption></figcaption></figure></div>
+<div align="center"><figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step1.png" alt="" width="31%"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step2.png" alt="" width="31%"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step3.png" alt="" width="31%"><figcaption></figcaption></figure></div>
 
-<div><figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step4.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step5.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step6.png" alt="" width="188"><figcaption></figcaption></figure></div>
+<div><figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step4.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step5.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step6.png" alt="" width="188"><figcaption></figcaption></figure></div>
 
-<figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step7.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step7.png" alt="" width="188"><figcaption></figcaption></figure>
 
-<div><figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step10.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step11.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step12.png" alt="" width="188"><figcaption></figcaption></figure></div>
+<div><figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step10.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step11.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step12.png" alt="" width="188"><figcaption></figcaption></figure></div>
 
-<div><figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step13.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/first-launch-of-the-app-step14.png" alt="" width="188"><figcaption></figcaption></figure></div>
+<div><figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step13.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step14.png" alt="" width="188"><figcaption></figcaption></figure></div>
 
 ## Downloading VC
 
@@ -63,11 +63,11 @@ Inji Wallet integrates with eSignet as an authorization layer to perform VC down
 * On the authorization page (eSignet page), the user has to enter the UIN / VID and provide the OTP sent to the registered mobile number/email.
 * Upon successful validation of OTP, the user will be taken back to the application and land on the loading screen. After the download process is completed, the user will be returned to the home page, where the Downloaded Credential will be available.
 
-<div align="center"><figure><img src="../../../.gitbook/assets/iw-android-download-national-id-vc-step1.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-download-national-id-vc-step2.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/download national id vc_step3.png" alt="" width="188"><figcaption></figcaption></figure></div>
+<div align="center"><figure><img src="../../../.gitbook/assets/iw-android-download-national-id-vc-step1.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-download-national-id-vc-step2.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-download-national-id-vc-step3.png" alt="" width="188"><figcaption></figcaption></figure></div>
 
-<div align="center"><figure><img src="../../../.gitbook/assets/download national id vc_step4.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/download national id vc_step5.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/download national id vc_step6.png" alt="" width="188"><figcaption></figcaption></figure></div>
+<div align="center"><figure><img src="../../../.gitbook/assets/iw-android-download-national-id-vc-step4.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-download-national-id-vc-step5.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-download-national-id-vc-step6.png" alt="" width="188"><figcaption></figcaption></figure></div>
 
-<div align="center"><figure><img src="../../../.gitbook/assets/download national id vc_step7.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/download national id vc_step8.png" alt="" width="188"><figcaption></figcaption></figure></div>
+<div align="center"><figure><img src="../../../.gitbook/assets/iw-android-download-national-id-vc-step7.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-download-national-id-vc-step8.png" alt="" width="188"><figcaption></figcaption></figure></div>
 
 ### 2. Download Insurance VC
 
@@ -78,9 +78,9 @@ Inji Wallet integrates with eSignet as an authorization layer to perform VC down
 * On the authorization page (eSignet page), the user has to enter the Policy Number, Full Name, and Date Of Birth(D.O.B).
 * Upon successful validation, the user will return to the application and land on the loading screen. Following the completion of the download process, the user will be returned to the home page, where the Downloaded Credential will be available.
 
-<div><figure><img src="../../../.gitbook/assets/download stayprotected insurance vc_step1.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/download stayprotected insurance vc_step2.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/download stayprotected insurance vc_step3.png" alt="" width="188"><figcaption></figcaption></figure></div>
+<div><figure><img src="../../../.gitbook/assets/iw-android-download-stayprotected-insurance-vc-step1.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-download-stayprotected-insurance-vc-step2.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-download-stayprotected-insurance-vc-step3.png" alt="" width="188"><figcaption></figcaption></figure></div>
 
-<div><figure><img src="../../../.gitbook/assets/download stayprotected insurance vc_step4.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/download stayprotected insurance vc_step5.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/download stayprotected insurance vc_step6.png" alt="" width="188"><figcaption></figcaption></figure></div>
+<div><figure><img src="../../../.gitbook/assets/iw-android-download-stayprotected-insurance-vc-step4.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-download-stayprotected-insurance-vc-step5.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-download-stayprotected-insurance-vc-step6.png" alt="" width="188"><figcaption></figcaption></figure></div>
 
 ## Detailed view of the downloaded VC
 
@@ -240,15 +240,15 @@ To backup VCs, the user has to choose their preference for the cloud based on th
 
 ### Data backup - Android
 
-<figure><img src="../../../.gitbook/assets/Untitled design (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-backup-1.png" alt="" width="563"><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/Untitled design.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-backup-2.png" alt="" width="563"><figcaption></figcaption></figure>
 
 ### Data backup- ios
 
-<figure><img src="../../../.gitbook/assets/Data Backup_iOS_Step1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/data-backup-ios-step1.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/Data Backup_iOS_Step2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/data-backup-ios-step2.png" alt=""><figcaption></figcaption></figure>
 
 ### Restore
 
@@ -262,8 +262,8 @@ To restore backed-up VCs, the user has to choose their preference of the cloud b
 
 ### Restore - Android
 
-<figure><img src="../../../.gitbook/assets/Untitled design (2).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-ios-backup-and-restore-1.png" alt="" width="563"><figcaption></figcaption></figure>
 
 ### Restore - ios
 
-<figure><img src="../../../.gitbook/assets/Untitled design (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iw-android-backup-and-restore-1.png" alt="" width="563"><figcaption></figcaption></figure>

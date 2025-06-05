@@ -10,3 +10,5 @@ Sync check
 
 Sync check - 02-June-2025
 
+Git sync check after gitbook yml update
+
