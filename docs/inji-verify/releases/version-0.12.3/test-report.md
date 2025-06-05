@@ -52,6 +52,8 @@ Below are the results for Upload, Scan and OVP flow functionality with Windows, 
 
 <figure><img src="../../../.gitbook/assets/iv-0-12-0-tr-image-2.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../../.gitbook/assets/iv012.3.png" alt=""><figcaption></figcaption></figure>
+
 {% hint style="success" %}
 **Note** : OVP flow supports 0.16.0 inji-mobile build only
 {% endhint %}
