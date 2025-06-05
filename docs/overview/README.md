@@ -1,8 +1,10 @@
 ---
-description: Ensuring secure and seamless identity verification.
+description: A Modern and Inclusive Digital Identity Authentication Solution
 ---
 
 # 🔍 Overview
+
+### Overview
 
 eSignet is envisioned as a thin add-on system to any existing digital ID solution to bring in additional capabilities and enhance functionalities.
 
@@ -42,13 +44,12 @@ For more details on eSignet, please go through the below documentation.
 
 <table data-view="cards"><thead><tr><th></th><th data-hidden></th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><mark style="color:blue;">Explore eSignet’s features for secure, seamless, and versatile authentication.</mark></td><td></td><td></td><td><a href="features/">features</a></td><td><a href="../.gitbook/assets/features.png">features.png</a></td></tr><tr><td><mark style="color:blue;">Explore eSignet’s principles of privacy, security, and flexibility.</mark></td><td></td><td></td><td><a href="principles/">principles</a></td><td><a href="../.gitbook/assets/principles (1).png">principles (1).png</a></td></tr><tr><td><mark style="color:blue;">Explore eSignet’s standards and secure authentication flows.</mark></td><td></td><td></td><td><a href="Standards/">Standards</a></td><td><a href="../.gitbook/assets/Standards.png">Standards.png</a></td></tr></tbody></table>
 
-### Additional Resources
+### Documentation
 
 Explore the following resources for more details on eSignet:
 
-👉 [Technology Stack](../develop/technology/technology-stack.md)
-
-👉 [Components](../develop/technology/components.md)
+* [Technology Stack](../develop/technology/technology-stack.md)
+* [Components](../develop/technology/components.md)
 
 👉 [Try It Out](../try-it-out/)
 
