@@ -50,7 +50,5 @@ Explore the following resources for more details on eSignet:
 
 * [Technology Stack](../develop/technology/technology-stack.md)
 * [Components](../develop/technology/components.md)
-
-👉 [Try It Out](../try-it-out/)
-
-👉 [Integrate with eSignet](../try-it-out/integrate-with-e-signet.md)
+* [Try It Out](../try-it-out/)
+* [Integrate with eSignet](../try-it-out/integrate-with-e-signet.md)
