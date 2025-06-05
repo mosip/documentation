@@ -89,9 +89,7 @@ eSignet’s **Signup Module is** an entry point for users to create and enhance 
 
 
 
-
-
-***
+<!--
 
 Old
 
@@ -139,3 +137,6 @@ eSignet re-imagines authentication services to factor in emerging trends and the
 eSignet is a contemporary and adaptable system for verifying digital identities. This solution is not involved with the issuance and management of IDs. It is designed to be compatible with any ID repository through a straightforward integration model.&#x20;
 
 **Any ID repository that provides authentication and attribute retrieval capabilities can utilize eSignet with ease!** 🚀&#x20;
+
+
+-->
