@@ -4,5 +4,5 @@ structure:
     summary: summary.md
     
 redirects:
-page-1: ./docs/readme/try-it-out
-inji-verify/test-topic: inji-verify/overview.md
+    page-1: ./docs/readme/try-it-out
+    inji-verify/test-topic: inji-verify/overview.md
