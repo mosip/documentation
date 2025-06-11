@@ -4,7 +4,7 @@ description: Building on the most trusted security protocols.
 
 # 📏 Standards & Security
 
-eSignet is built on industry-leading security standards, ensuring robust privacy and data protection. It implements [OpenID Connect](https://openid.net/connect/) and [OAuth 2.0](https://oauth.net/2/), leveraging the most secure and trusted authentication flows to safeguard user identities.
+eSignet is built on industry-leading security standards, ensuring robust privacy and data protection. It implements [OpenID Connect Core 1.0](https://openid.net/specs/openid-connect-core-1_0-final.html) and [OAuth 2.0](https://oauth.net/2/), leveraging the most secure and trusted authentication flows to safeguard user identities.
 
 ### 1. Security and Interoperability <a href="#id-1.-security-and-interoperability" id="id-1.-security-and-interoperability"></a>
 

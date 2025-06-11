@@ -16,6 +16,8 @@
   * [⚙️ Configure eSignet](develop/configuration/README.md)
     * [ACR](develop/configuration/acr.md)
     * [Claims](develop/configuration/claims.md)
+    * [Login ID Configuration in eSignet](develop/configuration/login-id-configuration-in-esignet.md)
+    * [Purpose-Based UI Rendering in eSignet](develop/configuration/purpose-based-ui-rendering-in-esignet.md)
     * [.well-known](develop/configuration/.well-known/README.md)
       * [jwks.json](develop/configuration/.well-known/jwks.json.md)
       * [oauth-configuration](develop/configuration/.well-known/oauth-configuration.md)
