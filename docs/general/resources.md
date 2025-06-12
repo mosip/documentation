@@ -2,7 +2,7 @@
 description: Dive into eSignet with interactive workshops and webinars.
 ---
 
-# 📚 Resources
+# Resources
 
 ### eSignet - A Technical Deep Dive
 

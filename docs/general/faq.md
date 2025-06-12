@@ -2,7 +2,7 @@
 description: Below are some frequently asked questions (FAQs) about eSignet.
 ---
 
-# ❓ FAQs
+# FAQs
 
 ## About eSignet
 
