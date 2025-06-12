@@ -14,15 +14,15 @@ This release introduces new features centered on Verifiable Credentials (VC) iss
 
 We have developed two new plugins to support the issuance of verifiable credentials (VC) by authenticating users through Knowledge-Based Identification (KBI) using the Authenticator plugin. These enhancements are detailed below:
 
-a. [Authenticator plugin implementation for KBI with Sunbird RC.](../../../overview/features/#authenticator-plugin-implementation-for-kbi-with-sunbird-rc)
+a. [Authenticator plugin implementation for KBI with Sunbird RC.](../../../esignet-authentication/features/#authenticator-plugin-implementation-for-kbi-with-sunbird-rc)
 
 * Implementation of the Authenticator plugin to enable Knowledge-Based Identification (KBI) within Sunbird RC.
 
-b. [VC Issuance plugin implementation for Sunbird RC.](../../../overview/features/#vc-issuance-plugin-implementation-for-sunbird-rc)
+b. [VC Issuance plugin implementation for Sunbird RC.](../../../esignet-authentication/features/#vc-issuance-plugin-implementation-for-sunbird-rc)
 
 * Implementation of the VC Issuance plugin to facilitate the issuance of verifiable credentials within Sunbird RC.
 
-c. [eSignet UI to support KBI form configuration](../../../overview/features/#kbi-form-configuration-for-esignet-ui).
+c. [eSignet UI to support KBI form configuration](../../../esignet-authentication/features/#kbi-form-configuration-for-esignet-ui).
 
 * eSignet UI now supports KBI form configuration, making it easier to set up and manage KBI-based identification.
 

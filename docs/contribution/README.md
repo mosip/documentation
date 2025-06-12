@@ -1,12 +1,13 @@
 ---
 description: Join the eSignet community!
+icon: people-group
 ---
 
-# 🤝 Community
+# Community
 
 eSignet is a product of the combined efforts of multiple stakeholders. Community contributions form the project's backbone, driving its growth and stability.
 
-#### 🙌 **Ways the community contributes:**
+#### **Ways the community contributes:**
 
 * Direct code contributions.
 * Design and architecture reviews.
@@ -15,7 +16,7 @@ eSignet is a product of the combined efforts of multiple stakeholders. Community
 * UI/UX design improvements.
 * Documentation.
 
-#### 🤝 How do I contribute?
+#### How do I contribute?
 
 For code contributions, refer [here](code-contribution.md).
 

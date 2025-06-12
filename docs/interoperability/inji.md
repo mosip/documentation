@@ -29,4 +29,4 @@ eSignet supports the download of user credentials as verifiable credentials (VC)
 
 👉 Learn more about[ Inji](https://docs.inji.io/).
 
-To try it out yourself in our sandbox [Collab](https://collab.mosip.net/) environment, click [here ](https://docs.esignet.io/test/try-it-out)to access the eSignet Try It Out section. For step-by-step instructions, refer to our [end user guide](../test/end-user-guide/health-portal/login-with-qr-code.md).
+To try it out yourself in our sandbox [Collab](https://collab.mosip.net/) environment, click [here ](https://docs.esignet.io/test/try-it-out)to access the eSignet Try It Out section. For step-by-step instructions, refer to our [end user guide](../esignet-authentication/test/end-user-guide/health-portal/login-with-qr-code.md).

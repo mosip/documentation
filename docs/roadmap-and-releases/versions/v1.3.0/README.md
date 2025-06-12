@@ -48,8 +48,8 @@ For details on deployment, refer to the [helm charts](https://github.com/mosip/e
 
 ### Documentation
 
-* [Feature Documentation](../../../overview/features/)
-* [Integration Guides](../../../integration/)
-* [End User Guide](../../../test/end-user-guide/)
+* [Feature Documentation](../../../esignet-authentication/features/)
+* [Integration Guides](../../../esignet-authentication/develop/integration/)
+* [End User Guide](../../../esignet-authentication/test/end-user-guide/)
 * [API Documentation](https://github.com/mosip/esignet/blob/v1.3.0/docs/esignet-openapi.yaml)
 * [QA Report](https://docs.esignet.io/versions/v1.3.0/test-report)

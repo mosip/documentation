@@ -22,9 +22,9 @@ To know more eSignet please refer [here](../).
 
 <summary><strong>How can I use eSignet?</strong></summary>
 
-You can integrate with eSignet based on the type of entity, such as an ID system, a relying party, or a digital wallet. For more details, please go through our [integration guide](../integration/).
+You can integrate with eSignet based on the type of entity, such as an ID system, a relying party, or a digital wallet. For more details, please go through our [integration guide](../esignet-authentication/develop/integration/).
 
-If you are interested in trying out eSignet right away, you can use our sandbox for testing. Please go through our [Try it out section](../try-it-out/) for more details.
+If you are interested in trying out eSignet right away, you can use our sandbox for testing. Please go through our [Try it out section](../esignet-authentication/test/try-it-out/) for more details.
 
 </details>
 
@@ -128,7 +128,7 @@ eSignet stands out by offering a comprehensive suite of advanced features that e
 
 <summary><strong>How many types of authentication methods does eSignet support today</strong>?</summary>
 
-The types of authentication methods supported by eSignet are [available here](../overview/features/#support-for-various-authentication-modalities).
+The types of authentication methods supported by eSignet are [available here](../esignet-authentication/features/#support-for-various-authentication-modalities).
 
 </details>
 
@@ -395,7 +395,7 @@ In order to utilize eSignet for authenticating users and obtaining their informa
 1. Register as a **Client** in the eSignet system.
 2. Integrate with eSignet APIs, following the guidelines provided by OpenID Connect, on their web or mobile applications.
 
-To know more, click [here](../integration/relying-party.md).
+To know more, click [here](../esignet-authentication/develop/integration/relying-party.md).
 
 </details>
 

@@ -1,4 +1,4 @@
-# ⚓ Local Deployment
+# Local Deployment
 
 This document details the steps for running eSignet locally on your system for local development and integration.
 
