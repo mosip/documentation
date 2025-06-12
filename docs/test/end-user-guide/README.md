@@ -15,11 +15,11 @@ Before starting with the login flows, let us understand the following terms:
 
 With this release, we support the login flow for the following authentication factors:
 
-1. [Login with Password](https://docs.esignet.io/end-user-guide/login-with-password)
-2. [Login flow for OTP-based authentication](https://docs.esignet.io/end-user-guide/login-with-otp)
-3. [Login flow for Biometrics based authentication](https://docs.esignet.io/end-user-guide/login-with-biometrics)
-4. [Login flow with QR code (Inji)](https://docs.esignet.io/end-user-guide/login-with-qr-code)
-5. [Knowledge Based Identification](https://docs.esignet.io/end-user-guide/knowledge-based-authentication)
+1. [Login with Password](health-portal/login-with-password.md)
+2. [Login flow for OTP-based authentication](health-portal/login-with-otp.md)
+3. [Login flow for Biometrics based authentication](health-portal/login-with-biometrics.md)
+4. [Login flow with QR code (Inji)](health-portal/login-with-qr-code.md)
+5. [Knowledge Based Identification](health-portal/knowledge-based-authentication.md)
 6. [Sign up and Login with OTP for Verified Claims](health-portal/signup-and-login-with-otp-for-verified-claims.md)
 
 > Note: The screenshots and the steps mentioned in each of the flows are for demonstration purpose only and are likely to change based on the use case.
