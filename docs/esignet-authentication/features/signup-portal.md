@@ -25,6 +25,6 @@ Currently, the Signup portal supports the following features:
 2. Reset password
 3. Online video based identity verification workflow integration via plugin
 
-To know more about the components refer [here](../develop/technology/components-signup-portal.md).
+To know more about the components refer [here](../../esignet-signup/develop/technology/components-signup-portal.md).
 
 To learn more about the integration of the Signup portal with eSignet please refer [here](../../esignet-signup/develop/integration-guide-signup-portal/integration-with-esignet-portal.md).
