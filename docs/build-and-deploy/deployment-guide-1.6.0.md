@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Deployment Guide 1.6.0
 
 ## Esignet Deployment in Kubernetes Environment
@@ -104,8 +108,8 @@ Download and import eSignet-with-mock.postman\_environment.json and eSignet.post
 4. Update the clientId in Deployment
    * Once the clientId is created and activated, update the clientId in the mock-relying-party-ui deployment.
 5. Update the Client Private Key
-   * Retrieve the `client-private-key` from the **eSignet-with-mock** Postman environment, as shown in the image below:
-     *
+   * Retrieve the `client-private-key` from the **eSignet-with-mock** Postman environment, as shown in the image below:\
+     \*
      * Encode the retrieved `client-private-key` using Base64.
      * Update the Base64-encoded `client-private-key` in the **mock-relying-party service secret**.
 

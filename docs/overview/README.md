@@ -3,7 +3,7 @@ description: A Modern and Inclusive Digital Identity Authentication Solution
 icon: house
 ---
 
-# Overview
+# 🔍 Overview
 
 ### Overview
 
@@ -43,13 +43,13 @@ At eSignet, our core goals are to prioritize inclusion and accessibility. We pla
 
 For more details on eSignet, please go through the below documentation.
 
-<table data-view="cards"><thead><tr><th></th><th data-hidden></th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><mark style="color:blue;">Explore eSignet’s features for secure, seamless, and versatile authentication.</mark></td><td></td><td></td><td><a href="../esignet-authentication/features/">features</a></td><td><a href="../.gitbook/assets/features.png">features.png</a></td></tr><tr><td><mark style="color:blue;">Explore eSignet’s principles of privacy, security, and flexibility.</mark></td><td></td><td></td><td><a href="principles/">principles</a></td><td><a href="../.gitbook/assets/principles (1).png">principles (1).png</a></td></tr><tr><td><mark style="color:blue;">Explore eSignet’s standards and secure authentication flows.</mark></td><td></td><td></td><td><a href="Standards/">Standards</a></td><td><a href="../.gitbook/assets/Standards.png">Standards.png</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th data-hidden></th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><mark style="color:blue;">Explore eSignet’s features for secure, seamless, and versatile authentication.</mark></td><td></td><td></td><td><a href="broken-reference">Broken link</a></td><td><a href="../.gitbook/assets/features.png">features.png</a></td></tr><tr><td><mark style="color:blue;">Explore eSignet’s principles of privacy, security, and flexibility.</mark></td><td></td><td></td><td><a href="principles/">principles</a></td><td><a href="../.gitbook/assets/principles (1).png">principles (1).png</a></td></tr><tr><td><mark style="color:blue;">Explore eSignet’s standards and secure authentication flows.</mark></td><td></td><td></td><td><a href="Standards/">Standards</a></td><td><a href="../.gitbook/assets/Standards.png">Standards.png</a></td></tr></tbody></table>
 
 ### Documentation
 
 Explore the following resources for more details on eSignet:
 
-* [Technology Stack](../esignet-authentication/develop/technology/technology-stack.md)
-* [Components](../esignet-authentication/develop/technology/components.md)
-* [Try It Out](../esignet-authentication/test/try-it-out/)
-* [Integrate with eSignet](../esignet-authentication/test/try-it-out/integrate-with-e-signet.md)
+* [Technology Stack](broken-reference)
+* [Components](broken-reference)
+* [Try It Out](broken-reference)
+* [Integrate with eSignet](broken-reference)

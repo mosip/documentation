@@ -10,11 +10,11 @@ We are excited to announce the release of eSignet v1.5.0, featuring the key impl
 
 ### **Features**&#x20;
 
-1. [**Identity Assurance Implementation**](../../../esignet-authentication/features/#identity-assurance-flow-ekyc-verification)
+1. [**Identity Assurance Implementation**](broken-reference)
    * Implemented Identity Assurance 1.0 (Draft), aligning with open standards for higher identity verification assurance, laying the foundation for video eKYC support.&#x20;
-2. [**Signup and Login with OTP for Verified Claims**](../../../esignet-signup/test/end-user-guide/signup-and-login-with-otp-for-verified-claims.md)
+2. [**Signup and Login with OTP for Verified Claims**](broken-reference)
    * Added video eKYC via WebSocket in the signup portal, enabling secure, real-time video verification during registration.
-3. [**Well-Informed Claim Details**](../../../esignet-authentication/features/#claim-level-status)
+3. [**Well-Informed Claim Details**](broken-reference)
    * Users now receive clear consent requests before starting eKYC, ensuring transparency on data usage.
 4. **Clickable QR Code for INJI Wallet Login**
    * A clickable QR code now appears for INJI Wallet login, with an embedded deeplink for seamless access within the same device.

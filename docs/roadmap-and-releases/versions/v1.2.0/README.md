@@ -48,8 +48,8 @@ For details on deployment, go through the [helm charts](https://github.com/mosip
 
 ### Documentation
 
-* [Feature Documentation](../../../esignet-authentication/features/)
-* [Integration Guides](../../../esignet-authentication/develop/integration/)
-* [End User Guide](../../../esignet-authentication/test/end-user-guide/)
+* [Feature Documentation](broken-reference)
+* [Integration Guides](broken-reference)
+* [End User Guide](broken-reference)
 * [API Documentation](https://github.com/mosip/esignet/blob/v1.2.0/docs/idp-oidc-service-openapi.yaml)
 * [QA Report](test-report.md)
