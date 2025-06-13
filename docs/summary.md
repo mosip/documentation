@@ -90,6 +90,7 @@
       * [Test Report](inji-wallet/inji-mobile/versions/version-0.9.1/test-report-0.9.1.md)
     * [Version 0.9.0](inji-wallet/inji-mobile/versions/version-0.9.0/README.md)
       * [Test Report](inji-wallet/inji-mobile/versions/version-0.9.0/test-report-0.9.0.md)
+    * [Version 0.17.1](inji-wallet/inji-mobile/versions/version-0.17.1.md)
 * [Inji Web](inji-wallet/inji-web/README.md)
   * [Overview](inji-wallet/inji-web/overview/README.md)
     * [Features](inji-wallet/inji-web/overview/features.md)
