@@ -4,7 +4,7 @@
 
 **Release Type:** Developer
 
-**Release Date:** Coming Soon
+**Release Date:** 16th June, 2025
 
 ### **Overview**
 
@@ -52,21 +52,21 @@ N/A
 
 ### **Repository Released**
 
-| **Module** | **Version** |
-| ---------- | ----------- |
-| **mimoto** | 0.17.1      |
+| **Module** | **Version**                                            |
+| ---------- | ------------------------------------------------------ |
+| **mimoto** | [0.17.1](https://github.com/mosip/mimoto/tree/v0.17.1) |
 
 ### **Compatible Modules**
 
-| Module                 | Version                                                                        |
-| ---------------------- | ------------------------------------------------------------------------------ |
-| **Inji Mobile Wallet** | [v0.16.0](https://github.com/mosip/inji-wallet/tree/v0.16.0)                   |
-| **Inji Web Wallet**    | [v0.12.0](https://github.com/mosip/inji-web/tree/v0.12.0)                      |
-| **Inji Verify**        | [v0.12.3](https://github.com/mosip/inji-verify/tree/v0.12.3)                   |
-| **esignet**            | [1.5.1](https://github.com/mosip/esignet/tree/v1.5.1)                          |
-| **inji-config**        | [0.8.0](https://github.com/mosip/inji-config/tree/v0.8.0)                      |
-| **Inji Certify**       | [0.11.0](https://github.com/mosip/inji-certify/tree/v0.11.0)                   |
-| **durian(data share)** | [**v1.3.0-beta.2**](https://github.com/mosip/durian/releases/tag/1.3.0-beta.2) |
+| Module                 | Version                                                                    |
+| ---------------------- | -------------------------------------------------------------------------- |
+| **Inji Mobile Wallet** | [v0.16.0](https://github.com/mosip/inji-wallet/tree/v0.16.0)               |
+| **Inji Web Wallet**    | [v0.12.0](https://github.com/mosip/inji-web/tree/v0.12.0)                  |
+| **Inji Verify**        | [v0.12.3](https://github.com/mosip/inji-verify/tree/v0.12.3)               |
+| **esignet**            | [1.5.1](https://github.com/mosip/esignet/tree/v1.5.1)                      |
+| **inji-config**        | [0.8.0](https://github.com/mosip/inji-config/tree/v0.8.0)                  |
+| **Inji Certify**       | [0.11.0](https://github.com/mosip/inji-certify/tree/v0.11.0)               |
+| **durian(data share)** | [v1.3.0-beta.2](https://github.com/mosip/durian/releases/tag/1.3.0-beta.2) |
 
 ### **Known Issues**
 
@@ -85,5 +85,5 @@ N/A
 * [Feature Documentation](https://docs.mosip.io/inji/inji-mobile-wallet/overview/features)
 * [Integration Guides](https://docs.mosip.io/inji/inji-mobile-wallet/integration-guide)
 * [User Guide](https://docs.mosip.io/inji/inji-mobile-wallet/end-user-guide)
-* QA Report
+* [QA Report](test-report.md)
 * [API Documentation](https://github.com/mosip/mimoto/tree/release-0.15.x/docs/postman-collections)

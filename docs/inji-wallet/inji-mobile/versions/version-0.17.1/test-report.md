@@ -124,3 +124,8 @@ Functional and test rig code base branch which is used for the above metrics is:
 ### Execution Test Summary
 
 * Fixed error code scenarios in Mimoto 0.17.1 API automation as part of this release, tested against **ESignet 1.5.1** and made them compatible with **Esignet 1.4.1**.
+
+
+
+Github link for the xls file is [**here**](https://github.com/mosip/test-management/tree/master/inji/0.17.1).
+

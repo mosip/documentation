@@ -4,11 +4,11 @@ icon: rocket-launch
 
 # Releases
 
-## Version: 0.16.0
+## Version: 0.17.1
 
 Name: Mimoto 0.17.1(Patch)
 
-Date: Coming Soon
+Date: 16th June, 2025
 
 [Release Notes](version-0.17.1/)
 
