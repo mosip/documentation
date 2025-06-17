@@ -10,7 +10,7 @@ Name: Mimoto 0.17.1(Patch)
 
 Date: Coming Soon
 
-[Release Notes](version-0.17.1.md)
+[Release Notes](version-0.17.1/)
 
 ## Version: 0.16.0
 
