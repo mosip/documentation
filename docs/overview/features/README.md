@@ -28,7 +28,7 @@ Mobile wallet-based authentication can be utilized to scan a QR code and finaliz
 
 ### Knowledge Based Identification
 
-eSignet has expanded its authentication options to include Knowledge-Based Identification (KBI) as one of its factors. With eSignet's integration capabilities, existing ID repositories storing user-specific details can now be easily integrated with eSignet thereby enabling service providers to authenticate users.&#x20;
+eSignet has expanded its authentication options to include Knowledge-Based Identification (KBI) as one of its factors. With eSignet's integration capabilities, existing ID repositories storing user-specific details can now be easily integrated with eSignet thereby enabling service providers to authenticate users.
 
 Below are some of the FAQs on KBI:
 
@@ -36,7 +36,7 @@ Below are some of the FAQs on KBI:
 
 [**How is the authenticator plugin implemented for KBI with Sunbird RC?**](../../general/faq.md#how-is-authenticator-plugin-implemented-for-kbi-with-sunbird-rc)
 
-#### Verifiable Credentials&#x20;
+#### Verifiable Credentials
 
 Verifiable credentials (VCs) are digital representations of physical credentials like passports or licenses. They are digitally signed, making them tamper-resistant and instantly verifiable. Issued by trusted entities, VCs are stored in digital wallet apps and used by individuals to access various services.
 
@@ -79,7 +79,7 @@ The eSignet user interface (UI) offers comprehensive language support to facilit
 Furthermore, eSignet has undergone meticulous testing to ensure seamless compatibility with right-to-left (RTL) languages. This means that users can rely on eSignet to confidently navigate and interact with RTL content.
 
 {% hint style="info" %}
-📝 **Note:**&#x20;
+📝 **Note:**
 
 1. To add more language bundles in eSignet, please refer to the below FAQs.
 
@@ -91,9 +91,8 @@ Furthermore, eSignet has undergone meticulous testing to ensure seamless compati
 {% endhint %}
 
 
-<!--
 
-New Content - Hide temporarily
+\<New Content...>
 
 
 
@@ -177,4 +176,8 @@ To ensure inclusive access for diverse user groups, eSignet offers multilingual 
 2. [How to remove a language from the eSignet default setup?](https://docs.esignet.io/general/faq#how-to-remove-a-language-from-the-esignet-default-setup)
 
 
--->
+
+\</New Content...>
+
+
+
