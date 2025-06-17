@@ -92,8 +92,8 @@ Furthermore, eSignet has undergone meticulous testing to ensure seamless compati
 
 
 
-\<New Content...>
-
+<!-- >
+New Content - 17-June-2025 (In review)
 
 
 ## Features
@@ -177,7 +177,7 @@ To ensure inclusive access for diverse user groups, eSignet offers multilingual 
 
 
 
-\</New Content...>
+--> 
 
 
 
