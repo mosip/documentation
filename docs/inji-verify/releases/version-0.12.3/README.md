@@ -12,19 +12,19 @@ We are thrilled to announce the release of Inji Verify 0.12.3 that enhances Veri
 
 ### New Features
 
-1. Inji Verify SDK - OpenID4VP-VP verification component introduces a modular TypeScript component designed to facilitate easy integration of OpenID4VP-VP verification into verifier/relying party applications.
+**1. Inji Verify SDK - OpenID4VP-VP verification component** introduces a modular TypeScript component designed to facilitate easy integration of OpenID4VP-VP verification into verifier/relying party applications.
 
-* Modular NPM Package: The OpenID4VP-VP verification component is available as a standalone NPM module, promoting modularity and simplifying integration. Developers can incorporate it into their projects without depending on the full Inji Verify repository.​
-* Comprehensive Integration Guide: A detailed [integration guide](https://docs.inji.io/inji-verify/technical-overview/integration-guides/openid4vp-vp-verification-integration-guide) is provided, explaining the setup and usage to ensure a smooth integration process. The steps are also available in the [SDK's README](https://github.com/mosip/inji-verify/blob/release-0.12.x/inji-verify-sdk/Readme.md).​
-* Framework Compatibility: Currently, this component is compatible exclusively with verifier applications built using React and TypeScript. Support for additional frameworks and languages is planned for upcoming releases.
+* **Modular NPM Package:** The OpenID4VP-VP verification component is available as a standalone NPM module, promoting modularity and simplifying integration. Developers can incorporate it into their projects without depending on the full Inji Verify repository.​
+* **Comprehensive Integration Guide:** A detailed [integration guide](https://docs.inji.io/inji-verify/technical-overview/integration-guides/openid4vp-vp-verification-integration-guide) is provided, explaining the setup and usage to ensure a smooth integration process. The steps are also available in the [SDK's README](https://github.com/mosip/inji-verify/blob/release-0.12.x/inji-verify-sdk/Readme.md).​
+* **Framework Compatibility:** Currently, this component is compatible exclusively with verifier applications built using React and TypeScript. Support for additional frameworks and languages is planned for upcoming releases.
 
 These flexibilities empowers developers to accelerate their VC verification implementation with minimal setup, enabling faster time-to-market for digital identity-enabled services.​
 
-Note: Inji Verify SDK's OpenID4VP-VP verification component supports React version - 18.2.0
+**Note:** Inji Verify SDK's OpenID4VP-VP verification component supports React version - 18.2.0
 
-Not&#x65;_:_ The Inji Verify SDK's Scan/Upload component, enabling developers to embed VC verification capabilities into their applications, will be introduced in future releases. Stay tuned!
+**Note:** The Inji Verify SDK's Scan/Upload component, enabling developers to embed VC verification capabilities into their applications, will be introduced in future releases. Stay tuned!
 
-1. Inji Verify Backend enhancement - Transition to PostgreSQL
+**2. Inji Verify Backend enhancement - Transition to PostgreSQL**
 
 The backend has transitioned from an in-memory H2 database to a PostgreSQL database, ensuring persistent and reliable data storage. This enhancement improves data durability and supports more robust backend operations.
 
