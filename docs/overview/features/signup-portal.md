@@ -30,8 +30,10 @@ To know more about the components refer [here](../../develop/technology/componen
 To learn more about the integration of the Signup portal with eSignet please refer [here](../../test/integration-guide-signup-portal/integration-with-esignet-portal.md).
 
 
+<!--
 
 ***
+
 
 Content Update: 18-June-2025
 
@@ -101,5 +103,4 @@ To know more about the components refer [here](https://docs.esignet.io/develop/t
 
 To learn more about the integration of the Signup portal with eSignet please refer [here](https://docs.esignet.io/test/integration-guide-signup-portal/integration-with-esignet-portal).
 
-
-
+-->

@@ -242,19 +242,3 @@ Other online tools are listed below:
 * [https://8gwifi.org/jwkconvertfunctions.jsp](https://8gwifi.org/jwkconvertfunctions.jsp)
 * [https://irrte.ch/jwt-js-decode/pem2jwk.html](https://irrte.ch/jwt-js-decode/pem2jwk.html)
 
-
-
-
-
-
-
-
-
-***
-
-**Content Update: 18-June-2025**
-
-
-
-
-
