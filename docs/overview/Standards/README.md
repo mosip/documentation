@@ -82,6 +82,8 @@ Additionally, eSignet:
 
 ***
 
+<!--
+
 **Content Update - 19-June-2025**
 
 eSignet is built on industry-leading security standards, ensuring robust privacy and data protection. It implements [OpenID Connect Core 1.0](https://openid.net/specs/openid-connect-core-1_0-final.html) and [OAuth 2.0](https://oauth.net/2/), leveraging the most secure and trusted authentication flows to safeguard user identities.
@@ -166,5 +168,4 @@ eSignet’s OAuth 2.0 implementation is a lightweight solution designed specific
 
 * **Does not support role-based access control** - As it is designed for integration with national-level identity solutions, where predefined roles are not necessary for residents.
 
-
-
+-->
