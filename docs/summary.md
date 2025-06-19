@@ -1,6 +1,6 @@
 # Table of contents
 
-* [🌐 eSignet](README.md)
+* [eSignet](README.md)
 * [🔍 Overview](overview/README.md)
   * [✨ Features](overview/features/README.md)
     * [Signup Portal](overview/features/signup-portal.md)
