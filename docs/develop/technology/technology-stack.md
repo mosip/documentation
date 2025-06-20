@@ -2,7 +2,7 @@
 description: eSignet is built using the below tools and technologies.
 ---
 
-# 📦 Technology Stack
+# Technology Stack
 
 ## Services and Rest Endpoints
 

@@ -1,4 +1,4 @@
-# ⚙️ Configure eSignet
+# Configure eSignet
 
 In this section, we have listed the properties that may change from implementation to implementation. All the properties used by eSignet with their default values can be found in the [esignet-default.properties](https://github.com/mosip/mosip-config/blob/master/esignet-default.properties).
 
@@ -88,7 +88,7 @@ The below properties define the plugin packages to be scanned and which implemen
 
 {% hint style="info" %}
 **Note:** Configuration properties for mock plugins and MOSIP IDA plugins are by default added to the application.properties file. Please refer to the below links:\
-1\. [Mock Plugin properties](https://github.com/mosip/esignet-plugins/blob/release-1.3.x/mock-plugin/src/main/resources/application.properties) \
+1\. [Mock Plugin properties](https://github.com/mosip/esignet-plugins/blob/release-1.3.x/mock-plugin/src/main/resources/application.properties)\
 2\. [MOSIP Plugin properties](https://github.com/mosip/esignet-plugins/blob/release-1.3.x/mosip-identity-plugin/src/main/resources/application.properties)
 {% endhint %}
 

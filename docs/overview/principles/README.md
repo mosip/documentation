@@ -2,7 +2,7 @@
 description: Core principles that define eSignet.
 ---
 
-# ⚖️ Principles
+# Principles
 
 eSignet is designed with the architectural principles mentioned below. These architecture principles are core to developing the system's features and greatly influence how and why specific software design patterns are used.
 

@@ -2,7 +2,7 @@
 description: Explore the tools, components, and architecture powering eSignet.
 ---
 
-# 🦾 Technology
+# Technology
 
 Please refer to the below sections to build, integrate, and enhance solutions with eSignet using comprehensive guides, tools, and resources:
 

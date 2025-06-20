@@ -2,7 +2,7 @@
 description: Please refer below for all the latest release details ✨
 ---
 
-# 📖 Releases
+# Releases
 
 ## Version: 1.5.1
 

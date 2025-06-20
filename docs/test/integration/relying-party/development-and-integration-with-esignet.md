@@ -1,66 +1,8 @@
-# Relying Party
+---
+hidden: true
+---
 
-A relying party refers to a service provider that relies on an eSignet based identity provider for authentication and identity verification. This enables users to provide their identity details/ biometrics securely and conveniently to access the services provided by the relying party.
-
-## Getting Started
-
-This guide helps the developers of the relying party to get started with their development environment.
-
-### Pre-requisites
-
-#### Setup your development machine:
-
-* Choose the technology stack (PHP, Python, Java, Node, Kotlin, Swift etc).
-* Choose the OpenId plugins for the respective technology stack.
-* Choose the JWT plugins for the respective technology stack.
-*   Create the keys (a password-protected private key & store it safely).
-
-    {% hint style="info" %}
-    Please do not use the same key for production. Its extremely dangerous. Create keys in safe production-grade hardened machines/vault/HSM.
-    {% endhint %}
-* Design your callback API. The callback API is redirected by eSignet over the user's browser upon successful authentication. As best practice please ensure the callback API can render the UX as soon as possible so the user is aware of the progress. Please note that the user is redirected on both success and failure authentication. On failure, the user will be redirected without an auth-code. So based on the authentication response relying party portal needs to take the necessary action before allowing the user to move forward.
-
-#### Register / Onboard as OIDC client with ID provider
-
-Once the above steps are completed the relying parties developers/managers are required to follow these steps:
-
-* Work with the respective ID provider (eSignet provider) and request a client ID. You would need to share your public key to obtain your client ID. It is the same public key created in the above steps.
-* Provide the name that you want to register with the ID provider, the same name will be displayed on the eSignet authentication and consent page to the end user.
-* List the fields/attributes that you need from the eSignet ID provider upon the user’s consent. This is also called a claim. It's expected that the relying party indicates the mandatory and optional claims. The possible values can be discovered from the eSignet [.well-known](../../develop/configuration/.well-known/openid-configuration.md).
-* Provide the logo for your application and organization to be utilized for display on the eSignet authentication page.
-* Provide any of the following callback URL patterns for local development & QA.
-
-```
-    http://localhost:<portnumber>/*
-
-    http://127.0.0.1:<portnumber>/*
-
-    http://ipaddrress-of-your-server:portnumber/*
-
-    my.phone.app://oauth/*
-```
-
-{% hint style="info" %}
-These callback URL are for development purpose and choose them according to the URL in your development/qa environment. As much as possible \* should avoided as it could result in security issues. For development its ok to provide the \* as above. For the phone app the app callback deeplink should be provided. The following are the unsupported URL patterns.
-
-```
-  \\*
-  
-  http*
-  
-  https://*
-  
-  https://domain*
-  
-  residentapp://*
-```
-{% endhint %}
-
-* Upon receiving the above information the ID provider should be able to process the request and provide you back with the client ID.
-
-{% hint style="warning" %}
-The eSignet providers may have additional non-technical requirements. Those are specific to the provider. This document will not cover those.
-{% endhint %}
+# Development and Integration with eSignet
 
 #### Development of Relying party application
 
@@ -71,7 +13,7 @@ Setup your development environment. Once done you need to follow the following s
 
 Here is the[ UI storybook](https://mosip.github.io/mosip-sdk/?path=/docs/javascript-sign-in-with-esignet--docs) deployed by eSignet which can help relying party developers build the buttons for their website.
 
-*   The button upon click should get a unique state (a random value) & nonce (a random value) from the server and redirect to the "/authorize" endpoint of the ID provider. A sample URL is listed here. The details of what is supported are listed on the [.well-known](../../develop/configuration/.well-known/) file in the respective eSignet provider.
+*   The button upon click should get a unique state (a random value) & nonce (a random value) from the server and redirect to the "/authorize" endpoint of the ID provider. A sample URL is listed here. The details of what is supported are listed on the [.well-known](../../../develop/configuration/.well-known/) file in the respective eSignet provider.
 
     * Sample /authorize Request:
 
@@ -79,8 +21,8 @@ Here is the[ UI storybook](https://mosip.github.io/mosip-sdk/?path=/docs/javascr
       GET https://esignet.id.provider.domain.name/authorize?nonce=ere973eieljznge2311&state=eree2311&client_id=Mv45rBnfuu0ocWDy9APT5k5LZbGE_l0wX7P9vQXXswg&redirect_uri=https://relyingparty.dev.net/userprofile&scope=openid profile&response_type=code&acr_values=mosip:idp:acr:generated-code mosip:idp:acr:biometrics mosip:idp:acr:linked-wallet&claims={"userinfo":{"given_name":{"essential":true},"phone_number":{"essential":false},"email":{"essential":true},"picture":{"essential":false},"gender":{"essential":false},"birthdate":{"essential":false},"address":{"essential":false}},"id_token":{}}&claims_locales=en&display=page&ui_locales=en-US
     ```
 
-{% openapi src="../../.gitbook/assets/esignet-1.2.0.yml" path="/authorize" method="get" %}
-[esignet-1.2.0.yml](../../.gitbook/assets/esignet-1.2.0.yml)
+{% openapi src="../../../.gitbook/assets/esignet-1.2.0.yml" path="/authorize" method="get" %}
+[esignet-1.2.0.yml](../../../.gitbook/assets/esignet-1.2.0.yml)
 {% endopenapi %}
 
 * This will navigate the user to the ID provider’s eSignet UI screen for the authentication page. If you have reached here and there is no error on the screen then congrats on your achievement.
@@ -117,8 +59,8 @@ https://relyingparty.domain.name/callbackurl is based on the domain pattern you 
       }
       ```
 
-{% openapi src="../../.gitbook/assets/esignet-1.2.0.yml" path="/oauth/v2/token" method="post" %}
-[esignet-1.2.0.yml](../../.gitbook/assets/esignet-1.2.0.yml)
+{% openapi src="../../../.gitbook/assets/esignet-1.2.0.yml" path="/oauth/v2/token" method="post" %}
+[esignet-1.2.0.yml](../../../.gitbook/assets/esignet-1.2.0.yml)
 {% endopenapi %}
 
 *   Sample ID token JWT header and payload
@@ -170,8 +112,8 @@ The access token & ID token are considered as a piece of confidential informatio
 * Get userinfo with the access token
   * In case the developer is interested in the user’s information (eKYC) like given\_name or anything that the claim has then Using the access token you can call the user info endpoint to get the user information as a signed JWT.
 
-{% openapi src="../../.gitbook/assets/esignet-1.2.0.yml" path="/oidc/userinfo" method="get" %}
-[esignet-1.2.0.yml](../../.gitbook/assets/esignet-1.2.0.yml)
+{% openapi src="../../../.gitbook/assets/esignet-1.2.0.yml" path="/oidc/userinfo" method="get" %}
+[esignet-1.2.0.yml](../../../.gitbook/assets/esignet-1.2.0.yml)
 {% endopenapi %}
 
 *   User info endpoints response example is listed below:
@@ -241,4 +183,3 @@ Other online tools are listed below:
 * [https://pem2jwk.vercel.app/](https://pem2jwk.vercel.app/)
 * [https://8gwifi.org/jwkconvertfunctions.jsp](https://8gwifi.org/jwkconvertfunctions.jsp)
 * [https://irrte.ch/jwt-js-decode/pem2jwk.html](https://irrte.ch/jwt-js-decode/pem2jwk.html)
-
