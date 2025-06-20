@@ -30,20 +30,26 @@ To know more about the components refer [here](../../develop/technology/componen
 To learn more about the integration of the Signup portal with eSignet please refer [here](../../test/integration-guide-signup-portal/integration-with-esignet-portal.md).
 
 
+
 <!--
 
 ***
 
 
-Content Update: 18-June-2025
+Content Update: 
+Copied - 18-June-2025
+Reviewed: 20-June-2025
+Remarks: Is well written establishes the meaning very clearly, Check and Update the link at the bottom. 
+
+
 
 ### Objective & Rationale:
 
-In today’s digital world, secure and accessible identity verification is key to connecting people with essential services like healthcare, education, and government programs. While the eSignet Authentication module solves the identity verification, there is still a need to address the onboarding of users in non-digital environments. For example, several countries have good coverage on non-digital ID issuance, but would like to enable these users to obtain a digital identity. In certain countries, there are several ID’s that together provide an overall coverage rather than a single ID. In most of the case, the new on-field registration is not a good choice due to the cost and time-consuming methods. Empowering a voluntary program to self-register for a digital identity can work seamlessly in these cases. The **eSignet’s Signup Module**, a core component of the eSignet platform, offers a seamless and inclusive way for individuals to establish their digital identities. By prioritizing self-registration and progressive verification, the Signup module ensures that everyone can participate in the digital ecosystem regardless of background or access to technology. In this document, we dive into why and how eSignet’s signup process promotes inclusion, supports self-registration, and builds trust through its innovative assurance model.
+In today’s digital world, secure and accessible identity verification is key to connecting people with essential services like healthcare, education, and government programs. While the **eSignet Authentication** module solves the identity verification, there is still a need to address the onboarding of users in non-digital environments. For example, several countries have good coverage on non-digital ID issuance, but would like to enable these users to obtain a digital identity. In certain countries, there are several ID’s that together provide an overall coverage rather than a single ID. In most of the case, the new on-field registration is not a good choice due to the cost and time-consuming methods. Empowering a voluntary program to self-register for a digital identity can work seamlessly in these cases. The **eSignet’s Signup Module**, a core component of the eSignet platform, offers a seamless and inclusive way for individuals to establish their digital identities. By prioritizing self-registration and progressive verification, the Signup module ensures that everyone can participate in the digital ecosystem regardless of background or access to technology. In this document, we dive into why and how eSignet’s signup process promotes inclusion, supports self-registration, and builds trust through its innovative assurance model.
 
 **Please note:** This is not an alternative to the proper registration process. This is just a module that helps in digitalizing the existing ID (One or More) using a unique process with varying assurance level.
 
-### **The Power of Self-Registration**
+### The Power of Self-Registration
 
 The eSignet Signup Module is built around **self-registration**, empowering users to take control of their digital identity creation without complex prerequisites. Here’s how it works:
 
@@ -53,9 +59,9 @@ The eSignet Signup Module is built around **self-registration**, empowering user
 
 This self-service approach is especially impactful in regions with limited access to traditional identity infrastructure, enabling users to start their digital journey with minimal friction.
 
-### **Promoting Inclusion Through Design**
+### Promoting Inclusion Through Design
 
-Inclusion is at the heart of eSignet’s mission, and the Signup Module is designed to ensure **no one is left behind** in the digital identity ecosystem. Here’s how:
+Inclusion is at the heart of eSignet’s mission, and the Signup Module is designed to ensure **'no one is left behind'** in the digital identity ecosystem. Here’s how:
 
 * **Multilingual Support**: Built with **React JS**, the signup portal offers a responsive, multilingual interface, catering to diverse linguistic communities and breaking down language barriers.
 * **Accessible Authentication Methods**: Support for OTP (via SMS/email), biometrics, and QR codes accommodates users with varying technological access. For instance, individuals in rural areas with basic phones can use OTP, while those with smartphones can opt for biometrics.
@@ -65,7 +71,7 @@ Inclusion is at the heart of eSignet’s mission, and the Signup Module is desig
 
 By prioritizing accessibility and flexibility, eSignet promotes **financial inclusion** and bridges the **digital divide**, empowering marginalized communities to engage in the digital economy.
 
-### **Assurance Model and Progressive KYC**
+### Assurance Model and Progressive KYC
 
 The eSignet Signup Module’s **assurance model** is a cornerstone of its trust-building framework, ensuring that user identities are reliable while remaining accessible. Coupled with **progressive KYC**, this approach allows users to gradually enhance their digital profiles, balancing inclusivity with security. Here’s why this model is effective:
 
@@ -97,7 +103,7 @@ The **Signup Module** redefines how digital identities can be created—**indepe
 * Function **independently or alongside eSignet**
 * Scale securely across different use cases and ecosystems
 
-> The Signup Module is not just a form—it's a gateway to digital participation for millions who are otherwise left behind.
+ The Signup Module is not just a form—it's a gateway to digital participation for millions who are otherwise left behind.
 
 To know more about the components refer [here](https://docs.esignet.io/develop/technology/components-signup-portal).
 
