@@ -8,7 +8,6 @@ The architecture diagram below illustrates the structure and components of Inji 
 
 <figure><img src="../../../.gitbook/assets/injiWallet_architecture.svg" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/INJIWEB-ARCHITECTURE.svg" alt=""><figcaption></figcaption></figure>
 
 ### Architecture Components
 
