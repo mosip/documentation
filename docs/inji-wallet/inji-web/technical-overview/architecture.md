@@ -2,11 +2,11 @@
 
 Inji Web is an intuitive, user-friendly portal designed to helps users to access Verifiable Credentials.
 
-The architecture diagram below illustrates the structure and components of Inji Web, offering a detailed explanation of how the platform operates and how its various elements interact to deliver its features and functionality.
+The architecture diagram below illustrates the structure and components of Inji Web, including the new login functionality with Google and storage of downloaded Verifiable Credentials in the database.
 
 
 
-<figure><img src="../../../.gitbook/assets/inji_web_0.10.0_architecture_1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/injiWallet_architecture.svg" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../../.gitbook/assets/INJIWEB-ARCHITECTURE.svg" alt=""><figcaption></figcaption></figure>
 
