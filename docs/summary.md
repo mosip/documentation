@@ -45,7 +45,7 @@
     * [Relying Party](test/integration/relying-party/README.md)
       * [Relying Party Onboarding](test/integration/relying-party/relying-party-onboarding.md)
       * [Development and Integration with eSignet](test/integration/relying-party/development-and-integration-with-esignet.md)
-  * [Integration Guide](test/integration-guide-signup-portal/README.md)
+  * [Integration Guides - Signup](test/integration-guide-signup-portal/README.md)
     * [Identity Verifier Plugin](test/integration-guide-signup-portal/identity-verifier-plugin.md)
     * [Profile Registry Plugin](test/integration-guide-signup-portal/profile-registry-plugin.md)
     * [Integration with eSignet portal](test/integration-guide-signup-portal/integration-with-esignet-portal.md)

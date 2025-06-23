@@ -6,9 +6,9 @@ The two main functionalities of the authenticator interface, **KYC Auth** and **
 
 <figure><img src="../../.gitbook/assets/activity-diagrams-authenticator (1).png" alt=""><figcaption></figcaption></figure>
 
-Refer to the link for eSignet Authentication Interface:&#x20;
+For eSignet Authentication Interface refer to the link below:
 
-{% embed url="https://github.com/mosip/esignet/blob/release-1.6.x/esignet-integration-api/src/main/java/io/mosip/esignet/api/spi/Authenticator.java" %}
+[https://github.com/mosip/esignet/blob/v1.5.1/esignet-integration-api/src/main/java/io/mosip/esignet/api/spi/Authenticator.java](https://github.com/mosip/esignet/blob/v1.5.1/esignet-integration-api/src/main/java/io/mosip/esignet/api/spi/Authenticator.java)
 
 ## Who should implement the Authenticator plugin interface?
 
