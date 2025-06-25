@@ -1,17 +1,10 @@
-<!-- 
-Content Update:
-Copied: 12 june
-Reviewed: 20 June
-Remarks: 
-
--->
 # Features
 
 The eSignet Sign-Up Service provides a secure, user-friendly, and standards-based platform for user onboarding and identity verification. It is designed to support a wide range of use cases—from basic account creation to high-assurance identity verification making it suitable for both public and private sector services.
 
 ### User Profile Creation
 
-eSignet offers multiple ways to create a user profile, based on the level of assurance and regulatory requirements of the relying party: <!-- multiple or several and isn't it more inclined towards progressively adding upon the profile?>
+eSignet offers multiple ways to create a user profile, based on the level of assurance and regulatory requirements of the relying party: \<!-- multiple or several and isn't it more inclined towards progressively adding upon the profile?>
 
 #### 1. KYC with Minimum Details
 
@@ -35,11 +28,11 @@ For regulated industries such as **banking, insurance, and digital governance**,
 
 This flow includes:
 
-* **Real-time video-based KYC (eKYC)**
+* **Real-time video-based KYC (eKYC)**\
   Live video verification ensures the person signing in is the rightful identity holder.
-* **Government-issued document scanning**
+* **Government-issued document scanning**\
   Scans and validates official identity documents for authenticity.
-* **Biometric validation**
+* **Biometric validation**\
   Optional biometric checks (such as facial recognition) to further strengthen identity verification.
 
 This ensures that only verified individuals gain access to sensitive services, reducing fraud and enhancing compliance with national and international regulatory standards.
@@ -50,11 +43,11 @@ The eSignet Sign-Up and Identity Assurance processes are built on the **OpenID C
 
 This includes:
 
-* **Verification Status**
+* **Verification Status**\
   Identifies whether a claim (e.g., name, ID number) is self-declared or verified by a trusted source.
-* **Verification Process Details**
+* **Verification Process Details**\
   Captures how each claim was verified—via biometric checks, document validation, or video-based processes—and by whom.
-* **Assurance Level**
+* **Assurance Level**\
   Communicates the level of confidence in the verification, helping relying parties make informed decisions about trust and access.
 
 This structured metadata provides transparency and trust in digital identities, especially critical in environments with high compliance requirements.
