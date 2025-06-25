@@ -289,7 +289,7 @@ Once the rancher cluster is ready, we need ingress and storage class to be set f
       ```
 
       openssl req -x509 -nodes -days $VALIDITY \
-       -newkey rsa:2048 -keyout /etc/ssl/certs/tls.key -out /etc/ssl/certs/tls.crt \
+       -newkey rsa:2048 -keyout /etc/ssl/private/tls.key -out /etc/ssl/certs/tls.crt \
        -subj "/C=$COUNTRY/ST=$STATE/L=$LOCATION/O=$ORG/OU=$ORG_UNIT/CN=$COMMON_NAME" \
        -addext "subjectAltName = DNS:rancher.xyz.net, DNS:*.xyz.net"
       ```
@@ -358,7 +358,7 @@ helm install rancher rancher/rancher --version 2.6.3 \
 
 * [Keycloak](https://www.keycloak.org/): Keycloak is an OAuth 2.0 compliant Identity Access Management (IAM) system used to manage the access to Rancher for cluster controls.
 ```
-cd $K8_ROOT/apps/keycloak
+cd $K8_ROOT/rancher/keycloak
 ./install.sh <iam.host.name>
 ```
 * `keycloak_client.json`: Used to create SAML client on Keycloak for Rancher integration.
@@ -417,7 +417,7 @@ helm repo add mosip https://mosip.github.io/mosip-helm
 * rke (version 1.3.10)
 * Setup MOSIP K8 Cluster node VM’s as per '[**Hardware and Network Requirements**'](pre-requisites.md).
 * Run `env-check.yaml` to check if cluster nodes are fine and don't have known issues in it.
-  * cd $K8_ROOT/rancher/on-prem
+  * cd $K8_ROOT/mosip/on-prem
   * create copy of `hosts.ini.sample` as `hosts.ini` and update the required details for MOSIP k8 cluster nodes.
     * `cp hosts.ini.sample hosts.ini`
     > Note:
@@ -556,7 +556,7 @@ helm repo add mosip https://mosip.github.io/mosip-helm
   * Check status of coredns restart.
     ```
     kubectl -n kube-system rollout status deploy coredns
-    kubectl -n kube-system rollout status coredns-autoscaler
+    kubectl -n kube-system rollout status deployment/coredns-autoscaler
     ```
 ## 7. MOSIP K8 Cluster Global configmap, Ingress and Storage Class setup
 
@@ -575,7 +575,7 @@ helm repo add mosip https://mosip.github.io/mosip-helm
   * `./install.sh`
   * This will bring up all the Istio components and the Ingress Gateways.
   * Check Ingress Gateway services:
-    * `kubectl get svc -n istio-system`
+    * Command to check: `kubectl get svc -n istio-system`
       * `istio-ingressgateway`: external facing istio service.
       * `istio-ingressgateway-internal`: internal facing istio service.
       * `istiod`: Istio daemon for replicating the changes to all envoy filters.
