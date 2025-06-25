@@ -52,7 +52,7 @@ Security is a core principle of eSignet, ensuring end-to-end protection:
 **Content Update**
 
 Added: 24-June-25
-
+Reviewed: 24-June-25
 
 
 eSignet is designed with the architectural principles mentioned below. These architecture principles are core to developing the system's features and greatly influence how and why specific software design patterns are used.
@@ -70,11 +70,11 @@ eSignet prioritizes user privacy by minimizing data exposure and ensuring secure
 
 eSignet is built to be **vendor-neutral** and **open-source**, promoting maximum flexibility, interoperability, and independence:
 
-* **Open Standards Across the Stack**\
+* **Open Standards Across the Stack**
   eSignet adheres to open standards across its entire architecture, enabling seamless integration with a wide range of identity systems and infrastructures.
-* **No Dependence on Proprietary Solutions**\
+* **No Dependence on Proprietary Solutions**
   Organizations are free to use their preferred biometric devices, software components, and infrastructure without being tied to a specific vendor or ecosystem.
-* **Open Source Foundation**\
+* **Open Source Foundation**
   As an open-source product, eSignet provides full transparency and avoids proprietary lock-in, allowing adopters to customize, extend, and audit the solution based on their requirements.
 
 #### Commodity Computing
@@ -85,7 +85,7 @@ eSignet is optimized for cost-efficiency and scalability:
 * **Multi-Platform Support:** It can be deployed on any general-purpose **virtual machine (VM)** that supports Docker.
 * **Avoids Vendor Lock-in:** Organizations are free to use their existing cloud or on-premise infrastructure.
 
-#### Secure By Default
+#### Secure By Design
 
 Security is a core principle of eSignet, ensuring end-to-end protection:
 
