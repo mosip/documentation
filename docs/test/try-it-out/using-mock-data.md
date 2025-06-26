@@ -1,12 +1,14 @@
 # Using Mock Data
 
-If you want to explore eSignet, you can use the following test personas in our Collab environment.
+While you want to explore eSignet, you can use the following test personas in our Collab environment.
 
 ## Personas
 
 ![](../../.gitbook/assets/maria-powell.png) ![](../../.gitbook/assets/james-rodrigious.png)
 
 ![](../../.gitbook/assets/george-cooper.png) ![](../../.gitbook/assets/jane-thompson.png)
+
+
 
 Individual images are included to facilitate **selfie authentication** for the Inji application.
 
@@ -26,7 +28,7 @@ We have developed a **mock health portal** that functions as a **relying party w
 
 To simplify testing with mock data, eSignet supports OTP authentication.
 
-* You can use any of the provided [personas](https://docs.esignet.io/try-it-out/using-mock-data#personas) above for testing.
+* You can use any of the provided [personas](using-mock-data.md#personas) above for testing.
 * The default OTP for testing is "111111" (six ones).
 
-For a step-by-step guide on logging in with OTP using eSignet, refer to [this](https://docs.esignet.io/end-user-guide/login-with-otp) detailed guide.
+For a step-by-step guide on logging in with OTP using eSignet, refer to [this detailed guide](../end-user-guide/health-portal/login-with-otp.md).
