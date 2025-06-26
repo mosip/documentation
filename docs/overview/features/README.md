@@ -98,12 +98,12 @@ Furthermore, eSignet has undergone meticulous testing to ensure seamless compati
 
 
 
-
+<!--
 
 **Updated Content**
 
 Added: 26 june 2025
-
+Reviewed: In Progress
 
 
 ## Features
@@ -185,5 +185,4 @@ To ensure inclusive access for diverse user groups, eSignet offers multilingual 
 1. [How to add a new language to eSignet?](https://docs.esignet.io/faq#how-to-add-a-new-language-in-esignet)
 2. [How to remove a language from the eSignet default setup?](https://docs.esignet.io/general/faq#how-to-remove-a-language-from-the-esignet-default-setup)
 
-
-
+-->
