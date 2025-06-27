@@ -28,9 +28,7 @@ eSignet adheres to the OpenID4VCI wallet-initiated flow. Consequently, after aut
 
 The wallet can utilize the eSignet client management APIs to formally register as an OAuth client and obtain the necessary client credentials. This will facilitate their connection with eSignet.
 
-{% openapi src="../../../.gitbook/assets/esignet-1.2.0 (1).yml" path="/client-mgmt/oauth-client" method="post" %}
-[esignet-1.2.0 (1).yml](<../../../.gitbook/assets/esignet-1.2.0 (1).yml>)
-{% endopenapi %}
+\[<mark style="color:red;">OpenAPI - Rendering Issue - To Fix</mark>]
 
 To register the client in our Sandbox environment, click [here](../../try-it-out/).
 
@@ -40,9 +38,9 @@ To register the client in our Sandbox environment, click [here](../../try-it-out
 
 In order to initiate the credential issuance flow, the credential holder needs to authenticate and provide consent. Hence, the wallet needs to create a button to initiate authentication using eSignet by calling the "_**/authorize**_" endpoint.
 
-{% openapi src="../../../.gitbook/assets/esignet-1.2.0 (1).yml" path="/authorize" method="get" %}
-[esignet-1.2.0 (1).yml](<../../../.gitbook/assets/esignet-1.2.0 (1).yml>)
-{% endopenapi %}
+\[<mark style="color:red;">OpenAPI - Rendering Issue - To Fix</mark>]
+
+
 
 This process would redirect the user to a web view of eSignet's authentication screen. In this screen, the user will need to authenticate their identity and give consent to share their credentials.
 
@@ -52,9 +50,7 @@ Upon successful authentication and consent, the authorization code will be sent 
 
 The wallet app now needs to extract the authorization code (auth-code) parameter in the redirected deep link and exchange the **authorization code** to get the **access token and c\_nonce** from the eSignet server.
 
-{% openapi src="../../../.gitbook/assets/esignet-1.2.0 (1).yml" path="/oauth/v2/token" method="post" %}
-[esignet-1.2.0 (1).yml](<../../../.gitbook/assets/esignet-1.2.0 (1).yml>)
-{% endopenapi %}
+\[<mark style="color:red;">OpenAPI - Rendering Issue - To Fix</mark>]
 
 {% hint style="info" %}
 Many OAuth 2.0 client libraries are available in most programming languages to perform this action.
