@@ -14,6 +14,8 @@ description: >-
 
 **Quarters**
 
+eSignet's annual product cycle commences in January and concludes in December.
+
 * <mark style="background-color:blue;">**Q1**</mark>: Jan'25 – Mar'25
 * <mark style="background-color:orange;">**Q2**</mark>: Apr'25 – Jun'25
 * <mark style="background-color:red;">**Q3**</mark>: Jul'25 – Sep'25
