@@ -28,7 +28,7 @@ eSignet adheres to the OpenID4VCI wallet-initiated flow. Consequently, after aut
 
 The wallet can utilize the eSignet client management APIs to formally register as an OAuth client and obtain the necessary client credentials. This will facilitate their connection with eSignet.
 
-\[<mark style="color:red;">OpenAPI - Rendering Issue - To Fix</mark>]
+<!-- Put the OpenAPI EndPoint Link and fix -->
 
 To register the client in our Sandbox environment, click [here](../../try-it-out/).
 
@@ -38,7 +38,7 @@ To register the client in our Sandbox environment, click [here](../../try-it-out
 
 In order to initiate the credential issuance flow, the credential holder needs to authenticate and provide consent. Hence, the wallet needs to create a button to initiate authentication using eSignet by calling the "_**/authorize**_" endpoint.
 
-\[<mark style="color:red;">OpenAPI - Rendering Issue - To Fix</mark>]
+<!-- Put the OpenAPI EndPoint Link and fix -->
 
 
 
@@ -50,7 +50,7 @@ Upon successful authentication and consent, the authorization code will be sent 
 
 The wallet app now needs to extract the authorization code (auth-code) parameter in the redirected deep link and exchange the **authorization code** to get the **access token and c\_nonce** from the eSignet server.
 
-\[<mark style="color:red;">OpenAPI - Rendering Issue - To Fix</mark>]
+<!-- Put the OpenAPI EndPoint Link and fix -->
 
 {% hint style="info" %}
 Many OAuth 2.0 client libraries are available in most programming languages to perform this action.
