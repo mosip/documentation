@@ -1,38 +1,14 @@
 # Roadmap 2025
 
-Here we present the product roadmap for the whole of 'Inji Stack' for the calendar year 2025.
+Here we present the product roadmap for the whole of 'Inji Stack' for the calendar year 2025. Annual product cycle of Inji stack commences in January and concludes in December.
 
-<details>
-
-<summary>Legends</summary>
-
-**Quarters**
-
-* <mark style="background-color:blue;">**Q1**</mark>: Jan'25 – Mar'25
-
-- <mark style="background-color:orange;">**Q2**</mark>: Apr'25 – Jun'25
-
-* <mark style="background-color:red;">**Q3**</mark>: Jul'25 – Sep'25
-
-- <mark style="background-color:green;">**Q4**</mark>: Oct'25 – Dec'25
-
-**Status**
-
-🔵 Planned
-
-🟠 In-progress
-
-🟢 Completed
-
-**Priority**
+{% hint style="warning" %}
+**Prioritization**: Through this roadmap the startegic or adaptive prioritization, if there is, has been indicated as below:
 
 * Add \[ <sup>**➕**</sup> ]: Added new.
 * Strategic priortization \[ <sup>**↑**</sup> ] : Brought ahead in schedule.
 * Adaptive reschedule \[ <sup>**↓**</sup> ]: Is moved to approaching quarters.
-
-</details>
-
-
+{% endhint %}
 
 ## Inji Wallet
 
