@@ -39,7 +39,8 @@ Originally designed for credential-level cryptographic and schema validation, th
 * Robust Error Reporting for failed verifications.
 This enhancement ensures the verifier backend meets security and interoperability standards while maintaining extensibility for evolving DID-based ecosystems.
 
-**Additional Enhancements:**
+### Additional Enhancements:
+
 **1. Support for JsonWebSignature2020 with Ed25519 algorithm type for VP verification :** VC-Verifier library supports JsonWebSignature2020 with Ed25519 algorithm for Verifiable Presentation (VP) verification, so that we can process VPs secured with this cryptographic standard and ensure broader interoperability for presentation flows.
 
 **2. Configuration of DB Parameters:** Database parameters like DB Name, DB Schema, and JDBC URL which were hardcoded earlier, are now dynamically configurable, so that deployments can be made more flexible, environment-specific, and manageable through configuration.
