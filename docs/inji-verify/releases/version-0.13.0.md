@@ -55,8 +55,8 @@ This enhancement ensures the verifier backend meets security and interoperabilit
 
 | Repositories | Tags: Released/Dependent                                     |
 | ------------ | ------------------------------------------------------------ |
-| Inji Verify  | [v0.13.0](https://github.com/mosip/inji-verify/tree/v0.12.3) |
-| vc-verifier library  | [v1.3.0](https://github.com/mosip/inji-verify/tree/v0.12.3) |
+| Inji Verify  | [v0.13.0] |
+| vc-verifier library  | [v1.3.0] |
 
 ### Projects: Released
 
@@ -95,5 +95,5 @@ Below is the list of fixes as part of the 0.13.0 release:
 * [Integration Guide](https://docs.inji.io/inji-verify/technical-overview/integration-guides/openid4vp-vp-verification-integration-guide)
 * [API Documentation](https://mosip.stoplight.io/studio/inji-verify)
 * [Collab Guide](https://docs.inji.io/inji-verify/functional-overview/releases-1/inji-verify-collab-guide)
-* [QA Report](https://docs.inji.io/inji-verify/releases/version-0.13.0/test-report)
+* [QA Report]
 
