@@ -18,17 +18,11 @@ We are thrilled to announce the release of Inji Verify 0.13.0 that enhances Veri
 * **Comprehensive Integration Guide:** A detailed [integration guide](https://docs.inji.io/inji-verify/technical-overview/integration-guides/openid4vp-vp-verification-integration-guide) is provided, explaining the setup and usage to ensure a smooth integration process. The steps are also available in the [SDK's README](https://github.com/mosip/inji-verify/blob/release-0.13.x/inji-verify-sdk/Readme.md).​
 * **Framework Compatibility:** Currently, this component is compatible exclusively with verifier applications built using React and TypeScript. Support for additional frameworks and languages is planned for upcoming releases.
 
-{% hint style="success" %}
-Note:&#x20;
 
-The Inji Verify UI is provided as a reference implementation to demonstrate how the SDK components can be orchestrated in a full-fledged verifier application. It is not required for adoption. Developers are encouraged to selectively embed only the components relevant to their business and technical needs.
-{% endhint %}
+**Note:** The Inji Verify UI is provided as a reference implementation to demonstrate how the SDK components can be orchestrated in a full-fledged verifier application. It is not required for adoption. Developers are encouraged to selectively embed only the components relevant to their business and technical needs.
 
-{% hint style="success" %}
-Note:&#x20;
+**Note:** Inji Verify SDK- Scan / Upload component supports React version- 18.2.0
 
-Inji Verify SDK- Scan / Upload component supports React version- 18.2.0
-{% endhint %}
 
 **2. Server Setup for VC and VP Proof Verification in vc-verifier library**
 
