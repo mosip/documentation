@@ -194,13 +194,10 @@ If you use presentationDefinition, **do not** pass presentationDefinitionId, and
   * Stop the backend or simulate a 500 error.
   * Try missing required props or using both callbacks to see validation.
 
-## QRCodeVerification
 
-This guide walks you through integrating the QRCodeVerification component into your React TypeScript project. It facilitates QR code scanning and image upload to verify Verifiable Credentials (VCs) in your React application, including client-side and backend-to-backend verification.
+<!--
 
-
-
-#### QRCodeVerification
+# QRCodeVerification
 
 This guide walks you through integrating the QRCodeVerification component into your React TypeScript project. It facilitates QR code scanning and image upload to verify Verifiable Credentials (VCs) in your React application, including client-side and backend-to-backend verification.
 
@@ -334,3 +331,6 @@ https://your-rp-domain.com/#vp_token=<base64url-encoded-token>
 * ❌ React Native
 * ❌ Angular, Vue, or other frontend frameworks
 * ❌ SSR frameworks like Next.js without customization
+
+
+-->
