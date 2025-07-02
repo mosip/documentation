@@ -948,7 +948,7 @@ Check detailed [MOSIP Modules Deployment](https://docs.mosip.io/1.2.0/deployment
 
 * MOSIP’s successfull deployment can be verified by comparing the results of api testrig with testrig benchmark.
   * ```sh
-    cd $INFRA_ROOT/deployment/v3/apitestrig
+    cd $INFRA_ROOT/deployment/v3/testrig/apitestrig
     ./install.sh
     ```
     * When prompted input the hour of the day to execute the api-testrig.
