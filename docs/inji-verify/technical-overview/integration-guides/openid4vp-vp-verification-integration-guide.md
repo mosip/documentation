@@ -7,6 +7,7 @@ Inji Verify SDK is a library which exposes **React** components for integrating 
 ### Features
 
 * OpenId4VP component that creates QR code and performs OpenId4Vp sharing backend flow. OpenID4VP cross device flow can be performed by following the steps provided in [End User Guide](https://mosip.atlassian.net/wiki/spaces/PROD/pages/1297285260)
+* QRCodeVerification component that allows scanning and uploading images to verify the verifiable credentials. Scan/ Upload flow can be performed by following the steps provided in [End User Guide](https://docs.inji.io/inji-verify/functional-overview/end-user-guide)
 
 ### Usage
 
@@ -40,6 +41,7 @@ This guide walks you through integrating the OpenID4VP verification component in
 **Prerequisites**
 
 * React Project Setup
+* Proper permissions for camera access (mobile/web) (QRCodeVerification)
 
 {% hint style="warning" %}
 **Note**\
@@ -189,6 +191,20 @@ If you use presentationDefinition, **do not** pass presentationDefinitionId, and
 * **Force Errors** :
   * Stop the backend or simulate a 500 error.
   * Try missing required props or using both callbacks to see validation.
+
+
+# QRCodeVerification
+This guide walks you through integrating the QRCodeVerification component into your React TypeScript project. It facilitates QR code scanning and image upload to verify Verifiable Credentials (VCs) in your React application, including client-side and backend-to-backend verification. 
+
+
+
+
+
+
+
+
+
+---
 
 #### Compatibility & Scope
 
