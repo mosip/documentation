@@ -40,7 +40,8 @@ In each scenario, Inji Verify leverages QR codes embedded with verifiable creden
 * **QR Code Version Compatibility**:
   * For successful verification using the scan feature, the verifiable credential (VC) should be encoded in QR code versions 27 and below.
 * **Ease of Integration for Verifier Applications**:
-  * **The Inji Verify SDK** – OpenID4VP-VP Verification component allows developers to seamlessly integrate OpenID4VP-based (VP - Verifiable Presentation) verification into their verifier (relying party's) applications. This plug-and-play TypeScript component is designed for seamless integration with 'React + TypeScript' applications and enables robust verification of Verifiable Credentials (VCs) using OpenID4VP standards. It is available as a standalone NPM module, promoting modularity and simplifying the integration process.
+  * Inji Verify SDK provides plug-and-play components—Scan/Upload and OpenID4VP Verifiable Presentation (VP) Verification—that enable developers to effortlessly integrate credential verification workflows into their verifier (relying party) applications.
+  * Built with TypeScript and optimized for React applications, these components offer a modular and developer-friendly approach to integrating Verifiable Credential verification. Each capability is packaged as a standalone NPM module, ensuring flexibility, reusability, and ease of integration across diverse verifier implementations.
 
 {% hint style="success" %}
 **Note**:\
