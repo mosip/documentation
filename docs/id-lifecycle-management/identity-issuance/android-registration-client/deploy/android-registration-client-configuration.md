@@ -165,3 +165,31 @@ Logout from ARC will check for any running background tasks in the background. A
 * If the user clicks on logout on the popup, all the jobs running and scheduled jobs will stop.
 * If no jobs are running in the background, the user will simply log out and navigate to the login screen.
 * No configuration changes are required to log out of ARC.
+
+## Pre-Registration download
+
+Before fetching any Pre-Registration application on the registration page, clear all previously captured data.
+
+The downloaded Pre-Registration packets will be stored locally at the following path:
+
+```
+mosip.registration.registration_pre_reg_packet_location=PreRegPacketStore
+```
+
+Pre-registration applications fetch period, No. of days before the appointment date.
+
+```
+mosip.registration.pre_reg_no_of_days_limit=7
+```
+
+#### Resetting Password in Android registration Client
+
+To reset a password in the Android registration Client, click **Reset Password** from the **Actions** menu in the top-right corner of the **Home** page. This redirects the operator to a configurable URL:
+
+```
+mosip.registration.reset_password_url=${mosip.api.internal.url}/keycloak/auth/realms/mosip/account/
+```
+
+{% hint style="info" %}
+**Note:** The placeholder **`“mosip.api.internal.url”`** should be defined in **`application-default.properties`**.
+{% endhint %}
