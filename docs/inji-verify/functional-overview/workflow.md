@@ -270,6 +270,9 @@ sequenceDiagram
 
 
 
+<!--
+
+
 ***
 
 ### Sequence Diagram: Inji Verify SDK
@@ -412,6 +415,9 @@ sequenceDiagram
    6. **Request for VP verification result (Relying Party Backend to Verify Backend):** The Relying Party Backend requests the Verifiable Presentation (VP) verification result from the Verify Backend using the UUID (verifyServiceUrl/vc-verification/{uuid}).
    7. **Validate VC using VC Verifier Library (Verify Backend):** The Verify Backendvalidates the Verifiable Credential (VC) using a VC Verifier Library.
    8. **Return verification status (Verify Backend to Relying Party Backend):** Finally, the Verify Backend returns the verification status (e.g., valid, invalid, expired) to the Relying Party Backend.
+
+
+-->
 
 
 
