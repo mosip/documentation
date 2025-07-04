@@ -198,14 +198,13 @@ sequenceDiagram
 13. **Relying Party Backend acts based on the verification result:** The Relying Party Backend receives the verification result and proceeds with the next steps in its application logic based on whether the verification was successful or not.
 
 
-
-
 **The below diagram illustrates the flow in which a authorization request gets expired.**
 
 <!-- Diagram - ovp-expired [v1] -->
 
 
 ```mermaid
+
 sequenceDiagram
     participant Verify Backend
     participant Relying Party UI
@@ -218,13 +217,9 @@ sequenceDiagram
 ```
 
 
-
-
 1. **OPENID4VP UI Component sends a Status update:** The Verify Backend sends a Status update to the OPENID4VP UI Component. At this point, the status is something like EXPIRED or PENDING, indicating that the QR code is currently valid.
 2. **Time passes and the QR code expires:** The Verify Backend sends a Status update to the OPENID4VP UI Component. At this point, the status is EXPIRED, indicating that the authorization request is currently expired valid.
 3. **OPENID4VP UI Component triggers the** onQrCodeExpired **callback:** Upon detecting the expiration, the OPENID4VP UI Component triggers a callback function onQrCodeExpired .
-
-
 
 
 **The below diagram illustrates the flow in which an error occurs**
@@ -244,7 +239,6 @@ sequenceDiagram
     OPENID4VP UI Component--)OPENID4VP UI Component: If any error occurs before successful verification <br> (e.g., during QR code decoding, redirect issues, backend communication errors)
     OPENID4VP UI Component->>Relying Party UI: Trigger onError callback with error details.
 ```
-
 
 
 1. **An error occurs at OPENID4VP UI Component :** An error occurs at OPENID4VP UI Component due to some response error, exceptions or expected errors.
@@ -295,8 +289,6 @@ sequenceDiagram
 11. **OPENID4VP UI Component triggers 'onProcessed' callback with the result:** When the status indicates VP\_SUBMITTED and the onProcessed callback is passed, the OPENID4VP UI Component triggers this callback, providing the result of the initial submission.
 12. **Relying Party UI receives the final result via the 'onProcessed' callback:** The Relying Party UI receives the final verification result through the onProcessed callback, which now includes the validated claims.
 13. **Flow Ends and Control is passed to the Relying Party UI:** The complete verification flow concludes, and the Relying Party UI can now use the validated claims to proceed with the application logic.
-
-
 
 
 ## Scan/Upload Component
@@ -382,6 +374,7 @@ sequenceDiagram
 <!-- Diagram UploadError v.1 -->
 
 ```mermaid
+
 sequenceDiagram
     participant Verify Backend
     participant Relying Party UI
@@ -394,7 +387,6 @@ sequenceDiagram
     QR Code Handler --) QR Code Handler: Error Encountered (anywhere before successful verification)
     QR Code Handler ->> Relying Party UI: Trigger onError callback <br> (with error details)
 ```
-
 
 
 1. **Initiation of Scan/Upload UI Component (User, QR Code Handler):**
@@ -498,9 +490,8 @@ sequenceDiagram
 
 
 
-
 <!--
-Old content till 3 July, Can compare with it  
+Old content till 3 July, Can compare with it with new lest anything is mixed?
 
 
 ## Sequence Diagram: Inji Verify SDK

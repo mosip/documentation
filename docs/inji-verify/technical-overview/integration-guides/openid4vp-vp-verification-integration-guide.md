@@ -7,7 +7,7 @@ Inji Verify SDK is a library which exposes **React** components for integrating 
 
 ## Features
 
-* OpenId4VP component that creates QR code and performs OpenId4Vp sharing backend flow. OpenID4VP cross device flow can be performed by following the steps provided in [End User Guide](https://mosip.atlassian.net/wiki/spaces/PROD/pages/1297285260)
+* OpenId4VP component that creates QR code and performs OpenId4Vp sharing backend flow. OpenID4VP cross device flow can be performed by following the steps provided in [End User Guide](https://docs.inji.io/inji-verify/functional-overview/end-user-guide)
 * QRCodeVerification component that allows scanning and uploading images to verify the verifiable credentials. Scan/Upload flow can be performed by following the steps provided in [End User Guide](https://docs.inji.io/inji-verify/functional-overview/end-user-guide)
 
 ## Usage
