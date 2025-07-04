@@ -34,7 +34,7 @@ The below given are the list of features for Inji Verify Portal:
 
    * Inji Verify offers modular SDK components—Scan/Upload and OpenID4VP Verifiable Presentation (VP) Verification—that enable relying party (verifier) applications to directly integrate VC verification workflows without the need to rely on the full Inji Verify application.
 
-   * These plug-and-play TypeScript components are designed for seamless integration with React + TypeScript stacks and support robust Verifiable Credential (VC) verification flows. Each component is distributed as an independent NPM module, promoting modularity, reusability, and ease of integration. A [comprehensive integration guide](Update-link) is available, covering installation, setup, and usage to streamline the adoption process.
+   * These plug-and-play TypeScript components are designed for seamless integration with React + TypeScript stacks and support robust Verifiable Credential (VC) verification flows. Each component is distributed as an independent NPM module, promoting modularity, reusability, and ease of integration. A [comprehensive integration guide](integration-guides/openid4vp-vp-verification-integration-guide.md) is available, covering installation, setup, and usage to streamline the adoption process.
 
    * This flexible, SDK-first approach allows verifiers to rapidly implement VC verification workflows with minimal setup, enabling faster time-to-market for digital identity-enabled services.
 

@@ -36,17 +36,17 @@ This ensures a secure and flexible way of sharing credentials across different d
 
    * Scan/Upload Component – Enables QR code scanning or file upload for verifying credentials.
 
-   *OpenID4VP VP Verification Component – Supports Verifiable Presentation flows aligned with the OpenID4VP specification.
+   * OpenID4VP VP Verification Component – Supports Verifiable Presentation flows aligned with the OpenID4VP specification.
 
-These plug-and-play components are:
+   * These plug-and-play components are:
 
-   * Developed using TypeScript and Optimized for React environments
+      * Developed using TypeScript and Optimized for React environments
 
-   * Published as independent NPM modules to ensure flexibility and reusability
+      * Published as independent NPM modules to ensure flexibility and reusability
 
-This flexibility enables verifiers to easily integrate VC verification into their own UI, use only the modules they need and reduce dependency on the entire Inji Verify codebase
+   * This flexibility enables verifiers to easily integrate VC verification into their own UI, use only the modules they need and reduce dependency on the entire Inji Verify codebase
 
-The Inji Verify UI is provided as a reference implementation to demonstrate how the SDK components can be orchestrated in a full-fledged verifier application. It is not required for adoption. Developers are encouraged to go through step-by-step [integration guide](Update-link) and selectively embed only the components relevant to their business needs.
+   * The Inji Verify UI is provided as a reference implementation to demonstrate how the SDK components can be orchestrated in a full-fledged verifier application. It is not required for adoption. Developers are encouraged to go through step-by-step [integration guide](/inji-verify/overview/integration-guides/openid4vp-vp-verification-integration-guide.md) and selectively embed only the components relevant to their business needs.
 
 **Note**: Inji Verify SDK components supports React version- 18.2.0
 
@@ -73,20 +73,3 @@ The Inji Verify UI is provided as a reference implementation to demonstrate how 
 {% endhint %}
 
 For more detailed information on each step and the underlying systems, click [**here**](../functional-overview/workflow.md)**.**
-
-
-<!-- 
-
-
-This got added by mistake, find where this cam from and why it might have been added here.
-
-11. **Generate QR Code based VP request for sharing credentials from wallet to Inji Verify for verification in different devices**: The OpenID for Verifiable Presentations (OpenID4VP) standard introduces the VP Token which will enable the end-users to present Verifiable Presentations (VPs) to verifiers via a digital wallet. In scenarios where the verifier and the user's wallet operate on separate devices, the process unfolds as follows:​
-   * The Verifier formulates an Authorization Request, which is then rendered as a QR code. This QR code encapsulates a Request URI, allowing the wallet to retrieve the complete request data, thereby keeping the QR code concise.
-   * The user scans the QR code using their digital wallet (e.g., Inji Wallet), which fetches the Authorization Request data and prepares the requested credentials. Depending on the wallet's contents, the user can share all or a subset of the requested credentials.​
-   * Utilizing the `vp_token` response type and the `direct_post` response mode, the wallet securely transmits the VPs directly to the verifier's specified endpoint via an HTTP POST request.
-   * Upon receipt, the Verifier assesses the authenticity and validity of the presented credentials. The verification results are then displayed within Inji Verify, providing immediate feedback on the credential status.​
-
-This cross-device flow ensures a secure and efficient method for users to share their verifiable credentials across different devices, enhancing both flexibility and user experience in credential verification processes.
-
-
--->
