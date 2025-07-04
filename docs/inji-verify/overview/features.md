@@ -30,32 +30,22 @@ Here is a comprehensive summary of the features offered by Inji Verify.
 
 This ensures a secure and flexible way of sharing credentials across different devices while maintaining privacy and control over what gets shared.
 
-9. **Ease of Integrating Modular SDK Components with  Verifier Applications**:
-
+9. **Ease of Integrating Modular SDK Components with Verifier Applications**:
    * Inji Verify provides modular SDK components that empower verifier (relying party) applications to seamlessly integrate VC verification workflows—without relying on the full Inji Verify reference application.
-
    * Scan/Upload Component – Enables QR code scanning or file upload for verifying credentials.
-
    * OpenID4VP VP Verification Component – Supports Verifiable Presentation flows aligned with the OpenID4VP specification.
-
    * These plug-and-play components are:
-
-      * Developed using TypeScript and Optimized for React environments
-
-      * Published as independent NPM modules to ensure flexibility and reusability
-
+     * Developed using TypeScript and Optimized for React environments
+     * Published as independent NPM modules to ensure flexibility and reusability
    * This flexibility enables verifiers to easily integrate VC verification into their own UI, use only the modules they need and reduce dependency on the entire Inji Verify codebase
-
-   * The Inji Verify UI is provided as a reference implementation to demonstrate how the SDK components can be orchestrated in a full-fledged verifier application. It is not required for adoption. Developers are encouraged to go through step-by-step [integration guide](/inji-verify/overview/integration-guides/openid4vp-vp-verification-integration-guide.md) and selectively embed only the components relevant to their business needs.
+   * The Inji Verify UI is provided as a reference implementation to demonstrate how the SDK components can be orchestrated in a full-fledged verifier application. It is not required for adoption. Developers are encouraged to go through step-by-step [integration guide](../technical-overview/integration-guides/openid4vp-vp-verification-integration-guide.md) and selectively embed only the components relevant to their business needs.
 
 **Note**: Inji Verify SDK components supports React version- 18.2.0
 
 10. **Backend Setup**: Inji Verify's backend supports robust and secure verification of Verifiable Credentials (VCs). The integration of the vc-verifier library facilitates server-side verification of VCs, accommodating both Ed25519 (Signature 2018 & 2020) and RSA (Signature 2018) cryptographic standards. To ensure persistent and reliable data storage, the backend has transitioned from an in-memory H2 database to a PostgreSQL database which enhances data durability.
 11. **Language Selection**: User can choose from the listed languages for better usability such that the text description and VC result on the UI is displayed based on the chosen language. Inji Verify supports the following international languages which includes Portuguese, Spanish, French, English, Arabic, Khmer and the Indian vernacular langauges includes Tamil, Hindia and Kannada.
 12. **UI Theme customization**: UI themes can be customized so that any integrators/ country can change the UI theme based on their requirements.
-
 13. **Server setup for VC and VP proof Verification**: Server setup for VC and VP proof Verification: The vc-verifier library has been integrated into Inji Verify to enable server-side verification of both Verifiable Credentials (VCs) and Verifiable Presentations (VPs) which supports key types: `Ed25519VerificationKey2018`, `Ed25519VerificationKey2020`, and `RSAVerificationKey2018` .
-
 14. **Error Handling:** The portal features comprehensive error handling mechanisms, guiding users in case of invalid QR codes, or expired QR codes and decoding failures.
 15. **User-friendly Interface**: Inji Verify offers an intuitive interface, providing a seamless experience for users to navigate and verify credentials effortlessly. The new version includes a responsive design for mobile devices across various browsers, enhancing the ease of exploring, scanning, and uploading features.
 16. **Real-time Verification:** Users can verify credentials in real time, ensuring prompt validation and reducing verification delays.
