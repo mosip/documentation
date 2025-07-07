@@ -53,19 +53,11 @@ Below are the combinations that QA verified and Certified INJI Verify:
 
 Below are the results for Upload, Scan and OVP flow functionality with Windows, Android phone, MAC, Android Tablet, iPad and iPhone with different browsers:
 
-&#x20;
+<figure><img src="../../../.gitbook/assets/iv-0-13-0-test-report-image1.png" alt=""><figcaption></figcaption></figure>
 
-\[image – 1]
+<figure><img src="../../../.gitbook/assets/iv-0-13-0-test-report-image2.png" alt=""><figcaption></figcaption></figure>
 
-&#x20;
-
-\[image – 2]
-
-&#x20;
-
-\[image – 3]
-
-
+<figure><img src="../../../.gitbook/assets/iv-0-13-0-test-report-image3.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 **Note** : OVP flow supports 0.16.0 inji-mobile build only
@@ -93,7 +85,7 @@ Verification is performed on various configurations as mentioned below
 
 ## Feature Health&#x20;
 
-\[image – 4]
+<figure><img src="../../../.gitbook/assets/iv-0-13-0-test-report-image4.png" alt=""><figcaption></figcaption></figure>
 
 ## Test execution statistics
 
