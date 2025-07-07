@@ -16,7 +16,7 @@ Inji Certify v0.11.0 brings major enhancements focused on improving security, st
 
 * **Keycloak Integration**: Seamless integration with Keycloak has been introduced, providing secure, standards-based authentication aor verifiable credential issuance.
 * **Enabled for Interoperability and Integration**: Inji Certify now supports seamless interoperability with digital wallets that adhere to the OpenID for Verifiable Credentials (OpenID4VC) specification. Having gone through rigorous testing, Inji Certify now assures and attests that it can integrate effortlessly with any wallet designed to be interoperable and compliant with OpenID4VC standards and thereby enhancing its versatility and adoption in diverse ecosystems.
-* **Expanded Cryptographic Algorithm Support in Inji Certify**
+* **Expanded Cryptographic Algorithm Support in Inji Certify**\
   Inji Certify now offers enhanced cryptographic flexibility through support for additional signing algorithms:
   * **ECC K1 2019 Key Support**: Inji Certify supports signing and verification using ECC K1 2019 keys, enabling compatibility with a broader range of secure systems and ensuring robust security for verifiable credentials.
   * **Ed25519 Signing (2018 & 2020)**: Verifiable credential requests can now be signed using Ed25519 keys, compliant with both 2018 and 2020 specifications. This enhancement ensures interoperability with diverse ecosystems and aligns with modern cryptographic standards.

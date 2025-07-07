@@ -3,19 +3,19 @@ icon: house
 ---
 
 # Overview
+
+## Overview
+
 Traditionally, institutes and organizations spend considerable time and effort maintaining user data, yet users often encounter challenges accessing services and benefits requiring information about themselves, their assets, and achievements. Inji Certify addresses this gap by enabling organizations to issue verifiable credentials and empowering users to securely store, share, and manage their data based on open standards and specifications.
 
-
-Inji Certify is a powerful tool that enables issuers to seamlessly connect with existing data sources to issue verifiable credentials.
+Inji Certify is a powerful tool that enables issuers to seamlessly connect with existing data sources to issue verifiable credentials.\
 It serves as a versatile solution for both organizations and individuals looking to issue and manage digitally verifiable credentials efficiently. By connecting with existing databases and offering configurable credential schemas, it caters to diverse use cases across different sectors and industries.
 
-
-## Who is the intended user of Inji Certify?
+### Who is the intended user of Inji Certify?
 
 The intended users of Inji Certify are divided into two main groups:
 
-
-### 1. Organizations
+#### 1. Organizations
 
 **Types of Organizations**
 
@@ -24,13 +24,13 @@ The intended users of Inji Certify are divided into two main groups:
 * **Government Agencies**: Entities that issue identity documents, licenses, permits, and other official certifications.
 * **Professional Associations**: Organizations that issue professional certifications, licenses, and endorsements for specific skills or achievements.
 
-### Benefits for Organizations
+#### Benefits for Organizations
 
 * **Streamlined Credential Issuance**: Automates the process of issuing verifiable credentials, reducing manual work and administrative overhead.
 * **Enhanced Security**: Ensures that issued credentials are authentic and tamper-proof.
 * **Interoperability**: Supports industry standards, making credentials easily verifiable by other systems and platforms.
 
-### 2. Individuals
+#### 2. Individuals
 
 **Types of Individuals**
 
@@ -46,13 +46,13 @@ The intended users of Inji Certify are divided into two main groups:
 
 <figure><img src="../../.gitbook/assets/functional-overview.png" alt=""><figcaption></figcaption></figure>
 
-## Overall Purpose
+### Overall Purpose
 
 Inji Certify is designed to meet the needs of both organizations and individuals by providing a robust, secure, and easy-to-use platform for issuing and managing verifiable credentials. By supporting multiple data formats and integrating seamlessly with existing databases, Inji Certify caters to diverse use cases across various sectors and industries.
 
-## Key Features of Inji Certify
+### Key Features of Inji Certify
 
-### Credential Issuance
+#### Credential Issuance
 
 * **Verifiable Credential Issuance**: Seamlessly issues verifiable credentials with enhanced integration capabilities, including:
   * **MOSIP Identity Plugin**: Integrates with MOSIP for identity verification.
@@ -64,11 +64,11 @@ Inji Certify is designed to meet the needs of both organizations and individuals
       * Postgres Data Provider Plugin
 * **Ease of Installation**: Utilizes Docker-compose scripts for quick deployment. Includes comprehensive documentation for efficient utilization of data registry plugins.
 
-### Multiple VC Format Support
+#### Multiple VC Format Support
 
 * **JSON-LD Support**: Ensures compliance with W3C VC v1.1 standards, promoting interoperability and adherence to industry specifications.
 
-# Future Enhancements
+## Future Enhancements
 
 * **Simplified Issuer Onboarding**: Automates key generation and configuration to reduce manual steps for new issuers.
 * **Pluggable Data Sources Support**: Enables credential issuance directly from existing databases, enhancing efficiency and accessibility.

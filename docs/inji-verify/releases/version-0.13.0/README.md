@@ -15,7 +15,7 @@ We are thrilled to announce the release of Inji Verify 0.13.0 that enhances Veri
 **1. Inji Verify SDK- Scan & Upload component:** Inji Verify provides modular SDK components that empower verifier (relying party) applications to seamlessly integrate Verifiable Credential (VC) verification workflows—without relying on the full Inji Verify reference application.
 
 * **Modular NPM Package:** The Scan & Upload component is available as a standalone NPM module, promoting modularity and simplifying integration. Developers can incorporate it into their projects without depending on the full Inji Verify repository.​​
-* **Comprehensive Integration Guide:** A detailed [integration guide](../technical-overview/integration-guides/openid4vp-vp-verification-integration-guide.md) is provided, explaining the setup and usage to ensure a smooth integration process. The steps are also available in the [SDK's README](https://github.com/mosip/inji-verify/blob/release-0.13.x/inji-verify-sdk/Readme.md).​
+* **Comprehensive Integration Guide:** A detailed [integration guide](../../technical-overview/integration-guides/openid4vp-vp-verification-integration-guide.md) is provided, explaining the setup and usage to ensure a smooth integration process. The steps are also available in the [SDK's README](https://github.com/mosip/inji-verify/blob/release-0.13.x/inji-verify-sdk/Readme.md).​
 * **Framework Compatibility:** Currently, this component is compatible exclusively with verifier applications built using React and TypeScript. Support for additional frameworks and languages is planned for upcoming releases.
 
 **Note:** The Inji Verify UI is provided as a reference implementation to demonstrate how the SDK components can be orchestrated in a full-fledged verifier application. It is not required for adoption. Developers are encouraged to selectively embed only the components relevant to their business and technical needs.
@@ -89,8 +89,8 @@ Below is the list of fixes as part of the 0.13.0 release:
 
 ### Documentation
 
-* [Feature documentation](../overview/features.md)
-* [Integration Guide](../../inji-wallet/inji-mobile/technical-overview/integration-guide/openid4vp.md)
+* [Feature documentation](../../overview/features.md)
+* [Integration Guide](../../../inji-wallet/inji-mobile/technical-overview/integration-guide/openid4vp.md)
 * [API Documentation](https://mosip.stoplight.io/studio/inji-verify)
-* [Collab Guide](../functional-overview/releases-1/inji-verify-collab-guide.md)
+* [Collab Guide](../../functional-overview/releases-1/inji-verify-collab-guide.md)
 * \[QA Report]
