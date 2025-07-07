@@ -1,13 +1,9 @@
 ---
-description: Empowering secure and seamless digital identity verification.
+description: A Modern and Inclusive Digital Identity Authentication Solution
 icon: globe
 ---
 
 # eSignet
-
-## **eSignet**
-
-_A Modern and Inclusive Digital Identity Authentication Solution_
 
 ## Overview
 
