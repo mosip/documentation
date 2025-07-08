@@ -7,3 +7,16 @@ Please refer to the below sections to build, integrate, and enhance solutions wi
 **👉** [**Components - Signup Portal**](https://docs.esignet.io/develop/technology/components-signup-portal) – Seamlessly register and verify identities with the Signup Portal’s robust components and secure eKYC integration.
 
 👉 [**API Reference**](https://docs.esignet.io/develop/technology/api) – Refer here for all the APIs used by signup.
+
+
+<!--
+
+Content Update: 
+Copied: 7th July, 2025
+Reviewed: 7th July, 2025
+
+Please refer to the below sections to build, integrate, and enhance solutions with signup using comprehensive guides, tools, and resources:
+
+[Components - Signup Portal](Update-link-cross-link) – Seamlessly register and verify identities with the Signup Portal’s robust components and secure eKYC integration.
+
+[API Reference](Update-link-cross-link) – Refer here for all the APIs used by signup.
