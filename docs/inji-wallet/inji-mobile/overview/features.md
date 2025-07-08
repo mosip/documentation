@@ -99,12 +99,12 @@ Designed for ease of use with intuitive UI components:
 ### 🟢 Feature(f): Wallet Security & Device Features
 
 - **Biometric / Passcode Access**  
-  App requires authentication on every open or session timeout  
-  Supports Android biometrics and Apple Face ID / Touch ID
+  - App requires authentication on every open or session timeout  
+  - Supports Android biometrics and Apple Face ID / Touch ID
 
 - **Private Key Storage in Secure Enclave**  
-  Private keys are stored using Android Keystore / iOS Secure Enclave  
-  Keys cannot be exported or tampered
+  - Private keys are stored using Android Keystore / iOS Secure Enclave  
+  - Keys cannot be exported or tampered
 
 ### 🟡 Planned Features
 
