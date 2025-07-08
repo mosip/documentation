@@ -43,11 +43,12 @@ eSignet provides a limited implementation of the OpenID protocol, supporting the
 * [OAuth 2.0 RFC 7523](https://www.rfc-editor.org/rfc/rfc7523) - JWT profile for client authentication
 * [OAuth 2.0 RFC 7636 ](https://datatracker.ietf.org/doc/html/rfc7636)- PKCE security extension
 * [OpenID Connect Core 1.0](https://openid.net/specs/openid-connect-core-1_0-final.html)
+* [Open ID Connect Discovery 1.0](https://openid.net/specs/openid-connect-discovery-1_0.html)
 
 **b. Token and Discovery Standards:**
 
 * [RFC 7515](https://www.rfc-editor.org/rfc/rfc7515.html) - JSON Web Signature
-* [RFC 7519](https://datatracker.ietf.org/doc/html/rfc7517) - JSON Web Keys
+* [RFC 7517](https://datatracker.ietf.org/doc/html/rfc7517) - JSON Web Keys
 * [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519) - ID token and access token as JWT
 * [OAuth 2.0 RFC 8414](https://datatracker.ietf.org/doc/html/rfc8414) - Authorization Server Metadata
 * [RFC 5785 ](https://www.rfc-editor.org/rfc/rfc5785)- Followed for both openid and oauth well-knowns
