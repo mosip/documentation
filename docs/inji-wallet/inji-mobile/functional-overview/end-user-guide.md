@@ -45,14 +45,13 @@ After installation when you launch the app for the first time:
 
 <div><figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step13.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-first-launch-of-the-app-step14.png" alt="" width="188"><figcaption></figcaption></figure></div>
 
-## Downloading VC
+## Download of Verifiable Credentials
 
-Inji Wallet integrates with eSignet as an authorization layer to perform VC downloads based on OpenID4VCI standards. Let us understand how to download a National ID VC and an Insurance VC into the Mobile Wallet through the below sections:
+Inji Wallet supports VC downloads using **eSignet** as the authorization layer. Some of the available use-cases include:
 
-## Download VC via eSignet
-
-* Download National ID (MOSIP VC)
-* Download Insurance VC
+- **Download National ID (MOSIP VC)**
+- **Download Insurance VC**
+- **And many more use-cases available to explore via eSignet!**
 
 ### **1. Download National ID (MOSIP VC)**
 
@@ -98,6 +97,47 @@ Users can see all the Insurance policy details in the detailed view along with t
 
 <div align="center"><figure><img src="../../../.gitbook/assets/iw-android-detailed-view-of-insurance-vc-step-1.png" alt="" width="31%"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-detailed-view-of-insurance-vc-step-2.png" alt="" width="31%"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-detailed-view-of-insurance-vc-step-3.png" alt="" width="31%"><figcaption></figcaption></figure></div>
 
+### Download Credential by Scanning a QR Code (Credential Offer with Pre-Auth Code)
+
+> **Note:** Screenshots will be added soon to enhance the user experience and better explain the steps shown below.
+
+This flow allows you to download credentials simply by scanning a QR code, **without login** or **manual input of ID/Identifier or other data**.
+
+#### 1. Pre-Authorized Credential Offer (**Without Transaction Code**)
+
+Used in public campaigns or mass rollouts (e.g., vaccine certificates, land cards).
+
+1. On the issuer’s website, or from a flyer/poster, scan the QR code using the **Scan & Download** option available in Inji Wallet.
+2. Click on the **"+" (Add Credential)** icon.
+3. Select the first option: **Scan & Download**.
+4. Scan the QR code from the issuer's website or printed material.
+5. If this is your first time interacting with the issuer, a **trust screen** will appear asking you to trust the issuer.
+6. You can **proceed to trust** and add the issuer to your trusted list or **decline** as per your preference. This prompt appears only **once per issuer**.
+   - If you **Decline**, the download **will not proceed** further.
+   - If you **Allow**, the download **will proceed** further.
+8. The wallet recognizes the embedded **credential offer**.
+9. Without needing to log in or enter any data, your credential starts downloading.
+10. You’ll see a **success message** and the VC will appear in your wallet.
+
+#### b. Pre-Authorized Credential Offer (**With Transaction Code**)
+
+Used for personalized and secure issuance (e.g., mDL, insurance).
+
+1. On the issuer’s website, or from a flyer/poster, scan the QR code using the **Scan & Download** option available in Inji Wallet.
+2. Click on the **"+" (Add Credential)** icon.
+3. Select the first option: **Scan & Download**.
+4. Scan the QR code from the issuer's website or printed material.
+5. If this is your first time interacting with the issuer, a **trust screen** will appear asking you to trust the issuer.
+6. You can **proceed to trust** and add the issuer to your trusted list or **decline** as per your preference. This prompt appears only **once per issuer**.
+   - If you **Decline**, the download **will not proceed** further.
+   - If you **Allow**, the download **will proceed** further.
+6. You will be prompted to **enter a Transaction Code / OTP** provided by the issuer via SMS or Email.
+4. After entering the code, the wallet retrieves the credential securely.
+6. The wallet recognizes the embedded **credential offer**.
+7. Without needing to log in or enter any data, your credential starts downloading.
+8. You’ll see a **success message** and the VC will appear in your wallet.
+
+
 ### Viewing the history of the downloaded VC
 
 After completing several scenarios, we can find it by selecting the third icon in the bottom right corner when we navigate to the history page. This page will display a comprehensive list of all the events.
@@ -110,7 +150,7 @@ Users can view the activity logs of a VC from the Home Page or the detailed view
 
 <div align="center"><figure><img src="../../../.gitbook/assets/iw-android-view-activity-log-of-a-vc-1.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-view-activity-log-of-a-vc-3.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-view-activity-log-of-a-vc-3.png" alt="" width="188"><figcaption></figcaption></figure></div>
 
-## Sharing Credentials
+## Credential Sharing Methods
 
 ## Pre-requisites
 
@@ -195,6 +235,43 @@ Let us understand the process of sharing credentials using an example and see th
 * To view the received cards, they would need to access the settings page and find the `Received Cards` section. Clicking on this section will display the received cards. If the receiver has not received any card, this section will be empty.
 * Please note that the relying party can only view the received cards and will not be able to share or perform other actions with them.
 
+### **Verifiable Credential Sharing & Presentation via OpenID4VP**
+
+> **Note:** Screenshots will be added soon to enhance the user experience and better explain the steps shown below.
+
+#### Cross-Device Flow (OpenID4VP)
+
+This method is used when you're using **Inji Wallet on a mobile phone** and the verifier (e.g., a service provider or kiosk) is using a **separate device** such as a laptop, tablet, or scanner.
+
+**Steps to Present Credentials:**
+
+1. **Verifier generates a QR code** on their system/portal requesting specific credentials.
+2. On your **Inji Wallet**, tap the **QR scanner icon** from the home screen or use the “Share” option.
+3. **Scan the QR code** displayed by the verifier.
+4. The wallet reads the verifier’s request and shows you a list of **matching credentials**.
+5. You are prompted for **face authentication**.
+6. Choose the credentials you want to share.
+7. Tap **“Share”** to proceed. The wallet sends the Verifiable Presentation (VP) to the verifier securely.
+8. You’ll see a confirmation message once the sharing is complete.
+
+
+#### Same-Device Flow (OpenID4VP)
+
+This method is useful when you’re **accessing a portal from the same mobile device** that has the Inji Wallet installed.
+
+**Steps to Present Credentials:**
+
+1. On your phone browser, visit the service portal that is requesting your credentials.
+2. Tap on the **“QR Code”** or similar button.
+3. This opens a **deep link** that launches your **Inji Wallet app** automatically.
+4. The wallet fetches the verifier’s request.
+5. A list of matching credentials is displayed.
+6. You will be asked for **face authentication**.
+7. Choose the credentials to be shared.
+8. Tap **“Share”**.
+9. You are automatically redirected back to the service portal (Android).  
+   - On **iOS**, you may need to manually switch back to the browser.
+
 ### Pinning a VC
 
 After clicking on the ellipsis button on the downloaded VC, a button will appear allowing for the VC to be pinned. Selecting this option will pin the specific VC to the top of the screen.
@@ -267,3 +344,4 @@ To restore backed-up VCs, the user has to choose their preference of the cloud b
 ### Restore - ios
 
 <figure><img src="../../../.gitbook/assets/iw-android-backup-and-restore-1.png" alt="" width="563"><figcaption></figcaption></figure>
+
