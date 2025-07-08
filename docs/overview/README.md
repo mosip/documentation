@@ -69,7 +69,7 @@ Reviewed: 24 June 25
 
 **eSignet Auth** is a modular, standalone identity authentication service designed to enable secure and flexible user verification across digital ecosystems. Built on **open standards**, it implements **OAuth 2.0 and OpenID Connect** protocols, functioning as both an **authorization server** and a **resource server**.
 
-### **1. Designed for Inclusivity** <a href="#id-1.-designed-for-inclusivity" id="id-1.-designed-for-inclusivity"></a>
+### 1. Designed for Inclusivity
 
 eSignet Auth ensures that digital authentication is accessible and adaptable for all, regardless of device type or user capability.
 
@@ -78,7 +78,7 @@ eSignet Auth ensures that digital authentication is accessible and adaptable for
 * **Customizable Authentication Workflows**\
   Flexible by design, eSignet Auth can be tailored to meet country-specific, sector-specific, or application-specific requirements. New authentication methods can be easily added and existing flows modified without major system changes.
 
-### **2. Standards-Based ID Authentication with High Assurance** <a href="#id-2.-standards-based-id-authentication-with-high-assurance" id="id-2.-standards-based-id-authentication-with-high-assurance"></a>
+### 2. Standards-Based ID Authentication with High Assurance
 
 eSignet Auth delivers secure identity verification through a **standards-compliant** and **assurance-driven** approach.
 
@@ -89,7 +89,7 @@ eSignet Auth delivers secure identity verification through a **standards-complia
 
 This combination of standards compliance and biometric authentication ensures strong, verifiable digital identities with configurable assurance levels.
 
-### **3. How It Builds Trust** <a href="#id-3.-how-it-builds-trust" id="id-3.-how-it-builds-trust"></a>
+### 3. How It Builds Trust
 
 Trust is foundational to eSignet Auth’s architecture, achieved through strong privacy controls, consent-driven design, and secure token handling.
 
@@ -100,7 +100,7 @@ Trust is foundational to eSignet Auth’s architecture, achieved through strong 
 * **Prevention of Unwanted Profiling**\
   Issues **partner-specific user tokens** for each relying party, ensuring that user activity cannot be tracked or correlated across services—thus preserving privacy and stopping cross-service profiling.
 
-### **4. Seamless Integration Across Ecosystems** <a href="#id-4.-seamless-integration-across-ecosystems" id="id-4.-seamless-integration-across-ecosystems"></a>
+### 4. Seamless Integration Across Ecosystems
 
 eSignet Auth is built for flexibility, allowing it to plug into various components across digital identity and service delivery ecosystems.
 
@@ -111,7 +111,7 @@ eSignet Auth is built for flexibility, allowing it to plug into various componen
 
 This ecosystem-agnostic design ensures that eSignet Auth can serve as a unifying layer for identity authentication across sectors.
 
-### **5. Summary** <a href="#id-5.-summary" id="id-5.-summary"></a>
+### 5. Summary
 
 **eSignet Auth** is a powerful, secure, and inclusive authentication module that can be deployed as part of a digital ID system or independently.
 
@@ -130,10 +130,8 @@ Whether used by governments, enterprises, or technology providers, **eSignet Aut
 Please take a moment to watch the video below to explore valuable insights into eSignet and its wide array of powerful features!
 
 
+[Add link to the video](Update-link)
 
-\[Add link to the video]
-
-\[Documentation Link]
-
+[Documentation Link](Update-cross-link)
 
 -->

@@ -8,7 +8,7 @@ description: Explore eSignet’s powerful features for secure access.
 
 eSignet offers a convenient feature called Unified Login, which allows users to access applications and various services through a single interface thus eliminating the need for multiple logins. Additionally, eSignet enables seamless login to any government service by utilizing a single credential through the existing ID repository.
 
-### Password-less Authentication <a href="#password-less-authentication" id="password-less-authentication"></a>
+### Password-less Authentication
 
 eSignet implements a password-less login method that leverages authentication factors supported by our system. This approach enhances security by mitigating the potential risks associated with password-related security vulnerabilities, such as weak passwords, password reuse, and phishing attacks.
 
