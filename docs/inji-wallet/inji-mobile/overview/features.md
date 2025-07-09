@@ -1,82 +1,118 @@
 # Features
 
-Below is a comprehensive overview of the features provided by Inji Wallet.
 
-## Download, Verify and Store Verifiable Credentials
+Inji Mobile is an open-source digital wallet designed to enable individuals to receive, store, and present Verifiable Credentials (VCs) securely, both online and offline. Purpose-built to align with global standards like W3C VC, OpenID4VCI, OpenID4VP, SD-JWT, and ISO 18013-5 (mDL), it brings interoperability, user autonomy, and strong cryptographic guarantees to digital identity ecosystems.
 
-Downloading your digital credentials (IDs) with you at all times just got easier. This can be done as below:
+### 🟢 Feature(a): Download, Verify, and Store Verifiable Credentials
 
-### Downloading VC using the OpenID for VC Issuance flow:
+Inji Wallet makes it easy and secure for residents to manage their digital identity and credentials. From downloading and verifying to sharing and backing up Verifiable Credentials (VCs), this guide outlines all key features and workflows available in the wallet.
 
-Residents can download a VC using a configured third-party issuer which complies with OpenID for VCI standard. For Inji Wallet, MOSIP IDA (National ID) and Veridonia Insurance (Insurance credentials) are example integrations.
+### 1. Downloading Verifiable Credentials
 
-#### Credential Type Selection:
+#### OpenID for VC Issuance
 
-Inji Wallet introduces a new feature that empowers users to select the specific type of credential they require. Upon choosing an issuer, users are presented with a list of Credential Types issued by the ID provider. This functionality provides users with flexibility and control, allowing them to download their Verifiable Credentials to their precise needs.
+Residents can download VCs from trusted issuers integrated with OpenID for the VCI protocol.
 
-#### VC Verification:
+**Example Issuers:**
+- Republic of Veridonia National ID Department - National ID
+- StayProtected Insurance - Insurance Credentials
+- Republic of Veridonia Tax Department - Tax ID
+- AgroVeritas Property & Land Registry - Land Record
+- Veridonia Department of Motor Vehicles - mDoc
 
-Inji Wallet offers a robust feature for verifying Verifiable Credentials using the Digital Bazaar library. This advanced functionality ensures that the issuer's signature is validated and verified based on the proof type provided by the issuer. This step is ingrained as part of the VC download flow. Currently, the support is for the RSA signature type, providing users with reliable verification capabilities. Additionally, we are actively working to expand our support to include the Ed25519 proof type, further enhancing the security and versatility of our verification process. With these advancements, users can trust that their Verifiable Credentials are verified with precision and integrity, regardless of the proof type utilized by the issuer.
+#### Pre-Authorised Credential Offers (Without Transaction Code)
+- Users download credentials directly using a credential_offer URI
+- No login required; pre-auth code embedded in the offer
+- Used in mass issuance or public campaigns (e.g., vaccination certificates, offline cards)
 
-#### **QR Code Generation:**
+#### Pre-Authorised Credential Offers (With Transaction Code)
+- Adds a one-time transaction code (OTP / claim code) to bind issuance to the user
+- User enters code in-app to retrieve VC securely
+- Ideal for privacy-sensitive issuance (e.g., mDL, insurance)
 
-PixelPass library is capable of generating QR codes for Verifiable Credentials with smaller size data. The library is integrated with Inji Wallet and users can now see a QR code which has Verifiable Credentials embedded in it. These QR codes, visible in the detailed view of the card, offer a convenient way for users to share their credentials with relying parties or service providers. Users can display the QR code so that the relying party / service provider can either:
+### 🟢 Features(b): Verifying Credential Authenticity
 
-* Scan the QR code displayed in the wallet app showcased by the resident.
-* Upload the QR code as an image to the service provider verification website.
+Inji Mobile Wallet uses robust cryptographic libraries to verify that the VC is:
+- Digitally signed by a trusted issuer.
+- Cryptographically valid based on proof type.
 
-Reference Implementation: QR Code generation for Veridonia Insurance VC.
+#### Signature Algorithm Support in Inji Mobile
 
-To know more about QR code verification, read about Inji Verify [here](https://docs.mosip.io/inji/inji-mobile-wallet/overview/features#qr-code-generation).
+| Format                      | Signature Algorithm              | Status        | Notes                                                                 |
+|-----------------------------|----------------------------------|---------------|-----------------------------------------------------------------------|
+| W3C JSON-LD                 | ED25519 2018                     | ✅Supported  | Compact, fast signatures with high security                           |
+| mDoc/mDL                    | ED25519 2018                     | ✅Supported  | Used in mobile document ecosystems                                    |
+| W3C JSON-LD                 | ED25519 2020                     | ✅Supported  | Updated key format with enhanced key representation                   |
+| mDoc/mDL                    | ED25519 2020                     | ✅Supported  | Widely used in mobile identity contexts                               |
+| W3C JSON-LD                 | RS256 (RSA with SHA-256)         | ✅Supported  | Backward compatibility; used in some legacy systems                   |
+| mDoc/mDL                    | RS256 (RSA with SHA-256)         | ✅Supported  | Applicable for RSA-backed mobile IDs                                  |
+| W3C JSON-LD                 | ECC K1                           | ✅Supported  | Common in OpenID ecosystem                                            |
+| mDoc/mDL                    | ECC K1                           | ✅Supported  | Used in various driver license implementations                        |
+| JSON-LD                     | ECC R1                           | 🔄Planned    | High-security EdDSA variant                                           |
+| mDoc/mDL                    | ECC R1                           | 🔄Planned    | Emerging support for high-security mobile documents                   |
+| SD-JWT                      | ECC R1                           | 🔄Planned    | For selective disclosure with strong cryptographic guarantees         |
+| DIDComm v2 Messaging        | Curve25519 / X25519              | ⏳Research   | Enables secure, encrypted VP exchange                                 |
+| JSON-LD ZKPs (VC-ZKP)       | BBS+                             | ⏳Research   | For advanced privacy-preserving credentials using Zero-Knowledge Proofs |
 
-To understand the workflow, please refer [here](https://docs.mosip.io/inji/inji-mobile-wallet/overview/features/feature-workflows#id-2.-downloading-verifying-and-storing-credentials).
 
-## Sharing Verifiable Credentials without the Internet
+### 🟢 Feature(c): Sharing Verifiable Credentials
 
-* Inji Wallet allows users to securely share their downloaded VCs with other Inji users using Bluetooth Low Energy (BLE) technology, removing the necessity for an internet connection.
+Inji Wallet supports secure sharing of Verifiable Credentials (VCs) in multiple ways — both **online and offline** — with strong privacy and authentication.
 
-## Offline authentication of shared Verifiable Credentials
+| Method                     | Description                                                                                     | Connectivity | User Control / Notes                              |
+|----------------------------|-------------------------------------------------------------------------------------------------|--------------|---------------------------------------------------|
+| **QR Code Sharing**        | Generate QR using PixelPass. Scan or upload on verifier portal.                                | ✅ Online     | Quick and compact                                 |
+| **BLE (Bluetooth) Sharing**| Share VCs offline using Bluetooth Low Energy.                                                  | ❌ Offline    | Peer-to-peer; face match supported                |
+| **SSO via QR Code**        | Scan QR on service portal → share selected VCs after user consent.                             | ✅ Online     | Fine-grained VC selection and SSO login           |
+| **OpenID4VP – Cross-Device**| Scan verifier’s QR from another device → present VCs post face verification.                  | ✅ Online     | Secure, decentralized VC presentation             |
+| **OpenID4VP – Same Device**| Tap QR on browser → deep-link opens wallet → share credentials.                                | ✅ Online     | Seamless redirect                                 |
 
-* Users can verify the authenticity of their shared VCs by taking a self-portrait photograph on their mobile device. Inji Wallet compares this photograph with the image on the VCs, confirming the correct source and owner.
+**Note:** All methods include **user consent** and **privacy-by-design** to ensure secure, context-aware interactions.
 
-## Streamlined SSO and User-Controlled Authentication
 
-* The Inji Wallet application facilitates a Single Sign-On (SSO) function, empowering supported partners to enable a seamless login to online portals. This is achieved through the efficient process of scanning a QR code and sharing user data with their explicit consent.\
-  \
-  To understand the QR code login flow, refer [here](https://docs.esignet.io/end-user-guide/login-with-qr-code).\\
-* Inji Wallet users have the ability to choose which downloaded VC should be enabled for online authentication and selectively share the credentials on their ID. This capability provides users with an additional layer of security and control over the utilization of their stored information.
+### 🟢 Feature(d): Backup and Restore
 
-## Data backup and restore
+Inji Wallet includes a secure, one-time backup setup based on the platform:
 
-In order to safeguard against potential data loss in case of any unprecedented circumstances such as phone / app crashes, device change etc, and to improve user experience in the Inji app, users can now utilize the Backup and Restore feature for their Verifiable Credentials (VCs).
+| Platform | Backup Option | Notes                        |
+|----------|----------------|------------------------------|
+| Android  | Google Drive   | Select Google account        |
+| iOS      | iCloud         | Uses logged-in Apple account |
 
-Depending on their device platform, users can choose to store and retrieve VCs securely using either Google Drive (for Android users) or iCloud (for iOS users). This is a one-time setup process, where Android users can select their respective Google email account, while iOS users can back-up data using their default logged-in Apple account.
+**Ideal for:**
+- Phone upgrades
+- App crashes or resets
 
-To understand the backup and restore flow, refer [here](https://docs.mosip.io/inji/inji-mobile-wallet/overview/features/feature-workflows#id-5.-data-backup-and-restore).
 
-## Security Features
+### 🟢 Feature(e): User-Friendly Interface & Quick Actions
 
-Inji Wallet, as a digital Verifiable Credential wallet, implements robust measures to safeguard PII data and protect against cyber-attacks. Inji Wallet undergoes rigorous Penetration Testing and Threat Modelling by certified experts, further enhancing its resilience against cyber threats.
+Designed for ease of use with intuitive UI components:
+- Multiple VC Views: Mini cards to full detail
+- Separation of Downloaded vs. Received VCs
+- Quick Access Menu: Share, Share with Selfie via the kebab menu (⋮) on card
+- Select from a list of credential types offered by the issuer.
+- Choose only the VCs they want to download, ensuring relevance and control.
+- VCs grouped by type (ID, insurance, education)
+- Recent VCs shown first
 
-1. **Utilization of Hardware Keystore**:
-   * Inji Wallet securely stores private encryption keys by utilizing the Android hardware keystore.
-2. **Cryptographic Protection for PII Data**:
-   * Inji Wallet employs industry-standard SHA-256 and Argon2 cryptographic libraries to hash and strengthen Personally Identifiable Information (PII) data. The app actively detects and responds to any suspicious activities, ensuring enhanced security of user data.
-3. **Automatic biometric change detection**:
-   * Inji Wallet automatically resets itself in case of biometric change, thereby ensuring the security of information.
 
-## Ingenious Design
+### 🟢 Feature(f): Wallet Security & Device Features
 
-Inji Wallet functions as a comprehensive repository for a diverse array of VCs, leveraging its interface design to benefit users.
+- **Biometric / Passcode Access**  
+  - App requires authentication on every open or session timeout  
+  - Supports Android biometrics and Apple Face ID / Touch ID
 
-* **Multiple views of VCs**: Users can access multiple views of VCs, ranging from a mini view to detailed insights.
-* **Organized UI**: Inji Wallet provides a clear demarcation between downloaded and received VCs enhancing user clarity.
-* **Quick Access menu**: Users can now directly Share, Share with Selfie directly by accessing the kebab menu from the mini view in the Home Page and the detailed view of the VC.
+- **Private Key Storage in Secure Enclave**  
+  - Private keys are stored using Android Keystore / iOS Secure Enclave  
+  - Keys cannot be exported or tampered
 
-For a quick look at these features, refer the [Inji Wallet User Guide](../functional-overview/end-user-guide.md).
+### 🟡 Planned Features
 
-To understand the workflow of key features, refer [Feature Workflows](https://docs.mosip.io/inji/overview/features/feature-workflows).
+- Revocation Status
+- SD-JWT Selective Disclosure
+- Injii Mobile Wallet Login
+- Presentation during Issuance
 
-Also, watch the video below for a quick glimpse of the features available.
-
-{% embed url="https://www.youtube.com/watch?v=9Z1WuTd8q0M" %}
+🔗 Refer to the [Inji Wallet User Guide](https://docs.inji.io/inji-wallet/inji-mobile/functional-overview/end-user-guide)  
+🔗 See [Feature Workflows](https://docs.inji.io/inji-wallet/inji-mobile/functional-overview/feature-workflows)  
+🎬 Watch [Feature Demo Video](https://youtu.be/9Z1WuTd8q0M)
