@@ -49,9 +49,9 @@ After installation when you launch the app for the first time:
 
 Inji Wallet supports VC downloads using **eSignet** as the authorization layer. Some of the available use-cases include:
 
-- **Download National ID (MOSIP VC)**
-- **Download Insurance VC**
-- **And many more use-cases available to explore via eSignet!**
+* **Download National ID (MOSIP VC)**
+* **Download Insurance VC**
+* **And many more use-cases available to explore via eSignet!**
 
 ### **1. Download National ID (MOSIP VC)**
 
@@ -95,11 +95,13 @@ Users can see all the details of the National ID in the detailed view. In additi
 
 Users can see all the Insurance policy details in the detailed view along with the QR Code. The QR Code can be magnified which can be presented to the verifier for scanning. Through the quick access menu (...) on the top right user can also perform other actions like Share, Pin, Remove and Activity log on the VC.
 
-<div align="center"><figure><img src="../../../.gitbook/assets/iw-android-detailed-view-of-insurance-vc-step-1.png" alt="" width="31%"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-detailed-view-of-insurance-vc-step-2.png" alt="" width="31%"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-detailed-view-of-insurance-vc-step-3.png" alt="" width="31%"><figcaption></figcaption></figure></div>
+<div align="center"><figure><img src="../../../.gitbook/assets/iw-android-detailed-view-of-insurance-vc-step-1.png" alt=""><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-detailed-view-of-insurance-vc-step-2.png" alt=""><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-detailed-view-of-insurance-vc-step-3.png" alt=""><figcaption></figcaption></figure></div>
 
 ### Download Credential by Scanning a QR Code (Credential Offer with Pre-Auth Code)
 
-> **Note:** Screenshots will be added soon to enhance the user experience and better explain the steps shown below.
+{% hint style="warning" %}
+**Note:** Screenshots will be added soon to enhance the user experience and better explain the steps shown below.
+{% endhint %}
 
 This flow allows you to download credentials simply by scanning a QR code, **without login** or **manual input of ID/Identifier or other data**.
 
@@ -113,11 +115,11 @@ Used in public campaigns or mass rollouts (e.g., vaccine certificates, land card
 4. Scan the QR code from the issuer's website or printed material.
 5. If this is your first time interacting with the issuer, a **trust screen** will appear asking you to trust the issuer.
 6. You can **proceed to trust** and add the issuer to your trusted list or **decline** as per your preference. This prompt appears only **once per issuer**.
-   - If you **Decline**, the download **will not proceed** further.
-   - If you **Allow**, the download **will proceed** further.
-8. The wallet recognizes the embedded **credential offer**.
-9. Without needing to log in or enter any data, your credential starts downloading.
-10. You’ll see a **success message** and the VC will appear in your wallet.
+   * If you **Decline**, the download **will not proceed** further.
+   * If you **Allow**, the download **will proceed** further.
+7. The wallet recognizes the embedded **credential offer**.
+8. Without needing to log in or enter any data, your credential starts downloading.
+9. You’ll see a **success message** and the VC will appear in your wallet.
 
 #### b. Pre-Authorized Credential Offer (**With Transaction Code**)
 
@@ -129,14 +131,13 @@ Used for personalized and secure issuance (e.g., mDL, insurance).
 4. Scan the QR code from the issuer's website or printed material.
 5. If this is your first time interacting with the issuer, a **trust screen** will appear asking you to trust the issuer.
 6. You can **proceed to trust** and add the issuer to your trusted list or **decline** as per your preference. This prompt appears only **once per issuer**.
-   - If you **Decline**, the download **will not proceed** further.
-   - If you **Allow**, the download **will proceed** further.
-6. You will be prompted to **enter a Transaction Code / OTP** provided by the issuer via SMS or Email.
-4. After entering the code, the wallet retrieves the credential securely.
-6. The wallet recognizes the embedded **credential offer**.
-7. Without needing to log in or enter any data, your credential starts downloading.
-8. You’ll see a **success message** and the VC will appear in your wallet.
-
+   * If you **Decline**, the download **will not proceed** further.
+   * If you **Allow**, the download **will proceed** further.
+7. You will be prompted to **enter a Transaction Code / OTP** provided by the issuer via SMS or Email.
+8. After entering the code, the wallet retrieves the credential securely.
+9. The wallet recognizes the embedded **credential offer**.
+10. Without needing to log in or enter any data, your credential starts downloading.
+11. You’ll see a **success message** and the VC will appear in your wallet.
 
 ### Viewing the history of the downloaded VC
 
@@ -254,7 +255,6 @@ This method is used when you're using **Inji Wallet on a mobile phone** and the 
 7. Tap **“Share”** to proceed. The wallet sends the Verifiable Presentation (VP) to the verifier securely.
 8. You’ll see a confirmation message once the sharing is complete.
 
-
 #### Same-Device Flow (OpenID4VP)
 
 This method is useful when you’re **accessing a portal from the same mobile device** that has the Inji Wallet installed.
@@ -269,8 +269,8 @@ This method is useful when you’re **accessing a portal from the same mobile de
 6. You will be asked for **face authentication**.
 7. Choose the credentials to be shared.
 8. Tap **“Share”**.
-9. You are automatically redirected back to the service portal (Android).  
-   - On **iOS**, you may need to manually switch back to the browser.
+9. You are automatically redirected back to the service portal (Android).
+   * On **iOS**, you may need to manually switch back to the browser.
 
 ### Pinning a VC
 
@@ -344,4 +344,3 @@ To restore backed-up VCs, the user has to choose their preference of the cloud b
 ### Restore - ios
 
 <figure><img src="../../../.gitbook/assets/iw-android-backup-and-restore-1.png" alt="" width="563"><figcaption></figcaption></figure>
-
