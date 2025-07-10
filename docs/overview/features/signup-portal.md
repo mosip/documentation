@@ -4,21 +4,15 @@ description: Simplifying user registration and identity verification.
 
 # Signup Portal
 
-<!--
-Content Update: 
-Copied - 18-June-2025
-Reviewed: 20-June-2025
-Remarks: Is well written establishes the meaning very clearly, Check and Update the link at the bottom. 
--->
+## Signup Portal
 
-
-### Objective & Rationale:
+#### Objective & Rationale:
 
 In today’s digital world, secure and accessible identity verification is key to connecting people with essential services like healthcare, education, and government programs. While the **eSignet Authentication** module solves the identity verification, there is still a need to address the onboarding of users in non-digital environments. For example, several countries have good coverage on non-digital ID issuance, but would like to enable these users to obtain a digital identity. In certain countries, there are several ID’s that together provide an overall coverage rather than a single ID. In most of the case, the new on-field registration is not a good choice due to the cost and time-consuming methods. Empowering a voluntary program to self-register for a digital identity can work seamlessly in these cases. The **eSignet’s Signup Module**, a core component of the eSignet platform, offers a seamless and inclusive way for individuals to establish their digital identities. By prioritizing self-registration and progressive verification, the Signup module ensures that everyone can participate in the digital ecosystem regardless of background or access to technology. In this document, we dive into why and how eSignet’s signup process promotes inclusion, supports self-registration, and builds trust through its innovative assurance model.
 
 **Please note:** This is not an alternative to the proper registration process. This is just a module that helps in digitalizing the existing ID (One or More) using a unique process with varying assurance level.
 
-### The Power of Self-Registration
+#### The Power of Self-Registration
 
 The eSignet Signup Module is built around **self-registration**, empowering users to take control of their digital identity creation without complex prerequisites. Here’s how it works:
 
@@ -28,7 +22,7 @@ The eSignet Signup Module is built around **self-registration**, empowering user
 
 This self-service approach is especially impactful in regions with limited access to traditional identity infrastructure, enabling users to start their digital journey with minimal friction.
 
-### Promoting Inclusion Through Design
+#### Promoting Inclusion Through Design
 
 Inclusion is at the heart of eSignet’s mission, and the Signup Module is designed to ensure **'no one is left behind'** in the digital identity ecosystem. Here’s how:
 
@@ -40,7 +34,7 @@ Inclusion is at the heart of eSignet’s mission, and the Signup Module is desig
 
 By prioritizing accessibility and flexibility, eSignet promotes **financial inclusion** and bridges the **digital divide**, empowering marginalized communities to engage in the digital economy.
 
-### Assurance Model and Progressive KYC
+#### Assurance Model and Progressive KYC
 
 The eSignet Signup Module’s **assurance model** is a cornerstone of its trust-building framework, ensuring that user identities are reliable while remaining accessible. Coupled with **progressive KYC**, this approach allows users to gradually enhance their digital profiles, balancing inclusivity with security. Here’s why this model is effective:
 
@@ -52,7 +46,7 @@ The eSignet Signup Module’s **assurance model** is a cornerstone of its trust-
 
 Progressive KYC is an ideal starting point because it balances **inclusivity** with **trust**. It lowers barriers for users, especially in underserved communities, while providing relying parties with a scalable, compliant framework to verify identities as needed.
 
-### **How Signup Builds Trust**
+#### **How Signup Builds Trust**
 
 Beyond the assurance model, Signup enhances trust through several features:
 
@@ -62,7 +56,7 @@ Beyond the assurance model, Signup enhances trust through several features:
 
 These elements create a trustworthy ecosystem where users feel confident, and relying parties can rely on verified data to reduce fraud and streamline processes.
 
-### Summary
+#### Summary
 
 The **Signup Module** redefines how digital identities can be created—**independently, securely, and progressively**. It is built to:
 
@@ -72,42 +66,9 @@ The **Signup Module** redefines how digital identities can be created—**indepe
 * Function **independently or alongside eSignet**
 * Scale securely across different use cases and ecosystems
 
- The Signup Module is not just a form—it's a gateway to digital participation for millions who are otherwise left behind.
+The Signup Module is not just a form—it's a gateway to digital participation for millions who are otherwise left behind.
 
-# Documentation
+## Documentation
 
-* [Components](../develop/technology/components-signup-portal.md)
-* [Integration of the Signup portal with eSignet](../test/integration-guide-signup-portal/integration-with-esignet-portal.md)
-
-
-<!-- 
-
-Old Content
-
-## Overview <a href="#overview" id="overview"></a>
-
-The signup portal offers features for creating a user profile and a way to verify the data used to create it. The dataset in the profile can be used as a credential in eSignet. This enables a country to Fastrack and, at the same time, simplify the digital path of the end user.
-
-The user profile created via the signup portal is stored in an ID registry. The signup portal connects to the ID registry via a runtime plugin, making it completely flexible to use any kind of ID registry. The signup portal comes with an out-of-the-box MOSIP ID repository plugin.
-
-{% hint style="info" %}
-**Note:** The signup portal can also used with any existing ID registries only leveraging the eKYC verification feature.
-{% endhint %}
-
-1. **Signup Service**: This is the backend component that manages the registration logic. It supports the creation of new user accounts by processing user inputs, performing necessary validations, securely storing user data in the ID registry, and integrating with external systems as needed. The service is built with flexibility in mind, allowing it to connect seamlessly to any external ID registry system through a well-defined [Profile Registry Plugin](../../test/integration-guide-signup-portal/profile-registry-plugin.md).
-2. **Signup UI**: The Signup UI is the front-end component that provides a web-based interface for end users to submit their registration. To learn more about the Signup UI, please refer [here](https://docs.esignet.io/signup-portal/components#signup-ui).
-
-Together, the Signup Portal streamlines the user registration process, enabling new users to quickly gain access to digital services via eSignet.
-
-Currently, the Signup portal supports the following features:
-
-1. Register User
-2. Reset password
-3. Online video based identity verification workflow integration via plugin
-
-To know more about the components refer [here](../../develop/technology/components-signup-portal.md).
-
-To learn more about the integration of the Signup portal with eSignet please refer [here](../../test/integration-guide-signup-portal/integration-with-esignet-portal.md).
-
--->
-
+* [Components](../../develop/technology/components-signup-portal.md)
+* [Integration of the Signup portal with eSignet](../../test/integration-guide-signup-portal/integration-with-esignet-portal.md)
