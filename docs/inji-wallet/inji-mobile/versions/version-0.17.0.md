@@ -83,6 +83,7 @@ Below is the list of known issues. To read in detail, [click here](https://mosip
 
 | Jira Issue | Issue Description |
 |------------|-------------------|
+| [INJIMOB-3391](https://mosip.atlassian.net/browse/INJIMOB-3391) | New Wallet Nonce has to be created for each transaction. |
 | [INJIMOB-3288](https://mosip.atlassian.net/browse/INJIMOB-3288) | VCVerifier – `credentialStatus_Type` is empty; expected error is not valid. |
 | [INJIMOB-3285](https://mosip.atlassian.net/browse/INJIMOB-3285) | VCVerifier – `credentialStatus_ID` is empty; expected error is not valid. |
 | [INJIMOB-3276](https://mosip.atlassian.net/browse/INJIMOB-3276) | VCVerifier – Optional field `Evidence_ID` is empty; expected error is not valid. |
