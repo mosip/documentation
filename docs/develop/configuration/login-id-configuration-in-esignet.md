@@ -4,11 +4,11 @@ hidden: true
 
 # Login ID Configuration in eSignet
 
-The eSignet system introduces enhanced flexibility in configuring login ID types to better align with country-specific needs and business requirements. This allows implementers to tailor login experiences based on regional standards, supported ID types, and UI preferences.
+The eSignet system introduces enhanced flexibility in configuring login ID types to better align with country-specific needs and business requirements. This allows implementation teams to tailor login experiences based on regional standards, supported ID types, and UI preferences.
 
-### Overview
+## Overview
 
-eSignet now supports **dynamic configuration of login identifiers**, giving implementers the ability to:
+eSignet now supports **dynamic configuration of login identifiers**, giving implementation teams the ability to:
 
 * Enable or disable specific login types (e.g., Mobile Number, NRC ID, Email, VID).
 * Display country-specific prefixes dynamically.
@@ -16,16 +16,16 @@ eSignet now supports **dynamic configuration of login identifiers**, giving impl
 
 By default, **VID** is shown as the primary login ID. However, this can be extended and customized through configuration.
 
-### Country-Specific Configuration
+## Country-Specific Configuration
 
-Login options available to users can vary depending on the country or deployment region. For example:
+Login options available to users can vary depending on the country or deployment region. As for an example:
 
 * A **Mobile Number** login can display country-specific prefixes like +91 (India), +855 (Cambodia), or +1 (USA).
 * These prefixes are shown dynamically in the UI based on the selected login ID type.
 
 This ensures a localized and intuitive login experience for users around the world.
 
-### SVG Icon Configuration
+## SVG Icon Configuration
 
 Each login ID type can be associated with a **custom SVG icon** that visually represents the identifier in the login interface.
 

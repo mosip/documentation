@@ -6,7 +6,7 @@ hidden: true
 
 This guide helps the developers of the relying party to get started with their development environment.
 
-#### Pre-requisites <a href="#pre-requisites" id="pre-requisites"></a>
+## Pre-requisites
 
 **Setup your development machine:**
 
@@ -21,15 +21,15 @@ This guide helps the developers of the relying party to get started with their d
 
 * Design your callback API. The callback API is redirected by eSignet over the user's browser upon successful / failed authentication. As best practice, please ensure the callback API can render the UX as soon as possible, so the user is aware of the progress. Please note that the user is redirected on both success and failure authentication. On failure, the user will be redirected with an error code and without an authorization code. So, based on the authentication response relying party portal needs to take the necessary action before allowing the user to move forward.
 
-### Onboarding Your Relying Party (RP) as an OIDC Client with an ID Provider <a href="#onboarding-your-relying-party-rp-as-an-oidc-client-with-an-id-provider" id="onboarding-your-relying-party-rp-as-an-oidc-client-with-an-id-provider"></a>
+## Onboarding Your Relying Party (RP) as an OIDC Client with an ID Provider
 
 To onboard your application or service as an OpenID Connect (OIDC) client with an Identity Provider (IDP) such as eSignet, follow the steps below. These steps ensure that your RP is registered correctly and can request user authentication and claims securely.
 
-#### 1. Prepare Your Public Key <a href="#id-1.-prepare-your-public-key" id="id-1.-prepare-your-public-key"></a>
+## 1. Prepare Your Public Key
 
 Before registration, generate a key pair and have your **public key** ready. This public key will be shared with the ID provider to establish trust and enable secure communication.
 
-#### 2. Request Client Registration <a href="#id-2.-request-client-registration" id="id-2.-request-client-registration"></a>
+## 2. Request Client Registration
 
 Contact the eSignet provider (or relevant ID provider) and provide the following details:
 
@@ -39,7 +39,7 @@ Contact the eSignet provider (or relevant ID provider) and provide the following
   * Clearly indicate **mandatory** vs. **optional** claims.
   * Claim values and formats can be referenced from the eSignet `.well-known` configuration endpoint.
 
-#### 3. Submit Application Branding <a href="#id-3.-submit-application-branding" id="id-3.-submit-application-branding"></a>
+## 3. Submit Application Branding
 
 To provide a seamless user experience, submit the following for display during authentication:
 
@@ -48,7 +48,7 @@ To provide a seamless user experience, submit the following for display during a
 
 These visuals will appear on the eSignet authentication and consent pages.
 
-#### 4. Define Callback URLs (Redirect URIs) <a href="#id-4.-define-callback-urls-redirect-uris" id="id-4.-define-callback-urls-redirect-uris"></a>
+## 4. Define Callback URLs (Redirect URIs)
 
 Specify the redirect URIs that the ID provider will use to return authentication responses. For development and QA environments, use the following patterns:
 
@@ -59,7 +59,7 @@ Specify the redirect URIs that the ID provider will use to return authentication
 * `http://<your-server-ip>:<portnumber>/*`
 * `my.phone.app://oauth/*` (For mobile apps with deep linking)
 
-> ⚠️ _Wildcard patterns (_`*`_) are acceptable for development but **should be avoided in production** due to security risks._
+Wildcard patterns (_`*`_) are acceptable for development but **should be avoided in production** due to security risks._
 
 **Unsupported URL Patterns:**
 
@@ -69,10 +69,10 @@ Specify the redirect URIs that the ID provider will use to return authentication
 * `https://domain*`
 * `residentapp://*`
 
-#### 5. Await Client ID <a href="#id-5.-await-client-id" id="id-5.-await-client-id"></a>
+## 5. Await Client ID
 
 Once the required information is submitted, the ID provider will process your registration and issue a **Client ID**. This ID will uniquely identify your application in all future authentication requests.
 
-#### 6. Be Aware of Additional Requirements <a href="#id-6.-be-aware-of-additional-requirements" id="id-6.-be-aware-of-additional-requirements"></a>
+## 6. Be Aware of Additional Requirements
 
 Some eSignet providers may have **non-technical onboarding requirements** (e.g., legal agreements, privacy policies, business verification). These are outside the scope of this document and should be discussed directly with the provider.

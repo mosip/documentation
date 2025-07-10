@@ -2,27 +2,27 @@
 
 The eSignet Sign-Up Service provides a secure, user-friendly, and standards-based platform for user onboarding and identity verification. It is designed to support a wide range of use cases—from basic account creation to high-assurance identity verification making it suitable for both public and private sector services.
 
-### User Profile Creation
+## User Profile Creation
 
-eSignet offers multiple ways to create a user profile, based on the level of assurance and regulatory requirements of the relying party: \<!-- multiple or several and isn't it more inclined towards progressively adding upon the profile?>
+eSignet offers multiple ways to incrementally create a user profile, based on the level of assurance and regulatory requirements of the relying party: \<!-- multiple or several and isn't it more inclined towards progressively adding upon the profile?>
 
-#### 1. KYC with Minimum Details
+### 1. KYC with Minimum Details
 
 Users can sign up by providing basic personal information, validated against national ID systems like MOSIP. This allows for quick onboarding with foundational identity assurance.
 
-#### 2. Video eKYC
+### 2. Video eKYC
 
 For services that require stronger verification, users can complete a **video-based KYC** process as part of the sign-up. This step is initiated automatically upon the user’s **first login** after registration, ensuring that identity is verified in real time through secure video interaction.
 
-#### 3. Create Profile with Password
+### 3. Create Profile with Password
 
 Users have the option to create a traditional username/password profile. This supports both identity-linked and standalone account creation, depending on the integration setup.
 
-#### 4. Reset Password
+### 4. Reset Password
 
 eSignet includes a secure password reset flow, ensuring users can easily recover access to their accounts while maintaining identity integrity and system security.
 
-### Identity Assurance Flow (eKYC Verification)
+## Identity Assurance Flow (eKYC Verification)
 
 For regulated industries such as **banking, insurance, and digital governance**, eSignet singup supports a robust 'Identity Assurance Flow' that offers **high-confidence verification at login**.
 
@@ -37,7 +37,7 @@ This flow includes:
 
 This ensures that only verified individuals gain access to sensitive services, reducing fraud and enhancing compliance with national and international regulatory standards.
 
-### Powered by OpenID Connect Assurance Extension
+## Powered by OpenID Connect Assurance Extension
 
 The eSignet Sign-Up and Identity Assurance processes are built on the **OpenID Connect (OIDC) Assurance Extension**, which enhances the trustworthiness of identity claims.
 
