@@ -76,8 +76,8 @@ The **Signup Module** redefines how digital identities can be created—**indepe
 
 # Documentation
 
-* [components](develop/technology/components-signup-portal)
-* [Integration of the Signup portal with eSignet](test/integration-guide-signup-portal/integration-with-esignet-portal).
+* [Components](../develop/technology/components-signup-portal)
+* [Integration of the Signup portal with eSignet](../test/integration-guide-signup-portal/integration-with-esignet-portal)
 
 
 
