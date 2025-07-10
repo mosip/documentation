@@ -80,8 +80,6 @@ The **Signup Module** redefines how digital identities can be created—**indepe
 * [Integration of the Signup portal with eSignet](../test/integration-guide-signup-portal/integration-with-esignet-portal.md)
 
 
-
-
 <!-- 
 
 Old Content
