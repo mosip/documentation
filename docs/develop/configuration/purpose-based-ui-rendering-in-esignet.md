@@ -6,7 +6,7 @@ hidden: true
 
 eSignet now supports **dynamic UI rendering based on the purpose defined** by the relying party (client) during client registration. This enhancement ensures that the user experience is tailored and context-aware across different workflows such as **Login**, **Verify**, or **Link**.
 
-### Why Purpose-Based Rendering?
+## Why Purpose-Based Rendering?
 
 Different service interactions require different messaging and UI contexts. For instance:
 
@@ -16,11 +16,11 @@ Different service interactions require different messaging and UI contexts. For 
 
 With this feature, eSignet dynamically adjusts the **UI text and flow** based on the configured purpose, providing users with a more intuitive and relevant experience.
 
-### How It Works
+## How It Works
 
 During **client registration**, the relying party defines the intended purpose for the authentication request. Based on this configuration, eSignet dynamically renders the login interface accordingly.
 
-#### Configuration Parameters
+### Configuration Parameters
 
 | Parameter        | Type   | Description                                                                           |
 | ---------------- | ------ | ------------------------------------------------------------------------------------- |
@@ -30,7 +30,7 @@ During **client registration**, the relying party defines the intended purpose f
 
 ***
 
-#### Valid Values for purpose.type
+### Valid Values for purpose.type
 
 * login – Default login interface
 * verify – Verification flow (e.g., claim validation)
@@ -41,7 +41,7 @@ During **client registration**, the relying party defines the intended purpose f
 Note: If the purpose.type is **missing or invalid**, the system **defaults to** login **behavior**.
 {% endhint %}
 
-#### Internationalization Support
+### Internationalization Support
 
 The title and subTitle fields support **language-specific values** using locale keys. For example:
 
@@ -77,4 +77,4 @@ With purpose-based UI rendering, eSignet enables:
 * Clear context provided via customizable titles and subtitles
 * Seamless integration using OIDC request payloads
 
-This feature is especially valuable for deployments with multiple service touchpoints that require tailored messaging across workflows.
+This feature is especially valuable for deployments with multiple service touch points that require tailored messaging across workflows.
