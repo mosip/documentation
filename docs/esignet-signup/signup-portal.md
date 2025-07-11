@@ -1,5 +1,6 @@
 ---
 description: Simplifying user registration and identity verification.
+hidden: true
 ---
 
 # Signup Portal
