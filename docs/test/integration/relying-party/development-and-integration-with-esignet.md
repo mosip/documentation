@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Development and Integration with eSignet
 
 #### Development of Relying party application

@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Relying Party Onboarding
 
 This guide helps the developers of the relying party to get started with their development environment.
@@ -59,7 +55,7 @@ Specify the redirect URIs that the ID provider will use to return authentication
 * `http://<your-server-ip>:<portnumber>/*`
 * `my.phone.app://oauth/*` (For mobile apps with deep linking)
 
-Wildcard patterns (_`*`_) are acceptable for development but **should be avoided in production** due to security risks._
+Wildcard patterns (_`*`_) are acceptable for development but **should be avoided in production** due to security risks.\_
 
 **Unsupported URL Patterns:**
 
