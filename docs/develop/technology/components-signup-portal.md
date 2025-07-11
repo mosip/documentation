@@ -4,11 +4,11 @@ The image below is a block diagram of the sign up portal comprising various comp
 
 <figure><img src="../../.gitbook/assets/signup_components.png" alt=""><figcaption><p>Signup components</p></figcaption></figure>
 
-#### **Signup UI** <a href="#signup-ui" id="signup-ui"></a>
+## **Signup UI**
 
 This is the user interface component of the Signup portal is developed using React JS. Its main functionality is to handle user registration and eKYC verification. Signup UI seamlessly integrates with the UI REST endpoints provided by the signup service. The Signup UI supports multiple languages. Signup UI verifies the OTP before the user registration. A notable feature added in the signup UI is to carry out video-based eKYC verification.
 
-#### Signup Service <a href="#signup-service" id="signup-service"></a>
+## Signup Service
 
 This service is the primary backend spring Java application that incorporates various layers.
 
@@ -25,11 +25,11 @@ This service is the primary backend spring Java application that incorporates va
 **Note**: All plugin interfaces are defined in the [signup-integration-api](https://github.com/mosip/esignet-signup/tree/master/signup-integration-api) module.
 {% endhint %}
 
-#### eKYC Verifiers <a href="#ekyc-verifiers" id="ekyc-verifiers"></a>
+## eKYC Verifiers
 
 Trusted claim providers are authorized(depending on policies and regulations) to carry out an identity verification process in which the user is asked to provide proof and prove legitimacy concerning the user's account.
 
-#### ID Registry: <a href="#id-registry" id="id-registry"></a>
+## ID Registry
 
 An ID Registry is a system or database that stores and manages identity information about individuals or entities. An ID Registry is a critical part of digital identity management, acting as a centralized repository for authenticating and verifying the identity of users.\
 In the context of the Signup Portal, the ID Registry could refer to any external system or service that stores user identity information. When a user registers, the Signup Service may interact with an ID registry to validate and store details like the user’s email, phone number, or even government-issued ID, ensuring that the identity is legitimate and unique.

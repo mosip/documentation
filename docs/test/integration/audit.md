@@ -1,5 +1,22 @@
 # Audit Plugin
 
+<!-- 
+Content Update:
+Edited: 27-Jun-2025
+
+-->
+
+The audit plugin interface provides two methods to audit any action in eSignet. An instance of this audit plugin is injected into all the services of eSignet, and almost all the events are audited using this plugin.
+
+For eSignet Audit Interface refer to the link below:
+
+https://github.com/mosip/esignet/blob/master/esignet-integration-api/src/main/java/io/mosip/esignet/api/spi/AuditPlugin.java
+
+
+
+
+<!--
+
 The audit plugin interface provides two methods to audit any action in eSignet. An instance of this audit plugin is injected into all the services of eSignet, and almost all the events are audited using this plugin.
 
 Below is the eSignet audit interface:
@@ -48,17 +65,6 @@ public class LoggerAuditService implements AuditPlugin {
     //Implement audit plugin methods
 }
 ```
-
-
-<!-- 
-Content Update:
-Edited: 27-Jun-2025
-
-The audit plugin interface provides two methods to audit any action in eSignet. An instance of this audit plugin is injected into all the services of eSignet, and almost all the events are audited using this plugin.
-
-For eSignet Audit Interface refer to the link below:
-
-https://github.com/mosip/esignet/blob/master/esignet-integration-api/src/main/java/io/mosip/esignet/api/spi/AuditPlugin.java
 
 
 -->
