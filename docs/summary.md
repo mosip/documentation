@@ -2,6 +2,7 @@
 
 * [Overview](README.md)
 * [Releases](versions.md)
+  * [Version 1.4.3](versions/version-1.4.3.md)
   * [Version 1.4.2](versions/version-1.4.2.md)
   * [Version 1.4.1](versions/version-1.4.1.md)
   * [Version 1.4.0](versions/version-1.4.0/README.md)
