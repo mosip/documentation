@@ -45,4 +45,4 @@ To utilize the wallet with a secured credential for authentication, users are re
 
 The diagram below illustrates the process of wallet local authentication in eSignet through the use of a digital wallet.
 
-<figure><img src="../../../.gitbook/assets/activity-diagrams-wallet-authentication.png" alt=""><figcaption><p>Wallet Local Authentication</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/activity-diagrams-wallet-authentication.png" alt=""><figcaption><p>Wallet Local Authentication</p></figcaption></figure>

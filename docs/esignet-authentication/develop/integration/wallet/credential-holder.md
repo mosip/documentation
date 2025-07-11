@@ -4,7 +4,7 @@ A digital wallet that aims to function as a credential holder application in eSi
 
 The sequence diagram below illustrates the steps involved in the authorization code flow that are required for downloading a verified credential.
 
-<figure><img src="../../../.gitbook/assets/auth-code-flow.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/auth-code-flow.png" alt=""><figcaption></figcaption></figure>
 
 **Note**:
 
@@ -28,19 +28,13 @@ eSignet adheres to the OpenID4VCI wallet-initiated flow. Consequently, after aut
 
 The wallet can utilize the eSignet client management APIs to formally register as an OAuth client and obtain the necessary client credentials. This will facilitate their connection with eSignet.
 
-<!-- Put the OpenAPI EndPoint Link and fix -->
-
-To register the client in our Sandbox environment, click [here](../../try-it-out/).
+To register the client in our Sandbox environment, click [here](../../../test/try-it-out/).
 
 ### **Authorization Code flow**
 
 #### 1. Call the authorized endpoint
 
 In order to initiate the credential issuance flow, the credential holder needs to authenticate and provide consent. Hence, the wallet needs to create a button to initiate authentication using eSignet by calling the "_**/authorize**_" endpoint.
-
-<!-- Put the OpenAPI EndPoint Link and fix -->
-
-
 
 This process would redirect the user to a web view of eSignet's authentication screen. In this screen, the user will need to authenticate their identity and give consent to share their credentials.
 
@@ -49,8 +43,6 @@ Upon successful authentication and consent, the authorization code will be sent 
 #### 2. Retrieving the access token and c\_nonce
 
 The wallet app now needs to extract the authorization code (auth-code) parameter in the redirected deep link and exchange the **authorization code** to get the **access token and c\_nonce** from the eSignet server.
-
-<!-- Put the OpenAPI EndPoint Link and fix -->
 
 {% hint style="info" %}
 Many OAuth 2.0 client libraries are available in most programming languages to perform this action.

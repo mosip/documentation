@@ -73,7 +73,7 @@ Please take a moment to watch the video below to explore valuable insights into 
 
 ## Documentation
 
-* [Technology Stack](../develop/technology/technology-stack.md)
-* [Components](../develop/technology/components.md)
-* [Try It Out](../test/try-it-out/)
-* [Integrate with eSignet](../test/try-it-out/integrate-with-e-signet.md)
+* [Technology Stack](technology-stack.md)
+* [Components](../esignet-authentication/develop/technology/components.md)
+* [Try It Out](../esignet-authentication/test/try-it-out/)
+* [Integrate with eSignet](../esignet-authentication/test/try-it-out/integrate-with-e-signet.md)

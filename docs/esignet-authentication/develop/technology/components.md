@@ -6,7 +6,7 @@ description: Connecting secure components for seamless identity verification.
 
 The image below represents a **block diagram of eSignet**, illustrating various **components, layers, and external systems** that work together to provide secure identity verification.
 
-<figure><img src="../../.gitbook/assets/eSignet_components.png" alt=""><figcaption><p>eSignet Components</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/eSignet_components.png" alt=""><figcaption><p>eSignet Components</p></figcaption></figure>
 
 ### eSignet Components
 
@@ -38,9 +38,9 @@ This is the user interface component of eSignet, developed using React JS. Its m
 {% hint style="info" %}
 **Note:** Here are a few frequently asked questions on the eSignet UI.
 
-* [How to enable multiple digital wallet support for authentication?](../../general/faq.md#how-to-integrate-wallets-with-esignet-to-provide-wallet-based-authentication)
-* [How to configure the expected quality score, timeouts, and number of bio attributes to be captured?](../../general/faq.md#how-to-configure-the-expected-quality-score-timeouts-and-number-of-biometric-attributes-to-be-captur)
-* [How to enable or disable the captcha?](../../general/faq.md#how-to-enable-or-disable-the-captcha-in-esignet-ui)
+* [How to enable multiple digital wallet support for authentication?](../../../general/faq.md#how-to-integrate-wallets-with-esignet-to-provide-wallet-based-authentication)
+* [How to configure the expected quality score, timeouts, and number of bio attributes to be captured?](../../../general/faq.md#how-to-configure-the-expected-quality-score-timeouts-and-number-of-biometric-attributes-to-be-captur)
+* [How to enable or disable the captcha?](../../../general/faq.md#how-to-enable-or-disable-the-captcha-in-esignet-ui)
 {% endhint %}
 
 ### **eSignet Service**
@@ -67,7 +67,7 @@ All plugin interfaces are defined in the [esignet-integration-api](https://githu
 
 ### Sign up Portal
 
-The [SignUp portal](../../overview/features/signup-portal.md) provides a user-friendly registration interface that allows users to securely create and manage accounts.
+The [SignUp portal](../../../esignet-signup/signup-portal.md) provides a user-friendly registration interface that allows users to securely create and manage accounts.
 
 ### **Identification System (ID system)**
 

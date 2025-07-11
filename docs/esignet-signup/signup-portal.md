@@ -70,5 +70,5 @@ The Signup Module is not just a form—it's a gateway to digital participation f
 
 ## Documentation
 
-* [Components](../../develop/technology/components-signup-portal.md)
-* [Integration of the Signup portal with eSignet](../../test/integration-guide-signup-portal/integration-with-esignet-portal.md)
+* [Components](../esignet-authentication/develop/technology/components-signup-portal.md)
+* [Integration of the Signup portal with eSignet](integration-guide-signup-portal/integration-with-esignet-portal.md)

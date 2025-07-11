@@ -48,7 +48,7 @@ Not&#x65;**:** For the latest version of the interface please check our code bas
 
 ## Who uses this interface?
 
-The APIs exposed by this interface are used by [Digital Wallets](../../general/glossary.md#digital-id-wallet) to perform wallet binding while it is implemented by [Identity Systems](../../general/glossary.md#identity-systems).
+The APIs exposed by this interface are used by [Digital Wallets](../../../general/glossary.md#digital-id-wallet) to perform wallet binding while it is implemented by [Identity Systems](../../../general/glossary.md#identity-systems).
 
 ## How to implement this plugin?
 
@@ -69,7 +69,7 @@ public class MockKeyBindingWrapperService implements KeyBinder {
 
 The **Key Binding** functionality is depicted in the diagram below:
 
-<figure><img src="../../.gitbook/assets/activity-diagrams-wallet-binding (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/activity-diagrams-wallet-binding (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Here, the Binding Partner is nothing but the wallet backend service.

@@ -4,7 +4,7 @@ The Authenticator plugin is the main interface for eSignet, which provides metho
 
 The two main functionalities of the authenticator interface, **KYC Auth** and **KYC Exchange,** are depicted in the below diagram
 
-<figure><img src="../../.gitbook/assets/activity-diagrams-authenticator (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/activity-diagrams-authenticator (1).png" alt=""><figcaption></figcaption></figure>
 
 For eSignet Authentication Interface refer to the link below:
 
@@ -12,20 +12,15 @@ For eSignet Authentication Interface refer to the link below:
 
 ## Who should implement the Authenticator plugin interface?
 
-The authenticator plugin is implemented by [Identity Systems](../../general/glossary.md#identity-systems), which wishes to integrate with eSignet to leverage the digital usage of identities.
+The authenticator plugin is implemented by [Identity Systems](../../../general/glossary.md#identity-systems), which wishes to integrate with eSignet to leverage the digital usage of identities.
 
 An Identity system can be as simple as a table in a database or an Excel file storing user identity data or it can be a complex Identity System.
 
-
-
-Below is an example of how our [mock-plugin](https://github.com/mosip/esignet-plugins/blob/master/mock-plugin/src/main/java/io/mosip/esignet/plugin/mock/service/MockAuthenticationService.java) has implemented the eSignet Authenticator plugin to integrate eSignet with mock-identity-system. 
-
-<!-- Can we display the content from the embedded mock-plugin link? If not, then we should copy the content from the embedded link in the example code block -->
+Below is an example of how our [mock-plugin](https://github.com/mosip/esignet-plugins/blob/master/mock-plugin/src/main/java/io/mosip/esignet/plugin/mock/service/MockAuthenticationService.java) has implemented the eSignet Authenticator plugin to integrate eSignet with mock-identity-system.
 
 Also, look at the [MOSIP plugin](https://github.com/mosip/esignet-plugins/blob/master/mosip-identity-plugin/src/main/java/io/mosip/esignet/plugin/mosipid/service/IdaAuthenticatorImpl.java) implemented to integrate eSignet with the MOSIP identity system.
 
 It is expected to throw either KycAuthException or KycExchangeException with an appropriate error code, instead of returning null or empty responses.
-
 
 Method to fetch KYC signing certificates: KYC data returned in the KYCExchange method can either be a simple signed JWT or a JWE.
 
@@ -40,6 +35,3 @@ throws KycSigningCertificateException {
 
 }
 ```
-
-
-

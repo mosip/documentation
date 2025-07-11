@@ -4,9 +4,9 @@ While you want to explore eSignet, you can use the following test personas in ou
 
 ## Personas
 
-![](../../.gitbook/assets/maria-powell.png) ![](../../.gitbook/assets/james-rodrigious.png)
+![](../../../.gitbook/assets/maria-powell.png) ![](../../../.gitbook/assets/james-rodrigious.png)
 
-![](../../.gitbook/assets/george-cooper.png) ![](../../.gitbook/assets/jane-thompson.png)
+![](../../../.gitbook/assets/george-cooper.png) ![](../../../.gitbook/assets/jane-thompson.png)
 
 
 
