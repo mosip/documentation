@@ -20,7 +20,7 @@ With this release, we support the login flow for the following authentication fa
 3. [Login flow for Biometrics based authentication](health-portal/login-with-biometrics.md)
 4. [Login flow with QR code (Inji)](health-portal/login-with-qr-code.md)
 5. [Knowledge Based Identification](health-portal/knowledge-based-authentication.md)
-6. [Sign up and Login with OTP for Verified Claims](health-portal/signup-and-login-with-otp-for-verified-claims.md)
+6. [Sign up and Login with OTP for Verified Claims](../../../esignet-signup/end-user-guide/signup-and-login-with-otp-for-verified-claims.md)
 
 > Note: The screenshots and the steps mentioned in each of the flows are for demonstration purpose only and are likely to change based on the use case.
 
