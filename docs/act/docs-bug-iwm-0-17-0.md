@@ -33,16 +33,37 @@
 
     - Refer to Maven Central instead of the snapshot
 
+    keshav - here? - https://central.sonatype.com/artifact/io.mosip/secure-keystore
+
 2.  <https://docs.inji.io/inji-wallet/inji-mobile/technical-overview/integration-guide/secure-keystore#android-kotlin>
 
     - Remove this
       maven(\"<https://oss.sonatype.org/content/repositories/snapshots/>\")
+
+      Keshav - Whole line from the code?
+
+      Add the following in your `settings.gradle.kts`:
+
+```kotlin
+dependencyResolutionManagement {
+  repositories {
+    google()
+    mavenCentral()
+    maven("https://oss.sonatype.org/content/repositories/snapshots/")
+  }
+}
+```
+
+
 
 **VCI Client**
 
 1.  <https://docs.inji.io/inji-wallet/inji-mobile/technical-overview/integration-guide/vci-client#android-kotlin-package-for-vci-client>
 
     - Refer to Maven Central instead of the snapshot
+
+    keshav - here? - https://central.sonatype.com/artifact/io.mosip/secure-keystore
+
 
 2.  Add a link for example folder
     <https://docs.inji.io/inji-wallet/inji-mobile/technical-overview/integration-guide/vci-client#more-details>
@@ -53,13 +74,24 @@
     - for ios
       <https://github.com/mosip/inji-vci-client-ios-swift/tree/master/SwiftExample>
 
+Keshav - To add the above links below this line - "More details - An example app is added under /example folder which can be referenced for more details."
+
+
 3.  APIs and Exception sections can be combined, as we have maintained
     the same in both Android and iOS. It\'s redundant right now
+
+
+
 
 **Tuvali**
 
 1.  Maven Central link update -
     <https://central.sonatype.com/artifact/io.mosip/tuvali>
+
+Keshav -
+
+Only for this line? , "tuvali contains the artefacts in maven."
+
 
 **OpenId4VP**
 
