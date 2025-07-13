@@ -6,7 +6,7 @@ Inji Mobile is an open-source digital wallet designed to enable individuals to r
 
 Inji Wallet makes it easy and secure for residents to manage their digital identity and credentials. From downloading and verifying to sharing and backing up Verifiable Credentials (VCs), this guide outlines all key features and workflows available in the wallet.
 
-### 1. Downloading Verifiable Credentials
+### Downloading Verifiable Credentials
 
 #### OpenID for VC Issuance
 
