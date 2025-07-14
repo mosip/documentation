@@ -11,9 +11,6 @@ Reviewed and Edited: 13-14 July 2025
 # Overviews
 Inji  is a verifiable credentialing stack that provides a way to share tamper-proof, instantly verifiable data which is cryptographically signed by a trusted issuer, and users can store them securely on their devices or browsers and share them when needed.
 
-# Inji's "Triangle of Trust" with Verifiable Credentials
-The VC model operates on a "triangle of trust" involving three main roles:
-
 * **Issuer**: The entity that issues the credential and makes claims about the subject (e.g., a university issuing a degree, a government issuing a passport, an employer issuing a work permit). The issuer cryptographically signs the VC. Inji's 'Issuance-module' is called [Inji Certify](./inji-certify/overview/README.md).
 * **Holder**: The individual or entity which possesses the credential (e.g., the student with the degree, the citizen with the passport, the employee with the work permit). The holder stores and manages their VCs. Inji's 'Holder-module' is called [Inji Wallet](./inji-wallet/inji-mobile/README.md).
 * **Verifier**: The entity that requests and verifies the credential to confirm a claim (e.g., an employer checking a degree, a border agent checking a passport, a landlord checking a work permit). The verifier checks the cryptographic proofs to ensure the VC's authenticity and integrity. [Inji Verify](./inji-verify/overview/README.md).
