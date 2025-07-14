@@ -74,13 +74,15 @@ Manages rules, schemas, and compliance:
 * Assurance levels for ecosystem participants
 
 # Real-World Applications
-Healthcare: Immunization records, medical certification
-Education: Degrees, training certificates, and learning records
-Social Welfare: Benefit eligibility, ration cards
-Finance: KYC credentials, account onboarding
-Mobility: Driving licenses, transportation passes
-Employment: Job credentials, background checks
-Many more……….
+| Domain        | Example Applications                                 |
+|---------------|-----------------------------------------------------|
+| Healthcare    | Immunization records, medical certifications        |
+| Education     | Degrees, training certificates, learning records    |
+| Social Welfare| Benefit eligibility, ration cards                   |
+| Finance       | KYC credentials, account onboarding                 |
+| Mobility      | Driving licenses, transportation passes             |
+| Employment    | Job credentials, background checks                  |
+| Others        | Many more                                           |
 
 # Interoperability and Standards
 Inji follows widely adopted open standards, ensuring flexibility and long-term sustainability:
