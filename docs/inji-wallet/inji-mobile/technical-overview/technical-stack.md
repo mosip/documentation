@@ -2,28 +2,22 @@
 
 ## Wallet Application
 
-This section intends to provide an overview of the technologies, tools and frameworks utilized to build Inji Wallet:
+The following table summarizes the main technologies, tools, and frameworks used to build the Inji Wallet application:
 
-<table>
-<thead><tr><th>Tool / Technology</th><th>Version</th><th width="603">Description</th><th>License</th></tr></thead>
-<tbody>
-<tr><td><a href="https://reactnative.dev/">React Native</a></td><td>0.71.8</td><td>It brings the best parts of developing with React to native development. It's a best-in-class JavaScript library for building user interfaces.</td><td><a href="https://github.com/facebook/react/blob/main/LICENSE">MIT License</a></td></tr>
-<tr><td><a href="https://www.typescriptlang.org/">TypeScript</a></td><td>4.9.5</td><td>A strongly typed programming language that builds on JavaScript and uses <strong>type inference</strong> to give great tooling without additional code.</td><td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache-2.0 License</a></td></tr>
-<tr><td><a href="https://jestjs.io/docs/tutorial-react">Jest</a></td><td>29.5.11</td><td>Jest is <strong>a well-known JavaScript testing framework</strong> and is extensively used to test React applications</td><td><a href="https://github.com/facebook/react/blob/main/LICENSE">MIT License</a></td></tr>
-<tr><td><a href="https://developer.android.com/">Android</a></td><td>minSDK 24 <br>compileSDK 24 <br>targetSDK 34</td><td>Android is a mobile operating system based on a modified version of the Linux kernel and other open-source software, designed primarily for touchscreen mobile devices. This is used to build the application for running on Android devices</td><td></td></tr>
-<tr><td><a href="https://developer.apple.com/ios/">iOS</a></td><td>13.4</td><td>iOS is a mobile operating system developed by Apple exclusively for its smartphones. Swift is a high-level general-purpose, multi-paradigm, compiled programming language created to develop on iOS.</td><td></td></tr>
-</tbody>
-</table>
+| Tool / Technology | Version | Description | License |
+|-------------------|---------|-------------|---------|
+| [React Native](https://reactnative.dev/) | 0.74.5 | JavaScript framework for building native mobile apps using React. | [MIT License](https://github.com/facebook/react/blob/main/LICENSE) |
+| [TypeScript](https://www.typescriptlang.org/) | 5.3.3 | Strongly typed language that builds on JavaScript, enabling static type checking and improved tooling. | [Apache-2.0 License](https://www.apache.org/licenses/LICENSE-2.0) |
+| [Jest](https://jestjs.io/docs/tutorial-react) | 29.7.0 | JavaScript testing framework, commonly used for React applications. | [MIT License](https://github.com/facebook/react/blob/main/LICENSE) |
+| [Android](https://developer.android.com/) | minSDk 24 compileSDK 34 targetSDK 34 | Mobile OS based on Linux kernel, used for building and running the app on Android devices. |  |
+| [iOS](https://developer.apple.com/ios/) | 14 | Mobile OS developed by Apple for its devices. Swift is used for iOS development. |  |
 
 ## Native Libraries
 
-This section intends to provide an overview of the technologies, tools and frameworks utilized to build native libraries:
+The following table lists the technologies, tools, and frameworks used for building native libraries:
 
-<table>
-<thead><tr><th>Tool / Technology</th><th>Version</th><th width="603">Description</th><th>License</th></tr></thead>
-<tbody>
-<tr><td><a href="https://kotlinlang.org/">Kotlin</a></td><td>2.0.0 <br> Java 17</td><td>Kotlin is a modern statically typed programming language</td><td></td></tr>
-<tr><td><a href="https://developer.android.com/">Android</a></td><td>minSDK 23 <br>compileSDK 33</td><td>Android is a mobile operating system based on a modified version of the Linux kernel and other open-source software, designed primarily for touchscreen mobile devices. This is used to build the application for running on Android devices</td><td></td></tr>
-<tr><td><a href="https://developer.apple.com/ios/">iOS</a></td><td>13.4</td><td>iOS is a mobile operating system developed by Apple exclusively for its smartphones. Swift is a high-level general-purpose, multi-paradigm, compiled programming language created to develop on iOS.</td><td></td></tr>
-</tbody>
-</table>
+| Tool / Technology | Version | Description | License |
+|-------------------|---------|-------------|---------|
+| [Kotlin](https://kotlinlang.org/) | 2.0.0<br>Java 17 | Modern statically typed programming language. |  |
+| [Android](https://developer.android.com/) | minSDk 23 compileSDK 34 | Mobile OS based on a modified Linux kernel and open-source software, designed for touchscreen devices. Used to build the app for Android devices. |  |
+| [iOS](https://developer.apple.com/ios/) | 14 | Mobile OS developed by Apple for smartphones. Swift is used for iOS development. |  |

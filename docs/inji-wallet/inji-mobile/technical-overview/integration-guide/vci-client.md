@@ -17,7 +17,7 @@ Below sections details on the steps for integrating the Kotlin and Swift package
 ### Repository
 
 * inji-vci-client repo is [here](https://github.com/mosip/inji-vci-client)
-* * Maven snapshots available [here](https://repo1.maven.org/maven2/io/mosip/inji-vci-client/)
+* * Maven snapshots available [here](https://central.sonatype.com/artifact/io.mosip/secure-keystore)
 
 ### Installation
 
@@ -59,6 +59,9 @@ val credentialResponse: CredentialResponse? = VCIClient().requestCredential(
 ### **More details**
 
 An example app is added under /example folder which can be referenced for more details.
+
+* For kotlin refer [here](https://github.com/mosip/inji-vci-client/tree/master/kotlin/example)
+* For ios refer [here](https://github.com/mosip/inji-vci-client-ios-swift/tree/master/SwiftExample)
 
 ## iOS: Swift package for vci-client:
 
