@@ -1,8 +1,12 @@
+---
+hidden: true
+---
+
 # Test Report
 
 ## Testing Scope
 
-The scope of testing is to verify fitment to the specification from the perspective of&#x20;
+The scope of testing is to verify fitment to the specification from the perspective of
 
 * Functionality
 * Deployability
@@ -31,6 +35,7 @@ For regression check, “MOSIP Test Rig” - an automation testing suite - which
 Verification is performed on various configurations as mentioned below
 
 Default configuration -
+
 * eSignet with 7 languages (English/Khmer/Hindi/Kannada/Tamil/Arabic/French)
 * Signup with 2 languages (Khmer/English)
 
@@ -68,32 +73,31 @@ Docker Compose testing for eSignet and signup (windows, Linux and Mac)
 
 ## Feature Health
 
-![](../../../.gitbook/assets/es-1.6.0-feature-health.md)
+\[Image]
 
-## Test execution statistics 
+## Test execution statistics
 
-## Functional test results 
+## Functional test results
 
 Below are the test metrics by performing functional testing using mock MDS, mock Auth and mock ABIS. The process followed was black box testing which based its test cases on the specifications of the software component under test. The functional tests were performed in combination of individual module testing as well as integration testing. Test data were prepared in line with the user stories. Expected results were monitored by examining the user interface. The coverage includes GUI testing, System testing, End-To-End flows across multiple languages and configurations. The testing cycle included simulation of multiple identity schema and respective UI schema configurations.
-
 
 <table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Total</td><td valign="top">Passed</td><td valign="top">Failed</td><td valign="top">Skipped</td></tr><tr><td valign="top">3183</td><td valign="top">3110</td><td valign="top">38</td><td valign="top">35</td></tr><tr><td valign="top">Test Rate: 98% with Pass rate: 98%</td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
 
 Here is the detailed breakdown:
 
-<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th></th></tr></thead><tbody><tr><td valign="top"> </td><td valign="top">Test cases</td><td></td></tr><tr><td valign="top"><p> </p><p> </p><p>API Based Testing - eSignet</p></td><td valign="top">Total</td><td>2017</td></tr><tr><td valign="top">Passed</td><td valign="top">1962</td><td></td></tr><tr><td valign="top">Failed</td><td valign="top">20</td><td></td></tr><tr><td valign="top">Skipped</td><td valign="top">35</td><td></td></tr><tr><td valign="top"><p> </p><p> </p><p>UI Based Testing</p><p> </p></td><td valign="top">Total</td><td>1166</td></tr><tr><td valign="top">Passed</td><td valign="top">1148</td><td></td></tr><tr><td valign="top">Failed</td><td valign="top">18</td><td></td></tr><tr><td valign="top">Skipped</td><td valign="top">0</td><td></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th></th></tr></thead><tbody><tr><td valign="top"></td><td valign="top">Test cases</td><td></td></tr><tr><td valign="top">API Based Testing - eSignet</td><td valign="top">Total</td><td>2017</td></tr><tr><td valign="top">Passed</td><td valign="top">1962</td><td></td></tr><tr><td valign="top">Failed</td><td valign="top">20</td><td></td></tr><tr><td valign="top">Skipped</td><td valign="top">35</td><td></td></tr><tr><td valign="top">UI Based Testing</td><td valign="top">Total</td><td>1166</td></tr><tr><td valign="top">Passed</td><td valign="top">1148</td><td></td></tr><tr><td valign="top">Failed</td><td valign="top">18</td><td></td></tr><tr><td valign="top">Skipped</td><td valign="top">0</td><td></td></tr></tbody></table>
 
 API Testrig results for eSignet and Signup with Mock ID:
 
-<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th></th></tr></thead><tbody><tr><td valign="top"> </td><td valign="top">Test cases</td><td></td></tr><tr><td valign="top"><p> </p><p> </p><p>API Based Testrig - eSignet</p></td><td valign="top">Total</td><td>1011</td></tr><tr><td valign="top">Passed</td><td valign="top">93</td><td></td></tr><tr><td valign="top">Failed</td><td valign="top">0</td><td></td></tr><tr><td valign="top">Skipped</td><td valign="top">0</td><td></td></tr><tr><td valign="top">Ignored</td><td valign="top">918</td><td></td></tr><tr><td valign="top"><p> </p><p> </p><p> </p><p>API Based Testrig - eSignet-signup</p></td><td valign="top">Total</td><td>585</td></tr><tr><td valign="top">Passed</td><td valign="top">559</td><td></td></tr><tr><td valign="top">Failed</td><td valign="top">0</td><td></td></tr><tr><td valign="top">Skipped</td><td valign="top">0</td><td></td></tr><tr><td valign="top">Ignored</td><td valign="top">26</td><td></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th></th></tr></thead><tbody><tr><td valign="top"></td><td valign="top">Test cases</td><td></td></tr><tr><td valign="top">API Based Testrig - eSignet</td><td valign="top">Total</td><td>1011</td></tr><tr><td valign="top">Passed</td><td valign="top">93</td><td></td></tr><tr><td valign="top">Failed</td><td valign="top">0</td><td></td></tr><tr><td valign="top">Skipped</td><td valign="top">0</td><td></td></tr><tr><td valign="top">Ignored</td><td valign="top">918</td><td></td></tr><tr><td valign="top">API Based Testrig - eSignet-signup</td><td valign="top">Total</td><td>585</td></tr><tr><td valign="top">Passed</td><td valign="top">559</td><td></td></tr><tr><td valign="top">Failed</td><td valign="top">0</td><td></td></tr><tr><td valign="top">Skipped</td><td valign="top">0</td><td></td></tr><tr><td valign="top">Ignored</td><td valign="top">26</td><td></td></tr></tbody></table>
 
 API Testrig results for eSignet and Signup with MOSIP ID:
 
-<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th></th></tr></thead><tbody><tr><td valign="top"> </td><td valign="top">Test cases</td><td></td></tr><tr><td valign="top"><p> </p><p> </p><p>API Based Testrig - eSignet</p></td><td valign="top">Total</td><td>1011</td></tr><tr><td valign="top">Passed</td><td valign="top">842</td><td></td></tr><tr><td valign="top">Failed</td><td valign="top">0</td><td></td></tr><tr><td valign="top">Skipped</td><td valign="top">0</td><td></td></tr><tr><td valign="top">Ignored</td><td valign="top">169</td><td></td></tr><tr><td valign="top"><p> </p><p> </p><p> </p><p>API Based Testrig - eSignet-signup</p></td><td valign="top">Total</td><td>585</td></tr><tr><td valign="top">Passed</td><td valign="top">301</td><td></td></tr><tr><td valign="top">Failed</td><td valign="top">1</td><td></td></tr><tr><td valign="top">Skipped</td><td valign="top">0</td><td></td></tr><tr><td valign="top">Ignored</td><td valign="top">283</td><td></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th></th></tr></thead><tbody><tr><td valign="top"></td><td valign="top">Test cases</td><td></td></tr><tr><td valign="top">API Based Testrig - eSignet</td><td valign="top">Total</td><td>1011</td></tr><tr><td valign="top">Passed</td><td valign="top">842</td><td></td></tr><tr><td valign="top">Failed</td><td valign="top">0</td><td></td></tr><tr><td valign="top">Skipped</td><td valign="top">0</td><td></td></tr><tr><td valign="top">Ignored</td><td valign="top">169</td><td></td></tr><tr><td valign="top">API Based Testrig - eSignet-signup</td><td valign="top">Total</td><td>585</td></tr><tr><td valign="top">Passed</td><td valign="top">301</td><td></td></tr><tr><td valign="top">Failed</td><td valign="top">1</td><td></td></tr><tr><td valign="top">Skipped</td><td valign="top">0</td><td></td></tr><tr><td valign="top">Ignored</td><td valign="top">283</td><td></td></tr></tbody></table>
 
 API Testrig results for eSignet and Signup with Sunbird:
 
-<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th></th></tr></thead><tbody><tr><td valign="top"> </td><td valign="top">Test cases</td><td></td></tr><tr><td valign="top"><p> </p><p> </p><p>API Based Testrig - Sunbird</p></td><td valign="top">Total</td><td>1011</td></tr><tr><td valign="top">Passed</td><td valign="top">93</td><td></td></tr><tr><td valign="top">Failed</td><td valign="top">0</td><td></td></tr><tr><td valign="top">Skipped</td><td valign="top">0</td><td></td></tr><tr><td valign="top">Ignored</td><td valign="top">918</td><td></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th></th></tr></thead><tbody><tr><td valign="top"></td><td valign="top">Test cases</td><td></td></tr><tr><td valign="top">API Based Testrig - Sunbird</td><td valign="top">Total</td><td>1011</td></tr><tr><td valign="top">Passed</td><td valign="top">93</td><td></td></tr><tr><td valign="top">Failed</td><td valign="top">0</td><td></td></tr><tr><td valign="top">Skipped</td><td valign="top">0</td><td></td></tr><tr><td valign="top">Ignored</td><td valign="top">918</td><td></td></tr></tbody></table>
 
 Note: In API Based testing, 35 test cases are marked as skipped as they were not automated and cannot be tested using postman.
 
@@ -108,4 +112,4 @@ The various metrics that assist in test tracking and efficiency are as follows:
 
 Sonar Report:
 
-<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Repo Name</td><td valign="top">Branch Name</td><td valign="top">Release Version (POM)</td><td valign="top">Coverage (>80%)</td><td valign="top">Reliability (0)</td><td valign="top">Security (0)</td><td valign="top">Hotspots (0)</td><td valign="top">Duplications<br> (Less than 3%)</td></tr><tr><td valign="top">eSigent</td><td valign="top">develop</td><td valign="top">release-1.6.x</td><td valign="top">86.2</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0%</td></tr><tr><td valign="top"><p> </p><p>eSignet Signup</p></td><td valign="top">develop</td><td valign="top">release-1.2.x</td><td valign="top">79.3</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0%</td></tr><tr><td valign="top">esignet-mock-services</td><td valign="top"><p> </p><p> develop</p></td><td valign="top"><p> </p><p>release-0.11.x</p></td><td valign="top">83.3</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0%</td></tr><tr><td valign="top">esignet-plugins(mock-plugin)</td><td valign="top">release-1.3.x</td><td valign="top">release-1.3.x</td><td valign="top">83.0</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0</td><td valign="top">2.9%</td></tr><tr><td valign="top">esignet-plugins(mosip-identity-plugin)</td><td valign="top"><p> </p><p>release-1.3.2</p></td><td valign="top"><p> </p><p>release-1.3.2</p></td><td valign="top">83.6</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0%</td></tr><tr><td valign="top"><p> </p><p>esignet-plugins(sunbird-rc-plugin)</p></td><td valign="top"><p> </p><p>release-1.3.2</p></td><td valign="top"><p> </p><p>release-1.3.2</p></td><td valign="top">83</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0%</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Repo Name</td><td valign="top">Branch Name</td><td valign="top">Release Version (POM)</td><td valign="top">Coverage (>80%)</td><td valign="top">Reliability (0)</td><td valign="top">Security (0)</td><td valign="top">Hotspots (0)</td><td valign="top">Duplications<br>(Less than 3%)</td></tr><tr><td valign="top">eSigent</td><td valign="top">develop</td><td valign="top">release-1.6.x</td><td valign="top">86.2</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0%</td></tr><tr><td valign="top">eSignet Signup</td><td valign="top">develop</td><td valign="top">release-1.2.x</td><td valign="top">79.3</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0%</td></tr><tr><td valign="top">esignet-mock-services</td><td valign="top">develop</td><td valign="top">release-0.11.x</td><td valign="top">83.3</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0%</td></tr><tr><td valign="top">esignet-plugins(mock-plugin)</td><td valign="top">release-1.3.x</td><td valign="top">release-1.3.x</td><td valign="top">83.0</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0</td><td valign="top">2.9%</td></tr><tr><td valign="top">esignet-plugins(mosip-identity-plugin)</td><td valign="top">release-1.3.2</td><td valign="top">release-1.3.2</td><td valign="top">83.6</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0%</td></tr><tr><td valign="top">esignet-plugins(sunbird-rc-plugin)</td><td valign="top">release-1.3.2</td><td valign="top">release-1.3.2</td><td valign="top">83</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0%</td></tr></tbody></table>
