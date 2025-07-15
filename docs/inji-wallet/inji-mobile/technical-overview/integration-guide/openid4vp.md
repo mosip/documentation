@@ -2,12 +2,12 @@
 
 ## OpenID4VP - Online Sharing
 
-This library enables consumer applications (mobile wallet) to share users Verifiable Credentials with Verifiers who request them online. It adheres to the OpenID4VP [specification](https://openid.net/specs/openid-4-verifiable-presentations-1_0-21.html) draft version 21, which outlines the standards for requesting and presenting Verifiable Credentials.
+This library enables consumer applications (mobile wallet) to share users Verifiable Credentials with Verifiers who request them online. It adheres to the OpenID4VP [specification](https://openid.net/specs/openid-4-verifiable-presentations-1_0-23.html) draft version 23, which outlines the standards for requesting and presenting Verifiable Credentials.
 
 #### Library Functionalities: Processing the Request from Decoding to Verifier Response
 
 1. Receives the Verifier's Authorization Request sent by the consumer application (mobile wallet).
-2. Authenticates the Verifier using the received **client\_id** and validates the whole Request to check if the required details are present or not and then returns the Authorization Request to the consumer application if all the validations are successful.
+2. Validates the received Authorization Request to check if the required details are present or not, and then returns the Authorization Request to the consumer application once all the validations are successful.
 3. Receives the list of Verifiable Credentials from the consumer application which are selected by the consumer application end-user based on the credentials requested as part of Verifier Authorization request.
 4. Constructs the vp\_token without proof section and sends it back to the consumer application for generating Json Web Signature (JWS).
 5. Receives the generated signature along with the other details and generates vp\_token with proof section & presentation\_submission.
@@ -23,9 +23,9 @@ This library enables consumer applications (mobile wallet) to share users Verifi
 | Signed authorization request verification algorithms       | ed25519                                                                                                                                                                                                                                                                                                                                                            |
 | Obtaining authorization request                            | By value, By reference ( via `request_uri` method) <br> _[Note: Authorization request by value is not supported for the did client ID scheme, as it requires a signed request. Instead, a Request URI should be used to fetch the signed authorization request ([reference](https://openid.net/specs/openid-4-verifiable-presentations-1_0-21.html#section-3.2))]_ |
 | Obtaining presentation definition in authorization request | By value, By reference (via `presentation_definition_uri`)                                                                                                                                                                                                                                                                                                         |
-| Authorization Response mode                                | `direct_post`                                                                                                                                                                                                                                                                                                                                                      |
+| Authorization Response mode                                | `direct_post` and `direct_post.jwt`                                                                                                                                                                                                                                                                                                                                                      |
 | Authorization Response type                                | `vp_token`                                                                                                                                                                                                                                                                                                                                                         |
-| Supported Verifiable Presentations for Online sharing      | Credential format: `ldp_vc`                                                                                                                                                                                                                                                                                                                                        |
+| Supported Verifiable Presentations for Online sharing      | Credential format: `ldp_vc` and `mso_mdoc`                                                                                                                                                                                                                                                                                                                                        |
 
 
 ### Android: Kotlin package for OpenID4VP:
@@ -36,7 +36,7 @@ This library enables consumer applications (mobile wallet) to share users Verifi
 
 #### Installation
 
-Snapshot builds are available [here](https://oss.sonatype.org/content/repositories/snapshots/io/mosip/inji-openid4vp/).
+Snapshot builds are available [here](https://central.sonatype.com/artifact/io.mosip/inji-openid4vp).
 
 {% hint style="info" %}
 Note: implementation "io.mosip:inji-openID4VP:0.1.0-SNAPSHOT"

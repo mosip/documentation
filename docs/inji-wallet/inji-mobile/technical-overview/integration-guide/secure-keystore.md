@@ -11,9 +11,9 @@ Secure Keystore is a cross-platform cryptographic key management library for **A
 
 ## Artifacts
 
-  *  Maven Snapshots are available [here](https://repo1.maven.org/maven2/io/mosip/secure-keystore/)
+  *  Maven Snapshots are available [here](https://central.sonatype.com/artifact/io.mosip/secure-keystore)
 
-## 📦 Installation
+## Installation
 
 
 
@@ -28,7 +28,18 @@ Using Swift Package Manager:
 
 ### Android (Kotlin)
 
-Add the following in your `settings.gradle.kts`:
+**Done - Keshav** - Add the following in your `settings.gradle.kts`:
+
+```kotlin
+dependencyResolutionManagement {
+  repositories {
+    google()
+    mavenCentral()
+  }
+}
+```
+
+In `build.gradle.kts`:
 
 ```kotlin
 dependencyResolutionManagement {
@@ -38,15 +49,6 @@ dependencyResolutionManagement {
     maven("https://oss.sonatype.org/content/repositories/snapshots/")
   }
 }
-```
-
-In `build.gradle.kts`:
-
-```kotlin
-dependencies {
-  implementation("io.mosip:secure-keystore:0.3.0")
-}
-```
 
 ---
 

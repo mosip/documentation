@@ -14,17 +14,17 @@
 **Integration Guide**
 <https://docs.inji.io/inji-wallet/inji-mobile/technical-overview/integration-guide>
 
-1.  The first point needs to be updated - SDK can be implemented in one
+1.  ** Keshav - Revisit - The first point needs to be updated - SDK can be implemented in one
     of the ways mentioned below
 
     - npm module to get easily integrated with the React Native
-      framework
+      framework 
 
     - For the Android app, the Maven dependency can be integrated
 
     - For the iOS app, SPM is supported
 
-2.  OpenID4VP is missing in the content. Let\'s make the order
+2.  Keshav - Revisit - OpenID4VP is missing in the content. Let\'s make the order
     consistent here to the w.r.t components page
 
 **Secure Keystore**
@@ -33,7 +33,7 @@
 
     - Refer to Maven Central instead of the snapshot
 
-    keshav - here? - https://central.sonatype.com/artifact/io.mosip/secure-keystore
+    Done - keshav - here? - https://central.sonatype.com/artifact/io.mosip/secure-keystore
 
 2.  <https://docs.inji.io/inji-wallet/inji-mobile/technical-overview/integration-guide/secure-keystore#android-kotlin>
 
@@ -62,7 +62,7 @@ dependencyResolutionManagement {
 
     - Refer to Maven Central instead of the snapshot
 
-    keshav - here? - https://central.sonatype.com/artifact/io.mosip/secure-keystore
+    Done - keshav - here? - https://central.sonatype.com/artifact/io.mosip/secure-keystore
 
 
 2.  Add a link for example folder
@@ -74,10 +74,10 @@ dependencyResolutionManagement {
     - for ios
       <https://github.com/mosip/inji-vci-client-ios-swift/tree/master/SwiftExample>
 
-Keshav - To add the above links below this line - "More details - An example app is added under /example folder which can be referenced for more details."
+Done - Keshav - To add the above links below this line - "More details - An example app is added under /example folder which can be referenced for more details."
 
 
-3.  APIs and Exception sections can be combined, as we have maintained
+3.  Keshav - Revisit - APIs and Exception sections can be combined, as we have maintained
     the same in both Android and iOS. It\'s redundant right now
 
 
@@ -88,17 +88,15 @@ Keshav - To add the above links below this line - "More details - An example app
 1.  Maven Central link update -
     <https://central.sonatype.com/artifact/io.mosip/tuvali>
 
-Keshav -
-
-Only for this line? , "tuvali contains the artefacts in maven."
+Done - Keshav - Only for this line? , "tuvali contains the artefacts in maven."
 
 
 **OpenId4VP**
 
-1.  The first paragraph, need to update the draft version to 23 instead
+1.  Done - The first paragraph, need to update the draft version to 23 instead
     of 21
 
-2.  Update the second point of library functionality
+2.  Done - Update the second point of library functionality
 
     - Validates the received Authorization Request to check if the
       required details are present or not, and then returns the
@@ -109,26 +107,27 @@ Only for this line? , "tuvali contains the artefacts in maven."
 
     - **Device flow:** Cross-Device and Same Device flow
 
-    - Authorization Response mode: direct_post and direct_post.jwt
+    - Done - Authorization Response mode: direct_post and direct_post.jwt
 
-    - Supported Verifiable Presentations for Online sharing - Credential
+    - Done - Supported Verifiable Presentations for Online sharing - Credential
       format: ldp_vc and mso_mdoc
 
 4.  <https://docs.inji.io/inji-wallet/inji-mobile/technical-overview/integration-guide/openid4vp#android-kotlin-package-for-openid4vp>
 
-    - Installation mention central link not snapshot
+    - Done - Installation mention central link not snapshot
       <https://central.sonatype.com/artifact/io.mosip/inji-openid4vp>
 
 5.  <https://docs.inji.io/inji-wallet/inji-mobile/technical-overview/integration-guide/openid4vp#apis>
 
-    - It will be updated in readme by [Alka
+    - Keshav - Revisit - It will be updated in readme by [Alka
       Prasad](https://mosip.atlassian.net/secure/ViewProfile.jspa?accountId=70121%3A386ddcfc-17a9-4d1a-a8fc-bfb82f486497)
       and then we can refer here
 
-6.  The diagram at bottom - will be updated as\
+6.  Keshav - Revisit - The diagram at bottom - will be updated as\
     Wallet -\> OVP Library -\> Verifier
 
 **BLE Verifier**
+keshav - Revisit - (Ask Swati if we even need this?)
 
 1.  We have to mention that it\'s not maintained any more. This wrapper
     was written for Tuvali 0.4.9 version
@@ -137,9 +136,13 @@ Only for this line? , "tuvali contains the artefacts in maven."
 
     - I don\'t think, we can mention as WIP as it\'s not maintained
 
+
+
 Inji Mobile Wallet Documentation Review
 
 **Architecture page** -
+Keshav - Revisit - Swati to share
+
 <https://docs.inji.io/inji-wallet/inji-mobile/technical-overview/architecture>
 I will provide new content [Swati
 Goel](https://mosip.atlassian.net/secure/ViewProfile.jspa?accountId=557058%3Acc7f3f06-5f70-4e7e-a2e3-4de09e09e29b)
@@ -169,6 +172,8 @@ Goel](https://mosip.atlassian.net/secure/ViewProfile.jspa?accountId=557058%3Acc7
 **Components Page**
 <https://docs.inji.io/inji-wallet/inji-mobile/technical-overview/components>
 
+Keshav - Done
+
 This sentence needs to be rephrased These libraries are accessible as
 NPM modules, allowing seamless integration with other mobile wallets.\
 We don\'t have much NPM libraries now. All the libraries are native. So
@@ -195,6 +200,9 @@ Let\'s update the order for the library
 7.  Telemetry SDK(coming soon)
 
 I will share the updated components diagram based on the above order
+
+Keshav - Revisit (Swati to provide)
+
 [Swati
 Goel](https://mosip.atlassian.net/secure/ViewProfile.jspa?accountId=557058%3Acc7f3f06-5f70-4e7e-a2e3-4de09e09e29b)
 
@@ -202,14 +210,14 @@ Goel](https://mosip.atlassian.net/secure/ViewProfile.jspa?accountId=557058%3Acc7
 
 1.  <https://docs.inji.io/inji-wallet/inji-mobile/technical-overview/components#id-3.-secure-keystore-sdk>
 
-    - link to component page is broken. It should refer to Secure
+    - Keshav - Check this link if it is fixed now - link to component page is broken. It should refer to Secure
       Keystore module under Integration
 
-    - Instead of maven snapshot link, we should provide maven central
+    - Done - Keshav - Instead of maven snapshot link, we should provide maven central
       repository link. It is
       <https://central.sonatype.com/artifact/io.mosip/secure-keystore>
 
-2.  <https://docs.inji.io/inji-wallet/inji-mobile/technical-overview/components#id-5.-vci-client-sdk>
+2.  Done - Keshav <https://docs.inji.io/inji-wallet/inji-mobile/technical-overview/components#id-5.-vci-client-sdk>
 
     - link for kotlin repo should be
       <https://github.com/mosip/inji-vci-client>
@@ -234,18 +242,18 @@ Goel](https://mosip.atlassian.net/secure/ViewProfile.jspa?accountId=557058%3Acc7
 
 4.  <https://docs.inji.io/inji-wallet/inji-mobile/technical-overview/components#id-1.-tuvali-sharing-via-ble-sdk>
 
-    - no need to mention by react native library. React native is no
+    - Done - Keshav - no need to mention by react native library. React native is no
       more supported. We can rephrase the sentence something like This
       library facilitates the transfer of downloaded Verifiable
       Credential from the Wallet to Verifier
-
+<!--Update
     - Tuvali implentation link need to be updated
 
     - Tuvali\'s permission and requirement link need to be updated
 
     - Tuvali API integration link need to be updated
-
-    - Maven central link -
+-->
+    - Done - Keshav - Maven central link -
       <https://central.sonatype.com/artifact/io.mosip/tuvali>
 
 5.  <https://docs.inji.io/inji-wallet/inji-mobile/technical-overview/components#id-6.-openid4vp-online-sharing-sdk>
@@ -255,7 +263,7 @@ Goel](https://mosip.atlassian.net/secure/ViewProfile.jspa?accountId=557058%3Acc7
       are present or not and then returns the Authorization Request to
       the consumer application once all the validations are successful.
 
-    - API integration link need to be updated
+    - Keshav - Revisit - API integration link need to be updated
 
     - Maven central link -
       <https://central.sonatype.com/artifact/io.mosip/inji-openid4vp>
@@ -275,6 +283,6 @@ Goel](https://mosip.atlassian.net/secure/ViewProfile.jspa?accountId=557058%3Acc7
       Wallet, the model is downloaded in the background and stored in
       the cache as it\'s bundled within the app now
 
-7.  <https://docs.inji.io/inji-wallet/inji-mobile/technical-overview/components#id-7.-telemetry-sdk>
+7.  Done - Keshav - Check if the links are working <https://docs.inji.io/inji-wallet/inji-mobile/technical-overview/components#id-7.-telemetry-sdk>
 
 Need to update the integration guide link

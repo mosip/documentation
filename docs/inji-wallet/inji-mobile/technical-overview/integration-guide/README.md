@@ -2,7 +2,9 @@
 
 Below are the guidelines and specifications for integrating any software development kit (SDK) with Inji Wallet:
 
-1.  The SDK should be implemented as a npm module that supports the React Native framework.
+1. npm module to get easily integrated with the React Native framework.
+* For the Android app, the Maven dependency can be integrated
+* For the iOS app, SPM is supported
 
     For example, the npm modules, [**tuvali**](https://www.npmjs.com/package/@mosip/tuvali) and [**secure-keystore**](https://www.npmjs.com/package/@mosip/secure-keystore)**,** demonstrate suitable implementations.
 2.  The SDK should provide simple APIs for integration purposes.
