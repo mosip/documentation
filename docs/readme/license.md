@@ -6,7 +6,7 @@ description: Empowering users through transparent licensing.
 
 The documentation is licensed under a Creative Commons Attribution 4.0 International License.
 
-<div align="center" data-full-width="true"><img src="_images/by.svg" alt="CC license Image"></div>
+<div align="center" data-full-width="true"><img src="../_images/by.svg" alt="CC license Image"></div>
 
 🔗 **eSignet's Core Repositories:**
 

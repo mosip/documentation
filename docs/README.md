@@ -111,6 +111,6 @@ The use cases listed above are illustrative and not exhaustive, eSignet can be a
 
 Refer below to know more about eSignet principles and standards:
 
-[Explore eSignet’s principles of privacy, security, and flexibility](overview/principles/).
+[Explore eSignet’s principles of privacy, security, and flexibility](readme/principles.md).
 
-[Explore eSignet’s standards and secure authentication flows](overview/Standards/).
+[Explore eSignet’s standards and secure authentication flows](readme/standards.md).

@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Login ID Configuration in eSignet
 
 The eSignet system introduces enhanced flexibility in configuring login ID types to better align with country-specific needs and business requirements. This allows implementation teams to tailor login experiences based on regional standards, supported ID types, and UI preferences.

@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Purpose-Based UI Rendering in eSignet
 
 eSignet now supports **dynamic UI rendering based on the purpose defined** by the relying party (client) during client registration. This enhancement ensures that the user experience is tailored and context-aware across different workflows such as **Login**, **Verify**, or **Link**.
