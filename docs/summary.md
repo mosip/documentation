@@ -1,7 +1,6 @@
 # Table of contents
 
 * [eSignet](README.md)
-  * [Overview](readme/overview.md)
   * [Principles](readme/principles.md)
   * [Standards & Security](readme/standards.md)
   * [License](readme/license.md)
@@ -102,3 +101,4 @@
   * [Resources](general/resources.md)
   * [FAQs](general/faq.md)
   * [Glossary](general/glossary.md)
+* [Overview](overview.md)
