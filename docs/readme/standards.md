@@ -21,7 +21,7 @@ eSignet is built on industry-leading security standards, ensuring robust privacy
 * **Verifiable Credentials & Wallet Integration**\
   eSignet adopts **OpenID standards** to support **verifiable credentials** and **wallet-based identity verification**, enabling seamless cross-platform interoperability.
 * **Identity Assurance (Introduced in v1.5.0)**\
-  From version **v1.5.0**, eSignet includes support for [**Identity Assurance**](https://docs.esignet.io/overview/features#identity-assurance-flow-ekyc-verification) **under OpenID Connect**, allowing retrieval of verified user claims and associated metadata.
+  From version **v1.5.0**, eSignet includes support for [**Identity Assurance**](../esignet-authentication/features.md#identity-assurance-flow-ekyc-verification) **under OpenID Connect**, allowing retrieval of verified user claims and associated metadata.
 * **well-knowns**\
   eSignet implements **well-known to publish the URI for metadata discovery**. Below are the supporting standardized .well-known endpoints for dynamic service configuration and discovery.
 

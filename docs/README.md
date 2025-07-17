@@ -22,8 +22,8 @@ eSignet ensures that digital interactions are not only seamless but also secure,
 
 **eSignet comprises of 2 specific modules/parts**:
 
-1. [eSignet Auth](update-link/)
-2. [Signup](update-link/)
+1. [eSignet Auth](esignet-authentication/README.md)
+2. [Signup](esignet-signup/README.md)
 
 #### What is eSignet Authentication?
 
