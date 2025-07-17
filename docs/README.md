@@ -116,3 +116,7 @@ Refer below to know more about eSignet principles and standards:
 [Explore eSignet’s standards and secure authentication flows](readme/standards.md).
 
 [Keshav Singh][keshav-singh]
+
+
+...
+[keshav-singh]: https://keshavs.com
