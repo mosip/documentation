@@ -10,7 +10,7 @@ In today’s digital world, secure and accessible identity verification is key t
 
 The eSignet Signup Module is built around **self-registration**, empowering users to take control of their digital identity creation without complex prerequisites. Here’s how it works:
 
-1. **Simple Onboarding**: Users can sign up with basic information, such as a mobile number and password, without needing immediate verification. This low-barrier entry ensures that anyone with a phone or internet access can create a profile.
+1. [**Simple Onboarding**](../esignet-signup/features.md#user-profile-creation): Users can sign up with basic information, such as a mobile number and password, without needing immediate verification. This low-barrier entry ensures that anyone with a phone or internet access can create a profile.
 2. **Progressive KYC Integration**: After initial registration, users can add **Know Your Customer (KYC)** details, such as National ID, passport, or tax ID, at their own pace, enhancing their profile over time.
 3. **User-Controlled Process**: Self-registration allows users to manage their profiles independently, reducing reliance on intermediaries and making the process more accessible.
 

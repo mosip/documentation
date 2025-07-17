@@ -39,7 +39,7 @@ This ensures that only verified individuals gain access to sensitive services, r
 
 ## Powered by OpenID Connect Assurance Extension
 
-The eSignet Sign-Up and Identity Assurance processes are built on the **OpenID Connect (OIDC) Assurance Extension**, which enhances the trustworthiness of identity claims.
+The eSignet Sign-Up and Identity Assurance processes are built on the [**OpenID Connect (OIDC) Assurance Extension**](https://openid.net/specs/openid-connect-4-identity-assurance-1_0.html), which enhances the trustworthiness of identity claims.
 
 This includes:
 

@@ -23,7 +23,7 @@ In the case of VC issuance, they are simply OAuth 2.0 clients. To ensure enhance
 [Digital Wallets](https://docs.esignet.io/glossary#digital-id-wallet) are software-based platforms used to securely store and share the certified credentials of the wallet holder.\
 Stored credentials can be used for login with the eSignet, once the credentials are binded with the RSA key pair and the corresponding public key is shared with eSignet.
 
-To know more about the key binding process please refer to [Key Binder Integration Guide](https://docs.esignet.io/integration/key-binder).
+To know more about the key binding process please refer to [Key Binder Integration Guide](../../esignet-authentication/develop/integration/key-binder.md).
 
 #### **eSignet UI**
 
@@ -33,7 +33,7 @@ This is the user interface component of eSignet, developed using React JS. Its m
 * eSignet UI also offers QR code-based login with support for multiple digital wallets.
 * In addition, eSignet UI is compatible with MOSIP SBI 2.0 for biometric capture.
 * Furthermore, the eSignet UI provides flag-based captcha validation for OTP login.
-* Lastly, the landing page of the eSignet UI showcases the available [.well-known](https://docs.esignet.io/build-and-deploy/configuration/.well-known) endpoints.
+* Lastly, the landing page of the eSignet UI showcases the available [.well-known](../../esignet-authentication/develop/configuration/.well-known/README.md) endpoints.
 
 {% hint style="info" %}
 **Note:** Here are a few frequently asked questions on the eSignet UI.
