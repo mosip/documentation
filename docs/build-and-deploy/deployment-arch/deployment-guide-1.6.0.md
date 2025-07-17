@@ -1,8 +1,4 @@
----
-hidden: true
----
-
-# Deployment Guide 1.6.0
+# eSignet 1.6.0 - On-Prem Installation Guide
 
 ## Esignet Deployment in Kubernetes Environment
 
@@ -113,12 +109,11 @@ Download and import eSignet-with-mock.postman\_environment.json and eSignet.post
      * Encode the retrieved `client-private-key` using Base64.
      * Update the Base64-encoded `client-private-key` in the **mock-relying-party service secret**.
 
-#### NOTE:
+{% hint style="warning" %}
+**Note**: This deployment is limited to mock, Section below, related to configuring IDA is not tested. Still it can be tried out
+{% endhint %}
 
-This deployment is limited to mock\
-Below section related to configuring IDA is not tested. Still it can be tried out
-
-#### CONFIGURE IDA for Esignet :
+#### CONFIGURE IDA for Esignet&#x20;
 
 Onboard eSignet as MISP partner in MOSIP PMS using our onboarder script\
 We should override properties defined [here](https://github.com/mosip/esignet-plugins/blob/release-1.3.x/mosip-identity-plugin/src/main/resources/application.properties) if there is any change in the MOSIP IDA domain names.\
