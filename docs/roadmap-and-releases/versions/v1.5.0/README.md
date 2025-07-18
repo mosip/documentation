@@ -77,6 +77,6 @@ Please refer to [this link](https://mosip.atlassian.net/issues/?filter=11689) fo
 ### **Documentation**
 
 1. [API Documentation](https://mosip.stoplight.io/docs/identity-provider/branches/1.5.0/7oz4lmhu3pf6b-e-signet)
-2. [Integration Guides](https://docs.esignet.io/integration)
-3. [End User Guide](https://docs.esignet.io/end-user-guide)
+2. [Integration Guides](../../../esignet-authentication/develop/integration/relying-party/development-and-integration-with-esignet.md)
+3. [End User Guide](../../../esignet-authentication/test/end-user-guide/README.md)
 4. [QA Report](test-report.md)

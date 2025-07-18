@@ -14,13 +14,13 @@ description: Please refer below for all the latest release details ✨
 
 * **Name:** eSignet
 * **Date:** 23rd Jan, 2025
-* [**Release Notes**](https://docs.esignet.io/versions/v1.5.0)
+* [**Release Notes**](../versions/v1.5.0/README.md)
 
 ## Version: 1.4.2
 
 * **Name:** eSignet(Patch)
 * **Date:** 22nd Nov, 2024
-* [**Release Notes**](https://docs.esignet.io/versions/v1.4.2)
+* [**Release Notes**](../versions/v1.4.2.md)
 
 ## Version: 1.4.1
 
@@ -32,19 +32,19 @@ description: Please refer below for all the latest release details ✨
 
 * **Name:** eSignet
 * **Date:** 23rd April, 2024
-* [**Release Notes**](https://docs.esignet.io/versions/v1.4.0)
+* [**Release Notes**](v1.4.0/README.md)
 
 ## Version: 1.3.0
 
 * **Name:** eSignet (Password based authentication)
 * **Date:** 23rd February, 2024
-* [**Release Notes**](https://docs.esignet.io/versions/v1.3.0)
+* [**Release Notes**](v1.3.0/README.md)
 
 ## Version: 1.2.0
 
 * **Name:** eSignet (VCI)
 * **Date:** 11th December, 2023
-* [**Release Notes**](https://docs.esignet.io/versions/v1.2.0)
+* [**Release Notes**](v1.2.0/README.md)
 
 ## Version: 1.1.0
 

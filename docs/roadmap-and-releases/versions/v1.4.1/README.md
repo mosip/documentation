@@ -26,7 +26,7 @@ c. [eSignet UI to support KBI form configuration](broken-reference).
 
 * eSignet UI now supports KBI form configuration, making it easier to set up and manage KBI-based identification.
 
-For more information on KBI, please refer to the [KBI documentation](https://docs.esignet.io/end-user-guide/knowledge-based-authentication)
+For more information on KBI, please refer to the [KBI documentation](../../../esignet-authentication/test/end-user-guide/health-portal/knowledge-based-authentication.md)
 
 {% hint style="info" %}
 **Note:** The newly developed plugins are independent and can be adapted to various use cases that utilize Knowledge-Based Identification. An example use case like Insurance Card VC Issuance demonstrates how a user can be issued a verifiable credential using the [Sunbird RC](https://github.com/mosip/digital-credential-plugins/blob/master/sunbird-rc-esignet-integration-impl/README.md) registry configured with KBI.
@@ -76,8 +76,8 @@ For details on deployment, refer to the [helm charts](https://github.com/mosip/e
 
 ### Documentation
 
-* [Feature Documentation](https://docs.esignet.io/overview/features#knowledge-based-authentication)
-* [Integration Guides](https://docs.esignet.io/integration)
-* [End User Guide](https://docs.esignet.io/end-user-guide)
+* [Feature Documentation](../../../esignet-authentication/features.md)
+* [Integration Guides](../../../esignet-authentication/develop/integration/relying-party/development-and-integration-with-esignet.md)
+* [End User Guide](../../../esignet-authentication/test/end-user-guide/README.md)
 * [API Documentation](https://github.com/mosip/esignet/blob/v1.4.0/docs/esignet-openapi.yaml)
-* [QA Report ](https://docs.esignet.io/versions/v1.4.1/test-report)
+* [QA Report ](../v1.4.1/test-report.md)

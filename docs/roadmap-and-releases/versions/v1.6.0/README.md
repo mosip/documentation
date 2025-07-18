@@ -32,7 +32,7 @@ We’re excited to announce the upcoming release of [**eSignet v1.6.0**](), a ma
   ⚠️ **Breaking Change**: Existing relying parties (RPs) must include the `jti` claim to share consented claims successfully.
   
 - **Unique nonce for each transaction:**
-  nonce query parameter in the [authorize url](https://docs.esignet.io/test/integration/relying-party#get-authorize) should be unique for each    transaction, if duplicate nonce is found “invalid_request“ error is thrown.
+  nonce query parameter in the [authorize url](../../../esignet-authentication/develop/integration/relying-party/relying-party-onboarding.md) should be unique for each    transaction, if duplicate nonce is found “invalid_request“ error is thrown.
 
 - **Updated Vulnerable Libraries**  
   Security has been bolstered by updating dependencies and patching known vulnerabilities.

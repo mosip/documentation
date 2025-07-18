@@ -24,8 +24,8 @@ The 1.3.0 version of eSignet focuses on launching new features in authentication
 
 Below are the features available in the release:
 
-* [Login with password](https://docs.esignet.io/overview/features)
-* [Sign-up service](https://docs.esignet.io/use-cases/sign-up-service)
+* [Login with password](../../../esignet-authentication/test/end-user-guide/health-portal/login-with-password.md)
+* [Sign-up service](../../../esignet-signup/README.md)
 
 ### Repositories Released
 
@@ -48,8 +48,8 @@ For details on deployment, refer to the [helm charts](https://github.com/mosip/e
 
 ### Documentation
 
-* [Feature Documentation](broken-reference)
-* [Integration Guides](broken-reference)
-* [End User Guide](broken-reference)
+* [Feature Documentation](../../../esignet-authentication/features.md)
+* [Integration Guides](../../../esignet-authentication/develop/integration/relying-party/development-and-integration-with-esignet.md)
+* [End User Guide](../../../esignet-authentication/test/end-user-guide/README.md)
 * [API Documentation](https://github.com/mosip/esignet/blob/v1.3.0/docs/esignet-openapi.yaml)
-* [QA Report](https://docs.esignet.io/versions/v1.3.0/test-report)
+* [QA Report](../v1.3.0/test-report.md)

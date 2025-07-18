@@ -12,7 +12,7 @@ Version 1.4.0 of eSignet introduces a new authentication mode and addresses know
 
     We are excited to share that eSignet has expanded its authentication options to include Knowledge Based Identification (KBI) as one of its factors. With eSignet's integration capabilities, existing ID repositories storing user specific details can now be easily integrated with eSignet. This integration enables OpenID based login, allowing users to access relying party services seamlessly.
 
-To learn more about Knowledge Based Identification, click [here](https://docs.esignet.io/overview/features#knowledge-based-authentication).
+To learn more about Knowledge Based Identification, click [here](../../../esignet-authentication/features.md).
 
 1. **Fixes for known issues from v1.3.0**
 
@@ -36,8 +36,8 @@ For details on deployment, refer to the [helm charts](https://github.com/mosip/e
 
 ## Documentation
 
-* [Feature Documentation](https://docs.esignet.io/overview/features#knowledge-based-authentication)
-* [Integration Guides](https://docs.esignet.io/integration)
-* [End User Guide](https://docs.esignet.io/end-user-guide)
+* [Feature Documentation](../../../esignet-authentication/features.md)
+* [Integration Guides](../../../esignet-authentication/develop/integration/relying-party/development-and-integration-with-esignet.md)
+* [End User Guide](../../../esignet-authentication/test/end-user-guide/README.md)
 * [API Documentation](https://github.com/mosip/esignet/blob/v1.4.0/docs/esignet-openapi.yaml)
 * [QA Report](test-report.md)
