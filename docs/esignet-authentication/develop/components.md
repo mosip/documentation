@@ -12,7 +12,7 @@ The image below represents a **block diagram of eSignet**, illustrating various 
 
 #### Relying Party System
 
-The [Relying Party](https://docs.esignet.io/glossary#relying-party) Systems depend on identity providers, such as eSignet, to authenticate and verify the identities of users before granting them access to protected resources or services.
+The [Relying Party](../../general/glossary.md#relying-party) Systems depend on identity providers, such as eSignet, to authenticate and verify the identities of users before granting them access to protected resources or services.
 
 Clients utilizing OpenID Connect within the OAuth 2.0 framework are commonly referred to as Relying Parties (RPs).
 
@@ -20,7 +20,7 @@ In the case of VC issuance, they are simply OAuth 2.0 clients. To ensure enhance
 
 #### Digital Wallet
 
-[Digital Wallets](https://docs.esignet.io/glossary#digital-id-wallet) are software-based platforms used to securely store and share the certified credentials of the wallet holder.\
+[Digital Wallets](../../general/glossary.md#digital-id-wallet) are software-based platforms used to securely store and share the certified credentials of the wallet holder.\
 Stored credentials can be used for login with the eSignet, once the credentials are binded with the RSA key pair and the corresponding public key is shared with eSignet.
 
 To know more about the key binding process please refer to [Key Binder Integration Guide](../../esignet-authentication/develop/integration/key-binder.md).
@@ -59,9 +59,9 @@ This service is the primary backend Spring Java application that incorporates va
    * Typically, Key Manager is run as a service, but it is used as a library in the eSignet Service to minimize the effort of managing extra containers.
    * It depends on the data layer for maintaining the metadata on keys.
 5. **Plugins**: Integration points with external systems are designed to be pluggable, allowing easy integration with any ID system. The pluggable integration points are as follows:
-   * [**Authenticator Plugin**](https://docs.esignet.io/integration/authenticator)- for identity verification
-   * [**Audit Plugin** ](https://docs.esignet.io/integration/audit)- for auditing all events
-   * [**Key Binder Plugin**](https://docs.esignet.io/integration/key-binder) - for key binding of a user and wallet
+   * [**Authenticator Plugin**](../develop/integration/authenticator.md)- for identity verification
+   * [**Audit Plugin** ](../develop/integration/audit.mdaudit)- for auditing all events
+   * [**Key Binder Plugin**](../develop/integration/key-binder.md) - for key binding of a user and wallet
 
 All plugin interfaces are defined in the [esignet-integration-api](https://github.com/mosip/esignet/tree/master/esignet-integration-api) module.
 

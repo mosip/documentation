@@ -35,7 +35,7 @@ Don’t miss out on how national IDs drive digital inclusion and efficiency!
 
 ✨**What to Expect in This Workshop**
 
-Get ready for an interactive session where you’ll learn how to effortlessly integrate [eSignet](https://docs.esignet.io/) for identity verification and authentication in your service portal!&#x20;
+Get ready for an interactive session where you’ll learn how to effortlessly integrate [eSignet](../README.md) for identity verification and authentication in your service portal!&#x20;
 
 #### **📊** Here's What We’ll Cover&#x20;
 

@@ -9,10 +9,10 @@ Welcome to the Develop section of eSignet’s documentation. This section provid
 
 Explore the sections below to get started:
 
-### [Technology](https://docs.esignet.io/develop/technology)
+### [Technology](../../../docs/readme/technology/README.md)
 
 Understand the technologies behind eSignet, including architecture diagrams, frameworks used, and system design considerations.
 
-### [Configure eSignet](https://docs.esignet.io/develop/configuration)
+### [Configure eSignet](../develop/configuration/README.md)
 
 Learn how to configure eSignet’s properties for different implementations, covering authentication, cache, plugins, and key management.
