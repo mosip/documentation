@@ -37,7 +37,7 @@ During **client registration**, the relying party defines the intended purpose f
 Note: If the purpose.type is **missing or invalid**, the system **defaults to** login **behavior**.
 {% endhint %}
 
-### Internationalization Support
+### Localization Support
 
 The title and subTitle fields support **language-specific values** using locale keys. For example:
 

@@ -78,6 +78,6 @@ Please refer [here](https://github.com/mosip/esignet-mock-services/blob/v0.10.1/
 #### **Documentation** <a href="#documentation" id="documentation"></a>
 
 1. [API Documentation](https://mosip.stoplight.io/docs/identity-provider/branches/1.5.0/7oz4lmhu3pf6b-e-signet)
-2. [Integration Guides](https://docs.esignet.io/test/integration)
-3. [End User Guide](https://docs.esignet.io/test/end-user-guide)
-4. [QA Report](https://docs.esignet.io/roadmap-and-releases/versions/v1.5.1/test-report)
+2. [Integration Guides](../../../esignet-authentication/develop/integration/relying-party/development-and-integration-with-esignet.md)
+3. [End User Guide](../../../esignet-authentication/test/end-user-guide/README.md)
+4. [QA Report](../v1.5.1/test-report.md)

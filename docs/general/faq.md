@@ -10,7 +10,7 @@ description: Below are some frequently asked questions (FAQs) about eSignet.
 
 <summary><strong>What is eSignet?</strong></summary>
 
-**eSignet** is a digital identity verification tool that simplifies access to online services. It allows users to identify themselves using various [authentication methods](https://docs.esignet.io/overview/features#support-for-various-authentication-modalities) and supports multiple forms of IDs as handles (e.g. National ID, Phone Number, Email ID, etc.).
+**eSignet** is a digital identity verification tool that simplifies access to online services. It allows users to identify themselves using various [authentication methods](../esignet-authentication/features.md#supported-authentication-methods) and supports multiple forms of IDs as handles (e.g. National ID, Phone Number, Email ID, etc.).
 
 In today's era of digital transformation, there has been a global shift towards moving most services online. To facilitate personalized access to these online services, a secure and trusted digital identity is crucial. eSignet strives to provide a user-friendly and effective method for individuals to authenticate themselves and utilize online services while also having the option to share their profile information. Moreover, eSignet supports multiple modes of identity verification to ensure inclusivity and broaden access, thereby reducing potential digital barriers.
 
@@ -34,13 +34,13 @@ If you are interested in trying out eSignet right away, you can use our sandbox 
 
 eSignet provides multiple authentication methods, as listed below.
 
-1. [OTP Authentication](https://docs.esignet.io/end-user-guide/login-with-otp)
-2. [Biometric Authentication](https://docs.esignet.io/end-user-guide/login-with-biometrics)
-3. [Wallet-based Authentication](https://docs.esignet.io/end-user-guide/login-with-qr-code)
-4. [Password-based Authentication](https://docs.esignet.io/end-user-guide/login-with-password)
-5. [Knowledge Based Identification](https://docs.esignet.io/end-user-guide/knowledge-based-authentication)
+1. [OTP Authentication](../esignet-authentication/test/end-user-guide/health-portal/login-with-otp.md)
+2. [Biometric Authentication](../esignet-authentication/test/end-user-guide/health-portal/login-with-biometrics.md)
+3. [Wallet-based Authentication](../esignet-authentication/test/end-user-guide/health-portal/login-with-qr-code.md)
+4. [Password-based Authentication](../esignet-authentication/test/end-user-guide/health-portal/login-with-password.md)
+5. [Knowledge Based Identification](../esignet-authentication/test/end-user-guide/health-portal/knowledge-based-authentication.md)
 
-To know more about it click [here](https://docs.esignet.io/overview/features).
+To know more about it click [here](../esignet-authentication/features.md).
 
 </details>
 
@@ -60,7 +60,7 @@ The intended users of eSignet include:
 
 <summary><strong>How scalable is eSignet? Can it handle a significant increase in user volume?</strong></summary>
 
-eSignet is simple, lightweight, and powerful. It easily integrates with any service provider’s portal, using minimal resources, and can scale effortlessly to handle large user volumes, acting as a middle layer for identity verification.&#x20;
+eSignet is simple, lightweight, and powerful. It easily integrates with any service provider’s portal, using minimal resources, and can scale effortlessly to handle large user volumes, acting as a middle layer for identity verification.
 
 </details>
 
@@ -77,7 +77,7 @@ eSignet minimizes data storage by using access tokens linked to user IDs for log
 <summary><strong>What technologies are used in the development of eSignet?</strong></summary>
 
 * eSignet uses the latest technologies for development.
-* To learn more about the technologies eSignet uses click [here](https://docs.esignet.io/overview/technology-stack)
+* To learn more about the technologies eSignet uses click [here](../readme/technology/technology-stack.md)
 
 </details>
 
@@ -85,7 +85,7 @@ eSignet minimizes data storage by using access tokens linked to user IDs for log
 
 <summary><strong>Why should an entity adopt eSignet?</strong> </summary>
 
-eSignet is an open-source, flexible solution that follows [standard](https://docs.esignet.io/overview/standards) protocols for easy integration and high [security](https://docs.esignet.io/overview/principles), ensuring no vendor lock-in. As a MOSIP product, it integrates with any trusted ID, offering a secure and adaptable identity verification solution.
+eSignet is an open-source, flexible solution that follows [standard](../readme/standards.md) protocols for easy integration and high [security](../readme/principles.md), ensuring no vendor lock-in. As a MOSIP product, it integrates with any trusted ID, offering a secure and adaptable identity verification solution.
 
 </details>
 
@@ -96,7 +96,7 @@ eSignet is an open-source, flexible solution that follows [standard](https://doc
 <summary><strong>What are the core features of eSignet?</strong></summary>
 
 * eSignet offers features such as user-friendly identity verification, flexible login options, and multiple secure authentication methods like OTP,  biometrics, wallet, and knowledge-based authentication. It integrates with existing identity databases for eKYC compliance and supports multiple languages. Users can access various services with a single credential, consent must be ensured before sharing personal information. Further, eSignet is compatible with smartphones and feature phones.
-* To know more about features, please refer [here](https://docs.esignet.io/overview/features).
+* To know more about features, please refer [here](../esignet-authentication/features.md).
 
 </details>
 
@@ -120,7 +120,7 @@ eSignet stands out by offering a comprehensive suite of advanced features that e
 <summary><strong>What standards does eSignet follows?</strong></summary>
 
 * eSignet is highly inspired by OpenID Connect and OAuth 2.0 standards for secure authentication and data privacy. It employs a Secure Biometric Interface (SBI) for compatibility with various biometric devices and integrates verifiable credentials to enhance functionality and security.
-* To know more about eSignet standards, please refer [here](https://docs.esignet.io/overview/standards).
+* To know more about eSignet standards, please refer [here](../readme/standards.md).
 
 </details>
 
@@ -128,7 +128,7 @@ eSignet stands out by offering a comprehensive suite of advanced features that e
 
 <summary><strong>How many types of authentication methods does eSignet support today</strong>?</summary>
 
-The types of authentication methods supported by eSignet are [available here](broken-reference).
+The types of authentication methods supported by eSignet are [available here](update-link).
 
 </details>
 
@@ -155,8 +155,8 @@ eSignet will be deployed across various platforms, focusing on secure authentica
 
 <summary><strong>Which version of eSignet can be used?</strong></summary>
 
-* Currently, eSignet uses[ v1.4.1](https://docs.esignet.io/versions/v1.4.1).
-* Please refer [here ](https://docs.esignet.io/versions)for all the latest releases.
+* Currently, eSignet uses[ v1.4.1](../roadmap-and-releases/versions/v1.4.1/README.md).
+* Please refer [here ](../roadmap-and-releases/versions/README.md)for all the latest releases.
 
 </details>
 
@@ -187,7 +187,7 @@ Relying parties are considered to be **Auth** partners in MOSIP, and hence shoul
 2. **Assisted Onboarding**\
    Alternatively, partners can also initiate the onboarding process by filling out the form [here](https://docs.google.com/forms/d/1YQKcBDR92uqy_0m6oIV5yLmCPQCGOqJYx043ZOWQnX8/closedform). Once submitted, partners will receive their credentials via email shortly.
 
-Please refer [here](https://docs.esignet.io/try-it-out/integrate-with-e-signet) for more details.
+Please refer [here](../esignet-authentication/test/try-it-out/integrate-with-e-signet.md) for more details.
 
 </details>
 
@@ -413,7 +413,7 @@ The VC Issuance plugin interface provides methods to return Verifiable Credentia
 
 <summary><strong>How to configure Knowledge Based Identification (KBI) form in eSignet UI?</strong></summary>
 
-KBI form can be configured based on the fields required to identify a user via Knowledge based identification, please refer to the use case [example](https://docs.esignet.io/end-user-guide/knowledge-based-authentication) here and please find the below properties to be changed to reflect the fields in the KBI form on eSignet UI.
+KBI form can be configured based on the fields required to identify a user via Knowledge based identification, please refer to the use case [example](../esignet-authentication/test/end-user-guide/health-portal/knowledge-based-authentication.md) here and please find the below properties to be changed to reflect the fields in the KBI form on eSignet UI.
 
 ```
 Update the below sub properties inside mosip.esignet.ui.config.key-values property
