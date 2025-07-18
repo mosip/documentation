@@ -17,4 +17,4 @@ A patient with a national ID can log in to an online health portal to check appo
 
 👉 Learn more about integration with [MOSIP](https://docs.mosip.io/1.2.0/integrations/e-signet).
 
-👉 To try it out yourself in our sandbox [Collab](https://collab.mosip.net/) environment, click [here ](https://docs.esignet.io/test/try-it-out)to access the eSignet Try It Out section.
+👉 To try it out yourself in our sandbox [Collab](https://collab.mosip.net/) environment, click [here ](../../docs/esignet-authentication/test/try-it-out/README.md)to access the eSignet Try It Out section.

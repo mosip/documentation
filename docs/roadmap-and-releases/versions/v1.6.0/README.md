@@ -156,22 +156,18 @@ Please [refer here](https://github.com/mosip/esignet-mock-services/blob/release-
 
 **API Documentation**
 
-- [**eSignet API (v1.6.0)**](https://github.com/mosip/esignet/blob/master/docs/esignet-openapi.yaml)  
-
-- [**Signup API (v1.2.0)**](https://github.com/mosip/esignet-signup/blob/master/docs/esignet-signup-openapi.yaml)  
-
+* [**eSignet API (v1.6.0)**](https://github.com/mosip/esignet/blob/master/docs/esignet-openapi.yaml)  
+* [**Signup API (v1.2.0)**](https://github.com/mosip/esignet-signup/blob/master/docs/esignet-signup-openapi.yaml)  
 
 **Integration Guides**
 
-- [**eSignet Integration Guide**](https://docs.esignet.io/test/integration)  
-
-- [**Signup Integration Guide**](https://docs.esignet.io/test/integration-guide-signup-portal)  
+* [eSignet Integration Guide**](../../../esignet-authentication/develop/integration/README.md)
+* [Signup Integration Guide](../../../esignet-signup/develop/README.md)  
 
 **End User Guides**
 
-- [**eSignet End User Guide**](https://docs.esignet.io/test/end-user-guide/health-portal)  
-
-- [**Signup End User Guide**](https://docs.esignet.io/test/end-user-guide/health-portal/signup-and-login-with-otp-for-verified-claims)
+* [**eSignet End User Guide**](../../../esignet-authentication/test/end-user-guide/README.md)  
+* [**Signup End User Guide**](../../../esignet-signup/test/end-user-guide/README.md)
 
 [**QA Report**](https://github.com/mosip/test-management/tree/master/e-signet/1.6.0)
 
