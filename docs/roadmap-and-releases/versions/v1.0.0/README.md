@@ -20,8 +20,8 @@ The features included in this release are:
 
 ### Documentation
 
-* [Feature Documentation](broken-reference)
-* [Integration Guides](broken-reference)
-* [End User Guide](broken-reference)
+* [Feature Documentation](../../../esignet-authentication/features.md)
+* [Integration Guides](../../../esignet-authentication/develop/integration/relying-party/development-and-integration-with-esignet.md)
+* [End User Guide](../../../esignet-authentication/test/end-user-guide/README.md)
 * [API Documentation](https://github.com/mosip/esignet/blob/v1.0.0/docs/idp-oidc-service-openapi.yaml)
 * [QA Report](test-report.md)

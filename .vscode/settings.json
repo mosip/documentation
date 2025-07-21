@@ -1,3 +1,4 @@
 {
-    "editor.defaultFormatter": "vscode.markdown-language-features"
+    "editor.defaultFormatter": "vscode.markdown-language-features",
+    "window.density.editorTabHeight": "compact"
 }
