@@ -8,25 +8,25 @@ description: Please refer below for all the latest release details ✨
 
 * **Name:** eSignet(Patch)
 * **Date:** 24th Feb, 2025
-* [**Release Notes**](v1.5.1/)
+* [**Release Notes**](v1.5.1/README.md)
 
 ## Version: 1.5.0
 
 * **Name:** eSignet
 * **Date:** 23rd Jan, 2025
-* [**Release Notes**](../versions/v1.5.0/README.md)
+* [**Release Notes**](v1.5.0/README.md)
 
 ## Version: 1.4.2
 
 * **Name:** eSignet(Patch)
 * **Date:** 22nd Nov, 2024
-* [**Release Notes**](../versions/v1.4.2.md)
+* [**Release Notes**](v1.4.2.md)
 
 ## Version: 1.4.1
 
 * **Name:** eSignet(Patch)
 * **Date:** 15th July, 2024
-* [**Release Notes**](v1.4.1/)
+* [**Release Notes**](v1.4.1/README.md)
 
 ## Version: 1.4.0
 
@@ -50,16 +50,16 @@ description: Please refer below for all the latest release details ✨
 
 * **Name:** eSignet (consent registry)
 * **Date:** 22nd September, 2023
-* [**Release Notes**](../../versions/v1.1.0)
+* [**Release Notes**](v1.1.0/README.md)
 
 ## Version: 1.0.0
 
 * **Name:** eSignet
 * **Date:** 14th April, 2023
-* [**Release Notes**](../../versions/v1.0.0)
+* [**Release Notes**](v1.0.0/README.md)
 
 ## Version: 0.9.0
 
 * **Name:** IdP
 * **Date:** 8th January, 2023
-* [**Release Notes**](../../versions/v0.9.0)
+* [**Release Notes**](v0.9.0/README.md)
