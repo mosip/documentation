@@ -15,5 +15,5 @@ This section of the documentation provides detailed guidance for Relying Parties
 
 To learn more about the integration process and technical requirements, please refer to the following resources:
 
-* [Onboarding Your Relying Party to Any Identity Provider](../../../../test/relying-party-onboarding.md)– A step-by-step guide to help you prepare your service for integration with identity providers.
-* [Development and Integration with eSignet](../../../../test/development-and-integration-with-esignet.md) – Technical documentation and best practices for implementing eSignet as your trusted identity provider.
+* [Onboarding Your Relying Party to Any Identity Provider](../../../develop/integration/relying-party/relying-party-onboarding.md)– A step-by-step guide to help you prepare your service for integration with identity providers.
+* [Development and Integration with eSignet](../../../develop/integration/relying-party/development-and-integration-with-esignet.md) – Technical documentation and best practices for implementing eSignet as your trusted identity provider.
