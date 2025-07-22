@@ -1,0 +1,195 @@
+Level 1,Level 2,Level 3,Level 4,Level 5,Level 6,File/Link
+Inji,,,,,,README.md
+Inji,Try It Out,,,,,readme/try-it-out/README.md
+Inji,Try It Out,Using Mock Data,,,,readme/try-it-out/using-mock-data.md
+Inji,Use case,,,,,readme/use-case.md
+Inji,Resources,,,,,readme/resources.md
+Inji,Roadmap,,,,,readme/roadmap/README.md
+Inji,Roadmap,Roadmap 2025,,,,readme/roadmap/roadmap-2025.md
+Inji,Roadmap,Roadmap 2024,,,,readme/roadmap/roadmap-2024.md
+Inji,Standards and Specifications,,,,,readme/standards-and-specifications.md
+Inji,Supported Integrations,,,,,readme/supported-integrations/README.md
+Inji,Supported Integrations,MOSIP,,,,https://docs.mosip.io
+Inji,Project Governance,,,,,readme/project-governance.md
+Inji,Contribution,,,,,readme/contribution/README.md
+Inji,Contribution,Code Contribution,,,,readme/contribution/code-contribution.md
+Inji,Contribution,Code of Conduct,,,,readme/contribution/code-of-conduct.md
+Inji,GenderMag,,,,,readme/gendermag.md
+Inji,License,,,,,readme/license.md
+Inji,Announcement,,,,,readme/announcement.md
+Inji,Setup,,,,,readme/setup/README.md
+Inji,Setup,Infrastructure Requirements,,,,readme/setup/infrastructure-requirements.md
+Inji,Setup,Deploy,,,,readme/setup/deploy.md
+Inji Wallet,,,,,,inji-wallet/inji-mobile/README.md
+Inji Wallet,Overview,,,,,inji-wallet/inji-mobile/overview/README.md
+Inji Wallet,Overview,Features,,,,inji-wallet/inji-mobile/overview/features.md
+Inji Wallet,Develop,,,,,inji-wallet/inji-mobile/technical-overview/README.md
+Inji Wallet,Develop,Architecture,,,,inji-wallet/inji-mobile/technical-overview/architecture.md
+Inji Wallet,Develop,Technical Stack,,,,inji-wallet/inji-mobile/technical-overview/technical-stack.md
+Inji Wallet,Develop,Components,,,,inji-wallet/inji-mobile/technical-overview/components.md
+Inji Wallet,Develop,Integration Guides,,,,inji-wallet/inji-mobile/technical-overview/integration-guide/README.md
+Inji Wallet,Develop,Integration Guides,Face Match,,,inji-wallet/inji-mobile/technical-overview/integration-guide/face-match.md
+Inji Wallet,Develop,Integration Guides,Secure Keystore,,,inji-wallet/inji-mobile/technical-overview/integration-guide/secure-keystore.md
+Inji Wallet,Develop,Integration Guides,Tuvali,,,inji-wallet/inji-mobile/technical-overview/integration-guide/tuvali/README.md
+Inji Wallet,Develop,Integration Guides,Tuvali,Permissions & Requirements,,inji-wallet/inji-mobile/technical-overview/integration-guide/tuvali/tuvali-requirements.md
+Inji Wallet,Develop,Integration Guides,Tuvali,Tuvali API Documentation,,inji-wallet/inji-mobile/technical-overview/integration-guide/tuvali/tuvali-inji.md
+Inji Wallet,Develop,Integration Guides,BLE Verifier,,,inji-wallet/inji-mobile/technical-overview/integration-guide/ble-verifier.md
+Inji Wallet,Develop,Integration Guides,PixelPass,,,inji-wallet/inji-mobile/technical-overview/integration-guide/pixelpass.md
+Inji Wallet,Develop,Integration Guides,Telemetry,,,inji-wallet/inji-mobile/technical-overview/integration-guide/telemetry.md
+Inji Wallet,Develop,Integration Guides,VCI-Client,,,inji-wallet/inji-mobile/technical-overview/integration-guide/vci-client.md
+Inji Wallet,Develop,Integration Guides,OpenID4VP,,,inji-wallet/inji-mobile/technical-overview/integration-guide/openid4vp.md
+Inji Wallet,Develop,Specifications,,,,inji-wallet/inji-mobile/technical-overview/specifications/README.md
+Inji Wallet,Develop,Specifications,Face SDK Specifications,,,inji-wallet/inji-mobile/technical-overview/specifications/face-sdk-specifications.md
+Inji Wallet,Develop,Backend Services,,,,inji-wallet/inji-mobile/technical-overview/backend-services/README.md
+Inji Wallet,Develop,Backend Services,Mimoto,,,inji-wallet/inji-mobile/technical-overview/backend-services/mimoto.md
+Inji Wallet,Develop,Backend Services,eSignet,,,inji-wallet/inji-mobile/technical-overview/backend-services/esignet.md
+Inji Wallet,Develop,Backend Services,Inji Certify,,,inji-wallet/inji-mobile/technical-overview/backend-services/inji-certify.md
+Inji Wallet,Develop,Customizations,,,,inji-wallet/inji-mobile/technical-overview/customization-overview/README.md
+Inji Wallet,Develop,Customizations,Workflow customization,,,inji-wallet/inji-mobile/technical-overview/customization-overview/workflow-customization.md
+Inji Wallet,Develop,Customizations,UI customization,,,inji-wallet/inji-mobile/technical-overview/customization-overview/ui-customization.md
+Inji Wallet,Develop,Customizations,Locale customization,,,inji-wallet/inji-mobile/technical-overview/customization-overview/locale-customization.md
+Inji Wallet,Develop,Customizations,Configuration,,,inji-wallet/inji-mobile/technical-overview/customization-overview/configuration.md
+Inji Wallet,Develop,Customizations,Credential Providers,,,inji-wallet/inji-mobile/technical-overview/customization-overview/credential_providers.md
+Inji Wallet,Test,,,,,inji-wallet/inji-mobile/functional-overview/README.md
+Inji Wallet,Test,Try It Out,,,,inji-wallet/inji-mobile/functional-overview/sandbox-details/README.md
+Inji Wallet,Test,Try It Out,Inji Mobile - Collab Guide,,,inji-wallet/inji-mobile/functional-overview/sandbox-details/inji-setup-guide.md
+Inji Wallet,Test,Workflow,,,,inji-wallet/inji-mobile/functional-overview/feature-workflows.md
+Inji Wallet,Test,End User Guide,,,,inji-wallet/inji-mobile/functional-overview/end-user-guide.md
+Inji Wallet,Setup,,,,,inji-wallet/inji-mobile/build-and-deployment/README.md
+Inji Wallet,Setup,Local Setup,,,,inji-wallet/inji-mobile/build-and-deployment/local-setup.md
+Inji Wallet,Releases,,,,,inji-wallet/inji-mobile/versions/README.md
+Inji Wallet,Releases,Version 0.17.0,,,,inji-wallet/inji-mobile/versions/version-0.17.0.md
+Inji Wallet,Releases,Version 0.17.1,,,,inji-wallet/inji-mobile/versions/version-0.17.1/README.md
+Inji Wallet,Releases,Version 0.17.1,Test Report,,,inji-wallet/inji-mobile/versions/version-0.17.1/test-report.md
+Inji Wallet,Releases,Version 0.16.0,,,,inji-wallet/inji-mobile/versions/version-0.16.0/README.md
+Inji Wallet,Releases,Version 0.16.0,Test Report,,,inji-wallet/inji-mobile/versions/version-0.16.0/test-report.md
+Inji Wallet,Releases,Version 0.15.1,,,,inji-wallet/inji-mobile/versions/version-0.15.1/README.md
+Inji Wallet,Releases,Version 0.15.1,Test Report,,,inji-wallet/inji-mobile/versions/version-0.15.1/test-report.md
+Inji Wallet,Releases,Version 0.15.0,,,,inji-wallet/inji-mobile/versions/version-0.15.0/README.md
+Inji Wallet,Releases,Version 0.15.0,Test Report,,,inji-wallet/inji-mobile/versions/version-0.15.0/test-report.md
+Inji Wallet,Releases,Version 0.14.1,,,,inji-wallet/inji-mobile/versions/version-0.14.1/README.md
+Inji Wallet,Releases,Version 0.14.1,Test Report,,,inji-wallet/inji-mobile/versions/version-0.14.1/test-report.md
+Inji Wallet,Releases,Version 0.14.0,,,,inji-wallet/inji-mobile/versions/version-0.14.0/README.md
+Inji Wallet,Releases,Version 0.14.0,Test Report,,,inji-wallet/inji-mobile/versions/version-0.14.0/test-report.md
+Inji Wallet,Releases,Version 0.13.1,,,,inji-wallet/inji-mobile/versions/version-0.13.1/README.md
+Inji Wallet,Releases,Version 0.13.1,Test Report,,,inji-wallet/inji-mobile/versions/version-0.13.1/test-report.md
+Inji Wallet,Releases,Version 0.13.0,,,,inji-wallet/inji-mobile/versions/version-0.13.0/README.md
+Inji Wallet,Releases,Version 0.13.0,Test Report,,,inji-wallet/inji-mobile/versions/version-0.13.0/test-report.md
+Inji Wallet,Releases,Version 0.12.0,,,,inji-wallet/inji-mobile/versions/version-0.12.0/README.md
+Inji Wallet,Releases,Version 0.12.0,Test Report,,,inji-wallet/inji-mobile/versions/version-0.12.0/test-report.md
+Inji Wallet,Releases,Version 0.11.0-Inji,,,,inji-wallet/inji-mobile/versions/version-0.11.0-inji/README.md
+Inji Wallet,Releases,Version 0.11.0-Inji,Test Report,,,inji-wallet/inji-mobile/versions/version-0.11.0-inji/test-report.md
+Inji Wallet,Releases,Version 0.11.0,,,,inji-wallet/inji-mobile/versions/version-0.11.0.md
+Inji Wallet,Releases,Version DP2,,,,inji-wallet/inji-mobile/versions/version-inji-dp2/README.md
+Inji Wallet,Releases,Version DP2,Test Report,,,inji-wallet/inji-mobile/versions/version-inji-dp2/test-report-dp2.md
+Inji Wallet,Releases,Version 0.10.0,,,,inji-wallet/inji-mobile/versions/version-0.10.0/README.md
+Inji Wallet,Releases,Version 0.10.0,Test Report,,,inji-wallet/inji-mobile/versions/version-0.10.0/test-report-0.10.0.md
+Inji Wallet,Releases,Version DP1,,,,inji-wallet/inji-mobile/versions/version-inji-dp1.md
+Inji Wallet,Releases,Version 0.9.1,,,,inji-wallet/inji-mobile/versions/version-0.9.1/README.md
+Inji Wallet,Releases,Version 0.9.1,Test Report,,,inji-wallet/inji-mobile/versions/version-0.9.1/test-report-0.9.1.md
+Inji Wallet,Releases,Version 0.9.0,,,,inji-wallet/inji-mobile/versions/version-0.9.0/README.md
+Inji Wallet,Releases,Version 0.9.0,Test Report,,,inji-wallet/inji-mobile/versions/version-0.9.0/test-report-0.9.0.md
+Inji Wallet,,,,,,inji-wallet/inji-web/README.md
+Inji Wallet,Overview,,,,,inji-wallet/inji-web/overview/README.md
+Inji Wallet,Overview,Features,,,,inji-wallet/inji-web/overview/features.md
+Inji Wallet,Develop,,,,,inji-wallet/inji-web/technical-overview/README.md
+Inji Wallet,Develop,Architecture,,,,inji-wallet/inji-web/technical-overview/architecture.md
+Inji Wallet,Develop,Technology Stack,,,,inji-wallet/inji-web/technical-overview/technical-stack.md
+Inji Wallet,Develop,Backend services,,,,inji-wallet/inji-web/technical-overview/backend-services/README.md
+Inji Wallet,Develop,Backend services,Mimoto - BFF,,,inji-wallet/inji-web/technical-overview/backend-services/mimoto-bff.md
+Inji Wallet,Develop,Backend services,eSignet - Authentication Layer,,,inji-wallet/inji-web/technical-overview/backend-services/esignet-authentication-layer.md
+Inji Wallet,Develop,Backend services,Configurations,,,inji-wallet/inji-web/technical-overview/backend-services/configurations.md
+Inji Wallet,Develop,Customizations,,,,inji-wallet/inji-web/technical-overview/customizations/README.md
+Inji Wallet,Develop,Customizations,UI Customizations,,,inji-wallet/inji-web/technical-overview/customizations/ui-customizations.md
+Inji Wallet,Develop,Customizations,Locale Customizations,,,inji-wallet/inji-web/technical-overview/customizations/locale-customization.md
+Inji Wallet,Develop,Customizations,Credential Providers,,,inji-wallet/inji-web/technical-overview/customizations/credential-providers.md
+Inji Wallet,Develop,Customizations,Customize VC PDF Template,,,inji-wallet/inji-web/technical-overview/customizations/customize-vc-pdf-template.md
+Inji Wallet,Develop,Supported Browsers,,,,inji-wallet/inji-web/technical-overview/supported-browsers.md
+Inji Wallet,Test,,,,,inji-wallet/inji-web/functional-overview/README.md
+Inji Wallet,Test,Try It Out,,,,inji-wallet/inji-web/functional-overview/try-it-out/README.md
+Inji Wallet,Test,Try It Out,Inji Web - Collab Guide,,,inji-wallet/inji-web/functional-overview/try-it-out/inji-web-setup-guide.md
+Inji Wallet,Test,Workflow,,,,inji-wallet/inji-web/functional-overview/workflow.md
+Inji Wallet,Test,End User Guide,,,,inji-wallet/inji-web/functional-overview/end-user-guide.md
+Inji Wallet,Setup,,,,,inji-wallet/inji-web/build-and-deploy/README.md
+Inji Wallet,Setup,Local setup,,,,inji-wallet/inji-web/build-and-deploy/local-setup.md
+Inji Wallet,Setup,Deployment Architecture,,,,inji-wallet/inji-web/build-and-deploy/iww-deployment-architecture.md
+Inji Wallet,Setup,Deployment Guide,,,,inji-wallet/inji-web/build-and-deploy/iww-deployment-guide.md
+Inji Wallet,Releases,,,,,inji-wallet/inji-web/inji-web/README.md
+Inji Wallet,Releases,Version 0.13.0,,,,inji-wallet/inji-web/inji-web/version-0.13.0.md
+Inji Wallet,Releases,Version 0.12.0,,,,inji-wallet/inji-web/inji-web/version-0.12.0/README.md
+Inji Wallet,Releases,Version 0.12.0,Test Report,,,inji-wallet/inji-web/inji-web/version-0.12.0/test-report.md
+Inji Wallet,Releases,Version v0.11.1,,,,inji-wallet/inji-web/inji-web/version-v0.11.1.md
+Inji Wallet,Releases,Version v0.11.1,Test Report,,,inji-wallet/inji-web/inji-web/version-v0.11.1/test-report.md
+Inji Wallet,Releases,Version 0.11.0,,,,inji-wallet/inji-web/inji-web/version-0.11.0/README.md
+Inji Wallet,Releases,Version 0.11.0,Test Report,,,inji-wallet/inji-web/inji-web/version-0.11.0/test-report.md
+Inji Wallet,Releases,Version 0.10.0,,,,inji-wallet/inji-web/inji-web/version-0.10.0/README.md
+Inji Wallet,Releases,Version 0.10.0,Test Report,,,inji-wallet/inji-web/inji-web/version-0.10.0/test-report.md
+Inji Wallet,Releases,Version 0.9.0,,,,inji-wallet/inji-web/inji-web/version-0.9.0/README.md
+Inji Wallet,Releases,Version 0.9.0,Test Report,,,inji-wallet/inji-web/inji-web/version-0.9.0/test-report.md
+Inji Wallet,Releases,Version 0.8.1,,,,inji-wallet/inji-web/inji-web/version-0.8.1.md
+Inji Wallet,Releases,Version 0.8.0,,,,inji-wallet/inji-web/inji-web/version-0.8.0/README.md
+Inji Wallet,Releases,Version 0.8.0,Test Report,,,inji-wallet/inji-web/inji-web/version-0.8.0/test-report.md
+INJI CERTIFY,,,,,,inji-certify/overview/README.md
+INJI CERTIFY,Features,,,,,inji-certify/overview/features.md
+INJI CERTIFY,,,,,,inji-certify/technical-overview/README.md
+INJI CERTIFY,Technology Stack,,,,,inji-certify/technical-overview/technology-stack.md
+INJI CERTIFY,Components,,,,,inji-certify/technical-overview/components.md
+INJI CERTIFY,Tested Operating Systems,,,,,inji-certify/technical-overview/supported-browsers.md
+INJI CERTIFY,,,,,,inji-certify/functional-overview/README.md
+INJI CERTIFY,Functional Overview,,,,,inji-certify/functional-overview/functional-overview.md
+INJI CERTIFY,Workflow,,,,,inji-certify/functional-overview/workflow.md
+INJI CERTIFY,,,,,,inji-certify/build-and-deploy/README.md
+INJI CERTIFY,Local Setup,,,,,inji-certify/build-and-deploy/local-setup.md
+INJI CERTIFY,,,,,,inji-certify/releases/README.md
+INJI CERTIFY,Version 0.11.0,,,,,inji-certify/releases/version-0.11.0/README.md
+INJI CERTIFY,Version 0.11.0,Test Report,,,,inji-certify/releases/version-0.11.0/test-report.md
+INJI CERTIFY,Version 0.10.2,,,,,inji-certify/releases/version-0.10.2/README.md
+INJI CERTIFY,Version 0.10.2,Test Report,,,,inji-certify/releases/version-0.10.2/test-report.md
+INJI CERTIFY,Version 0.10.1,,,,,inji-certify/releases/version-0.10.1/README.md
+INJI CERTIFY,Version 0.10.1,Test Report,,,,inji-certify/releases/version-0.10.1/test-report.md
+INJI CERTIFY,Version 0.9.1,,,,,inji-certify/releases/version-0.9.1/README.md
+INJI CERTIFY,Version 0.9.1,Test Report,,,,inji-certify/releases/version-0.9.1/test-report.md
+INJI CERTIFY,Version 0.9.0,,,,,inji-certify/releases/version-0.9.0/README.md
+INJI CERTIFY,Version 0.9.0,Test Report,,,,inji-certify/releases/version-0.9.0/test-report.md
+INJI CERTIFY,Version 0.8.1,,,,,inji-certify/releases/release-notes.md
+INJI CERTIFY,Version 0.8.0,,,,,inji-certify/releases/version-0.8.0.md
+INJI CERTIFY,,,,,,inji-certify/faq/README.md
+INJI CERTIFY,FAQ,,,,,inji-certify/faq/faq.md
+INJI VERIFY,,,,,,inji-verify/overview/README.md
+INJI VERIFY,Features,,,,,inji-verify/overview/features.md
+INJI VERIFY,,,,,,inji-verify/technical-overview/README.md
+INJI VERIFY,Technology Stack,,,,,inji-verify/technical-overview/tech-stack.md
+INJI VERIFY,Components,,,,,inji-verify/technical-overview/components.md
+INJI VERIFY,Supported Browsers,,,,,inji-verify/technical-overview/supported-browsers.md
+INJI VERIFY,Customization,,,,,inji-verify/technical-overview/customization/README.md
+INJI VERIFY,Customization,UI Customizations,,,,inji-verify/technical-overview/customization/ui-customizations.md
+INJI VERIFY,Customization,Locale Customizations,,,,inji-verify/technical-overview/customization/locale-customizations.md
+INJI VERIFY,Integration Guides,,,,,inji-verify/technical-overview/integration-guides/README.md
+INJI VERIFY,Integration Guides,OpenID4VP-VP Verification Integration Guide,,,,inji-verify/technical-overview/integration-guides/openid4vp-vp-verification-integration-guide.md
+INJI VERIFY,,,,,,inji-verify/functional-overview/README.md
+INJI VERIFY,Try It Out,,,,,inji-verify/functional-overview/releases-1/README.md
+INJI VERIFY,Try It Out,Inji Verify - Collab Guide,,,,inji-verify/functional-overview/releases-1/inji-verify-collab-guide.md
+INJI VERIFY,Workflow,,,,,inji-verify/functional-overview/workflow.md
+INJI VERIFY,End User Guide,,,,,inji-verify/functional-overview/end-user-guide.md
+INJI VERIFY,Functional Overview,,,,,inji-verify/functional-overview/functional-overview.md
+INJI VERIFY,,,,,,inji-verify/build-and-deploy/README.md
+INJI VERIFY,Local Setup,,,,,inji-verify/build-and-deploy/local-setup.md
+INJI VERIFY,Generate QR Code,,,,,inji-verify/build-and-deploy/creating-verifiable-credentials-and-generating-qr-codes.md
+INJI VERIFY,,,,,,inji-verify/releases/README.md
+INJI VERIFY,Version 0.13.0,,,,,inji-verify/releases/version-0.13.0/README.md
+INJI VERIFY,Version 0.13.0,Test Report,,,,inji-verify/releases/version-0.13.0/test-report.md
+INJI VERIFY,Version 0.12.3,,,,,inji-verify/releases/version-0.12.3/README.md
+INJI VERIFY,Version 0.12.3,Test Report,,,,inji-verify/releases/version-0.12.3/test-report.md
+INJI VERIFY,Version 0.11.1,,,,,inji-verify/releases/version-0.11.1/README.md
+INJI VERIFY,Version 0.11.1,Test Report,,,,inji-verify/releases/version-0.11.1/test-report.md
+INJI VERIFY,Version 0.11.0,,,,,inji-verify/releases/version-0.11.0/README.md
+INJI VERIFY,Version 0.11.0,Test Report,,,,inji-verify/releases/version-0.11.0/test-report.md
+INJI VERIFY,Version 0.10.0,,,,,inji-verify/releases/version-0.10.0/README.md
+INJI VERIFY,Version 0.10.0,Test Report,,,,inji-verify/releases/version-0.10.0/test-report.md
+INJI VERIFY,Version 0.9.0,,,,,inji-verify/releases/version-0.9.0/README.md
+INJI VERIFY,Version 0.9.0,Test Report,,,,inji-verify/releases/version-0.9.0/test-report.md
+INJI VERIFY,Version 0.8.1,,,,,inji-verify/releases/version-0.8.1.md
+INJI VERIFY,Version 0.8.0,,,,,inji-verify/releases/release-notes/README.md
+INJI VERIFY,Version 0.8.0,Test Report,,,,inji-verify/releases/release-notes/test-report.md
+INJI VERIFY,,,,,,page-1.md
+INJI VERIFY,,,,,,experiment.md

@@ -28,7 +28,7 @@ Using Swift Package Manager:
 
 ### Android (Kotlin)
 
-**Done - Keshav** - Add the following in your `settings.gradle.kts`:
+Add the following in your `settings.gradle.kts`:
 
 ```kotlin
 dependencyResolutionManagement {
