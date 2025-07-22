@@ -60,7 +60,7 @@ This service is the primary backend Spring Java application that incorporates va
    * It depends on the data layer for maintaining the metadata on keys.
 5. **Plugins**: Integration points with external systems are designed to be pluggable, allowing easy integration with any ID system. The pluggable integration points are as follows:
    * [**Authenticator Plugin**](../develop/integration/authenticator.md)- for identity verification
-   * [**Audit Plugin** ](../develop/integration/audit.mdaudit)- for auditing all events
+   * [**Audit Plugin** ](../develop/integration/audit.md)- for auditing all events
    * [**Key Binder Plugin**](../develop/integration/key-binder.md) - for key binding of a user and wallet
 
 All plugin interfaces are defined in the [esignet-integration-api](https://github.com/mosip/esignet/tree/master/esignet-integration-api) module.

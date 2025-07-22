@@ -128,7 +128,7 @@ eSignet stands out by offering a comprehensive suite of advanced features that e
 
 <summary><strong>How many types of authentication methods does eSignet support today</strong>?</summary>
 
-The types of authentication methods supported by eSignet are [available here](update-link).
+The types of authentication methods supported by eSignet are [available here](../esignet-authentication/features.md#supported-authentication-methods).
 
 </details>
 
@@ -395,7 +395,7 @@ In order to utilize eSignet for authenticating users and obtaining their informa
 1. Register as a **Client** in the eSignet system.
 2. Integrate with eSignet APIs, following the guidelines provided by OpenID Connect, on their web or mobile applications.
 
-To know more, click [here](broken-reference).
+To know more, click [here](../esignet-authentication/develop/integration/relying-party/README.md).
 
 </details>
 
