@@ -49,14 +49,23 @@ docker build -t inji-web:local .
      * Set the `oidc_p12_password` environment variable value as per the documentation.
    * **Create OIDC client** and generate `oidckeystore.p12`. You can follow the setup guide for this process [here](https://docs.mosip.io/inji/inji-mobile-wallet/customization-overview/credential_providers).
    * **Update `mimoto-issuers-config.json`** with the client ID and client alias as per your OIDC onboarding.
-3. **Start the Docker Compose environment:**
+
+3. **[Optional] Configure Google OAuth Client Credentials**
+   - Refer to the [How to create Google Client Credentials](#how-to-create-google-client-credentials) section below. 
+   - Add the generated credentials to docker-compose.yml:
+    ````yaml
+        environment:
+        - GOOGLE_OAUTH_CLIENT_ID=<your-client-id>
+        - GOOGLE_OAUTH_CLIENT_SECRET=<your-client-secret>
+    `````    
+4. **Start the Docker Compose environment:**
 
 ```bash
 cd docker-compose
 docker-compose up -d
 ```
 
-4. **Stop the Docker Compose environment:**
+5. **Stop the Docker Compose environment:**
 
 ```bash
 docker-compose down
@@ -92,6 +101,37 @@ npm start
 ```bash
 npm test
 ```
+***
+## How to create Google Client Credentials
+
+To enable Google OAuth2.0 authentication, follow these steps:
+
+1. **Go to the Google Cloud Console**:
+    - Visit [Google Cloud Console](https://console.cloud.google.com/).
+
+2. **Create a New Project**:
+    - If you don’t already have a project, create a new one by clicking on the project dropdown and selecting "New Project".
+
+3. **Enable the OAuth Consent Screen**:
+    - Navigate to "APIs & Services" > "OAuth consent screen".
+    - Select "External" for the user type and configure the required fields (e.g., app name, support email, etc.).
+    - Save the changes.
+4. **Create OAuth 2.0 Credentials**:
+    - Navigate to "APIs & Services" > "Credentials".
+    - Click "Create Credentials" > "OAuth 2.0 Client IDs".
+    - Select "Web application" as the application type.
+
+5. **Configure Authorized JavaScript Origins**:
+   Depending on your environment, use the following values:
+      ```
+      http://localhost:8099
+      ```
+6. **Configure Authorized Redirect URIs**:
+      ```
+      http://localhost:8099/v1/mimoto/oauth2/callback/google
+      ```
+7. **Save and Retrieve Client Credentials**:
+    - After saving, you will receive a `Client ID` and `Client Secret`.
 
 ***
 

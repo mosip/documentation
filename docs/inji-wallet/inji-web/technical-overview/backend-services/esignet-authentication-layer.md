@@ -13,7 +13,7 @@ Let's explore how eSignet integrates with Inji Web and provides authentication s
 
 ### Credential endpoint
 
-Once the access token is received via the token endpoint from eSignet, Mimoto invokes this endpoint to obtain the Verifiable Credential.
+Once the access token is received from eSignet by Mimoto, Mimoto uses it to request the Verifiable Credential from Certify.
 
 **Note**: The endpoint attribute is present in the issuer's well-known configuration.
 
