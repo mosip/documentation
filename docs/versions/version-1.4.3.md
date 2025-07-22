@@ -4,7 +4,7 @@
 
 **Support:** Patch Release
 
-**Release Date:** Coming Soon
+**Release Date:** 22nd July, 2025
 
 ### Overview
 
@@ -56,8 +56,10 @@ This release is compatible with the following components:
 
 | Modules                      | Version |
 |-----------------------------|---------|
-| mosip-compliance-toolkit    | v1.4.3  |
-| mosip-compliance-toolkit-ui | v1.4.3  |
+| compliance-toolkit-testcases| [v1.4.1](https://github.com/mosip/compliance-toolkit-testcases/tree/v1.4.1) |
+| mosip-compliance-toolkit    | [v1.4.2](https://github.com/mosip/mosip-compliance-toolkit/tree/v1.4.2)|
+| mosip-compliance-toolkit-ui | [v1.4.3](https://github.com/mosip/mosip-compliance-toolkit-ui/tree/v1.4.3) |
+
 
 
 ### Compatible Modules
@@ -65,7 +67,6 @@ This release is compatible with the following components:
 | Module                         | Version |
 |--------------------------------|---------|
 | compliance-toolkit-batch-job   | [v1.4.0](https://github.com/mosip/compliance-toolkit-batch-job/tree/v1.4.0)  |
-| compliance-toolkit-testcases   | [v1.4.0](https://github.com/mosip/compliance-toolkit-testcases/tree/v1.4.0) |
 | mosip-config                   | [v1.4.0](https://github.com/mosip/mosip-config/tree/v1.4.0-CTK) |
 
 ### Known Issue
