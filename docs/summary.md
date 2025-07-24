@@ -13,7 +13,6 @@
   * [Releases](roadmap-and-releases/versions/README.md)
     * [v1.6.1](roadmap-and-releases/versions/v1.6.1/README.md)
       * [Test Report](roadmap-and-releases/versions/v1.6.1/test-report.md)
-    * [v1.6.0](roadmap-and-releases/versions/v1.6.0.md)
     * [v1.5.1](roadmap-and-releases/versions/v1.5.1/README.md)
       * [Test Report](roadmap-and-releases/versions/v1.5.1/test-report.md)
     * [v1.5.0](roadmap-and-releases/versions/v1.5.0/README.md)
