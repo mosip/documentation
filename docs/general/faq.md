@@ -22,9 +22,9 @@ To know more eSignet please refer [here](../).
 
 <summary><strong>How can I use eSignet?</strong></summary>
 
-You can integrate with eSignet based on the type of entity, such as an ID system, a relying party, or a digital wallet. For more details, please go through our [integration guide](broken-reference).
+You can integrate with eSignet based on the type of entity, such as an ID system, a relying party, or a digital wallet. For more details, please go through our [integration guide](broken-reference/).
 
-If you are interested in trying out eSignet right away, you can use our sandbox for testing. Please go through our [Try it out section](broken-reference) for more details.
+If you are interested in trying out eSignet right away, you can use our sandbox for testing. Please go through our [Try it out section](broken-reference/) for more details.
 
 </details>
 
@@ -83,7 +83,7 @@ eSignet minimizes data storage by using access tokens linked to user IDs for log
 
 <details>
 
-<summary><strong>Why should an entity adopt eSignet?</strong> </summary>
+<summary><strong>Why should an entity adopt eSignet?</strong></summary>
 
 eSignet is an open-source, flexible solution that follows [standard](../readme/standards.md) protocols for easy integration and high [security](../readme/principles.md), ensuring no vendor lock-in. As a MOSIP product, it integrates with any trusted ID, offering a secure and adaptable identity verification solution.
 
@@ -95,7 +95,7 @@ eSignet is an open-source, flexible solution that follows [standard](../readme/s
 
 <summary><strong>What are the core features of eSignet?</strong></summary>
 
-* eSignet offers features such as user-friendly identity verification, flexible login options, and multiple secure authentication methods like OTP,  biometrics, wallet, and knowledge-based authentication. It integrates with existing identity databases for eKYC compliance and supports multiple languages. Users can access various services with a single credential, consent must be ensured before sharing personal information. Further, eSignet is compatible with smartphones and feature phones.
+* eSignet offers features such as user-friendly identity verification, flexible login options, and multiple secure authentication methods like OTP, biometrics, wallet, and knowledge-based authentication. It integrates with existing identity databases for eKYC compliance and supports multiple languages. Users can access various services with a single credential, consent must be ensured before sharing personal information. Further, eSignet is compatible with smartphones and feature phones.
 * To know more about features, please refer [here](../esignet-authentication/features.md).
 
 </details>
@@ -155,8 +155,8 @@ eSignet will be deployed across various platforms, focusing on secure authentica
 
 <summary><strong>Which version of eSignet can be used?</strong></summary>
 
-* Currently, eSignet uses[ v1.4.1](../roadmap-and-releases/versions/v1.4.1/README.md).
-* Please refer [here ](../roadmap-and-releases/versions/README.md)for all the latest releases.
+* Currently, eSignet uses[ v1.4.1](../roadmap-and-releases/versions/v1.4.1/).
+* Please refer [here ](../roadmap-and-releases/versions/)for all the latest releases.
 
 </details>
 
@@ -395,7 +395,7 @@ In order to utilize eSignet for authenticating users and obtaining their informa
 1. Register as a **Client** in the eSignet system.
 2. Integrate with eSignet APIs, following the guidelines provided by OpenID Connect, on their web or mobile applications.
 
-To know more, click [here](../esignet-authentication/develop/integration/relying-party/README.md).
+To know more, click [here](../esignet-authentication/develop/integration/relying-party/).
 
 </details>
 
