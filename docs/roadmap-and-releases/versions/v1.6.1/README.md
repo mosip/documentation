@@ -1,12 +1,12 @@
 # v1.6.1
 
-**Release Number:** v1.6.0
+**Release Number:** v1.6.1
 
 **Release Date:** Coming Soon
 
 ## Overview
 
-We’re excited to announce the upcoming release of [**eSignet v1.6.0**](../v1.6.0.md), a major update packed with new features, improved configurability, and enhanced security. This version brings greater flexibility for Relying Parties (RPs) to customize login experiences, a revamped UI, and significant improvements to deployment processes.
+We’re excited to announce the upcoming release of [**eSignet v1.6.1**](../v1.6.1.md), a major update packed with new features, improved configurability, and enhanced security. This version brings greater flexibility for Relying Parties (RPs) to customize login experiences, a revamped UI, and significant improvements to deployment processes.
 
 ## Major Highlights
 
@@ -51,7 +51,7 @@ Dependencies in eSignet service have been upgraded to fix known vulnerabilities.
 
 Several known issues from the previous release have been addressed to improve platform stability and performance.
 
-Please refer to the [link here](https://mosip.atlassian.net/issues/MOSIP-41581?filter=-4\&jql=%20%22Release%20Number%5BLabels%5D%22%20%3D%20eSignet_v1.6.0%20and%20issuetype%20%3D%20Bug%20and%20status%20IN%20%28Closed%29) for the complete list of resolved issues.
+Please refer to the [link here](https://mosip.atlassian.net/issues/MOSIP-41581?filter=-4\&jql=%20%22Release%20Number%5BLabels%5D%22%20%3D%20eSignet_v1.6.1%20and%20issuetype%20%3D%20Bug%20and%20status%20IN%20%28Closed%29) for the complete list of resolved issues.
 
 ## Key Known Issues
 
@@ -60,16 +60,16 @@ Please refer to the [link here](https://mosip.atlassian.net/issues/MOSIP-41581?f
 | [ES-2317](https://mosip.atlassian.net/browse/ES-2317) | Verified Consented claims are not returned in userinfo response in MOSIP IDA   |
 | [ES-2359](https://mosip.atlassian.net/browse/ES-2359) | Getting `invalid_request` when the `additional_config` is added for the client |
 
-Please refer to [link here](https://mosip.atlassian.net/issues/ES-2363?filter=-4\&jql=labels%20%3D%20known_issue_eSignet_1.6.0) for the full list of known issues.
+Please refer to [link here](https://mosip.atlassian.net/issues/ES-2363?filter=-4\&jql=labels%20%3D%20known_issue_eSignet_1.6.1) for the full list of known issues.
 
 ## Repositories Released
 
 | Repository            | Tags    |
 | --------------------- | ------- |
-| esignet               | v1.6.0  |
-| esignet-signup        | v1.2.0  |
-| esignet-mock-services | v0.11.0 |
-| esignet-plugins       | v1.3.2  |
+| esignet               | v1.6.1  |
+| esignet-signup        | v1.2.1  |
+| esignet-mock-services | v0.11.1 |
+| esignet-plugins       | v1.3.3  |
 
 ## Compatibility Matrix
 
@@ -131,7 +131,7 @@ Please [refer here](https://github.com/mosip/esignet-mock-services/blob/release-
 1. **New column:** `additional_config` of type `jsonb` added to the `client_detail` table for storing flexible JSON configuration data.
 2. **Increased length of `name` column** in the `client_detail` table to **600 characters** to support longer client names.
 
-Please [refer here](https://github.com/mosip/esignet/blob/release-1.6.x/db_upgrade_script/mosip_esignet/sql/1.5.1_to_1.6.0_upgrade.sql) for details.
+Please [refer here](https://github.com/mosip/esignet/blob/release-1.6.x/db_upgrade_script/mosip_esignet/sql/1.5.1_to_1.6.1_upgrade.sql) for details.
 
 ### eSignet Mock Services
 
@@ -143,17 +143,17 @@ Please [refer here](https://github.com/mosip/esignet-mock-services/blob/release-
 
 **API Documentation**
 
-* [**eSignet API (v1.6.0)**](https://github.com/mosip/esignet/blob/master/docs/esignet-openapi.yaml)
+* [**eSignet API (v1.6.1)**](https://github.com/mosip/esignet/blob/master/docs/esignet-openapi.yaml)
 * [**Signup API (v1.2.0)**](https://github.com/mosip/esignet-signup/blob/master/docs/esignet-signup-openapi.yaml)
 
 **Integration Guides**
 
-* [eSignet Integration Guide\*\*](../../../esignet-authentication/develop/integration/)
-* [Signup Integration Guide](../../../esignet-signup/develop/)
+* [**eSignet Integration Guide**](../../../esignet-authentication/develop/integration/)
+* [**Signup Integration Guide**](../../../esignet-signup/develop/)
 
 **End User Guides**
 
 * [**eSignet End User Guide**](../../../esignet-authentication/test/end-user-guide/)
 * [**Signup End User Guide**](../../../esignet-signup/test/end-user-guide/)
 
-[**QA Report**](https://github.com/mosip/test-management/tree/master/e-signet/1.6.0)
+[**QA Report**](https://github.com/mosip/test-management/tree/master/e-signet/1.6.1)
