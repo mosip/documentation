@@ -75,3 +75,6 @@ Inji follows globally recognized specifications to support **trusted digital ver
 
 * Uses W3C DID standards for self-sovereign identity.
 * Implements DIDComm for secure peer-to-peer communication between holders, verifiers, and issuers.
+***
+
+
