@@ -6,7 +6,7 @@
 
 ## Overview
 
-We’re excited to announce the upcoming release of [**eSignet v1.6.1**](../v1.6.1.md), a major update packed with new features, improved configurability, and enhanced security. This version brings greater flexibility for Relying Parties (RPs) to customize login experiences, a revamped UI, and significant improvements to deployment processes.
+We’re excited to announce the upcoming release of [**eSignet v1.6.1**](https://github.com/mosip/esignet/tree/release-1.6.x), a major update packed with new features, improved configurability, and enhanced security. This version brings greater flexibility for Relying Parties (RPs) to customize login experiences, a revamped UI, and significant improvements to deployment processes.
 
 ## Major Highlights
 
