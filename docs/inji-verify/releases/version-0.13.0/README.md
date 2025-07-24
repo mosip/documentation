@@ -4,7 +4,7 @@
 
 **Support**: Developer Release
 
-**Release Date**: Coming Soon
+**Release Date**: 24th July, 2025
 
 ### Overview
 
@@ -51,10 +51,10 @@ Originally designed for credential-level cryptographic and schema validation, th
 
 ### Repositories: Released/Dependent
 
-| Repositories        | Tags: Released/Dependent |
-| ------------------- | ------------------------ |
-| Inji Verify         | \[v0.13.0]               |
-| vc-verifier library | \[v1.3.0]                |
+| Repositories        | Tags: Released/Dependent                                     |
+| ------------------- | ------------------------------------------------------------ |
+| Inji Verify         | [v0.13.0](https://github.com/mosip/inji-verify/tree/v0.13.0) |
+| vc-verifier library | [v1.3.0](https://github.com/mosip/vc-verifier/tree/v1.3.0)   |
 
 ### Projects: Released
 
@@ -93,4 +93,4 @@ Below is the list of fixes as part of the 0.13.0 release:
 * [Integration Guide](../../../inji-wallet/inji-mobile/technical-overview/integration-guide/openid4vp.md)
 * [API Documentation](https://mosip.stoplight.io/studio/inji-verify)
 * [Collab Guide](../../functional-overview/releases-1/inji-verify-collab-guide.md)
-* \[QA Report]
+* [QA Report](test-report.md)
