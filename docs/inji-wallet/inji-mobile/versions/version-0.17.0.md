@@ -4,7 +4,7 @@
 
 **Release Type:** Developer  
 
-**Release Date:** Coming Soon  
+**Release Date:** 25th July, 2025 
 
 ### Overview
 
@@ -58,13 +58,13 @@ These represent backend, SDK, library-level, and protocol support enhancements t
 
 | Module | Version |
 |--------|---------|
-| inji-wallet | 0.17.0 |
-| inji-openid4vp-ios-swift | 0.3.0 |
-| inji-openid4vp | 0.3.0 |
-| pixelpass | 0.7.0 |
-| pixelpass-ios-swift | 0.6.2 |
-| inji-vci-client | 0.3.0 |
-| inji-vci-client-ios-swift | 0.3.0 |
+| inji-wallet | [0.17.0](https://github.com/mosip/inji-wallet/tree/v0.17.0) |
+| inji-openid4vp-ios-swift | [0.3.0](https://github.com/mosip/inji-openid4vp-ios-swift/tree/v0.3.0) |
+| inji-openid4vp | [0.3.0](https://github.com/mosip/inji-openid4vp/tree/v0.3.0) |
+| pixelpass | [0.7.0](https://github.com/mosip/pixelpass/tree/v0.7.0) |
+| pixelpass-ios-swift | [0.6.2](https://github.com/mosip/pixelpass-ios-swift/tree/v0.6.2) |
+| inji-vci-client | [0.3.0](https://github.com/mosip/inji-vci-client/tree/v0.3.0) |
+| inji-vci-client-ios-swift | [0.3.0](https://github.com/mosip/inji-vci-client-ios-swift/tree/v0.3.0) |
 
 ### Compatible Modules
 
@@ -75,7 +75,7 @@ These represent backend, SDK, library-level, and protocol support enhancements t
 | Inji Certify | [0.11.0](https://github.com/mosip/inji-certify/tree/v0.11.0) |
 | esignet | [1.5.1](https://github.com/mosip/esignet/tree/v1.5.1) |
 | Inji Verify | [v0.12.3](https://github.com/mosip/inji-verify/tree/v0.12.3) |
-| vc-verifier | 1.3.0-SNAPSHOT |
+| vc-verifier | [1.3.0](https://github.com/mosip/vc-verifier/tree/v1.3.0) |
 
 ### Known Issues
 
