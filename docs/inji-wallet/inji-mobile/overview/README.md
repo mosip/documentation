@@ -99,12 +99,7 @@ Whether you're a citizen accessing government services, a developer building dig
 
 ### Get Involved
 
-For any queries, contributions, or to collaborate, join us on the [**Inji community forum**](https://community.mosip.io/c/inji/16) or raise a PR via the [**GitHub repository**](https://github.com/mosip/inji-mobile).
-
-
-
-
-
+For any queries, contributions, or to collaborate, join us on the [**Inji community forum**](https://community.mosip.io/c/inji/16) or raise a PR via the [**GitHub repository**](https://github.com/mosip/inji-wallet).
 
 
 <!--

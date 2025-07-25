@@ -143,7 +143,7 @@ N/A
 - [Feature Documentation](https://docs.inji.io/inji-wallet/inji-mobile/overview/features)
 - [Integration Guides](https://docs.inji.io/inji-wallet/inji-mobile/technical-overview/integration-guide)
 - [User Guide](https://docs.inji.io/inji-wallet/inji-mobile/functional-overview/end-user-guide)
-- QA Report
+- [QA Report](test-report.md)
 - [API Documentation](https://mosip.stoplight.io/docs/mimoto/k6907m3dzc1gi-mimoto)
 
 
