@@ -4,6 +4,14 @@ icon: rocket-launch
 
 # Releases
 
+## Version: 0.17.0
+
+Name: Inji Wallet 0.17.0
+
+Date: 25th July, 2025
+
+[Release Notes](version-0.17.0/)
+
 ## Version: 0.17.1
 
 Name: Mimoto 0.17.1(Patch)
