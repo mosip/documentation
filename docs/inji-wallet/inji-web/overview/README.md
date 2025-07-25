@@ -4,37 +4,98 @@ icon: house
 
 # Overview
 
-### What is Inji Web?
+>  *Inji Web isn't just a web interface – it's a bridge to digital inclusion, enabling secure and seamless access to digital identity and credentials, even without a smartphone. Built to support open and equitable digital ecosystems for everyone.*
 
-Inji Web, akin to the [Inji Wallet](https://docs.mosip.io/inji/inji-mobile-wallet/overview), is a user-friendly web portal designed to facilitate the process of **securely downloading**, **storing**, **managing** and **sharing Verifiable Credentials** through a web interface. This easy-to-use platform enables users to access and store their credentials, ensuring confident presentation to service providers for verification and service access, with ease and reliability. Rooted by the principles of inclusivity, Inji Web endeavors to empower individuals to access benefits or services even without smartphones.
+Inji Web, akin to the [Inji Wallet](https://docs.mosip.io/inji/inji-mobile-wallet/overview), is an open-source, standards-compliant web-based wallet that enables users to **securely download, manage, and share Verifiable Credentials (VCs)** through a web interface. This easy-to-use platform enables users to access and store their credentials, ensuring confident presentation to service providers for verification and service access, with ease and reliability. Rooted in the principles of inclusivity, it empowers individuals to access benefits or services, even without smartphones.
 
-With its simple and intuitive interface, Inji Web offers features similar to the mobile wallet, catering to a variety of use cases. Whether you are a resident needing VCs for identity verification, a student seeking academic credentials, a professional verifying employment, or an organization enhancing business operations, Inji Web provides easy access to your credentials tailored to your specific needs.
+**Inji Web** is a reference implementation which can be adopted by **ecoystem partners, countries, system integrators (SIs),goverments and organizations**—built **with** the community.
 
-By facilitating the issuance, verification and sharing of credentials in a secure and efficient manner, Inji Web plays a pivotal role in fostering trust amongst the service providers.
+- **Service Providers** can extend, customize, or white-label the solution  
+- **Governments** can deploy it for inclusive, public-facing identity journeys  
+- **Developers** can contribute, fork, and innovate to suit local needs
 
-{% hint style="info" %}
-_Inji Web application is built using the_ [_React framework_](https://react.dev) _and utilizes Mimoto as the BFF (Backend for Frontend). The digital verifiable credentials produced by the application adhere to the_ [_Verifiable Credentials (VC) Data Model_](https://www.w3.org/TR/vc-data-model/)_._
-{% endhint %}
 
-### How does Inji web work?
+It’s ideal for communities with limited smartphone access and ensures full interoperability with open digital identity ecosystems using:
 
-* Users can simply visit the Inji web portal, where they can select an issuer from the list of trusted options and choose the desired credential for download
-* To proceed, users are required to authenticate themselves by providing relevant information such as National ID, Registration Number, Name, Date of Birth, etc., enabling them to securely manage, store, and share the credential
-* Upon successful validation, the Verifiable credential is promptly downloaded as a PDF, along with a QR code issued by the Issuer
-* Once downloaded, users have the flexibility to share the Verifiable credential with relying parties either as a physical copy or by facilitating QR code **scanning** or **uploading** the PDF on the verifier site
-* As we progress, additional features are planned to be seamlessly integrated into Inji Web
-* Inji ensures the integrity of digital signatures provided by issuers for each ID before Verifiable Credentials are downloaded as PDFs within the system
-* Furthermore, Inji Web is designed to be compatible with the [OpenID](https://openid.net/developers/how-connect-works/) protocol, offering the flexibility to onboard various Identity Providers (IdP). This empowers users with multiple options for Verifiable Credential (VC) issuers
+### Core Design Principles
 
-**Backend systems**
+- **Web Accessibility for All**  
+  Full credential access via desktop or shared devices.
+
+- **Standard-Compliant Architecture**  
+  Based on OpenID4VCI, W3C VC Data Model, SD-JWT (in progress), and OpenID4VP (upcoming).
+
+- **User-Controlled Credential Sharing**  
+  Complete control over how, when, and with whom to share.
+
+- **Modular and Configurable Login System**  
+  Supports Google and other OpenID-compliant IdPs.
+
+- **Trustworthy Credential Lifecycle**  
+  Credentials are digitally signed by issuers, tamper-evident, and easily verifiable.
+
+### Capabilities Snapshot
+
+- **Login with Any IdP**  
+  Access your wallet using Google or any OpenID-compliant Identity Provider.
+
+- **Download from Trusted Issuers**  
+  Select an issuer, enter UIN/VID/Registration Number or any unique identifier, and securely download credentials.
+
+- **Web Wallet Storage (Post-login)**  
+  Credentials are stored in your secure, logged-in web wallet session—enabling access across sessions and devices, depending on configuration.
+
+- **Local Storage Support**  
+  Optionally download credentials as digitally signed PDFs with embedded QR codes for offline use or physical copies.
+
+- **Easy Credential Sharing**  
+  Share credentials via QR code scan, PDF upload, or printed presentation.
+
+- **Interoperability with Verifiers**  
+  Fully compatible with Inji Verify and other OpenID4VP-compliant verifier portals.
+
+- **Flexible Identity Inputs**  
+  Authenticate using UIN, Date of Birth, or Registration Number for credential retrieval.
+
+
+### How It Works
+
+1. **Login & Onboarding**  
+   Authenticate via Google or another OpenID-compliant IdP.
+
+2. **Choose Issuer & Credential**  
+   Select from available issuers and credential types.
+
+3. **Authenticate Identity**  
+   Provide UIN, Date of Birth, or Registration Number.
+
+4. **Download Credential**  
+   Receive a digitally signed PDF with an embedded QR code.
+
+5. **Share Credential**  
+   - Upload PDF on the verifier portal  
+   - Scan QR code  
+   - Present printed credential
+  
+6. **Use as Guest (No Login)**
+   Skip login using Guest Mode — no IdP required.  
+   * Direct credential download only (no storage in web wallet).
+
+### Sneak Peek: Upcoming Features
+
+- W3C VC Data Model 2.0 Support  
+- SVG-based Credential Templates  
+- Selective Disclosure via SD-JWT  
+- Presentation During Issuance  
+- Credential Revocation
+
+### Technology and Integration
 
 Inji Web interacts with:
 
 * [Mimoto APIs](https://mosip.stoplight.io/docs/mimoto/5bf5a1n68g4tq-mimoto) for managing issuers details, facilitate VC download and generate PDF
 * [eSignet APIs](https://mosip.stoplight.io/docs/identity-provider/jlmszj6dlxigw-e-signet) for authentication
 
-### More on Inji Web:
+### Get Involved
 
-To learn more about the **Features** provided by Inji Web, click [here](https://docs.mosip.io/inji/inji-web/functional-overview/features)
-
-For information on the **Roadmap** for Inji Web, click [here](../../../roadmap-2024.md).
+For any queries, contributions, or to collaborate, join us on the [Inji community forum](https://community.mosip.io/c/inji/16) or raise a PR via the [GitHub repository](https://github.com/mosip/inji-web).
