@@ -58,8 +58,6 @@ Verification is performed on various configurations as mentioned below
 
 
 
-
-
 <figure><img src="../../../../.gitbook/assets/inji_wallet_0.17.0_feature_health_ios.png" alt=""><figcaption></figcaption></figure>
 
 ## Test execution statistics
@@ -74,7 +72,7 @@ Below are the test metrics by performing functional testing using mock MDS and m
 
 &#x20;
 
-Here is the detailed breakdown of metrics for each module:
+** Here is the detailed breakdown of metrics for each module**:
 
 &#x20;
 
@@ -82,12 +80,10 @@ Here is the detailed breakdown of metrics for each module:
 
 &#x20;Testing with various device combinations
 
-Below are the test metrics by performing VC Sharing functionality on various device combinations&#x20;
-
+**Below are the test metrics by performing VC Sharing functionality on various device combinations**&#x20;
 
 
 <figure><img src="../../../../.gitbook/assets/inji_wallet_0.17.0_feature_health_combined.png" alt=""><figcaption></figcaption></figure>
-
 
 
 <table><thead><tr><th width="381.78515625" valign="top">Total</th><th valign="top">Passed</th><th valign="top">Failed</th><th valign="top">Skipped</th></tr></thead><tbody><tr><td valign="top">192</td><td valign="top">179</td><td valign="top">13</td><td valign="top">0</td></tr><tr><td valign="top">Test Rate: 100% With Pass Rate: 93.22%</td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
@@ -96,12 +92,47 @@ Below are the test metrics by performing VC Sharing functionality on various dev
 
 ### Device and Component Details:
 
-<table data-header-hidden><thead><tr><th valign="bottom"></th></tr></thead><tbody><tr><td valign="bottom">Tested with Inji components qa-inji1</td></tr><tr><td valign="bottom">mosipqa/inji-verify-service:0.13.x</td></tr><tr><td valign="bottom">mosipqa/inji-verify-ui:0.13.x</td></tr><tr><td valign="bottom">mosipqa/inji-certify-with-plugins:develop</td></tr><tr><td valign="bottom">mosipid/apitest-mimoto:0.17.1</td></tr><tr><td valign="bottom">mosipqa/mimoto:develop</td></tr><tr><td valign="bottom">mosipqa/inji-web:0.13.x</td></tr><tr><td valign="bottom"></td></tr><tr><td valign="bottom">Tested with components - Released env</td></tr><tr><td valign="bottom">mosipid/apitest-mimoto:0.17.1</td></tr><tr><td valign="bottom">mosipid/apitest-mimoto:0.17.1</td></tr><tr><td valign="bottom">mosipid/inji-verify-service:0.12.3</td></tr><tr><td valign="bottom">mosipid/inji-verify-ui:0.12.3</td></tr><tr><td valign="bottom">mosipid/inji-certify-with-plugins:0.11.0</td></tr><tr><td valign="bottom">mosipid/inji-web:0.12.0</td></tr><tr><td valign="bottom">mosipid/esignet-with-plugins:1.5.1</td></tr><tr><td valign="bottom">mosipid/authentication-service:1.2.1.0</td></tr><tr><td valign="bottom">mosipid/authentication-internal-service:1.2.1.0</td></tr><tr><td valign="bottom">mosipid/authentication-otp-service:1.2.1.0</td></tr><tr><td valign="bottom">mosipid/kernel-notification-service:1.2.0.1</td></tr><tr><td valign="bottom">mosipid/registration-processor-stage-group-1:1.2.1.1</td></tr></tbody></table>
+### Tested Components
 
-&#x20;
+#### QA Environment (`qa-inji1`)
 
-<table data-header-hidden><thead><tr><th valign="bottom"></th></tr></thead><tbody><tr><td valign="bottom">Devices Used For Testing</td></tr><tr><td valign="bottom"><em>Vivo Y73 with Android 13 BLE 5.0</em></td></tr><tr><td valign="bottom"><em>SS Galaxy A03 core with Android 11 BLE 4.2</em></td></tr><tr><td valign="bottom"><em>iPhone 11 with iOS 18.3.2 BLE 5.0</em></td></tr><tr><td valign="bottom"><em>iPhone 8 with i-OS 16.7 BLE 5.0</em></td></tr><tr><td valign="bottom"><em>iPhone 7 with iphone 15.8 BLE 4.2</em></td></tr><tr><td valign="bottom"><em>Redmi 7A Android 10 BLE 4.2</em></td></tr><tr><td valign="bottom">Redmi note 10 lite Android 13 BLE 5.0</td></tr><tr><td valign="bottom">Redmi K20 pro Android 13 BLE 5.0</td></tr><tr><td valign="bottom"><em>Redmi 6A Android 9 BLE 4.2</em></td></tr></tbody></table>
+- `mosipqa/inji-verify-service:0.13.x`
+- `mosipqa/inji-verify-ui:0.13.x`
+- `mosipqa/inji-certify-with-plugins:develop`
+- `mosipid/apitest-mimoto:0.17.1`
+- `mosipqa/mimoto:develop`
+- `mosipqa/inji-web:0.13.x`
 
+#### Released Environment
+
+- `mosipid/apitest-mimoto:0.17.1`
+- `mosipid/apitest-mimoto:0.17.1`
+- `mosipid/inji-verify-service:0.12.3`
+- `mosipid/inji-verify-ui:0.12.3`
+- `mosipid/inji-certify-with-plugins:0.11.0`
+- `mosipid/inji-web:0.12.0`
+- `mosipid/esignet-with-plugins:1.5.1`
+- `mosipid/authentication-service:1.2.1.0`
+- `mosipid/authentication-internal-service:1.2.1.0`
+- `mosipid/authentication-otp-service:1.2.1.0`
+- `mosipid/kernel-notification-service:1.2.0.1`
+- `mosipid/registration-processor-stage-group-1:1.2.1.1`
+
+### Devices Used for Testing
+
+| Device                        | OS Version         | BLE Version |
+|-------------------------------|-------------------|-------------|
+| *Vivo Y73*                    | Android 13        | 5.0         |
+| *Samsung Galaxy A03 Core*     | Android 11        | 4.2         |
+| *iPhone 11*                   | iOS 18.3.2        | 5.0         |
+| *iPhone 8*                    | iOS 16.7          | 5.0         |
+| *iPhone 7*                    | iOS 15.8          | 4.2         |
+| *Redmi 7A*                    | Android 10        | 4.2         |
+| Redmi Note 10 Lite            | Android 13        | 5.0         |
+| Redmi K20 Pro                 | Android 13        | 5.0         |
+| *Redmi 6A*                    | Android 9         | 4.2         |
+
+*Italicized device names indicate devices used for specific compatibility or regression testing.*
 
 
 ### Detailed Test Metrics
