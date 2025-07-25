@@ -42,15 +42,27 @@ Note:
 
 The face matcher SDK internally implements native functionalities for Android and iOS, utilizing [Tensorflow](https://www.tensorflow.org/) and [Google ML Kit](https://developers.google.com/ml-kit) to identify faces.
 
+This SDK internally employs a `tflite` model, which is now bundled within the app. The face matcher functionality is also available via the [iriscan/biometric-sdk-react-native](https://www.npmjs.com/package/@iriscan/biometric-sdk-react-native) NPM module, which is already integrated for offline face authentication in Inji Wallet.
+
+<!--
+Old content 
 This SDK internally employs a `tflite` model, which must be created by the integrating party. The model, trained using resident faces, is stored on the MOSIP file server. Inji Wallet currently utilizes the face matcher SDK (soon to be replaced by the NPM module) for offline face authentication.
 
+-->
 The SDK is employed in two scenarios:
+**During Both Offline and Online VC Sharing**: Residents can perform selfie authentication before sharing the VC with the relying party. The app opens the camera, allowing residents to take a selfie, which is then validated against the VC image to verify the resident's presence. This process is supported for both offline VC sharing (e.g., via BLE) and online login (e.g., scanning a QR code from the relying party portal and logging in using Inji Wallet).
+Refer [here](integration-guide/face-match.md) to check the API specifications for the face matcher model.
 
+
+<!--
+Old content
+The SDK is employed in two scenarios:
 **During Offline VC Sharing**: Residents can perform selfie authentication before sharing the VC with the relying party. The app opens the camera, allowing residents to take a selfie, which is then validated against the VC image to verify the resident's presence.\
 \
 **During Online Login**: Residents can scan the QR code from the relying party portal and opt to log in using Inji Wallet for services. In this process, residents undergo selfie authentication against the VC to confirm their presence.
 
-Upon the initial launch of Inji Wallet, the model is downloaded in the background and stored in the cache. Refer [here](integration-guide/face-match.md) to check the API specifications for the face matcher model.
+-->
+
 
 ### **3. Secure Keystore SDK**
 
