@@ -4,22 +4,34 @@
 
 Inji Wallet (Web) End User Guide is structured as below:
 
-* Interface Overview
-* Downloading VCs as PDF
-  * Download National ID VC as PDF
-  * Download Insurance VC as PDF
-* Preference
-  * Change Language
+- Interface Overview  
+- Downloading VCs as PDF  
+- Preference  
+  - Change Language  
 
-## Interface Overview
+### Interface Overview
 
-Inji Wallet (Web) is akin to Inji Wallet with a web interface which is fully responsive and accessible over Desktop, Tablet and Mobile browsers. Interface Overview provides you with a high level interface view (Desktop View) of the portal and labels the interface elements/items to let you quickly find an item referred to through this guide.
+Inji Wallet (Web) offers a browser-based interface similar to Inji Wallet, designed to be fully responsive across desktops, tablets, and mobile browsers. This section provides a high-level overview of the interface (Desktop View), labeling each key component to help you quickly locate items referred to throughout this guide.
 
-* Main Menu
-* Language
-* Workspace
-* Search
-*   Issuers
+### Interface Elements
+
+- **Login**  
+  Use Google or any configured OpenID-compliant Identity Provider (IdP) to log in and store credentials securely in the web wallet.
+
+- **Main Menu**  
+  Access navigation options for Dashboard, Issuers, Preferences, and more.
+
+- **Language Selector**  
+  Change the interface language using the dropdown in the header.
+
+- **Workspace**  
+  The main content area where you interact with the wallet, issuers, and credentials.
+
+- **Search Bar**  
+  Search for available credential types or issuers.
+
+- **Issuers Section**  
+  Browse through a list of trusted credential issuers. Each issuer displays supported credential types.
 
     <figure><img src="../../../.gitbook/assets/inji-web-interface-overview.png" alt=""><figcaption><p>Interface Overview</p></figcaption></figure>
 
@@ -112,3 +124,94 @@ To download an Insurance ID VC using eSignet for authentication (KBI method), fo
 You can choose your preferred language using '**language Selection**' options available on the **Main-Menu**. Inji Web now supports 4 International Language (English, French and Arabic) and 3 Indian Languages (Tamil, Hindi and Kannada).
 
 <figure><img src="../../../.gitbook/assets/inji-web-language-change.png" alt=""><figcaption><p>Language Preference</p></figcaption></figure>
+
+## Login with Google or any other IDP
+
+> **Note:** Screenshots will be added soon to enhance the user experience and better explain the steps shown below.
+
+### Step-by-Step Process
+
+1. **Launch Inji Web Wallet in Browser**  
+   Navigate to the wallet URL in any browser.
+
+2. **Click "Login with Gmail"**  
+   Select the Google login option on the homepage.
+
+3. **Select Google Account**  
+   Choose your Google account or enter login credentials.
+
+4. **Post-login Welcome Page**  
+   You will land on the dashboard showing issuer and credential options.
+
+5. **Set Passcode (First-Time Only)**  
+   You'll be prompted to set a local passcode to secure your web wallet.
+
+## Download VCs (Login)
+
+**Note:** A few example issuers are listed below. You can explore more issuers in the **Collab environment** via the UI or configure additional issuers as needed to test and explore this feature further.
+
+### Download National ID VC
+
+#### Q. What details are needed?
+You’ll need your **UIN/VID** as provided by the credential issuer.
+
+#### Steps:
+
+1. **Login to Inji Web Wallet**
+2. **Search or Select 'Republic of Veridonia National ID Department'**
+3. **Choose 'Veridonia National ID' Credential Type**
+4. **Authenticate via eSignet (OTP method)**  
+   - Enter UIN/VID → Click 'Get OTP'
+   - Enter OTP → Click 'Verify'
+6. **Download Starts Automatically**  
+   Verifiable Credential is stored in your web wallet in the "stored cards" page.
+
+### Download Insurance VC
+
+#### Q. What details are needed?  
+You’ll need **Policy No., Name, and Date of Birth** as shared by the issuer.
+
+#### Steps:
+
+1. **Login to Inji Web Wallet**
+2. **Search or Select 'StayProtected Insurance'**
+3. **Choose 'Health Insurance' or 'Life Insurance' as Credential Type**
+4. **Authenticate via eSignet (KBI method)**  
+   - Enter required fields
+5. **Download Starts Automatically**  
+   Verifiable Credential is stored in your web wallet in the "stored cards" page.
+
+## Manage Stored Credentials
+
+### View Credentials (Login Mode)
+
+1. Navigate to the **Stored Cards** section in the Inji Web Wallet.
+2. If your wallet has been created but no credentials have been downloaded yet, the **Stored Cards** section will appear empty.  
+   - Click on the **Add Cards** option to initiate the credential download flow.  
+   - Follow the steps outlined in the [Download VCs (Login)](#download-vcs-login) section to retrieve your credentials.
+3. Once credentials are downloaded, they will appear in a mini card view within the **Stored Cards** section.
+4. For each stored credential, you can click on the **three-dot menu (⋮)** to explore additional actions:
+   - **View** – Preview the credential within the wallet.
+   - **Download** – Download the VC as a PDF with an embedded QR code.
+   - **Delete** – Remove the credential from your web wallet.
+
+###  Profile & Language Preferences
+
+#### Access Profile Options
+
+1. Click on the **Profile Icon** in the top-right corner of the page (next to the language selector).  
+2. Upon clicking, a dropdown will appear with the following options:
+   - `FAQs` – View frequently asked questions  
+   - `Profile` – View or manage your account
+   - `Logout` – Securely log out of your session 
+3. To change your preferred language:
+   - Click on the **Language Icon** (globe) next to your profile
+   - A list of supported languages will appear
+   - Select your preferred language from the dropdown
+
+## Security Note
+
+- Credentials stored in the web wallet are **only accessible post-login**.
+- Guest users can download directly to device but **credentials are not saved**.
+- Inji Web enforces **user consent** before any sharing.
+
