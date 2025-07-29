@@ -4,7 +4,7 @@
 
 **Release Type**: Developer  
 
-**Release Date**: Coming Soon
+**Release Date**: 29th July, 2025
 
 ### Overview
 
@@ -57,19 +57,19 @@ Once logged in via Google, users can **securely download and store their credent
 
 | Module | Version |
 |--------|---------|
-| inji-web | 0.13.0 |
-| inji-config | 0.9.0 |
-| mimoto| 0.18.0 |
+| inji-web | [0.13.0](https://github.com/mosip/inji-web/tree/v0.13.0) |
+| inji-config | [0.9.0](https://github.com/mosip/inji-config/tree/v0.9.0) |
+| mimoto| [0.18.0](https://github.com/mosip/mimoto/tree/v0.18.0) |
 
 ## Compatible Modules
 
 | Module | Version |
 |--------|---------|
-| Inji Wallet (Mobile) | 0.17.0 |
-| Inji Certify         | 0.11.0 |
-| Inji Verify          | 0.13.0 |
-| eSignet              | 1.5.1  |
-| VC Verifier          | 1.3.0  |
+| Inji Wallet (Mobile) | [0.17.0](https://github.com/mosip/inji-wallet/tree/v0.17.0) |
+| Inji Certify         | [0.11.0](https://github.com/mosip/inji-certify/tree/v0.11.0) |
+| Inji Verify          | [0.12.3](https://github.com/mosip/inji-verify/tree/v0.12.3) |
+| eSignet              | [1.5.1](https://github.com/mosip/esignet/tree/v1.5.1)  |
+| VC Verifier          | [1.3.0](https://github.com/mosip/vc-verifier/tree/v1.3.0)  |
 
 ## Bug Fixes
 
