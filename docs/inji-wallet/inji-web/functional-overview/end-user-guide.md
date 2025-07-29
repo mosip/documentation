@@ -125,6 +125,8 @@ You can choose your preferred language using '**language Selection**' options av
 
 <figure><img src="../../../.gitbook/assets/inji-web-language-change.png" alt=""><figcaption><p>Language Preference</p></figcaption></figure>
 
+<!--
+
 ## Login with Google or any other IDP
 
 > **Note:** Screenshots will be added soon to enhance the user experience and better explain the steps shown below.
@@ -215,3 +217,4 @@ You’ll need **Policy No., Name, and Date of Birth** as shared by the issuer.
 - Guest users can download directly to device but **credentials are not saved**.
 - Inji Web enforces **user consent** before any sharing.
 
+-->
