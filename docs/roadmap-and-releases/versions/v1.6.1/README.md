@@ -8,11 +8,11 @@
 
 We’re excited to announce the upcoming release of [**eSignet v1.6.1**](https://github.com/mosip/esignet/tree/v1.6.1), a major update packed with new features, improved configurability, and enhanced security. This version brings greater flexibility for Relying Parties (RPs) to customize login experiences, a revamped UI, and significant improvements to deployment processes.
 
-> ⚠️ **Version Note**
-> 
-> **eSignet v1.6.1** is a patch release over the originally planned **v1.6.0**, addressing critical deployment-related bug fixes.
-> It is the latest official version following **eSignet v1.5.1**.
+{% hint style="success" %}
+**Version Note:**&#x20;
 
+**eSignet v1.6.1** is a patch release over the originally planned **v1.6.0**, addressing critical deployment-related bug fixes. It is the latest official version following **eSignet v1.5.1**.
+{% endhint %}
 
 ## Major Highlights
 
@@ -57,7 +57,7 @@ Dependencies in eSignet service have been upgraded to fix known vulnerabilities.
 
 Several known issues from the previous release have been addressed to improve platform stability and performance.
 
-Please refer to the [link here](https://mosip.atlassian.net/issues/?filter=-4&jql=%22Release%20Number%5BLabels%5D%22%20%3D%20eSignet_v1.6.1%20and%20issuetype%20%3D%20Bug%20and%20status%20IN%20%28Closed%29) for the complete list of resolved issues.
+Please refer to the [link here](https://mosip.atlassian.net/issues/?filter=-4\&jql=%22Release%20Number%5BLabels%5D%22%20%3D%20eSignet_v1.6.1%20and%20issuetype%20%3D%20Bug%20and%20status%20IN%20%28Closed%29) for the complete list of resolved issues.
 
 ## Key Known Issues
 
@@ -66,16 +66,16 @@ Please refer to the [link here](https://mosip.atlassian.net/issues/?filter=-4&jq
 | [ES-2317](https://mosip.atlassian.net/browse/ES-2317) | Verified Consented claims are not returned in userinfo response in MOSIP IDA   |
 | [ES-2359](https://mosip.atlassian.net/browse/ES-2359) | Getting `invalid_request` when the `additional_config` is added for the client |
 
-Please refer to [link here](https://mosip.atlassian.net/issues/?filter=-4&jql=labels%20%3D%20known_issue_eSignet_1.6.1) for the full list of known issues.
+Please refer to [link here](https://mosip.atlassian.net/issues/?filter=-4\&jql=labels%20%3D%20known_issue_eSignet_1.6.1) for the full list of known issues.
 
 ## Repositories Released
 
-| Repository            | Tags    |
-| --------------------- | ------- |
-| esignet               | [v1.6.1](https://github.com/mosip/esignet/tree/v1.6.1)  |
-| esignet-signup        | [v1.2.1](https://github.com/mosip/esignet-signup/tree/v1.2.1)  |
+| Repository            | Tags                                                                   |
+| --------------------- | ---------------------------------------------------------------------- |
+| esignet               | [v1.6.1](https://github.com/mosip/esignet/tree/v1.6.1)                 |
+| esignet-signup        | [v1.2.1](https://github.com/mosip/esignet-signup/tree/v1.2.1)          |
 | esignet-mock-services | [v0.11.1](https://github.com/mosip/esignet-mock-services/tree/v0.11.1) |
-| esignet-plugins       | [v1.3.2](https://github.com/mosip/esignet-plugins/tree/v1.3.2)  |
+| esignet-plugins       | [v1.3.2](https://github.com/mosip/esignet-plugins/tree/v1.3.2)         |
 
 ## Compatibility Matrix
 
