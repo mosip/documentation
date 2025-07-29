@@ -125,9 +125,10 @@ You can choose your preferred language using '**language Selection**' options av
 
 <figure><img src="../../../.gitbook/assets/inji-web-language-change.png" alt=""><figcaption><p>Language Preference</p></figcaption></figure>
 
-<!--
 
-## Login with Google or any other IDP
+
+
+# Login with Google or any other IDP
 
 > **Note:** Screenshots will be added soon to enhance the user experience and better explain the steps shown below.
 
@@ -148,6 +149,17 @@ You can choose your preferred language using '**language Selection**' options av
 5. **Set Passcode (First-Time Only)**  
    You'll be prompted to set a local passcode to secure your web wallet.
 
+
+![landing-page-inji-web-login](../../../.gitbook/assets/iww-eug-landing-page-inji-web-login.png)
+![login-via-gmail-inji-web-wallet](../../../.gitbook/assets/iww-eug-login-via-gmail-inji-web-wallet.png)
+![login-via-gmail-confirmation-from-google](../../../.gitbook/assets/iww-eug-login-via-gmail-confirmation-from-google.png)
+![set-passcode-for-inji-web-](../../../.gitbook/assets/iww-eug-set-passcode-for-inji-web-.png)
+![set-passcode-by-entering-during-first-time-login](../../../.gitbook/assets/iww-eug-set-passcode-by-entering-during-first-time-login.png)  
+![post-login-welcome-page-(home)](../../../.gitbook/assets/iww-eug-post-login-welcome-page-(home).png)
+
+
+
+
 ## Download VCs (Login)
 
 **Note:** A few example issuers are listed below. You can explore more issuers in the **Collab environment** via the UI or configure additional issuers as needed to test and explore this feature further.
@@ -162,11 +174,15 @@ You’ll need your **UIN/VID** as provided by the credential issuer.
 1. **Login to Inji Web Wallet**
 2. **Search or Select 'Republic of Veridonia National ID Department'**
 3. **Choose 'Veridonia National ID' Credential Type**
+
+![credential-type-page](../../../.gitbook/assets/iww-eug-credential-type-page.png)
+
 4. **Authenticate via eSignet (OTP method)**  
    - Enter UIN/VID → Click 'Get OTP'
    - Enter OTP → Click 'Verify'
 6. **Download Starts Automatically**  
    Verifiable Credential is stored in your web wallet in the "stored cards" page.
+
 
 ### Download Insurance VC
 
@@ -183,11 +199,25 @@ You’ll need **Policy No., Name, and Date of Birth** as shared by the issuer.
 5. **Download Starts Automatically**  
    Verifiable Credential is stored in your web wallet in the "stored cards" page.
 
+
+
 ## Manage Stored Credentials
+
+
+
+![stored-cards-dropdown-options(view,download,delete)](../../../.gitbook/assets/iww-eug-stored-cards-dropdown-options(view,download,delete).png)
+![stored-card-page-with-credentials](../../../.gitbook/assets/iww-eug-stored-card-page-with-credentials.png) 
+![stored-cards-view-option](../../../.gitbook/assets/iww-eug-stored-cards-view-option.png)  
+![delete-card](../../../.gitbook/assets/iww-eug-delete-card.png)  
+
+
+
 
 ### View Credentials (Login Mode)
 
 1. Navigate to the **Stored Cards** section in the Inji Web Wallet.
+![stored-cards-empty-page](../../../.gitbook/assets/iww-eug-stored-cards-empty-page.png)
+
 2. If your wallet has been created but no credentials have been downloaded yet, the **Stored Cards** section will appear empty.  
    - Click on the **Add Cards** option to initiate the credential download flow.  
    - Follow the steps outlined in the [Download VCs (Login)](#download-vcs-login) section to retrieve your credentials.
@@ -196,6 +226,10 @@ You’ll need **Policy No., Name, and Date of Birth** as shared by the issuer.
    - **View** – Preview the credential within the wallet.
    - **Download** – Download the VC as a PDF with an embedded QR code.
    - **Delete** – Remove the credential from your web wallet.
+
+
+
+
 
 ###  Profile & Language Preferences
 
@@ -211,10 +245,12 @@ You’ll need **Policy No., Name, and Date of Birth** as shared by the issuer.
    - A list of supported languages will appear
    - Select your preferred language from the dropdown
 
+
+![dropdown-(profile,faq,logout)](../../../.gitbook/assets/iww-eug-dropdown-(profile,faq,logout).png)  
+![profile-page](iww-eug-profile-page.png) 
+
 ## Security Note
 
 - Credentials stored in the web wallet are **only accessible post-login**.
 - Guest users can download directly to device but **credentials are not saved**.
 - Inji Web enforces **user consent** before any sharing.
-
--->
