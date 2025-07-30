@@ -179,13 +179,12 @@ In this section, you'll learn how to:
 ### Download National ID VC
 
 #### Q. What details are needed?
-You’ll need your **UIN/VID**as provided by the credential issuer, Or refer to [**UIN/VID**](../../inji-mobile/functional-overview/sandbox-details/inji-setup-guide.md#pre-requisites) for collab based demo credentials.
+You’ll need your **UIN/VID**as provided by the credential issuer. <!-- Or refer to the [**topic**](../../inji-mobile/functional-overview/sandbox-details/inji-setup-guide.md#pre-requisites) to know how you can get UIN?VID to try around [collab](https://collab.mosip.net) -->
 
-#### Steps:
 
-1. **Login to Inji Web Wallet**
-2. **Search or Select 'Republic of Veridonia National ID Department'**
-3. **Choose 'Veridonia National ID' Credential Type**
+1. Login to Inji Web Wallet
+2. Search or Select 'Republic of Veridonia National ID Department'
+3. Choose 'Veridonia National ID' Credential Type
 
 ![credential-type-page](../../../.gitbook/assets/iww-eug-credential-type-page.png)
 
@@ -203,12 +202,12 @@ You’ll need **Policy No., Name, and Date of Birth** as shared by the issuer.
 
 #### Steps:
 
-1. **Login to Inji Web Wallet**
-2. **Search or Select 'StayProtected Insurance'**
-3. **Choose 'Health Insurance' or 'Life Insurance' as Credential Type**
-4. **Authenticate via eSignet (KBI method)**  
+1. Login to Inji Web Wallet
+2. Search or Select 'StayProtected Insurance'
+3. Choose 'Health Insurance' or 'Life Insurance' as Credential Type
+4. Authenticate via eSignet (KBI method)  
    - Enter required fields
-5. **Download Starts Automatically**  
+5. Download Starts Automatically  
    Verifiable Credential is stored in your web wallet in the "stored cards" page.
 
 
@@ -216,10 +215,12 @@ You’ll need **Policy No., Name, and Date of Birth** as shared by the issuer.
 ## Manage Stored Credentials
 
 
-
 ![stored-cards-dropdown-options(view,download,delete)](../../../.gitbook/assets/iww-eug-stored-cards-dropdown-options(view,download,delete).png)
-![stored-card-page-with-credentials](../../../.gitbook/assets/iww-eug-stored-card-page-with-credentials.png) 
-![stored-cards-view-option](../../../.gitbook/assets/iww-eug-stored-cards-view-option.png)  
+
+![stored-card-page-with-credentials](../../../.gitbook/assets/iww-eug-stored-card-page-with-credentials.png)
+ 
+![stored-cards-view-option](../../../.gitbook/assets/iww-eug-stored-cards-view-option.png) 
+
 ![delete-card](../../../.gitbook/assets/iww-eug-delete-card.png)  
 
 
@@ -228,6 +229,7 @@ You’ll need **Policy No., Name, and Date of Birth** as shared by the issuer.
 ### View Credentials (Login Mode)
 
 1. Navigate to the **Stored Cards** section in the Inji Web Wallet.
+
 ![stored-cards-empty-page](../../../.gitbook/assets/iww-eug-stored-cards-empty-page.png)
 
 2. If your wallet has been created but no credentials have been downloaded yet, the **Stored Cards** section will appear empty.  
@@ -259,6 +261,7 @@ You’ll need **Policy No., Name, and Date of Birth** as shared by the issuer.
 
 
 ![dropdown-(profile,faq,logout)](../../../.gitbook/assets/iww-eug-dropdown-(profile,faq,logout).png)  
+
 ![profile-page](iww-eug-profile-page.png) 
 
 ## Security Note
