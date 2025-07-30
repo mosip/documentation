@@ -14,7 +14,7 @@ icon: rocket-launch
 
 * Name: 0.12.0
 * Date: 8th April, 2025
-* [Release Notes](version-0.12.0/)
+* [Release Notes](version-0.12.0)
 
 ## Version: 0.11.1
 
@@ -51,3 +51,4 @@ icon: rocket-launch
 * Name: Inji 0.8.0
 * Date: 26th April, 2024
 * [Release Notes](https://docs.mosip.io/inji/inji-web/inji-web/version-0.8.0)
+.

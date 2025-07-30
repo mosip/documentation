@@ -127,37 +127,49 @@ You can choose your preferred language using '**language Selection**' options av
 
 
 
+# Login to Save Credentials in the Web Wallet or Download Credentials
 
-# Login with Google or any other IDP
+**Note:** Screenshots will be added soon to enhance the user experience and better explain the steps shown below.
 
-> **Note:** Screenshots will be added soon to enhance the user experience and better explain the steps shown below.
+You can now log in to Inji Web using Google or any other supported Identity Provider (IDP) to:
 
-### Step-by-Step Process
+- **Add and securely store your credentials** in Inji's Web Wallet
+- **Download credentials** directly to your device
+
+In this section, you'll learn how to:
+
+- Log in to Inji Web Wallet
+- Save credentials for future access
+- Download credentials as needed
+
+## Login with Google or any other IDP
 
 1. **Launch Inji Web Wallet in Browser**  
    Navigate to the wallet URL in any browser.
 
+   ![landing-page-inji-web-login](../../../.gitbook/assets/iww-eug-landing-page-inji-web-login.png)
+
 2. **Click "Login with Gmail"**  
    Select the Google login option on the homepage.
+
+   ![login-via-gmail-inji-web-wallet](../../../.gitbook/assets/iww-eug-login-via-gmail-inji-web-wallet.png)
 
 3. **Select Google Account**  
    Choose your Google account or enter login credentials.
 
+   ![login-via-gmail-confirmation-from-google](../../../.gitbook/assets/iww-eug-login-via-gmail-confirmation-from-google.png)
+
 4. **Post-login Welcome Page**  
    You will land on the dashboard showing issuer and credential options.
+
+   ![post-login-welcome-page-(home)](../../../.gitbook/assets/iww-eug-post-login-welcome-page-(home).png)
 
 5. **Set Passcode (First-Time Only)**  
    You'll be prompted to set a local passcode to secure your web wallet.
 
+   ![set-passcode-for-inji-web-](../../../.gitbook/assets/iww-eug-set-passcode-for-inji-web-.png)
 
-![landing-page-inji-web-login](../../../.gitbook/assets/iww-eug-landing-page-inji-web-login.png)
-![login-via-gmail-inji-web-wallet](../../../.gitbook/assets/iww-eug-login-via-gmail-inji-web-wallet.png)
-![login-via-gmail-confirmation-from-google](../../../.gitbook/assets/iww-eug-login-via-gmail-confirmation-from-google.png)
-![set-passcode-for-inji-web-](../../../.gitbook/assets/iww-eug-set-passcode-for-inji-web-.png)
-![set-passcode-by-entering-during-first-time-login](../../../.gitbook/assets/iww-eug-set-passcode-by-entering-during-first-time-login.png)  
-![post-login-welcome-page-(home)](../../../.gitbook/assets/iww-eug-post-login-welcome-page-(home).png)
-
-
+   ![set-passcode-by-entering-during-first-time-login](../../../.gitbook/assets/iww-eug-set-passcode-by-entering-during-first-time-login.png)
 
 
 ## Download VCs (Login)
@@ -167,7 +179,7 @@ You can choose your preferred language using '**language Selection**' options av
 ### Download National ID VC
 
 #### Q. What details are needed?
-You’ll need your **UIN/VID** as provided by the credential issuer.
+You’ll need your **UIN/VID**as provided by the credential issuer, Or refer to [**UIN/VID**](../../inji-mobile/functional-overview/sandbox-details/inji-setup-guide.md#pre-requisites) for collab based demo credentials.
 
 #### Steps:
 
