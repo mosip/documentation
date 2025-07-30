@@ -69,31 +69,7 @@ Verification is performed on various configurations as mentioned below
 
 ## Feature Health
 
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
+[Feature Health](../../../../.gitbook/assets/iww-0.13.0-test-report-feature-report.png)
 
 ## Test execution statistics
 
@@ -103,43 +79,6 @@ Below are the testing test metrics by performing functional. The process followe
 
 <table data-header-hidden><thead><tr><th width="374.84375" valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Total</td><td valign="top">Passed</td><td valign="top">Failed</td><td valign="top">NA</td></tr><tr><td valign="top">686</td><td valign="top">608</td><td valign="top">78</td><td valign="top">0</td></tr><tr><td valign="top">Test Rate: 100%, With Pass Rate: 88%</td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
 
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
 
 ### UI Automation and API Test Rig test results
 
