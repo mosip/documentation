@@ -69,7 +69,7 @@ Verification is performed on various configurations as mentioned below
 
 ## Feature Health
 
-[Feature Health](../../../../.gitbook/assets/iww-0.13.0-test-report-feature-report.png)
+![Feature Health](../../../../.gitbook/assets/iww-0.13.0-test-report-feature-report.png)
 
 ## Test execution statistics
 
