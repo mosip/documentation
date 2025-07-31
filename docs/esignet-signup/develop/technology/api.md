@@ -1,3 +1,3 @@
 # API
 
-Refer the API docuemntaiton [here](https://mosip.stoplight.io/docs/identity-provider/branches/signupV1.0.3/xzlslwsgsz4w5-e-signet-signup-portal-ap-is).
+Refer the API docuemntaiton [here](https://github.com/mosip/esignet-signup/blob/v1.2.1/docs/esignet-signup-openapi.yaml).

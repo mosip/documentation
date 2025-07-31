@@ -1,3 +1,3 @@
 # API
 
-Please refer [here](https://mosip.stoplight.io/docs/identity-provider/branches/1.5.0/7oz4lmhu3pf6b-e-signet) for eSignet authentication API documentation.
+Please refer [here](https://github.com/mosip/esignet/blob/v1.6.1/docs/esignet-openapi.yaml) for eSignet authentication API documentation.
