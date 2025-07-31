@@ -13,7 +13,7 @@ The scope of testing is to verify fitment to the specification from the perspect
 
 Verification is performed not only from the end user perspective but also from the System Integrator (SI) point of view. Hence, the Configurability and Extensibility of the software is also assessed. This ensures the readiness of software for use in multiple countries. Since MOSIP is an “API First” product platform, Verification scope required comprehensive automation testing for all the MOSIP APIs. An automation Test Rig is created for the same.
 
-## Test Approach <a href="#heading-h.2et92p0" id="heading-h.2et92p0"></a>
+## Test Approach
 
 Persona based approach has been adopted to perform the IV\&V, by simulating test scenarios that resemble a real-time implementation.
 
@@ -28,7 +28,7 @@ The verification methods may differ based on how the need was addressed.
 
 For regression check, “MOSIP Test Rig” - an automation testing suite - which is indigenously designed and developed for supporting persona based testing. MOSIP Test Rig covers the end to end test execution and reporting. The end to end functional test scenarios are written starting from pre-registration, to creation of packet in registration center, processing the packet through the registration processor, generating UIN and authenticating identity using IDA through various permutation and combinations of cases being covered. MOSIP Test Rig will be an open source artifact which can also be enhanced and used by countries to validate the SI deliveries before going live. Persona classes include both negative and positive personas. Negative persona classes include users like Bribed Registration Office, Malicious Insider etc. The needs of positive persona classes must be met, whereas the needs of negative persona classes must be effectively restricted by the software.
 
-## Verified configuration <a href="#heading-h.tyjcwt" id="heading-h.tyjcwt"></a>
+## Verified configuration
 
 Verification is performed on various configurations as mentioned below
 
@@ -55,13 +55,13 @@ Default configuration -
 * Critical and Blocker Bugs verification
 * Docker Compose testing for eSignet and signup (windows, Linux and Mac)
 
-## Feature Health <a href="#heading-h.mxjdc7cxya9w" id="heading-h.mxjdc7cxya9w"></a>
+## Feature Health
 
 
 
-## Test execution statistics <a href="#heading-h.2s8eyo1" id="heading-h.2s8eyo1"></a>
+## Test execution statistics
 
-## Functional test results <a href="#heading-h.x3l4xp1n67g2" id="heading-h.x3l4xp1n67g2"></a>
+## Functional test results
 
 Below are the test metrics by performing functional testing using mock MDS, mock Auth and mock ABIS. The process followed was black box testing which based its test cases on the specifications of the software component under test. The functional tests were performed in combination of individual module testing as well as integration testing. Test data were prepared in line with the user stories. Expected results were monitored by examining the user interface. The coverage includes GUI testing, System testing, End-To-End flows across multiple languages and configurations. The testing cycle included simulation of multiple identity schema and respective UI schema configurations.
 
@@ -169,20 +169,8 @@ The various metrics that assist in test tracking and efficiency are as follows:
 
 ●     Failed Test Case Coverage: It measures the percentage of all failed test cases. (Number of failed tests / Total number of test cases executed) x 100
 
-&#x20;
 
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-Sonar Report:\
-\
+Sonar Report:
 
 
 <table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Repo Name</td><td valign="top">Branch Name</td><td valign="top">Release Version (POM)</td><td valign="top">Coverage (>80%)</td><td valign="top">Reliability (0)</td><td valign="top">Security (0)</td><td valign="top">Hotspots (0)</td><td valign="top">Duplications<br> (Less than 3%)</td></tr><tr><td valign="top">eSigent</td><td valign="top">release-1.6.x</td><td valign="top">release-1.6.1</td><td valign="top">86.2</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0%</td></tr><tr><td valign="top"><p> </p><p>eSignet Signup</p></td><td valign="top">release-1.2.x</td><td valign="top">release-1.2.1</td><td valign="top">79.3</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0%</td></tr><tr><td valign="top">esignet-mock-services</td><td valign="top"><p> </p><p>release-0.11.x</p></td><td valign="top"><p> </p><p>release-0.11.1</p></td><td valign="top">83.3</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0%</td></tr><tr><td valign="top">esignet-plugins(mock-plugin)</td><td valign="top">release-1.3.x</td><td valign="top">release-1.3.2</td><td valign="top">83.0</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0</td><td valign="top">2.9%</td></tr><tr><td valign="top">esignet-plugins(mosip-identity-plugin)</td><td valign="top"><p> </p><p>release-1.3.2</p></td><td valign="top"><p> </p><p>release-1.3.2</p></td><td valign="top">83.6</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0%</td></tr><tr><td valign="top"><p> </p><p>esignet-plugins(sunbird-rc-plugin)</p></td><td valign="top"><p> </p><p>release-1.3.2</p></td><td valign="top"><p> </p><p>release-1.3.2</p></td><td valign="top">83</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0%</td></tr></tbody></table>
