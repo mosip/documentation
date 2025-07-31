@@ -2,7 +2,7 @@
 
 **Release Number:** v1.6.1
 
-**Release Date:** Coming Soon
+**Release Date:** 29th Jul, 2025
 
 ## Overview
 
@@ -18,34 +18,35 @@ We’re excited to announce the upcoming release of [**eSignet v1.6.1**](https:/
 
 ### New Features
 
-* [**Customizable Login Types**](https://docs.esignet.io/esignet-authentication/develop/configuration/login-id-configuration-in-esignet)\
+* [**Prefix & Postfix support for Choice of Login ID**](https://docs.esignet.io/esignet-authentication/develop/configuration/login-id-configuration-in-esignet)\
   Configure login ID types (Email, Phone, VID, etc.) as per relying party (RP) needs. Comes with a revamped, more intuitive UI.
-* [**Added Client Configuration**](https://github.com/mosip/esignet/blob/v1.6.1/docs/esignet-openapi.yaml#L36)\
+* [**Customizable Client Configuration**](https://github.com/mosip/esignet/blob/v1.6.1/docs/esignet-openapi.yaml#L36)\
   Enhanced client management endpoint with additional options for better customization and control of eSignet's behavior.
-* [**Purpose-Based UI**](https://docs.esignet.io/esignet-authentication/develop/configuration/purpose-based-ui-rendering-in-esignet)\
+* [**Purpose-Based eSignet UI**](https://docs.esignet.io/esignet-authentication/develop/configuration/purpose-based-ui-rendering-in-esignet)\
   UI dynamically adapts titles and tile subtitles based on the context and purpose of the service, providing a more relevant user experience.
 
 ### Enhancements
 
-* **Captcha Validation for OTP Binding**\
-  Captcha support added to the `send-binding-otp` process to enhance security during VC binding.
-*   **JTI Mandatory in Client Assertion**\
+* **JTI Mandatory in Client Assertion**\
     JTI is now a required parameter in the client assertion JWT in token endpoint for improved security.
 
     ⚠️ **Breaking Change**: Existing relying parties (RPs) must include the `jti` claim to share consented claims successfully.
-* **Unique nonce for each transaction:** nonce query parameter in the [authorize url](https://docs.esignet.io/esignet-authentication/develop/integration/relying-party/development-and-integration-with-esignet#get-authorize) should be unique for each transaction, if duplicate nonce is found “invalid\_request“ error is thrown.
+* **Unique nonce for each transaction:** nonce query parameter in the [authorize url](https://docs.esignet.io/esignet-authentication/develop/integration/relying-party/development-and-integration-with-esignet#get-authorize) should be unique for each transaction.
+   
+    ⚠️ **Breaking Change**: If duplicate nonce is found “invalid\_request“ error is thrown.
 * **Updated Vulnerable Libraries**\
   Security has been bolstered by updating dependencies and patching known vulnerabilities.
-* **Improved Deployment Scripts**\
+* [**Improved Deployment Scripts**](https://github.com/mosip/esignet/blob/v1.6.1/deploy/README.md)\
   Upgraded installation scripts provide a smoother experience for new deployments of eSignet.
 
 ## Features Released
 
 | Feature                           | Jira                                                  |
 | --------------------------------- | ----------------------------------------------------- |
-| Choice of Login ID                | [ES-1665](https://mosip.atlassian.net/browse/ES-1665) |
+| Prefix & Postfix support for Choice of Login ID                | [ES-1665](https://mosip.atlassian.net/browse/ES-1665) |
 | Customizable Client Configuration | [ES-1655](https://mosip.atlassian.net/browse/ES-1655) |
 | Purpose-Based eSignet UI          | [ES-216](https://mosip.atlassian.net/browse/ES-216)   |
+| Deployment Script Update   | [MOSIP-40529](https://mosip.atlassian.net/browse/MOSIP-40529)|
 
 ## Security Enhancements
 
@@ -162,4 +163,4 @@ Please [refer here](https://github.com/mosip/esignet-mock-services/blob/release-
 * [**eSignet End User Guide**](https://docs.esignet.io/esignet-authentication/test/end-user-guide)
 * [**Signup End User Guide**](https://docs.esignet.io/esignet-signup/test/end-user-guide)
 
-[**QA Report**](https://github.com/mosip/test-management/tree/master/e-signet/1.6.0)
+[**QA Report**](test-report.md)
