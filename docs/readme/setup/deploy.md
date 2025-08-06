@@ -549,146 +549,45 @@ cd k8s-infra/mosip/onprem
 
 
 
-
-
-
-
-
-***
 <!--
-
-
-
-
-<>
 
 
 # Deploying Inji Certify
 This section provides step-by-step instructions to install the Inji Certify, Follow these guidelines to ensure a successful setup of Inji Certify in your environment.
 
-## Pre-requisites
-The following steps mixes both; the 'Steps' (explained through this document) and 'Repo READMEs' to help you with the prerequisites and installation of Inji Certify.
-
-* Cluster creation and configuration [steps](https://docs.inji.io/readme/setup/deploy)
-* inji-stack-config configmap [steps](https://docs.inji.io/readme/setup/deploy#pre-requisites)
-* Postgres installation [steps](https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/external/postgres)
-* Config server secerts [steps](https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/mosip/conf-secrets)
-* Config server installation [steps](https://docs.inji.io/readme/setup/deploy#config-server-installation)
-* Artifactory installation [steps](https://github.com/mosip/artifactory-ref-impl/tree/v1.3.0-beta.2/deploy)
+Refer to the [Inji Certify Readme](https://github.com/Rakshithb1/inji-certify/blob/87e28367c8872be426ae9db39bc0723af8972433/deploy/README.md) file for an always updated Inji Certify Deployment Guide.
 
 
-
-* redis installation
-```
-cd deploy/redis
-./install.sh
-```
-
-## Initialise pre-requisites
-### [DB init](../db_scripts)
-* Update values file for postgres init [here](../db_scripts/init_values.yaml).
-  ```
-   cd ../../db_scripts
-  ./init_db.sh
-  ```
-## Install inji certify
-
-  ```
-   cd ../inji-certify
-    ./install.sh
-   ```
-## [inji certify apitestrig](inji-certify-apitestrig)
-
-
-
+Note: To know about the latest or earlier versions of Inji Certify, refer to the releases [Inji Certify - Release](../../inji-certify/releases/README.md).
 
 
 # Installing Mimoto
-This section provides step-by-step instructions to install the Mimoto application, configuration, and deployment steps. Follow these guidelines to ensure a successful setup of Mimoto in your environment.
+This section provides step-by-step instructions to install Mimoto.
+Refer to the [Readme](https://github.com/Rakshithb1/mimoto/blob/d35d3032a59abdb84ed1bd2b42dfdaa06bdac1df/deploy/README.md) file for an always updated guide.
 
-1. Refer to Readme file in the [mimoto repo](https://github.com/mosip/mimoto) which has detailed instructions to deploy mimoto.
 
- Note: To know bout the latest or earlier versions of Mimoto, refer to the releases [Inji Wallet Mobile - Release](../../inji-wallet/inji-mobile/versions/README.md) and [Inji Web Releases](../../inji-wallet/inji-web/versions/README.md).
+ Note: To know about the latest or earlier versions of Mimoto, refer to the releases [Inji Wallet Mobile - Release](../../inji-wallet/inji-mobile/versions/README.md) and [Inji Web Releases](../../inji-wallet/inji-web/versions/README.md).
+
 
 
 # Installing Inji Web UI
-This section provides step-by-step instructions to install the Inji Web application (While the prerequisites has been taken care of), configuration, and deployment steps. Follow these guidelines to ensure a successful setup of Inji Web in your environment.
-
-Inji Web deployment broadly requires following two steps:
-
-* Esuring the Prerequisites and
-* Installing Inji Web and DataShare
-
-## Pre-requisites
-The following steps mixes both; the steps and repo READMEs to help you with the prerequisites and installation of Inji Web and DataShare. 
-
-* Cluster creation and configuration [steps](#observation-cluster-setup-and-configuration)
-
-* inji-stack-config configmap [steps](https://docs.inji.io/readme/setup/deploy#pre-requisites)
-
-* Config server secerts [steps](https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/mosip/conf-secrets)
-
-* Config server installation [steps](https://docs.inji.io/readme/setup/deploy#config-server-installation)
-
-* Object store installation [steps](https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/external/object-store)
+This section provides step-by-step instructions to install the Inji Web UI. 
 
 
-
-## Installing DataShare and Inji Web UI
-The [Inji Web Repo](https://github.com/mosip/inji-web) contains the scripts to install and configure Inji Web UI and DataShare applications.
-
-```
-./install.sh
-```
-
-Note: After installing inji web and datashare, ensure that the active_profile_env parameter in the config-map of the config-server-share is correctly set to: default,inji-default,standalone. 
+Refer to the [Readme](https://github.com/Rakshithb1/inji-web/blob/a7f39d8e539cbe041deba775c939f31686c84851/deploy/README.md) file for an always updated Inji Web Deployment Guide.
 
 
-
+ Note: To know about the latest or earlier versions of Inji Web Wallet refer to the releases [Inji Wallet Web - Release](../../inji-wallet/inji-web/inji-web/README.md).
 
 
 
 # Installing Inji Verify
 This section provides step-by-step instructions to install the Inji Verify.
 
-## Pre-requisites
-The following steps mixes both; the 'Steps' (explained through this document) and 'Repo READMEs' (Which even takes you to the repo where you also find the deploy directory which contains the installation scripts) to help you with the prerequisites and installation of Inji Verify.
+
+Refer to the [Readme](https://github.com/Rakshithb1/inji-verify/blob/064b7d38a5b53e4f31429f84e0212b7c772c8e28/deploy/README.md) file for an always updated Inji Verify Deployment Guide.
 
 
-* Cluster creation and configuration [steps](https://docs.inji.io/readme/setup/deploy)
-* inji-stack-config configmap [steps](https://docs.inji.io/readme/setup/deploy#pre-requisites)
-* Postgres installation [steps](https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/external/postgres) 
-
-## Initialise pre-requisites
-### [DB init](../db_scripts)
-* Update values file for postgres init [here](../db_scripts/init_values.yaml) and postgres config [here](../db_scripts/postgres-config.yaml).
-  ```
-   cd db_scripts
-  ./init_db.sh
-  ```
-  
-## Install
-* Run `install-all.sh` to deploy inji verify services.
-  ```
-  cd deploy
-  ./install-all.sh
-  ```
-
-## Delete
-* Run `delete-all.sh` to remove inji verify services.
-  ```
-  cd deploy
-  ./delete-all.sh
-  ```
-
-## Restart
-* Run `restart-all.sh` to restart inji verify services.
-  ```
-  cd deploy
-  ./restart-all.sh
-  ```
-## [inji verify Apitestrig](injiverify-apitestrig)
-
-
+Note: To know about the latest or earlier versions of Mimoto, refer to the releases [Inji Wallet Mobile - Release](../../inji-wallet/inji-mobile/versions/README.md) and [Inji Web Releases](../../inji-wallet/inji-web/versions/README.md).
 -->
 
