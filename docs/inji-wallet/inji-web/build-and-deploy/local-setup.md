@@ -1,10 +1,16 @@
 # Local setup
 
-This document aims to assist users in setting up Inji Web on their local environment, offering step-by-step instructions to replicate the platform's functionality on their machine for development or testing purposes.
+This guide aims  users in setting up Inji Web for development. You can go through the instructions step-by-step to set up your machine up for development.
 
-### Repositories:
+## Repositories:
 
-Clone the repositories locally to bring up your own setup. Repository information can be fetched from [**here**](https://github.com/mosip/inji-web.git).
+Clone the repositories locally to bring up your own setup.
+
+`https://github.com/mosip/inji-web.git`.
+
+
+Refer to the [**release notes**](https://github.com/mosip/inji-web/releases) to know about the earlier releases.
+
 
 **Pre-requisite:**
 
@@ -17,7 +23,7 @@ $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bas
 $ nvm install 18
 ```
 
-#### Folder Structure:
+## Folder Structure:
 
 * **helm:** folder contains helm charts required to deploy on K8S
 * **inji-web:** contains the source code and Dockerfile
@@ -30,7 +36,7 @@ $ nvm install 18
 
 This setup uses Docker Compose to run **DataShare Service (Service to store VC)**, **Mimoto Service** (Backend for Frontend) and **Inji Web** (Frontend) together locally, providing a simple and easy-to-manage environment.
 
-### Steps:
+## Steps:
 
 1. **Navigate to the `inji-web` folder and build the Inji Web image locally.**
 
