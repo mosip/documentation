@@ -1,16 +1,66 @@
-# Deploy
+# Deployment Guide
 
-## How is this guide organized?
+
+# How is this guide organized?
 
 This Installation Guide is structured as below:
 
-1. System Requirements
-2. Deploy Prerequisites
-3. Deploy Inji Web
+1. README Guide links (Inji Stack - Under Individual Repositories)
+2. Common Prerequisites
+* System Requirements
+* Deploy Prerequisites
 
-### Deployment Architecture \[TODO]
+
+# Inji Deployment 
+
+## Deploying Inji Certify
+This section provides step-by-step instructions to install the Inji Certify, Follow these guidelines to ensure a successful setup of Inji Certify in your environment.
+
+Refer to the [Inji Certify Readme](https://github.com/mosip/inji-certify/tree/develop/deploy) file under the Inji Certify Repo.
+
+
+Note: To know more about the latest or earlier versions of Inji Certify, refer to the releases [Inji Certify - Release](../../inji-certify/releases/README.md).
+
+
+
+## Installing Mimoto
+
+This section provides step-by-step instructions to install Mimoto. Follow these guidelines to ensure a successful setup of Mimoto in your environment.
+
+Refer to the [Readme](https://github.com/mosip/mimoto/tree/develop/deploy).
+
+
+ Note: To know about the latest or earlier versions of Mimoto, refer to the releases [Inji Wallet Mobile - Release](../../inji-wallet/inji-mobile/versions/README.md) and [Inji Web Releases](../../inji-wallet/inji-web/versions/README.md).
+
+
+
+## Installing Inji Web UI
+This section provides step-by-step instructions to install the Inji Web UI. 
+
+
+Refer to the [Readme](https://github.com/mosip/inji-web/tree/develop/deploy) file for an always updated Inji Web Deployment Guide.
+
+
+ Note: To know about the latest or earlier versions of Inji Web Wallet refer to the releases [Inji Wallet Web - Release](../../inji-wallet/inji-web/inji-web/README.md).
+
+
+## Installing Inji Verify
+This section provides step-by-step instructions to install the Inji Verify.
+
+
+Refer to the [Readme](https://github.com/mosip/inji-verify/tree/develop/deploy) file for an always updated Inji Verify Deployment Guide.
+
+
+
+# Common Prerequisites:
+
+Common prerequisites are the prerequisites that are common for all the Inji Stack modules. These prerequisites are required to be fulfilled before proceeding with the installation of any of the Inji Stack modules.
+
+## Deployment Architecture [TODO]
 
 <figure><img src="../../.gitbook/assets/iww-deployment-diagram.png" alt=""><figcaption><p>Inji Web Deployment Architecture</p></figcaption></figure>
+
+
 
 ## Prerequisites
 
@@ -537,57 +587,11 @@ cd k8s-infra/mosip/onprem
 
 ### mimoto installation
 
-* mimoto installation guide: [link](https://github.com/Rakshithb1/mimoto/blob/MOSIP-42546/deploy/README.md) 
+* mimoto installation guide: [link](https://github.com/mosip/mimoto/tree/develop/deploy) 
 
 ### Inji web and datashare installation
 
 * [Inji web and datashare installation](https://github.com/mosip/inji-web/tree/develop/deploy)
 * **Note**: After installing inji web and datashare, ensure that the active\_profile\_env parameter in the config-map of the config-server-share is correctly set to: default,inji-default,standalone.
 
-
-
-
-
-
-<!--
-
-
-# Deploying Inji Certify
-This section provides step-by-step instructions to install the Inji Certify, Follow these guidelines to ensure a successful setup of Inji Certify in your environment.
-
-Refer to the [Inji Certify Readme](https://github.com/Rakshithb1/inji-certify/blob/87e28367c8872be426ae9db39bc0723af8972433/deploy/README.md) file for an always updated Inji Certify Deployment Guide.
-
-
-Note: To know about the latest or earlier versions of Inji Certify, refer to the releases [Inji Certify - Release](../../inji-certify/releases/README.md).
-
-
-# Installing Mimoto
-This section provides step-by-step instructions to install Mimoto.
-Refer to the [Readme](https://github.com/Rakshithb1/mimoto/blob/d35d3032a59abdb84ed1bd2b42dfdaa06bdac1df/deploy/README.md) file for an always updated guide.
-
-
- Note: To know about the latest or earlier versions of Mimoto, refer to the releases [Inji Wallet Mobile - Release](../../inji-wallet/inji-mobile/versions/README.md) and [Inji Web Releases](../../inji-wallet/inji-web/versions/README.md).
-
-
-
-# Installing Inji Web UI
-This section provides step-by-step instructions to install the Inji Web UI. 
-
-
-Refer to the [Readme](https://github.com/Rakshithb1/inji-web/blob/a7f39d8e539cbe041deba775c939f31686c84851/deploy/README.md) file for an always updated Inji Web Deployment Guide.
-
-
- Note: To know about the latest or earlier versions of Inji Web Wallet refer to the releases [Inji Wallet Web - Release](../../inji-wallet/inji-web/inji-web/README.md).
-
-
-
-# Installing Inji Verify
-This section provides step-by-step instructions to install the Inji Verify.
-
-
-Refer to the [Readme](https://github.com/Rakshithb1/inji-verify/blob/064b7d38a5b53e4f31429f84e0212b7c772c8e28/deploy/README.md) file for an always updated Inji Verify Deployment Guide.
-
-
-Note: To know about the latest or earlier versions of Mimoto, refer to the releases [Inji Wallet Mobile - Release](../../inji-wallet/inji-mobile/versions/README.md) and [Inji Web Releases](../../inji-wallet/inji-web/versions/README.md).
--->
 
