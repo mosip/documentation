@@ -64,6 +64,7 @@
   * [Releases](inji-wallet/inji-mobile/versions/README.md)
     * [Version 0.17.0](inji-wallet/inji-mobile/versions/version-0.17.0/README.md)
       * [Test Report](inji-wallet/inji-mobile/versions/version-0.17.0/test-report.md)
+      * [Test Report](inji-wallet/inji-mobile/versions/version-0.17.0/test-report-1.md)
     * [Version 0.17.1](inji-wallet/inji-mobile/versions/version-0.17.1/README.md)
       * [Test Report](inji-wallet/inji-mobile/versions/version-0.17.1/test-report.md)
     * [Version 0.16.0](inji-wallet/inji-mobile/versions/version-0.16.0/README.md)
