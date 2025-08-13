@@ -138,6 +138,8 @@
     * [Version 0.8.1](inji-wallet/inji-web/inji-web/version-0.8.1.md)
     * [Version 0.8.0](inji-wallet/inji-web/inji-web/version-0.8.0/README.md)
       * [Test Report](inji-wallet/inji-web/inji-web/version-0.8.0/test-report.md)
+    * [Version 0.14.0](inji-wallet/inji-web/inji-web/version-0.14.0/README.md)
+      * [Test Report](inji-wallet/inji-web/inji-web/version-0.14.0/test-report.md)
 
 ## INJI CERTIFY
 
