@@ -189,6 +189,7 @@
   * [Local Setup](inji-verify/build-and-deploy/local-setup.md)
   * [Generate QR Code](inji-verify/build-and-deploy/creating-verifiable-credentials-and-generating-qr-codes.md)
 * [Releases](inji-verify/releases/README.md)
+  * [Version 0.13.1](inji-verify/releases/version-0.13.1.md)
   * [Version 0.13.0](inji-verify/releases/version-0.13.0/README.md)
     * [Test Report](inji-verify/releases/version-0.13.0/test-report.md)
   * [Version 0.12.3](inji-verify/releases/version-0.12.3/README.md)
