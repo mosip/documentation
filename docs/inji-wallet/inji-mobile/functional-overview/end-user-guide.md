@@ -126,18 +126,49 @@ Used in public campaigns or mass rollouts (e.g., vaccine certificates, land card
 Used for personalized and secure issuance (e.g., mDL, insurance).
 
 1. On the issuer’s website, or from a flyer/poster, scan the QR code using the **Scan & Download** option available in Inji Wallet.
+
 2. Click on the **"+" (Add Credential)** icon.
+
+![image](../../../.gitbook/assets/iwm-eug-credential-offer-with-transaction-code-1.png)
+
 3. Select the first option: **Scan & Download**.
+
+![image](../../../.gitbook/assets/iwm-eug-credential-offer-with-transaction-code-2.png)
+
 4. Scan the QR code from the issuer's website or printed material.
+
+![image](../../../.gitbook/assets/iwm-eug-credential-offer-with-transaction-code-3.png)
+![image](../../../.gitbook/assets/iwm-eug-credential-offer-with-transaction-code-4-a.png)
+![image](../../../.gitbook/assets/iwm-eug-credential-offer-with-transaction-code-4-b.png)
+![image](../../../.gitbook/assets/iwm-eug-credential-offer-with-transaction-code-4-c.png)
+![image](../../../.gitbook/assets/iwm-eug-credential-offer-with-transaction-code-5.png)
+
 5. If this is your first time interacting with the issuer, a **trust screen** will appear asking you to trust the issuer.
+
+![image](../../../.gitbook/assets/iwm-eug-credential-offer-with-transaction-code-6.png)
+
 6. You can **proceed to trust** and add the issuer to your trusted list or **decline** as per your preference. This prompt appears only **once per issuer**.
    * If you **Decline**, the download **will not proceed** further.
    * If you **Allow**, the download **will proceed** further.
+
+
 7. You will be prompted to **enter a Transaction Code / OTP** provided by the issuer via SMS or Email.
+
+![image](../../../.gitbook/assets/iwm-eug-credential-offer-with-transaction-code-7.png)
+![image](../../../.gitbook/assets/iwm-eug-credential-offer-with-transaction-code-8.png)
+
 8. After entering the code, the wallet retrieves the credential securely.
-9. The wallet recognizes the embedded **credential offer**.
-10. Without needing to log in or enter any data, your credential starts downloading.
+
+![image](../../../.gitbook/assets/iwm-eug-credential-offer-with-transaction-code-9.png)
+![image](../../../.gitbook/assets/iwm-eug-credential-offer-with-transaction-code-9.png)
+
+9. The wallet recognizes the embedded **credential offer**, Without needing to log in or enter any data, your credential starts downloading.
+
 11. You’ll see a **success message** and the VC will appear in your wallet.
+
+![image](../../../.gitbook/assets/iwm-eug-credential-offer-with-transaction-code-11.png)
+![image](../../../.gitbook/assets/iwm-eug-credential-offer-with-transaction-code-12.png)
+![image](../../../.gitbook/assets/iwm-eug-credential-offer-with-transaction-code-13.png)
 
 ### Viewing the history of the downloaded VC
 
@@ -344,3 +375,40 @@ To restore backed-up VCs, the user has to choose their preference of the cloud b
 ### Restore - ios
 
 <figure><img src="../../../.gitbook/assets/iw-android-backup-and-restore-1.png" alt="" width="563"><figcaption></figcaption></figure>
+
+
+
+
+<!--
+
+
+### Download Credential by Scanning a QR Code (Credential Offer with Pre-Auth Code)
+
+Credential Offer with Pre-Auth Code
+
+
+{% hint style="warning" %}
+**Note:** Screenshots will be added soon to enhance the user experience and better explain the steps shown below.
+{% endhint %}
+
+This flow allows you to download credentials simply by scanning a QR code, **without login** or **manual input of ID/Identifier or other data**.
+
+This is used in public campaigns or mass rollouts (e.g., vaccine certificates, land cards).
+
+#### 1. Pre-Authorized Credential Offer (**Without Transaction Code**)
+
+1. You can scan the QR code using the **Scan & Download** option available in Inji Wallet (on the issuer’s website, or from a flyer/poster).
+
+2. Click on the **"+" (Add Credential)** icon.
+
+3. Select the first option: **Scan & Download**.
+4. Scan the QR code from the issuer's website or printed material.
+5. If this is your first time interacting with the issuer, a **trust screen** will appear asking you to trust the issuer.
+6. You can **proceed to trust** and add the issuer to your trusted list or **decline** as per your preference. This prompt appears only **once per issuer**.
+   * If you **Decline**, the download **will not proceed** further.
+   * If you **Allow**, the download **will proceed** further.
+7. The wallet recognizes the embedded **credential offer**.
+8. Without needing to log in or enter any data, your credential starts downloading.
+9. You’ll see a **success message** and the VC will appear in your wallet.
+
+-->
