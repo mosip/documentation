@@ -111,15 +111,36 @@ Used in public campaigns or mass rollouts (e.g., vaccine certificates, land card
 
 1. On the issuer’s website, or from a flyer/poster, scan the QR code using the **Scan & Download** option available in Inji Wallet.
 2. Click on the **"+" (Add Credential)** icon.
+
+![image](../../../.gitbook/assets/iwm-eug-credential-offer-1.png)
+
 3. Select the first option: **Scan & Download**.
+
+![image](../../../.gitbook/assets/iwm-eug-credential-offer-2.png)
+
 4. Scan the QR code from the issuer's website or printed material.
+
+![image](../../../.gitbook/assets/iwm-eug-credential-offer-3.png)
+![image](../../../.gitbook/assets/iwm-eug-credential-offer-4-a.png)
+![image](../../../.gitbook/assets/iwm-eug-credential-offer-4-b.png)
+![image](../../../.gitbook/assets/iwm-eug-credential-offer-4-c.png)
+![image](../../../.gitbook/assets/iwm-eug-credential-offer-5.png)
+
 5. If this is your first time interacting with the issuer, a **trust screen** will appear asking you to trust the issuer.
 6. You can **proceed to trust** and add the issuer to your trusted list or **decline** as per your preference. This prompt appears only **once per issuer**.
    * If you **Decline**, the download **will not proceed** further.
    * If you **Allow**, the download **will proceed** further.
-7. The wallet recognizes the embedded **credential offer**.
-8. Without needing to log in or enter any data, your credential starts downloading.
+
+![](../../../.gitbook/assets/iwm-eug-credential-offer-6.png)
+
+7. The wallet recognizes the embedded **credential offer**, without needing to log in or enter any data, your credential starts downloading.
+![](../../../.gitbook/assets/iwm-eug-credential-offer-9.png)
+
 9. You’ll see a **success message** and the VC will appear in your wallet.
+
+![](../../../.gitbook/assets/iwm-eug-credential-offer-11.png)
+![](../../../.gitbook/assets/iwm-eug-credential-offer-12.png)
+![](../../../.gitbook/assets/iwm-eug-credential-offer-13.png)
 
 #### b. Pre-Authorized Credential Offer (**With Transaction Code**)
 
@@ -129,23 +150,23 @@ Used for personalized and secure issuance (e.g., mDL, insurance).
 
 2. Click on the **"+" (Add Credential)** icon.
 
-![image](../../../.gitbook/assets/iwm-eug-credential-offer-with-transaction-code-1.png)
+![](../../../.gitbook/assets/iwm-eug-credential-offer-1.png)
 
 3. Select the first option: **Scan & Download**.
 
-![image](../../../.gitbook/assets/iwm-eug-credential-offer-with-transaction-code-2.png)
+![](../../../.gitbook/assets/iwm-eug-credential-offer-2.png)
 
 4. Scan the QR code from the issuer's website or printed material.
 
-![image](../../../.gitbook/assets/iwm-eug-credential-offer-with-transaction-code-3.png)
-![image](../../../.gitbook/assets/iwm-eug-credential-offer-with-transaction-code-4-a.png)
-![image](../../../.gitbook/assets/iwm-eug-credential-offer-with-transaction-code-4-b.png)
-![image](../../../.gitbook/assets/iwm-eug-credential-offer-with-transaction-code-4-c.png)
-![image](../../../.gitbook/assets/iwm-eug-credential-offer-with-transaction-code-5.png)
+![](../../../.gitbook/assets/iwm-eug-credential-offer-3.png)
+![](../../../.gitbook/assets/iwm-eug-credential-offer-4-a.png)
+![](../../../.gitbook/assets/iwm-eug-credential-offer-4-b.png)
+![](../../../.gitbook/assets/iwm-eug-credential-offer-4-c.png)
+![](../../../.gitbook/assets/iwm-eug-credential-offer-5.png)
 
 5. If this is your first time interacting with the issuer, a **trust screen** will appear asking you to trust the issuer.
 
-![image](../../../.gitbook/assets/iwm-eug-credential-offer-with-transaction-code-6.png)
+![](../../../.gitbook/assets/iwm-eug-credential-offer-6.png)
 
 6. You can **proceed to trust** and add the issuer to your trusted list or **decline** as per your preference. This prompt appears only **once per issuer**.
    * If you **Decline**, the download **will not proceed** further.
@@ -154,21 +175,20 @@ Used for personalized and secure issuance (e.g., mDL, insurance).
 
 7. You will be prompted to **enter a Transaction Code / OTP** provided by the issuer via SMS or Email.
 
-![image](../../../.gitbook/assets/iwm-eug-credential-offer-with-transaction-code-7.png)
-![image](../../../.gitbook/assets/iwm-eug-credential-offer-with-transaction-code-8.png)
+![](../../../.gitbook/assets/iwm-eug-credential-offer-7.png)
+![](../../../.gitbook/assets/iwm-eug-credential-offer-8.png)
 
 8. After entering the code, the wallet retrieves the credential securely.
 
-![image](../../../.gitbook/assets/iwm-eug-credential-offer-with-transaction-code-9.png)
-![image](../../../.gitbook/assets/iwm-eug-credential-offer-with-transaction-code-9.png)
+![](../../../.gitbook/assets/iwm-eug-credential-offer-9.png)
 
 9. The wallet recognizes the embedded **credential offer**, Without needing to log in or enter any data, your credential starts downloading.
 
 11. You’ll see a **success message** and the VC will appear in your wallet.
 
-![image](../../../.gitbook/assets/iwm-eug-credential-offer-with-transaction-code-11.png)
-![image](../../../.gitbook/assets/iwm-eug-credential-offer-with-transaction-code-12.png)
-![image](../../../.gitbook/assets/iwm-eug-credential-offer-with-transaction-code-13.png)
+![](../../../.gitbook/assets/iwm-eug-credential-offer-11.png)
+![](../../../.gitbook/assets/iwm-eug-credential-offer-12.png)
+![](../../../.gitbook/assets/iwm-eug-credential-offer-13.png)
 
 ### Viewing the history of the downloaded VC
 
