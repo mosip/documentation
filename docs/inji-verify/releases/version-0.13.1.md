@@ -12,23 +12,25 @@ The Inji Verify 0.13.1 patch release includes critical fixes to ensure smooth de
 
 ### Key Updates:
 
-**1. Database Upgrade Script Fix:** 
-* In version 0.13.0, the db_upgrade script was missing the table creation script verify-vc_submission.sql.This caused the Inji Verify service to fail when upgrading from version 0.12.3 (which already had the database set up), as the required table was not created.
-* The previous workaround (in 0.13.0) required manually running verify-vc_submission.sql from db_scripts.
-* **Fix**: This patch release now includes the missing script in db_scripts, ensuring the table is created automatically during upgrades.
+**1. Database Upgrade Script Fix:**
 
-**2. Configuration Update:** 
-* Updates have been made to mimoto-trusted-verifiers.json to support redirect calls from InjiWeb during online Verifiable Credential (VC) sharing.
+* In version 0.13.0, the db\_upgrade script was missing the table creation script `verify-vc_submission.sql`.This caused the Inji Verify service to fail when upgrading from version 0.12.3 (which already had the database set up), as the required table was not created.
+* The previous workaround (in 0.13.0) required manually running `verify-vc_submission.sql` from db\_scripts.
+* **Fix**: This patch release now includes the missing script in db\_scripts, ensuring the table is created automatically during upgrades.
 
-**Note:** We recommend upgrading directly to Inji Verify v0.13.1 instead of using v0.13.0.
- If you continue using v0.13.0, you must manually run verify-vc_submission.sql from db_scripts to create the required table.
+**2. Configuration Update:**
 
+* Updates have been made to `mimoto-trusted-verifiers.json` to support redirect calls from InjiWeb during online Verifiable Credential (VC) sharing.
+
+{% hint style="warning" %}
+**Note:** We recommend upgrading directly to Inji Verify v0.13.1 instead of using v0.13.0. If you continue using v0.13.0, you must manually run verify-vc\_submission.sql from db\_scripts to create the required table.
+{% endhint %}
 
 ### Repositories: Released/Dependent
 
-| Repositories        | Tags: Released/Dependent                                     |
-| ------------------- | ------------------------------------------------------------ |
-| Inji Verify         | v0.13.1 |
+| Repositories | Tags: Released/Dependent |
+| ------------ | ------------------------ |
+| Inji Verify  | v0.13.1                  |
 
 ### Projects: Released
 
@@ -47,13 +49,13 @@ The following table outlines the tested and certified compatibility of Inji Veri
 
 ### Release Scope
 
-Please refer to the list of items covered as part of [0.13.1](https://mosip.atlassian.net/issues/?filter=11694&jql=project%20%3D%20%22Inji%20Verify%22%20AND%20issuetype%20in%20%28Story%2C%20Task%2C%20Bug%29%20and%20fixversion%3D0.13.1) patch release.
+Please refer to the list of items covered as part of [0.13.1](https://mosip.atlassian.net/issues/?filter=11694\&jql=project%20%3D%20%22Inji%20Verify%22%20AND%20issuetype%20in%20%28Story%2C%20Task%2C%20Bug%29%20and%20fixversion%3D0.13.1) patch release.
 
 ### Bug Fixes
 
 Below is the list of fixes as part of the 0.13.1 release:
 
-<table><thead><tr><th width="222.41973876953125">Jira ID</th><th>Description</th></tr></thead><tbody><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1255">INJIVER-1255</a></td><td>The db_upgrade script for version 0.13.0 is missing the table creation script verify-vc_submission.sql. As a result, when upgrading from version 0.12.3 (which already had the database setup), the required table was not created, causing the inji-verify service to fail.</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1271">INJIVER-1271</a></td><td>VP Verification was failing for MOSIP National ID VC as there was a case-sensitive mismatch in “type” of config.json.</td></tr></tbody></table>
+<table><thead><tr><th width="222.41973876953125">Jira ID</th><th>Description</th></tr></thead><tbody><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1255">INJIVER-1255</a></td><td>The db_upgrade script for version 0.13.0 is missing the table creation script <code>verify-vc_submission.sql</code>. As a result, when upgrading from version 0.12.3 (which already had the database setup), the required table was not created, causing the inji-verify service to fail.</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1271">INJIVER-1271</a></td><td>VP Verification was failing for MOSIP National ID VC as there was a case-sensitive mismatch in “type” of config.json.</td></tr></tbody></table>
 
 ### Documentation
 
