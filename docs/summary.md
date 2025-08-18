@@ -20,6 +20,7 @@
     * [v1.4.2](roadmap-and-releases/versions/v1.4.2.md)
     * [v1.4.1](roadmap-and-releases/versions/v1.4.1/README.md)
       * [Test Report](roadmap-and-releases/versions/v1.4.1/test-report.md)
+      * [Performance Report](roadmap-and-releases/versions/v1.4.1/performance-report.md)
     * [v1.4.0](roadmap-and-releases/versions/v1.4.0/README.md)
       * [Test Report](roadmap-and-releases/versions/v1.4.0/test-report.md)
     * [v1.3.0](roadmap-and-releases/versions/v1.3.0/README.md)
