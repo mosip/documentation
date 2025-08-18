@@ -122,6 +122,7 @@
     * [Local setup](inji-wallet/inji-web/build-and-deploy/local-setup.md)
     * [Deployment Architecture](inji-wallet/inji-web/build-and-deploy/iww-deployment-architecture.md)
     * [Deployment Guide](inji-wallet/inji-web/build-and-deploy/iww-deployment-guide.md)
+    * [Version 0.13.1](inji-wallet/inji-web/build-and-deploy/version-0.13.1.md)
   * [Releases](inji-wallet/inji-web/inji-web/README.md)
     * [Version 0.13.0](inji-wallet/inji-web/inji-web/version-0.13.0/README.md)
       * [Test Report](inji-wallet/inji-web/inji-web/version-0.13.0/test-report.md)
