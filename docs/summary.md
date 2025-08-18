@@ -101,4 +101,5 @@
   * [Resources](general/resources.md)
   * [FAQs](general/faq.md)
   * [Glossary](general/glossary.md)
+  * [Contact Us](general/contact-us.md)
 * [Overview](overview.md)
