@@ -4,6 +4,12 @@ icon: rocket-launch
 
 # Releases
 
+## Version: 0.13.1
+
+* Name: 0.13.1
+* Date: 29th July, 2025
+* [Release Notes](version-0.13.1/)
+
 ## Version: 0.13.0
 
 * Name: 0.13.0
