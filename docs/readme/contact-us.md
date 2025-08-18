@@ -13,8 +13,9 @@ Join the conversation at [community.mosip.io](https://community.mosip.io) to ask
 ***
 
 **Feedback**\
-We truly value your input. Click [here](https://forms.gle/ycYEPRjN66a18Pk48) to share your feedback and help us make Inji better. \
-Every suggestion counts in shaping our products and processes.
+We truly value your input. Every suggestion counts in shaping our products and processes.\
+Click [here](https://forms.gle/ycYEPRjN66a18Pk48) to share your feedback and help us make Inji better. \
+
 
 ***
 
