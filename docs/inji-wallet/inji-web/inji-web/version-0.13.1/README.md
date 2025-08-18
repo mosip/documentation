@@ -1,10 +1,10 @@
 # Version 0.13.1
 
-**Release Notes:** Inji Web Wallet 0.13.1 (Patch)
+**Release Notes:** Inji Web Wallet 0.13.1
 
-**Release Type:** Developer  
+**Release Type:** Patch
 
-**Release Date:** Coming Soon  
+**Release Date:** 18th August 2025 
 
 ### Overview
 The Inji Web 0.13.1 (Patch) release delivers key improvements in configuration and mimoto session handling. The patch enhances Docker and inji-config setup for smoother local development and trusted verifier update. On the backend, mimoto now leverages Spring Security for session management, resolving logout errors, while automation has been improved to address case sensitivity issues in test assertions.
@@ -43,9 +43,9 @@ The list of known issues can be found [here](https://mosip.atlassian.net/issues/
 ### Repositories Released
 | Module     | Version |
 |------------|---------|
-| Inji-web   | v0.13.1 |
-| mimoto     | v0.18.1 |
-| inji-config| v0.9.1  |
+| Inji-web   | [v0.13.1](https://github.com/mosip/inji-web/tree/v0.13.1) |
+| mimoto     | [v0.18.1](https://github.com/mosip/mimoto/tree/v0.18.1) |
+| inji-config| [v0.9.1](https://github.com/mosip/inji-config/tree/v0.9.1)  |
 
 ### Compatible Modules
 | Module             | Version |
@@ -60,4 +60,4 @@ The list of known issues can be found [here](https://mosip.atlassian.net/issues/
 - [Technical Documentation](https://docs.inji.io/inji-wallet/inji-web/technical-overview)  
 - [Feature Documentation](https://docs.inji.io/inji-wallet/inji-web/overview/features)  
 - [End-User Guide](https://docs.inji.io/inji-wallet/inji-web/functional-overview/end-user-guide)  
-- QA Report(Coming Soon) 
+- [QA Report](https://docs.inji.io/inji-wallet/inji-web/inji-web/version-0.13.1/test-report) 
