@@ -13,8 +13,8 @@ Join the conversation at [community.mosip.io](https://community.mosip.io) to ask
 ***
 
 **Feedback**\
-We truly value your input. Click [here](https://docs.google.com/forms/d/e/1FAIpQLSfY0_QWR01q9eP_AwC9gLNVfoKi0q7tfqxywxf153coVQHl0g/viewform) to share your feedback and help us make eSignet better. \
-Every suggestion counts in shaping our products and processes.
+We truly value your input. Every suggestion counts in shaping our products and processes.\
+Click [here](https://docs.google.com/forms/d/e/1FAIpQLSfY0_QWR01q9eP_AwC9gLNVfoKi0q7tfqxywxf153coVQHl0g/viewform) to share your feedback and help us make eSignet better.&#x20;
 
 ***
 
