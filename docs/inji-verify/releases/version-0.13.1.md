@@ -18,10 +18,6 @@ The Inji Verify 0.13.1 patch release includes critical fixes to ensure smooth de
 * The previous workaround (in 0.13.0) required manually running `verify-vc_submission.sql` from db\_scripts.
 * **Fix**: This patch release now includes the missing script in db\_scripts, ensuring the table is created automatically during upgrades.
 
-**2. Configuration Update:**
-
-* Updates have been made to `mimoto-trusted-verifiers.json` to support redirect calls from InjiWeb during online Verifiable Credential (VC) sharing.
-
 {% hint style="warning" %}
 **Note:** We recommend upgrading directly to Inji Verify v0.13.1 instead of using v0.13.0. If you continue using v0.13.0, you must manually run verify-vc\_submission.sql from db\_scripts to create the required table.
 {% endhint %}
