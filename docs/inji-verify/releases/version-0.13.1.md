@@ -55,7 +55,7 @@ Please refer to the list of items covered as part of [0.13.1](https://mosip.atla
 
 Below is the list of fixes as part of the 0.13.1 release:
 
-<table><thead><tr><th width="222.41973876953125">Jira ID</th><th>Description</th></tr></thead><tbody><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1255">INJIVER-1255</a></td><td>The db_upgrade script for version 0.13.0 is missing the table creation script <code>verify-vc_submission.sql</code>. As a result, when upgrading from version 0.12.3 (which already had the database setup), the required table was not created, causing the inji-verify service to fail.</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1271">INJIVER-1271</a></td><td>VP Verification was failing for MOSIP National ID VC as there was a case-sensitive mismatch in “type” of config.json.</td></tr></tbody></table>
+<table><thead><tr><th width="222.41973876953125">Jira ID</th><th>Description</th></tr></thead><tbody><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1255">INJIVER-1255</a></td><td>The db_upgrade script for version 0.13.0 is missing the table creation script <code>verify-vc_submission.sql</code>. As a result, when upgrading from version 0.12.3 (which already had the database setup), the required table was not created, causing the inji-verify service to fail.</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1271">INJIVER-1271</a></td><td>VP Verification was failing for MOSIP National ID VC as there was a case-sensitive mismatch in “type” of config.json.</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1251">INJIVER-1251</a></td><td>API automation failure observed for the /vp-result endpoint with 0.13.0 images in the released environment.</td></tr></tbody></table>
 
 ### Documentation
 
@@ -63,4 +63,4 @@ Below is the list of fixes as part of the 0.13.1 release:
 * [Integration Guide](../../../inji-wallet/inji-mobile/technical-overview/integration-guide/openid4vp.md)
 * [API Documentation](https://mosip.stoplight.io/studio/inji-verify)
 * [Collab Guide](../../functional-overview/releases-1/inji-verify-collab-guide.md)
-* [QA Report](test-report.md)
+* QA Report
