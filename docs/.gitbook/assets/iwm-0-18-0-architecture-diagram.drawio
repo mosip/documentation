@@ -1,0 +1,121 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36" version="28.1.0">
+  <diagram name="Page-1" id="eY_9Wb5f-YuFy5xEKiI2">
+    <mxGraphModel dx="1898" dy="2232" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="uuSUNkjqWSxYIQYq7zfu-2" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="80" y="-50" width="550" height="720" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-1" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Inji Wallet&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 17px;&quot;&gt;(React Native UI)&lt;br&gt;(State Management - xState)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="180" y="10" width="370" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-2" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;React Native Bridge&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 17px;&quot;&gt;(Java, Kotlin, Swift)&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="180" y="150" width="380" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-3" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Android Native Modules&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 17px;&quot;&gt;(Kotlin)&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="180" y="250" width="110" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-4" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;iOS Native Modules&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 17px;&quot;&gt;(Swift)&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="320" y="250" width="105" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-16" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Device APIs &amp;amp; SDKs&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 17px;&quot;&gt;(Camera, Bluetooth..)&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="180" y="380" width="370" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-62" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="40" y="708.86" width="370" height="620" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-25" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="pa__qDXgrbr4C1_vi_8_-62" vertex="1">
+          <mxGeometry width="350" height="620" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-26" value="Inji Wallet" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" parent="pa__qDXgrbr4C1_vi_8_-62" vertex="1">
+          <mxGeometry x="120" width="80" height="36.47310344827586" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-27" value="UI Screens&amp;nbsp;&lt;div&gt;&amp;amp; Components&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="pa__qDXgrbr4C1_vi_8_-62" vertex="1">
+          <mxGeometry x="90" y="48.627450980392155" width="120" height="72.94117647058825" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-28" value="State &amp;amp; Context" style="rounded=1;whiteSpace=wrap;html=1;" parent="pa__qDXgrbr4C1_vi_8_-62" vertex="1">
+          <mxGeometry x="90" y="182.35294117647058" width="120" height="72.94117647058825" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="pa__qDXgrbr4C1_vi_8_-62" source="pa__qDXgrbr4C1_vi_8_-31" target="pa__qDXgrbr4C1_vi_8_-33" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="pa__qDXgrbr4C1_vi_8_-62" source="pa__qDXgrbr4C1_vi_8_-31" target="pa__qDXgrbr4C1_vi_8_-38" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-31" value="React Native Fetch&lt;div&gt;for Api Call&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="pa__qDXgrbr4C1_vi_8_-62" vertex="1">
+          <mxGeometry x="90" y="316.07843137254906" width="120" height="72.94117647058825" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-33" value="React Native MMKV storage to store data" style="rounded=1;whiteSpace=wrap;html=1;" parent="pa__qDXgrbr4C1_vi_8_-62" vertex="1">
+          <mxGeometry x="20" y="474.11764705882354" width="120" height="72.94117647058825" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-38" value="Local Cache to cache API response" style="rounded=1;whiteSpace=wrap;html=1;" parent="pa__qDXgrbr4C1_vi_8_-62" vertex="1">
+          <mxGeometry x="160" y="474.11764705882354" width="120" height="72.94117647058825" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="pa__qDXgrbr4C1_vi_8_-62" source="pa__qDXgrbr4C1_vi_8_-27" target="pa__qDXgrbr4C1_vi_8_-28" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="pa__qDXgrbr4C1_vi_8_-62" source="pa__qDXgrbr4C1_vi_8_-28" target="pa__qDXgrbr4C1_vi_8_-31" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-124" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="410" y="720" width="355" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-50" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="pa__qDXgrbr4C1_vi_8_-124" vertex="1">
+          <mxGeometry width="355" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-51" value="Native Modules" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" parent="pa__qDXgrbr4C1_vi_8_-124" vertex="1">
+          <mxGeometry x="118.75" width="117.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-52" value="Secure Keystore" style="rounded=1;whiteSpace=wrap;html=1;" parent="pa__qDXgrbr4C1_vi_8_-124" vertex="1">
+          <mxGeometry x="25" y="60" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-53" value="VCI Client" style="rounded=1;whiteSpace=wrap;html=1;" parent="pa__qDXgrbr4C1_vi_8_-124" vertex="1">
+          <mxGeometry x="185" y="60" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-54" value="Pixelpass" style="rounded=1;whiteSpace=wrap;html=1;" parent="pa__qDXgrbr4C1_vi_8_-124" vertex="1">
+          <mxGeometry x="185" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-56" value="Tuvali" style="rounded=1;whiteSpace=wrap;html=1;" parent="pa__qDXgrbr4C1_vi_8_-124" vertex="1">
+          <mxGeometry x="185" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-82" value="OpenId4VP" style="rounded=1;whiteSpace=wrap;html=1;" parent="pa__qDXgrbr4C1_vi_8_-124" vertex="1">
+          <mxGeometry x="30" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-120" value="VC Verifier" style="rounded=1;whiteSpace=wrap;html=1;" parent="pa__qDXgrbr4C1_vi_8_-124" vertex="1">
+          <mxGeometry x="30" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-127" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="410" y="1079.9972727272727" width="400" height="282.27272727272725" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-64" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="pa__qDXgrbr4C1_vi_8_-127" vertex="1">
+          <mxGeometry y="12.27" width="370" height="177.73" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-65" value="External Modules" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=14;" parent="pa__qDXgrbr4C1_vi_8_-127" vertex="1">
+          <mxGeometry x="110" width="140" height="50.625" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-75" value="&lt;font style=&quot;font-size: 19px;&quot;&gt;Face Match SDK&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="pa__qDXgrbr4C1_vi_8_-127" vertex="1">
+          <mxGeometry x="80" y="69.3" width="210" height="70.7" as="geometry" />
+        </mxCell>
+        <mxCell id="uuSUNkjqWSxYIQYq7zfu-1" value="" style="group;fontSize=14;" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="180" y="480" width="390" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-17" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="uuSUNkjqWSxYIQYq7zfu-1" vertex="1">
+          <mxGeometry x="10" width="370" height="108.00000000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-19" value="&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Backend Services&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="uuSUNkjqWSxYIQYq7zfu-1" vertex="1">
+          <mxGeometry x="79.99777777777777" width="206.41111111111113" height="20.0025" as="geometry" />
+        </mxCell>
+        <mxCell id="pa__qDXgrbr4C1_vi_8_-57" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Mimoto&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;(BFF)&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="uuSUNkjqWSxYIQYq7zfu-1" vertex="1">
+          <mxGeometry x="93" y="36" width="157" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="uuSUNkjqWSxYIQYq7zfu-3" value="Inji Wallet Mobile Layered Architecture" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="200" y="-50" width="310" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="O6Oin8EoZsV10E_V7g2L-1" value="&lt;span style=&quot;font-size: 17px;&quot;&gt;External Modules&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="450" y="250" width="105" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -4,7 +4,7 @@
 
 **Support**: Developer Release
 
-**Release Date**: Coming Soon
+**Release Date**: 20th Aug, 2025
 
 ### Overview
 
@@ -26,7 +26,7 @@ The Inji Verify 0.13.1 patch release includes critical fixes to ensure smooth de
 
 | Repositories | Tags: Released/Dependent |
 | ------------ | ------------------------ |
-| Inji Verify  | v0.13.1                  |
+| Inji Verify  | [v0.13.1](https://github.com/mosip/inji-verify/tree/v0.13.1)                  |
 
 ### Projects: Released
 
