@@ -6,7 +6,7 @@ Furthermore, this overview outlines various user flows, detailing the seamless p
 
 .
 
-<figure><img src="../../../.gitbook/assets/inji_architecture_diagram.png" alt=""><figcaption><p>Inji Wallet Architecture</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iwm-0-18-0-architecture-diagram.png" alt=""><figcaption><p>Inji Wallet Architecture</p></figcaption></figure>
 
 Let’s go through a brief overview these components.
 
