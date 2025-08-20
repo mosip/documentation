@@ -4,55 +4,55 @@
 
 The scope of testing is to verify fitment to the specification from the perspective of&#x20;
 
-●      Functionality&#x20;
+● Functionality&#x20;
 
-●      Deployability&#x20;
+● Deployability&#x20;
 
-●      Configurability&#x20;
+●  Configurability&#x20;
 
-●      Customizability
+●  Customizability
 
 Verification is performed not only from the end user perspective but also from the System Integrator (SI) point of view. Hence Configurability and Extensibility of the software is also assessed. This ensures the readiness of software for use in multiple countries.
 
 The Inji testing scope revolves around the following flows:
 
-●      Biometric unlock
+● Biometric unlock
 
-●      Passcodes unlock
+● Passcodes unlock
 
-●      VC download via MOSIP
+● VC download via MOSIP
 
-●      VC download via e-signet
+● VC download via e-signet
 
-●      VC downloads via Sunbird
+● VC downloads via Sunbird
 
-●      Pinning a VC
+● Pinning a VC
 
-●      Normal VC sharing with VID
+● Normal VC sharing with VID
 
-●      Deleting VC
+● Deleting VC
 
-●      Face Auth on Resident's phone with VID
+● Face Auth on Resident's phone with VID
 
-●      Multi language support
+●  Multi language support
 
-●      Credential registry
+●  Credential registry
 
-●      Backup and restore
+●   Backup and restore
 
-●      Wallet binding
+●   Wallet binding
 
-●      Deep link navigation
+●    Deep link navigation
 
-●      OpenID4VP
+●   OpenID4VP
 
-●      QR code Login
+●   QR code Login
 
-●      Key Management
+●    Key Management
 
-●      Credential Offer
+●    Credential Offer
 
-●      Logout
+●    Logout
 
 ## Test Approach
 
@@ -60,13 +60,13 @@ Persona based approach has been adopted to perform the IV\&V, by simulating test
 
 A Persona is a fictional character/user profile created to represent a user type that might use a product/or a service in a similar way. Persona based testing is a software testing technique that puts software testers in the customer's shoes, assesses their needs from the software and thereby determines use cases/scenarios that the customers will execute. The persona needs may be addressed through any of the following.
 
-●      Functionality&#x20;
+●  Functionality&#x20;
 
-●      Deployability&#x20;
+●  Deployability&#x20;
 
-●      Configurability&#x20;
+●  Configurability&#x20;
 
-●      Customizability
+●  Customizability
 
 The verification methods may differ based on how the need was addressed.
 
@@ -96,7 +96,7 @@ Below are the test metrics by performing functional testing using mock MDS and m
 
 &#x20;Here is the detailed breakdown of metrics for each module:
 
-<table data-header-hidden><thead><tr><th valign="top">Andriod</th><th valign="top">Number of testcase</th></tr></thead><tbody><tr><td valign="top">Total Test cases</td><td valign="top">2025</td></tr><tr><td valign="top">Passed</td><td valign="top">1829</td></tr><tr><td valign="top">Failed</td><td valign="top">196</td></tr><tr><td valign="top">Skipped (N/A)</td><td valign="top">0</td></tr><tr><td valign="top">iOS </td><td valign="top">Number of testcases</td></tr><tr><td valign="top"><mark style="color:$info;"><strong>Total Test cases</strong></mark></td><td valign="top"><mark style="color:$info;"><strong>1849</strong></mark></td></tr><tr><td valign="top">Passed</td><td valign="top">1644</td></tr><tr><td valign="top">Failed</td><td valign="top">205</td></tr><tr><td valign="top">Skipped (N/A)</td><td valign="top">0</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th valign="top">Andriod</th><th valign="top">Number of testcase</th></tr></thead><tbody><tr><td valign="top">Total Test cases</td><td valign="top">2025</td></tr><tr><td valign="top">Passed</td><td valign="top">1829</td></tr><tr><td valign="top">Failed</td><td valign="top">196</td></tr><tr><td valign="top">Skipped (N/A)</td><td valign="top">0</td></tr><tr><td valign="top"><strong>iOS</strong> </td><td valign="top"><strong>Number of testcases</strong></td></tr><tr><td valign="top"><strong>Total Test cases</strong></td><td valign="top"><mark style="color:$info;"><strong>1849</strong></mark></td></tr><tr><td valign="top">Passed</td><td valign="top">1644</td></tr><tr><td valign="top">Failed</td><td valign="top">205</td></tr><tr><td valign="top">Skipped (N/A)</td><td valign="top">0</td></tr></tbody></table>
 
 ### Testing with various device combinations
 
