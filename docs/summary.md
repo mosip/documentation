@@ -150,7 +150,7 @@
   * [Features](inji-certify/overview/features.md)
 * [Develop](inji-certify/technical-overview/README.md)
   * [Technology Stack](inji-certify/technical-overview/technology-stack.md)
-  * [Architecture](inji-certify/technical-overview/components.md)
+  * [Architecture](inji-certify/technical-overview/architecture.md)
   * [Tested Operating Systems](inji-certify/technical-overview/supported-browsers.md)
 * [Test](inji-certify/functional-overview/README.md)
   * [Functional Overview](inji-certify/functional-overview/functional-overview.md)
