@@ -12,7 +12,7 @@ Inji is a verifiable credentialing stack that provides a way to share tamper-pro
 * **Holder**: The individual or entity which possesses the credential (e.g., the student with the degree, the citizen with the passport, the employee with the work permit). The holder stores and manages their VCs. Inji's 'Holder-module' is called [Inji Wallet](inji-wallet/inji-mobile/).
 * **Verifier**: The entity that requests and verifies the credential to confirm a claim (e.g., an employer checking a degree, a border agent checking a passport, a landlord checking a work permit). The verifier checks the cryptographic proofs to ensure the VC's authenticity and integrity. [Inji Verify](inji-verify/overview/).
 
-Some everyday examples of 'Verifiable Credentials' include:
+Some everyday examples of Verifiable Credentials include:
 
 * A national ID issued as a digital credential
 * A diploma issued by a university
@@ -38,50 +38,36 @@ For a quick overview of **Inji**, which primarily includes **Inji Wallet, Inji V
 
 ### Inji Stack Components
 
-Inji Certify – Credential Issuance Enables trusted entities to issue digitally signed credentials. Supports:
+#### Inji Certify– Credential Issuance
+
+Enables trusted entities to issue digitally signed credentials. Supports:
 
 * Multiple formats: JSON-LD, SD-JWT,mDOC and many more. A tool that enables issuers to seamlessly connect with existing data sources to issue verifiable credentials.
 * Connecting with existing databases and offering configurable credential schemas, it caters to diverse use cases across different sectors and industries.
+* Revocation management
+* Ledger and credential status checks
+* Schema and credential registry management
 
-### Inji Wallet – Credential Holding and Sharing
+#### Inji Wallet – Credential Holding and Sharing
 
 Empowers users to manage their credentials on different devices:
 
 * Inji Mobile: Android and iOS app to download, store, and present credentials securely
 * Inji Web: Browser-based wallet for users without smartphones, offering print and share features
 
-### Inji Verify – Credential Verification
+#### Inji Verify – Credential Verification
 
 Allows service providers and organizations to:
 
 * Scan and validate credentials
 * Check credential status (validity, expiry, revocation)
-* Integrate with existing onboarding or service workflows
+* Integrate with the existing relying party or service providers
 
-### Inji Infra – Supporting Infrastructure(Upcoming)
+### Real-World Applications
 
-Provides foundational services for:
+<table><thead><tr><th width="166.6666259765625">Domain</th><th>Example Applications</th></tr></thead><tbody><tr><td>Healthcare</td><td>Immunization records, medical certifications</td></tr><tr><td>Education</td><td>Degrees, training certificates, learning records</td></tr><tr><td>Social Welfare</td><td>Benefit eligibility, ration cards</td></tr><tr><td>Finance</td><td>KYC credentials, account onboarding</td></tr><tr><td>Mobility</td><td>Driving licenses, transportation passes</td></tr><tr><td>Employment</td><td>Job credentials, background checks</td></tr><tr><td>Others</td><td>Many more</td></tr></tbody></table>
 
-* Revocation management
-* Ledger and credential status checks
-* Federation and audit trail support Inji Govern – Governance and Policy Management(Upcoming) Manages rules, schemas, and compliance:
-* Policy definition for credential lifecycle
-* Schema and credential registry management
-* Assurance levels for ecosystem participants
-
-## Real-World Applications
-
-| Domain         | Example Applications                             |
-| -------------- | ------------------------------------------------ |
-| Healthcare     | Immunization records, medical certifications     |
-| Education      | Degrees, training certificates, learning records |
-| Social Welfare | Benefit eligibility, ration cards                |
-| Finance        | KYC credentials, account onboarding              |
-| Mobility       | Driving licenses, transportation passes          |
-| Employment     | Job credentials, background checks               |
-| Others         | Many more                                        |
-
-## Interoperability and Standards
+### Interoperability and Standards
 
 Inji follows widely adopted open standards, ensuring flexibility and long-term sustainability:
 
@@ -93,9 +79,8 @@ Inji follows widely adopted open standards, ensuring flexibility and long-term s
 * IETF SD-JWT-based Verifiable Credentials
 * W3C based SD-JWT-based Verifiable Credentials
 * DID (Decentralised Identifiers) support
-* Can interoperate with existing IAM and identity ecosystems
 
-## Component Diagram
+### Component Diagram
 
 This section will contain a clear diagram illustrating the interaction between Inji Certify, Inji Wallet (mobile + web), Inji Verify. The diagram should also show the components involved to build Inji.
 
@@ -108,7 +93,7 @@ This section will contain a clear diagram illustrating the interaction between I
 
 ![Component Diagram](.gitbook/assets/inji-home-page-component-diagram.png)
 
-## Summary
+### Summary
 
 Inji provides a secure, inclusive, and interoperable solution for issuing and managing digital credentials. By enabling individuals to hold their credentials and share them when needed, Inji supports faster access to services while protecting privacy and reducing fraud. Whether you are:
 
