@@ -11,25 +11,25 @@ The Inji Mobile Wallet adopts a layered architecture pattern, ensuring clear sep
 
 ### Architecture Layers
 
-1. **Presentation Layer (Green `#d5e8d4`)**
+1. **Presentation Layer (Green)**
   - **Component:** Inji Wallet UI (React Native)
   - **Purpose:** Renders the user interface and manages application state using xState.
   - **Features:** Cross-platform UI, declarative state management, user interaction handling.
 
-2. **Communication Bridge Layer (Yellow `#fff2cc`)**
+2. **Communication Bridge Layer (Yellow)**
   - **Component:** React Native Bridge
   - **Purpose:** Enables communication between JavaScript and native code (Java, Kotlin, Swift).
   - **Functionality:** Accesses native platform features from React Native.
 
-3. **Native Platform Layer (Orange `#ffe6cc`)**
+3. **Native Platform Layer (Orange)**
   - **Components:** Android Native Modules (Kotlin), iOS Native Modules (Swift), External Modules
   - **Purpose:** Handles platform-specific operations and SDK integrations.
 
-4. **Device Hardware & API Layer (Blue `#dae8fc`)**
+4. **Device Hardware & API Layer (Blue)**
   - **Component:** Device APIs & SDKs (Camera, Bluetooth, etc.)
   - **Purpose:** Interfaces with device hardware and system APIs for features like camera access and BLE communication.
 
-5. **Backend Services Layer (Purple `#e1d5e7`)**
+5. **Backend Services Layer (Purple)**
   - **Component:** Mimoto (Backend for Frontend)
   - **Purpose:** Orchestrates API calls, formats data, and manages authentication between the app and backend services.
 
