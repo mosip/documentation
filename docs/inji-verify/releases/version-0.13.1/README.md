@@ -24,9 +24,9 @@ The Inji Verify 0.13.1 patch release includes critical fixes to ensure smooth de
 
 ### Repositories: Released/Dependent
 
-| Repositories | Tags: Released/Dependent |
-| ------------ | ------------------------ |
-| Inji Verify  | [v0.13.1](https://github.com/mosip/inji-verify/tree/v0.13.1)                  |
+| Repositories | Tags: Released/Dependent                                     |
+| ------------ | ------------------------------------------------------------ |
+| Inji Verify  | [v0.13.1](https://github.com/mosip/inji-verify/tree/v0.13.1) |
 
 ### Projects: Released
 
@@ -55,8 +55,8 @@ Below is the list of fixes as part of the 0.13.1 release:
 
 ### Documentation
 
-* [Feature documentation](../../overview/features.md)
-* [Integration Guide](../../../inji-wallet/inji-mobile/technical-overview/integration-guide/openid4vp.md)
+* [Feature documentation](../../../overview/features.md)
+* [Integration Guide](../../../../inji-wallet/inji-mobile/technical-overview/integration-guide/openid4vp.md)
 * [API Documentation](https://mosip.stoplight.io/studio/inji-verify)
-* [Collab Guide](../../functional-overview/releases-1/inji-verify-collab-guide.md)
-* QA Report
+* [Collab Guide](../../../functional-overview/releases-1/inji-verify-collab-guide.md)
+* [QA Report](test-report.md)
