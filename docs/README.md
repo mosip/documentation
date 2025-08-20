@@ -80,11 +80,11 @@ Inji follows widely adopted open standards, ensuring flexibility and long-term s
 * W3C based SD-JWT-based Verifiable Credentials
 * DID (Decentralised Identifiers) support
 
-### Component Diagram
+### Inji: How the Pieces Work Together
 
 This section will contain a clear diagram illustrating the interaction between Inji Certify, Inji Wallet (mobile + web), Inji Verify. The diagram should also show the components involved to build Inji.
 
-### How it works?
+#### How it works?
 
 * **Issuance**: An issuer creates a digital credential with claims about a subject and cryptographically signs it.
 * **Holding**: The signed credential is then given to the holder, who stores it securely in a digital wallet or similar application.
