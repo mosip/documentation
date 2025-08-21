@@ -6,7 +6,51 @@
 
 This workflow describes how Inji Wallet downloads a Verifiable Credential (VC) from an issuing authority using the OpenID4VCI protocol.
 
+<!--
 <figure><img src="../../../.gitbook/assets/iwm-0-18-0-vci-flow.png" alt=""><figcaption><p>VCI Flow - Credential Issuance Workflow</p></figcaption></figure>
+-->
+
+```mermaid
+sequenceDiagram
+    participant W as Inji Wallet 📱
+    participant keystore as Secure Keystore 🗝️
+    participant VCI as VCI Client 🔐📄
+    participant Verifier as VC Verifier 🔎
+    participant Pixelpass as Pixelpass 🔲
+    participant AS as Authorization Server 🔐
+    participant Certify as Issuing Authority 🏛️
+
+   W->>keystore: Generate and store key-pair
+   W->>VCI: Download VC
+   VCI-->>W: Authorize User
+   W->>AS: Redirect to Auth server and authenticate the User
+   AS-->>W: Return Auth code
+   W->>VCI: Auth code
+   VCI-->>W: Get Token Response
+   W->>AS: Token Request with received auth code
+   AS-->>W: Token Response<br/>(access-token, cNonce)
+   W->>VCI: Token Response
+   VCI-->>W: Get Proof JWT
+   Note over W: Construct proof JWT
+   W->>keystore: sign the request
+   keystore-->>W: Return signature
+   W->>VCI: Proof JWT
+   Note over VCI: Construct download request
+   VCI->>Certify: Download Credential
+   Certify-->>VCI: Return Credential(VC)
+   VCI-->>W: Return Credential(VC)
+   W->>Verifier: Verify the Credential
+   alt Verified Successfully
+   Verifier-->>W: Return True
+   Note over W: Store the VC, Render the VC
+   W->>Pixelpass: Generate QR code
+   Pixelpass-->>W: Return QR code image
+   Note over W: Cache QR code and render
+   else Verification Failed
+   Verifier-->>W: Return false with error
+   Note over W: Display error
+   end
+```
 
 **Actors:**
 - **Inji Wallet:** Orchestrates the process, interacts with VCI Client and Secure Keystore.
@@ -40,7 +84,36 @@ This workflow describes how Inji Wallet downloads a Verifiable Credential (VC) f
 
 This workflow explains how Inji Wallet shares selected VCs with a verifier (Relying Party) using the OpenID4VP protocol.
 
+
+```mermaid
+sequenceDiagram
+    participant U as User 🙋
+    participant W as Inji Wallet 📱
+    participant keystore as Secure Keystore 🗝️
+    participant OVP as OpenId4VP Module 🔐📄
+    participant Verifier as Relying Party(Verifier) 🌐
+
+   W->>keystore: Generate and store key-pair
+   Note over Verifier: Generate QR code with auth request
+   W->>Verifier: Scan QR code
+   Verifier-->>W: Return auth request
+   W->>OVP: Pass auth request
+   Note over OVP: validate the auth request
+   OVP-->>W: Return validated auth request
+   Note over W: Process auth request and<br/>display Matching VCs
+   U->>W: Select VCs and give consent
+   W->>OVP: Construct unsigned VP token<br/>(selected VCs based on format, holderId, & SignatureSuite)
+   Note over OVP: Construct unsigned VP token by attaching proof without signature
+   OVP-->>W: Return unsigned VP token by format
+   Note over W: Sign VP token
+   W->>OVP: Return signed data
+   OVP->>Verifier: Send Auth response<br/>(VP token, Presentation Submission)
+```
+
+<!--
 <figure><img src="../../../.gitbook/assets/iwm-0-18-0-ovp-flow.png" alt=""><figcaption><p>OpenID4VP Flow - Credential Presentation Workflow</p></figcaption></figure>
+
+-->
 
 **Actors:**
 - **User:** Selects credentials and provides consent.
