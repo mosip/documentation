@@ -13,16 +13,16 @@ Release Date: Coming Soon
 ### Major Highlights/ Features <a href="#major-highlights-features" id="major-highlights-features"></a>
 
 * Credential Formats – Draft Implementation
-  * SD-JWT and JWT support: Draft implementation enabling issuers to issue credentials in Selective Disclosure JWT (SD-JWT) format, expanding interoperability across wallets. Click \[here] to know more about this feature
+  * SD-JWT and JWT support: Draft implementation enabling issuers to issue credentials in Selective Disclosure JWT (SD-JWT) format, expanding interoperability across wallets. [Click here](https://docs.inji.io/inji-certify/overview/features#support-for-multiple-credential-formats) to know more about this feature
 * VC Configuration & Binding
-  * Configurable VC Type: Issuers can now configure the VC Type dynamically, providing greater flexibility for different issuance use cases. Refer to \[this guide] for more details.
+  * Configurable VC Type: Issuers can now configure the VC Type dynamically, providing greater flexibility for different issuance use cases. Refer to [this guide](https://docs.inji.io/inji-certify/overview/features#addition-of-credential-type-via-api-post-onboarding) for more details.
   * DID Binding with did:key: Added support for binding credentials to did:key, enhancing decentralization and cryptographic agility.
   * DID Binding with did:web for `kid` generation: Introduced support for did:web and automated key ID (kid) generation to enable smooth VC issuance in SD-JWT format.
 * Revocation – Draft Implementation
-  * VC Revocation: Initial draft implementation of revocation capabilities, allowing issuers to mark credentials as revoked and support verifiers in checking credential status. Refer to \[this guide] for more details.
+  * VC Revocation: Initial draft implementation of revocation capabilities, allowing issuers to mark credentials as revoked and support verifiers in checking credential status. Refer to [this guide](https://docs.inji.io/inji-certify/overview/features#revocation-mechanism-draft-release-experimental-json-ld-only) for more details.
 * Cryptography & Data Integrity
-  * Data Integrity Support: Added support for W3C Data Integrity Proofs, providing a standards-based mechanism for ensuring verifiability of issued credentials. Refer to \[this guide] for more details.
-  * ECC R1 Curve Support: Extended cryptographic suite with support for Elliptic Curve secp256r1 (P-256), enabling broader adoption and compliance. Refer to \[this guide] for more details.
+  * Data Integrity Support: Added support for W3C Data Integrity Proofs, providing a standards-based mechanism for ensuring verifiability of issued credentials.&#x20;
+  * ECC R1 Curve Support: Extended cryptographic suite with support for Elliptic Curve secp256r1 (P-256), enabling broader adoption and compliance. Refer to [this guide](https://docs.inji.io/inji-certify/overview/features#efficient-signing-with-multiple-algorithms) for more details.
 
 {% hint style="info" %}
 Note:
