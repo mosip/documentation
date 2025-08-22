@@ -1,17 +1,5 @@
 # Features
 
-
-
-
-
-
-***
-
-
-<!-
-
-# Features
-
 Inji Certify comes with a comprehensive suite of features designed to
 make credential issuance seamless, secure, and standards-compliant. Key
 features include:
