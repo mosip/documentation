@@ -293,9 +293,10 @@ compliance with existing organizational standards.
 - **Customisable per Issuer** -- Different issuers can configure
   different authentication services within the same Certify deployment.
 
-### **Check** [**[Inji Certify Repository]{.underline}**](https://github.com/mosip/inji-certify/tree/master) **to explore these above mentioned features!**
+## Read More
 
--->
+ Check [Inji Certify Repository](https://github.com/mosip/inji-certify/tree/master) to explore these above mentioned features.
+
 
 
 
