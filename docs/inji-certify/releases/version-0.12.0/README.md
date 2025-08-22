@@ -1,14 +1,10 @@
 # Version 0.12.0
 
-## Version 0.12.0 <a href="#version-0.12.0" id="version-0.12.0"></a>
-
 Release Version: 0.12.0
 
 Release Type: Developer Release
 
 Release Date: Coming Soon
-
-&#x20;
 
 ### Overview <a href="#overview" id="overview"></a>
 
