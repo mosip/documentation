@@ -11,7 +11,7 @@ The login screen appears, displaying the available login options for the user.
 
 3. To begin the signup process, click on **Sign up with Unified Login**, located at the bottom of the page.
 
-<figure><img src="../../../.gitbook/assets/signin_with_unified_login.png" alt=""><figcaption><p><strong>Sign up with Unified Login</strong></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/signup_auth_factor_screen_end_user_guide_rck.png" alt=""><figcaption></figcaption></figure>
 
 4. Enter your 8-9 digit mobile number in the provided field and click **Continue** to proceed.
 
@@ -29,7 +29,7 @@ Clicking **Continue** redirects the user to a page where they can enter basic pe
 
 7. Enter your name and create a password. Ensure you agree to the terms and conditions by selecting the checkbox, then click **Continue** to complete the account setup.
 
-<figure><img src="../../../.gitbook/assets/eSignet_setup_account.png" alt=""><figcaption><p>Set Up Account Page</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/signup_reg_form_screen_end_user_guide_rck.png" alt=""><figcaption></figcaption></figure>
 
 8. The user is successfully registered, and a confirmation message is displayed. The user can now log in using their registered mobile number. Click **Login** to proceed.
 
@@ -37,7 +37,7 @@ Clicking **Continue** redirects the user to a page where they can enter basic pe
 
 9. The login screen appears, displaying the available login options for the user. To proceed, the user selects the **Login with OTP** option.
 
-<figure><img src="../../../.gitbook/assets/Login_Screen.png" alt=""><figcaption><p>Login Page</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/signup_auth_factor_screen_end_user_guide_rck (1).png" alt=""><figcaption></figcaption></figure>
 
 10. Enter the mobile number used during account setup in the previous steps and click **Get OTP**.
 
