@@ -22,7 +22,7 @@ This performance report focuses specifically on benchmarking and evaluating eSig
 
 ## Approach
 
-To perform the test run, **Apache - JMeter** was used as the load testing tool to simulate **100 users**, maintaining a consistent **throughput of 100 Transactions Per Second (TPS)** for a duration of **30 minutes**.
+To perform the test run, **Apache - JMeter** was used as the load testing tool to simulate **106 users**, maintaining a consistent **throughput of 100 Transactions Per Second (TPS)** for a duration of **30 minutes**.
 
 1. **The Constant Throughput Timer** was set to **100 × 60 = 6000 samples per minute** as the target throughput, with **100,000 user entries** prepared for the run. For example, if the total number of user samples reaches **117,000**, the first **100,000** users will be unique, and the **100,001st** user will be a repeat of the **1st** user from the entry list.
 2. To mimic a real-world scenario, an **additional delay of 1000ms** was introduced for the **send-OTP**, **auth**, and **token** endpoints in the mock identity system. Consequently, the **SLA was updated to 1.5 seconds**, and performance calculations were carried out using **Little’s Law**.
@@ -113,19 +113,18 @@ Performance data load has been populated before the run to ensure realistic resu
 * **Test Duration**: 30 mins
 * **Test Type**: Load
 * **Ramp Up**: 3 mins
-* **Total User Load**: 100
 
 #### **User distribution among the scenarios**
 
-<table data-full-width="true"><thead><tr><th>Scenario Name</th><th>Module Name</th><th width="203.640625">API Endpoint</th><th>HTTP Method</th><th width="126.734375">SLA(ms) &#x3C;=</th><th width="129.25">Weightage/Load Distribution</th><th width="85.49609375">Users</th><th>Throughput (TPS)</th></tr></thead><tbody><tr><td><p>User with OTP authentication</p><p> </p></td><td><p> eSignet-service</p><p> </p></td><td> /csrf/token </td><td>GET</td><td> 100</td><td><p> </p><p> 100</p></td><td><p> </p><p> 100</p></td><td><p> </p><p> 100</p></td></tr><tr><td></td><td> </td><td>/authorization/v2/oauth-details </td><td>POST</td><td>100</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>/authorization/send-otp </td><td>POST</td><td>1500</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>/authorization/v3/authenticate </td><td>POST</td><td>1500</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>/authorization/auth-code </td><td>POST</td><td>100</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>/oauth/v2/token </td><td>POST</td><td>1500</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td><strong>/oidc/userinfo</strong>  </td><td>GET</td><td>100</td><td></td><td></td><td></td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th>Scenario Name</th><th>Module Name</th><th width="203.640625">API Endpoint</th><th>HTTP Method</th><th width="126.734375">SLA(ms) &#x3C;=</th><th width="129.25">Weightage/Load Distribution</th><th width="85.49609375">Users</th><th>Throughput (TPS)</th></tr></thead><tbody><tr><td><p>User with OTP authentication</p><p> </p></td><td><p> eSignet-service</p><p> </p></td><td> /csrf/token </td><td>GET</td><td> 100</td><td><p> </p><p> 100</p></td><td><p> </p><p> 106</p></td><td><p> </p><p> 100</p></td></tr><tr><td></td><td> </td><td>/authorization/v2/oauth-details </td><td>POST</td><td>100</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>/authorization/send-otp </td><td>POST</td><td>1500</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>/authorization/v3/authenticate </td><td>POST</td><td>1500</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>/authorization/auth-code </td><td>POST</td><td>100</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>/oauth/v2/token </td><td>POST</td><td>1500</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td><strong>/oidc/userinfo</strong>  </td><td>GET</td><td>100</td><td></td><td></td><td></td></tr></tbody></table>
 
 ### Resource level configuration
 
-| Container name       | 100TPS  with 106 users |                                                                                                                                                                                                                                                                                                      |
-| -------------------- | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|                      | **Number of pods**     | **Resource configuration**                                                                                                                                                                                                                                                                           |
-| eSignet              | 2                      | <p>resources:</p><p>            limits:</p><p>              cpu: 1500m</p><p>              memory: 2250Mi</p><p>            requests:</p><p>              cpu: 1500m</p><p>              memory: 2250Mi</p><ul><li>name: JDK_JAVA_OPTIONS</li></ul><p>              value: '-Xms2250M -Xmx2250M'</p> |
-| mock-identity-system | 2                      | <p>resources:</p><p>            limits:</p><p>              cpu: '300m'</p><p>              memory: 2250Mi</p><p>            requests:</p><p>              cpu: 300m</p><p>              memory: 2250Mi</p><ul><li>name: JDK_JAVA_OPTIONS</li></ul><p>              value: '-Xms1500M -Xmx1500M'</p> |
+| Container name       | 100TPS             |                                                                                                                                                                                                                                                                                                      |
+| -------------------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                      | **Number of pods** | **Resource configuration**                                                                                                                                                                                                                                                                           |
+| eSignet              | 2                  | <p>resources:</p><p>            limits:</p><p>              cpu: 1500m</p><p>              memory: 2250Mi</p><p>            requests:</p><p>              cpu: 1500m</p><p>              memory: 2250Mi</p><ul><li>name: JDK_JAVA_OPTIONS</li></ul><p>              value: '-Xms2250M -Xmx2250M'</p> |
+| mock-identity-system | 2                  | <p>resources:</p><p>            limits:</p><p>              cpu: '300m'</p><p>              memory: 2250Mi</p><p>            requests:</p><p>              cpu: 300m</p><p>              memory: 2250Mi</p><ul><li>name: JDK_JAVA_OPTIONS</li></ul><p>              value: '-Xms1500M -Xmx1500M'</p> |
 
 ## Test Result
 
@@ -134,16 +133,12 @@ Performance data load has been populated before the run to ensure realistic resu
 | **Application Name** | eSignet              |
 | -------------------- | -------------------- |
 | **Test Duration**    | 13/03/2025 (30 mins) |
-| **Number of users**  | 100                  |
+| **Number of users**  | 106                  |
 | **Status**           | Pass                 |
 
 ### Test Report
 
-1. Test results for 100 TPS with 100 users for 30min run.
-
-<table data-header-hidden><thead><tr><th></th><th width="116.7109375"></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td><strong>Scenario Name</strong></td><td><p><strong>Transaction Name</strong></p><p> </p><p> </p></td><td><strong>API Endpoint</strong></td><td><strong>HTTP Method</strong></td><td><strong>100 TPS &#x26; users : 106</strong></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td><strong>Date : 13/03/2025 (half an hour duration)</strong></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td><strong># Samples</strong></td><td><strong>Min</strong></td><td><strong>Average</strong></td><td><strong>90% Line</strong></td><td><strong>Max</strong></td><td><strong>Error %</strong></td></tr><tr><td>User with OTP authentication</td><td>S01 T01 GetCsrf</td><td> /csrf/token </td><td>GET</td><td>25635</td><td>0</td><td>17</td><td>26</td><td>1031</td><td>0.00%</td></tr><tr><td></td><td>S01 T02 OAuthdetails</td><td>/authorization/v2/oauth-details </td><td>POST</td><td>25611</td><td>0</td><td>18</td><td>27</td><td>364</td><td>0.00%</td></tr><tr><td></td><td>S01 T03 Send OTP</td><td>/authorization/send-otp </td><td>POST</td><td>25596</td><td>0</td><td>43</td><td>58</td><td>4602</td><td>0.00%</td></tr><tr><td></td><td>S01 T04 Authentication</td><td>/authorization/v3/authenticate</td><td>POST</td><td>25584</td><td>0</td><td>60</td><td>79</td><td>1635</td><td>0.00%</td></tr><tr><td></td><td>S01 T05 Autorization</td><td>/authorization/auth-code </td><td>POST</td><td>25567</td><td>0</td><td>22</td><td>33</td><td>316</td><td>0.00%</td></tr><tr><td></td><td>S01 T06 Token</td><td>/oauth/v2/token </td><td>POST</td><td>25556</td><td>0</td><td>59</td><td>76</td><td>1844</td><td>0.00%</td></tr><tr><td></td><td>S01 T07 Userinfo</td><td><strong>/oidc/userinfo</strong> </td><td>GET</td><td>25541</td><td>0</td><td>16</td><td>24</td><td>1026</td><td>0.00%</td></tr></tbody></table>
-
-2. Test results for 100 TPS with 106 users for 30min run with delay of 1s for each end points (send-OTP, auth and token) in the integrated ID system.
+1. Test results for 100 TPS with 106 users for a 30-minute run, simulating the real-time ID system by adding a fixed 1-second processing time for each endpoint (send-OTP, auth, and token).
 
 | **Scenario Name**            | <p><strong>Transaction Name</strong></p><p> </p><p> </p> | **API Endpoint**                | **HTTP Method** | **100 TPS & users : 106**                     |                 |             |              |         |             |
 | ---------------------------- | -------------------------------------------------------- | ------------------------------- | --------------- | --------------------------------------------- | --------------- | ----------- | ------------ | ------- | ----------- |
@@ -185,7 +180,7 @@ Performance data load has been populated before the run to ensure realistic resu
 
 ## Resource Calculator
 
-Please refer the details [resource calculator published here](https://github.com/mosip/esignet/blob/develop/performance-test/resource_calculator.xlsx) for sizing guidelines.
+Please refer the details [resource calculator published here](https://github.com/mosip/esignet/tree/develop/performance-test) for sizing guidelines.
 
 ## Performance Analysis
 
