@@ -2,7 +2,7 @@
 
 **Release Version**: v0.11.0
 
-**Release Type**: Stable
+**Release Type**: Developer Release
 
 **Release** **Date**: 2nd May, 2025
 
