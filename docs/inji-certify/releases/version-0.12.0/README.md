@@ -4,7 +4,7 @@ Release Version: 0.12.0
 
 Release Type: Developer Release
 
-Release Date: Coming Soon
+Release Date: 26th August, 2025
 
 ### Overview <a href="#overview" id="overview"></a>
 
@@ -21,7 +21,7 @@ Release Date: Coming Soon
 * Revocation – Draft Implementation
   * VC Revocation: Initial draft implementation of revocation capabilities, allowing issuers to mark credentials as revoked and support verifiers in checking credential status. Refer to [feature description](https://docs.inji.io/inji-certify/overview/features#revocation-mechanism-draft-release-experimental-json-ld-only) for more details.
 * Cryptography & Data Integrity
-  * Data Integrity Support: Added support for W3C Data Integrity Proofs, providing a standards-based mechanism for ensuring verifiability of issued credentials.&#x20;
+  * Data Integrity Support: Added support for W3C Data Integrity Proofs, providing a standards-based mechanism for ensuring verifiability of issued credentials.
   * ECC R1 Curve Support: Extended cryptographic suite with support for Elliptic Curve secp256r1 (P-256), enabling broader adoption and compliance. Refer to [feature description](https://docs.inji.io/inji-certify/overview/features#efficient-signing-with-multiple-algorithms) for more details.
 
 {% hint style="info" %}
@@ -76,12 +76,13 @@ Below is the list of known issues related to the release v0.12.0. To access all 
 
 ### Repositories Released <a href="#repository-released" id="repository-released"></a>
 
-| Repositories               | Tags Released |
-| -------------------------- | ------------- |
-| inji-certify               | v0.12.0       |
-| digital-credential-plugins | v0.5.0        |
-| inji-config                | v0.10.0       |
-| key manager                | v1.3.0-beta.4 |
+| Repositories               | Tags Released                                                             |
+| -------------------------- | ------------------------------------------------------------------------- |
+| inji-certify               | [v0.12.0](https://github.com/mosip/inji-certify/tree/v0.12.0)             |
+| digital-credential-plugins | [v0.5.0](https://github.com/mosip/digital-credential-plugins/tree/v0.5.0) |
+| inji-config                | [v0.10.0](https://github.com/mosip/inji-config/tree/v0.10.0)              |
+| key manager                | [v1.3.0-beta.4](https://github.com/mosip/keymanager/tree/v1.3.0-beta.4)   |
+| commons                    | [v1.3.0-beta.3](https://github.com/mosip/commons/tree/v1.3.0-beta.3)      |
 
 ### Compatible Modules <a href="#compatible-modules" id="compatible-modules"></a>
 
@@ -93,7 +94,6 @@ The following table outlines the tested and certified compatibility of \<release
 | id-authentication     | [v1.2.1.0](https://github.com/mosip/id-authentication/tree/v1.2.1.0)            |
 | Sunbird C             | [v2.0.0](https://github.com/Sunbird-RC/sunbird-rc-core/releases/tag/v2.0.0-rc3) |
 | esignet-mock-services | [v0.10.1](https://github.com/mosip/esignet-mock-services/tree/v0.10.1)          |
-| commons               | [v1.3.0-beta.1](https://github.com/mosip/commons/tree/v1.3.0-beta.1)            |
 
 ### Documentation <a href="#documentation" id="documentation"></a>
 
