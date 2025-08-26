@@ -581,3 +581,82 @@ cd k8s-infra/mosip/onprem
 
 * [Inji web and datashare installation](https://github.com/mosip/inji-web/tree/develop/deploy)
 * **Note**: After installing inji web and datashare, ensure that the active\_profile\_env parameter in the config-map of the config-server-share is correctly set to: default,inji-default,standalone.
+
+
+
+
+
+
+
+***
+
+
+<!--
+
+* Base Infra setup:
+	* tools to be installed in local
+	* hardware , network and ..... requirement
+	* K8 cluster creation
+	* K8 cluster configuration
+	
+	...
+	
+* Configmap
+
+-----------------------------------------------------
+
+
+
+Inji Deployment
+
+Wireguard installation:
+
+Observation cluster creation and setup:
+
+Observation cluster configuration:
+
+Main Cluster creation : 
+
+Main Cluster configuration :
+
+Pre-requisites installation : 
+eg.
+    1. postgres: required for inji certify
+                 required for inji verify etc
+
+    2. Continues....
+
+Inji Web deployment:
+
+    1. Pre-requisites check
+
+    2. pre-requisites init.
+
+    3. Module deployment
+
+    4. Module deployment
+
+Inji verify
+
+    1. Pre-requisites check
+
+    2. pre-requisites init.
+
+    3. Module deployment
+
+    4. Module deployment
+
+Inji Certify
+
+    1. Pre-requisites check
+
+    2. pre-requisites init.
+
+    3. Module deployment
+
+    4. Module deployment
+
+etc ... continues
+
+
+-->
