@@ -24,8 +24,8 @@ This performance report focuses specifically on benchmarking and evaluating eSig
 
 To perform the test run, **Apache - JMeter** was used as the load testing tool to simulate **106 users**, maintaining a consistent **throughput of 100 Transactions Per Second (TPS)** for a duration of **30 minutes**.
 
-1. **The Constant Throughput Timer** was set to **100 × 60 = 6000 samples per minute** as the target throughput, with **100,000 user entries** prepared for the run. For example, if the total number of user samples reaches **117,000**, the first **100,000** users will be unique, and the **100,001st** user will be a repeat of the **1st** user from the entry list.
-2. To mimic a real-world scenario, an **additional delay of 1000ms** was introduced for the **send-OTP**, **auth**, and **token** endpoints in the mock identity system. Consequently, the **SLA was updated to 1.5 seconds**, and performance calculations were carried out using **Little’s Law**.
+1. **The Constant Throughput Timer** was set to **100 × 60 = 6000 samples per minute** as the target throughput, with **100,000 sample data was** prepared for the run. For example, if the total number of user samples reaches **117,000**, the first **100,000** sample data will be unique, and the **100,001st** sample data will be a repeat of the **1st** sample data from the entry list.
+2. To mimic a real-world scenario, an **additional delay of 1000ms** was introduced for the **send-OTP**, **auth**, and **token** endpoints in the mock identity system. Consequently, the **SLA was updated to 1.5 seconds**, and number of virtual users required to achieve the throughput of 100TPS was calculated using the **Little’s Law**.
 
 ## Tools Used
 
@@ -40,7 +40,7 @@ To perform the test run, **Apache - JMeter** was used as the load testing tool t
    2. Without induced delay
 3. Load conditions:
    1. Sustained 100 Transactions Per Second (TPS)
-   2. 100 concurrent users
+   2. 106 concurrent virtual users
    3. 30-minute duration
 4. Test environment configuration:
    1. eSignet: 2 pods (1500m CPU, 2250Mi memory each)
@@ -67,7 +67,7 @@ The performance run is carried out with below assumptions and considerations:
 
 ### **SLA:**
 
-We are considering that the integrated ID system will take 1 sec for below integration points to return back the response:
+We are considering that the integrated ID system will take 1.5 secs for below integration points to return back the response:
 
 1. **Send OTP  (**/authorization/send-ot&#x70;**)**
 2. **KYC Auth  (**/authorization/v3/authenticat&#x65;**)**
@@ -101,12 +101,12 @@ Following ‘Images’ were under the scope of ‘Performance Testing’:
 
 Performance data load has been populated before the run to ensure realistic results.
 
-| DB                           | Table Name  | Number Of Records |
-| ---------------------------- | ----------- | ----------------- |
-| <p>mock identity</p><p> </p> |  uin        |  100000           |
-|                              |  fullName   | 100000            |
-|                              |  emailId    | 100000            |
-|                              | phoneNumber | 100000            |
+| DB                           | Table Name  | Number Of Records/Sample Data |
+| ---------------------------- | ----------- | ----------------------------- |
+| <p>mock identity</p><p> </p> |  uin        |  100000                       |
+|                              |  fullName   | 100000                        |
+|                              |  emailId    | 100000                        |
+|                              | phoneNumber | 100000                        |
 
 ### Test Design
 
@@ -130,11 +130,11 @@ Performance data load has been populated before the run to ensure realistic resu
 
 #### Performance test execution results
 
-| **Application Name** | eSignet              |
-| -------------------- | -------------------- |
-| **Test Duration**    | 13/03/2025 (30 mins) |
-| **Number of users**  | 106                  |
-| **Status**           | Pass                 |
+| **Application Name**        | eSignet              |
+| --------------------------- | -------------------- |
+| **Test Duration**           | 13/03/2025 (30 mins) |
+| **Number of Virtual Users** | 106                  |
+| **Status**                  | Pass                 |
 
 ### Test Report
 
