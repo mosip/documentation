@@ -16,7 +16,7 @@ Release Date: 26th August, 2025
   * SD-JWT and JWT support: Draft implementation enabling issuers to issue credentials in Selective Disclosure JWT (SD-JWT) format, expanding interoperability across wallets. Refer to [feature description](https://docs.inji.io/inji-certify/overview/features#support-for-multiple-credential-formats) to know more about this feature
 * VC Configuration & Binding
   * Configurable VC Type: Issuers can now configure the VC Type dynamically, providing greater flexibility for different issuance use cases. Refer to [feature description](https://docs.inji.io/inji-certify/overview/features#addition-of-credential-type-via-api-post-onboarding) for more details.
-  * DID Binding with did:key: Added support for binding credentials to did:key, enhancing decentralization and cryptographic agility.
+  * DID Binding with did key:key: Added support for binding credentials to did:key, enhancing decentralization and cryptographic agility.
   * DID Binding with did:web for `kid` generation: Introduced support for did:web and automated key ID (kid) generation to enable smooth VC issuance in SD-JWT format.
 * Revocation – Draft Implementation
   * VC Revocation: Initial draft implementation of revocation capabilities, allowing issuers to mark credentials as revoked and support verifiers in checking credential status. Refer to [feature description](https://docs.inji.io/inji-certify/overview/features#revocation-mechanism-draft-release-experimental-json-ld-only) for more details.
