@@ -10,37 +10,8 @@ The bound certificate will then be usable to do token-based authentication like 
 
 Below is the key binder interface.
 
-```java
-public interface KeyBinder {
+https://github.com/mosip/esignet/blob/master/esignet-integration-api/src/main/java/io/mosip/esignet/api/spi/KeyBinder.java
 
-    /**
-     * Delegate request to send out OTP to provided individual ID on the configured channel
-     * during Key binding process.
-     * @param individualId
-     * @param otpChannels
-     * @param requestHeaders
-     * @return
-     * @throws SendOtpException
-     */
-    SendOtpResult sendBindingOtp(String individualId, List<String> otpChannels,
-                                 Map<String, String> requestHeaders) throws SendOtpException;
-
-    /**
-     * Delegate request check the given challenge. Binds the key only if the given challenge is valid
-     * returns back the new signed certificate and a partner specific user token.
-     * @param individualId
-     * @param challengeList
-     * @param publicKeyJWK
-     * @param requestHeaders
-     * @return
-     * @throws KeyBindingException
-     */
-    KeyBindingResult doKeyBinding(String individualId, List<AuthChallenge> challengeList, Map<String, Object> publicKeyJWK,
-                                  String bindAuthFactorType, Map<String, String> requestHeaders) throws KeyBindingException;
-    
-    List<String> getSupportedChallengeFormats(String authFactorType);
-}
-```
 
 {% hint style="info" %}
 Not&#x65;**:** For the latest version of the interface please check our code base - [KeyBinder.java](https://github.com/mosip/esignet/blob/master/esignet-integration-api/src/main/java/io/mosip/esignet/api/spi/KeyBinder.java)
