@@ -7,54 +7,16 @@ icon: list-tree
 
 # Deploy
 
-The eSignet solution is designed to be easily deployed and tested locally. The latest stable codebase is available under the **master** branch of the **eSignet repository**.  All feature development or bug fixes are typically carried out on specific feature or development branches.
 
-{% hint style="info" %}
-**Note:** It is recommended to either use the **master** or the released tags for local deployment and testing.
-{% endhint %}
+UPDATED Version of above
+Effortlessly deploy and configure eSignet with comprehensive guides, architecture insights, and mock environments.
 
-## Build backend services
+The eSignet solution is designed to be:
 
-Modules under [eSignet](https://github.com/mosip/esignet/tree/master) use Maven as the build tool.
+[**Easily deployed and tested locally**](local-deployment.md) using a Docker Compose–based setup for each module, allowing services to be brought up seamlessly on your machine.
 
-[eSignet-service](https://github.com/mosip/esignet/tree/master/esignet-service) is a spring-boot application that hosts all the REST endpoints.
+[**Deployed on-premise**](1.6.1-deployment-guide.md), with full flexibility to configure eSignet as per your organization’s use cases and requirements.
 
-**Prerequisites**
+The latest stable codebase is available under the master branch of the eSignet repository. All feature development or bug fixes are typically carried out on dedicated feature or development branches.
 
-* Java 11
-* Apache Maven 3.8.6
-
-**Build Steps**
-
-Run the below command to build eSignet backend services.
-
-```sh
-mvn clean install -Dgpg.skip=true
-```
-
-{% hint style="info" %}
-**Note:** If you want to skip test case execution during the build process, you can add `-DskipTests=true`
-{% endhint %}
-
-## Build UI
-
-[eSignet UI](https://github.com/mosip/esignet/tree/master/oidc-ui) is a react application that is built with npm, offering a dynamic user interface to interact with the backend services.
-
-**Prerequisites**
-
-* npm 8.1.2 or higher
-* node v16.13.2 or higher
-
-**Build**
-
-* Run the below command to install all the required dependencies
-
-```sh
-npm install
-```
-
-* Run the below command to build the UI application
-
-```sh
-npm run build
-```
+⚠️ Note: For deployment and testing, it is recommended to use either the master branch or the official released tags.
