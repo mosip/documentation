@@ -4,7 +4,7 @@ The eSignet Sign-Up Service provides a secure, user-friendly, and standards-base
 
 ## User Profile Creation
 
-eSignet offers multiple ways to incrementally create a user profile, based on the level of assurance and regulatory requirements of the relying party: \<!-- multiple or several and isn't it more inclined towards progressively adding upon the profile?>
+eSignet offers multiple ways to incrementally create a user profile, based on the level of assurance and regulatory requirements of the relying party.
 
 ### 1. KYC with Minimum Details
 

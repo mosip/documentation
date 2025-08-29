@@ -10,8 +10,8 @@ In today’s digital world, secure and accessible identity verification is key t
 
 The eSignet Signup Module is built around **self-registration**, empowering users to take control of their digital identity creation without complex prerequisites. Here’s how it works:
 
-1. [**Simple Onboarding**](../esignet-signup/features.md#user-profile-creation): Users can sign up with basic information, such as a mobile number and password, without needing immediate verification. This low-barrier entry ensures that anyone with a phone or internet access can create a profile.
-2. **Progressive KYC Integration**: After initial registration, users can add **Know Your Customer (KYC)** details, such as National ID, passport, or tax ID, at their own pace, enhancing their profile over time.
+1. [**Simple Onboarding**](features.md#user-profile-creation): Users can sign up with basic information, such as a mobile number and password, without needing immediate verification. This low-barrier entry ensures that anyone with a phone or internet access can create a profile.
+2. [**Progressive KYC Integration**](features.md#id-1.-kyc-with-minimum-details): After initial registration, users can add **Know Your Customer (KYC)** details, such as National ID, passport, or tax ID, at their own pace, enhancing their profile over time.
 3. **User-Controlled Process**: Self-registration allows users to manage their profiles independently, reducing reliance on intermediaries and making the process more accessible.
 
 This self-service approach is especially impactful in regions with limited access to traditional identity infrastructure, enabling users to start their digital journey with minimal friction.
@@ -23,8 +23,8 @@ Inclusion is at the heart of eSignet’s mission, and the Signup Module is desig
 * **Multilingual Support**: Built with **React JS**, the signup portal offers a responsive, multilingual interface, catering to diverse linguistic communities and breaking down language barriers.
 * **Accessible Authentication Methods**: Support for OTP (via SMS/email), biometrics, and QR codes accommodates users with varying technological access. For instance, individuals in rural areas with basic phones can use OTP, while those with smartphones can opt for biometrics.
 * **No Mandatory Verification at Signup**: Unlike traditional systems requiring upfront documentation, eSignet allows registration without immediate KYC, critical for underserved populations lacking formal IDs.
-* **Liveness Detection for All**: Integration with a **liveness engine** enables face authentication over the web, ensuring secure verification even for users with standard devices.
-* **Flexible ID Registry Integration**: The module connects to any ID registry (e.g., MOSIP) via runtime plugins, making it adaptable to diverse national identity systems.
+* [**Liveness Detection for All**:](develop/integration-guide-signup-portal/identity-verifier-plugin.md) Integration with a **liveness engine** enables face authentication over the web, ensuring secure verification even for users with standard devices.
+* [**Flexible ID Registry Integration**](develop/integration-guide-signup-portal/profile-registry-plugin.md): The module connects to any ID registry (e.g., MOSIP) via runtime plugins, making it adaptable to diverse national identity systems.
 
 By prioritizing accessibility and flexibility, eSignet promotes **financial inclusion** and bridges the **digital divide**, empowering marginalized communities to engage in the digital economy.
 
@@ -44,9 +44,9 @@ Progressive KYC is an ideal starting point because it balances **inclusivity** w
 
 Beyond the assurance model, Signup enhances trust through several features:
 
-* **Liveness Detection**: The liveness engine ensures that the person registering is physically present, reducing fraud risks, particularly for high-stakes applications like banking or government services.
+* [**Liveness Detection**](develop/integration-guide-signup-portal/identity-verifier-plugin.md): The liveness engine ensures that the person registering is physically present, reducing fraud risks, particularly for high-stakes applications like banking or government services.
 * **Privacy-First Approach**: User consent is mandatory before data is shared with relying parties, ensuring transparency and compliance with global privacy standards.
-* **Secure Technology Stack**: The Signup Module uses **Java**, **Spring Framework**, and **PostgreSQL** for secure data storage, with **Redis** for caching and **Kafka** for scalable asynchronous operations. The **Key Manager** handles cryptographic security.
+* [**Secure Technology Stack**](../readme/technology/technology-stack.md): The Signup Module uses **Java**, **Spring Framework**, and **PostgreSQL** for secure data storage, with **Redis** for caching and **Kafka** for scalable asynchronous operations. The **Key Manager** handles cryptographic security.
 
 These elements create a trustworthy ecosystem where users feel confident, and relying parties can rely on verified data to reduce fraud and streamline processes.
 
