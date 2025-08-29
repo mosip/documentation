@@ -22,7 +22,7 @@ eSignet ensures that digital interactions are not only seamless but also secure,
 
 **eSignet comprises of 2 specific modules/parts**:
 
-1. [eSignet Auth](esignet-authentication/)
+1. [eSignet Authentication](esignet-authentication/)
 2. [Signup](esignet-signup/)
 
 #### What is eSignet Authentication?
@@ -56,7 +56,7 @@ Beyond profile creation, the module also offers support for **identity verificat
 
 #### 1. **Enhancing Authentication Methods Through Secure Standards**
 
-* **Standards-Based Architecture** Utilizes [OpenID Connect flows built on the OAuth 2.0 framework](readme/standards.md), allowing seamless integration via widely supported libraries.
+* **Standards-Based Architecture** utilizes [OpenID Connect flows built on the OAuth 2.0 framework](readme/standards.md), allowing seamless integration via widely supported libraries.
 * **Scalable for Country-Wide Implementation** Designed to deliver secure authentication and KYC verification at national scale, ensuring high reliability and performance.
 * **Secure Biometric Integration** Incorporates the [Secure Biometric Interface (SBI)](readme/standards.md#1-security) to enable secure biometric data collection for identity verification.
 * **Advanced Security Features** Supports secure OpenID Connect options such as the authorization code flow and includes enhanced fraud prevention measures.
