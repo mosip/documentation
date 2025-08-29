@@ -1,3 +1,7 @@
+---
+icon: rectangle-terminal
+---
+
 # Develop
 
 This section provides developers with the tools, components, and guidelines for building, customizing, and integrating with the signup module.
