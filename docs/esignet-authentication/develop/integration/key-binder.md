@@ -8,10 +8,7 @@ The individual needs to be authenticated before binding the key. The interface i
 
 The bound certificate will then be usable to do token-based authentication like **WLA** (Wallet Local Authentication) from any digital wallet app.
 
-Below is the key binder interface.
-
-https://github.com/mosip/esignet/blob/master/esignet-integration-api/src/main/java/io/mosip/esignet/api/spi/KeyBinder.java
-
+Please [refer here](https://github.com/mosip/esignet/blob/master/esignet-integration-api/src/main/java/io/mosip/esignet/api/spi/KeyBinder.java) for the key binder interface refrence implementation
 
 {% hint style="info" %}
 Not&#x65;**:** For the latest version of the interface please check our code base - [KeyBinder.java](https://github.com/mosip/esignet/blob/master/esignet-integration-api/src/main/java/io/mosip/esignet/api/spi/KeyBinder.java)

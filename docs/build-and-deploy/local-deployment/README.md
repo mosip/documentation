@@ -8,7 +8,7 @@ We have a [docker-compose](https://github.com/mosip/esignet/tree/master/docker-c
 
 ### API Documentation <a href="#api-documentation" id="api-documentation"></a>
 
-To know about the query parameters that are required to test the OIDC flow, refer to our stoplight [API documentation](https://mosip.stoplight.io/docs/identity-provider/branches/1.5.0/7oz4lmhu3pf6b-e-signet).
+To know about the query parameters that are required to test the OIDC flow, refer to our  [API documentation](https://github.com/mosip/esignet/blob/v1.6.1/docs/esignet-openapi.yaml).
 
 ### Postman Collection <a href="#postman-collection" id="postman-collection"></a>
 

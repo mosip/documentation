@@ -6,7 +6,7 @@ The two main functionalities of the authenticator interface, **KYC Auth** and **
 
 <figure><img src="../../../.gitbook/assets/activity-diagrams-authenticator (1).png" alt=""><figcaption></figcaption></figure>
 
-For eSignet Authentication Interface refer to the [Link](https://github.com/mosip/esignet/blob/v1.5.1/esignet-integration-api/src/main/java/io/mosip/esignet/api/spi/Authenticator.java)
+For eSignet Authentication Interface refer to the [Link](https://github.com/mosip/esignet/blob/master/esignet-integration-api/src/main/java/io/mosip/esignet/api/spi/Authenticator.java)
 
 ## Who should implement the Authenticator plugin interface?
 
@@ -26,9 +26,9 @@ Method to fetch KYC signing certificates: KYC data returned in the KYCExchange m
 
 In case of a signed JWT, the keys used to sign the KYC JWT should be published through the eSignet jwks.json well-known endpoint for the replying parties to verify the signed JWT.
 
-List\<KycSigningCertificateData> getAllKycSigningCertificates() throws KycSigningCertificateException;
+`List<KycSigningCertificateData> getAllKycSigningCertificates() throws KycSigningCertificateException;`
 
-```
+````
 ```java
 /**
  * Retrieves all KYC signing certificates.
@@ -37,5 +37,7 @@ List\<KycSigningCertificateData> getAllKycSigningCertificates() throws KycSignin
  * @throws KycSigningCertificateException if there is an error fetching the certificates.
  */
 List<KycSigningCertificateData> getAllKycSigningCertificates() throws KycSigningCertificateException;
+````
+
 ```
 ```

@@ -7,5 +7,5 @@ Once signed up, users are prompted to complete a **video eKYC (electronic Know Y
 * [Signup and Login with OTP for Verified Claims](signup-and-login-with-otp-for-verified-claims.md)
 
 {% hint style="warning" %}
-**Note**: The sing up service is not available in the MOSIP Collab as of now for self experience.
+**Note**: The Signup service is not available in the MOSIP Collab as of now for self experience.
 {% endhint %}

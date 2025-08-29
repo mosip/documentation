@@ -45,6 +45,5 @@ Please refer to the sequence diagram below for the detailed working flow of the 
 
 <figure><img src="../../../.gitbook/assets/Integration_Verifier.png" alt=""><figcaption><p>Integration Verifier</p></figcaption></figure>
 
-Please refer below for the Identity Verifier Plugin reference implementation:
+Please[ refer here](https://github.com/mosip/esignet-signup/blob/master/signup-integration-api/src/main/java/io/mosip/signup/api/spi/IdentityVerifierPlugin.java) for the Identity Verifier Plugin reference implementation.
 
-https://github.com/mosip/esignet-signup/blob/master/signup-integration-api/src/main/java/io/mosip/signup/api/spi/IdentityVerifierPlugin.java

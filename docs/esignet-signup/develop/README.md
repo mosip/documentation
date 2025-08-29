@@ -1,21 +1,21 @@
 # Develop
 
-<!--
-Content Update:
-Copied: 7th Juy, 2025
-Reviewed: 7th Juy, 2025
-
-
--->
-
 This section provides developers with the tools, components, and guidelines for building, customizing, and integrating with the signup module.
 
 Explore the sections below to get started:
 
-## Technology
+### [Technology](../../readme/technology/technology-stack.md)
 
 Understand the technologies behind signup, including architecture diagrams, frameworks used, and system design considerations.
 
-## Configure Signup
+### [**Components - Signup Portal**](components-signup-portal.md) &#x20;
 
-Learn how to configure signup’s properties for different implementations, covering authentication, cache, plugins, and key management.
+Seamlessly register and verify identities with the Signup Portal’s robust components and secure eKYC integration.
+
+### [Integration guides](../../esignet-authentication/develop/integration/)
+
+Essential steps to integrate Signup with any Relying Party and ID system
+
+### [**API Reference**](api.md)
+
+Refer here for all the APIs used by signup.

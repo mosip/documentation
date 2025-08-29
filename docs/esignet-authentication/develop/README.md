@@ -9,10 +9,18 @@ Welcome to the Develop section of eSignet’s documentation. This section provid
 
 Explore the sections below to get started:
 
-### [Technology](../../../docs/readme/technology/README.md)
+### [Technology](../../readme/technology/)
 
 Understand the technologies behind eSignet, including architecture diagrams, frameworks used, and system design considerations.
 
-### [Configure eSignet](../develop/configuration/README.md)
+### [Configure eSignet](configuration/)
 
 Learn how to configure eSignet’s properties for different implementations, covering authentication, cache, plugins, and key management.
+
+### [Integration guides](integration/)
+
+Essential steps to integrate eSignet with any relying party and ID system.
+
+### [**API Reference**](api.md)
+
+Refer here for all the APIs used by eSignet.

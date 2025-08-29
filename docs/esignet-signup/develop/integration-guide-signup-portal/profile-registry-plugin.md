@@ -8,6 +8,5 @@ Please refer to the sequence diagram below for the detailed working flow of the 
 
 <figure><img src="../../../.gitbook/assets/Profile_refgistry.png" alt=""><figcaption><p>Profile Registry Plugin</p></figcaption></figure>
 
-Please refer below for the Profile Registry Plugin interface:
+Please [refer here](https://github.com/mosip/esignet-signup/blob/master/signup-integration-api/src/main/java/io/mosip/signup/api/spi/ProfileRegistryPlugin.java) for the Profile Registry Plugin interface.
 
-https://github.com/mosip/esignet-signup/blob/master/signup-integration-api/src/main/java/io/mosip/signup/api/spi/ProfileRegistryPlugin.java

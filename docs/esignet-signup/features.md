@@ -24,7 +24,7 @@ eSignet includes a secure password reset flow, ensuring users can easily recover
 
 ## Identity Assurance Flow (eKYC Verification)
 
-For regulated industries such as **banking, insurance, and digital governance**, eSignet singup supports a robust 'Identity Assurance Flow' that offers **high-confidence verification at login**.
+For regulated industries such as **banking, insurance, and digital governance**, eSignet Signup module supports a robust 'Identity Assurance Flow' that offers **high-confidence verification at login**.
 
 This flow includes:
 

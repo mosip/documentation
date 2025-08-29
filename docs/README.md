@@ -22,18 +22,20 @@ eSignet ensures that digital interactions are not only seamless but also secure,
 
 **eSignet comprises of 2 specific modules/parts**:
 
-1. [eSignet Auth](esignet-authentication/README.md)
-2. [Signup](esignet-signup/README.md)
+1. [eSignet Auth](esignet-authentication/)
+2. [Signup](esignet-signup/)
 
 #### What is eSignet Authentication?
 
-[**eSignet** authentication](esignet-authentication/README.md) is a powerful, open-source digital identity authentication module that enables secure and standardized access to online services. It is developed by **MOSIP** and built by implementing specific OpenID Connect (OIDC) RFCs to provide high assurance. It is designed to be **independent and be used as a standalone authentication module** and can be easily integrated with **any identity system or repository** that supports authentication and attribute retrieval. While it includes reference integrations with MOSIP, its architecture is flexible and open enough to be adopted for a wide range of digital services ecosystems.
+[**eSignet** authentication](esignet-authentication/) is a powerful, open-source digital identity authentication module that enables secure and standardised access to online services. It is developed by **MOSIP** and built by implementing specific OpenID Connect (OIDC) RFCs to provide high assurance.&#x20;
+
+It is designed to be **independent and be used as a standalone authentication module** and can be easily integrated with **any identity system or repository** that supports authentication and attribute retrieval. While it includes reference integrations with MOSIP, its architecture is flexible and open enough to be adopted for a wide range of digital services ecosystems.
 
 Whether you're building a citizen portal, a financial application, or any service that requires identity verification, **eSignet can serve as your trusted, modular identity layer**.
 
 #### What is Signup?
 
-The [Signup](esignet-signup/README.md) Module is a self-contained, independent component that enables individuals to create and manage their digital identity profiles designed for seamless integration with eSignet auth module.
+The [Signup](esignet-signup/) Module is a self-contained, independent component that enables individuals to create and manage their digital identity profiles designed for seamless integration with eSignet auth module.
 
 Beyond profile creation, the module also offers support for **identity verification capabilities**, including support for [**eKYC Verification**](esignet-signup/features.md#identity-assurance-flow-ekyc-verification), ensuring that user identities can be reliably validated during signup. With a focus on inclusivity, low-barrier entry, and progressive trust building, it can be used to extend digital identity to under-served or unregistered populations.
 
@@ -43,11 +45,11 @@ Beyond profile creation, the module also offers support for **identity verificat
 * **Inclusive Support for Multiple Authentication Factors** Accommodates a [variety of authentication methods](esignet-authentication/features.md#on-demand-selection-of-authentication-factors) including biometrics, one-time passwords (OTP), and wallet-based authentication.
 * **Frictionless Addition of New Authentication Factors** Architected to seamlessly integrate emerging authentication technologies without requiring major system modifications.
 * **Integration with Multiple Registries** Provides the capability to connect with various identity registries to facilitate comprehensive user verification.
-* **Simple Integration with Relying Parties (Service Providers)** Streamlines the onboarding process for service providers requiring robust identity verification and facilitate [integration with eSignet](esignet-authentication/develop/integration/relying-party/README.md).
+* **Simple Integration with Relying Parties (Service Providers)** Streamlines the onboarding process for service providers requiring robust identity verification and facilitate [integration with eSignet](esignet-authentication/develop/integration/relying-party/).
 * **User Consent Management** Incorporates a built-in mechanism to obtain explicit [user consent for data access and usage](esignet-authentication/features.md#consent-management).
 * **Protection Against Unwanted Profiling** Safeguards personal data by preventing unauthorized tracking or profiling of users.
 * **Multiple Assurance Levels** Supports varying levels of identity assurance, depending on the authentication method employed.
-* **Digital Wallet Integration** Enables secure, device-based authentication through [integration with digital wallets](esignet-authentication/develop/integration/wallet/README.md).
+* **Digital Wallet Integration** Enables secure, device-based authentication through [integration with digital wallets](esignet-authentication/develop/integration/wallet/).
 * **KYC-Verified Signup** Support for user's identity verification through video-eKYC during registration by leveraging its [Signup module](esignet-signup/features.md#identity-assurance-flow-ekyc-verification).
 
 ### **What Differentiates eSignet**

@@ -16,11 +16,12 @@ eSignet Auth allows service providers to define and configure authentication fac
 * **OTP (One-Time Password) Authentication** One-time codes sent via SMS or email for time-bound access—especially suitable in contexts where biometrics or wallets are unavailable.
 * **Knowledge-Based Identification (KBI)** Authentication via answers to identity-based questions, ideal for low-connectivity or limited-device scenarios.
 
+{% hint style="info" %}
 **FAQ Highlights for KBI**:
 
-[How to configure KBI form in eSignet UI?](https://docs.esignet.io/overview/features#how-to-configure-kbi-form-in-esignet-ui)
-
-[How is the authenticator plugin implemented for KBI with Sunbird RC?](https://docs.esignet.io/general/faq#how-is-authenticator-plugin-implemented-for-kbi-with-sunbird-rc)
+* [How to configure KBI form in eSignet UI?](../general/faq.md#how-to-configure-knowledge-based-identification-kbi-form-in-esignet-ui)
+* [How is the authenticator plugin implemented for KBI with Sunbird RC?](https://docs.esignet.io/general/faq#how-is-authenticator-plugin-implemented-for-kbi-with-sunbird-rc)
+{% endhint %}
 
 * **Biometric Authentication** Authentication using biometrics through devices compliant with IEEE P3167 SBI 2.0 standards.
   * **On-Demand Selection of Biometric Modalities**
@@ -58,16 +59,20 @@ eSignet Auth provides an adaptable and themeable UI framework that allows servic
 
 **UI Customization Capabilities**:
 
-* [**Purpose Display Configuration**](../esignet-authentication/develop/configuration/purpose-based-ui-rendering-in-esignet.md) Clearly indicate the intent of the action—e.g., Login, Verify Identity, or Link Account—to guide user interaction.
-* [**Multiple Login ID Options**](../esignet-authentication/develop/configuration/login-id-configuration-in-esignet.md) Enable users to choose from different login identifiers such as email, phone number, or username—improving accessibility across user segments.
-* **Theme and Layout Customization** Tailor look and feel to match your portal’s branding, including colors, logos, fonts, and button styles.
-* **Context-Aware UI Behavior** Adjust UI flow based on user type, assurance level, or chosen authentication factor (e.g., show/hide biometric prompts or OTP inputs dynamically).
+* [**Purpose Display Configuration**](develop/configuration/purpose-based-ui-rendering-in-esignet.md)**:**&#x43;learly indicate the intent of the action—e.g., Login, Verify Identity, or Link Account—to guide user interaction.
+* [**Multiple Login ID Options**](develop/configuration/login-id-configuration-in-esignet.md)**:** Enable users to choose from different login identifiers such as email, phone number, or username—improving accessibility across user segments.
+* **Theme and Layout Customization:** Tailor look and feel to match your portal’s branding, including colors, logos, fonts, and button styles.
+* **Context-Aware UI Behavior:** Adjust UI flow based on user type, assurance level, or chosen authentication factor (e.g., show/hide biometric prompts or OTP inputs dynamically).
 
 ## Language Support
 
 To ensure inclusive access for diverse user groups, eSignet offers multilingual UI support. Out-of-the-box language options include Arabic, English, Hindi, Kannada, and Tamil. Additional languages can be easily integrated to meet specific country or regional requirements.
 
+{% hint style="info" %}
 [How to add a new language to eSignet?](https://docs.esignet.io/general/faq#how-to-add-a-new-language-in-esignet)
 
 [How to remove a language from the eSignet default setup?](https://docs.esignet.io/general/faq#how-to-remove-a-language-from-the-esignet-default-setup)
+{% endhint %}
+
+
 
