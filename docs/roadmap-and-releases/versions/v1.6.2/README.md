@@ -10,7 +10,7 @@ We are excited to announce [**eSignet v1.6.2**](https://github.com/mosip/esignet
 
 ### Major Highlights
 
-1. **Identity Assurance 1.0 Support in MOSIP Identity Plugin**\
+1. [**Identity Assurance 1.0 Support in MOSIP Identity Plugin**](https://docs.esignet.io/esignet-signup/features#identity-assurance-flow-ekyc-verification)\
    Support in **MOSIP Identity plugin** to comply with [Identity Assurance 1.0](https://openid.net/specs/openid-connect-4-identity-assurance-1_0.html). This enables the **Signup video eKYC flow** to work with MOSIP ID Repo and IDA.
 
 ### Enhancements
@@ -22,7 +22,7 @@ We are excited to announce [**eSignet v1.6.2**](https://github.com/mosip/esignet
 
 ### Compatibility Note
 
-eSignet **v1.6.2** mainly introduces support for **Identity Assurance 1.0 in MOSIP Identity Plugin**, which enables the eSignet and Signup module to integrate seamless with MOSIP ID.
+eSignet **v1.6.2** mainly introduces support for **Identity Assurance 1.0 in MOSIP Identity Plugin**, which enables the eSignet and Signup module to integrate seamlessly with MOSIP ID.
 
 ⚠️ **Important:**
 
@@ -32,6 +32,8 @@ eSignet **v1.6.2** mainly introduces support for **Identity Assurance 1.0 in MOS
 2. eSignet and the Signup module have been **verified with these yet-to-be-released versions** of MOSIP modules.
 3. The **identity verification feature** in Signup (such as **video eKYC**) will be **fully compatible with MOSIP ID only when** the above module versions are officially released.
 4. Until then, **all existing features of eSignet and Signup** (other than the video eKYC flow) will continue to work as expected with the **currently released versions** of MOSIP ID modules.
+
+### Known Issues
 
 | Jira ID                                               | Summary                                                                                                      |
 | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
@@ -77,7 +79,10 @@ Please [refer here](https://mosip.atlassian.net/issues/?filter=-4\&jql=%20issuet
 
 ### Config Changes
 
-* **eSignet**: N/A
+* **eSignet**:
+  * Added the following configurations in mosip-identity-plugin properties file to invoke IDA v2 endpoints for eKYC flow
+    * mosip.esignet.authenticator.ida.kyc-auth-url-v2
+    * mosip.esignet.authenticator.ida.kyc-exchange-url-v2
 * **Signup**: N/A
 
 ### Documentation
