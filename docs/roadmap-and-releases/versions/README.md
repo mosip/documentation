@@ -6,6 +6,12 @@ description: Please refer below for all the latest release details ✨
 
 ## Version: 1.6.1
 
+* **Name**: v1.6.2 (Patch)
+* **Date:** 28th August, 2025
+* [**Release Notes**](v1.6.2/)
+
+## Version: 1.6.1
+
 * **Name:** eSignet(Patch)
 * **Date:** 29th July, 2025
 * [**Release Notes**](v1.6.1/)
