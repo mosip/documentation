@@ -230,105 +230,113 @@ As only secured https connections are allowed via nginx server will need below m
 Follow the steps mentioned [here](https://github.com/mosip/k8s-infra/tree/v1.2.0.2/mosip/on-prem#prerequisites) to install the required tools on your personal computer to create and manage the k8 cluster using RKE1.
 
 
-#### Wireguard
+## 1. Wireguard
 
-Secure access solution that establishes private channels to Observation and inji clusters.
+* Wireguard bastian server provides secure private channel to access MOSIP cluster.
+* Bastian server restricts public access, and enables access to only those clients who have their public key listed in Wireguard server.
+* Bastion server listens on UDP port 51820.
+* In case you already have VPN configured to access nodes privately please skip Wireguard installation and continue to use the same VPN.
 
-_If you already have a Wireguard bastion host then you may skip this step._
+**Setup Wireguard VM and wireguard bastion server**
 
-* A Wireguard bastion host (Wireguard server) provides a secure private channel to access the Observation and inji cluster.
-* The host restricts public access and enables access to only those clients who have their public key listed in the Wireguard server.
-* Wireguard listens on UDP port51820.
+* Create a Wireguard server VM with mentioned '[**Hardware and Network Requirements**'](pre-requisites.md).
+*   Open required ports in the Bastian server VM.
 
-**Setup Wireguard Bastion server**
+    * `cd $K8_ROOT/wireguard/`
+    * Create copy of `hosts.ini.sample` as `hosts.ini` and update the required details for wireguard VM
+    * `cp hosts.ini.sample hosts.ini`
 
-1. Create a Wireguard server VM with above mentioned Hardware and Network requirements.
-2. Open ports and Install docker on Wireguard VM.
+    > Note :
+    >
+    > * Remove `[Cluster]` complete section from copied `hosts.ini` file.
+    > * Add below mentioned details:
+    >   * ansible\_host : public IP of Wireguard Bastion server. eg. 100.10.20.56
+    >   * ansible\_user : user to be used for installation. In this ref-impl we use Ubuntu user.
+    >   * ansible\_ssh\_private\_key\_file : path to pem key for ssh to wireguard server. eg. `~/.ssh/wireguard-ssh.pem`![hosts.ini](../../../../_images/wireguard-hosts-ini.png)
 
-* Create a copy of `hosts.ini.sample` as `hosts.ini` and update the required details for wireguard VM `cp hosts.ini.sample hosts.ini`
-* Execute ports.yml to enable ports on VM level using ufw: `ansible-playbook -i hosts.ini ports.yaml`
+    * Execute ports.yml to enable ports on VM level using ufw:`ansible-playbook -i hosts.ini ports.yaml`
 
-{% hint style="warning" %}
-**Note**:
+> Note:
+>
+> * Permission of the pem files to access nodes should have 400 permission. `sudo chmod 400 ~/.ssh/privkey.pem`
+> * These ports are only needed to be opened for sharing packets over UDP.
+> * Take necessary measure on firewall level so that the Wireguard server can be reachable on 51820/udp.
 
-* Permission of the pem files to access nodes should have 400 permission. `sudo chmod 400 ~/.ssh/privkey.pem`
-* These ports are only needed to be opened for sharing packets over UDP.
-* Take necessary measure on firewall level so that the Wireguard server can be reachable on 51820/udp publically.
-* Make sure to clone the [k8s-infra](https://github.com/mosip/k8s-infra/tree/v1.2.0.2/mosip/on-prem#prerequisites) github repo for required scripts in above steps and perform the steps from linked directory.
-* If you already have Wireguard server for the VPC used you can skip the setup Wireguard Bastion server section.
-* execute docker.yml to install docker and add user to docker group:
+* Install docker
+  *   execute docker.yml to install docker and add user to docker group:
 
-```yaml
-    ansible-playbook -i hosts.ini docker.yaml
-```
-{% endhint %}
+      ```
+      ansible-playbook -i hosts.ini docker.yaml
+      ```
+* Setup Wireguard server
+  * SSH to wireguard VM
+  * `ssh -i <path to .pem> ubuntu@<Wireguard server public ip>`
+  * Create directory for storing wireguard config files.`mkdir -p wireguard/config`
+  *   Install and start wireguard server using docker as given below:
 
-4.  Setup Wireguard server
+      ```
+      sudo docker run -d \
+      --name=wireguard \
+      --cap-add=NET_ADMIN \
+      --cap-add=SYS_MODULE \
+      -e PUID=1000 \
+      -e PGID=1000 \
+      -e TZ=Asia/Calcutta \
+      -e PEERS=30 \
+      -p 51820:51820/udp \
+      -v /home/ubuntu/wireguard/config:/config \
+      -v /lib/modules:/lib/modules \
+      --sysctl="net.ipv4.conf.all.src_valid_mark=1" \
+      --restart unless-stopped \
+      ghcr.io/linuxserver/wireguard
+      ```
 
-    * SSH to wireguard VM
-    * Create directory for storing wireguard config files.
+> Note:
+>
+> * Increase the no. of peers above in case more than 30 wireguard client confs (-e PEERS=30) are needed.
+> * Change the directory to be mounted to wireguard docker as per need. All your wireguard confs will be generated in the mounted directory (`-v /home/ubuntu/wireguard/config:/config`).
 
-    ```sh
-       mkdir -p wireguard/config
+**Setup Wireguard Client in your PC**
+
+* Install Wireguard client in your PC using [steps](https://www.wireguard.com/install/).
+*   Assign `wireguard.conf`:
+
+    * SSH to the wireguard server VM.
+    * `cd /home/ubuntu/wireguard/config`
+    *   assign one of the PR for yourself and use the same from the PC to connect to the server.
+
+        * create `assigned.txt` file to assign the keep track of peer files allocated and update everytime some peer is allocated to someone.
+
+        ```
+        peer1 :   peername
+        peer2 :   xyz
+        ```
+
+        * use `ls` cmd to see the list of peers.
+        * get inside your selected peer directory, and add mentioned changes in `peer.conf`:
+          * `cd peer1`
+          *   `nano peer1.conf`
+
+              * Delete the DNS IP.
+              * Update the allowed IP's to subnets CIDR ip . e.g. 10.10.20.0/23
+
+              > Note:
+              >
+              > * CIDR Range will be shared by the Infra provider.
+              > * Make sure all the nodes are covered in the provided CIDR range. (nginx server, K8 cluster nodes for observation as well as mosip).
+          * Share the updated `peer.conf` with respective peer to connect to wireguard server from Personel PC.
+    * Add `peer.conf` in your PC’s `/etc/wireguard` directory as `wg0.conf`.
+    * Start the wireguard client and check the status:
+
+    ```
+    sudo systemctl start wg-quick@wg0
+    sudo systemctl status wg-quick@wg0
     ```
 
-    * Install and start wireguard server using docker as given below:
 
-    ```sh
-    sudo docker run -d \
-    --name=wireguard \
-    --cap-add=NET_ADMIN \
-    --cap-add=SYS_MODULE \
-    -e PUID=1000 \
-    -e PGID=1000 \
-    -e TZ=Asia/Calcutta \
-    -e PEERS=30 \
-    -p 51820:51820/udp \
-    -v /home/ubuntu/wireguard/config:/config \
-    -v /lib/modules:/lib/modules \
-    --sysctl="net.ipv4.conf.all.src_valid_mark=1" \
-    --restart unless-stopped \
-    ghcr.io/linuxserver/wireguard
-    ```
+* Once connected to wireguard, you should be now able to access and login using private IP’s.
 
-{% hint style="warning" %}
-**Note**:
 
-* Increase the no. of peers above in case more than 30 wireguard client confs (-e PEERS=30) are needed.
-* Change the directory to be mounted to wireguard docker as per need. All your wireguard confs will be generated in the mounted directory (`-v /home/ubuntu/wireguard/config:/config`).
-{% endhint %}
-
-#### Setup Wireguard Client on your PC and follow the below steps**
-
-1. Install [Wireguard client](https://www.wireguard.com/install/) on your PC.
-2. Assign `wireguard.conf`:
-
-* SSH to the wireguard server VM.
-* `cd /home/ubuntu/wireguard/config`
-* Assign one of the PR for yourself and use the same from the PC to connect to the server.
-*   Create `assigned.txt` file to assign the keep track of peer files allocated and update everytime some peer is allocated to someone.
-
-    ```sh
-    peer1 :   peername
-    peer2 :   xyz
-    ```
-* Use `ls` cmd to see the list of peers.
-* Get inside your selected peer directory, and add mentioned changes in `peer.conf`:
-  * `cd peer1`
-  * `nano peer1.conf`
-    * Delete the DNS IP.
-    * Update the allowed IP's to subnets CIDR ip . e.g. 10.10.20.0/23
-* Share the updated `peer.conf` with respective peer to connect to wireguard server from Personel PC.
-* Add `peer.conf` in your PC’s `/etc/wireguard` directory as `wg0.conf`.
-
-3. Start the wireguard client and check the status:
-
-```sh
-sudo systemctl start wg-quick@wg0
-sudo systemctl status wg-quick@wg0
-```
-
-4. Once connected to wireguard, you should be now able to access and login using private IP’s.
 
 
 
@@ -343,207 +351,511 @@ sudo systemctl status wg-quick@wg0
 
 ## K8 Cluster setup**
 
-
 Here you can find the kubernetes infrastructure repository [k8s-infra](https://github.com/mosip/k8s-infra/tree/v1.2.0.1) which contains the scripts to install and configure Kubernetes cluster with required monitoring, logging and alerting tools.
 
 <!-- Observation: Repo readme talks in terms of MOSIP-->
 
-### Clone the Kubernetes Infrastructure Repository:
+* Pre-requisites:
+  *   Install all the required tools mentioned in Pre-requisites for PC.
 
-```sh
-git clone -b v1.2.0.2 https://github.com/mosip/k8s-infra.git
-```
+      * kubectl
+      * helm
 
-### Go to the cloned directory:
-```sh
-cd k8s-infra/mosip/onprem
-```
+      ```
+      helm repo add bitnami https://charts.bitnami.com/bitnami
+      helm repo add mosip https://mosip.github.io/mosip-helm
+      ```
+  * ansible
+  * rke (version 1.3.10)
+  * Setup MOSIP K8 Cluster node VM’s as per '[**Hardware and Network Requirements**'](mosip/pre-requisites.md).
+* Run `env-check-setup.yaml` to check if cluster nodes are fine and doesn't have known issues in it.
+  * `cd $K8_ROOT/rancher/on-prem`
+  *   Create copy of `hosts.ini.sample` as `hosts.ini` and update the required details for MOSIP k8 cluster nodes.
 
-### Create copy of hosts.ini.sample as hosts.ini. Update the IP addresses. <!-- which ip address -->
-   1. Open the ports for the nodes: Execute [`ports.yml`](https://github.com/mosip/k8s-infra/tree/v1.2.0.2/mosip/on-prem#ports) to open all the required ports.
-  
-  * Open ports on each of the nodes.
-   `ansible-playbook -i hosts.ini ports.yaml`
-  * Disable swap (perhaps not needed as swap is already disabled).
-   `ansible-playbook -i hosts.ini swap.yaml`
+      * `cp hosts.ini.sample hosts.ini`
 
-   2. Docker installation: Install [Docker](https://github.com/mosip/k8s-infra/tree/v1.2.0.2/mosip/on-prem#docker) on all the required VM's.
-   * Install docker on all nodes.
+      > Note:
+      >
+      > * Ensure you are inside `on-prem` directory as mentioned above.
+      > * ansible\_host : internal IP of nodes. eg. 100.10.20.56, 100.10.20.57 ...
+      > * ansible\_user : user to be used for installation. In this ref-implementation we use Ubuntu user.
+      > * ansible\_ssh\_private\_key\_file : path to pem key for ssh to wireguard server. eg. `~/.ssh/nodes-ssh.pem`![hosts.ini](../../../_images/nodes-hosts-ini.png)
+  * `ansible-playbook -i hosts.ini env-check-setup.yaml`
+  * This ansible checks if localhost mapping ia already present in `/etc/hosts` file in all cluster nodes, if not it adds the same.
+* Setup passwordless ssh into the cluster nodes via pem keys. (Ignore if VM’s are accessible via pem’s).
+  * Generate keys on your PC
+    * `ssh-keygen -t rsa`
+  * Copy the keys to remote rancher node VM’s:
+    * `ssh-copy-id <remote-user>@<remote-ip>`
+  * SSH into the node to check password-less SSH
+    * `ssh -i ~/.ssh/<your private key> <remote-user>@<remote-ip>`
+  * Rancher UI : (deployed in Observation K8 cluster)
+* Open ports and Install docker on MOSIP K8 Cluster node VM’s.
+  * `cd $K8_ROOT/mosip/on-prem`
+  * create copy of `hosts.ini.sample` as `hosts.ini` and update the required details for wireguard VM.
+    * `cp hosts.ini.sample hosts.ini`
+  *   Update `vpc_ip` variable in `ports.yaml` with `vpc CIDR ip` to allow access only from machines inside same vpc.
 
-   `ansible-playbook -i hosts.ini docker.yaml`
+      > Note:
+      >
+      > * CIDR Range will be shared by the Infra provider.
+      > * Make sure all the nodes are covered in the provided CIDR range. (nginx server, K8 cluster nodes for observation as well as mosip).
+  * execute `ports.yml` to enable ports on VM level using ufw:`ansible-playbook -i hosts.ini ports.yaml`
+  *   Disable swap in cluster nodes. (Ignore if swap is already disabled)
 
-### Create [RKE1 K8](https://github.com/mosip/k8s-infra/tree/v1.2.0.2/mosip/on-prem#rke-cluster-setup) cluster for Inji services hosting.
+      * `ansible-playbook -i hosts.ini swap.yaml`
 
-RKE cluster setup
-* Create a cluster config file. 
-    ```
-    rke config
-    ```
-    *  _controlplane, etcd, worker_: Specify _controlplane_, _etc_ on at least **three** nodes. All nodes may be _worker_.
-    * Use default _canal_ networking model
-    * Keep the _Pod Security Policies_ disabled.
-    * Sample configuration options:
-    ```
-    [+] Cluster Level SSH Private Key Path [~/.ssh/id_rsa]:
-    [+] Number of Hosts [1]:
-    [+] SSH Address of host (1) [none]: <node1-ip>
-    [+] SSH Port of host (1) [22]:
-    [+] SSH Private Key Path of host (<node1-ip>) [none]:
-    [-] You have entered empty SSH key path, trying fetch from SSH key parameter
-    [+] SSH Private Key of host (<node1-ip>) [none]:
-    [-] You have entered empty SSH key, defaulting to cluster level SSH key: ~/.ssh/id_rsa
-    [+] SSH User of host (<node1-ip>) [ubuntu]:
-    [+] Is host (<node1-ip>) a Control Plane host (y/n)? [y]: y
-    [+] Is host (<node1-ip>) a Worker host (y/n)? [n]: y
-    [+] Is host (<node1-ip>) an etcd host (y/n)? [n]: y
-    [+] Override Hostname of host (<node1-ip>) [none]: node2
-    [+] Internal IP of host (<node1-ip>) [none]:
-    [+] Docker socket path on host (<node1-ip>) [/var/run/docker.sock]:
-    [+] Network Plugin Type (flannel, calico, weave, canal) [canal]:
-    [+] Authentication Strategy [x509]:
-    [+] Authorization Mode (rbac, none) [rbac]:
-    [+] Kubernetes Docker image [rancher/hyperkube:v1.17.17-rancher1]:
-    [+] Cluster domain [cluster.local]:
-    [+] Service Cluster IP Range [10.43.0.0/16]:
-    [+] Enable PodSecurityPolicy [n]:
-    [+] Cluster Network CIDR [10.42.0.0/16]:
-    [+] Cluster DNS Service IP [10.43.0.10]:
-    [+] Add addon manifest URLs or YAML files [no]:
-    ```
-* While opting for roles for different nodes follow below points:
-  * In case of odd no of total nodes of cluster opt for (n+1/2) nodes with Control plane, etcd host and worker host role and rest of the nodes with Worker host and etcd host role.
-  * In case of even no of total nodes of cluster opt for (n/2) nodes with Control Plane, etcd host and worker host role and rest of the node with Worker host and etcd host role.
+      > Caution: Always verify swap status with `swapon --show` before running the playbook to avoid unnecessary operations.
+  * execute `docker.yml` to install docker and add user to docker group:`ansible-playbook -i hosts.ini docker.yaml`
+* Creating RKE Cluster Configuration file
+  * `rke config`
+  *   Command will prompt for nodal details related to cluster, provide inputs w.r.t below mentioned points:
 
-* Remove the default Ingress install by editing `cluster.yaml`:
-    ```
-    ingress:
+      * `SSH Private Key Path` :
+      * `Number of Hosts`:
+      * `SSH Address of host` :
+      * `SSH User of host` :
+
+      ```
+      Is host (<node1-ip>) a Control Plane host (y/n)? [y]: y
+      Is host (<node1-ip>) a Worker host (y/n)? [n]: y
+      Is host (<node1-ip>) an etcd host (y/n)? [n]: y
+      ```
+
+      * Make all the nodes Worker `host` by default.
+      * To create an HA cluster, specify more than one host with role `Control Plane` and `etcd host`.
+  * `Network Plugin Type` : Continue with canal as default network plugin.
+  * For rest for other configuration opt the required or default value.
+* As result of rke config command `cluster.ymlfile` will be generated inside same directory, update the below mentioned fields:
+  * `nano cluster.yml`
+  *   Remove the default Ingress install
+
+      ```
+      ingress:
       provider: none
-    ```
-* Add the name of the kubernetes cluster in `cluster.yml`:
-    ```
-    cluster_name: sandbox-name
-    ```
-  * Add this ETCD backup_config section under services in `cluster.yml` to enable recurring snapshots for ETCD:  
       ```
-      backup_config: 
-        interval_hours: 12
-        retention: 6
+  *   Update the name of the kubernetes cluster in `cluster.yaml`
+
+      ```
+      `cluster_name: sandbox-name`
+      ```
+  * For production deplopyments edit the `cluster.yml`, according to this [RKE Cluster Hardening Guide](https://github.com/mosip/k8s-infra/blob/v1.2.0.1-B1/docs/rke-cluster-hardening.md).
+*   Setup up the cluster:
+
+    * Once `cluster.yml` is ready, you can bring up the kubernetes cluster using simple command.
+      *   This command assumes the `cluster.yml` file is in the same directory as where you are running the command.
+
+          * `rke up`
+
+          ```
+          INFO[0000] Building Kubernetes cluster
+          INFO[0000] [dialer] Setup tunnel for host [10.0.0.1]
+          INFO[0000] [network] Deploying port listener containers
+          INFO[0000] [network] Pulling image [alpine:latest] on host [10.0.0.1]
+          ...
+          INFO[0101] Finished building Kubernetes cluster successfully
+          ```
+      * The last line should read `Finished building Kubernetes cluster successfully` to indicate that your cluster is ready to use.
+      *   Copy the kubeconfig files
+
+          ```
+          cp kube_config_cluster.yml $HOME/.kube/<cluster_name>_config
+          chmod 400 $HOME/.kube/<cluster_name>_config
+          ```
+    * To access the cluster using kubeconfig filr use any one of the below method:
+    * `cp $HOME/.kube/<cluster_name>_config $HOME/.kube/config`**Alternatively**
+
+    ```
+    * `export KUBECONFIG="$HOME/.kube/<cluster_name>_config`
+    ```
+* Test cluster access:
+  * `kubectl get nodes`
+  * Command will result in details of the nodes of the rancher cluster.
+* Save Your files
+  * Save a copy of the following files in a secure location, they are needed to maintain, troubleshoot and upgrade your cluster.:
+    * `cluster.yml`: The RKE cluster configuration file.
+    * `kube_config_cluster.yml`: The [Kubeconfig file](https://rke.docs.rancher.com/kubeconfig) for the cluster, this file contains credentials for full access to the cluster.
+    * `cluster.rkestate`: The [Kubernetes Cluster State file](https://rke.docs.rancher.com/installation#kubernetes-cluster-state), this file contains credentials for full access to the cluster.
+
+## 7. MOSIP K8 Cluster Global configmap, Ingress and Storage Class setup
+
+### 7.a. Global configmap:
+
+* Global configmap contains the list of neccesary details to be used throughout the namespaces of the cluster for common details.
+* `cd $K8_ROOT/mosip`
+* Copy `global_configmap.yaml.sample` to `global_configmap.yaml`.
+  * `cp global_configmap.yaml.sample global_configmap.yaml`
+* Update the domain names in `global_configmap.yaml` and run.
+* `kubectl apply -f global_configmap.yaml`
+
+### 7.b. [Istio](https://istio.io/) Ingress setup:
+
+* It is a service mesh for the MOSIP K8 cluster which provides transparent layers on top of existing microservices along with powerful features enabling a uniform and more efficient way to secure, connect, and monitor services.
+  * `cd $K8_ROOT/mosip/on-prem/istio`
+  * `./install.sh`
+  * This will bring up all the Istio components and the Ingress Gateways.
+  *   Check Ingress Gateway services:
+
+      * `kubectl get svc -n istio-system`
+
+      > Note: Response should contain service names as mentioned below.
+      >
+      > * `istio-ingressgateway`: external facing istio service.
+      > * `istio-ingressgateway-internal`: internal facing istio service.
+      > * `istiod`: Istio daemon for replicating the changes to all envoy filters.
+
+### 7.c. Storage classes
+
+Multiple storage classes options are available for onprem K8's cluster. In this reference deployment will continue to use NFS as a storage class.
+
+*   Move to nfs directory in your personel computer.
+
+    ```
+    cd $K8_ROOT/mosip/nfs
+    ```
+*   Create a copy of hosts.ini.sample as hosts.ini.
+
+    ```
+    cp hosts.ini.sample hosts.ini
+    ```
+*   Update the NFS machine details in `hosts.ini` file.
+
+    > Note :
+    >
+    > * Add below mentioned details:
+    > * ansible\_host : internal IP of NFS server. eg. 10.12.23.21
+    > * ansible\_user : user to be used for installation, in this ref-impl we use Ubuntu user.
+    > * ansible\_ssh\_private\_key\_file : path to pem key for ssh to wireguard server. eg. `~/.ssh/wireguard-ssh.pem` ![hosts.ini](../../../_images/nfs-hosts-ini.png).
+*   Make sure Kubeconfig file is set correctly to point to required mosip cluster.
+
+    ```
+    kubectl config view
+    ```
+
+    Note:
+
+    * Output should show the cluster name to confirm you are pointing to right kubernetes cluster.
+    * If not pinting to right K8 cluster change the kubeconfig to connect to right K8 cluster.
+*   Enable firewall with required ports:
+
+    ```
+    ansible-playbook -i ./hosts.ini nfs-ports.yaml
+    ```
+*   SSH to the nfs node:
+
+    ```
+    ssh -i ~/.ssh/nfs-ssh.pem ubuntu@<internal ip of nfs server>
+    ```
+*   Clone `k8s-infra` repo in nginx VM:
+
+    ```
+    git clone https://github.com/mosip/k8s-infra -b v1.2.0.1
+    ```
+*   Move to the nfs directory:
+
+    ```
+    cd /home/ubuntu/k8s-infra/mosip/nfs/
+    ```
+*   Execute script to install nfs server:
+
+    ```
+    sudo ./install-nfs-server.sh
+    ```
+
+    Note:
+
+    > * Script prompts for below mentioned user inputs:
+    >
+    > ```
+    > .....
+    > Please Enter Environment Name: <envName>
+    > .....
+    > .....
+    > .....
+    > [ Export the NFS Share Directory ] 
+    > exporting *:/srv/nfs/mosip/<envName>
+    > NFS Server Path: /srv/nfs/mosip/<envName>
+    > ```
+    >
+    > * envName: env name eg. dev/qa/uat...
+*   Switch to your personel computer and excute below mentioned commands:
+
+    ```
+    cd $K8_ROOT/mosip/nfs/
+
+    ./install-nfs-client-provisioner.sh
+    ```
+
+    Note:
+
+    > * Script prompts for:
+    > * NFS Server: NFS server ip for persistence.
+    > * NFS Path : NFS path for storing the persisted data. eg. /srv/nfs/mosip/
+* Post installation check:
+  *   Check status of NFS Client Provisioner.
+
+      ```
+      kubectl -n nfs get deployment.apps/nfs-client-provisioner 
+      ```
+  *   Check status of nfs-client storage class.
+
+      ```
+       kubectl get storageclass
+       NAME                 PROVISIONER                            RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
+       longhorn (default)   driver.longhorn.io                     Delete          Immediate           true                   57d
+       nfs-client           cluster.local/nfs-client-provisioner   Delete          Immediate           true                   40s
       ```
 
-* [Sample config file](sample.cluster.yml) is provider in this folder.
+## 8. Import MOSIP Cluster into Rancher UI
 
-* For production deplopyments edit the `cluster.yml`, according to this [RKE Cluster Hardening Guide](../../docs/rke-cluster-hardening.md).
+* Login as admin in Rancher console
+* Select `Import` Existing for cluster addition.
+* Select `Generic` as cluster type to add.
+* Fill the `Cluster Name` field with unique cluster name and select `Create`.
+* You will get the kubectl commands to be executed in the kubernetes cluster. Copy the command and execute from your PC (make sure your `kube-config` file is correctly set to MOSIP cluster).
 
-* Bring up the cluster:
 ```
-rke up
-```
-* After successful creation of cluster a `kube_config_cluster.yaml` will get created. Copy the file to `$HOME/.kube` folder.
-  ```
-  cp kube_config_cluster.yml $HOME/.kube/<cluster_name>_config
-  chmod 400 $HOME/.kube/<cluster_name>_config
-  ```
-* To set this file as global default for `kubectl`, make sure you have a copy of existing `$HOME/.kube/config`. 
-```
-cp  $HOME/.kube/<cluster_name>_config  $HOME/.kube/config
-```
-* Alternatively, set `KUBECOFIG` env variable:
-```
-export KUBECONFIG=$HOME/.kube/<cluster_name>_config
-```
-* Test
-```
-kubectl get nodes
+e.g.:
+kubectl apply -f https://rancher.e2e.mosip.net/v3/import/pdmkx6b4xxtpcd699gzwdtt5bckwf4ctdgr7xkmmtwg8dfjk4hmbpk_c-m-db8kcj4r.yaml
 ```
 
-### Apply global config map: https://github.com/mosip/k8s-infra/blob/v1.2.0.2/mosip/global\_configmap.yaml.sample
-Global configmap
+* Wait for few seconds after executing the command for the cluster to get verified.
+* Your cluster is now added to the rancher management server.
 
+## 9. MOSIP K8 cluster Nginx server setup
 
-* `cd ../`
-* Copy `global_configmap.yaml.sample` to `global_configmap.yaml`  
-* Update the domain names in `global_configmap.yaml` and run
-```sh
-kubectl apply -f global_configmap.yaml
+### 9.a. SSL certificates creation
+
+* For Nginx server setup, we need ssl certificate, add the same into Nginx server.
+* Incase valid ssl certificate is not there generate one using letsencrypt:
+  * SSH into the nginx server
+  *   Install Pre-requisites:
+
+      ```
+      sudo apt update -y
+      sudo apt-get install software-properties-common -y
+      sudo add-apt-repository ppa:deadsnakes/ppa
+      sudo apt-get update -y
+      sudo apt-get install python3.8 -y
+      sudo apt install letsencrypt -y
+      sudo apt install certbot python3-certbot-nginx -y
+      ```
+  * Generate wildcard SSL certificates for your domain name.
+    * `sudo certbot certonly --agree-tos --manual --preferred-challenges=dns -d *.sandbox.mosip.net -d sandbox.mosip.net`
+      * replace `sanbox.mosip.net` with your domain.
+      * The default challenge HTTP is changed to DNS challenge, as we require wildcard certificates.
+      * Create a DNS record in your DNS service of type TXT with host `_acme-challenge.sandbox.xyz.net`, with the string prompted by the script.
+      * Wait for a few minutes for the above entry to get into effect.\
+        \*\* Verify\*\*: `host -t TXT _acme-challenge.sandbox.mosip.net`
+      * Press enter in the `certbot` prompt to proceed.
+      * Certificates are created in `/etc/letsencrypt` on your machine.
+      * Certificates created are valid for 3 months only.
+  * `Wildcard SSL certificate` [renewal](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/docs/wildcard-ssl-certs-letsencrypt.md#ssl-certificate-renewal). This will increase the validity of the certificate for next 3 months.
+
+### 9.b. Nginx server setup for MOSIP K8's cluster
+
+* Move to nginx directory in your local:
+* `cd $K8_ROOT/mosip/on-prem/nginx/`
+* Open required ports :
+  * Use any editor to create new `hosts.ini` file:
+  * ```
+    nano hosts.ini
+    ```
+  *   Add below mentioned lines with updated details of nginx server to the `hosts.ini` and save.
+
+      ```
+      [nginx]
+      node-nginx ansible_host=<internal ip> ansible_user=root ansible_ssh_private_key_file=<pvt .pem file>
+      ```
+  *   Execute below mentoned command to open required ports:
+
+      ```
+      ansible-playbook -i hosts.ini mosip/on-prem/nginx/nginx_ports.yaml
+      ```
+* Login to the nginx server node.
+*   Clone k8s-infra
+
+    ```
+    cd $K8_ROOT/mosip/on-prem/nginx
+    sudo ./install.sh
+    ```
+* Provide below mentioned inputs as and when prompted
+  * MOSIP nginx server internal ip
+  * MOSIP nginx server public ip
+  * Publically accessible domains (comma seperated with no whitespaces)
+  * SSL cert path
+  * SSL key path
+  * Cluster node ip's (comma seperated no whitespace)
+* Post installation check
+  * `sudo systemctl status nginx`
+  * Steps to uninstall nginx (incase it is required)\
+    `sudo apt purge nginx nginx-common`
+  * **DNS mapping**: Once nginx server is installed sucessfully, create DNS mapping for observation cluster related domains as mentioned in DNS requirement section.
+
+### 9.c. Check Overall nginx and istio wiring
+
+* Install `httpbin`: This utility docker returns http headers received inside the cluster.
+*   `httpbin` can be used for general debugging - to check ingress, headers etc.
+
+    ```
+    cd $K8_ROOT/utils/httpbin
+    ./install.sh
+    ```
+
+    * To see what is reaching the httpbin (example, replace with your domain name):
+
+    ```
+    curl https://api.sandbox.xyz.net/httpbin/get?show_env=true
+    curl https://api-internal.sandbox.xyz.net/httpbin/get?show_env=true
+    ```
+
+## 10. Monitoring module deployment
+
+> Note :
+>
+> * Monitoring in the sandbox environment is optional and can be deployed if required.
+> * For production environments, alternative monitoring tools can be used.
+> * These steps can also be skipped in development environments if monitoring is not needed.
+> * Incase skipping execute below commands to install monitoring crd as the same is required by mosip services:
+>
+> ```
+> helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+> helm repo update
+> kubectl create ns cattle-monitoring-system
+> helm -n cattle-monitoring-system install rancher-monitoring-crd mosip/rancher-monitoring-crd
+> ```
+
+* Prometheus and Grafana and Alertmanager tools are used for cluster monitoring.
+* Select 'Monitoring' App from Rancher console -> `Apps & Marketplaces`.
+*   In Helm options, open the YAML file and disable Nginx Ingress.
+
+    ```
+     ingressNginx:
+     enabled: false
+    ```
+* Click on `Install`.
+
+## 11. Alerting setup
+
+> Note :
+>
+> * Alerting in the sandbox environment is optional and can be deployed if required.
+> * For production environments, alternative alerting tools can be used.
+> * These steps can also be skipped in development environments if alerting is not needed.
+
+* Alerting is part of cluster monitoring, where alert notifications are sent to the configured email or slack channel.
+* Monitoring should be deployed which includes deployment of prometheus, grafana and alertmanager.
+* Create [slack incoming webhook](https://api.slack.com/messaging/webhooks).
+*   After setting slack incoming webhook update `slack_api_url` and `slack_channel_name` in `alertmanager.yml`.
+
+    * `cd $K8_ROOT/monitoring/alerting/`
+    * `nano alertmanager.yml`
+    * Update:
+
+    ```
+    global:
+    resolve_timeout: 5m
+    slack_api_url: <YOUR-SLACK-API-URL>
+    ...
+    slack_configs:
+    - channel: '<YOUR-CHANNEL-HERE>'
+    send_resolved: true
+    ```
+* Update `Cluster_name` in `patch-cluster-name.yaml`.
+* `cd $K8_ROOT/monitoring/alerting/`
+* `nano patch-cluster-name.yaml`
+* Update:
+
+```
+spec:
+externalLabels:
+cluster: <YOUR-CLUSTER-NAME-HERE>
 ```
 
+* Install Default alerts along some of the defined custom alerts:
 
-6. [Import](https://github.com/mosip/k8s-infra/tree/v1.2.0.2/mosip/on-prem#register-the-cluster-with-rancher) newly created K8 cluster to Rancher UI.
-
-
-
-
-
-## Nginx for Inji K8 Cluster**
-
-1. Setup [Nginx](https://github.com/mosip/k8s-infra/tree/v1.2.0.2/mosip/on-prem/nginx) for exposing services from newly created Inji K8 cluster.
-
-
-### Introduction
-* Nginx is used as a reverse proxy to direct traffic into the cluster via two channels - public and internal.
-* The internal channel is front-ended by Wireguard. 
-* The traffic is directed to NodePort of respective Ingress gateways (Istio). 
-* The Nginx runs on a separate node that has access to public Internet and connects to services via nodeport.
-
-![](../../../docs/_images/on-prem-nginx-wiring.png)
-
-### Prerequisites
-* [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html).
-* Provision one VM for Nginx, or multiple VMs for high avaiability like Nginx Plus.
-* OS: Debian based. Recommended Ubuntu Server.
-* [SSL certificates](../../../docs/wildcard-ssl-certs-letsencrypt.md).
-* Make sure this Nginx node has two network interfaces:
-    *  Public: Facing public Internet. _(Only required when accessing APIs over Intenet)_.
-    *  Private: Must be on the same subnet as cluster nodes/machines.  Wireguard connects to this interface. 
-* Command-line utilities:
-  * `bash`
-  * `sed`
-* Nginx machine details are updated in `../hosts.ini`.
-* Make sure wireguard is up and running as per [Wireguard instalation guide](https://docs.mosip.io/1.2.0/deployment/wireguard/wireguard-bastion).
-
-### Installation
-* Enable firewall with required ports:
 ```
-ansible-playbook -i ../hosts.ini nginx_ports.yaml
-```
-* Configure nginx.conf and install nginx. 
-```sh
- sudo ./install.sh
-```
-## Post installation
-* After installation check Nginx status:
-```
-sudo systemctl status nginx
-```
-* Only after complete testing and checks enable [public access](../../../docs/public-access.md).
-
-## Uninstall
-* purge nginx-common to remove all the nginx related dependencies.
-```
-sudo apt purge nginx nginx-common
+cd $K8_ROOT/monitoring/alerting/
+./install.sh
 ```
 
+* Alerting is installed.
 
+## 12. Logging module setup and installation
 
+> Note :
+>
+> * Logging in the sandbox environment is optional and can be deployed if required.
+> * For production environments, alternative logging tools can be used.
+> * These steps can also be skipped in development environments if logging is not needed.
 
+MOSIP uses [Rancher Fluentd](https://ranchermanager.docs.rancher.com/v2.0-v2.4/explanations/integrations-in-rancher/cluster-logging/fluentd) and elasticsearch to collect logs from all services and reflect the same in Kibana Dashboard.
 
+* Install Rancher FluentD system : Required for screpping logs outs of all the microservices from MOSIP k8 cluster.
+  * Install Logging from Apps and marketplace within the Rancher UI.
+  * Select Chart Version `100.1.3+up3.17.7` from Rancher console -> Apps & Marketplaces.
+* Configure Rancher FluentD
+  * Create `clusteroutput`
+    * `kubectl apply -f clusteroutput-elasticsearch.yaml`
+  * Start `clusterFlow`
+    * `kubectl apply -f clusterflow-elasticsearch.yaml`
+  *   Install elasticsearch, kibana and Istio addons\\
 
+      ```
+      cd $K8_ROOT/logging
+      ./intall.sh
+      ```
+  * set `min_age` in `elasticsearch-ilm-script.sh` and execute the same.
+  *   `min_age` : is the minimum no. of days for which indices will be stored in elasticsearch.
 
+      ```
+       cd $K8_ROOT/logging
 
+      ./elasticsearch-ilm-script.sh
+      ```
+  * MOSIP provides set of Kibana Dashboards for checking logs and throughputs.
+    * Brief description of these dashboards are as follows:
+      * [01-logstash.ndjson](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/logging/dashboards/01-logstash.ndjson) contains the logstash _Index_ Pattern required by the rest of the dashboards.
+      * [02-error-only-logs.ndjson](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/logging/dashboards/03-service-logs.ndjson) contains a Search dashboard which shows only the error logs of the services, called `MOSIP Error Logs` dashboard.
+      * [03-service-logs.ndjson](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/logging/dashboards/03-service-logs.ndjson) contains a Search dashboard which show all logs of a particular service, called MOSIP Service Logs dashboard.
+      * [04-insight.ndjson](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/logging/dashboards/04-insight.ndjson) contains dashboards which show insights into MOSIP processes, like the number of UINs generated (total and per hr), the number of Biometric deduplications processed, number of packets uploaded etc, called `MOSIP Insight` dashboard.
+      * [05-response-time.ndjson](mosip/on-prem-installation-guidelines.md) contains dashboards which show how quickly different MOSIP Services are responding to different APIs, over time, called `Response Time` dashboard.
+* Import dashboards:
+  * `cd K8_ROOT/logging`
+  * `./load_kibana_dashboards.sh ./dashboards <cluster-kube-config-file>`
+* View dashboards
 
-## K8 Cluster Configuration
+Open kibana dashboard from `https://kibana.sandbox.xyz.net`.
 
-* Setup [NFS](https://github.com/mosip/k8s-infra/tree/v1.2.0.2/nfs#nfs-setup) for persistence in k8 cluster as well as standalone VM (Nginx VM).
-* Setup [Monitoring](https://github.com/mosip/k8s-infra/tree/v1.2.0.2/monitoring#cluster-monitoring) for K8 cluster Monitoring.
-* Setup [Logging](https://github.com/mosip/k8s-infra/tree/v1.2.0.2/logging#logging) for K8 cluster.
-* Setup [Istio](https://github.com/mosip/k8s-infra/tree/v1.2.0.2/mosip/on-prem/istio#istio) and kiali.
+Kibana --> Menu (on top left) --> Dashboard --> Select the dashboard.
 
+## 13. MOSIP External Dependencies setup
 
+External Dependencies are set of external requirements that are needed for functioning of MOSIP’s core services like DB, Object Store, HSM etc.
 
+```
+cd $INFRA_ROOT/deployment/v3/external/all
+./install-all.sh
+```
 
+Click [here](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/mosip-external-dependencies) to check the detailed installation instructions of all the external components.
 
-
-
+> Note:
+>
+> * Connect to `mosip_pms` DB in postgres and execute the query to change `valid_to_date` for `mpolicy-default-mobile` in `pms.auth_policy` table.
+>   * Open the terminal.
+>   *   Use the psql command to connect to the PostgreSQL server. The general syntax is:
+>
+>       ```
+>       psql -h <host> -p 5432 -U postgres -d mosip_pms
+>       ```
+>
+>       * : The server address (e.g., localhost or an IP address).
+>       * Assuming other details remain same like port and user.
+>
+>       ```
+>       UPDATE pms.auth_policy SET valid_to_date = valid_to_date + interval '1 year' WHERE name = 'mpolicy-default-mobile';
+>       ```
 
 
 
