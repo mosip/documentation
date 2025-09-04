@@ -4,7 +4,7 @@ description: Please refer below for all the latest release details ✨
 
 # Releases
 
-## Version: 1.6.1
+## Version: 1.6.2
 
 * **Name**: v1.6.2 (Patch)
 * **Date:** 28th August, 2025
