@@ -40,7 +40,7 @@ In each scenario, Inji Verify leverages QR codes embedded with verifiable creden
 * **QR Code Version Compatibility**:
   * For successful verification using the scan feature, the verifiable credential (VC) should be encoded in QR code versions 27 and below.
 * **Ease of Integration for Verifier Applications**:
-  * Inji Verify SDK provides plug-and-play components—Scan/Upload and OpenID4VP Verifiable Presentation (VP) Verification—that enable developers to effortlessly integrate credential verification workflows into their verifier (relying party) applications.
+  * Inji Verify SDK provides plug-and-play components—Scan/Upload and OpenID4VP Verifiable Presentation (VP) Verification: cross- device and same device flows that enable developers to effortlessly integrate credential verification workflows into their verifier (relying party) applications.
   * Built with TypeScript and optimized for React applications, these components offer a modular and developer-friendly approach to integrating Verifiable Credential verification. Each capability is packaged as a standalone NPM module, ensuring flexibility, reusability, and ease of integration across diverse verifier implementations.
 
 {% hint style="success" %}
@@ -60,7 +60,12 @@ Inji Verify offers a comprehensive set of features tailored to meet the verifica
   * **Secure Authorization Flow**: Upon scanning, Inji Verify initiates an authorization request, retrieving and verifying the credential securely from Inji Web.
   * **Cross-Device Sharing**: Supports cross-device sharing, reducing QR code complexity and enabling seamless verification.
   * **Enhanced User Experience**: Simplifies the verification process, ensuring efficient and secure credential validation.
-* **Online Verification using OpenID4VP Flow**: Inji Verify streamlines online verification with the OpenID4VP flow. The verifier generates an Authorization Request, presented as a QR code, which the user scans with their digital wallet, such as Inji Wallet. This method employs the `vp_token` response type and `direct_post` response mode to securely exchange credentials. To maintain a compact and secure QR code, the Authorization Request contains only a Request URI, allowing the wallet to fetch the complete request data. This process ensures users can privately and securely provide cryptographic proof of their credentials.
+* **Online Verification using OpenID4VP Flow**: Inji Verify supports both Cross-Device and Same-Device flows for Verifiable Presentations:
+  * Cross-Device Flow: The verifier generates an Authorization Request as a QR code. The user scans it with a mobile wallet. The wallet responds with a vp_token containing the Verifiable Presentation.
+  * Same-Device Flow: The verifier initiates an Authorization Request directly on the same mobile device.
+    * Request can invoke the wallet via deep link where Wallet processes the request, authenticates the user, and collects consent.
+    * Wallet returns the signed Verifiable Presentation as a vp_token via redirect.
+    * Inji Verify validates and displays the results on the same device.
 
 {% hint style="success" %}
 **Note**: Currently the scope of VCs that can be verified are:

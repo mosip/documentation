@@ -5,15 +5,13 @@
 ## What is Inji?
 Inji is a digital credentialing stack that provides a way to share tamper-proof, instantly verifiable data which is cryptographically signed by a trusted issuer, and users can store them securely on their devices or browsers and share them when needed.
 
-
-
 ## What to expect from this guide and how is this guide organized?
 This guide is structured to provide a step-by-step approach for deploying the Inji stack, covering all essential aspects from prerequisites to troubleshooting:
 
-### Heading-3
+### Basics
 
 1. **Overview**: Introduction to Inji, its modules, deployment scenarios, required skillsets, architecture, deployment order, key considerations, dependencies, and supported environments.
-2. **Prerequisites**: Details on hardware, infrastructure, and software requirements, including tools, system specifications, and initial setup steps.
+2. **Prerequisites**: On-Prem Server Environment Details on Software (Kubernetes, NGINX etc.) and Hardware (System Specifications - CPU, RAM, Disk Space and VM specs), infrastructure, including tools and initial setup steps.
 3. **Base Infrastructure Setup**: Instructions for setting up Kubernetes clusters, NGINX, cluster configuration, and optional observation clusters.
 4. **Core Infra setup and configurations**: This section covers the installation and configuration of essential infrastructure components required for the Inji stack, including configmaps, databases, object storage, secrets management, configuration server, and artifactory.
 5. **Inji Stack Deployment**: Guidance on configuring and deploying core Inji components, including configuration management and object storage. Stepwise deployment instructions for Inji Certify, Mimoto, Web UI, and Verify modules.
@@ -21,20 +19,26 @@ This guide is structured to provide a step-by-step approach for deploying the In
 
 Each section references detailed steps and external resources where applicable, ensuring a comprehensive and actionable deployment process.
 
-### Typical Deployment Scenarios - [sanchi singh]
+<!--
+Compose
+
+### Typical Deployment Scenarios
+
+This should be global as well as module specific , like postgresql for Inji Certify etc.
 
 #### Dependencies on MOSIP Modules (eSignet) - [Deployment Scenario consideration - With and Without eSignet - Configuration changes in Inji Certify and Wallet to support ] - Discuss again with - [varaniya]
 
+-->
+
+## Key Deployment Considerations
 
 
+### Basic Skill-sets Required
 
+Deploying Inji Stack is easier if you have Base Infrastructure ready, still, if you want to deploy it 'On-Premise' and from scratch this guide will help you with the instructions to do so.
 
-## Considerations
+> **Note**: The basic Skill-sets mentioned here includes the skills you will need to setup the infrastructure also by yourself.
 
-
-### Basic Skillsets Required
-
-To successfully deploy and manage the Inji stack, the following skillsets are recommended:
 
 - **Kubernetes Administration**: Understanding of Kubernetes concepts, cluster setup, resource management, and troubleshooting.
 - **Linux System Administration**: Proficiency in Linux command-line operations, user and permission management, and basic networking.
@@ -63,7 +67,7 @@ To successfully deploy and manage the Inji stack, the following skillsets are re
 
   * We have two Kubernetes clusters:
 
-    * **Observation cluster** - This cluster is part of the observation plane and assists with administrative tasks. By design, this is kept independent from the actual cluster as a good security practice and to ensure clear segregation of roles and responsibilities. As a best practice, this cluster or its services should be internal and should never be exposed to the external world.
+    * [Optional] **Observation cluster** - This cluster is part of the observation plane and assists with administrative tasks. By design, this is kept independent from the actual cluster as a good security practice and to ensure clear segregation of roles and responsibilities. As a best practice, this cluster or its services should be internal and should never be exposed to the external world.
 
     * Rancher is used for managing the Inji cluster.
 
@@ -79,9 +83,18 @@ To successfully deploy and manage the Inji stack, the following skillsets are re
   * Inji Services
 
 
-## High-Level Architecture of Inji [Keshav  Singh]
+## Deployment Architecture of Inji
 
-<figure><img src="../../.gitbook/assets/iww-deployment-diagram.png" alt=""><figcaption><p>Inji Web Deployment Architecture</p></figcaption></figure>
+The diagram below illustrates the high-level deployment architecture for Inji Web, showing how core components interact within the Kubernetes cluster, including ingress, services, and external integrations.
+
+<figure>
+  <img src="../../.gitbook/assets/iww-deployment-diagram.png" alt="Inji Web Deployment Architecture">
+  <figcaption>
+    <p><strong>Inji Web Deployment Architecture:</strong></p>
+  </figcaption>
+</figure>
+
+<!-- 
 
 ## Deployment Order
 
@@ -89,32 +102,11 @@ The recommended order for deploying the Inji stack ensures that dependencies are
 
 [A flow diagram]
 
-## OS and Deployment Environment
-
-### Supported Operating Systems (Local Machine)
-
-The Inji stack can be deployed with the following operating systems, however for this guide we have considered a linux machine with Ubuntu 22.04 LTS.
-
-- **Linux** (Ubuntu 22.04 LTS - recommended for production deployments)
-- **Windows**
-- **macOS (OSX)**
-
-> **Note:** Most deployment scripts and tools are tested primarily on Linux. For Windows and macOS, ensure compatibility of required tools (e.g., Docker, Kubernetes CLI, Helm) and consider using WSL (Windows Subsystem for Linux) or virtualization where necessary.
-
-### Supported Deployment Environments (Server Environment)
-(**On-prem**, Cloud, Hybrid), For this guide we have considered a On-prem deployment [Ubuntu Server - 22.04 LTS].
-Note: If your are going for large scale / security concern - go with On Prem , if evanzelasing - Go with Cloud
-
-
-
-
-
-
-
+-->
 
 # Prerequisites - (Base Infrastructure) 
 
-Before installing any Inji Stack module, ensure that the following common prerequisites are met. These requirements apply to all modules and must be fulfilled to guarantee a smooth and successful deployment process.
+Before deploying any Inji Stack module, ensure that the following common prerequisites are met. These requirements apply to all modules and must be fulfilled to guarantee a smooth and successful deployment process.
 
 ## Overview
 
@@ -128,70 +120,75 @@ Before installing any Inji Stack module, ensure that the following common prereq
 * **Wireguard Setup**: Configure Wireguard for secure access to the clusters, if required.
 * **Configuration Files**: Prepare and update configuration files (such as `hosts.ini`, `values.yaml`, and config maps) with environment-specific details.
 
-> **Note:** Review the detailed hardware, network, and software requirements in the sections above before proceeding with the installation steps for any Inji Stack module.
+> **Note:** Review the detailed hardware, network, and software requirements in the sections below before proceeding with the installation steps for any Inji Stack module.
 
 
+## On-Prem Server Requirements
 
-## Server Environment
+> **Note:** You can deploy Inji on an environment and operating system that supports Kubernetes-based deployments. Ensure your chosen OS and infrastructure meet the prerequisites and compatibility requirements.
+> **Note**: This guide refrences using **Ubuntu Server 22.04 LTS**.
+> **Note:**  For large-scale deployments or environments with strict security requirements, an on-premises setup is recommended. For pilot projects, demonstrations, or rapid prototyping, a cloud-based deployment may be more suitable.
 
-## Tools and utilities
-
-* [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html).
-* [Rancher](../../inji-wallet/inji-web/rancher/).
-* Command line utilities:
-  * kubectl
-  * helm
-  * rke (rke version: v1.3.10)
-  * istioctl (istioctl version: v1.15.0)
-*   Helm repos:
-
-    ```sh
-    helm repo add bitnami https://charts.bitnami.com/bitnami
-    helm repo add mosip https://mosip.github.io/mosip-helm
-
-    ```
-
-
-
-## System Requirements (Server)
-
+### Requirements - Wireguard, Kubernetes Cluster VMs-Virtual Machines (Hardware, Network, Certificate and DNS)
 Ensure all required hardware and software dependencies are prepared before proceeding with the installation.
 
-### Hardware, network and certificate requirements
+> **Note**: Virtual Machines (VMs) can use any operating system as per convenience. For this installation guide, Ubuntu OS is referenced throughout.
 
-#### Hardware Requirements
+#### Wireguard Bastion Host
+* VMs and Hardware Specifications
+  * 1 VM (ensure to set up active-passive for HA)
+  * Specification - 2 vCPUs, 4 GB RAM, 8 GB Storage (HDD)
+* Server Network Interfaces
+  * Private interface: On the same internal network as all other nodes (e.g., local NAT network).
+  * Public interface: Either a direct public IP or a firewall/NAT rule forwarding UDP port 51820 to this interface's IP address.
+<!-- 
+Commenting it - If not to consider observation cluster
 
-* Virtual Machines (VMs) can use any operating system as per convenience.
-* For this installation guide, Ubuntu OS is referenced throughout.
+#### Observation Cluster nodes
+* VMs and Hardware Specifications
+  * 2 VMs (for HA)
+  * Specification - 2 vCPUs, 8 GB RAM, 32 GB Storage (HDD)
+* Server Network Interfaces
+  * Internal interface: On the same internal network as all other nodes, with internet access.
 
-| Sl no. | Purpose                                                                        | vCPU's | RAM   | Storage (HDD) | no. of VM's | HA                                                  |
-| ------ | ------------------------------------------------------------------------------ | ------ | ----- | ------------- | ----------- | --------------------------------------------------- |
-| 1.     | Wireguard Bastion Host                                                         | 2      | 4 GB  | 8 GB          | 1           | (ensure to setup active-passive)                    |
-| 2.     | Observation Cluster nodes                                                      | 2      | 8 GB  | 32 GB         | 2           | 2                                                   |
-| 3.     | Observation Nginx server (use Loadbalancer if required)                        | 2      | 4 GB  | 16 GB         | 1           | Nginx+                                              |
-| 4.     | Inji Stack Cluster nodes along with Nginx server, Use Loadbalancer if required | 8      | 32 GB | 64 GB         | 3           | Allocate etcd, control plane and worker accordingly |
+#### Observation Nginx server** (use Loadbalancer if required)
+* VMs and Hardware Specifications
+  * 1 VM (Nginx+ for HA)
+  * Specification - 2 vCPUs, 4 GB RAM, 16 GB Storage (HDD)
+* Server Network Interfaces
+  * Internal interface: On the same internal network as all other nodes.
+  * Public interface: Either a direct public IP or a firewall/NAT rule forwarding TCP port 443 to this interface's IP address.
+* Certificate Requirements: Wildcard SSL Certificate for the Observation Cluster:
+  * A valid wildcard SSL certificate for the domain used to access the Observation cluster.
+  * This certificate must be stored inside the Nginx server VM for the Observation cluster.
+  * For example, a domain like \*.org.net could serve as the corresponding example.
+
+-->
+
+#### Inji Stack Cluster nodes along with Nginx server** (use Loadbalancer if required)
+* **VMs and Hardware Specifications**
+  * 3 VMs (allocate etcd, control plane, and worker nodes accordingly for HA)
+  * Specification - 8 vCPUs, 32 GB RAM, 64 GB Storage (HDD)
+* **Network Interfaces**
+  * Internal interface: On the same internal network as all other nodes, with internet access.
+* **Wildcard SSL Certificate for the Inji K8s Cluster**
+  * A valid wildcard SSL certificate for the domain used to access the inji Kubernetes cluster.
+  * This certificate must be stored inside the Nginx server VM for the inji cluster.
+  * For example, a domain like \*.sandbox.xyz.net could serve as the corresponding example.
 
 
-#### Network Requirements
+> **Note**: Network Requirements
 
 * All the VM's should be able to communicate with each other.
 * Need stable Intra network connectivity between these VM's.
 * All the VM's should have stable internet connectivity for docker image download (in case of local setup ensure to have a locally accessible docker registry).
-* Server Interface requirement as mentioned in below table:
-
-| Sl no. | Purpose                   | Network Interfaces                                                                                                                                                                                                                      |
-|--------|---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.     | Wireguard Bastion Host    | **Private interface:** On the same internal network as all other nodes (e.g., local NAT network).<br>**Public interface:** Either a direct public IP or a firewall/NAT rule forwarding UDP port 51820 to this interface's IP address. |
-| 2.     | K8 Cluster nodes          | **Internal interface:** On the same internal network as all other nodes, with internet access.                                                                                                                                        |
-| 3.     | Observation Nginx server  | **Internal interface:** On the same internal network as all other nodes, with internet access.                                                                                                                                        |
-| 4.     | Inji Nginx server         | **Internal interface:** On the same internal network as all other nodes.<br>**Public interface:** Either a direct public IP or a firewall/NAT rule forwarding TCP port 443 to this interface's IP address.                           |
 
 
 #### DNS requirements \[TODO]
 
 ### DNS Requirements
 
-Below is a sample mapping of domain names to their respective IP addresses and purposes for a typical Inji/MOSIP deployment. Update these as per your environment.
+Below is a sample mapping of domain names to their respective IP addresses and purposes for a typical Inji deployment. Update these as per your environment.
 
 | Sl No. | Domain Name                     | Mapping Details                                         | Purpose                                                                                   |
 |--------|---------------------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------|
@@ -209,179 +206,220 @@ Below is a sample mapping of domain names to their respective IP addresses and p
 
 > **Note:** Ensure all DNS records are created and point to the correct IP addresses (public or private) as per your network design. For private domains, access is typically restricted via Wireguard VPN.
 
-#### Certificate requirements
 
-As only secured https connections are allowed via nginx server will need below mentioned valid ssl certificates:
+## Personal Computers
 
-1. Wildcard SSL Certificate for the Observation Cluster:
-   * A valid wildcard SSL certificate for the domain used to access the Observation cluster.
-   * This certificate must be stored inside the Nginx server VM for the Observation cluster.
-   * For example, a domain like \*.org.net could serve as the corresponding example.
-2. Wildcard SSL Certificate for the Inji K8s Cluster:
-   * A valid wildcard SSL certificate for the domain used to access the inji Kubernetes cluster.
-   * This certificate must be stored inside the Nginx server VM for the inji cluster.
-   * For example, a domain like \*.sandbox.xyz.net could serve as the corresponding example.
+> **Note**: Follow the steps mentioned [here](https://github.com/mosip/k8s-infra/tree/v1.2.0.2/mosip/on-prem#prerequisites) to install the required tools on your personal computer to create and manage the k8 cluster using RKE1.
 
+### Operating Systems
+The Inji stack can be deployed with a PC having one of the following operating systems, however for this guide we have considered a linux machine with Ubuntu 22.04 LTS.
 
+- **Linux** (Ubuntu 22.04 LTS - recommended for production deployments)
+- **Windows**
+- **macOS (OSX)**
 
+> **Note:** Most deployment scripts and tools are tested primarily on Linux.
 
-### Tools to be installed on Personal Computers (Tools for Secure Access)
+### Tools and utilities
 
-Follow the steps mentioned [here](https://github.com/mosip/k8s-infra/tree/v1.2.0.2/mosip/on-prem#prerequisites) to install the required tools on your personal computer to create and manage the k8 cluster using RKE1.
+* [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html).
+* [Rancher](../../inji-wallet/inji-web/rancher/).
+* Command line utilities:
+  * kubectl
+  * helm
+  * rke (rke version: v1.3.10)
+  * istioctl (istioctl version: v1.15.0)
+*   Helm repos:
 
+    ```sh
+    helm repo add bitnami https://charts.bitnami.com/bitnami
+    helm repo add mosip https://mosip.github.io/mosip-helm
 
-## 1. Wireguard
+    ```
 
-* Wireguard bastian server provides secure private channel to access MOSIP cluster.
+# Setting Up Wireguard
+## Wireguard
+
+> **Note**: In case you already have VPN configured to access nodes privately please skip Wireguard installation and continue to use the same VPN.
+
+Wireguard bastian server provides secure private channel to access Inji cluster. Bastian server restricts public access, and enables access to only those clients who have their public key listed in Wireguard server.
+
+WireGuard is a modern, fast, and secure VPN (Virtual Private Network) protocol and software that creates encrypted tunnels between devices.
+
+* Wireguard bastian server provides secure private channel to access Inji cluster.
 * Bastian server restricts public access, and enables access to only those clients who have their public key listed in Wireguard server.
 * Bastion server listens on UDP port 51820.
-* In case you already have VPN configured to access nodes privately please skip Wireguard installation and continue to use the same VPN.
 
-**Setup Wireguard VM and wireguard bastion server**
 
-* Create a Wireguard server VM with mentioned '[**Hardware and Network Requirements**'](pre-requisites.md).
-*   Open required ports in the Bastian server VM.
+### Setup Wireguard VM and wireguard bastion server
 
-    * `cd $K8_ROOT/wireguard/`
-    * Create copy of `hosts.ini.sample` as `hosts.ini` and update the required details for wireguard VM
-    * `cp hosts.ini.sample hosts.ini`
+Create a Wireguard server VM with the mentioned [**On-Prem Server Requirements**](#on-prem-server-requirements).
 
-    > Note :
-    >
-    > * Remove `[Cluster]` complete section from copied `hosts.ini` file.
-    > * Add below mentioned details:
-    >   * ansible\_host : public IP of Wireguard Bastion server. eg. 100.10.20.56
-    >   * ansible\_user : user to be used for installation. In this ref-impl we use Ubuntu user.
-    >   * ansible\_ssh\_private\_key\_file : path to pem key for ssh to wireguard server. eg. `~/.ssh/wireguard-ssh.pem`![hosts.ini](../../../../_images/wireguard-hosts-ini.png)
+Before proceeding, ensure that a dedicated VM (the Bastion server) has already been provisioned according to the specified hardware and network requirements. This VM will be used to set up the Wireguard server. Once the VM is ready, open the required ports on the Bastion server VM.
 
-    * Execute ports.yml to enable ports on VM level using ufw:`ansible-playbook -i hosts.ini ports.yaml`
 
-> Note:
+#### Open required ports in the Bastian server VM
+Configure the firewall on the Bastion server virtual machine to allow network traffic through specific ports needed for your application or remote access.
+
+* `cd $K8_ROOT/wireguard/`
+* Create copy of `hosts.ini.sample` as `hosts.ini` and update the required details for wireguard VM
+* `cp hosts.ini.sample hosts.ini`
+
+> **Note**:
+>
+> * Remove `[Cluster]` complete section from copied `hosts.ini` file.
+> * Add below mentioned details:
+>   * ansible\_host : public IP of Wireguard Bastion server. eg. 100.10.20.56
+>   * ansible\_user : user to be used for installation. In this ref-impl we use Ubuntu user.
+>   * ansible\_ssh\_private\_key\_file : path to pem key for ssh to wireguard server. eg. `~/.ssh/wireguard-ssh.pem`![hosts.ini](../../../../_images/wireguard-hosts-ini.png)
+
+* Execute ports.yml to enable ports on VM level using ufw:`ansible-playbook -i hosts.ini ports.yaml`
+
+> **Note**:
 >
 > * Permission of the pem files to access nodes should have 400 permission. `sudo chmod 400 ~/.ssh/privkey.pem`
 > * These ports are only needed to be opened for sharing packets over UDP.
 > * Take necessary measure on firewall level so that the Wireguard server can be reachable on 51820/udp.
 
-* Install docker
-  *   execute docker.yml to install docker and add user to docker group:
+#### Install docker
+*   execute docker.yml to install docker and add user to docker group:
 
-      ```
-      ansible-playbook -i hosts.ini docker.yaml
-      ```
+```sh
+ansible-playbook -i hosts.ini docker.yaml
+```
 * Setup Wireguard server
   * SSH to wireguard VM
   * `ssh -i <path to .pem> ubuntu@<Wireguard server public ip>`
   * Create directory for storing wireguard config files.`mkdir -p wireguard/config`
-  *   Install and start wireguard server using docker as given below:
+  * Install and start wireguard server using docker as given below:
 
-      ```
-      sudo docker run -d \
-      --name=wireguard \
-      --cap-add=NET_ADMIN \
-      --cap-add=SYS_MODULE \
-      -e PUID=1000 \
-      -e PGID=1000 \
-      -e TZ=Asia/Calcutta \
-      -e PEERS=30 \
-      -p 51820:51820/udp \
-      -v /home/ubuntu/wireguard/config:/config \
-      -v /lib/modules:/lib/modules \
-      --sysctl="net.ipv4.conf.all.src_valid_mark=1" \
-      --restart unless-stopped \
-      ghcr.io/linuxserver/wireguard
-      ```
+    ```sh
+    sudo docker run -d \
+    --name=wireguard \
+    --cap-add=NET_ADMIN \
+    --cap-add=SYS_MODULE \
+    -e PUID=1000 \
+    -e PGID=1000 \
+    -e TZ=Asia/Calcutta \
+    -e PEERS=30 \
+    -p 51820:51820/udp \
+    -v /home/ubuntu/wireguard/config:/config \
+    -v /lib/modules:/lib/modules \
+    --sysctl="net.ipv4.conf.all.src_valid_mark=1" \
+    --restart unless-stopped \
+    ghcr.io/linuxserver/wireguard
+    ```
 
-> Note:
+> **Note**:
 >
-> * Increase the no. of peers above in case more than 30 wireguard client confs (-e PEERS=30) are needed.
+> * Increase the number of peers above in case more than 30 wireguard client confs (-e PEERS=30) are needed.
 > * Change the directory to be mounted to wireguard docker as per need. All your wireguard confs will be generated in the mounted directory (`-v /home/ubuntu/wireguard/config:/config`).
 
-**Setup Wireguard Client in your PC**
+### Setup Wireguard Client on your PC**
 
-* Install Wireguard client in your PC using [steps](https://www.wireguard.com/install/).
+* Install Wireguard client on your PC using [steps](https://www.wireguard.com/install/).
 *   Assign `wireguard.conf`:
 
-    * SSH to the wireguard server VM.
-    * `cd /home/ubuntu/wireguard/config`
-    *   assign one of the PR for yourself and use the same from the PC to connect to the server.
+  * SSH to the wireguard server VM.
+  * `cd /home/ubuntu/wireguard/config`
+  *   assign one of the PR for yourself and use the same from the PC to connect to the server.
 
-        * create `assigned.txt` file to assign the keep track of peer files allocated and update everytime some peer is allocated to someone.
+    * create `assigned.txt` file to assign the keep track of peer files allocated and update everytime some peer is allocated to someone.
 
-        ```
-        peer1 :   peername
-        peer2 :   xyz
-        ```
-
-        * use `ls` cmd to see the list of peers.
-        * get inside your selected peer directory, and add mentioned changes in `peer.conf`:
-          * `cd peer1`
-          *   `nano peer1.conf`
-
-              * Delete the DNS IP.
-              * Update the allowed IP's to subnets CIDR ip . e.g. 10.10.20.0/23
-
-              > Note:
-              >
-              > * CIDR Range will be shared by the Infra provider.
-              > * Make sure all the nodes are covered in the provided CIDR range. (nginx server, K8 cluster nodes for observation as well as mosip).
-          * Share the updated `peer.conf` with respective peer to connect to wireguard server from Personel PC.
-    * Add `peer.conf` in your PC’s `/etc/wireguard` directory as `wg0.conf`.
-    * Start the wireguard client and check the status:
-
-    ```
-    sudo systemctl start wg-quick@wg0
-    sudo systemctl status wg-quick@wg0
+    ```sh
+    peer1 :   peername
+    peer2 :   xyz
     ```
 
+    * use `ls` cmd to see the list of peers.
+    * get inside your selected peer directory, and add mentioned changes in `peer.conf`:
+      * `cd peer1`
+      *   `nano peer1.conf`
 
+        * Delete the DNS IP.
+        * Update the allowed IP's to subnets CIDR ip . e.g. 10.10.20.0/23
+
+        > Note:
+        >
+        > * CIDR Range will be shared by the Infra provider.
+        > * Make sure all the nodes are covered in the provided CIDR range. (nginx server, K8 cluster nodes for observation as well as mosip).
+      * Share the updated `peer.conf` with respective peer to connect to wireguard server from Personel PC.
+* Add `peer.conf` in your PC’s `/etc/wireguard` directory as `wg0.conf`.
+* Start the wireguard client and check the status:
+
+```sh
+sudo systemctl start wg-quick@wg0
+sudo systemctl status wg-quick@wg0
+```
 * Once connected to wireguard, you should be now able to access and login using private IP’s.
-
-
-
-
-
-
-
-
-
-
 
 
 # Base Infrastructure Setup
 
-## K8 Cluster setup**
+## What is meant by "Base Infrastructure Setup" here?
+"Base Infrastructure Setup" refers to preparing all foundational resources and configurations needed before deploying the Inji stack. This includes provisioning servers/VMs, configuring networks and firewalls, setting up SSL certificates, installing Kubernetes clusters and required tools (Docker, kubectl, Helm, etc.), establishing secure access (e.g., Wireguard VPN), and deploying essential services like NGINX, storage, monitoring, and logging. It ensures the environment is ready for Inji stack installation.
 
-Here you can find the kubernetes infrastructure repository [k8s-infra](https://github.com/mosip/k8s-infra/tree/v1.2.0.1) which contains the scripts to install and configure Kubernetes cluster with required monitoring, logging and alerting tools.
+- **Provisioning foundational resources** required for the Inji stack, including:
+  - Virtual machines (VMs) or servers as per hardware requirements.
+  - Network configuration (internal connectivity, firewall rules, DNS).
+  - SSL certificate setup for secure communications.
+- **Setting up Kubernetes clusters**:
+  - Installing and configuring Kubernetes (using RKE, Rancher, etc.).
+  - Ensuring cluster nodes are accessible and properly networked.
+- **Configuring supporting infrastructure**:
+  - Installing Docker and required CLI tools (kubectl, helm, ansible, istioctl).
+  - Setting up passwordless SSH access to all nodes.
+  - Preparing configuration files (hosts.ini, values.yaml, etc.).
+- **Deploying essential services**:
+  - Setting up NGINX for SSL termination, reverse proxy, and load balancing.
+  - Configuring storage classes (e.g., NFS) for persistent storage.
+  - Setting up monitoring, logging, and alerting tools (Prometheus, Grafana, Fluentd, etc.).
+- **Establishing secure access**:
+  - Installing and configuring Wireguard VPN for secure cluster access.
+  - Ensuring only authorized users can access the infrastructure.
+- **Importing clusters into management tools** (e.g., Rancher) for centralized administration.
 
-<!-- Observation: Repo readme talks in terms of MOSIP-->
 
-* Pre-requisites:
-  *   Install all the required tools mentioned in Pre-requisites for PC.
+## Inji K8 (Kubernetes) Cluster setup**
+## Prerequisites
+### Local PC Requirements
+You should have these tools installed on your local machine from where you will be running the ansible playbooks to create and manage the k8 cluster using RKE1.
 
-      * kubectl
-      * helm
+  | Tool      | Description                                                                 | Official Installation Guide                                                                                 |
+  |-----------|-----------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+  | kubectl   | Command-line tool for interacting with Kubernetes clusters.                  | [Install kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)                                         |
+  | helm      | Kubernetes package manager for deploying and managing applications.          | [Install Helm](https://helm.sh/docs/intro/install/)                                                        |
+  | ansible   | Automation tool for configuration management and application deployment.     | [Install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)      |
+  | rke       | Rancher Kubernetes Engine for provisioning Kubernetes clusters (v1.3.10).    | [Install RKE](https://rke.docs.rancher.com/installation/)                                                  |
 
-      ```
-      helm repo add bitnami https://charts.bitnami.com/bitnami
-      helm repo add mosip https://mosip.github.io/mosip-helm
-      ```
-  * ansible
-  * rke (version 1.3.10)
-  * Setup MOSIP K8 Cluster node VM’s as per '[**Hardware and Network Requirements**'](mosip/pre-requisites.md).
+> **Note:**  
+> Add Helm repositories after installing Helm:
+> ```sh
+> helm repo add bitnami https://charts.bitnami.com/bitnami
+> helm repo add mosip https://mosip.github.io/mosip-helm
+> ```
+
+> Note: For VM provisioning and hardware/network requirements, refer to the [System Requirements section](#on-prem-server-requirements).
+
+* Find the **kubernetes infrastructure repository** [here](https://github.com/mosip/k8s-infra/tree/v1.2.0.1) which contains the scripts to install and configure Kubernetes cluster with required monitoring, logging and alerting tools.
+
+  * After reviewing the `k8s-infra` repository and ensuring you have all required tools installed on your local machine, the next step is to provision and configure your Kubernetes cluster nodes (VMs or servers) according to the hardware and network requirements specified earlier. Once your nodes are ready and accessible, proceed to run the provided Ansible playbooks and scripts from the `k8s-infra` repository to set up the Kubernetes cluster, networking, and essential infrastructure components.
+
 * Run `env-check-setup.yaml` to check if cluster nodes are fine and doesn't have known issues in it.
-  * `cd $K8_ROOT/rancher/on-prem`
+  * `cd $K8_ROOT/rancher/on-prem` <!-- This considers rancher here whereas we have considered it without rancher -->
   *   Create copy of `hosts.ini.sample` as `hosts.ini` and update the required details for MOSIP k8 cluster nodes.
 
-      * `cp hosts.ini.sample hosts.ini`
+    * `cp hosts.ini.sample hosts.ini`
 
-      > Note:
-      >
-      > * Ensure you are inside `on-prem` directory as mentioned above.
-      > * ansible\_host : internal IP of nodes. eg. 100.10.20.56, 100.10.20.57 ...
-      > * ansible\_user : user to be used for installation. In this ref-implementation we use Ubuntu user.
-      > * ansible\_ssh\_private\_key\_file : path to pem key for ssh to wireguard server. eg. `~/.ssh/nodes-ssh.pem`![hosts.ini](../../../_images/nodes-hosts-ini.png)
+    > Note:
+    >
+    > * Ensure you are inside `on-prem` directory as mentioned above.
+    > * ansible\_host : internal IP of nodes. eg. 100.10.20.56, 100.10.20.57 ...
+    > * ansible\_user : user to be used for installation. In this ref-implementation we use Ubuntu user.
+    > * ansible\_ssh\_private\_key\_file : path to pem key for ssh to wireguard server. eg. `~/.ssh/nodes-ssh.pem`![hosts.ini](../../../_images/nodes-hosts-ini.png)
   * `ansible-playbook -i hosts.ini env-check-setup.yaml`
   * This ansible checks if localhost mapping ia already present in `/etc/hosts` file in all cluster nodes, if not it adds the same.
+
 * Setup passwordless ssh into the cluster nodes via pem keys. (Ignore if VM’s are accessible via pem’s).
   * Generate keys on your PC
     * `ssh-keygen -t rsa`
@@ -390,7 +428,8 @@ Here you can find the kubernetes infrastructure repository [k8s-infra](https://g
   * SSH into the node to check password-less SSH
     * `ssh -i ~/.ssh/<your private key> <remote-user>@<remote-ip>`
   * Rancher UI : (deployed in Observation K8 cluster)
-* Open ports and Install docker on MOSIP K8 Cluster node VM’s.
+
+* Open ports and Install docker on Inji K8 Cluster node VM’s.
   * `cd $K8_ROOT/mosip/on-prem`
   * create copy of `hosts.ini.sample` as `hosts.ini` and update the required details for wireguard VM.
     * `cp hosts.ini.sample hosts.ini`
@@ -407,6 +446,7 @@ Here you can find the kubernetes infrastructure repository [k8s-infra](https://g
 
       > Caution: Always verify swap status with `swapon --show` before running the playbook to avoid unnecessary operations.
   * execute `docker.yml` to install docker and add user to docker group:`ansible-playbook -i hosts.ini docker.yaml`
+
 * Creating RKE Cluster Configuration file
   * `rke config`
   *   Command will prompt for nodal details related to cluster, provide inputs w.r.t below mentioned points:
@@ -426,7 +466,8 @@ Here you can find the kubernetes infrastructure repository [k8s-infra](https://g
       * To create an HA cluster, specify more than one host with role `Control Plane` and `etcd host`.
   * `Network Plugin Type` : Continue with canal as default network plugin.
   * For rest for other configuration opt the required or default value.
-* As result of rke config command `cluster.ymlfile` will be generated inside same directory, update the below mentioned fields:
+
+* As result of rke config command `cluster.yml` file will be generated inside same directory, update the below mentioned fields:
   * `nano cluster.yml`
   *   Remove the default Ingress install
 
@@ -440,7 +481,8 @@ Here you can find the kubernetes infrastructure repository [k8s-infra](https://g
       `cluster_name: sandbox-name`
       ```
   * For production deplopyments edit the `cluster.yml`, according to this [RKE Cluster Hardening Guide](https://github.com/mosip/k8s-infra/blob/v1.2.0.1-B1/docs/rke-cluster-hardening.md).
-*   Setup up the cluster:
+
+* Setup up the cluster:
 
     * Once `cluster.yml` is ready, you can bring up the kubernetes cluster using simple command.
       *   This command assumes the `cluster.yml` file is in the same directory as where you are running the command.
@@ -468,18 +510,24 @@ Here you can find the kubernetes infrastructure repository [k8s-infra](https://g
     ```
     * `export KUBECONFIG="$HOME/.kube/<cluster_name>_config`
     ```
+
 * Test cluster access:
   * `kubectl get nodes`
   * Command will result in details of the nodes of the rancher cluster.
+
 * Save Your files
   * Save a copy of the following files in a secure location, they are needed to maintain, troubleshoot and upgrade your cluster.:
     * `cluster.yml`: The RKE cluster configuration file.
     * `kube_config_cluster.yml`: The [Kubeconfig file](https://rke.docs.rancher.com/kubeconfig) for the cluster, this file contains credentials for full access to the cluster.
     * `cluster.rkestate`: The [Kubernetes Cluster State file](https://rke.docs.rancher.com/installation#kubernetes-cluster-state), this file contains credentials for full access to the cluster.
 
-## 7. MOSIP K8 Cluster Global configmap, Ingress and Storage Class setup
 
-### 7.a. Global configmap:
+## Inji K8 (Kubernetes) Cluster, Ingress and Storage Class setup
+
+
+<!-- This is for MOSIP
+
+### a. Global configmap:
 
 * Global configmap contains the list of neccesary details to be used throughout the namespaces of the cluster for common details.
 * `cd $K8_ROOT/mosip`
@@ -488,9 +536,12 @@ Here you can find the kubernetes infrastructure repository [k8s-infra](https://g
 * Update the domain names in `global_configmap.yaml` and run.
 * `kubectl apply -f global_configmap.yaml`
 
-### 7.b. [Istio](https://istio.io/) Ingress setup:
+-->
 
-* It is a service mesh for the MOSIP K8 cluster which provides transparent layers on top of existing microservices along with powerful features enabling a uniform and more efficient way to secure, connect, and monitor services.
+### a. [Istio](https://istio.io/) Ingress setup
+
+It is a service mesh for the MOSIP K8 cluster which provides transparent layers on top of existing microservices along with powerful features enabling a uniform and more efficient way to secure, connect, and monitor services.
+
   * `cd $K8_ROOT/mosip/on-prem/istio`
   * `./install.sh`
   * This will bring up all the Istio components and the Ingress Gateways.
@@ -504,21 +555,22 @@ Here you can find the kubernetes infrastructure repository [k8s-infra](https://g
       > * `istio-ingressgateway-internal`: internal facing istio service.
       > * `istiod`: Istio daemon for replicating the changes to all envoy filters.
 
-### 7.c. Storage classes
+### b. Storage classes
 
 Multiple storage classes options are available for onprem K8's cluster. In this reference deployment will continue to use NFS as a storage class.
 
-*   Move to nfs directory in your personel computer.
+* Move to nfs directory in your personel computer.
 
-    ```
-    cd $K8_ROOT/mosip/nfs
-    ```
-*   Create a copy of hosts.ini.sample as hosts.ini.
+```sh
+cd $K8_ROOT/mosip/nfs
+```
 
-    ```
-    cp hosts.ini.sample hosts.ini
-    ```
-*   Update the NFS machine details in `hosts.ini` file.
+* Create a copy of hosts.ini.sample as hosts.ini.
+```sh
+cp hosts.ini.sample hosts.ini
+
+```
+* Update the NFS machine details in `hosts.ini` file.
 
     > Note :
     >
@@ -528,42 +580,45 @@ Multiple storage classes options are available for onprem K8's cluster. In this 
     > * ansible\_ssh\_private\_key\_file : path to pem key for ssh to wireguard server. eg. `~/.ssh/wireguard-ssh.pem` ![hosts.ini](../../../_images/nfs-hosts-ini.png).
 *   Make sure Kubeconfig file is set correctly to point to required mosip cluster.
 
-    ```
-    kubectl config view
-    ```
+```sh
+kubectl config view
+```
+**Note**:
 
-    Note:
+  * Output should show the cluster name to confirm you are pointing to right kubernetes cluster.
+  * If not pointing to right K8 cluster change the kubeconfig to connect to right K8 cluster.
 
-    * Output should show the cluster name to confirm you are pointing to right kubernetes cluster.
-    * If not pinting to right K8 cluster change the kubeconfig to connect to right K8 cluster.
-*   Enable firewall with required ports:
+* Enable firewall with required ports:
 
-    ```
-    ansible-playbook -i ./hosts.ini nfs-ports.yaml
-    ```
-*   SSH to the nfs node:
+```sh
+  ansible-playbook -i ./hosts.ini nfs-ports.yaml
+```
+* SSH to the nfs node:
 
-    ```
-    ssh -i ~/.ssh/nfs-ssh.pem ubuntu@<internal ip of nfs server>
-    ```
-*   Clone `k8s-infra` repo in nginx VM:
+```sh
+ssh -i ~/.ssh/nfs-ssh.pem ubuntu@<internal ip of nfs server>
 
-    ```
-    git clone https://github.com/mosip/k8s-infra -b v1.2.0.1
-    ```
-*   Move to the nfs directory:
+```
+* Clone `k8s-infra` repo in nginx VM:
 
-    ```
-    cd /home/ubuntu/k8s-infra/mosip/nfs/
-    ```
-*   Execute script to install nfs server:
+```sh
+git clone https://github.com/mosip/k8s-infra -b v1.2.0.1
+```
 
-    ```
-    sudo ./install-nfs-server.sh
-    ```
+* Move to the nfs directory:
 
-    Note:
+```sh
+cd /home/ubuntu/k8s-infra/mosip/nfs/
 
+```
+* Execute script to install nfs server:
+
+```sh
+sudo ./install-nfs-server.sh
+
+```
+
+> Note:
     > * Script prompts for below mentioned user inputs:
     >
     > ```
@@ -578,35 +633,36 @@ Multiple storage classes options are available for onprem K8's cluster. In this 
     > ```
     >
     > * envName: env name eg. dev/qa/uat...
-*   Switch to your personel computer and excute below mentioned commands:
+* Switch to your personel computer and excute below mentioned commands:
 
-    ```
-    cd $K8_ROOT/mosip/nfs/
-
-    ./install-nfs-client-provisioner.sh
-    ```
-
-    Note:
+```sh
+cd $K8_ROOT/mosip/nfs/ <!-- mosip or inji -->
+```
+```sh
+./install-nfs-client-provisioner.sh
+```
+> Note:
 
     > * Script prompts for:
     > * NFS Server: NFS server ip for persistence.
     > * NFS Path : NFS path for storing the persisted data. eg. /srv/nfs/mosip/
 * Post installation check:
-  *   Check status of NFS Client Provisioner.
+  * Check status of NFS Client Provisioner.
 
-      ```
-      kubectl -n nfs get deployment.apps/nfs-client-provisioner 
-      ```
-  *   Check status of nfs-client storage class.
+```sh
+kubectl -n nfs get deployment.apps/nfs-client-provisioner 
+```
+*   Check status of nfs-client storage class.
 
-      ```
-       kubectl get storageclass
-       NAME                 PROVISIONER                            RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
-       longhorn (default)   driver.longhorn.io                     Delete          Immediate           true                   57d
-       nfs-client           cluster.local/nfs-client-provisioner   Delete          Immediate           true                   40s
-      ```
+```sh
+  kubectl get storageclass
+  NAME                 PROVISIONER                            RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
+  longhorn (default)   driver.longhorn.io                     Delete          Immediate           true                   57d
+  nfs-client           cluster.local/nfs-client-provisioner   Delete          Immediate           true                   40s
+```
 
-## 8. Import MOSIP Cluster into Rancher UI
+<!--
+## Import MOSIP Cluster into Rancher UI  Is this required if not opted for observation-cluster / rancher 
 
 * Login as admin in Rancher console
 * Select `Import` Existing for cluster addition.
@@ -622,24 +678,27 @@ kubectl apply -f https://rancher.e2e.mosip.net/v3/import/pdmkx6b4xxtpcd699gzwdtt
 * Wait for few seconds after executing the command for the cluster to get verified.
 * Your cluster is now added to the rancher management server.
 
-## 9. MOSIP K8 cluster Nginx server setup
+-->
 
-### 9.a. SSL certificates creation
+
+## Inji K8 (Kubernetes) cluster Nginx server setup
+
+### a. SSL certificates creation
 
 * For Nginx server setup, we need ssl certificate, add the same into Nginx server.
 * Incase valid ssl certificate is not there generate one using letsencrypt:
   * SSH into the nginx server
   *   Install Pre-requisites:
 
-      ```
-      sudo apt update -y
-      sudo apt-get install software-properties-common -y
-      sudo add-apt-repository ppa:deadsnakes/ppa
-      sudo apt-get update -y
-      sudo apt-get install python3.8 -y
-      sudo apt install letsencrypt -y
-      sudo apt install certbot python3-certbot-nginx -y
-      ```
+```sh
+  sudo apt update -y
+  sudo apt-get install software-properties-common -y
+  sudo add-apt-repository ppa:deadsnakes/ppa
+  sudo apt-get update -y
+  sudo apt-get install python3.8 -y
+  sudo apt install letsencrypt -y
+  sudo apt install certbot python3-certbot-nginx -y
+  ```
   * Generate wildcard SSL certificates for your domain name.
     * `sudo certbot certonly --agree-tos --manual --preferred-challenges=dns -d *.sandbox.mosip.net -d sandbox.mosip.net`
       * replace `sanbox.mosip.net` with your domain.
@@ -652,33 +711,40 @@ kubectl apply -f https://rancher.e2e.mosip.net/v3/import/pdmkx6b4xxtpcd699gzwdtt
       * Certificates created are valid for 3 months only.
   * `Wildcard SSL certificate` [renewal](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/docs/wildcard-ssl-certs-letsencrypt.md#ssl-certificate-renewal). This will increase the validity of the certificate for next 3 months.
 
-### 9.b. Nginx server setup for MOSIP K8's cluster
+### b. Nginx server setup for MOSIP K8's cluster
 
 * Move to nginx directory in your local:
+
 * `cd $K8_ROOT/mosip/on-prem/nginx/`
+
 * Open required ports :
   * Use any editor to create new `hosts.ini` file:
-  * ```
-    nano hosts.ini
-    ```
-  *   Add below mentioned lines with updated details of nginx server to the `hosts.ini` and save.
+  
+```sh
+  nano hosts.ini
+```
+* Add below mentioned lines with updated details of nginx server to the `hosts.ini` and save.
 
-      ```
-      [nginx]
-      node-nginx ansible_host=<internal ip> ansible_user=root ansible_ssh_private_key_file=<pvt .pem file>
-      ```
-  *   Execute below mentoned command to open required ports:
+```sh
+[nginx]
+node-nginx ansible_host=<internal ip> ansible_user=root ansible_ssh_private_key_file=<pvt .pem file>
+```
 
-      ```
-      ansible-playbook -i hosts.ini mosip/on-prem/nginx/nginx_ports.yaml
-      ```
+* Execute below mentoned command to open required ports:
+
+```sh
+  ansible-playbook -i hosts.ini mosip/on-prem/nginx/nginx_ports.yaml
+
+```
 * Login to the nginx server node.
-*   Clone k8s-infra
 
-    ```
-    cd $K8_ROOT/mosip/on-prem/nginx
-    sudo ./install.sh
-    ```
+* Clone k8s-infra
+
+```sh
+  cd $K8_ROOT/mosip/on-prem/nginx
+  sudo ./install.sh
+```
+
 * Provide below mentioned inputs as and when prompted
   * MOSIP nginx server internal ip
   * MOSIP nginx server public ip
@@ -686,30 +752,31 @@ kubectl apply -f https://rancher.e2e.mosip.net/v3/import/pdmkx6b4xxtpcd699gzwdtt
   * SSL cert path
   * SSL key path
   * Cluster node ip's (comma seperated no whitespace)
+
 * Post installation check
   * `sudo systemctl status nginx`
   * Steps to uninstall nginx (incase it is required)\
     `sudo apt purge nginx nginx-common`
   * **DNS mapping**: Once nginx server is installed sucessfully, create DNS mapping for observation cluster related domains as mentioned in DNS requirement section.
 
-### 9.c. Check Overall nginx and istio wiring
+### c. Check Overall nginx and istio wiring
 
 * Install `httpbin`: This utility docker returns http headers received inside the cluster.
-*   `httpbin` can be used for general debugging - to check ingress, headers etc.
+*  `httpbin` can be used for general debugging - to check ingress, headers etc.
 
-    ```
-    cd $K8_ROOT/utils/httpbin
-    ./install.sh
-    ```
+```sh
+  cd $K8_ROOT/utils/httpbin
+  ./install.sh
+```
 
-    * To see what is reaching the httpbin (example, replace with your domain name):
+* To see what is reaching the httpbin (example, replace with your domain name):
 
-    ```
-    curl https://api.sandbox.xyz.net/httpbin/get?show_env=true
-    curl https://api-internal.sandbox.xyz.net/httpbin/get?show_env=true
-    ```
+```sh
+curl https://api.sandbox.xyz.net/httpbin/get?show_env=true
+curl https://api-internal.sandbox.xyz.net/httpbin/get?show_env=true
+```
 
-## 10. Monitoring module deployment
+## [Optional] Monitoring module deployment
 
 > Note :
 >
@@ -735,7 +802,7 @@ kubectl apply -f https://rancher.e2e.mosip.net/v3/import/pdmkx6b4xxtpcd699gzwdtt
     ```
 * Click on `Install`.
 
-## 11. Alerting setup
+## [Optional] Alerting setup
 
 > Note :
 >
@@ -781,7 +848,7 @@ cd $K8_ROOT/monitoring/alerting/
 
 * Alerting is installed.
 
-## 12. Logging module setup and installation
+## [Optional] Logging module setup and installation
 
 > Note :
 >
@@ -829,7 +896,9 @@ Open kibana dashboard from `https://kibana.sandbox.xyz.net`.
 
 Kibana --> Menu (on top left) --> Dashboard --> Select the dashboard.
 
-## 13. MOSIP External Dependencies setup
+<!-- Is this required or it can be replaced by Inji external
+
+## 13. MOSIP External Dependencies setup 
 
 External Dependencies are set of external requirements that are needed for functioning of MOSIP’s core services like DB, Object Store, HSM etc.
 
@@ -857,7 +926,7 @@ Click [here](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/mosip-ext
 >       UPDATE pms.auth_policy SET valid_to_date = valid_to_date + interval '1 year' WHERE name = 'mpolicy-default-mobile';
 >       ```
 
-
+-->
 
 ## Core Infrastructure Components Setup
 
@@ -868,34 +937,36 @@ This section covers the installation and configuration of essential infrastructu
 * `inji-stack-config` configmap: For inji K8's env, `inji-stack-config` configmap in `default` namespace contains Domain related information. Follow below steps to add domain details for `inji-stack-config` configmap.
 *   Update the domain names in `inji-stack-cm.yaml` correctly for your environment.
 
-    ```yaml
-    kubectl apply -f - <<EOF
-    ## The data here is of generic interest to modules in different namespaces hence this is marked as inji-stack-config.
-    ## Replace your domain names here.
-    ## api-host:  External public access. (Typically required only in production rollouts).
-    ## api-internal-host: Internal secure access over Wireguard.
-    ## By default all domains and subdomains listed below point to api-internal-host. Modify this default behavior ONLY in production rollout as follows:
-    apiVersion: v1
-    kind: ConfigMap
-    metadata:
-      name: inji-stack-config
-      namespace: default
-    data:
-      inji-version: develop
-      installation-domain: sandbox.xyz.net
-      api-host: api.sandbox.xyz.net
-      iam-external-host: iam.sandbox.xyz.net
-      api-internal-host: api-internal.sandbox.xyz.net
-      injiweb-host: injiweb.sandbox.xyz.net
-      injiverify-host: injiverify.sandbox.xyz.net
-      injicertify-host: injicertify.sandbox.xyz.net
-      inji-postgres-host: postgres.sandbox.xyz.net
-      esignet-mock-host: esignet-mock.sandbox.xyz.net
-      mosipid-identity-esignet-host: esignet-mosipid.sandbox.xyz.net
-      esignet-insurance-host: esignet-insurance.sandbox.xyz.net
-      minio-host: minio.sandbox.mosip.net
-    EOF
-    ```
+**Note**: You can find the `inji-stack-cm.yaml` file in the deployment scripts or configuration directory of the Inji stack repository, typically under the `deploy` or `k8s` folder. If it is not present, you can create it using the sample configmap YAML provided in this guide, and then update the domain names as per your environment before applying it to your Kubernetes cluster.
+
+```yaml
+kubectl apply -f - <<EOF
+## The data here is of generic interest to modules in different namespaces hence this is marked as inji-stack-config.
+## Replace your domain names here.
+## api-host:  External public access. (Typically required only in production rollouts).
+## api-internal-host: Internal secure access over Wireguard.
+## By default all domains and subdomains listed below point to api-internal-host. Modify this default behavior ONLY in production rollout as follows:
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: inji-stack-config
+  namespace: default
+data:
+  inji-version: develop
+  installation-domain: sandbox.xyz.net
+  api-host: api.sandbox.xyz.net
+  iam-external-host: iam.sandbox.xyz.net
+  api-internal-host: api-internal.sandbox.xyz.net
+  injiweb-host: injiweb.sandbox.xyz.net
+  injiverify-host: injiverify.sandbox.xyz.net
+  injicertify-host: injicertify.sandbox.xyz.net
+  inji-postgres-host: postgres.sandbox.xyz.net
+  esignet-mock-host: esignet-mock.sandbox.xyz.net
+  mosipid-identity-esignet-host: esignet-mosipid.sandbox.xyz.net
+  esignet-insurance-host: esignet-insurance.sandbox.xyz.net
+  minio-host: minio.sandbox.mosip.net
+EOF
+```
 
 ### Postgres installation
 
@@ -909,378 +980,812 @@ This section covers the installation and configuration of essential infrastructu
 
 * [conf-secret installation](https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/mosip/conf-secrets)
 
-### config-server installation
+### Config Server Installation
+<!--
+Verify with DevOps
 
-*   Create a `values.yaml` file that will contain the configuration for the chart and send it to your config-server installation.
+**Note**: You can create the `values.yaml` file in the same directory where you are preparing your config-server deployment, typically alongside your deployment scripts or Helm chart files. For example, if you are following the instructions in this guide, navigate to your config-server installation directory (often named `config-server` or similar), then run:
 
-    ```
-     touch values.yaml
-    ```
-*   Review `values.yaml` and make sure git repository parameters are as per your installation and enable only the required environment variables.
+Why create values.yaml?
 
-    ```yaml
-    gitRepo:
-      uri: https://github.com/mosip/inji-config
-      version: release-0.8.x
-      ## Folders within the base repo where properties may be found.
-      searchFolders: ""
-      private: false
-      ## User name of user who has access to the private repo. Ignore for public repo
-      username: ""
-      token: ""
+The values.yaml file is used in Helm (a Kubernetes package manager) to provide configuration values for your chart during deployment.
 
-    envVariables:
-      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_API_PUBLIC_HOST
-        valueFrom:
-          configMapKeyRef:
-            name: inji-stack-config
-            key: api-host
-        enabled: true
+Purpose:
 
-      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_API_INTERNAL_HOST
-        valueFrom:
-          configMapKeyRef:
-            name: inji-stack-config
-            key: api-internal-host
-        enabled: true
+It lets you customize settings like environment variables, resource limits, and external service connections (e.g., Git repository details) without modifying the chart itself.
+When you run helm install, Helm reads values.yaml to set up your application according to your requirements.
+Why create it?
 
-      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_PARTNER_CRYPTO_P12_PASSWORD
-        valueFrom:
-          secretKeyRef:
-            key: mosip-partner-crypto-p12-password
-            name: conf-secrets-various
-        enabled: false
+It separates configuration from code, making deployments more flexible and maintainable.
+You can easily update settings or deploy to different environments by changing values.yaml.
 
-      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MPARTNER_DEFAULT_MOBILE_SECRET
-        valueFrom:
-          secretKeyRef:
-            key: mpartner_default_mobile_secret
-            name: keycloak-client-secrets
-        enabled: false
+--> 
 
-      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_KEYCLOAK_INTERNAL_URL
-        valueFrom:
-          configMapKeyRef:
-            name: keycloak-host
-            key: keycloak-internal-url
-        enabled: false
 
-      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_KEYCLOAK_EXTERNAL_URL
-        valueFrom:
-          configMapKeyRef:
-            name: keycloak-host
-            key: keycloak-external-url
-        enabled: false
+#### Create values.yaml
 
-      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_KEYCLOAK_INTERNAL_HOST
-        valueFrom:
-          configMapKeyRef:
-            name: keycloak-host
-            key: keycloak-internal-host
-        enabled: false
+```sh
+cd /path/to/config-server/
+touch values.yaml
+```
 
-      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_KEYCLOAK_EXTERNAL_HOST
-        valueFrom:
-          configMapKeyRef:
-            name: keycloak-host
-            key: keycloak-external-host
-        enabled: false
+This ensures that `values.yaml` is available for your Helm install command and can be referenced directly during the config-server deployment.
 
-      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_DB_DBUSER_PASSWORD
-        valueFrom:
-          secretKeyRef:
-            name: db-common-secrets
-            key: db-dbuser-password
-        enabled: false
+* Create a `values.yaml` file that will contain the configuration for the chart and send it to your config-server installation.
 
-      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_S3_ACCESSKEY
-        valueFrom:
-          configMapKeyRef:
-            name: s3
-            key: s3-user-key
-        enabled: false
+```sh
+  touch values.yaml
+```
+* Review `values.yaml` and make sure git repository parameters are as per your installation and enable only the required environment variables.
 
-      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_S3_REGION
-        valueFrom:
-          configMapKeyRef:
-            name: s3
-            key: s3-region
-        enabled: false
+```yaml
+gitRepo:
+  uri: https://github.com/mosip/inji-config
+  version: release-0.8.x
+  ## Folders within the base repo where properties may be found.
+  searchFolders: ""
+  private: false
+  ## User name of user who has access to the private repo. Ignore for public repo
+  username: ""
+  token: ""
 
-      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_S3_SECRETKEY
-        valueFrom:
-          secretKeyRef:
-            name: s3
-            key: s3-user-secret
-        enabled: false
+envVariables:
+  - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_API_PUBLIC_HOST
+    valueFrom:
+      configMapKeyRef:
+        name: inji-stack-config
+        key: api-host
+    enabled: true
 
-      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_ESIGNET_HOST
-        valueFrom:
-          configMapKeyRef:
-            key: esignet-host
-            name: inji-stack-config
-        enabled: false
-        
-      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_ESIGNET_MOCK_HOST
-        valueFrom:
-          configMapKeyRef:
-            key: esignet-mock-host
-            name: inji-stack-config
-        enabled: true
+  - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_API_INTERNAL_HOST
+    valueFrom:
+      configMapKeyRef:
+        name: inji-stack-config
+        key: api-internal-host
+    enabled: true
 
-      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIPID_IDENTITY_ESIGNET_HOST
-        valueFrom:
-          configMapKeyRef:
-            key: mosipid-identity-esignet-host
-            name: inji-stack-config
-        enabled: false
+  - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_PARTNER_CRYPTO_P12_PASSWORD
+    valueFrom:
+      secretKeyRef:
+        key: mosip-partner-crypto-p12-password
+        name: conf-secrets-various
+    enabled: false
 
-      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_ESIGNET_INSURANCE_HOST
-        valueFrom:
-          configMapKeyRef:
-            key: esignet-insurance-host
-            name: inji-stack-config
-        enabled: false  
+  - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MPARTNER_DEFAULT_MOBILE_SECRET
+    valueFrom:
+      secretKeyRef:
+        key: mpartner_default_mobile_secret
+        name: keycloak-client-secrets
+    enabled: false
 
-      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_INJI_DATASHARE_HOST
-        valueFrom:
-          configMapKeyRef:
-            key: inji-datashare-host
-            name: inji-stack-config
-        enabled: false
+  - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_KEYCLOAK_INTERNAL_URL
+    valueFrom:
+      configMapKeyRef:
+        name: keycloak-host
+        key: keycloak-internal-url
+    enabled: false
 
-      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_INJIWEB_HOST
-        valueFrom:
-          configMapKeyRef:
-            key: injiweb-host
-            name: inji-stack-config
-        enabled: true
+  - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_KEYCLOAK_EXTERNAL_URL
+    valueFrom:
+      configMapKeyRef:
+        name: keycloak-host
+        key: keycloak-external-url
+    enabled: false
 
-      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_INJIVERIFY_HOST
-        valueFrom:
-          configMapKeyRef:
-            key: injiverify-host
-            name: inji-stack-config
-        enabled: true
+  - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_KEYCLOAK_INTERNAL_HOST
+    valueFrom:
+      configMapKeyRef:
+        name: keycloak-host
+        key: keycloak-internal-host
+    enabled: false
 
-      - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_INJICERTIFY_HOST
-        valueFrom:
-          configMapKeyRef:
-            key: injicertify-host
-            name: inji-stack-config
-        enabled: true
+  - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_KEYCLOAK_EXTERNAL_HOST
+    valueFrom:
+      configMapKeyRef:
+        name: keycloak-host
+        key: keycloak-external-host
+    enabled: false
 
-    ```
-*   Create a file named `configserver.sh`:
+  - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_DB_DBUSER_PASSWORD
+    valueFrom:
+      secretKeyRef:
+        name: db-common-secrets
+        key: db-dbuser-password
+    enabled: false
 
-    ```
-    touch configserver.sh
-    ```
-*   Open the file and paste the following content into it in the same directory where `values.yaml` is created.
+  - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_S3_ACCESSKEY
+    valueFrom:
+      configMapKeyRef:
+        name: s3
+        key: s3-user-key
+    enabled: false
 
-    ```sh
-    #!/bin/bash
-    # Installs config-server
-    ## Usage: ./install.sh [kubeconfig]
+  - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_S3_REGION
+    valueFrom:
+      configMapKeyRef:
+        name: s3
+        key: s3-region
+    enabled: false
 
-    if [ $# -ge 1 ] ; then
-    export KUBECONFIG=$1
-    fi
+  - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_S3_SECRETKEY
+    valueFrom:
+      secretKeyRef:
+        name: s3
+        key: s3-user-secret
+    enabled: false
 
-    NS=config-server
-    CHART_VERSION=12.0.1
+  - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_ESIGNET_HOST
+    valueFrom:
+      configMapKeyRef:
+        key: esignet-host
+        name: inji-stack-config
+    enabled: false
+    
+  - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_ESIGNET_MOCK_HOST
+    valueFrom:
+      configMapKeyRef:
+        key: esignet-mock-host
+        name: inji-stack-config
+    enabled: true
 
-    read -p "Is conf-secrets module installed?(Y/n) " yn
-    if [ $yn = "Y" ]; then read -p "Is values.yaml for config-server chart set correctly as part of Pre-requisites?(Y/n) " yn; fi
-    if [ $yn = "Y" ]
-    then
-    echo Create $NS namespace
-    kubectl create ns $NS
+  - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIPID_IDENTITY_ESIGNET_HOST
+    valueFrom:
+      configMapKeyRef:
+        key: mosipid-identity-esignet-host
+        name: inji-stack-config
+    enabled: false
 
-        # set commands for error handling.
-        set -e
-        set -o errexit   ## set -e : exit the script if any statement returns a non-true return value
-        set -o nounset   ## set -u : exit the script if you try to use an uninitialised variable
-        set -o errtrace  # trace ERR through 'time command' and other functions
-        set -o pipefail  # trace ERR through pipes
+  - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_ESIGNET_INSURANCE_HOST
+    valueFrom:
+      configMapKeyRef:
+        key: esignet-insurance-host
+        name: inji-stack-config
+    enabled: false  
 
-        echo Istio label
-        kubectl label ns $NS istio-injection=enabled --overwrite
-        helm repo update
+  - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_INJI_DATASHARE_HOST
+    valueFrom:
+      configMapKeyRef:
+        key: inji-datashare-host
+        name: inji-stack-config
+    enabled: false
 
-        UTIL_URL=https://raw.githubusercontent.com/mosip/mosip-infra/master/deployment/v3/utils/copy_cm_func.sh
-        COPY_UTIL=./copy_cm_func.sh
-        DST_NS=config-server # DST_NS: Destination namespace
-        wget -q $UTIL_URL -O copy_cm_func.sh && chmod +x copy_cm_func.sh
-        echo Copy configmaps and secrets
-        $COPY_UTIL configmap inji-stack-config default $NS
-        if kubectl -n conf-secrets get secret conf-secrets-various >/dev/null 2>&1; then
-            $COPY_UTIL secret conf-secrets-various conf-secrets $NS
-        else
-            echo "Skipping copy, conf-secrets-various secret not found"
-        fi
-        if kubectl -n s3 get configmap s3 >/dev/null 2>&1 && kubectl -n s3 get secret s3 >/dev/null 2>&1; then
-            $COPY_UTIL configmap s3 s3 $NS
-            $COPY_UTIL secret s3 s3 $NS
-        else
-            echo "Skipping copy, s3 config or secret not found"
-        fi
+  - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_INJIWEB_HOST
+    valueFrom:
+      configMapKeyRef:
+        key: injiweb-host
+        name: inji-stack-config
+    enabled: true
 
-        echo Installing config-server
-        helm -n $NS install config-server mosip/config-server -f values.yaml --wait --version $CHART_VERSION
-        echo Installed Config-server.
+  - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_INJIVERIFY_HOST
+    valueFrom:
+      configMapKeyRef:
+        key: injiverify-host
+        name: inji-stack-config
+    enabled: true
+
+  - name: SPRING_CLOUD_CONFIG_SERVER_OVERRIDES_MOSIP_INJICERTIFY_HOST
+    valueFrom:
+      configMapKeyRef:
+        key: injicertify-host
+        name: inji-stack-config
+    enabled: true
+
+#### Create configserver.sh
+
+* Create a file named `configserver.sh`:
+
+```sh
+  touch configserver.sh
+```
+* Open the file and paste the following content into it in the same directory where `values.yaml` is created.
+
+```sh
+#!/bin/bash
+# Installs config-server
+## Usage: ./install.sh [kubeconfig]
+
+if [ $# -ge 1 ] ; then
+export KUBECONFIG=$1
+fi
+
+NS=config-server
+CHART_VERSION=12.0.1
+
+read -p "Is conf-secrets module installed?(Y/n) " yn
+if [ $yn = "Y" ]; then read -p "Is values.yaml for config-server chart set correctly as part of Pre-requisites?(Y/n) " yn; fi
+if [ $yn = "Y" ]
+then
+echo Create $NS namespace
+kubectl create ns $NS
+
+    # set commands for error handling.
+    set -e
+    set -o errexit   ## set -e : exit the script if any statement returns a non-true return value
+    set -o nounset   ## set -u : exit the script if you try to use an uninitialised variable
+    set -o errtrace  # trace ERR through 'time command' and other functions
+    set -o pipefail  # trace ERR through pipes
+
+    echo Istio label
+    kubectl label ns $NS istio-injection=enabled --overwrite
+    helm repo update
+
+    UTIL_URL=https://raw.githubusercontent.com/mosip/mosip-infra/master/deployment/v3/utils/copy_cm_func.sh
+    COPY_UTIL=./copy_cm_func.sh
+    DST_NS=config-server # DST_NS: Destination namespace
+    wget -q $UTIL_URL -O copy_cm_func.sh && chmod +x copy_cm_func.sh
+    echo Copy configmaps and secrets
+    $COPY_UTIL configmap inji-stack-config default $NS
+    if kubectl -n conf-secrets get secret conf-secrets-various >/dev/null 2>&1; then
+        $COPY_UTIL secret conf-secrets-various conf-secrets $NS
     else
-    echo Exiting the MOSIP installation. Please meet the pre-requisites and than start again.
-    kill -9 `ps --pid $$ -oppid=`; exit
+        echo "Skipping copy, conf-secrets-various secret not found"
     fi
-    ```
-*   Run the Script
+    if kubectl -n s3 get configmap s3 >/dev/null 2>&1 && kubectl -n s3 get secret s3 >/dev/null 2>&1; then
+        $COPY_UTIL configmap s3 s3 $NS
+        $COPY_UTIL secret s3 s3 $NS
+    else
+        echo "Skipping copy, s3 config or secret not found"
+    fi
 
-    ```
+    echo Installing config-server
+    helm -n $NS install config-server mosip/config-server -f values.yaml --wait --version $CHART_VERSION
+    echo Installed Config-server.
+else
+echo Exiting the MOSIP installation. Please meet the pre-requisites and than start again.
+kill -9 `ps --pid $$ -oppid=`; exit
+fi
+```
+* Run the Script
+
+```sh
     chmod +x configserver.sh
     ./configserver.sh
-    ```
+```
 
-### Artifactory installation
+### Artifactory Installation
 
-* [artifactory installation](https://github.com/mosip/artifactory-ref-impl/tree/v0.10.0-INJI/deploy)
+Artifactory is a universal artifact repository manager used to store, manage, and distribute build artifacts (such as Docker images, Helm charts, binaries, and other deployment packages) required by the Inji stack and related services. Installing Artifactory ensures that all deployment dependencies are securely managed and easily accessible during automated deployments and upgrades.
 
+**Why install Artifactory?**
+- Centralizes storage of deployment artifacts for consistency and reliability.
+- Enables version control and traceability of all build packages.
+- Facilitates automated CI/CD pipelines by providing a secure and scalable repository.
+- Supports integration with Kubernetes, Docker, and Helm for seamless deployments.
 
-
-
-
-
+For installation instructions, refer to the [artifactory installation guide](https://github.com/mosip/artifactory-ref-impl/tree/v0.10.0-INJI/deploy).
 
 
 # Inji Stack Deployment
-Once you are done with ensuring **Prerequisites**, **Base Infrastructure**, and the **Core Infrastructure Setup and Configuration**, now you can proceed with the deployment of the Inji stack components. The recommended order of installation is as follows:
-
+Once **Prerequisites**, **Base Infrastructure**, and the **Core Infrastructure Setup and Configuration** are complete, now you can proceed with the deployment of the Inji stack components.
 
 
 ## Deploying Inji Certify
 
-This section provides step-by-step instructions to install the Inji Certify, Follow these guidelines to ensure a successful setup of Inji Certify in your environment.
+While you have deployment environment ready you can now proceed with the installation of Inji Certify by following the steps explained here.
 
-Refer to the [Inji Certify Readme](https://github.com/mosip/inji-certify/tree/develop/deploy) file under the Inji Certify Repo.
+The [Inji Certify](https://github.com/mosip/inji-certify/tree/master/deploy) repo has the deployment directory which contains deployment scripts and configurations.
 
-Note: To know more about the latest or earlier versions of Inji Certify, refer to the releases [Inji Certify - Release](../../inji-certify/releases/).
+**Note**:
+* Refer to an always updated instruction here inside Inji-Certify [README](https://github.com/mosip/inji-certify/tree/develop/deploy).
+* To know more about the latest or earlier versions of Inji Certify, refer to the releases [Inji Certify - Release](../../inji-certify/releases/).
 
+
+### Understanding the Deployment Model
+
+Inji Certify is deployed as **containerized microservices** in your Kubernetes cluster.
+
+
+### Deployment Flow
+```mermaid
+flowchart LR
+  A[Your PC] --> B[kubectl/helm]
+  B --> C[K8s Cluster]
+  C --> D[Inji Certify Pods]
+  D --> E[NGINX Ingress]
+  E --> F[External Users]
+  A -.-> G[Deployment Scripts]
+  G -.-> C
+```
+
+#### Where Does Inji Certify Run?
+- **Target Environment**: Your main Kubernetes cluster
+- **Deployment Method**: Helm charts that pull Docker images from container registries
+- **Access Point**: Through your configured NGINX ingress at `https://injicertify.sandbox.xyz.net`
+
+#### What Gets Installed?
+1. **Kubernetes Pods**: Running Inji Certify microservices
+2. **Services**: For internal communication
+3. **Ingress Rules**: For external access via NGINX
+4. **ConfigMaps & Secrets**: For configuration and credentials
+
+### Deployment Process
+
+#### **Step 1: Prepare Your Deployment Environment**
+From your **local machine**, you'll run deployment scripts that:
+* Connect to your Kubernetes cluster via `kubectl`
+* Deploy containerized services using Helm charts
+* Configure ingress rules through Istio
+
+#### Step 2: Clone and Navigate to Deployment Scripts
+```bash
+# On your local machine (connected to K8s cluster via kubectl)
+git clone https://github.com/mosip/inji-certify.git
+cd inji-certify/deploy
+```
+
+#### Step 3: Verify Prerequisites <!-- Put here the complete prerequisite as it is under README, Can summarize-->
+Ensure these components are running in your K8s cluster:
+* Config Server (for application configuration)
+* PostgreSQL (for data storage)
+* Redis (for caching)
+* Object Store (MinIO/S3 for file storage)
+
+#### Step 4: Deploy Redis (if not already deployed) <!-- This again can come under prerequisites-->
+```bash
+cd redis
+./install.sh
+```
+
+#### Step 5: Initialize Database
+```bash
+cd ../db_scripts
+# Update init_values.yaml with your database configuration, update the necessary parameters for your PostgreSQL database. Provide path or how to navigate to this yaml in cloned repo.
+./init_db.sh
+```
+
+
+#### Step 6: Deploy Inji Certify Microservices
+```bash
+cd ../inji-certify
+./install.sh
+```
+
+### What Happens During Installation
+
+1. **Helm Charts Execution**: Downloads and deploys Docker containers
+2. **Service Registration**: Services register with config-server for configuration
+3. **Database Initialization**: Creates required tables and seed data
+4. **Ingress Configuration**: Configures routes through Istio gateway
+5. **Health Checks**: Verifies all pods are running and healthy
+
+### Verification Steps
+
+#### Check Pod Status
+```sh
+kubectl get pods -n inji-certify
+```
+
+#### Verify Service Endpoints
+```sh
+kubectl get services -n inji-certify
+```
+
+#### Test External Access
+```sh
+curl -k https://injicertify.sandbox.xyz.net/health
+```
+
+### Important Notes
+
+* **Remote Deployment**: You deploy from your local machine to the remote K8s cluster
+* **Container Registry**: Docker images are pulled from public/private registries during deployment
+* **Configuration**: All configuration comes from your config-server and configmaps
+
+### Troubleshooting
+
+If deployment fails, check:
+1. **Cluster Connectivity**: `kubectl cluster-info`
+2. **Prerequisites**: Ensure config-server, postgres, redis are running
+3. **Resources**: Verify cluster has sufficient CPU/memory
+4. **Network**: Ensure ingress and DNS are properly configured
 
 <!--
+inji certify apitestrig
+inji-certify/deploy at master ·
+-->
 
-## Pulling content from repo
 
-* The following instruction refers to the repository readme where it has described the process
-* The link [link](link) takes you to the repository
-* can you read the repository readme and bring content here and put it here?
-* This also has listed the pre-requisites, but in this guide pre 
-## Pre-requisites
-* Base infrastructure setup
-  * Tools and utilities to be installed locally 
-  * System Requirements: Hardware, network and certificate requirements
-  * Set up Wireguard Bastion Host
-  * K8s Cluster setup
-  * NGINX setup and configuration
-  * K8s Cluster Configuration
-* inji-stack-config ConfigMap
-* Postgres installation
-  * Note: Before running the Postgres install script, update the `POSTGRES_HOST` value in `install.sh` with the correct PostgreSQL host.
-* Config server secerts
-* Config server installation
-* Artifactory installation
+## Deploying Mimoto
 
-* redis installation
+This section provides a structured, step-by-step guide to deploy Mimoto, which serves as the backend for Inji Mobile Wallet and Inji Web. Follow these instructions to ensure a successful and reproducible deployment.
+
+### Understanding the Deployment Model
+
+Mimoto is deployed as **containerized microservices** in your Kubernetes cluster.
+
+#### Deployment Flow
+
+```mermaid
+flowchart LR
+  A[Your PC] --> B[kubectl/helm]
+  B --> C[K8s Cluster]
+  C --> D[Mimoto Pods]
+  D --> E[NGINX Ingress]
+  E --> F[External Users]
+  A -.-> G[Deployment Scripts]
+  G -.-> C
 ```
+
+#### Where Does Mimoto Run?
+- **Target Environment**: Your main Kubernetes cluster
+- **Deployment Method**: Helm charts and shell scripts that pull Docker images from container registries
+- **Access Point**: Through your configured NGINX ingress (domain as configured)
+
+#### What Gets Installed?
+1. **Kubernetes Pods**: Running Mimoto microservices
+2. **Services**: For internal communication
+3. **Ingress Rules**: For external access via NGINX/Istio
+4. **ConfigMaps & Secrets**: For configuration and credentials
+
+
+### Prerequisites
+
+<!-- Match and copy this from README -->
+
+Before proceeding, ensure these components are running in your K8s cluster:
+- Config Server (for configuration management)
+- PostgreSQL (for data storage)
+- Redis (for caching)
+- Object Store (MinIO/S3 or NFS for file storage)
+- Ingress (NGINX/Istio for external access)
+
+### Deployment Process
+
+#### Step 1: Install Redis
+
+To install Redis, run:
+
+```sh
 cd deploy/redis
 ./install.sh
 ```
 
-## Initialise pre-requisites
-### [DB init](../db_scripts)
-* Update values file for postgres init [here](../db_scripts/init_values.yaml).
+
+#### Step 2: Initialize Database
+
+Update the values file for PostgreSQL initialization as needed, then run: <!-- Provide path or how to navigate to this yaml in cloned repo https://github.com/mosip/mimoto/blob/develop/db_scripts/init_values.yaml -->
+
+```sh
+cd ../../db_scripts
+./init_db.sh
+```
+
+
+#### Step 3: Install Partner Onboarder
+
+To install the Partner Onboarder module:
+
+```sh
+cd ../partner-onboarder
+./install.sh
+```
+
+During the execution of the `install.sh` script, you will be prompted to provide information for the S3 bucket, including its name and URL.
+
+Once the job completes, log in to your S3 or NFS storage and verify the reports. There should be no failures.
+
+> **Note:**  
+> If you are running the Onboarder in a separate INJI cluster, update the `extraEnvVars` section in `values.yaml` accordingly.
+
+
+#### Step 4: Install Mimoto
+
+Before installing Mimoto, ensure that the database host and port are correctly configured in the `values.yaml` file. <!-- Provide path or how to navigate to this yaml in cloned repo -->
+
+To install Mimoto:
+
+```sh
+cd ../deploy/mimoto
+./install.sh
+```
+
+During the execution of the `install.sh` script, you will be prompted to specify whether a public domain and a valid SSL certificate are present on the server.
+
+- If the server does **not** have a public domain and valid SSL certificate, select `n`.  
+  This will enable an init-container with an `emptyDir` volume, which will download the server's self-signed SSL certificate and mount it to the Java keystore (`cacerts`) within the container.  
+  This is useful for deployments using self-signed SSL certificates.
+
+
+#### Step 5: Onboarding a New Issuer for VCI
+
+To onboard a new issuer for VCI:
+
+1. Create a folder named `certs` in the root directory.
+2. Inside `certs`, create a file named `oidckeystore.p12`.
+3. Store the keys as different aliases for each issuer in this file.
+
+For more details, refer to the official documentation or the relevant section in the repository.
+
+### Verification Steps
+
+- **Check Pod Status:**
+  ```sh
+  kubectl get pods -n mimoto
   ```
-   cd ../../db_scripts
-  ./init_db.sh
+- **Check Service Endpoints:**
+  ```sh
+  kubectl get services -n mimoto
+  ```
+- **Test External Access:**
+  ```sh
+  curl -k https://<your-mimoto-domain>/health
   ```
 
-## Install inji certify
+### Important Notes
 
-  ```
-   cd ../inji-certify
-    ./install.sh
-   ```
-## [inji certify apitestrig](inji-certify-apitestrig)
+- **Remote Deployment**: You deploy from your local machine to the remote K8s cluster.
+- **Container Registry**: Docker images are pulled from public/private registries during deployment.
+- **Configuration**: All configuration comes from your config-server and configmaps.
 
 
--->
+### Troubleshooting
 
+If deployment fails, check:
+1. **Cluster Connectivity**: `kubectl cluster-info`
+2. **Prerequisites**: Ensure config-server, postgres, redis are running
+3. **Resources**: Verify cluster has sufficient CPU/memory
+4. **Network**: Ensure ingress and DNS are properly configured
+5. **Logs**: Check pod logs for errors: `kubectl logs <pod-name> -n mimoto`
 
-
-
-
-
-## Installing Mimoto
-
-This section provides step-by-step instructions to install Mimoto. Follow these guidelines to ensure a successful setup of Mimoto in your environment.
-
-Refer to the [Readme](https://github.com/mosip/mimoto/tree/develop/deploy).
+For more details, refer to the [Mimoto Deployment Guide](https://github.com/mosip/mimoto/tree/develop/deploy).
 
 Note: To know about the latest or earlier versions of Mimoto, refer to the releases [Inji Wallet Mobile - Release](../../inji-wallet/inji-mobile/versions/) and [Inji Web Releases](../../inji-wallet/inji-web/versions/).
 
 
 
-## Installing Inji Web UI and 'Datashare Installation'
+## Deploying Inji Web UI and DataShare
 
-This section provides step-by-step instructions to install the Inji Web UI.
+This section provides a clear, step-by-step guide to deploy the Inji Web UI and DataShare modules. Follow these instructions to ensure a successful and reproducible deployment.
 
-Refer to the [Readme](https://github.com/mosip/inji-web/tree/develop/deploy) file for an always updated Inji Web Deployment Guide.
+### Understanding the Deployment Model
 
-* [Inji web and datashare installation](https://github.com/mosip/inji-web/tree/develop/deploy)
-* **Note**: After installing inji web and datashare, ensure that the active\_profile\_env parameter in the config-map of the config-server-share is correctly set to: default,inji-default,standalone.
+Inji Web UI and DataShare are deployed as **containerized microservices** in your Kubernetes cluster.
+
+#### Deployment Flow
+```mermaid
+flowchart LR
+  A[Your PC] --> B[kubectl/helm]
+  B --> C[K8s Cluster]
+  C --> D[Inji Web UI & DataShare Pods]
+  D --> E[NGINX Ingress]
+  E --> F[External Users]
+  A -.-> G[Deployment Scripts]
+  G -.-> C
+```
+
+#### Where Do Inji Web UI and DataShare Run?
+- **Target Environment**: Your main Kubernetes cluster
+- **Deployment Method**: Helm charts that pull Docker images from container registries
+- **Access Point**: Through your configured NGINX ingress at `https://injiweb.sandbox.xyz.net` (and DataShare endpoints as configured)
+
+#### What Gets Installed?
+1. **Kubernetes Pods**: Running Inji Web UI and DataShare microservices
+2. **Services**: For internal communication
+3. **Ingress Rules**: For external access via NGINX/Istio
+4. **ConfigMaps & Secrets**: For configuration and credentials
+
+### Prerequisites
+
+Before proceeding, ensure these components are running in your K8s cluster:
+- Config Server (for configuration management)
+- PostgreSQL (for data storage)
+- Redis (for caching)
+- Object Store (MinIO/S3 for file storage)
+- Ingress (NGINX/Istio for external access)
+
+### Deployment Process
+
+#### Step 1: Prepare Your Deployment Environment
+
+From your **local machine**, you'll run deployment scripts that:
+- Connect to your Kubernetes cluster via `kubectl`
+- Deploy containerized services using Helm charts
+- Configure ingress rules through Istio/NGINX
+
+#### Step 2: Clone and Navigate to Deployment Scripts
+
+```sh
+git clone https://github.com/mosip/inji-web.git
+cd inji-web/deploy
+```
+
+#### Step 3: Prepare Configuration
+
+- Review and update the `values.yaml` file for your environment (domain names, DB connection, object store endpoints, etc.).
+- Ensure the `active_profile_env` parameter in the config map of the `config-server-share` is set to:
+  ```
+  default,inji-default,standalone
+  ```
+
+#### Step 4: Deploy DataShare (if required)
+
+If DataShare is a separate module, deploy it first:
+
+```sh
+cd datashare
+./install.sh
+cd ..
+```
+
+#### Step 5: Deploy Inji Web UI
+
+From the `deploy` directory:
+
+```sh
+cd injiweb
+./install.sh
+```
+
+#### Step 6: Verification Steps
+
+- Check pod status:
+  ```sh
+  kubectl get pods -n injiweb
+  ```
+- Check service endpoints:
+  ```sh
+  kubectl get services -n injiweb
+  ```
+- Test external access:
+  ```sh
+  curl -k https://injiweb.sandbox.xyz.net/health
+  ```
+
+#### Step 7: Post-Installation Configuration
+
+- Confirm that the `active_profile_env` in the config-server-share config map is set as described above.
+- Ensure DNS records for `injiweb.sandbox.xyz.net` and any DataShare endpoints are correctly mapped to your ingress controller.
+
+### Important Notes
+
+- **Remote Deployment**: You deploy from your local machine to the remote K8s cluster
+- **Container Registry**: Docker images are pulled from public/private registries during deployment
+- **Configuration**: All configuration comes from your config-server and configmaps
+
+### Troubleshooting
+
+If deployment fails, check:
+1. **Cluster Connectivity**: `kubectl cluster-info`
+2. **Prerequisites**: Ensure config-server, postgres, redis are running
+3. **Resources**: Verify cluster has sufficient CPU/memory
+4. **Network**: Ensure ingress and DNS are properly configured
+5. **Logs**: Check pod logs for errors: `kubectl logs <pod-name> -n injiweb`
+
+For more details, refer to the [Inji Web Deployment Guide](https://github.com/mosip/inji-web/tree/develop/deploy).
 
 
-Note: To know about the latest or earlier versions of Inji Web Wallet refer to the releases [Inji Wallet Web - Release](../../inji-wallet/inji-web/inji-web/).
+
+
+## Deploying Inji Verify
+
+This section provides step-by-step instructions to install Inji Verify. Follow these guidelines to ensure a successful setup in your environment.
+
+Refer to the [Inji Verify Readme](https://github.com/mosip/inji-verify/tree/develop/deploy) for the latest deployment details.
+
+### Understanding the Deployment Model
+
+Inji Verify is deployed as **containerized microservices** in your Kubernetes cluster.
+
+### Deployment Flow
+```mermaid
+flowchart LR
+  A[Your PC] --> B[kubectl/helm]
+  B --> C[K8s Cluster]
+  C --> D[Inji Verify Pods]
+  D --> E[NGINX Ingress]
+  E --> F[External Users]
+  A -.-> G[Deployment Scripts]
+  G -.-> C
+```
+
+#### Where Does Inji Verify Run?
+- **Target Environment**: Your main Kubernetes cluster
+- **Deployment Method**: Helm charts that pull Docker images from container registries
+- **Access Point**: Through your configured NGINX ingress at `https://injiverify.sandbox.xyz.net`
+
+#### What Gets Installed?
+1. **Kubernetes Pods**: Running Inji Verify microservices
+2. **Services**: For internal communication
+3. **Ingress Rules**: For external access via NGINX
+4. **ConfigMaps & Secrets**: For configuration and credentials
+
+### Deployment Process
+
+#### Step 1: Prepare Your Deployment Environment
+From your **local machine**, you'll run deployment scripts that:
+- Connect to your Kubernetes cluster via `kubectl`
+- Deploy containerized services using Helm charts
+- Configure ingress rules through Istio
+
+#### Step 2: Clone and Navigate to Deployment Scripts
+```sh
+git clone https://github.com/mosip/inji-verify.git
+cd inji-verify/deploy
+```
+
+#### Step 3: Verify Prerequisites
+Ensure these components are running in your K8s cluster:
+* Config Server (for application configuration)
+* PostgreSQL (for data storage)
+* Redis (for caching)
+* Object Store (MinIO/S3 for file storage)
+
+#### Step 4: Initialize Database
+Update the values file for PostgreSQL initialization as needed.
+
+```sh
+cd ../db_scripts
+# Update init_values.yaml with your database configuration, update the necessary parameters for your PostgreSQL database.
+./init_db.sh
+cd ../deploy
+```
+
+#### Step 5: Deploy Inji Verify Microservices
+```sh
+./install-all.sh
+```
+
+### What Happens During Installation
+
+1. **Helm Charts Execution**: Downloads and deploys Docker containers
+2. **Service Registration**: Services register with config-server for configuration
+3. **Database Initialization**: Creates required tables and seed data
+4. **Ingress Configuration**: Configures routes through Istio gateway
+5. **Health Checks**: Verifies all pods are running and healthy
+
+### Verification Steps
+
+#### Check Pod Status
+```sh
+kubectl get pods -n inji-verify
+```
+
+#### Verify Service Endpoints
+```sh
+kubectl get services -n inji-verify
+```
+
+#### Test External Access
+```sh
+curl -k https://injiverify.sandbox.xyz.net/health
+```
+
+### Managing Inji Verify Services
+
+- **Delete all services:**
+  ```sh
+  ./delete-all.sh
+  ```
+
+- **Restart all services:**
+  ```sh
+  ./restart-all.sh
+  ```
+
+### Important Notes
+
+- **Remote Deployment**: You deploy from your local machine to the remote K8s cluster
+- **Container Registry**: Docker images are pulled from public/private registries during deployment
+- **Configuration**: All configuration comes from your config-server and configmaps
+
+### Troubleshooting
+
+If deployment fails, check:
+1. **Cluster Connectivity**: `kubectl cluster-info`
+2. **Prerequisites**: Ensure config-server, postgres, redis are running
+3. **Resources**: Verify cluster has sufficient CPU/memory
+4. **Network**: Ensure ingress and DNS are properly configured
+5. **Logs**: Check pod logs for errors: `kubectl logs <pod-name> -n inji-verify`
 
 
 
-## Installing Inji Verify
-
-This section provides step-by-step instructions to install the Inji Verify.
-
-Refer to the [Readme](https://github.com/mosip/inji-verify/tree/develop/deploy) file for an always updated Inji Verify Deployment Guide.
-
-
-
-# Troubleshoot
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+***
 
 # Observation cluster setup and configuration (Optional) <!-- If opted, This will come after Wireguard Setup -->
 
@@ -1316,9 +1821,11 @@ The observation cluster is a Kubernetes cluster used for monitoring and managing
 
 * Install Rancher UI.
 
+***
 
+# FAQs
 
-
+## Q. Do I need to care about each and every section of this document?
 
 
 
@@ -1492,6 +1999,35 @@ etc ... continues
 ## Installing Inji Verify
 # Troubleshoot
 
-
-
 -->
+
+
+
+# Important notes:
+* SSH to nodes is not explained, do that.
+* Establish this well that if the 'Base Infra' is ready then Inji can easily be deployed. This should be established throughout the doc. and also use tips, notes etc. to say doc too is approching it in modular way.
+* Some places it is just not clear that where as a user you should be to deploy that stuff, User might not want to deploy every stuff at once, can come back to where he left and start from there, So it is important to mention that.
+* Mimoto is still crude
+* Generic sections like basic skill-sests etvc can be revised with AI/Copilot again giving it docs context.
+* Artifactory Installation is not explained, add that.
+* Remove 'trubleshoot' section, or rename it to 'common issues and resolutions' and add some common issues faced during deployment and their resolutions. Or something similar
+* Prerequisite can go to each section or wherever required, not to hesitate and can be renamed as well, think it.
+* Add more and more mermaid diagrams wherever possible and css animation or try end-to-end flow diagram animation.
+* Some headings can be renamed
+* Mini TOC to add 
+* Tips, Notes, Cautions, Warnings to be added wherever required.- Atleast Tips and Notes
+* Relative and Cross linking
+
+# Crude
+
+```mermaid
+flowchart LR
+    A[VM Provisioning] --> B[Wireguard Setup]
+    B --> C[K8s Cluster Creation]
+    C --> D[Core Components]
+    D --> E[Inji Services]
+    E --> F[Verification]
+    
+    style A fill:#f9f,stroke:#333,stroke-width:4px
+    style F fill:#9f9,stroke:#333,stroke-width:4px
+```
