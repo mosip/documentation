@@ -1,3 +1,7 @@
+---
+icon: user-plus
+---
+
 # eSignet Signup
 
 ## Objective & Rationale:

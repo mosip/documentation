@@ -1,5 +1,6 @@
 ---
 description: A Modern and Inclusive Digital Identity Authentication Solution
+icon: shield-keyhole
 ---
 
 # eSignet Authentication
@@ -52,7 +53,7 @@ This ecosystem-agnostic design ensures that eSignet Auth can serve as a unifying
 
 #### 5. Summary
 
-[**eSignet Auth**](../esignet-authentication/features.md) is a powerful, secure, and inclusive authentication module that can be deployed as part of a digital ID system or independently.
+[**eSignet Auth**](features.md) is a powerful, secure, and inclusive authentication module that can be deployed as part of a digital ID system or independently.
 
 It offers:
 
