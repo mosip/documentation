@@ -1,41 +1,47 @@
 # Inji Deployment Guide
 
 
-## Overview
-
-### What is Inji?
+## What is Inji?
 
 Inji is a digital credentialing stack that provides a way to share tamper-proof, instantly verifiable data which is cryptographically signed by a trusted issuer, and users can store them securely on their devices or browsers and share them when needed.
 
-### Deployment Architecture of Inji
+## Deployment Architecture of Inji
 
 The diagram below illustrates the high-level deployment architecture for Inji Web, showing how core components interact within the Kubernetes cluster, including ingress, services, and external integrations.
 
 <figure><img src="../../.gitbook/assets/iww-deployment-diagram.png" alt="Inji Web Deployment Architecture"><figcaption><p><strong>Inji Web Deployment Architecture:</strong></p></figcaption></figure>
 
-### What to expect from this guide and how is this guide organized?
+## Getting Started
+### Do I need to read through the entire guide to be able to deploy Inji (Whole stack or Individual Inji Module)?
+This is the first question anyone would ask and the answer is No! If you have the Infrastructure ready and you just want to deploy the Inji stack you can directly jump to the [Inji Stack Deployment](#inji-stack-deployment) section.
 
-This guide is structured to provide a step-by-step approach for deploying the Inji stack, covering all essential aspects from prerequisites to troubleshooting:
 
-#### Guide Structure and Navigation
+## What to expect from this guide and how is this guide organized?
 
-1. **Overview**: Introduction to Inji, its modules, deployment scenarios, required skillsets, architecture, deployment order, key considerations, dependencies, and supported environments.
-2. **Prerequisites**: On-Prem Server Environment Details on Software (Kubernetes, NGINX etc.) and Hardware (System Specifications - CPU, RAM, Disk Space and VM specs), infrastructure, including tools and initial setup steps.
-3. **Base Infrastructure Setup**: Instructions for setting up Kubernetes clusters, NGINX, cluster configuration, and optional observation clusters.
-4. **Core Infra setup and configurations**: This section covers the installation and configuration of essential infrastructure components required for the Inji stack, including configmaps, databases, object storage, secrets management, configuration server, and artifactory.
-5. **Inji Stack Deployment**: Guidance on configuring and deploying core Inji components, including configuration management and object storage. Stepwise deployment instructions for Inji Certify, Mimoto, Web UI, and Verify modules.
-6. **Troubleshooting**: Common issues and solutions encountered during deployment.
+This guide is structured to provide a comprehensive approach for deploying the Inji stack (Inji Certify, Mimoto, Inji Web & Datashare and Unji Verify).
+Not only the Inji Stack deployment but it has taken a approach to cover everything from Wireguard, to Base Infrastructure setup, Core Infra setup and configurations to Inji Stack deployment.
 
-Each section references detailed steps and external resources where applicable, ensuring a comprehensive and actionable deployment process.
+### Guide Structure and Navigation
 
-#### Key Deployment Considerations
+This guide is organized into clear, actionable sections:
 
-##### Basic Skill-sets Required
+1. **Overview**: Introduction to Inji, its modules, architecture, deployment flow, and key requirements.
+2. **Prerequisites**: Details on infrastructure, hardware/software requirements, and initial setup.
+3. **Base Infrastructure Setup**: Steps to provision Kubernetes, NGINX, networking, and optional observation clusters.
+4. **Core Infrastructure Configuration**: Installation and configuration of databases, object storage, secrets, config server, and artifactory.
+5. **Inji Stack Deployment**: Step-by-step instructions to deploy Inji modules (Certify, Mimoto, Web UI, Verify) with configuration guidance.
 
-Deploying Inji Stack is easier if you have Base Infrastructure ready, still, if you want to deploy it 'On-Premise' and from scratch this guide will help you with the instructions to do so.
+Each section provides direct steps and references to external resources for a streamlined deployment experience.
+
+### Key Deployment Considerations
+
+#### Basic Skill-sets Required
+
+Deploying Inji Stack is easier if you have Base Infrastructure ready, still, if you want to deploy it 'On-Premise' and from scratch, this guide will help you with the instructions to achieve this.
 
 {% hint style="success" %}
-**Note**: The basic Skill-sets mentioned here includes the skills you will need to setup the infrastructure also by yourself.
+**Note**: The basic Skill-sets mentioned below, in fact, expects you to know the following to be able to deploy it from scratch and that too on a bare metal servers (On-Premise). This should not get intimidating as in typical scenarios we expect the infrastructure to be deployed by an experienced 'System-Admin / DevOps'.
+However in case you want to eevangelize Inji in your organization and want to have a hands-on with the deployment, this guide will help you with the steps and instructions to achieve this.
 {% endhint %}
 
 * **Kubernetes Administration**: Understanding of Kubernetes concepts, cluster setup, resource management, and troubleshooting.
@@ -50,7 +56,9 @@ Deploying Inji Stack is easier if you have Base Infrastructure ready, still, if 
 * **Scripting**: Basic scripting skills (e.g., Bash, Python) for automation and operational tasks.
 * **Familiarity with CI/CD Pipelines**: Understanding of continuous integration and deployment processes is a plus.
 
-##### Key Infrastructure Notes
+### Key Infrastructure Notes
+
+The 'Key Infrastructure Notes' here helps you have a quick understanding of what you should expect when you go about deploying Inji-Stack and specially if you are deploying it 'On-Premise' and from scratch.
 
 * Inji modules are deployed as microservices in a Kubernetes cluster.
 * Wireguard is used as a trust network extension to access the admin, control, and observation panes.
@@ -61,7 +69,7 @@ Deploying Inji Stack is easier if you have Base Infrastructure ready, still, if 
   * Load balancing
 * Kubernetes cluster is administered using the Rancher and rke tools.
   * We have two Kubernetes clusters:
-    * \[Optional] **Observation cluster** - This cluster is part of the observation plane and assists with administrative tasks. By design, this is kept independent from the actual cluster as a good security practice and to ensure clear segregation of roles and responsibilities. As a best practice, this cluster or its services should be internal and should never be exposed to the external world.
+    * [Optional] **Observation cluster** - This cluster is part of the observation plane and assists with administrative tasks. By design, this is kept independent from the actual cluster as a good security practice and to ensure clear segregation of roles and responsibilities. As a best practice, this cluster or its services should be internal and should never be exposed to the external world.
     * Rancher is used for managing the Inji cluster.
     * Keycloak in this cluster is used to manage user access and rights for the observation plane.
       * It is recommended to configure log monitoring and network monitoring in this cluster.
@@ -72,7 +80,7 @@ Deploying Inji Stack is easier if you have Base Infrastructure ready, still, if 
 
 # Prerequisites
 
-While we have put the prerequisites specific to sections which needs it throughout this guide you can refer to the common ones here.
+While we have placed the **Prerequisites** specific to a section under the respective section itself, here, this 'Prerequisite' lists the common ones here which you will need no matter which component you are deploying such as Wireguard, PC - Tools and Utilities etc.
 
 
 **DNS requirements [TODO]**
@@ -134,7 +142,7 @@ You should have these tools installed on your local machine from where you will 
 
 ### Wireguard on PC
 
-Refer [here](## Setup Wireguard Client on your PC)
+Refer to the [Setup Wireguard Client on your PC](#setup-wireguard-client-on-your-pc) section for the instructions.
 
 
 # Setting Up Wireguard
@@ -152,30 +160,25 @@ WireGuard is a modern, fast, and secure VPN (Virtual Private Network) protocol a
 * Bastion server listens on UDP port 51820.
 
 {% hint style="success" %}
-**Note**: You can also refer to [Wireguard Administrator's Guide](https://github.com/mosip/k8s-infra/blob/main/docs/wireguard-administrators-guide.md).
+**Note**: You can also refer to [Wireguard Administrator's Guide](https://github.com/mosip/k8s-infra/blob/main/docs/wireguard-administrators-guide.md) for more on Wireguard configuration and management.
 {% endhint %}
 
 
 ## Prerequisites
-Ensure all required hardware and software dependencies are prepared before proceeding with the installation.
-
-> **Note**: Virtual Machines (VMs) can use any operating system as per convenience. For this installation guide, Ubuntu OS is referenced throughout.
 
 **Wireguard Bastion Host**
 
-* VMs and Hardware Specifications
+* **VMs and Hardware Specifications**
   * 1 VM (ensure to set up active-passive for HA)
   * Specification - 2 vCPUs, 4 GB RAM, 8 GB Storage (HDD)
-* Server Network Interfaces
+* **Server Network Interfaces**
   * Private interface: On the same internal network as all other nodes (e.g., local NAT network).
   * Public interface: Either a direct public IP or a firewall/NAT rule forwarding UDP port 51820 to this interface's IP address.
 
 
-## Setup Wireguard VM and wireguard bastion server
+## Setting up Wireguard VM and wireguard bastion server
 
-Create a Wireguard server VM with the mentioned [**On-Prem Server Requirements**](#on-prem-server-requirements).
-
-Before proceeding, ensure that a dedicated VM (the Bastion server) has already been provisioned according to the specified hardware and network requirements. This VM will be used to set up the Wireguard server. Once the VM is ready, open the required ports on the Bastion server VM.
+Before proceeding, Create a Wireguard server VM with the mentioned specification under 'Prerequisites' above. This VM will be used to set up the Wireguard server. Once the VM is ready, open the required ports on the Bastion server VM.
 
 **Open required ports in the Bastian server VM**
 
@@ -243,6 +246,7 @@ ansible-playbook -i hosts.ini docker.yaml
 * Change the directory to be mounted to wireguard docker as per need. All your wireguard confs will be generated in the mounted directory (`-v /home/ubuntu/wireguard/config:/config`).
 {% endhint %}
 
+
 ## Setup Wireguard Client on your PC
 
 * Install Wireguard client on your PC using [steps](https://www.wireguard.com/install/).
@@ -289,7 +293,7 @@ sudo systemctl status wg-quick@wg0
 
 # Base Infrastructure Setup
 
-## What is meant by "Base Infrastructure Setup" here?
+## What we mean here by Base Infrastructure Setup'?
 
 "Base Infrastructure Setup" refers to preparing all foundational resources and configurations needed before deploying the Inji stack. This includes provisioning servers/VMs, configuring networks and firewalls, setting up SSL certificates, installing Kubernetes clusters and required tools (Docker, kubectl, Helm, etc.), establishing secure access (e.g., Wireguard VPN), and deploying essential services like NGINX, storage, monitoring, and logging. It ensures the environment is ready for Inji stack installation.
 
@@ -319,7 +323,7 @@ sudo systemctl status wg-quick@wg0
 Before deploying any Inji Stack module, ensure that the following common prerequisites are met. These requirements apply to all modules and must be fulfilled to guarantee a smooth and successful deployment process.
 
 ### On-Prem Server Requirements
-> **Note:** You can deploy Inji on an environment and operating system that supports Kubernetes-based deployments. Ensure your chosen OS and infrastructure meet the prerequisites and compatibility requirements. **Note**: This guide refrences using **Ubuntu Server 22.04 LTS**. **Note:** For large-scale deployments or environments with strict security requirements, an on-premises setup is recommended. For pilot projects, demonstrations, or rapid prototyping, a cloud-based deployment may be more suitable.
+> **Note:** You can deploy Inji on an environment and operating system that supports Kubernetes-based deployments. Ensure your chosen OS and infrastructure meet the prerequisites and compatibility requirements. **Note**: This guide references using **Ubuntu Server 22.04 LTS**. **Note:** For large-scale deployments or environments with strict security requirements, an on-premises setup is recommended. For pilot projects, demonstrations, or rapid prototyping, a cloud-based deployment may be more suitable.
 
 > **Note**: Virtual Machines (VMs) can use any operating system as per convenience. For this installation guide, Ubuntu OS is referenced throughout.
 
@@ -344,15 +348,14 @@ Before deploying any Inji Stack module, ensure that the following common prerequ
 {% endhint %}
 
 ### PC Requirements
-Refer to common prerequisites [here](#tools-and-utilities)
+See the [Tools and Utilities](#tools-and-utilities) section for common prerequisites required for all deployments.
 
 ## Setting Up Kubernetes Cluster
 
-> **Note**: For VM provisioning and hardware/network requirements, refer to the [System Requirements section](#on-prem-server-requirements).
-{% endhint %}
+> **Note:** For detailed VM provisioning steps and hardware/network prerequisites, see the [Prerequisites](#prerequisites---base-infrastructure) above for VM - Hardware specification and more.
 
 * Find the **kubernetes infrastructure repository** [here](https://github.com/mosip/k8s-infra/tree/v1.2.0.1) which contains the scripts to install and configure Kubernetes cluster with required monitoring, logging and alerting tools.
-  * After reviewing the `k8s-infra` repository and ensuring you have all required tools installed on your local machine, the next step is to provision and configure your Kubernetes cluster nodes (VMs or servers) according to the hardware and network requirements specified earlier. Once your nodes are ready and accessible, proceed to run the provided Ansible playbooks and scripts from the `k8s-infra` repository to set up the Kubernetes cluster, networking, and essential infrastructure components.
+  * After reviewing the `k8s-infra` repository and ensuring that you have all the required tools installed on your local machine, the next step is to provision and configure your Kubernetes cluster nodes (VMs or servers) according to the hardware and network requirements specified under 'Prerequisites' above. Once your nodes are ready and accessible, proceed to run the provided Ansible playbooks and scripts from the `k8s-infra` repository to set up the Kubernetes cluster, networking, and essential infrastructure components.
 *   Run `env-check-setup.yaml` to check if cluster nodes are fine and doesn't have known issues in it.
 
     * `cd $K8_ROOT/rancher/on-prem`
@@ -463,9 +466,9 @@ Refer to common prerequisites [here](#tools-and-utilities)
     * `kube_config_cluster.yml`: The [Kubeconfig file](https://rke.docs.rancher.com/kubeconfig) for the cluster, this file contains credentials for full access to the cluster.
     * `cluster.rkestate`: The [Kubernetes Cluster State file](https://rke.docs.rancher.com/installation#kubernetes-cluster-state), this file contains credentials for full access to the cluster.
 
-### Inji K8 (Kubernetes) Cluster, Ingress and Storage Class setup
+## Inji K8 (Kubernetes) Cluster, Ingress and Storage Class setup
 
-#### a. [Istio](https://istio.io/) Ingress setup
+### a. [Istio](https://istio.io/) Ingress setup
 
 It is a service mesh for the MOSIP K8 cluster which provides transparent layers on top of existing microservices along with powerful features enabling a uniform and more efficient way to secure, connect, and monitor services.
 
@@ -482,7 +485,7 @@ It is a service mesh for the MOSIP K8 cluster which provides transparent layers 
     > * `istio-ingressgateway-internal`: internal facing istio service.
     > * `istiod`: Istio daemon for replicating the changes to all envoy filters.
 
-#### b. Storage classes
+### b. Storage classes
 
 Multiple storage classes options are available for onprem K8's cluster. In this reference deployment will continue to use NFS as a storage class.
 
@@ -589,9 +592,9 @@ kubectl -n nfs get deployment.apps/nfs-client-provisioner
   nfs-client           cluster.local/nfs-client-provisioner   Delete          Immediate           true                   40s
 ```
 
-### Inji K8 (Kubernetes) cluster Nginx server setup
+## Inji K8 (Kubernetes) cluster Nginx server setup
 
-#### a. SSL certificates creation
+### a. SSL certificates creation
 
 * For Nginx server setup, we need ssl certificate, add the same into Nginx server.
 * Incase valid ssl certificate is not there generate one using letsencrypt:
@@ -620,7 +623,7 @@ kubectl -n nfs get deployment.apps/nfs-client-provisioner
     * Certificates created are valid for 3 months only.
 * `Wildcard SSL certificate` [renewal](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/docs/wildcard-ssl-certs-letsencrypt.md#ssl-certificate-renewal). This will increase the validity of the certificate for next 3 months.
 
-#### b. Nginx server setup for MOSIP K8's cluster
+### b. Nginx server setup for MOSIP K8's cluster
 
 * Move to nginx directory in your local:
 * `cd $K8_ROOT/mosip/on-prem/nginx/`
@@ -666,7 +669,7 @@ node-nginx ansible_host=<internal ip> ansible_user=root ansible_ssh_private_key_
     `sudo apt purge nginx nginx-common`
   * **DNS mapping**: Once nginx server is installed sucessfully, create DNS mapping for observation cluster related domains as mentioned in DNS requirement section.
 
-#### c. Check Overall nginx and istio wiring
+### c. Check Overall nginx and istio wiring
 
 * Install `httpbin`: This utility docker returns http headers received inside the cluster.
 * `httpbin` can be used for general debugging - to check ingress, headers etc.
@@ -683,7 +686,7 @@ curl https://api.sandbox.xyz.net/httpbin/get?show_env=true
 curl https://api-internal.sandbox.xyz.net/httpbin/get?show_env=true
 ```
 
-### [Optional] Monitoring module deployment
+## [Optional] Monitoring module deployment
 
 > Note :
 >
@@ -709,7 +712,7 @@ curl https://api-internal.sandbox.xyz.net/httpbin/get?show_env=true
     ```
 * Click on `Install`.
 
-### [Optional] Alerting setup
+## [Optional] Alerting setup
 
 **Note**:
 
@@ -757,7 +760,7 @@ cd $K8_ROOT/monitoring/alerting/
 
 * Alerting is installed.
 
-### [Optional] Logging module setup and installation
+## [Optional] Logging module setup and installation
 
 > Note :
 >
@@ -805,11 +808,11 @@ Open kibana dashboard from `https://kibana.sandbox.xyz.net`.
 
 Kibana --> Menu (on top left) --> Dashboard --> Select the dashboard.
 
-### Core Infrastructure Components Setup
+## Core Infrastructure Components Setup
 
 This section covers the installation and configuration of essential infrastructure components required for the Inji stack, including configmaps, databases, object storage, secrets management, configuration server, and artifactory.
 
-#### Inji Stack Configmap: For inji K8's env
+### Inji Stack Configmap: For inji K8's env
 
 * `inji-stack-config` configmap: For inji K8's env, `inji-stack-config` configmap in `default` namespace contains Domain related information. Follow below steps to add domain details for `inji-stack-config` configmap.
 * Update the domain names in `inji-stack-cm.yaml` correctly for your environment.
@@ -847,19 +850,19 @@ data:
 EOF
 ```
 
-#### Postgres installation
+### Postgres installation
 
 * [Postgres installation](https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/external/postgres)
 
-#### Object store installation
+### Object store installation
 
 * [Object store installation](https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/external/object-store)
 
-#### conf-secret installation
+### conf-secret installation
 
 * [conf-secret installation](https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/mosip/conf-secrets)
 
-#### Config Server Installation
+### Config Server Installation
 
 **Create values.yaml**
 
@@ -1105,9 +1108,9 @@ fi
     ./configserver.sh
 ```
 
-#### Artifactory Installation
+## Artifactory Installation
 
-Artifactory is a universal artifact repository manager used to store, manage, and distribute build artifacts (such as Docker images, Helm charts, binaries, and other deployment packages) required by the Inji stack and related services. Installing Artifactory ensures that all deployment dependencies are securely managed and easily accessible during automated deployments and upgrades.
+Artifactory is used to store, manage, and distribute build artifacts (such as Docker images, Helm charts, binaries, and other deployment packages) required by the Inji stack and related services. Installing Artifactory ensures that all deployment dependencies are securely managed and easily accessible during automated deployments and upgrades.
 
 **Why install Artifactory?**
 
@@ -1117,7 +1120,6 @@ Artifactory is a universal artifact repository manager used to store, manage, an
 * Supports integration with Kubernetes, Docker, and Helm for seamless deployments.
 
 For installation instructions, refer to the [artifactory installation guide](https://github.com/mosip/artifactory-ref-impl/tree/v0.10.0-INJI/deploy).
-
 
 
 # Inji Stack Deployment
@@ -1708,7 +1710,6 @@ If deployment fails, check:
 3. **Resources**: Verify cluster has sufficient CPU/memory
 4. **Network**: Ensure ingress and DNS are properly configured
 5. **Logs**: Check pod logs for errors: `kubectl logs <pod-name> -n inji-verify`
-
 
 
 ***

@@ -33,7 +33,7 @@ Let's briefly explore the key components that constitute Inji Verify:
 <figure><img src="../../.gitbook/assets/iv-backend.png" alt="" width="400"><figcaption><p>Scan QR Code Desktop View</p></figcaption></figure>
 
 6. **INJI verify SDK**\
-   Inji Verify SDK is a library which exposes React components for integrating Inji Verify features seamlessly into any relaying party application. Currently the SDK exposes OpenID4VP component and the integration docs can be found [here](https://github.com/mosip/inji-verify/blob/release-0.12.x/inji-verify-sdk/Readme.md).
+   Inji Verify SDK is a library which exposes React components for integrating Inji Verify features seamlessly into any relaying party application. Currently the SDK exposes OpenID4VP component and Scan/upload component. The integration docs for SDK can be found [here](https://github.com/mosip/inji-verify/blob/release-0.14.x/inji-verify-sdk/Readme.md).
 
 ### Components
 
