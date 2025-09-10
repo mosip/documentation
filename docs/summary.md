@@ -160,6 +160,7 @@
 * [Setup](inji-certify/build-and-deploy/README.md)
   * [Local Setup](inji-certify/build-and-deploy/local-setup.md)
 * [Releases](inji-certify/releases/README.md)
+  * [Version 0.12.1](inji-certify/releases/version-0.12.1.md)
   * [Version 0.12.0](inji-certify/releases/version-0.12.0/README.md)
     * [Test Report](inji-certify/releases/version-0.12.0/test-report.md)
   * [Version 0.11.0](inji-certify/releases/version-0.11.0/README.md)
