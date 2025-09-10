@@ -7,13 +7,13 @@ Inji is a digital credentialing stack that provides a way to share tamper-proof,
 
 ## Deployment Architecture of Inji
 
-The diagram below illustrates the high-level deployment architecture for Inji Web, showing how core components interact within the Kubernetes cluster, including ingress, services, and external integrations.
+The diagram below illustrates the high-level deployment architecture for Inji Stack, showing how core components interact within the Kubernetes cluster, including ingress, services, and external integrations.
 
 <figure><img src="../../.gitbook/assets/iww-deployment-diagram.png" alt="Inji Web Deployment Architecture"><figcaption><p><strong>Inji Web Deployment Architecture:</strong></p></figcaption></figure>
 
 ## Getting Started
 ### Do I need to read through the entire guide to be able to deploy Inji (Whole stack or Individual Inji Module)?
-This is the first question anyone would ask and the answer is No! If you have the Infrastructure ready and you just want to deploy the Inji stack you can directly jump to the [Inji Stack Deployment](#inji-stack-deployment) section.
+This is the first question anyone could ask and the answer is No! If you have the Infrastructure ready and you just want to deploy the Inji stack you can directly jump to the [Inji Stack Deployment](#inji-stack-deployment) section.
 
 
 ## What to expect from this guide and how is this guide organized?
@@ -37,11 +37,11 @@ Each section provides direct steps and references to external resources for a st
 
 #### Basic Skill-sets Required
 
-Deploying Inji Stack is easier if you have Base Infrastructure ready, still, if you want to deploy it 'On-Premise' and from scratch, this guide will help you with the instructions to achieve this.
+Deploying Inji Stack is easier while you have Base Infrastructure ready, still, if you want to deploy it 'On-Premise' and from scratch, this guide helps you with the instructions to achieve this.
 
 {% hint style="success" %}
 **Note**: The basic Skill-sets mentioned below, in fact, expects you to know the following to be able to deploy it from scratch and that too on a bare metal servers (On-Premise). This should not get intimidating as in typical scenarios we expect the infrastructure to be deployed by an experienced 'System-Admin / DevOps'.
-However in case you want to eevangelize Inji in your organization and want to have a hands-on with the deployment, this guide will help you with the steps and instructions to achieve this.
+However in case you want to evangelize Inji in your organization and want to have a hands-on with the deployment, this guide helps you with the steps and instructions to achieve this.
 {% endhint %}
 
 * **Kubernetes Administration**: Understanding of Kubernetes concepts, cluster setup, resource management, and troubleshooting.
@@ -81,29 +81,6 @@ The 'Key Infrastructure Notes' here helps you have a quick understanding of what
 # Prerequisites
 
 While we have placed the **Prerequisites** specific to a section under the respective section itself, here, this 'Prerequisite' lists the common ones here which you will need no matter which component you are deploying such as Wireguard, PC - Tools and Utilities etc.
-
-
-**DNS requirements [TODO]**
-
-## DNS Requirements
-
-Below is a sample mapping of domain names to their respective IP addresses and purposes for a typical Inji deployment. Update these as per your environment.
-
-| Sl No. | Domain Name                     | Mapping Details                                              | Purpose                                                                                   |
-|--------|----------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------|
-| 1.     | rancher.xyz.net                  | Private IP of Nginx server or load balancer (Observation cluster) | Rancher dashboard for monitoring and managing the Kubernetes cluster.                     |
-| 2.     | keycloak.xyz.net                 | Private IP of Nginx server (Observation cluster)             | Administrative IAM tool (Keycloak) for Kubernetes administration.                         |
-| 3.     | sandbox.xyz.net                  | Private IP of Nginx server (MOSIP cluster)                   | Index page for links to MOSIP environment dashboards (not for production/UAT use).        |
-| 4.     | api-internal.sandbox.xyz.net     | Private IP of Nginx server (MOSIP cluster)                   | Internal APIs, accessible privately over Wireguard.                                       |
-| 5.     | api.sandbox.xyz.net              | Public IP of Nginx server (MOSIP cluster)                    | Publicly exposed APIs.                                                                    |
-| 6.     | iam.sandbox.xyz.net              | Private IP of Nginx server (MOSIP cluster)                   | OpenID Connect server (default: Keycloak) for service access, accessible over Wireguard.  |
-| 7.     | postgres.sandbox.xyz.net         | Private IP of Nginx server (MOSIP cluster)                   | Points to Postgres server, connect via port forwarding over Wireguard.                    |
-| 8.     | onboarder.sandbox.xyz.net        | Private IP of Nginx server (MOSIP cluster)                   | Access MOSIP partner onboarding reports over Wireguard.                                   |
-| 9.     | injiweb.sandbox.xyz.net          | Public IP of Nginx server (MOSIP cluster)                    | Public access to Inji Web portal.                                                         |
-| 10.    | injicertify.sandbox.xyz.net      | Public IP of Nginx server (MOSIP cluster)                    | Public access to Inji Certify portal.                                                     |
-| 11.    | injiverify.sandbox.xyz.net       | Public IP of Nginx server (MOSIP cluster)                    | Public access to Inji Verify portal.                                                      |
-
-> **Note:** Ensure all DNS records are created and point to the correct IP addresses (public or private) as per your network design. For private domains, access is typically restricted via Wireguard VPN.
 
 
 ## Personal Computer
@@ -347,6 +324,57 @@ Before deploying any Inji Stack module, ensure that the following common prerequ
 * All the VM's should have stable internet connectivity for docker image download (in case of local setup ensure to have a locally accessible docker registry).
 {% endhint %}
 
+
+#### DNS Requirements
+Below is a sample mapping of domain names to their respective IP addresses and purposes for a typical Inji deployment. Update these as per your environment.
+
+* **rancher.xyz.net**  
+  * Maps to: Private IP of Nginx server or load balancer (Observation cluster)  
+  * Purpose: Rancher dashboard for monitoring and managing the Kubernetes cluster.
+
+* **keycloak.xyz.net**  
+  * Maps to: Private IP of Nginx server (Observation cluster)  
+  * Purpose: Administrative IAM tool (Keycloak) for Kubernetes administration.
+
+* **sandbox.xyz.net**  
+  * Maps to: Private IP of Nginx server (MOSIP cluster)  
+  * Purpose: Index page for links to MOSIP environment dashboards (not for production/UAT use).
+
+* **api-internal.sandbox.xyz.net**  
+  * Maps to: Private IP of Nginx server (MOSIP cluster)  
+  * Purpose: Internal APIs, accessible privately over Wireguard.
+
+* **api.sandbox.xyz.net**  
+  * Maps to: Public IP of Nginx server (MOSIP cluster)  
+  * Purpose: Publicly exposed APIs.
+
+* **iam.sandbox.xyz.net**  
+  * Maps to: Private IP of Nginx server (MOSIP cluster)  
+  * Purpose: OpenID Connect server (default: Keycloak) for service access, accessible over Wireguard.
+
+* **postgres.sandbox.xyz.net**  
+  * Maps to: Private IP of Nginx server (MOSIP cluster)  
+  * Purpose: Points to Postgres server, connect via port forwarding over Wireguard.
+
+* **onboarder.sandbox.xyz.net**  
+  * Maps to: Private IP of Nginx server (MOSIP cluster)  
+  * Purpose: Access MOSIP partner onboarding reports over Wireguard.
+
+* **injiweb.sandbox.xyz.net**  
+  * Maps to: Public IP of Nginx server (MOSIP cluster)  
+  * Purpose: Public access to Inji Web portal.
+
+* **injicertify.sandbox.xyz.net**  
+   * Maps to: Public IP of Nginx server (MOSIP cluster)  
+   * Purpose: Public access to Inji Certify portal.
+
+* **injiverify.sandbox.xyz.net**  
+   * Maps to: Public IP of Nginx server (MOSIP cluster)  
+   * Purpose: Public access to Inji Verify portal.
+
+> **Note:** Ensure all DNS records are created and point to the correct IP addresses (public or private) as per your network design. For private domains, access is typically restricted via Wireguard VPN.
+
+
 ### PC Requirements
 See the [Tools and Utilities](#tools-and-utilities) section for common prerequisites required for all deployments.
 
@@ -355,7 +383,7 @@ See the [Tools and Utilities](#tools-and-utilities) section for common prerequis
 > **Note:** For detailed VM provisioning steps and hardware/network prerequisites, see the [Prerequisites](#prerequisites---base-infrastructure) above for VM - Hardware specification and more.
 
 * Find the **kubernetes infrastructure repository** [here](https://github.com/mosip/k8s-infra/tree/v1.2.0.1) which contains the scripts to install and configure Kubernetes cluster with required monitoring, logging and alerting tools.
-  * After reviewing the `k8s-infra` repository and ensuring that you have all the required tools installed on your local machine, the next step is to provision and configure your Kubernetes cluster nodes (VMs or servers) according to the hardware and network requirements specified under 'Prerequisites' above. Once your nodes are ready and accessible, proceed to run the provided Ansible playbooks and scripts from the `k8s-infra` repository to set up the Kubernetes cluster, networking, and essential infrastructure components.
+  * After reviewing the `k8s-infra` repository and ensuring that you also have all the required tools and utilities installed on your local machine, the next step is to provision and configure your Kubernetes cluster nodes (VMs or servers) according to the hardware and network requirements specified under 'Prerequisites' above. Once your nodes are ready and accessible, proceed to run the provided Ansible playbooks and scripts from the `k8s-infra` repository to set up the Kubernetes cluster, networking, and essential infrastructure components.
 *   Run `env-check-setup.yaml` to check if cluster nodes are fine and doesn't have known issues in it.
 
     * `cd $K8_ROOT/rancher/on-prem`
@@ -686,7 +714,17 @@ curl https://api.sandbox.xyz.net/httpbin/get?show_env=true
 curl https://api-internal.sandbox.xyz.net/httpbin/get?show_env=true
 ```
 
-## [Optional] Monitoring module deployment
+## Nginx for Inji K8 Cluster
+Setup [Nginx](https://github.com/mosip/k8s-infra/tree/v1.2.0.2/mosip/on-prem/nginx) for exposing services from newly created Inji K8 cluster.
+
+## K8sCluster Configuration
+
+### Setup NFS
+Setup [NFS](https://github.com/mosip/k8s-infra/tree/v1.2.0.2/nfs#nfs-setup) for persistence in k8 cluster as well as standalone VM (Nginx VM).
+
+
+
+### [Optional] Monitoring module deployment
 
 > Note :
 >
@@ -712,7 +750,7 @@ curl https://api-internal.sandbox.xyz.net/httpbin/get?show_env=true
     ```
 * Click on `Install`.
 
-## [Optional] Alerting setup
+### [Optional] Alerting setup
 
 **Note**:
 
@@ -760,7 +798,7 @@ cd $K8_ROOT/monitoring/alerting/
 
 * Alerting is installed.
 
-## [Optional] Logging module setup and installation
+### [Optional] Logging module setup and installation
 
 > Note :
 >
@@ -1173,19 +1211,19 @@ flowchart LR
 If you have the following prerequisites ensured, Inji Certify installation is straight forward. This document has all the prerequisites explained through sections referenced here below.
 
 * Base Infrastructure
-  * [Tools and Utilitie](link)
-  * [System Requirements - Hardware, network and certificate requirements](link)
-  * [Wireguard Bastion Host](link)
-  * [K8s Cluster setup](link)
-  * [NGINX setup and configuration](link)
+  * [Tools and Utilitie](#tools-and-utilities)
+  * [System Requirements - Hardware, network and certificate requirements]()
+  * [Wireguard Bastion Host](#setting-up-wireguard)
+  * [K8s Cluster setup](#base-infrastructure-setup)
+  * [NGINX setup and configuration](#b-nginx-server-setup-for-mosip-k8s-cluster)
   * [K8s Cluster Configuration](link)
-* [Inji Stack ConfigMap](link)
+* [Inji Stack ConfigMap](#inji-stack-config-for-inji-k8s-env)
 * [Postgres Installation](https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/external/postgres)
   * Note: Before running the Postgres install script, update the `POSTGRES_HOST` value in `install.sh` with the correct PostgreSQL host.
 * [Config Server Secerts](https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/mosip/conf-secrets)
-* [Config Server](link)
+* [Config Server](#config-server-installation)
 * [Artifactory](https://github.com/mosip/artifactory-ref-impl/tree/v1.3.0-beta.2/deploy)
-* [Redis](link)
+* [Redis]()
 
 
 **Step 2: Prepare Your Deployment Environment**
