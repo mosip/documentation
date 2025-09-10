@@ -1514,10 +1514,11 @@ flowchart LR
   * [K8s Cluster setup](link)
   * [NGINX setup and configuration](link)
   * [K8s Cluster Configuration](link)
-* inji-stack-config ConfigMap
-* Config Server Secrets
-* Config Server Installation
-* Object Store Installation
+* [inji-stack-config ConfigMap](#inji-stack-config-for-inji-k8s-env)
+* [Config Server Secrets](#config-server-secrets)
+* [Postgres Installation](#postgres-installation)
+* [Config Server Installation](#config-server-installation)
+* [Object Store Installation](#object-store-installation)
   * Note: Before running the minio install script, update the EXTERNAL_HOST value in install.sh with the correct minio host.
 
 
@@ -1650,14 +1651,14 @@ flowchart LR
 **Step 1: Prerequisites**
 
 * Base Infrastructure
-  * [Tools and Utilitie](link)
-  * [System Requirements - Hardware, network and certificate requirements](link)
-  * [Wireguard Bastion Host](link)
-  * [K8s Cluster setup](link)
-  * [NGINX setup and configuration](link)
-  * [K8s Cluster Configuration](link)
-* inji-stack-config ConfigMap
-* Postgres Installation
+  * [Tools and Utilities](#tools-and-utilities)
+  * [System Requirements - Hardware, network and certificate requirements](#vms-virtual-machines-hardware-network-certificate-and-dns---along-with-nginx-server-use-loadbalancer-if-required)
+  * [Wireguard Bastion Host](#setting-up-wireguard)
+  * [K8s Cluster setup](#base-infrastructure-setup)
+  * [NGINX setup and configuration](#b-nginx-server-setup-for-mosip-k8s-cluster)
+  * [K8s Cluster Configuration](#k8s-cluster-configuration)
+* [inji-stack-config ConfigMap](#inji-stack-config-for-inji-k8s-env)
+* [Postgres Installation](#postgres-installation)
   * Note: Before running the Postgres install script, update the POSTGRES_HOST value in install.sh with the correct PostgreSQL host.
 
 **Step 2: Prepare Your Deployment Environment**
