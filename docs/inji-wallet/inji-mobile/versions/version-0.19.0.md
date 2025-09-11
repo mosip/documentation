@@ -8,11 +8,17 @@
 
 ### Overview
 
-This release of **Inji Mobile Wallet v0.19.0** strengthens support for **SD-JWT Verifiable Credentials (VCs)** and enhances the VC issuance and verification experience across Android and iOS.
+This release of **Inji Mobile Wallet v0.19.0** strengthens support for **IETF** **SD-JWT Verifiable Credentials (VCs)** and enhances the VC verification experience across Android and iOS with updates in our vc-verifier library.
 
-Key highlights include **SD-JWT issuance and disclosure flows**, updates to the **VC Verifier Library**, support for **x509 certificates in SD-JWT**, and improvements in handling credential formats such as **mso\_mdoc, LDP VC, and MDL VCs**.
+Key highlights include **IETF** **SD-JWT issuance and download flow**, updates to the **VC Verifier Library**, support for **x509 certificates in SD-JWT**, and improvements in handling credential formats such as **mDoc VCs, JSON-LD VCs, and mDL VCs**.
 
 This release also delivers important **bug fixes** and updates to improve **stability, error handling, and multi-language support**.
+
+{% hint style="info" %}
+#### ⚠️ **Warning**: Signature verification support is limited on iOS. Since the vc-verifier library is not available for iOS, signature verification is currently not performed for mso\_mdoc and SD-JWT credential formats. For LDP-VC(JSON-LD), signature verification is supported only for RSA key suites; verification for EC and Ed25519 is not yet available.&#x20;
+
+Refer to the library [**ReadMe**](https://github.com/mosip/inji-wallet?tab=readme-ov-file#ios-1) to know more about this update.
+{% endhint %}
 
 ### Key Highlights
 
@@ -20,11 +26,10 @@ This release also delivers important **bug fixes** and updates to improve **stab
 
 #### SD-JWT VC Format Support
 
-* Constructed **SD-JWT VC Issuance Payloads** in VCI Client Library (Kotlin & Swift).
-* Added **SD-JWT Validation and Disclosure Display** after verification.
-* Integrated **SD-JWT VC Verification** into the VC Verifier Library.
-* **Note (⚠️ Warning):** On iOS, signature verification is not yet supported for **mso\_mdoc** and **SD-JWT** formats. For **LDP VC**, only the **RSA key suite** is supported (ECC and ED25519 are not yet supported).
-* Refer to the feature description to know more about this feature
+* Constructed **IETF** **SD-JWT VC Issuance Payloads** in VCI Client Library (Kotlin & Swift).
+* Added **IETF** **SD-JWT  Validation and Disclosure Display** after verification.
+* Integrated **IETF** **SD-JWT  VC Verification** into the VC Verifier Library.
+* Refer to the [**feature description**](../overview/features.md) to know more about this feature
 
 #### **Technical Enhancements**
 
@@ -32,7 +37,7 @@ This release also delivers important **bug fixes** and updates to improve **stab
 
 * **SD-JWT VC**: Support added for **x509 certificate chains** as per [IETF draft section 3.5-3.2.1](https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-10.html?utm_source=chatgpt.com#section-3.5-3.2.1).
 * Improved parsing of JSON payloads in **OVP sharing flows** with multi-language support (including Arabic).
-* Refer to the library **ReadMe** to know more about these enhancements.
+* Refer to the library [**ReadMe**](https://github.com/mosip/vc-verifier?tab=readme-ov-file#vc-verifier) to know more about these enhancements.
 
 #### **Minor Updates to the existing feature**
 
@@ -44,46 +49,40 @@ This release also delivers important **bug fixes** and updates to improve **stab
 
 ### Features
 
-| Type                                                  | Feature / Enhancement                               | Jira Link                                                                              |
-| ----------------------------------------------------- | --------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| Technical addtion  in Library for new feature support | SD-JWT VC Validation                                | [INJIMOB-3412](https://mosip.atlassian.net/browse/INJIMOB-3412?utm_source=chatgpt.com) |
-| Functional addtion in Wallet UI                       | Display SD-JWT Disclosures After Verification       | [INJIMOB-3366](https://mosip.atlassian.net/browse/INJIMOB-3366?utm_source=chatgpt.com) |
-| Technical addtion  in Library for new feature support | SD-JWT VC Verification in VC Verifier Library       | [INJIMOB-3365](https://mosip.atlassian.net/browse/INJIMOB-3365?utm_source=chatgpt.com) |
-| Technical addtion  in Library for new feature support | Construct SD-JWT VC Issuance Payload — Kotlin       | [INJIMOB-3205](https://mosip.atlassian.net/browse/INJIMOB-3205?utm_source=chatgpt.com) |
-| Technical addtion  in Library for new feature support | Construct SD-JWT VC Issuance Payload — Swift        | [INJIMOB-3394](https://mosip.atlassian.net/browse/INJIMOB-3394?utm_source=chatgpt.com) |
-| Technical addtion  in Library for new feature support | OVP sharing payload parsing for Arabic language VCs | [INJIMOB-3367](https://mosip.atlassian.net/browse/INJIMOB-3367?utm_source=chatgpt.com) |
+<table><thead><tr><th>Type</th><th width="363.62890625">Feature / Enhancements/Technical  Upgrades</th><th>Jira Link</th></tr></thead><tbody><tr><td>Technical addtion  in Library for new feature support</td><td>SD-JWT VC Validation</td><td><a href="https://mosip.atlassian.net/browse/INJIMOB-3412?utm_source=chatgpt.com">INJIMOB-3412</a></td></tr><tr><td>Functional addtion in Wallet UI </td><td>Display SD-JWT Disclosures After Verification</td><td><a href="https://mosip.atlassian.net/browse/INJIMOB-3366?utm_source=chatgpt.com">INJIMOB-3366</a></td></tr><tr><td>Technical addtion  in Library for new feature support</td><td>SD-JWT VC Verification in VC Verifier Library</td><td><a href="https://mosip.atlassian.net/browse/INJIMOB-3365?utm_source=chatgpt.com">INJIMOB-3365</a></td></tr><tr><td>Technical addtion  in Library for new feature support</td><td>Construct SD-JWT VC Issuance Payload — Kotlin</td><td><a href="https://mosip.atlassian.net/browse/INJIMOB-3205?utm_source=chatgpt.com">INJIMOB-3205</a></td></tr><tr><td>Technical addtion  in Library for new feature support</td><td>Construct SD-JWT VC Issuance Payload — Swift</td><td><a href="https://mosip.atlassian.net/browse/INJIMOB-3394?utm_source=chatgpt.com">INJIMOB-3394</a></td></tr><tr><td>Technical addtion  in Library for new feature support</td><td>OVP sharing payload parsing for Arabic language VCs</td><td><a href="https://mosip.atlassian.net/browse/INJIMOB-3367?utm_source=chatgpt.com">INJIMOB-3367</a></td></tr></tbody></table>
 
 ### Repositories Released
 
-| Module                    | Version |
-| ------------------------- | ------- |
-| inji-wallet               | 0.19.0  |
-| inji-openid4vp-ios-swift  | 0.5.0   |
-| inji-openid4vp            | 0.5.0   |
-| inji-vci-client           | 0.5.0   |
-| inji-vci-client-ios-swift | 0.5.0   |
-| pixelpass-ios-swift       | 0.6.X   |
+| Module                    | Version                                                                 |
+| ------------------------- | ----------------------------------------------------------------------- |
+| inji-wallet               | [0.19.0](https://github.com/mosip/inji-wallet/tree/v0.19.0)             |
+| inji-vci-client           | [0.5.0](https://github.com/mosip/inji-vci-client/tree/v0.5.0)           |
+| inji-vci-client-ios-swift | [0.5.0](https://github.com/mosip/inji-vci-client-ios-swift/tree/v0.5.0) |
+| vc-verifer                | [1.4.0](https://github.com/mosip/vc-verifier/tree/v1.4.0)               |
 
 ### Compatible Modules
 
-| Module       | Version |
-| ------------ | ------- |
-| mimoto       | 0.19.X  |
-| inji-config  | 0.10.X  |
-| Inji Certify | 0.12.X  |
-| Inji Verify  | 0.14.X  |
-| eSignet      | 1.6.X   |
-| vc-verifier  | 1.4.X   |
+| Module       | Version                                                      |
+| ------------ | ------------------------------------------------------------ |
+| mimoto       | [0.18.1](https://github.com/mosip/mimoto/tree/v0.18.1)       |
+| inji-config  | [0.10.0](https://github.com/mosip/inji-config/tree/v0.10.0)  |
+| Inji Certify | [0.12.0](https://github.com/mosip/inji-certify/tree/v0.12.0) |
+| Inji Verify  | [0.13.1](https://github.com/mosip/inji-verify/tree/v0.13.1)  |
+| eSignet      | [1.6.1](https://github.com/mosip/esignet/tree/v1.6.1)        |
 
 ### Known Issues
 
+Below is the list of known issues. To read in detail, [click here](https://mosip.atlassian.net/jira/software/c/projects/INJIMOB/issues/?jql=project%20%3D%20%22INJIMOB%22%20AND%20type%20%3D%20Bug%20AND%20status%20IN%20%28New%2C%20Assigned%29%20ORDER%20BY%20created%20DESC).
+
 | Jira Issue                                                      | Description                                                       |
 | --------------------------------------------------------------- | ----------------------------------------------------------------- |
-| I[NJIMOB-3526](https://mosip.atlassian.net/browse/INJIMOB-3526) | VC Verifier – SD-JWT without signature does not return errorCode. |
+| [INJIMOB-3526](https://mosip.atlassian.net/browse/INJIMOB-3526) | VC Verifier – SD-JWT without signature does not return errorCode. |
 | [INJIMOB-3525](https://mosip.atlassian.net/browse/INJIMOB-3525) | Enhancement to download nested VCs – nested symbol not proper.    |
 | [INJIMOB-3515](https://mosip.atlassian.net/browse/INJIMOB-3515) | Information popup page is lengthy and needs UI improvement.       |
 
 ### Bug Fixes
+
+Below is the list of bug fixes as part of the [**0.19.0** ](https://mosip.atlassian.net/jira/software/c/projects/INJIMOB/issues/?filter=allissues\&jql=project%20%3D%20%22INJIMOB%22%0AAND%20type%20%3D%20Bug%0AAND%20status%20%3D%20Closed%0AAND%20affectedversion%20%3D%200.19.0%0AAND%20labels%20%3D%20qa-inji_mob_release0190_closed%0AORDER%20BY%20created%20DESC\&selectedIssue=INJIMOB-3512)**release**:
 
 | Jira Issue                                                                             | Description                                                       |
 | -------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
@@ -94,10 +93,15 @@ This release also delivers important **bug fixes** and updates to improve **stab
 | [INJIMOB-2944](https://mosip.atlassian.net/browse/INJIMOB-2944?utm_source=chatgpt.com) | VC not rendered when shared over BLE without internet.            |
 | [INJIMOB-2771](https://mosip.atlassian.net/browse/INJIMOB-2771?utm_source=chatgpt.com) | Intermittent failures in MDL VC download.                         |
 
-### Documentation
+### Release Documentation
 
-* [Feature Documentation](https://docs.inji.io/inji-wallet/inji-mobile/overview/features)
-* [Integration Guides](https://docs.inji.io/inji-wallet/inji-mobile/technical-overview/integration-guide)
-* [User Guide](https://docs.inji.io/inji-wallet/inji-mobile/functional-overview/end-user-guide)
+* [Release Feature Documentation](../overview/features.md)
 * QA Report
-* [API Documentation](https://mosip.stoplight.io/docs/mimoto/k6907m3dzc1gi-mimoto)
+
+### Additional Resources
+
+* [Feature Documentation](https://docs.inji.io/inji-wallet/inji-mobile/overview/features) - Contains detailed explanations of all available features and their usage.
+* [Integration Guides](https://docs.inji.io/inji-wallet/inji-mobile/technical-overview/integration-guide) - Provides step-by-step instructions to integrate Inji Wallet with an external system
+* [End User Guide ](../functional-overview/end-user-guide.md)- Offers end-to-end guidance for end users on setup and daily usage.
+* [API Documentation](https://mosip.stoplight.io/docs/mimoto/k6907m3dzc1gi-mimoto) - Includes comprehensive details of all APIs, endpoints, request/response formats, and examples.
+
