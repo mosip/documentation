@@ -6,7 +6,7 @@ Inji is a digital credentialing stack that provides a way to share tamper-proof,
 
 ## Deployment Architecture of Inji
 
-Links to the deployment architecture diagrams below takes you to respective sections of the this guide and illustrates the high-level deployment architecture for Inji Stack, showing how core components interact within the Kubernetes cluster, including ingress, services, and external integrations.
+Links to the deployment architecture diagrams below takes you to respective sections of this guide and illustrates the high-level deployment architecture for Inji Stack, showing how core components interact within the Kubernetes cluster, including ingress, services, and external integrations.
 
 * [Base Infrastructure](#deployment-diagram)
 * [Inji Certify](#deploying-inji-certify)
@@ -275,7 +275,7 @@ sudo systemctl status wg-quick@wg0
 
 ## Deployment Diagram
 
-<figure><img src="../../.gitbook/assets/inji-base-infrastructure-deployment-diagram.png" alt="Inji Web Deployment Architecture"><figcaption><p><strong>Inji Web Deployment Architecture:</strong></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/inji-base-infrastructure-deployment-diagram.png" alt="Inji Web Deployment Architecture"><figcaption><p><strong></strong></p></figcaption></figure>
 
 ## What do we mean here by Base Infrastructure Setup'?
 
@@ -1160,7 +1160,7 @@ Inji Certify is deployed as **containerized microservices** in your Kubernetes c
 
 ### Deployment Flow
 
-<figure><img src="../../.gitbook/assets/ic-deployment-diagram.png" alt="Inji Web Deployment Architecture"><figcaption><p><strong>Inji Web Deployment Architecture:</strong></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ic-deployment-diagram.png" alt="Inji Web Deployment Architecture"><figcaption><p><strong></strong></p></figcaption></figure>
 
 **Where Does Inji Certify Run?**
 
@@ -1435,7 +1435,7 @@ Inji Web UI and DataShare are deployed as **containerized microservices** in you
 
 **Deployment Flow**
 
-<figure><img src="../../.gitbook/assets/iww-deployment-diagram.png" alt="Inji Web Deployment Architecture"><figcaption><p><strong>Inji Web Deployment Architecture:</strong></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/iww-deployment-diagram.png" alt="Inji Web Deployment Architecture"><figcaption><p><strong></strong></p></figcaption></figure>
 
 
 **Where Do Inji Web UI and DataShare Run?**
@@ -1566,7 +1566,7 @@ Inji Verify is deployed as **containerized microservices** in your Kubernetes cl
 
 ### Deployment Flow
 
-<figure><img src="../../.gitbook/assets/iv-deployment-diagram.png" alt="Inji Web Deployment Architecture"><figcaption><p><strong>Inji Web Deployment Architecture:</strong></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/iv-deployment-diagram.png" alt="Inji Web Deployment Architecture"><figcaption><p><strong></strong></p></figcaption></figure>
 
 **Where Does Inji Verify Run?**
 
