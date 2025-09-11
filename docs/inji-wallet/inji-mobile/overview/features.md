@@ -1,6 +1,22 @@
 # Features
 
-Inji Mobile is an open-source digital wallet designed to enable individuals to receive, store, and present Verifiable Credentials (VCs) securely, both online and offline. Purpose-built to align with global standards like W3C VC, OpenID4VCI, OpenID4VP, SD-JWT, and ISO 18013-5 (mDL), it brings interoperability, user autonomy, and strong cryptographic guarantees to digital identity ecosystems.
+Inji Mobile is an open-source digital wallet designed to enable individuals to receive, store, and present Verifiable Credentials (VCs) securely, both online and offline. Purpose-built to align with global standards like W3C VC, OpenID4VCI, OpenID4VP, IETF SD-JWT, and ISO 18013-5 (mDL), it brings interoperability, user autonomy, and strong cryptographic guarantees to digital identity ecosystems.
+
+#### Multiple Credential Format Support
+
+Inji Wallet is designed for interoperability and flexibility by supporting a wide range of credential formats:
+
+* **W3C Verifiable Credentials (JSON-LD VCs) Data Model 1.1**
+  * Standards-based credential format is widely adopted across ecosystems.
+  * Suitable for general-purpose credential issuance and verification.
+* **ISO 18013-5 (mDL)**
+  * Mobile Driving License and Mobile Document specification.
+  * Supports use cases like identity verification in transport, law enforcement, and service access.
+* **IETF SD-JWT**
+  * **IETF** **SD-JWT Verifiable Credentials**: Enables holders to download and share credentials in IETF **SD-JWT format**. This allows users to share only the necessary attributes while keeping other data private, ensuring **privacy-preserving credential sharing**.
+  * Allows users to share only the required claims with verifiers via the OpenIDVP flow, where these selectively disclosable claims can be shared as per the user's need. _**(Coming Soon in the upcoming release)**_
+
+This multi-format support allows Inji Wallet to work seamlessly across different ecosystems, ensuring **compatibility, security, and user privacy**.
 
 ### Download, Verify, and Store Verifiable Credentials
 
@@ -38,11 +54,39 @@ Inji Mobile Wallet uses robust cryptographic libraries to verify that the VC is:
 
 * Digitally signed by a trusted issuer.
 * Cryptographically valid based on proof type.
-* In addition to traditional VC formats like JSON-LD and mDoc/mDL, I**nji Mobile** now supports **SD-JWT credentials**. This enables privacy-preserving selective disclosure, where users can reveal only the claims required by a verifier while keeping all other claims private.
+*   In addition to traditional VC formats like JSON-LD and mDoc/mDL, I**nji Mobile** now supports Multiple Credential Format Support
+
+    Inji Wallet is designed for interoperability and flexibility by supporting a wide range of credential formats:
+
+    * **W3C Verifiable Credentials (JSON-LD VCs) Data Model 1.1**
+      * Standards-based credential format is widely adopted across ecosystems.
+      * Suitable for general-purpose credential issuance and verification.
+    * **ISO 18013-5 (mDL)**
+      * Mobile Driving License and Mobile Document specification.
+      * Supports use cases like identity verification in transport, law enforcement, and service access.
+    * **IETF SD-JWT**
+      * **IETF** **SD-JWT Verifiable Credentials**: Enables holders to download and share credentials in IETF **SD-JWT format**. This allows users to share only the necessary attributes while keeping other data private, ensuring **privacy-preserving credential sharing**.
+      * Allows users to share only the required claims with verifiers via the OpenIDVP flow, where these selectively disclosable claims can be shared as per the user's need. _**(Coming Soon in the upcoming release)**_
+
+    This multi-format support allows Inji Wallet to work seamlessly across different ecosystems, ensuring **compatibility, security, and user privacy**. Multiple Credential Format Support
+
+    Inji Wallet is designed for interoperability and flexibility by supporting a wide range of credential formats:
+
+    * **W3C Verifiable Credentials (JSON-LD VCs) Data Model 1.1**
+      * Standards-based credential format is widely adopted across ecosystems.
+      * Suitable for general-purpose credential issuance and verification.
+    * **ISO 18013-5 (mDL)**
+      * Mobile Driving License and Mobile Document specification.
+      * Supports use cases like identity verification in transport, law enforcement, and service access.
+    * **IETF SD-JWT**
+      * **IETF** **SD-JWT Verifiable Credentials**: Enables holders to download and share credentials in IETF **SD-JWT format**. This allows users to share only the necessary attributes while keeping other data private, ensuring **privacy-preserving credential sharing**.
+      * Allows users to share only the required claims with verifiers via the OpenIDVP flow, where these selectively disclosable claims can be shared as per the user's need. _**(Coming Soon in the upcoming release)**_
+
+    This multi-format support allows Inji Wallet to work seamlessly across different ecosystems, ensuring **compatibility, security, and user privacy**. IETF **SD-JWT credentials**. This enables privacy-preserving selective disclosure, where users can reveal only the claims required by a verifier while keeping all other claims private.
 
 #### Signature Algorithm Support in Inji Mobile
 
-<table><thead><tr><th width="161.46728515625">Format</th><th width="178.84588623046875">Signature Algorithm</th><th width="170.56036376953125">Status</th><th>Notes</th></tr></thead><tbody><tr><td>W3C JSON-LD</td><td>ED25519 2018</td><td>Supported</td><td>Compact, fast signatures with high security</td></tr><tr><td>mDoc/mDL</td><td>ED25519 2018</td><td>Supported</td><td>Used in mobile document ecosystems</td></tr><tr><td>W3C JSON-LD</td><td>ED25519 2020</td><td>Supported</td><td>Updated key format with enhanced key representation</td></tr><tr><td>mDoc/mDL</td><td>ED25519 2020</td><td>Supported</td><td>Widely used in mobile identity contexts</td></tr><tr><td>W3C JSON-LD</td><td>RS256 (RSA with SHA-256)</td><td>Supported</td><td>Backward compatibility; used in some legacy systems</td></tr><tr><td>mDoc/mDL</td><td>RS256 (RSA with SHA-256)</td><td>Supported</td><td>Applicable for RSA-backed mobile IDs</td></tr><tr><td>W3C JSON-LD</td><td>ECC K1</td><td>Supported</td><td>Common in OpenID ecosystem</td></tr><tr><td>mDoc/mDL</td><td>ECC K1</td><td>Supported</td><td>Used in various driver license implementations</td></tr><tr><td>SD-JWT </td><td>ED25519</td><td>Supported</td><td>For selective disclosure with strong cryptographic guarantees</td></tr><tr><td>SD-JWT</td><td>RS256</td><td>Supported</td><td>For selective disclosure with strong cryptographic guarantees</td></tr><tr><td>SD-JWT </td><td>ECC K1</td><td>Supported</td><td>For selective disclosure with strong cryptographic guarantees</td></tr><tr><td>JSON-LD</td><td>ECC R1</td><td>Planned</td><td>High-security EdDSA variant</td></tr><tr><td>mDoc/mDL</td><td>ECC R1</td><td>Planned</td><td>Emerging support for high-security mobile documents</td></tr><tr><td>SD-JWT</td><td>ECC R1</td><td>Planned</td><td>For selective disclosure with strong cryptographic guarantees</td></tr><tr><td>DIDComm v2 Messaging</td><td>Curve25519 / X25519</td><td>Research</td><td>Enables secure, encrypted VP exchange</td></tr><tr><td>JSON-LD ZKPs (VC-ZKP)</td><td>BBS+</td><td>Research</td><td>For advanced privacy-preserving credentials using Zero-Knowledge Proofs</td></tr></tbody></table>
+<table><thead><tr><th width="161.46728515625">Format</th><th width="178.84588623046875">Signature Algorithm</th><th width="170.56036376953125">Status</th><th>Notes</th></tr></thead><tbody><tr><td>W3C JSON-LD</td><td>ED25519 2018</td><td>Supported</td><td>Compact, fast signatures with high security</td></tr><tr><td>mDoc/mDL</td><td>ED25519 2018</td><td>Supported</td><td>Used in mobile document ecosystems</td></tr><tr><td>W3C JSON-LD</td><td>ED25519 2020</td><td>Supported</td><td>Updated key format with enhanced key representation</td></tr><tr><td>mDoc/mDL</td><td>ED25519 2020</td><td>Supported</td><td>Widely used in mobile identity contexts</td></tr><tr><td>W3C JSON-LD</td><td>RS256 (RSA with SHA-256)</td><td>Supported</td><td>Backward compatibility; used in some legacy systems</td></tr><tr><td>mDoc/mDL</td><td>RS256 (RSA with SHA-256)</td><td>Supported</td><td>Applicable for RSA-backed mobile IDs</td></tr><tr><td>W3C JSON-LD</td><td>ECC K1</td><td>Supported</td><td>Common in OpenID ecosystem</td></tr><tr><td>mDoc/mDL</td><td>ECC K1</td><td>Supported</td><td>Used in various driver license implementations</td></tr><tr><td>IETF SD-JWT</td><td>ED25519</td><td>Supported</td><td>For selective disclosure with strong cryptographic guarantees</td></tr><tr><td>IETF SD-JWT</td><td>RS256</td><td>Supported</td><td>For selective disclosure with strong cryptographic guarantees</td></tr><tr><td>IETF SD-JWT</td><td>ECC K1</td><td>Supported</td><td>For selective disclosure with strong cryptographic guarantees</td></tr><tr><td>JSON-LD</td><td>ECC R1</td><td>Planned</td><td>High-security EdDSA variant</td></tr><tr><td>mDoc/mDL</td><td>ECC R1</td><td>Planned</td><td>Emerging support for high-security mobile documents</td></tr><tr><td>IETF SD-JWT</td><td>ECC R1</td><td>Planned</td><td>For selective disclosure with strong cryptographic guarantees</td></tr><tr><td>DIDComm v2 Messaging</td><td>Curve25519 / X25519</td><td>Research</td><td>Enables secure, encrypted VP exchange</td></tr><tr><td>JSON-LD ZKPs (VC-ZKP)</td><td>BBS+</td><td>Research</td><td>For advanced privacy-preserving credentials using Zero-Knowledge Proofs</td></tr></tbody></table>
 
 ### Sharing Verifiable Credentials
 
@@ -90,7 +134,7 @@ Designed for ease of use with intuitive UI components:
 ### Planned Features
 
 * Revocation Status
-* SD-JWT Selective Disclosure
+* IETF SD-JWT Selective Disclosure
 * Injii Mobile Wallet Login
 * Presentation during Issuance
 
