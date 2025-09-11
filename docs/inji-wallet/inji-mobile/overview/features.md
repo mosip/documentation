@@ -134,7 +134,7 @@ Designed for ease of use with intuitive UI components:
 ### Planned Features
 
 * Revocation Status
-* IETF SD-JWT Selective Disclosure
+* Sharing of IETF SD-JWT Selective Disclosure via OpenIDVP
 * Injii Mobile Wallet Login
 * Presentation during Issuance
 
