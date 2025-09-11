@@ -126,6 +126,8 @@
     * [Deployment Architecture](inji-wallet/inji-web/build-and-deploy/iww-deployment-architecture.md)
     * [Deployment Guide](inji-wallet/inji-web/build-and-deploy/iww-deployment-guide.md)
   * [Releases](inji-wallet/inji-web/inji-web/README.md)
+    * [Version 0.14.0](inji-wallet/inji-web/inji-web/version-0.14.0/README.md)
+      * [Test Report](inji-wallet/inji-web/inji-web/version-0.14.0/test-report.md)
     * [Version 0.13.2](inji-wallet/inji-web/inji-web/version-0.13.2.md)
     * [Version 0.13.1](inji-wallet/inji-web/inji-web/version-0.13.1/README.md)
       * [Test Report](inji-wallet/inji-web/inji-web/version-0.13.1/test-report.md)
@@ -144,8 +146,8 @@
     * [Version 0.8.1](inji-wallet/inji-web/inji-web/version-0.8.1.md)
     * [Version 0.8.0](inji-wallet/inji-web/inji-web/version-0.8.0/README.md)
       * [Test Report](inji-wallet/inji-web/inji-web/version-0.8.0/test-report.md)
-    * [Version 0.14.0](inji-wallet/inji-web/inji-web/version-0.14.0/README.md)
-      * [Test Report](inji-wallet/inji-web/inji-web/version-0.14.0/test-report.md)
+    * [Version 0.14.0](inji-wallet/inji-web/inji-web/version-0.14.0-1/README.md)
+      * [Test Report](inji-wallet/inji-web/inji-web/version-0.14.0-1/test-report.md)
 
 ## INJI CERTIFY
 
