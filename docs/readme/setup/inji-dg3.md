@@ -6,7 +6,7 @@ Inji is a digital credentialing stack that provides a way to share tamper-proof,
 
 ## Deployment Architecture of Inji
 
-The diagram below illustrates the high-level deployment architecture for Inji Stack, showing how core components interact within the Kubernetes cluster, including ingress, services, and external integrations.
+Links to the deployment architecture diagrams below takes you to respective sections of the this guide and illustrates the high-level deployment architecture for Inji Stack, showing how core components interact within the Kubernetes cluster, including ingress, services, and external integrations.
 
 * [Base Infrastructure](#deployment-diagram)
 * [Inji Certify](#deploying-inji-certify)
