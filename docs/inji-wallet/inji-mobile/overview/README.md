@@ -7,7 +7,7 @@ icon: house
 > Inji Mobile isn't just a wallet – it’s a gateway to digital trust, empowering every individual to carry their identity with dignity, privacy, and control.\
 > — Inspired by the vision of open, inclusive digital identity ecosystems.
 
-**Inji Mobile** is an open-source mobile wallet built to securely **receive, store, manage, and share Verifiable Credentials (VCs)**, whether online or offline. Designed in line with global standards such as **W3C VC Data Model**, **OpenID4VCI**, **OpenID4VP**, **ISO 18013-5 (mDL)**, and **IETF SD-JWT**, Inji Mobile enables individuals to carry digital identity, documents, certificates e.t.c with full privacy, consent, and control.
+**Inji Mobile** is an open-source mobile wallet built to securely **receive, store, manage, and share Verifiable Credentials (VCs)**, whether online or offline. Designed in line with global standards such as **W3C VC Data Model**, **OpenID4VCI**, **OpenID4VP**, **ISO 18013-5 (mDL)**, and **IETF SD-JWT**, Inji Mobile enables individuals to carry digital identity, documents, certificates, etc., with full privacy, consent, and control.
 
 Whether you're a citizen accessing government services, a developer building digital identity applications, or a verifier validating credentials, Inji Mobile offers a trusted, standards-compliant foundation for secure and privacy-preserving interactions. As a **reference implementation**, Inji Mobile is both a ready-to-use wallet and a modular solution; its SDKs, libraries, and components can be used independently or bundled into custom apps, depending on the adopter’s needs and specific use cases.
 
@@ -26,11 +26,27 @@ Whether you're a citizen accessing government services, a developer building dig
 
 ### Capabilities Snapshot
 
+#### Multiple Credential Format Support
+
+Inji Wallet is designed for interoperability and flexibility by supporting a wide range of credential formats:
+
+* **W3C Verifiable Credentials (JSON-LD VCs) Data Model 1.1**
+  * Standards-based credential format is widely adopted across ecosystems.
+  * Suitable for general-purpose credential issuance and verification.
+* **ISO 18013-5 (mDL)**
+  * Mobile Driving License and Mobile Document specification.
+  * Supports use cases like identity verification in transport, law enforcement, and service access.
+* **IETF SD-JWT**
+  * **IETF** **SD-JWT Verifiable Credentials**: Enables holders to download and share credentials in IETF **SD-JWT format**. This allows users to share only the necessary attributes while keeping other data private, ensuring **privacy-preserving credential sharing**.
+  * Allows users to share only the required claims with verifiers via the OpenIDVP flow, where these selectively disclosable claims can be shared as per the user's need. _**(Coming Soon in the upcoming release)**_
+
+This multi-format support allows Inji Wallet to work seamlessly across different ecosystems, ensuring **compatibility, security, and user privacy**.
+
 #### Secure Storage of VCs
 
 * Digitally signed credentials from trusted issuers
 * Encrypted and integrity-verified local storage.
-* Supports multiple credential formats including W3C JSON-LD VCs, ISO mDL/mDoc, and SD-JWTs.
+* Supports multiple credential formats including W3C JSON-LD VCs, ISO mDL/mDoc, and **IETF SD-JWT.**
 
 #### Seamless Credential Sharing
 
@@ -59,7 +75,7 @@ Whether you're a citizen accessing government services, a developer building dig
 1. **Credential Download**\
    Users can obtain VCs using their unique identifiers (UIN/VID or other methods), authenticate via OTP, and securely store them.
 2. **Credential Storage**\
-   All credentials are stored encrypted, verified using the issuer’s digital signature, and integrity is validated via a unique **HASH**. In addition to standard VC formats, Inji Mobile supports JSON-LD, ISO mDL/mDoc and SD-JWT credentials, ensuring the privacy-preserving selective disclosure of claims during verification.
+   All credentials are stored encrypted, verified using the issuer’s digital signature, and integrity is validated via a unique **HASH**. In addition to standard VC formats, Inji Mobile supports JSON-LD, ISO mDL/mDoc and IETF SD-JWT credentials, ensuring the privacy-preserving selective disclosure of claims during verification.
 3. **Sharing Credentials**\
    Users can share credentials:
    * Offline using BLE
@@ -73,7 +89,7 @@ Whether you're a citizen accessing government services, a developer building dig
 ### Sneak Peek: Upcoming Features
 
 * Support for **W3C Data Model 2.0** and **SVG Templates**
-* **SD-JWT b**ased Selective Disclosure via **OpenID4VP**
+* **IETF** **SD-JWT-based** Selective Disclosure via **OpenID4VP**
 * Support for **JWT-format credentials**
 * **Presentation During Issuance**
 * **Wallet Login with IdPs** (OpenID4VP-based WLA)
@@ -89,7 +105,7 @@ Whether you're a citizen accessing government services, a developer building dig
 
 2. Refer to [**Inji Certify APIs**](https://mosip.stoplight.io/docs/inji-certify/25f435617408e-inji-certify)
 
-* Fetch issuer well-known metadata
+* Fetch issuer's well-known metadata
 * Download VCs (OpenID4VCI flow)
 
 3. Additionally, it utilises [**eSignet APIs**](https://mosip.stoplight.io/docs/identity-provider/zevye0dm733qx-link-transaction-endpoint-v2) to enable seamless online login for users.
