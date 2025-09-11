@@ -18,7 +18,7 @@ This is the first question anyone could ask and the answer is No! If you have th
 
 ## What to expect from this guide and how is this guide organized?
 
-This guide is structured to provide a comprehensive approach for deploying the Inji stack (Inji Certify, Mimoto, Inji Web & Datashare and Unji Verify).
+This guide is structured to provide a comprehensive approach for deploying the Inji stack (Inji Certify, Mimoto, Inji Web & Datashare and Inji Verify).
 Not only the Inji Stack deployment but it has taken a approach to cover everything from Wireguard, to Base Infrastructure setup, Core Infra setup and configurations to Inji Stack deployment.
 
 ### Guide Structure and Navigation
@@ -72,8 +72,8 @@ The 'Key Infrastructure Notes' here helps you have a quick understanding of what
     * [Optional] **Observation cluster** - This cluster is part of the observation plane and assists with administrative tasks. By design, this is kept independent from the actual cluster as a good security practice and to ensure clear segregation of roles and responsibilities. As a best practice, this cluster or its services should be internal and should never be exposed to the external world.
     * Rancher is used for managing the Inji cluster.
     * Keycloak in this cluster is used to manage user access and rights for the observation plane.
-      * It is recommended to configure log monitoring and network monitoring in this cluster.
-      * In case you have an internal container registry, then it should run here.
+    * It is recommended to configure log monitoring and network monitoring in this cluster.
+    * In case you have an internal container registry, then it should run here.
   * **Inji cluster** - This cluster runs all the Inji components and certain third-party components like the kafka, keycloak etc.
   * Inji External Components
   * Inji Services
@@ -109,15 +109,31 @@ You should have these tools installed on your local machine from where you will 
   * helm
   * rke (rke version: v1.3.10)
   * istioctl (istioctl version: v1.15.0)
-*   Helm repos:
+* Helm repos:
 
     ```sh
     helm repo add bitnami https://charts.bitnami.com/bitnami
     helm repo add mosip https://mosip.github.io/mosip-helm
 
     ```
+*   Create a directory as mosip in your PC and:
 
-### Wireguard on PC
+    * clone k8’s infra repo with tag : 1.2.0.1 (**whichever is the latest version**) inside mosip directory.
+      `git clone https://github.com/mosip/k8s-infra -b v1.2.0.1`
+    * clone mosip-infra with tag : 1.2.0.1 (**whichever is the latest version**) inside mosip directory.
+      `git clone https://github.com/mosip/mosip-infra -b v1.2.0.1`
+    * Set below mentioned variables in bashrc
+
+    ```
+    export MOSIP_ROOT=<location of mosip directory>
+    export K8_ROOT=$MOSIP_ROOT/k8s-infra
+    export INFRA_ROOT=$MOSIP_ROOT/mosip-infra
+    ```
+
+    `source .bashrc`
+
+    > Note: Above mentioned environment variables will be used throughout the installation to move between one directory to other to run install scripts.
+
 
 Refer to the [Setup Wireguard Client on your PC](#setup-wireguard-client-on-your-pc) section for the instructions.
 
@@ -232,40 +248,29 @@ ansible-playbook -i hosts.ini docker.yaml
 * `cd /home/ubuntu/wireguard/config`
 * assign one of the PR for yourself and use the same from the PC to connect to the server.
 
+    * create `assigned.txt` file to assign the keep track of peer files allocated and update everytime some peer is allocated to someone.
+
+      ```
+      peer1 :   peername
+      peer2 :   xyz
+      ```
+
+        * use `ls` cmd to see the list of peers.
+        * get inside your selected peer directory, and add mentioned changes in `peer.conf`:
+            * `cd peer1`
+            * `nano peer1.conf`
+                * Delete the DNS IP.
+                * Update the allowed IP's to subnets CIDR ip . e.g. 10.10.20.0/23
+            * Share the updated `peer.conf` with respective peer to connect to wireguard server from Personel PC.
+* add `peer.conf` in your PC’s `/etc/wireguard` directory as `wg0.conf`.
+* start the wireguard client and check the status:
+
 ```
-* create `assigned.txt` file to assign the keep track of peer files allocated and update everytime some peer is allocated to someone.
-```
-
-````
-```sh
-peer1 :   peername
-peer2 :   xyz
-```
-
-* use `ls` cmd to see the list of peers.
-* get inside your selected peer directory, and add mentioned changes in `peer.conf`:
-  * `cd peer1`
-  *   `nano peer1.conf`
-
-    * Delete the DNS IP.
-    * Update the allowed IP's to subnets CIDR ip . e.g. 10.10.20.0/23
-
-    > Note:
-    >
-    > * CIDR Range will be shared by the Infra provider.
-    > * Make sure all the nodes are covered in the provided CIDR range. (nginx server, K8 cluster nodes for observation as well as mosip).
-  * Share the updated `peer.conf` with respective peer to connect to wireguard server from Personel PC.
-````
-
-* Add `peer.conf` in your PC’s `/etc/wireguard` directory as `wg0.conf`.
-* Start the wireguard client and check the status:
-
-```sh
 sudo systemctl start wg-quick@wg0
 sudo systemctl status wg-quick@wg0
 ```
 
-* Once connected to wireguard, you should be now able to access and login using private IP’s.
+* Once connected to wireguard, you should be now able to login using private IP’s.
 
 
 # Base Infrastructure Setup
@@ -355,11 +360,7 @@ Below is a sample mapping of domain names to their respective IP addresses and p
 * **postgres.sandbox.xyz.net**  
   * Maps to: Private IP of Nginx server (MOSIP cluster)  
   * Purpose: Points to Postgres server, connect via port forwarding over Wireguard.
-
-* **onboarder.sandbox.xyz.net**  
-  * Maps to: Private IP of Nginx server (MOSIP cluster)  
-  * Purpose: Access MOSIP partner onboarding reports over Wireguard.
-
+  
 * **injiweb.sandbox.xyz.net**  
   * Maps to: Public IP of Nginx server (MOSIP cluster)  
   * Purpose: Public access to Inji Web portal.
@@ -384,7 +385,7 @@ See the [Tools and Utilities](#tools-and-utilities) section for common prerequis
 
 * Find the **kubernetes infrastructure repository** [here](https://github.com/mosip/k8s-infra/tree/v1.2.0.1) which contains the scripts to install and configure Kubernetes cluster with required monitoring, logging and alerting tools.
   * After reviewing the `k8s-infra` repository and ensuring that you also have all the required tools and utilities installed on your local machine, the next step is to provision and configure your Kubernetes cluster nodes (VMs or servers) according to the hardware and network requirements specified under 'Prerequisites' above. Once your nodes are ready and accessible, proceed to run the provided Ansible playbooks and scripts from the `k8s-infra` repository to set up the Kubernetes cluster, networking, and essential infrastructure components.
-*   Run `env-check-setup.yaml` to check if cluster nodes are fine and doesn't have known issues in it.
+* Run `env-check-setup.yaml` to check if cluster nodes are fine and doesn't have known issues in it.
 
     * `cd $K8_ROOT/rancher/on-prem`
     * Create copy of `hosts.ini.sample` as `hosts.ini` and update the required details for MOSIP k8 cluster nodes.
@@ -411,19 +412,19 @@ See the [Tools and Utilities](#tools-and-utilities) section for common prerequis
   * `cd $K8_ROOT/mosip/on-prem`
   * create copy of `hosts.ini.sample` as `hosts.ini` and update the required details for wireguard VM.
     * `cp hosts.ini.sample hosts.ini`
-  *   Update `vpc_ip` variable in `ports.yaml` with `vpc CIDR ip` to allow access only from machines inside same vpc.
+  * Update `vpc_ip` variable in `ports.yaml` with `vpc CIDR ip` to allow access only from machines inside same vpc.
 
       > Note:
       >
       > * CIDR Range will be shared by the Infra provider.
       > * Make sure all the nodes are covered in the provided CIDR range. (nginx server, K8 cluster nodes for observation as well as mosip).
-  * execute `ports.yml` to enable ports on VM level using ufw:`ansible-playbook -i hosts.ini ports.yaml`
-  *   Disable swap in cluster nodes. (Ignore if swap is already disabled)
-
-      * `ansible-playbook -i hosts.ini swap.yaml`
-
-      > Caution: Always verify swap status with `swapon --show` before running the playbook to avoid unnecessary operations.
-  * execute `docker.yml` to install docker and add user to docker group:`ansible-playbook -i hosts.ini docker.yaml`
+  * execute `ports.yml` to enable ports on VM level using ufw:
+    * `ansible-playbook -i hosts.ini ports.yaml`
+  * Disable swap in cluster nodes. (Ignore if swap is already disabled)
+    * `ansible-playbook -i hosts.ini swap.yaml`
+    > Caution: Always verify swap status with `swapon --show` before running the playbook to avoid unnecessary operations.
+  * execute `docker.yml` to install docker and add user to docker group:
+    * `ansible-playbook -i hosts.ini docker.yaml`
 * Creating RKE Cluster Configuration file
   * `rke config`
   *   Command will prompt for nodal details related to cluster, provide inputs w.r.t below mentioned points:
@@ -457,7 +458,7 @@ See the [Tools and Utilities](#tools-and-utilities) section for common prerequis
       `cluster_name: sandbox-name`
       ```
   * For production deplopyments edit the `cluster.yml`, according to this [RKE Cluster Hardening Guide](https://github.com/mosip/k8s-infra/blob/v1.2.0.1-B1/docs/rke-cluster-hardening.md).
-*   Setup up the cluster:
+* Setup up the cluster:
 
     * Once `cluster.yml` is ready, you can bring up the kubernetes cluster using simple command.
       *   This command assumes the `cluster.yml` file is in the same directory as where you are running the command.
@@ -479,8 +480,10 @@ See the [Tools and Utilities](#tools-and-utilities) section for common prerequis
           cp kube_config_cluster.yml $HOME/.kube/<cluster_name>_config
           chmod 400 $HOME/.kube/<cluster_name>_config
           ```
-    * To access the cluster using kubeconfig filr use any one of the below method:
-    * `cp $HOME/.kube/<cluster_name>_config $HOME/.kube/config`**Alternatively**
+    * To access the cluster using kubeconfig file use any one of the below method:
+    * `cp $HOME/.kube/<cluster_name>_config $HOME/.kube/config`
+  
+  **Alternatively**
 
     ```
     * `export KUBECONFIG="$HOME/.kube/<cluster_name>_config`
@@ -520,7 +523,7 @@ Multiple storage classes options are available for onprem K8's cluster. In this 
 * Move to nfs directory in your personel computer.
 
 ```sh
-cd $K8_ROOT/mosip/nfs
+cd $K8_ROOT/nfs
 ```
 
 * Create a copy of hosts.ini.sample as hosts.ini.
@@ -572,7 +575,7 @@ git clone https://github.com/mosip/k8s-infra -b v1.2.0.1
 * Move to the nfs directory:
 
 ```sh
-cd /home/ubuntu/k8s-infra/mosip/nfs/
+cd /home/ubuntu/k8s-infra/nfs/
 
 ```
 
@@ -588,7 +591,7 @@ sudo ./install-nfs-server.sh
 * Switch to your personel computer and excute below mentioned commands:
 
 ```sh
-cd $K8_ROOT/mosip/nfs/ <!-- mosip or inji -->
+cd $K8_ROOT/nfs/ <!-- mosip or inji -->
 ```
 
 ```sh
@@ -1362,8 +1365,15 @@ flowchart LR
 * Artifactory Installation
 * Redis Installation
 
+**Step 2: Clone and Navigate to Deployment Scripts**
 
-**Step 2: Install Redis (If Not Already Installed)**
+```bash
+# On your local machine (connected to K8s cluster via kubectl)
+git clone https://github.com/mosip/mimoto.git
+cd mimoto/deploy
+```
+
+**Step 3: Install Redis (If Not Already Installed)**
 
 To install Redis, run:
 
@@ -1372,7 +1382,7 @@ cd deploy/redis
 ./install.sh
 ```
 
-**Step 3: Initialize Database**
+**Step 4: Initialize Database**
 
 Update the values file for PostgreSQL initialization as needed, then run:
 
@@ -1381,7 +1391,7 @@ cd ../../db_scripts
 ./init_db.sh
 ```
 
-**Step 4: Install Partner Onboarder**
+**Step 5: Install Partner Onboarder**
 
 To install the Partner Onboarder module:
 
@@ -1399,7 +1409,7 @@ Once the job completes, log in to your S3 or NFS storage and verify the reports.
 If you are running the Onboarder in a separate INJI cluster, update the `extraEnvVars` section in `values.yaml` accordingly.
 {% endhint %}
 
-**Step 5: Install Mimoto**
+**Step 6: Install Mimoto**
 
 Before installing Mimoto, ensure that the database host and port are correctly configured in the `values.yaml` file.
 
@@ -1416,7 +1426,7 @@ During the execution of the `install.sh` script, you will be prompted to specify
   This will enable an init-container with an `emptyDir` volume, which will download the server's self-signed SSL certificate and mount it to the Java keystore (`cacerts`) within the container.\
   This is useful for deployments using self-signed SSL certificates.
 
-**Step 5: Onboarding a New Issuer for VCI**
+**Step 6: Onboarding a New Issuer for VCI**
 
 To onboard a new issuer for VCI:
 
