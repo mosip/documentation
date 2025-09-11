@@ -29,7 +29,7 @@ Refer to the library [**ReadMe**](https://github.com/mosip/inji-wallet?tab=readm
 * Constructed **IETF** **SD-JWT VC Issuance Payloads** in VCI Client Library (Kotlin & Swift).
 * Added **IETF** **SD-JWT  Validation and Disclosure Display** after verification.
 * Integrated **IETF** **SD-JWT  VC Verification** into the VC Verifier Library.
-* Refer to the [**feature description**](../overview/features.md) to know more about this feature
+* Refer to the [**feature description**](../../overview/features.md) to know more about this feature
 
 #### **Technical Enhancements**
 
@@ -95,13 +95,13 @@ Below is the list of bug fixes as part of the [**0.19.0** ](https://mosip.atlass
 
 ### Release Documentation
 
-* [Release Feature Documentation](../overview/features.md)
+* [Release Feature Documentation](../../overview/features.md)
 * QA Report
 
 ### Additional Resources
 
 * [Feature Documentation](https://docs.inji.io/inji-wallet/inji-mobile/overview/features) - Contains detailed explanations of all available features and their usage.
 * [Integration Guides](https://docs.inji.io/inji-wallet/inji-mobile/technical-overview/integration-guide) - Provides step-by-step instructions to integrate Inji Wallet with an external system
-* [End User Guide ](../functional-overview/end-user-guide.md)- Offers end-to-end guidance for end users on setup and daily usage.
+* [End User Guide ](../../functional-overview/end-user-guide.md)- Offers end-to-end guidance for end users on setup and daily usage.
 * [API Documentation](https://mosip.stoplight.io/docs/mimoto/k6907m3dzc1gi-mimoto) - Includes comprehensive details of all APIs, endpoints, request/response formats, and examples.
 

@@ -10,7 +10,7 @@ Name: Inji Mobile Wallet 0.19.0
 
 Date: 8th September, 2025
 
-[Release Notes](version-0.19.0.md)
+[Release Notes](version-0.19.0/)
 
 ## Version: 0.18.0
 
