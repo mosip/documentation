@@ -2,18 +2,7 @@
 
 ## Overview
 
-[Inji](https://docs.inji.io/) is a digital credentialing stack that enables users to securely download, store, share, and verify credentials. These credentials are cryptographically signed and issued by trusted issuers, and can be safely stored in a digital wallet on the user’s device for easy and controlled sharing when needed. Refer [here](https://docs.inji.io/) for a detailed product overview
-
-
-
-Links to the deployment architecture diagrams below takes you to respective sections of this guide and illustrates the high-level deployment architecture for Inji Stack, showing how core components interact within the Kubernetes cluster, including ingress, services, and external integrations.
-
-* [Base Infrastructure](#deployment-diagram)
-* [Inji Certify](#deploying-inji-certify)
-* [Inji web & DataShare](#deploying-inji-web-ui-and-datashare)
-* [Inji Verify](#deploying-inji-verify)
-
-## Getting Started
+[Inji](https://docs.inji.io/) is a digital credentialing stack that enables users to securely download, store, share, and verify credentials. These credentials are cryptographically signed and issued by trusted issuers, and can be safely stored in a digital wallet on the user’s device for easy and controlled sharing when needed. Refer [here](https://docs.inji.io/) for a detailed product overview.
 
 ### Do I need to read through the entire guide to be able to deploy Inji?
 This is the first question you could ask and the answer is No! If you have the Infrastructure ready and you just want to deploy the Inji stack you can directly jump to the [Inji Stack Deployment](#inji-stack-deployment) section.
@@ -22,7 +11,7 @@ This is the first question you could ask and the answer is No! If you have the I
 ### What to expect from this guide and how is this guide organized?
 
 This guide is structured to provide a comprehensive approach for deploying the Inji stack (Inji Certify, Mimoto, Inji Web and Inji Verify).
-Not only has the Inji Stack deployment taken an approach to cover everything from Wireguard, to Base Infrastructure setup, Core Infra setup and configurations to Inji Stack deployment.
+Not only the Inji Stack, this deployment guide has taken an approach to cover everything from Wireguard to Base Infrastructure setup, Core Infra setup to configurations and most finally the Inji Stack deployment.
 
 #### Guide Structure and Navigation
 
@@ -46,7 +35,7 @@ The scenarios listed below are only a few examples. Inji Stack can support many 
 | Full Stack Deployment (without eSignet / own Auth Server) | Certify, Web Wallet, Verify, Mimoto | Countries using their own authentication servers             
 | Module-Specific Deployment (with eSignet) | Selected modules based on requirement           | Certify + Verify: Issuance & verification focus              |
 | Module-Specific Deployment (without eSignet) | Selected modules based on requirement           | Web Wallet + Mobile Wallet: Credential holding/presentation  |
-| Hybrid Deployment                   | Some modules on-premise, some on cloud        | Countries with regulatory/data residency constraints, for exampl,e issuer to be on-prem while the inji wallet is deployed on cloud       |
+| Hybrid Deployment                   | Some modules on-premise, some on cloud        | Countries with regulatory/data residency constraints, for example issuer to be on-prem while the inji wallet is deployed on cloud       |
 | Phased Rollout Deployment           | Gradual deployment of modules/regions         | Pilot projects or regional rollouts                           |
 
 ### Basic Skill-sets Required
@@ -300,12 +289,14 @@ sudo systemctl status wg-quick@wg0
 
 ## Base Infrastructure Setup
 
-
+<!--
 ## Deployment Diagram
 
 <figure><img src="../../.gitbook/assets/inji-base-infrastructure-deployment-diagram.png" alt="Inji Web Deployment Architecture"><figcaption><p><strong></strong></p></figcaption></figure>
 
-## What do we mean here by Base Infrastructure Setup'?
+-->
+
+## What do we mean here by Base Infrastructure Setup?
 
 "Base Infrastructure Setup" refers to preparing all foundational resources and configurations needed before deploying the Inji stack. This includes provisioning servers/VMs, configuring networks and firewalls, setting up SSL certificates, installing Kubernetes clusters and required tools (Docker, kubectl, Helm, etc.), establishing secure access (e.g., Wireguard VPN), and deploying essential services like NGINX, storage, monitoring, and logging. It ensures the environment is ready for Inji stack installation.
 
@@ -411,7 +402,7 @@ See the [Tools and Utilities](#tools-and-utilities) section for common prerequis
 
 ### Setting Up Kubernetes Cluster
 
-> **Note:** For detailed VM provisioning steps and hardware/network prerequisites, see the [Prerequisites](#prerequisites---base-infrastructure) above for VM - Hardware specification and more.
+> **Note:** For detailed VM provisioning steps and hardware/network prerequisites, see the [Prerequisites](#prerequisites-for-base-infrastructure-setup) above for VM - Hardware specification and more.
 
 * Find the **kubernetes infrastructure repository** [here](https://github.com/mosip/k8s-infra/tree/v1.2.0.1) which contains the scripts to install and configure Kubernetes cluster with required monitoring, logging and alerting tools.
   * After reviewing the `k8s-infra` repository and ensuring that you also have all the required tools and utilities installed on your local machine, the next step is to provision and configure your Kubernetes cluster nodes (VMs or servers) according to the hardware and network requirements specified under 'Prerequisites' above. Once your nodes are ready and accessible, proceed to run the provided Ansible playbooks and scripts from the `k8s-infra` repository to set up the Kubernetes cluster, networking, and essential infrastructure components.
@@ -444,10 +435,10 @@ See the [Tools and Utilities](#tools-and-utilities) section for common prerequis
     * `cp hosts.ini.sample hosts.ini`
   * Update `vpc_ip` variable in `ports.yaml` with `vpc CIDR ip` to allow access only from machines inside same vpc.
 
-      > Note:
-      >
-      > * CIDR Range will be shared by the Infra provider.
-      > * Make sure all the nodes are covered in the provided CIDR range. (nginx server, K8 cluster nodes for observation as well as mosip).
+    > Note:
+    >
+    > * CIDR Range will be shared by the Infra provider.
+    > * Make sure all the nodes are covered in the provided CIDR range. (nginx server, K8 cluster nodes for observation as well as mosip).
   * execute `ports.yml` to enable ports on VM level using ufw:
     * `ansible-playbook -i hosts.ini ports.yaml`
   * Disable swap in cluster nodes. (Ignore if swap is already disabled)
@@ -1187,9 +1178,7 @@ Inji Certify is deployed as **containerized microservices** in your Kubernetes c
 #### Deployment Architecture for Inji Certify
 
 
-<figure><img src="../../.gitbook/assets/ic-deployment-diagram.png" alt="Inji Web Deployment Architecture"></figure>
-
-<figure><img src="../../.gitbook/assets/ic-deployment-diagram.png" alt="Inji Web Deployment Architecture"><figcaption><p><strong></strong></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ic-deployment-diagram.png" alt="Inji Certify Deployment Architecture"></figure>
 
 
 **Where Will it Run?**
@@ -1518,7 +1507,9 @@ For more details, refer to the official documentation or the relevant section in
 
 If deployment fails, check:
 
-1. **Cluster Connectivity**: `kubectl cluster-info`
+1. **Cluster Connectivity**: `kubectl cluster-info`  
+  - This command checks if your local `kubectl` is properly configured and can communicate with the Kubernetes cluster.  
+  - It displays information about the cluster's master and services, confirming that your connection is active and functional.
 2. **Prerequisites**: Ensure config-server, postgres, redis are running
 3. **Resources**: Verify cluster has sufficient CPU/memory
 4. **Network**: Ensure ingress and DNS are properly configured
@@ -1541,14 +1532,7 @@ Inji Web UI and dataShare are deployed as **containerized microservices** in you
 <figure><img src="../../.gitbook/assets/iww-deployment-diagram.png" alt="Inji Web Deployment Architecture"></figure>
 
 
-
 **Where Will It Run?**
-
-<figure><img src="../../.gitbook/assets/iww-deployment-diagram.png" alt="Inji Web Deployment Architecture"><figcaption><p><strong></strong></p></figcaption></figure>
-
-
-**Where Do Inji Web UI and DataShare Run?**
-
 
 * **Target Environment**: Your main Kubernetes cluster
 * **Deployment Method**: Helm charts that pull Docker images from container registries
@@ -1599,9 +1583,9 @@ cd inji-web/deploy
 * Review and update the `values.yaml` file for your environment (domain names, DB connection, object store endpoints, etc.).
 *   Ensure the `active_profile_env` parameter in the config map of the `config-server-share` is set to:
 
-    ```
-    default,inji-default,standalone
-    ```
+  ```
+  default,inji-default,standalone
+  ```
 
 **Step 6: Deploy DataShare (if required)**
 
@@ -1685,6 +1669,8 @@ cd injiweb
 If deployment fails, check:
 
 1. **Cluster Connectivity**: `kubectl cluster-info`
+  - This command checks if your local `kubectl` is properly configured and can communicate with the Kubernetes cluster.  
+  - It displays information about the cluster's master and services, confirming that your connection is active and functional.
 2. **Prerequisites**: Ensure config-server, postgres, redis are running
 3. **Resources**: Verify cluster has sufficient CPU/memory
 4. **Network**: Ensure ingress and DNS are properly configured
@@ -1704,9 +1690,7 @@ Inji Verify is deployed as **containerized microservices** in your Kubernetes cl
 
 #### Deployment Architecture for Inji Verify
 
-<figure><img src="../../.gitbook/assets/iv-deployment-diagram.png" alt="Inji Web Deployment Architecture"></figure>
-
-<figure><img src="../../.gitbook/assets/iv-deployment-diagram.png" alt="Inji Web Deployment Architecture"><figcaption><p><strong></strong></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/iv-deployment-diagram.png" alt="Inji Verify Deployment Architecture"></figure>
 
 
 **Where Will It Run??**
@@ -1845,13 +1829,14 @@ curl -k https://injiverify.sandbox.xyz.net/health
    - Ability to restart services using `./restart-all.sh`.
    - Ability to delete services using `./delete-all.sh`.
 
-**Note:** Screenshots for each success criteria step will be added shortly to provide a visual reference.
 
 ### Troubleshooting
 
 If deployment fails, check:
 
 1. **Cluster Connectivity**: `kubectl cluster-info`
+  * This command checks if your local `kubectl` is properly configured and can communicate with the Kubernetes cluster.
+  * It displays information about the cluster's master and services, confirming that your connection is active and functional.
 2. **Prerequisites**: Ensure config-server, postgres, redis are running
 3. **Resources**: Verify cluster has sufficient CPU/memory
 4. **Network**: Ensure ingress and DNS are properly configured
