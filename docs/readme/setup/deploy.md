@@ -1,5 +1,3 @@
-# Deploy
-
 # Inji Deployment Guide
 
 ## Overview
@@ -7,7 +5,7 @@
 [Inji](https://docs.inji.io/) is a digital credentialing stack that enables users to securely download, store, share, and verify credentials. These credentials are cryptographically signed and issued by trusted issuers, and can be safely stored in a digital wallet on the user’s device for easy and controlled sharing when needed. Refer [here](https://docs.inji.io/) for a detailed product overview.
 
 ### Do I need to read through the entire guide to be able to deploy Inji?
-This is the first question you could ask and the answer is No! If you have the Infrastructure ready and you just want to deploy the Inji stack you can directly jump to the [Inji Stack Deployment](inji-dg3.md#inji-stack-deployment) section.
+This is the first question you could ask and the answer is No! If you have the Infrastructure ready and you just want to deploy the Inji stack you can directly jump to the [Inji Stack Deployment](#inji-stack-deployment) section.
 
 
 ### What to expect from this guide and how is this guide organized?
@@ -65,11 +63,11 @@ However in case you want to evangelize Inji in your organization and want to hav
 
 Links to the deployment architecture diagrams below take you to respective sections of this guide and illustrate the high-level deployment architecture for Inji Stack, showing how core components interact within the Kubernetes cluster, including ingress, services, and external integrations.
 
-- [Inji Certify](inji-dg3.md#deploying-inji-certify)
+- [Inji Certify](#deploying-inji-certify)
 - Inji Wallet
-  - [Inji Web Wallet](inji-dg3.md#deploying-inji-web-ui-and-datashare)
-  - [Mimoto(backend for Wallet)](inji-dg3.md#deploying-mimoto)
-- [Inji Verify](inji-dg3.md#deploying-inji-verify)
+  - [Inji Web Wallet](#deploying-inji-web-ui-and-datashare)
+  - [Mimoto(backend for Wallet)](#deploying-mimoto)
+- [Inji Verify](#deploying-inji-verify)
 
 ### Typical Deployment Order
 
@@ -151,7 +149,7 @@ You should have these tools installed on your local machine from where you will 
 
     > Note: Above mentioned environment variables will be used throughout the installation to move between one directory to other to run install scripts.
 
-* Wireguard Client - Refer to the [Setup Wireguard Client on your PC](inji-dg3.md#setup-wireguard-client-on-your-pc) section for the instructions.
+* Wireguard Client - Refer to the [Setup Wireguard Client on your PC](#setup-wireguard-client-on-your-pc) section for the instructions.
 
 
 ### Setting Up Wireguard
@@ -400,11 +398,11 @@ Below is a sample mapping of domain names to their respective IP addresses and p
 
 
 #### PC Requirements
-See the [Tools and Utilities](inji-dg3.md#tools-and-utilities) section for common prerequisites required for all deployments.
+See the [Tools and Utilities](#tools-and-utilities) section for common prerequisites required for all deployments.
 
 ### Setting Up Kubernetes Cluster
 
-> **Note:** For detailed VM provisioning steps and hardware/network prerequisites, see the [Prerequisites](inji-dg3.md#prerequisites-for-base-infrastructure-setup) above for VM - Hardware specification and more.
+> **Note:** For detailed VM provisioning steps and hardware/network prerequisites, see the [Prerequisites](#prerequisites-for-base-infrastructure-setup) above for VM - Hardware specification and more.
 
 * Find the **kubernetes infrastructure repository** [here](https://github.com/mosip/k8s-infra/tree/v1.2.0.1) which contains the scripts to install and configure Kubernetes cluster with required monitoring, logging and alerting tools.
   * After reviewing the `k8s-infra` repository and ensuring that you also have all the required tools and utilities installed on your local machine, the next step is to provision and configure your Kubernetes cluster nodes (VMs or servers) according to the hardware and network requirements specified under 'Prerequisites' above. Once your nodes are ready and accessible, proceed to run the provided Ansible playbooks and scripts from the `k8s-infra` repository to set up the Kubernetes cluster, networking, and essential infrastructure components.
@@ -1161,11 +1159,11 @@ fi
 Once **Prerequisites**, **Base Infrastructure**, and the **Core Infrastructure Setup and Configuration** are complete, now you can proceed with the deployment of the Inji stack components.
 
 For detailed deployment steps, architecture, and module-level instructions, refer to the following:
-- [Inji Certify](inji-dg3.md#deploying-inji-certify)
+- [Inji Certify](#deploying-inji-certify)
 - Inji Wallet
-  - [Inji Web Wallet](inji-dg3.md#deploying-inji-web-ui-and-datashare)
-  - [Mimoto(backend for Wallet)](inji-dg3.md#deploying-mimoto)
-- [Inji Verify](inji-dg3.md#deploying-inji-verify)
+  - [Inji Web Wallet](#deploying-inji-web-ui-and-datashare)
+  - [Mimoto(backend for Wallet)](#deploying-mimoto)
+- [Inji Verify](#deploying-inji-verify)
 
 ### Deploying Inji Certify
 
@@ -1200,15 +1198,15 @@ Inji Certify is deployed as **containerized microservices** in your Kubernetes c
 
 **Step 1: Pre-Deployment Checklist**
 
-Before deploying Inji Certify, ensure the following infrastructure components and configurations are in place as mentioned [above](inji-dg3.md#prerequisites)
+Before deploying Inji Certify, ensure the following infrastructure components and configurations are in place as mentioned [above](#prerequisites)
 
-* [Base Infrastructure](inji-dg3.md#base-infrastructure-setup)
-* [Core Infrastructure](inji-dg3.md#core-infrastructure-components-setup)
-* [Inji Stack ConfigMap](inji-dg3.md#inji-stack-config-for-inji-k8s-env)
+* [Base Infrastructure](#base-infrastructure-setup)
+* [Core Infrastructure](#core-infrastructure-components-setup)
+* [Inji Stack ConfigMap](#inji-stack-config-for-inji-k8s-env)
 * [Postgres Installation](https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/external/postgres)
   * Note: Before running the Postgres install script, update the `POSTGRES_HOST` value in `install.sh` with the correct PostgreSQL host.
 * [Config Server Secerts](https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/mosip/conf-secrets)
-* [Config Server](inji-dg3.md#config-server-installation)
+* [Config Server](#config-server-installation)
 * [Artifactory](https://github.com/mosip/artifactory-ref-impl/tree/v1.3.0-beta.2/deploy)
 * Redis Installation
 
@@ -1350,14 +1348,14 @@ Mimoto is deployed as **containerized microservices** in your Kubernetes cluster
 
 **Step 1: Pre-Deployment Checklist**
 
-Before deploying the mimoto (backend for Inji Wallet), ensure the following infrastructure components and configurations are in place as mentioned [above](inji-dg3.md#prerequisites)
+Before deploying the mimoto (backend for Inji Wallet), ensure the following infrastructure components and configurations are in place as mentioned [above](#prerequisites)
 
-* [Base Infrastructure](inji-dg3.md#base-infrastructure-setup)
-* [Core Infrastructure](inji-dg3.md#core-infrastructure-components-setup)
+* [Base Infrastructure](#base-infrastructure-setup)
+* [Core Infrastructure](#core-infrastructure-components-setup)
 * [Postgres Installation](https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/external/postgres)
   * Note: Before running the Postgres install script, update the POSTGRES_HOST value in install.sh with the correct PostgreSQL host.
-* [Config Server Secrets](inji-dg3.md#config-server-secrets)
-* [Config Server Installation](inji-dg3.md#config-server-installation)
+* [Config Server Secrets](#config-server-secrets)
+* [Config Server Installation](#config-server-installation)
 * **Artifactory Installation**
   * For installation instructions, refer to the [artifactory installation guide](https://github.com/mosip/artifactory-ref-impl/tree/v0.10.0-INJI/deploy).
   * Artifactory is used to store, manage, and distribute build artifacts (such as Docker images, Helm charts, binaries, and other deployment packages) required by the Inji stack and related services. Installing Artifactory ensures that all deployment dependencies are securely managed and easily accessible during automated deployments and upgrades.
@@ -1553,14 +1551,14 @@ Inji Web UI and dataShare are deployed as **containerized microservices** in you
 
 **Step 1: Pre-Deployment Checklist**
 
-Before deploying Inji Web Wallet, ensure the following infrastructure components and configurations are in place as mentioned [above](inji-dg3.md#prerequisites)
+Before deploying Inji Web Wallet, ensure the following infrastructure components and configurations are in place as mentioned [above](#prerequisites)
 
-* [Base Infrastructure](inji-dg3.md#base-infrastructure-setup)
-* [Core Infrastructure](inji-dg3.md#core-infrastructure-components-setup)
-* [inji-stack-config ConfigMap](inji-dg3.md#inji-stack-config-for-inji-k8s-env)
-* [Config Server Secrets](inji-dg3.md#config-server-secrets)
+* [Base Infrastructure](#base-infrastructure-setup)
+* [Core Infrastructure](#core-infrastructure-components-setup)
+* [inji-stack-config ConfigMap](#inji-stack-config-for-inji-k8s-env)
+* [Config Server Secrets](#config-server-secrets)
 * [Postgres Installation](https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/external/postgres)
-* [Config Server Installation](inji-dg3.md#config-server-installation)
+* [Config Server Installation](#config-server-installation)
 * [Object store installation](https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/external/object-store)
   * Note: Before running the minio install script, update the EXTERNAL_HOST value in install.sh with the correct minio host.
 
@@ -1712,11 +1710,11 @@ Inji Verify is deployed as **containerized microservices** in your Kubernetes cl
 
 **Step 1: Pre-Deployment Checklist**
 
-Before deploying Inji Verify, ensure the following infrastructure components and configurations are in place as mentioned [above](inji-dg3.md#prerequisites)
+Before deploying Inji Verify, ensure the following infrastructure components and configurations are in place as mentioned [above](#prerequisites)
 
-* [Base Infrastructure](inji-dg3.md#base-infrastructure-setup)
-* [Core Infrastructure](inji-dg3.md#core-infrastructure-components-setup)
-* [inji-stack-config ConfigMap](inji-dg3.md#inji-stack-config-for-inji-k8s-env)
+* [Base Infrastructure](#base-infrastructure-setup)
+* [Core Infrastructure](#core-infrastructure-components-setup)
+* [inji-stack-config ConfigMap](#inji-stack-config-for-inji-k8s-env)
 * [Postgres Installation](https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/external/postgres)
   * Note: Before running the Postgres install script, update the POSTGRES_HOST value in install.sh with the correct PostgreSQL host.
 
