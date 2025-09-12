@@ -1,6 +1,6 @@
 # Inji Deployment Guide
 
-## What is Inji?
+## Overview
 
 Inji is a digital credentialing stack that provides a way to share tamper-proof, instantly verifiable data which is cryptographically signed by a trusted issuer, and users can store them securely on their devices or browsers and share them when needed.
 
@@ -848,7 +848,7 @@ Kibana --> Menu (on top left) --> Dashboard --> Select the dashboard.
 
 ## Core Infrastructure Components Setup
 
-This section covers the installation and configuration of essential infrastructure components required for the Inji stack, including configmaps, databases, object storage, secrets management, configuration server, and artifactory.
+This section covers the installationFkesy and configuration of essential infrastructure components required for the Inji stack, including configmaps, databases, object storage, secrets management, configuration server, and artifactory.
 
 ### Inji Stack Configmap: For inji K8's env
 
