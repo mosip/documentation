@@ -1161,8 +1161,8 @@ Once **Prerequisites**, **Base Infrastructure**, and the **Core Infrastructure S
 For detailed deployment steps, architecture, and module-level instructions, refer to the following:
 - [Inji Certify](#deploying-inji-certify)
 - Inji Wallet
-  - [Inji Web Wallet](#deploying-inji-web-ui-and-datashare)
-  - [Mimoto(backend for Wallet)](#deploying-mimoto)
+  - [Inji Web Wallet](#deploying-inji-web-wallet)
+  - [Mimoto(backend for Wallet)](#deploying-mimoto-backend-for-inji-wallet)
 - [Inji Verify](#deploying-inji-verify)
 
 ### Deploying Inji Certify
@@ -1348,7 +1348,7 @@ Mimoto is deployed as **containerized microservices** in your Kubernetes cluster
 
 **Step 1: Pre-Deployment Checklist**
 
-Before deploying the mimoto (backend for Inji Wallet), ensure the following infrastructure components and configurations are in place as mentioned [above](#prerequisites)
+Before deploying the mimoto (backend for Inji Wallet), ensure the following infrastructure components and configurations are in place as mentioned below:
 
 * [Base Infrastructure](#base-infrastructure-setup)
 * [Core Infrastructure](#core-infrastructure-components-setup)
@@ -1551,7 +1551,7 @@ Inji Web UI and dataShare are deployed as **containerized microservices** in you
 
 **Step 1: Pre-Deployment Checklist**
 
-Before deploying Inji Web Wallet, ensure the following infrastructure components and configurations are in place as mentioned [above](#prerequisites)
+Before deploying Inji Web Wallet, ensure the following infrastructure components and configurations are in place as mentioned below:
 
 * [Base Infrastructure](#base-infrastructure-setup)
 * [Core Infrastructure](#core-infrastructure-components-setup)
@@ -1641,27 +1641,27 @@ cd injiweb
 
 **Your deployment is successful if**:
 
-### 1. Pods are Running and Healthy
+1. Pods are Running and Healthy
 - All pods in the `injiweb` namespace show **STATUS = Running** and **READY** counts match.  
 - `kubectl get pods -n injiweb` shows no `CrashLoopBackOff` or `Error`.  
 
-### 2. Services are Registered and Reachable
+2. Services are Registered and Reachable
 - `kubectl get services -n injiweb` lists expected **Inji Web** and **DataShare** services.  
 - Each service has a valid `ClusterIP` or `LoadBalancer`.  
 
-### 3. Configuration is Applied Correctly
+3. Configuration is Applied Correctly
 - Ensure the `active_profile_env` parameter in the config map of the `config-server-share` is set to: default,inji-default, standalone
 - No config fetch errors appear in Inji Web pod logs.
 
-## 4. Ingress/DNS is Working
+4. Ingress/DNS is Working
 - DNS entries (e.g., `injiweb.sandbox.xyz.net`) point correctly to your ingress controller.  
 - Running `curl k https://injiweb.sandbox.xyz.net/health` returns HTTP 200 with a healthy response.
 
-## 5. DataShare Module (if deployed) is Accessible
+5. DataShare Module (if deployed) is Accessible
 - DataShare pods are up and healthy.
 - DataShare endpoints are reachable and registered in Kubernetes.
 
-## 6. No Critical Errors in Logs
+6. No Critical Errors in Logs
 - Reviewing logs (`kubectl logs <pod-name> -n injiweb`) shows no failures during startup or runtime.
 
 #### Troubleshooting
