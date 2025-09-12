@@ -12,7 +12,7 @@
 
 ## Major Highlights/ Features <a href="#major-highlights-features" id="major-highlights-features"></a>
 
-Support for eSignet v1.6.2 - Enable test automation to accommodate the blocker change of mandating jti in auth request. through this fix, automation supports v1.6.2
+Support for eSignet v1.6.2 – Test automation has been updated to accommodate the blocker change requiring `jti` in the authentication request. With this fix, the automation now fully supports [eSignet v1.6.2](https://docs.esignet.io/roadmap-and-releases/versions/v1.6.2).
 
 ## Bug Fixes <a href="#feature" id="feature"></a>
 
@@ -38,17 +38,18 @@ Below is the list of known issues related to the release v0.12.0. To access all 
 
 The following table outlines the tested and certified compatibility of \<release version> with other modules.
 
-| **Module**           | **Version (with tag links)** |
-| -------------------- | ---------------------------- |
-| eSignet              | v1.6.2                       |
-| IDA                  | v1.2.1.0                     |
-| Sunbird C            | v2.0.0                       |
-| mock-identity-system | v0.10.1                      |
-| commons              | v1.3.0-beta.1                |
-| mimoto               | 0.15.0 (for docker compose)  |
-| Inji-web             | 0.11.0 (for docker compose)  |
-| Inji-web             | 0.13.1                       |
-| mimoto               | 0.18.1                       |
+| **Module**            | **Version (with tag links)**                                                    |
+| --------------------- | ------------------------------------------------------------------------------- |
+| eSignet               | [v1.6.2](https://github.com/mosip/esignet/tree/v1.6.2)                          |
+| IDA                   | [v1.2.1.0](https://github.com/mosip/id-authentication/tree/v1.2.1.0)            |
+| Sunbird C             | [v2.0.0](https://github.com/Sunbird-RC/sunbird-rc-core/releases/tag/v2.0.0-rc3) |
+| esignet-mock-services | [v0.11.2](https://github.com/mosip/esignet-mock-services/tree/v0.11.2)          |
+| commons               | [v1.3.0-beta](https://github.com/mosip/commons/tree/v1.3.0-beta.3).3            |
+| key-manager           | [v1.3.0-beta.4](https://github.com/mosip/keymanager/tree/v1.3.0-beta.4)         |
+| mimoto                | [0.15.0](https://github.com/mosip/mimoto/tree/v0.15.0) (for docker compose)     |
+| Inji-web              | [0.11.0](https://github.com/mosip/inji-web/tree/v0.11.0) (for docker compose)   |
+| Inji-web              | [0.13.1](https://github.com/mosip/inji-web/tree/v0.13.1)                        |
+| mimoto                | [0.18.1](https://github.com/mosip/mimoto/tree/v0.18.1)                          |
 
 ## Documentation <a href="#documentation" id="documentation"></a>
 
