@@ -65,8 +65,8 @@ Links to the deployment architecture diagrams below take you to respective secti
 
 - [Inji Certify](#deploying-inji-certify)
 - Inji Wallet
-  - [Inji Web Wallet](#deploying-inji-web-ui-and-datashare)
-  - [Mimoto(backend for Wallet)](#deploying-mimoto)
+  - [Inji Web Wallet](#deploying-inji-web-wallet)
+  - [Mimoto(backend for Wallet)](#deploying-mimoto-backend-for-inji-wallet)
 - [Inji Verify](#deploying-inji-verify)
 
 ### Typical Deployment Order
