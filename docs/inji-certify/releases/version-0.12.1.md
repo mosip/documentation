@@ -4,11 +4,9 @@
 
 **Release Type:** Developer Release
 
-**Release Date:** Coming Soon
+**Release Date:** 11th September, 2025
 
-&#x20;
-
-## Overview <a href="#overview" id="overview"></a>
+## Overview
 
 **Inji Certify v0.12.0**, brings enhancements in automation of testing to support latest eSignet release v1.6.2
 
@@ -32,9 +30,9 @@ Below is the list of known issues related to the release v0.12.0. To access all 
 
 ## Repository Released <a href="#repository-released" id="repository-released"></a>
 
-| **Repositories** | **Tags Released** |
-| ---------------- | ----------------- |
-| inji-certify     | v0.12.1           |
+| **Repositories** | **Tags Released**                                             |
+| ---------------- | ------------------------------------------------------------- |
+| inji-certify     | [v0.12.1](https://github.com/mosip/inji-certify/tree/v0.12.1) |
 
 ## Compatible Modules <a href="#compatible-modules" id="compatible-modules"></a>
 
