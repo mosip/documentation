@@ -342,7 +342,7 @@ Before deploying any Inji Stack module, ensure that the following common prerequ
 
 * All the VM's should be able to communicate with each other.
 * Need stable Intra network connectivity between these VM's.
-* All the VM's should have stable internet connectivity for docker image download (in case of local setup ensure to have a locally accessible docker registry).
+* All the VM's should have stable internet connectivity for docker image download (in case of local setup ensure to have a locally accessible docker registry)..
 {% endhint %}
 
 
