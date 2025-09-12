@@ -20,7 +20,7 @@
   * [Announcement](readme/announcement.md)
   * [Setup](readme/setup/README.md)
     * [Infrastructure Requirements](readme/setup/infrastructure-requirements.md)
-    * [Deploy](readme/setup/deploy.md)
+    * [Inji Deployment Guide](readme/setup/deploy.md)
   * [Contact Us](readme/contact-us.md)
 
 ## Inji Wallet
