@@ -4,11 +4,9 @@
 
 **Release Type:** Developer Release
 
-**Release Date:** Coming Soon
+**Release Date:** 11th September, 2025
 
-&#x20;
-
-## Overview <a href="#overview" id="overview"></a>
+## Overview
 
 **Inji Certify v0.12.0**, brings enhancements in automation of testing to support latest eSignet release v1.6.2
 
