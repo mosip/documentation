@@ -2,26 +2,20 @@
 
 ## Overview
 
-[Inji](https://docs.inji.io/) is a digital credentialing stack that enables users to securely download, store, share, and verify credentials. These credentials are cryptographically signed and issued by trusted issuers, and can be safely stored in a digital wallet on the user’s device for easy and controlled sharing when needed. Refer [here](https://docs.inji.io/) for a detailed product overview.
+[Inji](../../README.md) is a digital credentialing stack that enables users to securely download, store, share, and verify credentials.
+This guide is structured to provide a comprehensive approach for deploying the Inji stack (Inji Certify, Mimoto, Inji Web and Inji Verify).
+Not only the Inji Stack, this deployment guide has taken an approach to cover everything from deploying Wireguard to Base Infrastructure setup, Core Infra setup to configurations and finally the Inji Stack deployment.
 
 ### Do I need to read through the entire guide to be able to deploy Inji?
 This is the first question you could ask and the answer is No! If you have the Infrastructure ready and you just want to deploy the Inji stack you can directly jump to the [Inji Stack Deployment](#inji-stack-deployment) section.
 
+### How is this guide structured and organized?
 
-### What to expect from this guide and how is this guide organized?
-
-This guide is structured to provide a comprehensive approach for deploying the Inji stack (Inji Certify, Mimoto, Inji Web and Inji Verify).
-Not only the Inji Stack, this deployment guide has taken an approach to cover everything from Wireguard to Base Infrastructure setup, Core Infra setup to configurations and most finally the Inji Stack deployment.
-
-#### Guide Structure and Navigation
-
-This guide is organized into clear, actionable sections:
-
-1. **Overview**: Introduction to Inji, its modules, architecture, deployment flow, and key requirements.
-2. **Prerequisites**: Details on infrastructure, hardware/software requirements, and initial setup.
-3. **Base Infrastructure Setup**: Steps to provision Kubernetes, NGINX, networking, and optional observation clusters.
-4. **Core Infrastructure Configuration**: Installation and configuration of databases, object storage, secrets, config server, and artifactory.
-5. **Inji Stack Deployment**: Step-by-step instructions to deploy Inji modules (Certify, Mimoto, Web UI, Verify) with configuration guidance.
+1. [**Prerequisites**](#prerequisites-for-overall-deployment): Details on infrastructure, hardware/software requirements, and initial setup.
+2. [**Base Infrastructure Setup**](#base-infrastructure-setup): Steps to provision Kubernetes, NGINX, networking, and optional observation clusters.
+3. [**Core Infrastructure Configuration**](#core-infrastructure-components-setup): Installation and configuration of databases, object storage, secrets, config server, and artifactory.
+4. [**Inji Stack Deployment**](#inji-stack-deployment): Step-by-step instructions to deploy Inji modules (Certify, Mimoto, Web UI, Verify) with configuration guidance.
+5. [**Contribution and Community**](#contribution-and-community): Ways you can contribute code to this application or reach out if you run into issues while trying out the application.
 
 Each section provides direct steps and references to external resources for a streamlined deployment experience.
 
@@ -94,6 +88,7 @@ The section helps you to have a quick understanding of what you should expect wh
   * **Inji cluster** - This cluster runs all the Inji components and certain third-party components like the kafka, keycloak etc.
   * Inji External Components
   * Inji Services
+
 
 ## Prerequisites for Overall Deployment
 
@@ -1844,7 +1839,7 @@ If deployment fails, check:
 
 You can also refer to the [ReadMe](https://github.com/mosip/inji-verify/blob/develop/deploy/README.md) file for deployment steps given in individual module repositories.
 
-## Contribution & Community
+## Contribution and Community
 
 We welcome contributions from everyone!
 

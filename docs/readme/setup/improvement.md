@@ -1,5 +1,14 @@
 ## Comparison of old-deployment guide and new one; with respect to the Technical Writing practices and principles.
 
+
+@here POs, Some revision and upgrade to how Documentation can walk parallel to Product Development
+
+Let's make a system to identify the most pressing issues with documentation and the most urgent ones. 
+Monday Document Update Call- Please let me record the issues you come across during the week.
+Thursday - I will audit documentation each week to identify issues, This will be in addition to issues shared by you on Monday
+You now have access to 'Gitbook', You can chip in with your contribution which you already are doing with Release Documentation split certain modules between @Varaniya and @Pragya 
+
+
 After reviewing both documents, here are the key improvements made in new guide following technical writing best practices:
 
 ### 1. Document Structure & Organization
