@@ -72,3 +72,45 @@ This ensures a secure and flexible way of sharing credentials across different d
 {% endhint %}
 
 For more detailed information on each step and the underlying systems, click [**here**](../functional-overview/workflow.md)**.**
+
+
+
+<!-- 
+
+## Additional Technical Specifications and Compatibility
+
+19. **Cross-Platform Compatibility**:
+    1. Compatible with a wide range of devices and operating systems, including desktops, mobile devices, and laptops.
+    2. A mobile responsive version with back camera capability is now available.
+    3. Responsive design ensures optimal performance and usability across different screen sizes and resolutions.
+    4. Tablet responsiveness tested on specific devices; still under development.
+    5. Accessible from anywhere with an internet connection for convenient on-the-go verification.
+
+20. **QR Code Version Compatibility and Technical Requirements**:
+
+    **Scan Feature QR Code Compatibility**:
+    * QR code versions supported for the scan feature range from v22 and below with consistent performance.
+    * Versions from v23 to v27 show inconsistent results due to varying data bytes based on the use case for verifiable credentials embedded into the QR code.
+    * Versions above v27 are not supported for the scan feature. If you have a QR code version above v27, please use the upload feature to upload the document or QR code for verification.
+
+    **Camera Resolution Requirement**:
+    * The device's front, back, or web camera resolution must exceed 12 megapixels.
+    * Resolutions below this range result in inconsistent QR code scanning.
+    * Cameras should be used in well-lit environments without filters, ensuring proper alignment for optimal scanning.
+
+    **Upload Feature QR Code Compatibility**:
+    * QR code versions supported for the upload feature range from v32 and below.
+
+21. **Enhanced Security and Data Protection**:
+    * Inji Verify employs encryption techniques to protect sensitive information and prevent tampering.
+    * Advanced algorithms and cryptographic methods ensure that QR codes have not been tampered with.
+    * Utilizes [**pixel pass library v0.5.0**](https://www.npmjs.com/package/@mosip/pixelpass/v/0.5.0) for secure QR code processing.
+    * Real-time verification provides instant feedback on credential validity, giving users confidence in authenticity.
+
+22. **Future SDK Development Roadmap**:
+
+{% hint style="info" %}
+**Note:** The **Inji Verify SDK- Scan / Upload component** to enable developers to easily embed VC verification capabilities into their verifier (relying party) applications will be coming out in future releases! Stay tuned!
+{% endhint %}
+
+-->

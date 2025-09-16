@@ -1,6 +1,16 @@
 # Inji Stack deployment guide
 
 
+## Doc Detective
+This docs now contains the comprensive instructions to deploy inji
+However It is quite lengthy
+Also, We don't want to bother about the Infra Part
+I also want to implement Doc-Detective
+How should I implement Doc-Detective, say for eample' Inji Web Deployment section which first confirmas that the prerequisite infra is ready with VMs, DNS and more and now Inji Web can be deployed
+
+
+
+
 ## Pulling content from repo
 
 * The following instruction refers to the repository readme where it has described the process
