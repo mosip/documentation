@@ -46,7 +46,7 @@ Verify UI--)Verify UI: 12. Render VC and its statuses accordingly
 
 ### Flow Diagram: OpenID4VP Same Device Flow 
 
-[Image]
+<figure><img src="../../.gitbook/assets/iv-workflow-ovp-for-same-device.png" alt="" width="500"><figcaption><p></p></figcaption></figure>
 
 #### Same Device Flow Overview
 **Description of the Flow**
@@ -69,7 +69,10 @@ The flow here utilizes the simple redirection to pass the Authorization request 
 
 * **response_mode**: This parameter tells the wallet that how it should send the vp_token to the verifier application
 
-[Table]
+| Response Mode | Description |
+|---------------|-------------|
+| **direct_post** (Default) | Response is sent to the verifier using an HTTP POST request. The response body is encoded with content type `application/x-www-form-urlencoded`. The response is sent to a specific resource (`response_uri`) controlled by the verifier. The verifier fetches the response (`vp_token`) from this resource using a unique transaction ID. The verifier provides the resource URI to the wallet via `response_uri` in the Authorization request. |
+| **fragment** | Response is encoded in the fragment part of the `redirect_uri` and sent to the verifier when redirecting the end-user back to the verifier. |
 
 * **presentation_definition** (Required)- It is an JSON object which contains the info about the credentials that are being requested by the verifier. 
 * **presentation_definition_uri** - to reduce the size of the request or QR code sometimes the verifier stores the presentation_definition Json object at some resource endpoint and sends that resource uri to wallet and wallet call this endpoint and gets the presentation definition object.
