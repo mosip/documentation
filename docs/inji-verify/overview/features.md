@@ -71,14 +71,6 @@ This ensures a secure and flexible way of sharing credentials across different d
     \*verificationMethod is `https://` and in combination with proofValue or jws
 {% endhint %}
 
-For more detailed information on each step and the underlying systems, click [**here**](../functional-overview/workflow.md)**.**
-
-
-
-<!-- 
-
-## Additional Technical Specifications and Compatibility
-
 19. **Cross-Platform Compatibility**:
     1. Compatible with a wide range of devices and operating systems, including desktops, mobile devices, and laptops.
     2. A mobile responsive version with back camera capability is now available.
@@ -113,4 +105,5 @@ For more detailed information on each step and the underlying systems, click [**
 **Note:** The **Inji Verify SDK- Scan / Upload component** to enable developers to easily embed VC verification capabilities into their verifier (relying party) applications will be coming out in future releases! Stay tuned!
 {% endhint %}
 
--->
+
+For more detailed information on each step and the underlying systems, click [**here**](../functional-overview/workflow.md)**.**
