@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Functional Overview
 
 **Inji Verify** is a powerful tool for validating and verifying credentials through QR codes. Users can scan QR codes using smartphones or computers, retrieving credential information quickly. Advanced algorithms and the pixel pass library ensure QR code authenticity, providing real-time verification and instant feedback.
