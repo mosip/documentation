@@ -41,8 +41,8 @@ This ensures a secure and flexible way of sharing credentials across different d
 
 10. **Ease of Integrating Modular SDK Components with Verifier Applications**:
    * Inji Verify provides modular SDK components that empower verifier (relying party) applications to seamlessly integrate VC verification workflows—without relying on the full Inji Verify reference application.
-   * Scan/Upload Component – Enables QR code scanning or file upload for verifying credentials.
-   * OpenID4VP VP Verification Component – Supports Verifiable Presentation flows aligned with the OpenID4VP specification.
+   * **Scan/Upload Component** – Enables QR code scanning or file upload for verifying credentials.
+   * **OpenID4VP VP Verification Component** – Supports Verifiable Presentation: Cross Device and Same Device flows aligned with the OpenID4VP specification
    * These plug-and-play components are:
      * Developed using TypeScript and Optimized for React environments
      * Published as independent NPM modules to ensure flexibility and reusability
