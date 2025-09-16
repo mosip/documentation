@@ -10,11 +10,12 @@ This is the first question you could ask and the answer is No! If you have the I
 
 ### How is this guide structured and organized?
 
-1. [**Prerequisites**](deploy.md#prerequisites-for-overall-deployment): Details on infrastructure, hardware/software requirements, and initial setup.
-2. [**Base Infrastructure Setup**](deploy.md#base-infrastructure-setup): Steps to provision Kubernetes, NGINX, networking, and optional observation clusters.
-3. [**Core Infrastructure Configuration**](deploy.md#core-infrastructure-components-setup): Installation and configuration of databases, object storage, secrets, config server, and artifactory.
-4. [**Inji Stack Deployment**](deploy.md#inji-stack-deployment): Step-by-step instructions to deploy Inji modules (Certify, Mimoto, Web UI, Verify) with configuration guidance.
-5. [**Contribution and Community**](deploy.md#contribution-and-community): Ways you can contribute code to this application or reach out if you run into issues while trying out the application.
+1. [**Introduction**](deploy.md#introduction): Overview of Inji Stack, deployment scenarios, skill sets required, architecture, and considerations for on-premise deployments.
+2. [**Prerequisites**](deploy.md#prerequisites-for-overall-deployment): Details on infrastructure, hardware/software requirements, and initial setup.
+3. [**Base Infrastructure Setup**](deploy.md#base-infrastructure-setup): Steps to provision Kubernetes, NGINX, networking, and optional observation clusters.
+4. [**Core Infrastructure Configuration**](deploy.md#core-infrastructure-components-setup): Installation and configuration of databases, object storage, secrets, config server, and artifactory.
+5. [**Inji Stack Deployment**](deploy.md#inji-stack-deployment): Step-by-step instructions to deploy Inji modules (Certify, Mimoto, Web UI, Verify) with configuration guidance.
+6. [**Contribution and Community**](deploy.md#contribution-and-community): Ways you can contribute code to this application or reach out if you run into issues while trying out the application.
 
 Each section provides direct steps and references to external resources for a streamlined deployment experience.
 
@@ -1283,6 +1284,9 @@ If deployment fails, check:
 
 You can also refer to the [ReadMe](https://github.com/mosip/inji-certify/blob/master/deploy/README.md) file for deployment steps given in individual module repositories.
 
+**Need help or have questions?**  
+In case you encounter any issues or have queries while using or deploying the application, please post them in the [MOSIP Community](https://community.mosip.io/). The community and maintainers are available to assist you.
+
 ### Deploying Mimoto backend for Inji Wallet
 
 This section provides a structured, step-by-step guide to deploy Mimoto, which serves as the backend for Inji Mobile Wallet and Inji Web Wallet. Follow these instructions to ensure a successful and reproducible deployment.
@@ -1472,6 +1476,10 @@ If deployment fails, check:
 
 You can also refer to the [ReadMe](https://github.com/mosip/mimoto/blob/develop/deploy/README.md) file for deployment steps given in individual module repositories.
 
+**Need help or have questions?**  
+In case you encounter any issues or have queries while using or deploying the application, please post them in the [MOSIP Community](https://community.mosip.io/). The community and maintainers are available to assist you.
+
+
 ### Deploying Inji Web Wallet
 
 This section explains how to deploy the Inji Web Wallet, which comes with a **reference** web UI and DataShare. This web UI serves as a sample implementation to help integrators and countries build their own customized user interface.
@@ -1637,6 +1645,10 @@ If deployment fails, check:
 
 You can also refer to the [ReadMe](https://github.com/mosip/inji-web/blob/develop/deploy/inji-web/README.md) file for deployment steps given in individual module repositories.
 
+**Need help or have questions?**  
+In case you encounter any issues or have queries while using or deploying the application, please post them in the [MOSIP Community](https://community.mosip.io/). The community and maintainers are available to assist you.
+
+
 ### Deploying Inji Verify
 
 This section provides step-by-step instructions to install Inji Verify. Please follow these guidelines to make sure a successful setup in your environment.
@@ -1796,6 +1808,7 @@ If deployment fails, check:
 5. **Logs**: Check pod logs for errors: `kubectl logs <pod-name> -n inji-verify`
 
 You can also refer to the [ReadMe](https://github.com/mosip/inji-verify/blob/develop/deploy/README.md) file for deployment steps given in individual module repositories.
+
 
 ## Contribution and Community
 
