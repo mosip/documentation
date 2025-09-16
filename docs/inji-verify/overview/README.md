@@ -60,11 +60,11 @@ Inji Verify offers a comprehensive set of features tailored to meet the verifica
   * **Secure Authorization Flow**: Upon scanning, Inji Verify initiates an authorization request, retrieving and verifying the credential securely from Inji Web.
   * **Cross-Device Sharing**: Supports cross-device sharing, reducing QR code complexity and enabling seamless verification.
   * **Enhanced User Experience**: Simplifies the verification process, ensuring efficient and secure credential validation.
-* **Online Verification using OpenID4VP Flow**: Inji Verify supports both Cross-Device and Same-Device flows for Verifiable Presentations:
-  * Cross-Device Flow: The verifier generates an Authorization Request as a QR code. The user scans it with a mobile wallet. The wallet responds with a vp_token containing the Verifiable Presentation.
-  * Same-Device Flow: The verifier initiates an Authorization Request directly on the same mobile device.
+* **VP Verification using OpenID4VP Flow**: Inji Verify supports both Cross-Device and Same-Device flows for Verifiable Presentations:
+  * **Cross-Device Flow**: The verifier generates an Authorization Request as a QR code. The user scans it with a mobile wallet. The wallet responds with a `vp_token` containing the Verifiable Presentation.
+  * **Same-Device Flow**: The verifier initiates an Authorization Request directly on the same mobile device.
     * Request can invoke the wallet via deep link where Wallet processes the request, authenticates the user, and collects consent.
-    * Wallet returns the signed Verifiable Presentation as a vp_token via redirect.
+    * Wallet returns the signed Verifiable Presentation as a `vp_token` via redirect.
     * Inji Verify validates and displays the results on the same device.
 
 {% hint style="success" %}
