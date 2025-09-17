@@ -47,6 +47,9 @@ Inji Wallet is designed for interoperability and flexibility by supporting a wid
   Select an issuer, enter UIN/VID/Registration Number or any unique identifier, and securely download credentials.
 * **Web Wallet Storage (Post-login)**\
   Credentials are stored in your secure, logged-in web wallet session, enabling access across sessions and devices, depending on configuration.
+  * Verifiable Credentials are now stored in the **“Stored Cards”** section.
+  * You can view and download the credential as a PDF file locally on your system, or print it out once downloaded.
+  * You can reset your passcode if you forget it during login. However, the option to change the passcode after logging in is currently not available.
 *   **Local PDF Download Support**
 
     Optionally download credentials as **PDFs** with embedded QR codes for physical copies. Users can present these PDFs to verifiers to access services without requiring a web session.
