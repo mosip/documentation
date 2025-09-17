@@ -232,7 +232,7 @@ all over again (by displaying the popup window to select the credentials and res
 Navigate to the **VP Verification** tab in Inji Verify on your mobile device.  
 Click **Request Verifiable Credentials** to begin.
 
-<figure><img src="../../.gitbook/assets/eug-iv-vpv-sdf-1.png" alt="" width="500"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/eug-iv-vpv-sdf-1.png" alt="" width="200"><figcaption></figcaption></figure>
 
 ### Step 2: Select Credential Types
 
@@ -240,7 +240,7 @@ A popup titled **Verifiable Credential Selection Panel** appears.
 You can search, sort, and select the required credential types.  
 Some credentials may be pre-selected based on configuration.
 
-<figure><img src="../../.gitbook/assets/eug-iv-vpv-sdf-2.png" alt="" width="500"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/eug-iv-vpv-sdf-2.png" alt="" width="200"><figcaption></figcaption></figure>
 
 
 ### Step 3: Open Wallet on Same Device
@@ -248,8 +248,8 @@ Some credentials may be pre-selected based on configuration.
 After selecting credentials, a **Wallet Selection Panel** appears listing available wallets on your mobile device.  
 Select your preferred wallet. If only one wallet is available, you will be redirected automatically.
 
-<figure><img src="../../.gitbook/assets/eug-iv-vpv-sdf-3-1.png" alt="" width="400"><figcaption></figcaption></figure>
-<figure><img src="../../.gitbook/assets/eug-iv-vpv-sdf-3-2.jpg" alt="" width="400"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/eug-iv-vpv-sdf-3-1.png" alt="" width="200"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/eug-iv-vpv-sdf-3-2.jpg" alt="" width="200"><figcaption></figcaption></figure>
 
 ### Step 4: Deep Link to Wallet
 
@@ -262,15 +262,15 @@ The wallet receives the authorization request with credential requirements.
 The wallet checks which credentials match the request.  
 You are prompted to authenticate and provide consent to share the selected credentials.
 
-<figure><img src="../../.gitbook/assets/eug-iv-vpv-sdf-5-1.jpg" alt="" width="400"><figcaption></figcaption></figure>
-<figure><img src="../../.gitbook/assets/eug-iv-vpv-sdf-5-2.jpg" alt="" width="400"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/eug-iv-vpv-sdf-5-1.jpg" alt="" width="200"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/eug-iv-vpv-sdf-5-2.jpg" alt="" width="200"><figcaption></figcaption></figure>
 
 
 ### Step 6: Wallet Sends VP Response
 
 The wallet prepares the Verifiable Presentation (VP) and returns the `vp_token` in an authorization response via redirect.
 
-<figure><img src="../../.gitbook/assets/eug-iv-vpv-sdf-6.jpg" alt="" width="400"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/eug-iv-vpv-sdf-6.jpg" alt="" width="200"><figcaption></figcaption></figure>
 
 
 ### Step 7: View Results in Inji Verify
@@ -280,8 +280,8 @@ Credential status may be **Valid**, **Expired**, or **Invalid**.
 For multiple VCs, results are shown as expandable cards with tabular view for multi-attribute values.  
 Options are provided to **Download JSON** or **Expand View**.
 
-<figure><img src="../../.gitbook/assets/eug-iv-vpv-sdf-7-1.jpg" alt="" width="400"><figcaption></figcaption></figure>
-<figure><img src="../../.gitbook/assets/eug-iv-vpv-sdf-7-2.png" alt="" width="400"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/eug-iv-vpv-sdf-7-1.jpg" alt="" width="200"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/eug-iv-vpv-sdf-7-2.png" alt="" width="200"><figcaption></figcaption></figure>
 
 #### Credential Status Examples
 
@@ -293,17 +293,17 @@ Options are provided to **Download JSON** or **Expand View**.
 - **Expired VC:**  
   *Shows the credential marked as expired.*
 
-<figure><img src="../../.gitbook/assets/eug-iv-vpv-sdf-expired-vc.png" alt="" width="400"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/eug-iv-vpv-sdf-expired-vc.png" alt="" width="200"><figcaption></figcaption></figure>
 
 ### Same Device Flow Scenarios
 
 - **Scenario 1:** All credentials shared → List of credentials with status.
 
-<figure><img src="../../.gitbook/assets/eug-iv-vpv-sdf-scenario-1-all-credentials-shared.png" alt="" width="400"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/eug-iv-vpv-sdf-scenario-1-all-credentials-shared.png" alt="" width="200"><figcaption></figcaption></figure>
 
 - **Scenario 2:** Partial sharing → Display missing credentials with options to **Request Missing Credentials** or **Restart Process**.
 
-<figure><img src="../../.gitbook/assets/eug-iv-vpv-sdf-scenario-2-all-credentials-shared.png" alt="" width="400"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/eug-iv-vpv-sdf-scenario-2-all-credentials-shared.png" alt="" width="200"><figcaption></figcaption></figure>
 
 
 ## **Header Section:**
@@ -316,7 +316,7 @@ Options are provided to **Download JSON** or **Expand View**.
 
 * The Verify Credentials Page will showcase two main features of Inji Verify that is "Upload QR Code" and "Scan the QR Code".
 
-<figure><img src="../../.gitbook/assets/image36.png" alt="" width="500"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image36.png" alt="" width="200"><figcaption></figcaption></figure>
 
 ### **Help**
 
@@ -326,13 +326,13 @@ The Help section includes three sub-sections or sub-menus:
 * **Documentation**: This directs you to the Inji Verify documentation page for detailed information about Inji Verify.
 * **FAQ**: This section is still under development.
 
-<figure><img src="../../.gitbook/assets/image37.png" alt="" width="500"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image37.png" alt="" width="200"><figcaption></figcaption></figure>
 
 ### **Language Selection**
 
 Language dropdown is provided for verifier to select a language of his interest for better usability . The languages currently supported are: Portuguese, Spanish, French, English, Arabic, Tamil, Khmer, Hindi and Kannada.
 
-<figure><img src="../../.gitbook/assets/image38.png" alt="" width="500"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image38.png" alt="" width="200"><figcaption></figcaption></figure>
 
 ## **Credential Display Capability**
 
@@ -340,16 +340,16 @@ Language dropdown is provided for verifier to select a language of his interest 
 
 * These credentials are currently active and verified using the Inji Verify Portal.
 
-<figure><img src="../../.gitbook/assets/image14.png" alt="" width="500"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image14.png" alt="" width="200"><figcaption></figcaption></figure>
 
 **Invalid Credentials**:
 
 * These credentials are currently active but invalid.
 
-<figure><img src="../../.gitbook/assets/image39.png" alt="" width="500"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image39.png" alt="" width="200"><figcaption></figcaption></figure>
 
 **Expired Credentials**
 
 * These credentials have passed their validity period and are no longer active.
 
-<figure><img src="../../.gitbook/assets/image40.png" alt="" width="500"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image40.png" alt="" width="200"><figcaption></figcaption></figure>
