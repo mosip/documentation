@@ -17,12 +17,12 @@ Below sections details on the steps for integrating the Kotlin and Swift package
 ### Repository
 
 * inji-vci-client repo is [here](https://github.com/mosip/inji-vci-client)
-* * Maven snapshots available [here](https://central.sonatype.com/artifact/io.mosip/secure-keystore)
+*
+  * Maven snapshots available [here](https://central.sonatype.com/artifact/io.mosip/secure-keystore)
 
 ### Installation
 
 Snapshot builds are available [here](https://oss.sonatype.org/content/repositories/snapshots/io/mosip/inji-vci-client/).
-
 
 {% hint style="info" %}
 Note: implementation "io.mosip:inji-vci-client:0.1.0-SNAPSHOT"
@@ -108,4 +108,4 @@ An example app is added under /SwiftExample folder which can be referenced for m
 
 The below diagram shows how Inji Wallet utilises vci-client library.
 
-<figure><img src="../../../../.gitbook/assets/inji_mobile_wallet_integration_guides_vci-client-inji-interaction.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/inji_mobile_wallet_integration_guides_vci-client-inji-interaction.png" alt=""><figcaption></figcaption></figure>

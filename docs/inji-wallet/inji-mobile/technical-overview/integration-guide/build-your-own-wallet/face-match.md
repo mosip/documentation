@@ -2,7 +2,7 @@
 
 Face Match is an optional component in Inji Wallet. This is built as a standard that allows anyone to integrate their Facematch SDK. Its expected that the wallet providers would integrate the SDK that matches the specification.
 
-The current [specification](../specifications/face-sdk-specifications.md) is in draft state.
+The current [specification](../../specifications/face-sdk-specifications.md) is in draft state.
 
 ## Contribution
 

@@ -6,10 +6,6 @@
 
 This workflow describes how Inji Wallet downloads a Verifiable Credential (VC) from an issuing authority using the OpenID4VCI protocol.
 
-<!--
-<figure><img src="../../../.gitbook/assets/iwm-0-18-0-vci-flow.png" alt=""><figcaption><p>VCI Flow - Credential Issuance Workflow</p></figcaption></figure>
--->
-
 ```mermaid
 sequenceDiagram
     participant W as Inji Wallet 📱
@@ -53,37 +49,37 @@ sequenceDiagram
 ```
 
 **Actors:**
-- **Inji Wallet:** Orchestrates the process, interacts with VCI Client and Secure Keystore.
-- **Secure Keystore:** Signs cryptographic proofs.
-- **VCI Client:** Manages OpenID4VCI communication with the Issuing Authority.
-- **Authorization Server:** Authenticates the user (e.g., eSignet).
-- **Issuing Authority:** Issues the VC.
-- **VC Verifier:** Verifies credential authenticity.
-- **Pixelpass:** Handles QR code generation and encoding.
+
+* **Inji Wallet:** Orchestrates the process, interacts with VCI Client and Secure Keystore.
+* **Secure Keystore:** Signs cryptographic proofs.
+* **VCI Client:** Manages OpenID4VCI communication with the Issuing Authority.
+* **Authorization Server:** Authenticates the user (e.g., eSignet).
+* **Issuing Authority:** Issues the VC.
+* **VC Verifier:** Verifies credential authenticity.
+* **Pixelpass:** Handles QR code generation and encoding.
 
 **Workflow Steps:**
-1. **Key Pair Generation:**  
-    On first use, Inji Wallet generates and securely stores a cryptographic key pair via the Secure Keystore.
-2. **VC Download Request:**  
-    User initiates VC download (via UIN/VID or KBI). Wallet instructs VCI Client to start the OpenID4VCI issuance flow.
-3. **User Authentication:**  
-    VCI Client redirects the user to the Authorization Server. User authenticates (OTP, KBI, etc.). Authorization Server returns an auth code.
-4. **Token Exchange:**  
-    Wallet exchanges the auth code for an access token and nonce from the Authorization Server.
-5. **Proof Construction:**  
-    Wallet creates a proof JWT with the nonce, sends it to Secure Keystore for signing, and receives the signed proof JWT.
-6. **Credential Issuance Request:**  
-    VCI Client sends the signed proof JWT to the Issuing Authority. Issuer returns the VC.
-7. **Credential Verification:**  
-    Wallet verifies the VC with the VC Verifier (checks signature and schema). If verification fails, an error is shown.
-8. **VC Storage and Rendering:**  
-    Verified credentials are securely stored. For some credentials, a QR code is cached for offline use.
 
+1. **Key Pair Generation:**\
+   On first use, Inji Wallet generates and securely stores a cryptographic key pair via the Secure Keystore.
+2. **VC Download Request:**\
+   User initiates VC download (via UIN/VID or KBI). Wallet instructs VCI Client to start the OpenID4VCI issuance flow.
+3. **User Authentication:**\
+   VCI Client redirects the user to the Authorization Server. User authenticates (OTP, KBI, etc.). Authorization Server returns an auth code.
+4. **Token Exchange:**\
+   Wallet exchanges the auth code for an access token and nonce from the Authorization Server.
+5. **Proof Construction:**\
+   Wallet creates a proof JWT with the nonce, sends it to Secure Keystore for signing, and receives the signed proof JWT.
+6. **Credential Issuance Request:**\
+   VCI Client sends the signed proof JWT to the Issuing Authority. Issuer returns the VC.
+7. **Credential Verification:**\
+   Wallet verifies the VC with the VC Verifier (checks signature and schema). If verification fails, an error is shown.
+8. **VC Storage and Rendering:**\
+   Verified credentials are securely stored. For some credentials, a QR code is cached for offline use.
 
 ### Verifiable Presentation (VP) Sharing via OpenID4VP Flow
 
 This workflow explains how Inji Wallet shares selected VCs with a verifier (Relying Party) using the OpenID4VP protocol.
-
 
 ```mermaid
 sequenceDiagram
@@ -110,34 +106,30 @@ sequenceDiagram
    OVP->>Verifier: Send Auth response<br/>(VP token, Presentation Submission)
 ```
 
-<!--
-<figure><img src="../../../.gitbook/assets/iwm-0-18-0-ovp-flow.png" alt=""><figcaption><p>OpenID4VP Flow - Credential Presentation Workflow</p></figcaption></figure>
-
--->
-
 **Actors:**
-- **User:** Selects credentials and provides consent.
-- **Inji Wallet:** Manages the process, interacts with OpenID4VP Module and Secure Keystore.
-- **Secure Keystore:** Signs VP tokens.
-- **OpenID4VP Module:** Validates requests and structures the VP token.
-- **Relying Party (Verifier):** Requests and validates credentials.
+
+* **User:** Selects credentials and provides consent.
+* **Inji Wallet:** Manages the process, interacts with OpenID4VP Module and Secure Keystore.
+* **Secure Keystore:** Signs VP tokens.
+* **OpenID4VP Module:** Validates requests and structures the VP token.
+* **Relying Party (Verifier):** Requests and validates credentials.
 
 **Workflow Steps:**
-1. **QR Code Creation:**  
-    The verifier generates a QR code containing the authentication request.
-2. **QR Code Scan:**  
-    User scans the QR code in Inji Wallet, which extracts the auth request.
-3. **Auth Request Validation:**  
-    Wallet passes the request to the OpenID4VP Module for validation (issuer, signature, expiry, audience).
-4. **Display Matching VCs & User Consent:**  
-    Wallet finds matching credentials, displays them, and the user selects which to share and gives consent.
-5. **Construct Unsigned VP Token:**  
-    Wallet sends selected VCs and metadata to the OpenID4VP Module, which constructs the VP token (unsigned).
-6. **Sign VP Token:**  
-    OpenID4VP Module sends the unsigned VP token to Secure Keystore for signing. The signed VP token is returned.
-7. **Send Auth Response to Verifier:**  
-    Wallet sends the signed VP token and presentation_submission to the verifier. The verifier validates the response and, if successful, completes the transaction.
 
+1. **QR Code Creation:**\
+   The verifier generates a QR code containing the authentication request.
+2. **QR Code Scan:**\
+   User scans the QR code in Inji Wallet, which extracts the auth request.
+3. **Auth Request Validation:**\
+   Wallet passes the request to the OpenID4VP Module for validation (issuer, signature, expiry, audience).
+4. **Display Matching VCs & User Consent:**\
+   Wallet finds matching credentials, displays them, and the user selects which to share and gives consent.
+5. **Construct Unsigned VP Token:**\
+   Wallet sends selected VCs and metadata to the OpenID4VP Module, which constructs the VP token (unsigned).
+6. **Sign VP Token:**\
+   OpenID4VP Module sends the unsigned VP token to Secure Keystore for signing. The signed VP token is returned.
+7. **Send Auth Response to Verifier:**\
+   Wallet sends the signed VP token and presentation\_submission to the verifier. The verifier validates the response and, if successful, completes the transaction.
 
 ## Features Flow
 
@@ -169,11 +161,11 @@ Below sections are going to detail as how Inji Wallet as an OIDC client to OpenI
 
 **Download credentials using UIN / VID**:
 
-This method of VC download illustrates the **OpenID4VCI** method of download using UIN / VID issued to the resident. In this, eSignet plays the authentication and authorisation end point to connect to the credential provider (Reference Implementation: MOSIP). To understand more about Onboarding Mimoto (Inji BFF) as an OIDC client to support credential issuance from any issuer who support OpenID4VCI protocol refer [here](https://docs.mosip.io/inji/inji-mobile-wallet/customization-overview/credential\_providers).
+This method of VC download illustrates the **OpenID4VCI** method of download using UIN / VID issued to the resident. In this, eSignet plays the authentication and authorisation end point to connect to the credential provider (Reference Implementation: MOSIP). To understand more about Onboarding Mimoto (Inji BFF) as an OIDC client to support credential issuance from any issuer who support OpenID4VCI protocol refer [here](https://docs.mosip.io/inji/inji-mobile-wallet/customization-overview/credential_providers).
 
 **Download credentials using Knowledge Based Identification (KBI)**
 
-This method of VC download illustrates the **OpenID4VCI** method of download using KBI (Knowledge Based Identification). In this, eSignet plays the authentication, authorisation and credential issuance end point to connect to the credential provider. To understand more about Onboarding Mimoto (Inji BFF) as an OIDC client to support credential issuance from any issuer who supports **OpenID4VCI** protocol, refer [here](https://docs.mosip.io/inji/inji-mobile-wallet/customization-overview/credential\_providers).
+This method of VC download illustrates the **OpenID4VCI** method of download using KBI (Knowledge Based Identification). In this, eSignet plays the authentication, authorisation and credential issuance end point to connect to the credential provider. To understand more about Onboarding Mimoto (Inji BFF) as an OIDC client to support credential issuance from any issuer who supports **OpenID4VCI** protocol, refer [here](https://docs.mosip.io/inji/inji-mobile-wallet/customization-overview/credential_providers).
 
 <figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
@@ -191,7 +183,7 @@ This method of VC download illustrates the **OpenID4VCI** method of download usi
 
 ### 3. Sharing of credentials
 
-The credentials are shared in a peer-to-peer model with the verifier application. The data exchange between devices is done using the BLE Protocol. For more information, refer to [Tuvali](../technical-overview/integration-guide/tuvali/) documentation.
+The credentials are shared in a peer-to-peer model with the verifier application. The data exchange between devices is done using the BLE Protocol. For more information, refer to [Tuvali](../technical-overview/integration-guide/build-your-own-wallet/tuvali/) documentation.
 
 <figure><img src="../../../.gitbook/assets/vc_share (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -205,15 +197,7 @@ The credentials are shared in a peer-to-peer model with the verifier application
 
 #### Step 1: VC activation process
 
-<div>
-
-<img src="../../../architecture/_images/vc_activation.png" alt="">
-
- 
-
-<figure><img src="../../../.gitbook/assets/vc_activation (1).png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div><img src="../../../architecture/_images/vc_activation.png" alt=""> <figure><img src="../../../.gitbook/assets/vc_activation (1).png" alt=""><figcaption></figcaption></figure></div>
 
 #### Step 2: QR code login
 
@@ -226,76 +210,3 @@ From Settings screen, users can access Backup settings screen. In Backup setting
 <figure><img src="../../../.gitbook/assets/android (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../../.gitbook/assets/ios (2).png" alt=""><figcaption></figcaption></figure>
-
-
-
-
-
-
-
-
-
-
-<!--
-
-## 6. Enhanced Workflows (Version 0.18.0)
-
-The following diagrams illustrate the enhanced and standardized workflows introduced in Inji Wallet version 0.18.0, providing detailed technical flows for credential issuance and presentation processes.
-
-### OpenID4VP (OpenID for Verifiable Presentations) Flow
-
-This sequence diagram shows the complete **credential presentation workflow** using the OpenID4VP standard. This flow is utilized when users need to present their verifiable credentials to a relying party (verifier) through QR code scanning or direct interaction.
-
-<figure><img src="../../../.gitbook/assets/iwm-0-18-0-ovp-flow.png" alt=""><figcaption><p>OpenID4VP Flow - Credential Presentation Workflow</p></figcaption></figure>
-
-**Key components in the OpenID4VP flow:**
-
-1. **User**: Initiates the credential presentation process
-2. **Inji Wallet**: Mobile wallet application handling credential presentation
-3. **Secure Keystore**: Manages cryptographic keys and signatures
-4. **OpenId4VP Module**: Handles the OpenID4VP protocol implementation
-5. **Relying Party (Verifier)**: The service requesting credential verification
-
-**Flow breakdown:**
-- **Authentication Request**: The relying party generates a QR code containing an authentication request
-- **Credential Selection**: User scans QR code and selects which credentials to share
-- **Proof Generation**: Wallet creates cryptographic proof and signs the verifiable presentation
-- **Presentation Submission**: The signed verifiable presentation is sent to the relying party
-- **Verification**: Relying party validates the presentation and grants access
-
-### VCI (Verifiable Credential Issuance) Flow  
-
-This sequence diagram illustrates the **credential issuance workflow** using the OpenID4VCI (OpenID for Verifiable Credential Issuance) standard. This flow shows how users download and store verifiable credentials from authorized issuers.
-
-<figure><img src="../../../.gitbook/assets/iwm-0-18-0-vci-flow.png" alt=""><figcaption><p>VCI Flow - Credential Issuance Workflow</p></figcaption></figure>
-
-**Key components in the VCI flow:**
-
-1. **Inji Wallet**: Mobile wallet application requesting credentials
-2. **Secure Keystore**: Manages key pair generation and secure storage
-3. **VCI Client**: Handles the OpenID4VCI protocol communication
-4. **Authorization Server**: Manages authentication and authorization (e.g., eSignet)
-5. **Issuing Authority**: The entity issuing verifiable credentials (e.g., government, institution)
-6. **VC Verifier**: Validates credential authenticity and integrity
-7. **Pixelpass**: Handles secure credential rendering and display
-
-**Flow breakdown:**
-- **Key Pair Generation**: Wallet generates cryptographic key pairs for credential binding
-- **Authorization**: User authenticates with the authorization server (UIN/VID or KBI)
-- **Token Exchange**: Authorization server provides access token for credential issuance
-- **Credential Request**: Wallet requests specific credential from issuing authority
-- **Credential Issuance**: Issuing authority creates and signs the verifiable credential
-- **Verification & Storage**: Credential is verified for authenticity and stored securely
-- **QR Code Generation**: Wallet generates QR code for future credential sharing
-
-### Technical Improvements in Version 0.18.0
-
-These enhanced workflows introduce several key improvements:
-
-- **Standardized Protocols**: Full compliance with OpenID4VP and OpenID4VCI specifications
-- **Enhanced Security**: Improved cryptographic operations and secure key management
-- **Better User Experience**: Streamlined authentication and credential selection processes
-- **Interoperability**: Standard-based implementation ensuring compatibility with various issuers and verifiers
-- **Offline Capabilities**: Support for offline credential presentation with cryptographic verification
-
--->

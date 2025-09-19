@@ -1,36 +1,37 @@
 # Integration Guides
 
-Below are the guidelines and specifications for integrating any software development kit (SDK) with Inji Wallet:
+This section provides guidelines and specifications for integrating any software development kit (SDK) with **Inji Wallet**. It also contains references to available SDKs and tools that developers, system integrators, relying parties, and end users may find useful.
 
- 1. The SDK should be available as an npm module for seamless integration with React Native applications.
-* For Android, integration should be supported via a Maven dependency.
-* For iOS, integration should be supported via Swift Package Manager (SPM).
+### SDK Integration Specifications
 
-    For example, the npm modules, [**tuvali**](https://www.npmjs.com/package/@mosip/tuvali) and [**secure-keystore**](https://www.npmjs.com/package/@mosip/secure-keystore)**,** demonstrate suitable implementations.
-2.  The SDK should provide simple APIs for integration purposes.
+To ensure seamless integration with **Inji Wallet**, SDKs must follow these requirements:
 
-    These APIs should include an API for instantiation or initialization, such as the **init** or **constructor** API.
-3. The SDK should also include additional APIs that perform the necessary actions.
-4.  There should be an API available to **disconnect** the SDK, if needed.
+* **Availability**
+  * The SDK should be published as an **npm module** for integration with React Native applications.
+  * For **Android**, integration must be supported via a **Maven dependency**.
+  * For **iOS**, integration must be supported via **Swift Package Manager (SPM)**. For example, the npm modules [**tuvali**](https://www.npmjs.com/package/@mosip/tuvali) and [**secure-keystore**](https://www.npmjs.com/package/@mosip/secure-keystore) demonstrate suitable implementations.
+* **API Design**
+  * Provide a simple API surface for easy integration.
+  * Must include an **initialization API** (e.g., `init` or a constructor API).
+  * Include all necessary functional APIs to perform core actions.
+  * Provide a **disconnect API** to safely detach the SDK when needed.
+  * Preferably design APIs to be **asynchronous**, allowing users to continue app usage without UI blocking.
+* **Traceability & Logging**
+  * APIs may optionally accept a parameter such as `traceabilityId` to enhance logging and request traceability.
 
-    If possible, it would be beneficial for these APIs to be **asynchronous**. This enables users to continue using the application without experiencing any UI blocking.
-5. To enhance logging and traceability, the API may accept an optional parameter known as `traceabilityId`.
+### **Build Your Own Wallet with Inji Libraries**
 
-By adhering to these specifications, the integrated SDK will enhance the functionality and usability of the application.
+Use Inji’s modular SDKs and libraries to assemble a wallet tailored to your needs. Each library provides specific capabilities that can be integrated into your application.
 
-This section contains various guides and information that could benefit the developers, system integrators, relying parties and end users.
+Build your own wallet using Inji libraries – click here!
 
-For more information on how to get started with integrations, read through:
+**List of Libraries and SDKs**
 
-1. Secure Keystore
-2. PixelPass
-3. Tuvali - Sharing via BLE
-4. OpenID4VP - Online Sharing SDK
-5. Face Match
-6. BLE Verifier
-7. Telemetry (details coming soon)
-
-
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td></td><td></td><td><a href="../../.gitbook/assets/Tuvali (2).png">Tuvali (2).png</a></td><td><a href="tuvali/">tuvali</a></td></tr><tr><td></td><td></td><td></td><td><a href="../../.gitbook/assets/Face Match.png">Face Match.png</a></td><td><a href="face-match.md">face-match.md</a></td></tr><tr><td></td><td></td><td></td><td><a href="../../.gitbook/assets/ble-verifier.png">ble-verifier.png</a></td><td><a href="ble-verifier.md">ble-verifier.md</a></td></tr><tr><td></td><td></td><td></td><td><a href="../../.gitbook/assets/background - Copy (3).png">background - Copy (3).png</a></td><td><a href="secure-keystore.md">secure-keystore.md</a></td></tr><tr><td></td><td></td><td></td><td><a href="../../.gitbook/assets/PixelPass.png">PixelPass.png</a></td><td><a href="pixelpass.md">pixelpass.md</a></td></tr><tr><td></td><td></td><td></td><td><a href="../../.gitbook/assets/Telemetry.png">Telemetry.png</a></td><td><a href="telemetry.md">telemetry.md</a></td></tr></tbody></table>
-
-
+* [**VCI Client Library**](../architecture.md) – Issue and download Verifiable Credentials (VCs).
+* [**PixelPass Library**](../architecture.md) – Compress, encode, and decode JSON for QR codes.
+* [**OpenID4VP Library**](../architecture.md)  – Enable credential sharing through OpenID4VP protocols.
+* [**BLE Verifier Library** ](../architecture.md)– Verify VCs received over Bluetooth.
+* [**Tuvali Library** ](../architecture.md)**(BLE Sharing)** – Share credentials offline via Bluetooth Low Energy.
+* [**Secure Keystore Library** ](../architecture.md)– Manage secure storage of keys and sensitive data.
+* [**Face Match SDK** ](../architecture.md)– Add biometric face matching for enhanced verification.
+* [**Telemetry**](../architecture.md) – (Details coming soon!) for monitoring and analytics.

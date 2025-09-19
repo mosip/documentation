@@ -6,14 +6,13 @@ These library are accessible as AAR for Android app and SPM(Swift Package Manage
 
 The libraries are as follows:
 
-1.  Secure Keystore SDK
-2.  VCI Client SDK
-3.  PixelPass SDK
-4.  Tuvali - Sharing via BLE SDK
-5.  OpenID4VP - Online Sharing SDK
-6.  Face Match SDK
-7.  Telemetry SDK(coming soon)
-
+1. Secure Keystore SDK
+2. VCI Client SDK
+3. PixelPass SDK
+4. Tuvali - Sharing via BLE SDK
+5. OpenID4VP - Online Sharing SDK
+6. Face Match SDK
+7. Telemetry SDK(coming soon)
 
 <figure><img src="../../../.gitbook/assets/InjiWalletComponents.png" alt=""><figcaption></figcaption></figure>
 
@@ -44,25 +43,7 @@ The face matcher SDK internally implements native functionalities for Android an
 
 This SDK internally employs a `tflite` model, which is now bundled within the app. The face matcher functionality is also available via the [iriscan/biometric-sdk-react-native](https://www.npmjs.com/package/@iriscan/biometric-sdk-react-native) NPM module, which is already integrated for offline face authentication in Inji Wallet.
 
-<!--
-Old content 
-This SDK internally employs a `tflite` model, which must be created by the integrating party. The model, trained using resident faces, is stored on the MOSIP file server. Inji Wallet currently utilizes the face matcher SDK (soon to be replaced by the NPM module) for offline face authentication.
-
--->
-The SDK is employed in two scenarios:
-**During Both Offline and Online VC Sharing**: Residents can perform selfie authentication before sharing the VC with the relying party. The app opens the camera, allowing residents to take a selfie, which is then validated against the VC image to verify the resident's presence. This process is supported for both offline VC sharing (e.g., via BLE) and online login (e.g., scanning a QR code from the relying party portal and logging in using Inji Wallet).
-Refer [here](integration-guide/face-match.md) to check the API specifications for the face matcher model.
-
-
-<!--
-Old content
-The SDK is employed in two scenarios:
-**During Offline VC Sharing**: Residents can perform selfie authentication before sharing the VC with the relying party. The app opens the camera, allowing residents to take a selfie, which is then validated against the VC image to verify the resident's presence.\
-\
-**During Online Login**: Residents can scan the QR code from the relying party portal and opt to log in using Inji Wallet for services. In this process, residents undergo selfie authentication against the VC to confirm their presence.
-
--->
-
+The SDK is employed in two scenarios: **During Both Offline and Online VC Sharing**: Residents can perform selfie authentication before sharing the VC with the relying party. The app opens the camera, allowing residents to take a selfie, which is then validated against the VC image to verify the resident's presence. This process is supported for both offline VC sharing (e.g., via BLE) and online login (e.g., scanning a QR code from the relying party portal and logging in using Inji Wallet). Refer [here](integration-guide/build-your-own-wallet/face-match.md) to check the API specifications for the face matcher model.
 
 ### **3. Secure Keystore SDK**
 
@@ -81,7 +62,7 @@ To check all the APIs supported by this module, refer [here](../../../technical-
 **Note:**
 
 * Compatible with devices that support a hardware keystore.
-* To understand the library and access API documentation, refer [here](integration-guide/secure-keystore.md).
+* To understand the library and access API documentation, refer [here](integration-guide/build-your-own-wallet/secure-keystore.md).
 * Maven snapshots are available [here](https://central.sonatype.com/artifact/io.mosip/secure-keystore).
 {% endhint %}
 
@@ -100,10 +81,10 @@ Note:
   * [Kotlin Implementation](https://github.com/mosip/pixelpass/tree/master/kotlin)
   * [JS Implementation](https://github.com/mosip/pixelpass/tree/master/js)
   * [Swift Implementation](https://github.com/mosip/pixelpass-ios-swift)
-* To understand about the installation and the API documentation, refer [here](integration-guide/pixelpass.md).
+* To understand about the installation and the API documentation, refer [here](integration-guide/build-your-own-wallet/pixelpass.md).
 * For a hands-on experience of Generate a VC, Generate QR Code for the VC and Verify the same using Inji Verify, please click [here](https://docs.inji.io/inji-verify/build-and-deploy/creating-verifiable-credentials-and-generating-qr-codes).
 * To check the NPM module, click[ here](https://www.npmjs.com/package/@mosip/pixelpass).
-* Maven snapshots are available [here]
+* Maven snapshots are available \[here]
   * [For Android](https://central.sonatype.com/artifact/io.mosip/pixelpass-aar)
   * [For Java](https://central.sonatype.com/artifact/io.mosip/pixelpass-jar)
 {% endhint %}
@@ -146,26 +127,10 @@ Note:
 * Currently, the `vp_token` uses the `Ed25519Signature2020` type for digital signatures.
 {% endhint %}
 
-<!--
-
-### **7. BLE Verifier SDK**
-
-The [BLE Verifier](https://github.com/mosip/ble-verifier-sdk/tree/develop) is the module built for verifiers for receiving VC via BLE. This is a wrapper built on Tuvali with simplified APIs.
-
-To know more about API and how to integrate, refer [here](integration-guide/ble-verifier.md).
-
-{% hint style="info" %}
-Note:
-
-* To check the NPM module, click [here](https://www.npmjs.com/package/@mosip/ble-verifier-sdk).
-{% endhint %}
-
--->
-
 ### **7. Telemetry SDK**
 
 The [telemetry](https://github.com/mosip/sunbird-telemetry-sdk) module is derived from the [sunbird telemetry](https://github.com/project-sunbird/sunbird-telemetry-sdk) module. It is responsible for generating events that can provide valuable analytics.
 
 _**Note**_: _The publication of this project is currently a work in progress and has not been released yet. Stay tuned for further announcements!_
 
-> To know more about each of these, refer [Integration Guides](../../../inji-wallet/inji-mobile/technical-overview/integration-guide/README.md).
+> To know more about each of these, refer [Integration Guides](integration-guide/).

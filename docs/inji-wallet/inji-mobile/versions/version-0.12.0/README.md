@@ -59,7 +59,7 @@ To know more about QR code verification, read about Inji Verify [**here**](https
 
 QR Code Generation: PixelPass
 
-To read more about PixelPass library refer [**here**](../../technical-overview/integration-guide/pixelpass.md).
+To read more about PixelPass library refer [**here**](../../technical-overview/integration-guide/build-your-own-wallet/pixelpass.md).
 
 ### UI/UX enhancements:
 
