@@ -1,2 +1,0 @@
-# Build Your Own Wallet
-

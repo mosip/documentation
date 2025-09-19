@@ -183,7 +183,7 @@ This method of VC download illustrates the **OpenID4VCI** method of download usi
 
 ### 3. Sharing of credentials
 
-The credentials are shared in a peer-to-peer model with the verifier application. The data exchange between devices is done using the BLE Protocol. For more information, refer to [Tuvali](../technical-overview/integration-guide/build-your-own-wallet/tuvali/) documentation.
+The credentials are shared in a peer-to-peer model with the verifier application. The data exchange between devices is done using the BLE Protocol. For more information, refer to [Tuvali](../technical-overview/integration-guide/building-verifiable-credentials-wallet-with-inji-libraries/tuvali/) documentation.
 
 <figure><img src="../../../.gitbook/assets/vc_share (1).png" alt=""><figcaption></figcaption></figure>
 
