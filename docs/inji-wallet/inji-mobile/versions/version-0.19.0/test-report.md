@@ -146,6 +146,6 @@ The various metrics that assist in test tracking and efficiency are as follows:
 * Passed Test Cases Coverage: It measures the percentage of passed test cases. (Number of tests passed / Total number of tests executed) x 100
 * Failed Test Case Coverage: It measures the percentage of all failed test cases. (Number of failed tests / Total number of test cases executed) x 100
 
-{% hint style="info" %}
+{% hint style="success" %}
 #### Github link for the detailed report is [**here**](https://github.com/mosip/test-management/tree/master/inji/0.19.0)
 {% endhint %}
