@@ -1,47 +1,44 @@
 # End User Guide
 
-## Overview
+## End User Guide
+
+### Overview
 
 Inji Wallet (Web) End User Guide is structured as below:
 
-- Interface Overview  
-- Downloading VCs as PDF  
-- Preference  
-  - Change Language  
+* Interface Overview
+* Downloading VCs as PDF
+* Preference
+  * Change Language
 
-### Interface Overview
+#### Interface Overview
 
 Inji Wallet (Web) offers a browser-based interface similar to Inji Wallet, designed to be fully responsive across desktops, tablets, and mobile browsers. This section provides a high-level overview of the interface (Desktop View), labeling each key component to help you quickly locate items referred to throughout this guide.
 
-### Interface Elements
+#### Interface Elements
 
-- **Login**  
+* **Login**\
   Use Google or any configured OpenID-compliant Identity Provider (IdP) to log in and store credentials securely in the web wallet.
-
-- **Main Menu**  
+* **Main Menu**\
   Access navigation options for Dashboard, Issuers, Preferences, and more.
-
-- **Language Selector**  
+* **Language Selector**\
   Change the interface language using the dropdown in the header.
-
-- **Workspace**  
+* **Workspace**\
   The main content area where you interact with the wallet, issuers, and credentials.
-
-- **Search Bar**  
+* **Search Bar**\
   Search for available credential types or issuers.
-
-- **Issuers Section**  
-  Browse through a list of trusted credential issuers. Each issuer displays supported credential types.
+*   **Issuers Section**\
+    Browse through a list of trusted credential issuers. Each issuer displays supported credential types.
 
     <figure><img src="../../../.gitbook/assets/inji-web-interface-overview.png" alt=""><figcaption><p>Interface Overview</p></figcaption></figure>
 
-## Download VCs
+### Download VCs
 
-### Downloading National ID VC as PDF
+#### Downloading National ID VC as PDF
 
 You can download your National ID, here we will see how to do it when we use eSignet for Authentication; using OTP.
 
-**Q**. **What details I need to provide to download my credential**?&#x20;
+**Q**. **What details I need to provide to download my credential**?
 
 **A**. The credential issuer would have provided details such as UIN/VID in case of MOSIP National ID, You need to enter these information to be able to download Insurance VC.
 
@@ -49,8 +46,8 @@ To download a National ID VC using eSignet as authentication layer (OTP method)
 
 * Launch the Inji Wallet (Web) in your web browser, The home page presents you with the list of Issuers. You can also use the 'Search' box to search for and quickly find the Issuer (Credential Issuer) you are looking for.
   * Locate and click an '**Issuer**' on the Workspace, Or
-  * Search for an issuer by its name in **Search** box and click to proceed, \
-    **Note**: On selecting an **Issuer** from '**list of Issuers**' it takes you to next page where you select a  '**Credential Type**' (National Id here) to download it as PDF.
+  * Search for an issuer by its name in **Search** box and click to proceed,\
+    **Note**: On selecting an **Issuer** from '**list of Issuers**' it takes you to next page where you select a '**Credential Type**' (National Id here) to download it as PDF.
 
 <figure><img src="../../../.gitbook/assets/inji-web-download-national-id-as-pdf-1.png" alt=""><figcaption><p>Inji Web in Web Browser</p></figcaption></figure>
 
@@ -82,7 +79,7 @@ To download a National ID VC using eSignet as authentication layer (OTP method)
 
 <figure><img src="../../../.gitbook/assets/inji-web-download-national-id-as-pdf-9.png" alt="" width="318"><figcaption><p>Downloaded National ID VC as PDF</p></figcaption></figure>
 
-### Downloading Insurance VC as PDF
+#### Downloading Insurance VC as PDF
 
 You can download your Insurance VC, here we will see how to do it when we use eSignet for Authentication; using OTP.
 
@@ -93,7 +90,7 @@ You can download your Insurance VC, here we will see how to do it when we use eS
 To download an Insurance ID VC using eSignet for authentication (KBI method), follow the step below:
 
 * Launch the Inji Web application in your web browser. The application home page presents you with the **list of Issuers**. You can also use the '**Search**' box to quickly find an Issuer (Insurance provider).
-  * Click-select a particular 'Issuer' (Insurance provider)  which issued you the Insurance (Insurance VC Issuer), you will land to its **Credential Types** selection page.
+  * Click-select a particular 'Issuer' (Insurance provider) which issued you the Insurance (Insurance VC Issuer), you will land to its **Credential Types** selection page.
 
 <figure><img src="../../../.gitbook/assets/inji-web-download-insurance-vc-as-pdf-1.png" alt=""><figcaption><p>Launch application</p></figcaption></figure>
 
@@ -117,70 +114,63 @@ To download an Insurance ID VC using eSignet for authentication (KBI method), fo
 
 <figure><img src="../../../.gitbook/assets/inji-web-download-insurance-vc-as-pdf-6.png" alt="" width="319"><figcaption><p>Downloaded Insurance VC as PDF</p></figcaption></figure>
 
-## Preference
+### Preference
 
-### Language Selection
+#### Language Selection
 
 You can choose your preferred language using '**language Selection**' options available on the **Main-Menu**. Inji Web now supports 4 International Language (English, French and Arabic) and 3 Indian Languages (Tamil, Hindi and Kannada).
 
 <figure><img src="../../../.gitbook/assets/inji-web-language-change.png" alt=""><figcaption><p>Language Preference</p></figcaption></figure>
 
-
-
-# Login to Save Credentials in the Web Wallet or Download Credentials
+## Login to Save Credentials in the Web Wallet or Download Credentials
 
 **Note:** Screenshots will be added soon to enhance the user experience and better explain the steps shown below.
 
 You can now log in to Inji Web using Google or any other supported Identity Provider (IDP) to:
 
-- **Add and securely store your credentials** in Inji's Web Wallet
-- **Download credentials** directly to your device
+* **Add and securely store your credentials** in Inji's Web Wallet
+* **Download credentials** directly to your device
 
 In this section, you'll learn how to:
 
-- Log in to Inji Web Wallet
-- Save credentials for future access
-- Download credentials as needed
+* Log in to Inji Web Wallet
+* Save credentials for future access
+* Download credentials as needed
 
-## Login with Google or any other IDP
+### Login with Google or any other IDP
 
-1. **Launch Inji Web Wallet in Browser**  
-   Navigate to the wallet URL in any browser.
+1.  **Launch Inji Web Wallet in Browser**\
+    Navigate to the wallet URL in any browser.
 
-   ![landing-page-inji-web-login](../../../.gitbook/assets/iww-eug-landing-page-inji-web-login.png)
+    ![landing-page-inji-web-login](../../../.gitbook/assets/iww-eug-landing-page-inji-web-login.png)
+2.  **Click "Login with Gmail"**\
+    Select the Google login option on the homepage.
 
-2. **Click "Login with Gmail"**  
-   Select the Google login option on the homepage.
+    ![login-via-gmail-inji-web-wallet](../../../.gitbook/assets/iww-eug-login-via-gmail-inji-web-wallet.png)
+3.  **Select Google Account**\
+    Choose your Google account or enter login credentials.
 
-   ![login-via-gmail-inji-web-wallet](../../../.gitbook/assets/iww-eug-login-via-gmail-inji-web-wallet.png)
+    ![login-via-gmail-confirmation-from-google](../../../.gitbook/assets/iww-eug-login-via-gmail-confirmation-from-google.png)
+4.  **Post-login Welcome Page**\
+    You will land on the dashboard showing issuer and credential options.
 
-3. **Select Google Account**  
-   Choose your Google account or enter login credentials.
+    ![post-login-welcome-page-(home)](../../../.gitbook/assets/iww-eug-post-login-welcome-page-\(home\).png)
+5.  **Set Passcode (First-Time Only)**\
+    You'll be prompted to set a local passcode to secure your web wallet.
 
-   ![login-via-gmail-confirmation-from-google](../../../.gitbook/assets/iww-eug-login-via-gmail-confirmation-from-google.png)
+    ![set-passcode-for-inji-web-](../../../.gitbook/assets/iww-eug-set-passcode-for-inji-web-.png)
 
-4. **Post-login Welcome Page**  
-   You will land on the dashboard showing issuer and credential options.
+    ![set-passcode-by-entering-during-first-time-login](../../../.gitbook/assets/iww-eug-set-passcode-by-entering-during-first-time-login.png)
 
-   ![post-login-welcome-page-(home)](../../../.gitbook/assets/iww-eug-post-login-welcome-page-(home).png)
-
-5. **Set Passcode (First-Time Only)**  
-   You'll be prompted to set a local passcode to secure your web wallet.
-
-   ![set-passcode-for-inji-web-](../../../.gitbook/assets/iww-eug-set-passcode-for-inji-web-.png)
-
-   ![set-passcode-by-entering-during-first-time-login](../../../.gitbook/assets/iww-eug-set-passcode-by-entering-during-first-time-login.png)
-
-
-## Download VCs (Login)
+### Download VCs (Login)
 
 **Note:** A few example issuers are listed below. You can explore more issuers in the **Collab environment** via the UI or configure additional issuers as needed to test and explore this feature further.
 
-### Download National ID VC
+#### Download National ID VC
 
-#### Q. What details are needed?
-You’ll need your **UIN/VID**as provided by the credential issuer. <!-- Or refer to the [**topic**](../../inji-mobile/functional-overview/sandbox-details/inji-setup-guide.md#pre-requisites) to know how you can get UIN?VID to try around [collab](https://collab.mosip.net) -->
+**Q. What details are needed?**
 
+You’ll need your **UIN/VID**as provided by the credential issuer.
 
 1. Login to Inji Web Wallet
 2. Search or Select 'Republic of Veridonia National ID Department'
@@ -188,84 +178,82 @@ You’ll need your **UIN/VID**as provided by the credential issuer. <!-- Or refe
 
 ![credential-type-page](../../../.gitbook/assets/iww-eug-credential-type-page.png)
 
-4. **Authenticate via eSignet (OTP method)**  
-   - Enter UIN/VID → Click 'Get OTP'
-   - Enter OTP → Click 'Verify'
-6. **Download Starts Automatically**  
+4. **Authenticate via eSignet (OTP method)**
+   * Enter UIN/VID → Click 'Get OTP'
+   * Enter OTP → Click 'Verify'
+5. **Download Starts Automatically**\
    Verifiable Credential is stored in your web wallet in the "stored cards" page.
 
+#### Download Insurance VC
 
-### Download Insurance VC
+**Q. What details are needed?**
 
-#### Q. What details are needed?  
 You’ll need **Policy No., Name, and Date of Birth** as shared by the issuer.
 
-#### Steps:
+**Steps:**
 
 1. Login to Inji Web Wallet
 2. Search or Select 'StayProtected Insurance'
 3. Choose 'Health Insurance' or 'Life Insurance' as Credential Type
-4. Authenticate via eSignet (KBI method)  
-   - Enter required fields
-5. Download Starts Automatically  
+4. Authenticate via eSignet (KBI method)
+   * Enter required fields
+5. Download Starts Automatically\
    Verifiable Credential is stored in your web wallet in the "stored cards" page.
 
+### Manage Stored Credentials
 
-
-## Manage Stored Credentials
-
-
-![stored-cards-dropdown-options(view,download,delete)](../../../.gitbook/assets/iww-eug-stored-cards-dropdown-options(view,download,delete).png)
+![stored-cards-dropdown-options(view,download,delete)](../../../.gitbook/assets/iww-eug-stored-cards-dropdown-options\(view,download,delete\).png)
 
 ![stored-card-page-with-credentials](../../../.gitbook/assets/iww-eug-stored-card-page-with-credentials.png)
- 
-![stored-cards-view-option](../../../.gitbook/assets/iww-eug-stored-cards-view-option.png) 
 
-![delete-card](../../../.gitbook/assets/iww-eug-delete-card.png)  
+![stored-cards-view-option](../../../.gitbook/assets/iww-eug-stored-cards-view-option.png)
 
+![delete-card](../../../.gitbook/assets/iww-eug-delete-card.png)
 
-
-
-### View Credentials (Login Mode)
+#### View Credentials (Login Mode)
 
 1. Navigate to the **Stored Cards** section in the Inji Web Wallet.
 
 ![stored-cards-empty-page](../../../.gitbook/assets/iww-eug-stored-cards-empty-page.png)
 
-2. If your wallet has been created but no credentials have been downloaded yet, the **Stored Cards** section will appear empty.  
-   - Click on the **Add Cards** option to initiate the credential download flow.  
-   - Follow the steps outlined in the [Download VCs (Login)](#download-vcs-login) section to retrieve your credentials.
+2. If your wallet has been created but no credentials have been downloaded yet, the **Stored Cards** section will appear empty.
+   * Click on the **Add Cards** option to initiate the credential download flow.
+   * Follow the steps outlined in the [Download VCs (Login)](end-user-guide.md#download-vcs-login) section to retrieve your credentials.
 3. Once credentials are downloaded, they will appear in a mini card view within the **Stored Cards** section.
 4. For each stored credential, you can click on the **three-dot menu (⋮)** to explore additional actions:
-   - **View** – Preview the credential within the wallet.
-   - **Download** – Download the VC as a PDF with an embedded QR code.
-   - **Delete** – Remove the credential from your web wallet.
+   * **View** – Preview the credential within the wallet.
+   * **Download** – Download the VC as a PDF with an embedded QR code.
+   * **Delete** – Remove the credential from your web wallet.
 
+#### Profile & Language Preferences
 
+**Access Profile Options**
 
-
-
-###  Profile & Language Preferences
-
-#### Access Profile Options
-
-1. Click on the **Profile Icon** in the top-right corner of the page (next to the language selector).  
+1. Click on the **Profile Icon** in the top-right corner of the page (next to the language selector).
 2. Upon clicking, a dropdown will appear with the following options:
-   - `FAQs` – View frequently asked questions  
-   - `Profile` – View or manage your account
-   - `Logout` – Securely log out of your session 
+   * `FAQs` – View frequently asked questions
+   * `Profile` – View or manage your account
+   * `Logout` – Securely log out of your session
 3. To change your preferred language:
-   - Click on the **Language Icon** (globe) next to your profile
-   - A list of supported languages will appear
-   - Select your preferred language from the dropdown
+   * Click on the **Language Icon** (globe) next to your profile
+   * A list of supported languages will appear
+   * Select your preferred language from the dropdown
+
+![dropdown-(profile,faq,logout)](../../../.gitbook/assets/iww-eug-dropdown-\(profile,faq,logout\).png)
+
+![profile-page](iww-eug-profile-page.png)
+
+#### Passcode Reset Flow
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2025-09-17 at 10.51.59 AM.png" alt=""><figcaption></figcaption></figure>
 
 
-![dropdown-(profile,faq,logout)](../../../.gitbook/assets/iww-eug-dropdown-(profile,faq,logout).png)  
 
-![profile-page](iww-eug-profile-page.png) 
+<figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
-## Security Note
+<figure><img src="../../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
-- Credentials stored in the web wallet are **only accessible post-login**.
-- Guest users can download directly to device but **credentials are not saved**.
-- Inji Web enforces **user consent** before any sharing.
+### Quick Notes
+
+* Credentials stored in the web wallet are **only accessible post-login**.
+* Guest users can download directly to the device, but **credentials are not stored in the web wallet.**
