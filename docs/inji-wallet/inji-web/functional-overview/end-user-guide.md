@@ -245,6 +245,48 @@ You’ll need **Policy No., Name, and Date of Birth** as shared by the issuer.
 
 #### Passcode Reset Flow
 
+If you forget your passcode during login, you can click **“Forgot Passcode”** to set up a new one.
+
+1. On the **"Enter Your Passcode"** screen, click "**Forgot Passcode"** to reset your wallet.
+2. Enter and confirm your new passcode.
+3. Click **Submit** to save.
+4. Log in again with your new passcode and re-download your credentials.
+
+{% hint style="success" %}
+**What happens when you forget your passcode?**
+
+* Your wallet will be securely **reset**.
+* All previously stored credentials will be **deleted** from your wallet.
+* You’ll be guided to create and confirm a **new passcode**.
+* The new passcode will remain tied to your same **Google login (Gmail ID)**.
+* You will need to **re-download your credentials** from the original issuers.
+{% endhint %}
+
+#### Lockout Rules
+
+* ❌ 5 wrong attempts → Wallet locked temporarily for **1 hour**.
+* After 1 hour → You can try again (Round 2).
+* ❌ 5 wrong attempts again → Wallet locked temporarily for **1 more hour**.
+* On the **last round (3rd attempt)**:
+  * You will see a **warning message** (“Last attempt left before permanent lock”).
+  * ❌ If entered incorrectly again, your wallet will be **permanently locked**.
+
+#### Permanent Lock
+
+* Once locked permanently, the **only option** is to reset your wallet.
+* Resetting your wallet means:
+  * All previously stored credentials will be **deleted**.
+  * You will need to **set a new passcode**.
+  * The new passcode will stay tied to your Google login (Gmail ID).
+  * You must **re-download all your credentials** from the issuers.
+
+{% hint style="info" %}
+**Note:**&#x20;
+
+* No passcode recovery mechanism is available.
+* Passcode change after login is not supported yet.
+{% endhint %}
+
 <figure><img src="../../../.gitbook/assets/Screenshot 2025-09-17 at 10.51.59 AM.png" alt=""><figcaption></figcaption></figure>
 
 
