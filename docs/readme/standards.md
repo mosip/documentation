@@ -49,6 +49,7 @@ eSignet provides a limited implementation of the OpenID protocol, supporting the
 
 * [RFC 7515](https://www.rfc-editor.org/rfc/rfc7515.html) - JSON Web Signature
 * [RFC 7517](https://datatracker.ietf.org/doc/html/rfc7517) - JSON Web Keys
+* [RFC-9068](https://www.rfc-editor.org/rfc/rfc9068.html) - JSON Web Token (JWT) Profile for OAuth 2.0 Access Tokens
 * [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519) - ID token and access token as JWT
 * [OAuth 2.0 RFC 8414](https://datatracker.ietf.org/doc/html/rfc8414) - Authorization Server Metadata
 * [RFC 5785 ](https://www.rfc-editor.org/rfc/rfc5785)- Followed for both openid and oauth well-knowns
