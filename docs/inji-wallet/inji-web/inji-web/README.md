@@ -4,11 +4,17 @@ icon: rocket-launch
 
 # Releases
 
+## Version: 0.14.1
+
+* Name: 0.14.1
+* Date: Coming Soon!
+* [Release Notes](https://app.gitbook.com/u/J3VZVcoSqjX2LqmZbSg5nHJZEPI2)
+
 ## Version: 0.14.0
 
 * Name: 0.14.0
-* Date: Coming Soon!
-* Release Notes
+* Date: 17th September, 2025
+* [Release Notes](version-0.14.0/)
 
 ## Version: 0.13.1
 

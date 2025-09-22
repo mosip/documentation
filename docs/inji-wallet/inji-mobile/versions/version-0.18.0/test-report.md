@@ -102,7 +102,7 @@ Below are the test metrics by performing functional testing using mock MDS and m
 
 Below are the test metrics by performing VC Sharing functionality on various device combinations
 
-<figure><img src="../../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 <table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Total</td><td valign="top">Passed</td><td valign="top">Failed</td><td valign="top">Skipped</td></tr><tr><td valign="top">240</td><td valign="top">217</td><td valign="top">23</td><td valign="top">0</td></tr><tr><td valign="top">Test Rate: 100% With Pass Rate: 90.41%</td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
 

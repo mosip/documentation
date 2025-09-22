@@ -64,7 +64,7 @@ Verification is performed on various configurations as mentioned below
 
 ## Feature Health <a href="#id-1t3h5sf" id="id-1t3h5sf"></a>
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Test execution statistics <a href="#id-4d34og8" id="id-4d34og8"></a>
 
