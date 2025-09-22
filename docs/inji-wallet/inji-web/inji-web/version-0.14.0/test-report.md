@@ -40,7 +40,7 @@ The testing scope has been focused on the following features:\
 * Secure Time-Bound Storage
 * Locale Support
 * PDF Template Support
-* Authorization endpoint discovery through the auth server well-known
+* Authorization endpoint discovery through the auth server's well-known
 * SD JWT support
 * Passcode Reset
 
@@ -70,7 +70,7 @@ Verification is performed on various configurations as mentioned below&#x20;
 * Kannada
 * Portuguese
 
-The UI will render in all the above languages but the PDF file after download will only be in English language as certify is currently only supporting English. When any language is selected in UI, as a fall back the pdf will be in Eng.&#x20;
+The UI will render in all the above languages, but the PDF file after download will only be in English language as Certify is currently only supporting English. When any language is selected in UI, as a fallback, the PDF will be in English.&#x20;
 
 ### Feature Health
 
@@ -80,9 +80,61 @@ The UI will render in all the above languages but the PDF file after download wi
 
 #### Functional test results
 
-Below are the test metrics by performing functional testing. The process followed was black box testing which based its test cases on the specifications of the software component under test. Functional test was performed in combination of individual module testing as well as integration testing. Test data were prepared in line with the user stories. Expected results were monitored by examining the user interface. The coverage includes GUI testing, System testing, and End-To-End flows across multiple configurations. The testing cycle included simulation of multiple identity schema and respective UI schema configurations.\
+Below are the test metrics for performing functional testing. The process followed was black box testing, which was based on the specifications of the software component under test. Functional test was performed in combination of individual module testing as well as integration testing. Test data were prepared in line with the user stories. Expected results were monitored by examining the user interface. The coverage includes GUI testing, System testing, and End-To-End flows across multiple configurations. The testing cycle included the simulation of multiple identity schemas and respective UI schema configurations.
 
+<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top"><strong>Total</strong></td><td valign="top"><strong>Passed</strong></td><td valign="top"><strong>Failed</strong></td><td valign="top"><strong>NA</strong></td></tr><tr><td valign="top">823</td><td valign="top">745</td><td valign="top">78</td><td valign="top">0</td></tr></tbody></table>
 
+**Test Rate:** 100%, **Pass Rate:** 90%
+
+### UI Automation and API Test Rig test results
+
+Below are the test metrics by performing UI Automation and API Test rig:
+
+| Total | Passed | Failed | Skipped/Known Issues |
+| ----- | ------ | ------ | -------------------- |
+| 344   | 307    | 0      | 37                   |
+
+**Test Rate:** 83%, **Pass Rate:** 100%
+
+Here is the detailed breakdown of metrics for each module:\
 \
+**Inji Web UI Automation**
 
+| Metric  | Test cases |
+| ------- | ---------- |
+| Total   | 28         |
+| Passed  | 28         |
+| Failed  | 0          |
+| Skipped | 0          |
 
+**Inji Web API Test Rig**
+
+| Metric          | Test cases |
+| --------------- | ---------- |
+| Total           | 316        |
+| Passed          | 279        |
+| Failed          | 0          |
+| Skipped/Ignored | 33         |
+| Known Issues    | 4          |
+
+{% hint style="success" %}
+Note: Ignored 33 OTP related test cases which are descoped and not applicable. For the known Issues, we have bugs added in the xls report.
+{% endhint %}
+
+The functional and test rig code base branch, which is used for the above metric, is:
+
+* UI Automation: 9adaa889
+* API automation: 286b73fc
+
+### Detailed Test Metrics
+
+Below are the detailed test metrics by performing manual/automation testing. The project metrics are derived from Defect density, Test coverage, Test execution coverage, test tracking and efficiency.&#x20;
+
+The various metrics that assist in test tracking and efficiency are as follows:
+
+* Passed Test Cases Coverage: It measures the percentage of passed test cases. (Number of tests passed / Total number of tests executed) x 100
+* Failed Test Case Coverage: It measures the percentage of all the failed test cases. (Number of failed tests / Total number of test cases executed) x 100
+
+{% hint style="success" %}
+Github link for the detailed report is [**here**](https://github.com/mosip/test-management/tree/master/inji-web/inji%20web%200.14.0)
+{% endhint %}
