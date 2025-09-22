@@ -35,40 +35,36 @@ Key highlights include [**IETF** **SD-JWT**](https://docs.inji.io/inji-wallet/in
   * Compared & aligned Mimoto Docker and Local properties for consistency.
   * Improved code coverage and addressed Sonar security hotspots.
 
-### **Features**
+### **Features Released**&#x20;
 
-| Type        | Feature / Enhancement                                       | Jira Link                                              |
-| ----------- | ----------------------------------------------------------- | ------------------------------------------------------ |
-| Feature     | SD-JWT VC PDF Template Design                               | INJIWEB-1699                                           |
-| Feature     | Parse & Store SD-JWT VC Response                            | INJIWEB-1642                                           |
-| Feature     | Key Support for Without Login Flow (ES256, ES256K, Ed25519) | INJIWEB-1647                                           |
-| Enhancement | Proper Field Labels for Key VC Attributes                   | INJIWEB-1684                                           |
-| Enhancement | Login UI fixes and redirect improvements                    | INJIWEB-1637, INJIWEB-1610                             |
-| Enhancement | API Automation for Reset Passcode & Lockout Flow            | INJIWEB-1651                                           |
-| Bug Fix     | Search bar invalid input handling                           | INJIWEB-1644                                           |
-| Bug Fix     | Credential Download & Fetch errors                          | INJIWEB-1629, INJIWEB-1624, INJIWEB-1619, INJIWEB-1625 |
-| Bug Fix     | Wrong passcode not cleared after retry                      | INJIWEB-1655                                           |
-| Bug Fix     | Missing welcome message on homescreen                       | INJIWEB-1675                                           |
+| Type                  | Feature / Enhancement                                           | Jira Link                                                       |
+| --------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
+| Feature               | **SD-JWT VC PDF Template Design**                               | [INJIWEB-1699](https://mosip.atlassian.net/browse/INJIWEB-1699) |
+| Feature               | **Parse & Store SD-JWT VC Response**                            | [INJIWEB-1642](https://mosip.atlassian.net/browse/INJIWEB-1642) |
+| Feature               | **Key Support for Without Login Flow (ES256, ES256K, Ed25519)** | [INJIWEB-1647](https://mosip.atlassian.net/browse/INJIWEB-1647) |
+| Technical Enhancement | **Proper Field Labels for Key VC Attributes**                   | [INJIWEB-1684](https://mosip.atlassian.net/browse/INJIWEB-1684) |
 
 ### **Repositories Released**
 
-| Module      | Version |
-| ----------- | ------- |
-| inji-web    | 0.14.0  |
-| inji-config | 0.10.0  |
+| Module      | Version                                                          |
+| ----------- | ---------------------------------------------------------------- |
+| inji-web    | [0.14.0](https://app.gitbook.com/u/J3VZVcoSqjX2LqmZbSg5nHJZEPI2) |
+| inji-config | [0.11.0](https://github.com/mosip/inji-config/tree/v0.11.0)      |
+| mimoto      | [0.19.0](https://app.gitbook.com/u/J3VZVcoSqjX2LqmZbSg5nHJZEPI2) |
 
 ### **Compatible Modules**
 
-| Module       | Version |
-| ------------ | ------- |
-| mimoto       | 0.18.1  |
-| inji-certify | 0.12.0  |
-| inji-verify  | 0.13.1  |
-| eSignet      | 1.6.1   |
+| Module             | Version                                                                   |
+| ------------------ | ------------------------------------------------------------------------- |
+| inji-certify       | [0.12.1](https://github.com/mosip/inji-certify/releases/tag/v0.12.1)      |
+| inji-verify        | [v0.13.1](https://github.com/mosip/inji-verify/releases/tag/v0.13.1)      |
+| eSignet            | [1.6.2](https://github.com/mosip/esignet/releases/tag/v1.6.2)             |
+| Durian(data share) | [1.3.0-beta.2](https://github.com/mosip/durian/releases/tag/1.3.0-beta.2) |
+| vc verifier        | [1.4.0](https://github.com/mosip/vc-verifier/tree/v1.4.0)                 |
 
 ### **Known Issues**
 
-Below is the list of known issues. To read in detail, [click here](https://mosip.atlassian.net/issues/?jql=project%3D%22Inji%20Web%22%20and%20type%20in%20%28bug%29%20and%20status%20not%20in%20%28closed%2C%20canceled%29%20order%20by%20created%20DESC).
+Below is the list of key known issues specific to this release. For all known issues, click [here](https://mosip.atlassian.net/issues/?jql=project%3D%22Inji%20Web%22%20and%20type%20in%20%28bug%29%20and%20status%20not%20in%20%28closed%2C%20canceled%29%20order%20by%20created%20DESC).
 
 | **Jira Issue**                                                  | **Description**                                                                                                                   |
 | --------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -91,9 +87,14 @@ Below is the list of bug fixes as part of the [0.14.0](https://app.gitbook.com/u
 | [INJIWEB-876](https://mosip.atlassian.net/browse/INJIWEB-876)   | Intermittently unable to download Sunbird VC in Inji Web.                                                            |
 | [INJIWEB-761](https://mosip.atlassian.net/browse/INJIWEB-761)   | Client ID is different, and the redirect URI is from different domains.                                              |
 
-### **Documentation**
+### Release Documentation
 
-* **Feature Documentation** – Explains new SD-JWT/JWT download and parsing features.
-* **Integration Guides** – Provides instructions to integrate Inji Web with Certify, Verify, and Mimoto.
-* **End User Guide** – Walkthrough for credential downloads, passcode reset, and login.
-* **API Documentation** – Includes full details of endpoints, request/response formats, and error handling.
+* [Feature Documentation](../../overview/features.md#verifying-credential-authenticity)
+* [QA Report](test-report.md)
+
+### Additional Resources
+
+* [Feature Documentation](../../overview/features.md) - Contains detailed explanations of all available features of Inji Web Waller and its usage.
+* [Backend Services ](../../technical-overview/backend-services/)- Provides detailed instructions to set up the backend for the Inji Web Wallet.
+* [End User Guide](../../functional-overview/end-user-guide.md) - Offers end-to-end guidance for end users on setup and daily usage.
+* [API Documentation](https://mosip.stoplight.io/docs/mimoto/k6907m3dzc1gi-mimoto) - Includes comprehensive details of all APIs, endpoints, request/response formats, and examples.

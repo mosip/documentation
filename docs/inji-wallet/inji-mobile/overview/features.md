@@ -2,7 +2,7 @@
 
 Inji Mobile is an open-source digital wallet designed to enable individuals to receive, store, and present Verifiable Credentials (VCs) securely, both online and offline. Purpose-built to align with global standards like W3C VC, OpenID4VCI, OpenID4VP, IETF SD-JWT, and ISO 18013-5 (mDL), it brings interoperability, user autonomy, and strong cryptographic guarantees to digital identity ecosystems.
 
-#### Multiple Credential Format Support
+## Multiple Credential Format Support
 
 Inji Wallet is designed for interoperability and flexibility by supporting a wide range of credential formats:
 
@@ -18,11 +18,11 @@ Inji Wallet is designed for interoperability and flexibility by supporting a wid
 
 This multi-format support allows Inji Wallet to work seamlessly across different ecosystems, ensuring **compatibility, security, and user privacy**.
 
-### Download, Verify, and Store Verifiable Credentials
+## Download, Verify, and Store Verifiable Credentials
 
 Inji Wallet makes it easy and secure for residents to manage their digital identity and credentials. From downloading and verifying to sharing and backing up Verifiable Credentials (VCs), this guide outlines all key features and workflows available in the wallet.
 
-### Downloading Verifiable Credentials
+## Downloading Verifiable Credentials
 
 #### OpenID for VC Issuance
 
@@ -48,7 +48,7 @@ Residents can download VCs from trusted issuers integrated with OpenID for the V
 * User enters code in-app to retrieve VC securely
 * Ideal for privacy-sensitive issuance (e.g., mDL, insurance)
 
-### Verifying Credential Authenticity
+## Verifying Credential Authenticity
 
 Inji Mobile Wallet uses robust cryptographic libraries to verify that the VC is:
 
@@ -142,4 +142,4 @@ Designed for ease of use with intuitive UI components:
 
 * [Inji Wallet User Guide](https://docs.inji.io/inji-wallet/inji-mobile/functional-overview/end-user-guide)
 * [Feature Workflows](https://docs.inji.io/inji-wallet/inji-mobile/functional-overview/feature-workflows)
-* 🎬 [Feature Demo Video](https://youtu.be/9Z1WuTd8q0M)
+* [Feature Demo Video](https://youtu.be/9Z1WuTd8q0M)

@@ -29,7 +29,7 @@ Refer to the library [**ReadMe**](https://github.com/mosip/inji-wallet?tab=readm
 * Constructed **IETF** **SD-JWT VC Issuance Payloads** in VCI Client Library (Kotlin & Swift).
 * Added **IETF** **SD-JWT  Validation and Disclosure Display** after verification.
 * Integrated **IETF** **SD-JWT  VC Verification** into the VC Verifier Library.
-* Refer to the [**feature description**](../overview/features.md) to know more about this feature
+* Refer to the [**feature description**](../overview/features.md#verifying-credential-authenticity) to know more about this feature
 
 #### **Technical Enhancements**
 
@@ -95,7 +95,7 @@ Below is the list of bug fixes as part of the [**0.19.0** ](https://mosip.atlass
 
 ### Release Documentation
 
-* [Feature Documentation](../overview/features.md)
+* [Feature Documentation](../overview/features.md#verifying-credential-authenticity)
 * [QA Report](version-0.19.0/test-report.md)
 
 ### Additional Resources
