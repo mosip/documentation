@@ -6,14 +6,7 @@ eSignet enables Relying Parties to authenticate users based on verified identity
 
 Whether it's a financial institution verifying customer identity for KYC compliance, a healthcare provider granting access to medical records, or a digital service requiring strong authentication, eSignet serves as the central identity authority that these services trust.
 
-This section of the documentation provides detailed guidance for Relying Parties on:
-
-* How to integrate with eSignet
-* Configure authentication flows
-* Handle identity assertions and
-* Manage user sessions securely
-
 To learn more about the integration process and technical requirements, please refer to the following resources:
 
-* [Onboarding Your Relying Party to Any Identity Provider](../../../develop/integration/relying-party/relying-party-onboarding.md)– A step-by-step guide to help you prepare your service for integration with identity providers.
-* [Development and Integration with eSignet](../../../develop/integration/relying-party/development-and-integration-with-esignet.md) – Technical documentation and best practices for implementing eSignet as your trusted identity provider.
+* [Onboarding Your Relying Party to Any Identity Provider](relying-party-onboarding.md)– A step-by-step guide to help you prepare your service for integration with identity providers.
+* [Development and Integration with eSignet](development-and-integration-with-esignet.md) – Technical documentation and best practices for implementing eSignet as your trusted identity provider.
