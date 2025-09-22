@@ -130,7 +130,6 @@
     * [Version 0.14.1](inji-wallet/inji-web/inji-web/version-0.14.1.md)
     * [Version 0.14.0](inji-wallet/inji-web/inji-web/version-0.14.0/README.md)
       * [Test Report](inji-wallet/inji-web/inji-web/version-0.14.0/test-report.md)
-    * [Version 0.13.2](inji-wallet/inji-web/inji-web/version-0.13.2.md)
     * [Version 0.13.1](inji-wallet/inji-web/inji-web/version-0.13.1/README.md)
       * [Test Report](inji-wallet/inji-web/inji-web/version-0.13.1/test-report.md)
     * [Version 0.13.0](inji-wallet/inji-web/inji-web/version-0.13.0/README.md)

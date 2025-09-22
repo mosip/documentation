@@ -47,7 +47,7 @@ Refer to the library [**ReadMe**](https://github.com/mosip/inji-wallet?tab=readm
 * Improved error handling for **VC activation and downloads** (MOSIP VCs, Mock VCs, MDL VCs).
 * Fixed the BLE rendering issue for VCs shared without internet connectivity.
 
-### Features
+### Features Released
 
 <table><thead><tr><th>Type</th><th width="363.62890625">Feature / Enhancements/Technical  Upgrades</th><th>Jira Link</th></tr></thead><tbody><tr><td>Technical addtion  in Library for new feature support</td><td>SD-JWT VC Validation</td><td><a href="https://mosip.atlassian.net/browse/INJIMOB-3412?utm_source=chatgpt.com">INJIMOB-3412</a></td></tr><tr><td>Functional addtion in Wallet UI </td><td>Display SD-JWT Disclosures After Verification</td><td><a href="https://mosip.atlassian.net/browse/INJIMOB-3366?utm_source=chatgpt.com">INJIMOB-3366</a></td></tr><tr><td>Technical addtion  in Library for new feature support</td><td>SD-JWT VC Verification in VC Verifier Library</td><td><a href="https://mosip.atlassian.net/browse/INJIMOB-3365?utm_source=chatgpt.com">INJIMOB-3365</a></td></tr><tr><td>Technical addtion  in Library for new feature support</td><td>Construct SD-JWT VC Issuance Payload — Kotlin</td><td><a href="https://mosip.atlassian.net/browse/INJIMOB-3205?utm_source=chatgpt.com">INJIMOB-3205</a></td></tr><tr><td>Technical addtion  in Library for new feature support</td><td>Construct SD-JWT VC Issuance Payload — Swift</td><td><a href="https://mosip.atlassian.net/browse/INJIMOB-3394?utm_source=chatgpt.com">INJIMOB-3394</a></td></tr><tr><td>Technical addtion  in Library for new feature support</td><td>OVP sharing payload parsing for Arabic language VCs</td><td><a href="https://mosip.atlassian.net/browse/INJIMOB-3367?utm_source=chatgpt.com">INJIMOB-3367</a></td></tr></tbody></table>
 
@@ -72,7 +72,7 @@ Refer to the library [**ReadMe**](https://github.com/mosip/inji-wallet?tab=readm
 
 ### Known Issues
 
-Below is the list of known issues. To read in detail, [click here](https://mosip.atlassian.net/jira/software/c/projects/INJIMOB/issues/?jql=project%20%3D%20%22INJIMOB%22%20AND%20type%20%3D%20Bug%20AND%20status%20IN%20%28New%2C%20Assigned%29%20ORDER%20BY%20created%20DESC).
+Below is the list of key known issues specific to this release. For all known issues, [click here](https://mosip.atlassian.net/jira/software/c/projects/INJIMOB/issues/?jql=project%20%3D%20%22INJIMOB%22%20AND%20type%20%3D%20Bug%20AND%20status%20IN%20%28New%2C%20Assigned%29%20ORDER%20BY%20created%20DESC).
 
 | Jira Issue                                                      | Description                                                       |
 | --------------------------------------------------------------- | ----------------------------------------------------------------- |
@@ -100,8 +100,8 @@ Below is the list of bug fixes as part of the [**0.19.0** ](https://mosip.atlass
 
 ### Additional Resources
 
-* [Feature Documentation](https://docs.inji.io/inji-wallet/inji-mobile/overview/features) - Contains detailed explanations of all available features and their usage.
-* [Integration Guides](https://docs.inji.io/inji-wallet/inji-mobile/technical-overview/integration-guide) - Provides step-by-step instructions to integrate Inji Wallet with an external system
+* [Feature Documentation](https://docs.inji.io/inji-wallet/inji-mobile/overview/features) - Contains detailed explanations of all available features of Inji Mobile Waller and its usage.
+* [Integration Guides](https://docs.inji.io/inji-wallet/inji-mobile/technical-overview/integration-guide) - Provides step-by-step instructions to integrate Inji Mobile Wallet with an external system.
 * [End User Guide ](../functional-overview/end-user-guide.md)- Offers end-to-end guidance for end users on setup and daily usage.
 * [API Documentation](https://mosip.stoplight.io/docs/mimoto/k6907m3dzc1gi-mimoto) - Includes comprehensive details of all APIs, endpoints, request/response formats, and examples.
 
