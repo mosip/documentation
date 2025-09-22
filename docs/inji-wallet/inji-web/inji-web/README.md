@@ -8,7 +8,7 @@ icon: rocket-launch
 
 * Name: 0.14.1
 * Date: Coming Soon!
-* [Release Notes](https://app.gitbook.com/u/J3VZVcoSqjX2LqmZbSg5nHJZEPI2)
+* [Release Notes](version-0.14.1.md)
 
 ## Version: 0.14.0
 
