@@ -8,7 +8,7 @@
 
 ### **Overview**
 
-This release of **Inji Web v0.14.0** delivers support for [**IETF SD-JWT** ](https://app.gitbook.com/u/J3VZVcoSqjX2LqmZbSg5nHJZEPI2)Verifiable Credential (VC) downloads, improvements in login UI, and enhancements to key handling for credential flows. It also includes multiple usability fixes, technical debt cleanups, and improvements in error handling and code coverage.
+This release of **Inji Web v0.14.0** delivers support for [**IETF SD-JWT** ](../../overview/features.md#multiple-credential-format-support)Verifiable Credential (VC) downloads, improvements in login UI, and enhancements to key handling for credential flows. It also includes multiple usability fixes, technical debt cleanups, and improvements in error handling and code coverage.
 
 Key highlights include [**IETF** **SD-JWT**](https://docs.inji.io/inji-wallet/inji-web/overview#capabilities-snapshot) **VC parsing & storage**, **UI/UX refinements**, and **security fixes** that align Inji Web with the broader Verifiable Credential ecosystem.
 
@@ -19,7 +19,7 @@ Key highlights include [**IETF** **SD-JWT**](https://docs.inji.io/inji-wallet/in
 * **IETF SD-JWT VC Support**
   * Added parsing of SD-JWT VC responses and storage in DB once issued via Mimoto.
   * Updated SD-JWT VC PDF template design for improved readability.
-  * Refer to the [**feature description**](https://app.gitbook.com/u/J3VZVcoSqjX2LqmZbSg5nHJZEPI2) to know more about this feature
+  * Refer to the [**feature description**](../../overview/features.md#verifying-credential-authenticity) to know more about this feature
 
 #### **Improvements to Existing Features**
 
@@ -46,11 +46,11 @@ Key highlights include [**IETF** **SD-JWT**](https://docs.inji.io/inji-wallet/in
 
 ### **Repositories Released**
 
-| Module      | Version                                                          |
-| ----------- | ---------------------------------------------------------------- |
-| inji-web    | [0.14.0](https://app.gitbook.com/u/J3VZVcoSqjX2LqmZbSg5nHJZEPI2) |
-| inji-config | [0.11.0](https://github.com/mosip/inji-config/tree/v0.11.0)      |
-| mimoto      | [0.19.0](https://app.gitbook.com/u/J3VZVcoSqjX2LqmZbSg5nHJZEPI2) |
+| Module      | Version                                                     |
+| ----------- | ----------------------------------------------------------- |
+| inji-web    | [0.14.0](https://github.com/mosip/inji-web/tree/v0.14.0)    |
+| inji-config | [0.11.0](https://github.com/mosip/inji-config/tree/v0.11.0) |
+| mimoto      | [0.19.0](https://github.com/mosip/mimoto/tree/v0.19.0)      |
 
 ### **Compatible Modules**
 
@@ -74,7 +74,7 @@ Below is the list of key known issues specific to this release. For all known is
 
 ### Bug Fixes
 
-Below is the list of bug fixes as part of the [0.14.0](https://app.gitbook.com/u/J3VZVcoSqjX2LqmZbSg5nHJZEPI2) release:
+Below is the list of bug fixes as part of the [**0.14.0**](https://app.gitbook.com/u/J3VZVcoSqjX2LqmZbSg5nHJZEPI2) release:
 
 | **Jira Issue**                                                  | **Description**                                                                                                      |
 | --------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
