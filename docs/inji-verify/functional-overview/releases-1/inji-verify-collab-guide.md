@@ -1,5 +1,3 @@
-# Inji Verify - Collab Guide
-
 **Inji Verify Collab Guide** helps you with exploring [Inji Verify](../../overview/README.md) in our [Sandbox Collab Environment](https://collab.mosip.net/).
 Whether you're a Developer, System Integrator, or an enthusiast eager to dive into the world of verifiable credentials, this guide provides you with the necessary information to get started with Inji Verify in our [Collab Environment](https://collab.mosip.net/).
 
