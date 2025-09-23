@@ -10,8 +10,8 @@ Visit the following links to access Inji Verify in Collab Environment:
 
 ### Which are the two ways you can have sample verifiable credentials to explore the Inji Verify portal in 'Collab Environment'?
 
-* **Generate Your Own**
-* **Use Sample QR Codes**
+* Generate Your Own
+* Use Sample QR Codes
 
 #### Generate your own Verifiable Credentials and QR codes
 To generate your own verifiable credentials and QR codes, follow the instructions provided in the [Generate QR Code](https://docs.mosip.io/inji/inji-verify/build-and-deploy/creating-verifiable-credentials-and-generating-qr-codes) guide. This guide will walk you through the steps required to create verifiable credentials and produce QR codes for testing in the Inji Verify portal.
@@ -23,10 +23,10 @@ If you want it quick and can't wait to explore 'Inji Verify' in 'Collab Environm
 
 ### Which all features you can explore in 'Collab Environment'?
 
-* [Verify by scanning the QR Code](#verify-by-scanning-the-qr-code)
-* [Verify by uploading the QR Code](#verify-by-uploading-the-qr-code)
-* [VP Verification - Cross Device flow Feature](#vp-verification---cross-device-flow-feature)
-* [VP Verification - Same Device flow Feature](#vp-verification---same-device-flow-feature)
+* Verify by scanning the QR Code
+* Verify by uploading the QR Code
+* VP Verification - Cross Device flow Feature
+* VP Verification - Same Device flow Feature
 
 #### Verify by scanning the QR Code
 
