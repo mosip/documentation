@@ -6,17 +6,12 @@ Visit the following links to access Inji Verify in Collab Environment:
 * [Collab Environment](https://collab.mosip.net/)
 * [Inji Verify Portal](https://injiverify.collab.mosip.net/)
 
-### Which are the two ways you can have sample verifiable credentials to explore the Inji Verify portal in 'Collab Environment'?
+### Which are the two ways you can get sample verifiable credentials to explore the Inji Verify portal in 'Collab Environment'?
 
-* Generate Your Own
-* Use Sample QR Codes
-
-#### Generate your own Verifiable Credentials and QR codes
-To generate your own verifiable credentials and QR codes, follow the instructions provided in the [Generate QR Code](https://docs.mosip.io/inji/inji-verify/build-and-deploy/creating-verifiable-credentials-and-generating-qr-codes) guide. This guide will walk you through the steps required to create verifiable credentials and produce QR codes for testing in the Inji Verify portal.
-
-#### Use Sample QR Codes
-
-If you want it quick and can't wait to explore 'Inji Verify' in 'Collab Environment', you can use the 'Sample QR Codes' provided in this guide only, under [Explore with mock data](#explore-with-mock-data) section.
+* **Generate your own Verifiable Credentials and QR codes**: 
+  * To generate your own verifiable credentials and QR codes, follow the instructions provided in the [Generate QR Code](https://docs.mosip.io/inji/inji-verify/build-and-deploy/creating-verifiable-credentials-and-generating-qr-codes) guide. This guide will walk you through the steps required to create verifiable credentials and produce QR codes for testing in the Inji Verify portal.
+* **Use Sample QR Codes**: 
+  * If you want it quick and can't wait to explore 'Inji Verify' in 'Collab Environment', you can use the 'Sample QR Codes' provided in this guide only, under [Explore with mock data](#explore-with-mock-data) section.
 
 
 ### Which all features you can explore in 'Collab Environment'?
@@ -78,7 +73,7 @@ Use the QR codes provided below to explore the Inji Verify application for [Scan
 
 ## Verifiable QR Code - Valid VC
 
-### Data Model v2.0
+### Sample QR code - Valid VC Data
 
 <div align="center"><figure><img src="../../../.gitbook/assets/valid-vc-dm-2-0.PNG" alt="" width="375"><figcaption><p>Valid Verifiable Credentials - Data Model v2.0</p></figcaption></figure></div>
 
@@ -126,7 +121,7 @@ Use the QR codes provided below to explore the Inji Verify application for [Scan
     }
 ```
 
-### Data Model v1.1
+### Sample QR code - Valid VC Data
 
 <div align="center"><figure><img src="../../../.gitbook/assets/valid-vc-dm-1-1.PNG" alt="" width="375"><figcaption><p>Valid Verifiable Credentials - Data Model v1.1</p></figcaption></figure></div>
 
