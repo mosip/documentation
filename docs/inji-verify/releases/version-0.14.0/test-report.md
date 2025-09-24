@@ -2,284 +2,125 @@
 
 ## Testing Scope
 
-The scope of testing is to verify fitment to the specification from the perspective of&#x20;
+The testing scope covers verification against specifications from the perspectives of:
 
-●      Functionality&#x20;
+- Functionality
+- Deployability
+- Configurability
+- Customizability
 
-●      Deployability&#x20;
+Verification is performed from both end-user and System Integrator (SI) viewpoints, assessing configurability and extensibility to ensure readiness for deployment in multiple countries. As MOSIP is an “API First” product platform, these aspects are critical.
 
-●      Configurability&#x20;
+### Features Tested
 
-●      Customizability
+- Inji Verify Home page
+- Verify Scan Feature
+- Verify Upload Feature
+- OVP Flow
+- Same device flow
 
-&#x20;
+### QA Verified Combinations
 
-Verification is performed not only from the end user perspective but also from the System Integrator (SI) point of view. Hence Configurability and Extensibility of the software is also assessed. This ensures readiness of software for use in multiple countries. Since MOSIP is an “API First” product platform.
+**Upload Feature Verification:**
 
-&#x20;
+1. Windows: Edge, Firefox, Chrome
+2. Android: Edge, Firefox, Chrome
+3. iPhone: Safari, Edge, Firefox, Chrome
+4. Mac: Safari, Edge, Firefox, Chrome
 
-Testing scope has been focused on the below features:\
-\
+**Scan Functionality Verification:**
 
+1. Mac (Laptop, 2MP front camera): Chrome, Edge, Firefox, Safari
+2. Windows (Laptop, 2MP front camera): Chrome, Edge, Firefox
+3. Android (Phone/Tablet, 16MP back camera): Chrome, Edge, Firefox
+4. iPhone/iPad (12MP back camera): Chrome, Edge, Firefox, Safari
+5. Verified QR code scanning in low light
+6. Verified scanning with blurred, cracked, and low-quality QR codes
 
-●      Inji Verify Home page
+**OVP Functionality Verification (current INJI Verify version):**
 
-●      Verify Scan Feature
+1. Windows: Edge, Firefox, Chrome
+2. Android: Edge, Firefox, Chrome (0.19.0 INJI-mobile)
+3. iPhone: Safari, Edge, Firefox, Chrome (0.19.0 INJI-mobile)
+4. Mac: Safari, Edge, Firefox, Chrome
 
-●      Verify Upload Feature
+**Same Device Flow Verification (current INJI Verify version):**
 
-●      OVP Flow
+1. Android: Edge, Firefox, Chrome (0.19.0 INJI-mobile)
+2. iPhone: Safari, Edge, Firefox, Chrome (0.19.0 INJI-mobile)
 
-●      Same device flow
+### Testing Results
 
-&#x20;
+Results for Upload, Scan, and OVP flow functionality were validated across Windows, Android phone, Mac, Android Tablet, iPad, and iPhone with various browsers.
 
-Below are the combinations that QA verified and Certified INJI Verify:
-
-&#x20;
-
-Upload feature Verification:
-
-1. Windows using Edge, Firefox and Chrome browsers.
-2. Android using Edge, Firefox and Chrome browsers.
-3. iPhone using Safari, Edge, Firefox and Chrome browsers.
-4. MAC using Safari Edge, Firefox and Chrome browsers.
-
-&#x20;
-
-Scan functionality Verification:
-
-1. MAC (Laptop) with a front camera of 2 megapixel using Chrome, edge, Firefox and Safari browsers.
-2. Windows laptop with a front camera of 2 megapixel using Chrome, edge, and Firefox browsers.
-3. Mobile Android phone Tablet with back camera 16 megapixel using browsers Chrome, Edge and Firefox browsers.
-4. iPhone and iPad with 12 megapixels back camera Chrome, edge, Firefox and Safari browsers.
-5. Verified in low light to scan the QR code
-6. Verified scan with blur, cracked, low quality QR codes was verified
-
-&#x20;
-
-&#x20;
-
-OVP functionality Verification with current INJI Verify version:
-
-1. Windows using Edge, Firefox and Chrome browsers.
-2. Android using Edge, Firefox and Chrome browsers, 0.19.0 INJI-mobile.
-3. iPhone using Safari, Edge, Firefox and Chrome browsers, 0.19.0 INJI-mobile.
-4. MAC using Safari Edge, Firefox and Chrome browsers.
-
-&#x20;
-
-Same device flow Verification with current INJI Verify version:
-
-1. Android using Edge, Firefox and Chrome browsers, 0.19.0 INJI-mobile.
-2. iPhone using Safari, Edge, Firefox and Chrome browsers, 0.19.0 INJI-mobile.
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-### Testing results:
-
-Below are the results for Upload, Scan and OVP flow functionality with Windows, Android phone, MAC, Android Tablet, iPad and iPhone with different browsers:
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-Note : OVP flow supports 0.19.0 inji-mobile build only
+> **Note:** OVP flow supports only the 0.19.0 inji-mobile build.
 
 ## Test Approach
 
-Persona based approach has been adopted to perform the IV\&V, by simulating test scenarios that resemble a real-time implementation.
+A persona-based approach was adopted for IV&V, simulating real-world scenarios. Personas represent user types and help determine relevant use cases. Testing addressed:
 
-&#x20;
+- Functionality
+- Deployability
+- Configurability
+- Customizability
 
-A Persona is a fictional character/user profile created to represent a user type that might use a product/or a service in a similar way. Persona based testing is a software testing technique that puts software testers in the customer's shoes, assesses their needs from the software and thereby determines use cases/scenarios that the customers will execute. The persona needs may be addressed through any of the following.
+Verification methods varied based on how each need was addressed.
 
-&#x20;
+## Verified Configuration
 
-●      Functionality&#x20;
+Verification was performed on the following configuration:
 
-●      Deployability&#x20;
+- Default configuration with 1 language:
+  - English
 
-●      Configurability&#x20;
+## Feature Health
 
-●      Customizability
+<!-- (No content provided in original) -->
 
-&#x20;
+## Test Execution Statistics
 
-The verification methods may differ based on how the need was addressed.
+### Functional Test Results
 
-&#x20;
+Functional testing followed a black box approach, covering individual modules and integration, with test data aligned to user stories. Coverage included GUI, system, and end-to-end flows across multiple configurations, simulating various identity and UI schema configurations.
 
-&#x20;
+| Total | Passed | Failed | Skipped |
+|-------|--------|--------|---------|
+| 655   | 562    | 93     | 0       |
 
-&#x20;
+Test Rate: 100%, Pass Rate: 85%
 
-## Verified configuration
+### UI Automation Results
 
-Verification is performed on various configurations as mentioned below
+MOSIP functional automation framework was used for UI automation.
 
-&#x20;    ●         Default configuration - with 1 Lang
+| Total | Passed | Failed | Skipped |
+|-------|--------|--------|---------|
+| 17    | 17     | 0      | 0       |
 
-&#x20;                      ○         English
+Test Rate: 100%, Pass Rate: 100%
 
-&#x20;
+Functional and test rig code base branch used for these metrics:
 
-&#x20;
+- Hash Tag: `sha256:52554ad1062b28e67973e422f046bbc4b49ddad525498017996ed100422d1915`
 
-&#x20;
+### Verify API Test Rig Automation Results
 
-&#x20;
+| Total | Passed | Failed | Skipped |
+|-------|--------|--------|---------|
+| 29    | 29     | 0      | 0       |
 
-## Feature Health&#x20;
+Test Rate: 100%, Pass Rate: 100%
 
-&#x20;
+Functional and test rig code base branch used for these metrics:
 
-&#x20;
+- Hash Tag: `sha256:7c6529869cec006ae825ed85cc9af57818db11f3ed738de05e71bc9f31dfd532`
 
-&#x20;
+### Detailed Test Metrics
 
-&#x20;
+Manual and automation testing metrics are derived from defect density, test coverage, execution coverage, tracking, and efficiency.
 
-&#x20;
+- **Passed Test Cases Coverage:** (Number of passed tests / Total executed) × 100
+- **Failed Test Cases Coverage:** (Number of failed tests / Total executed) × 100
 
-&#x20;
-
-&#x20;
-
-&#x20;
-
-## Test execution statistics
-
-### Functional test results
-
-Below are the test metrics by performing functional testing. The process followed was black box testing which based its test cases on the specifications of the software component under test. Functional test was performed in combination of individual module testing as well as integration testing. Test data were prepared in line with the user stories. Expected results were monitored by examining the user interface. The coverage includes GUI testing, System testing, End-To-End flows across multiple configurations. The testing cycle included simulation of multiple identity schema and respective UI schema configurations.
-
-&#x20;
-
-<p align="center"> </p>
-
-<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Total</td><td valign="top">Passed</td><td valign="top">Failed</td><td valign="top">Skipped</td></tr><tr><td valign="top">655</td><td valign="top">562</td><td valign="top">93</td><td valign="top">0</td></tr><tr><td valign="top">Test Rate: 100%, With Pass Rate: 85%</td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
-
-&#x20;
-
-### UI Automation results
-
-Below section provides details on UI Automation by executing MOSIP functional automation Framework.
-
-&#x20;
-
-<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Total</td><td valign="top">Passed</td><td valign="top">Failed</td><td valign="top">Skipped</td></tr><tr><td valign="top">17</td><td valign="top">17</td><td valign="top">0</td><td valign="top">0</td></tr><tr><td valign="top">Test Rate: 100% With Pass Rate: 100%</td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
-
-&#x20;
-
-&#x20;
-
-Functional and test rig code base branch which is used for the above metrics is:
-
-Hash Tag: sha256:52554ad1062b28e67973e422f046bbc4b49ddad525498017996ed100422d1915
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-### Verify API Test Rig Automation results
-
-Below section provides details on UI Automation by executing MOSIP functional automation Framework.
-
-&#x20;
-
-<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Total</td><td valign="top">Passed</td><td valign="top">Failed</td><td valign="top">Skipped</td></tr><tr><td valign="top">29</td><td valign="top">29</td><td valign="top">0</td><td valign="top">0</td></tr><tr><td valign="top">Test Rate: 100% With Pass Rate: 100%</td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
-
-&#x20;
-
-&#x20;
-
-Functional and test rig code base branch which is used for the above metrics is:
-
-Hash Tag: sha256:7c6529869cec006ae825ed85cc9af57818db11f3ed738de05e71bc9f31dfd532
-
-&#x20;
-
-### Detailed Test metrics
-
-Below are the detailed test metrics by performing manual/automation testing. The project metrics are derived from Defect density, Test coverage, Test execution coverage, test tracking and efficiency.
-
-&#x20;
-
-The various metrics that assist in test tracking and efficiency are as follows:
-
-&#x20;
-
-●     Passed Test Cases Coverage: It measures the percentage of passed test cases. (Number of passed tests / Total number of tests executed) x 100
-
-●     Failed Test Case Coverage: It measures the percentage of all the failed test cases. (Number of failed tests / Total number of test cases executed) x 100
-
-&#x20;
-
-Git hub link for the xls file:
-
+GitHub link for the XLS file:  
 \<TBD>
