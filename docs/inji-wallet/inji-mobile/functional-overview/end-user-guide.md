@@ -12,7 +12,7 @@ The below sections explain the steps for installing the Inji Wallet application 
 
 #### On Android device
 
-1. To install the Inji Wallet app on an Android smartphone, click [here](https://drive.google.com/drive/folders/1SRHhFxQBNfOc-cdPU8VlKecIdc-WkuGZ) to get the Inji Wallet `apk` file for installation.
+1. To install the Inji Wallet app on an Android smartphone, click [**here**](https://drive.google.com/drive/folders/1gBjFSdpjxU4bsZi7-xS59W1-EIFKrkS8) to get the Inji Wallet `apk` file for installation.
 2. Transfer the `apk` file onto the smartphone on which it is to be installed.
 3. Click on the `apk` file and follow the OS installation instructions.
 
