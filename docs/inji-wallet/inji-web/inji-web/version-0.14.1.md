@@ -25,10 +25,10 @@ This patch is focused solely on infrastructure image updates. No new features ar
 
 ### Repositories Released
 
-| Module       | Version                                                          |
-| ------------ | ---------------------------------------------------------------- |
-| **inji-web** | [0.14.1](https://github.com/mosip/inji-web/tree/v0.14.1)         |
-| **mimoto**   | [0.19.1](https://app.gitbook.com/u/J3VZVcoSqjX2LqmZbSg5nHJZEPI2) |
+| Module       | Version                                                  |
+| ------------ | -------------------------------------------------------- |
+| **inji-web** | [0.14.1](https://github.com/mosip/inji-web/tree/v0.14.1) |
+| **mimoto**   | [0.19.1](https://github.com/mosip/mimoto/tree/v0.19.1)   |
 
 ### Compatible Modules
 
