@@ -8,14 +8,14 @@
 
 This is the first question you could ask and the answer is No! If you have the Infrastructure ready and you just want to deploy the Inji stack you can directly jump to the [Inji Stack Deployment](deploy.md#inji-stack-deployment) section.
 
-### How is this guide structured and organized?
+### How is this guide structured and organized? 
 
-1. [**Introduction**](deploy.md#introduction): Overview of Inji Stack, deployment scenarios, skill sets required, architecture, and considerations for on-premise deployments.
-2. [**Prerequisites**](deploy.md#prerequisites-for-overall-deployment): Details on infrastructure, hardware/software requirements, and initial setup.
-3. [**Base Infrastructure Setup**](deploy.md#base-infrastructure-setup): Steps to provision Kubernetes, NGINX, networking, and optional observation clusters.
-4. [**Core Infrastructure Configuration**](deploy.md#core-infrastructure-components-setup): Installation and configuration of databases, object storage, secrets, config server, and artifactory.
-5. [**Inji Stack Deployment**](deploy.md#inji-stack-deployment): Step-by-step instructions to deploy Inji modules (Certify, Mimoto, Web UI, Verify) with configuration guidance.
-6. [**Contribution and Community**](deploy.md#contribution-and-community): Ways you can contribute code to this application or reach out if you run into issues while trying out the application.
+1. [**Introduction**](deploy.md#introduction): Provides an overview of the Inji stack, deployment scenarios, required skill sets, system architecture, and key considerations for on-premise deployments.
+2. [**Prerequisites**](deploy.md#prerequisites-for-overall-deployment): Outlines infrastructure details, hardware/software/network requirements, and initial setup steps.
+3. [**Base Infrastructure Setup**](deploy.md#base-infrastructure-setup): Guides you through setting up the foundational infrastructure for Inji, including Kubernetes provisioning, NGINX configuration, networking, and optionally, the observability cluster and monitoring module.
+4. [**Core Infrastructure Configuration**](deploy.md#core-infrastructure-components-setup): Explains the external services required—such as the database, artifactory, etc.,—and provides steps for their installation and configuration.
+5. [**Inji Stack Deployment**](deploy.md#inji-stack-deployment): Offers step-by-step instructions to deploy Inji modules (Certify, Wallet, Verify) along with configuration guidance.
+6. [**Contribution and Community**](deploy.md#contribution-and-community): Highlights how you can contribute code, share feedback, or reach out for support while working with the application.
 
 Each section provides direct steps and references to external resources for a streamlined deployment experience.
 
@@ -40,11 +40,11 @@ Deploying Inji Stack is easier while you have Base Infrastructure ready, still, 
 **Note**: The basic Skill-sets mentioned below, in fact, expects you to know the following to be able to deploy it from scratch and that too on a bare metal servers (On-Premise). This should not get intimidating as in typical scenarios we expect the infrastructure to be deployed by an experienced 'System-Admin/DevOps'. However in case you want to evangelize Inji in your organization and want to have a hands-on with the deployment, this guide helps you with the steps and instructions to achieve this.
 {% endhint %}
 
-* **Kubernetes Administration**: Understanding of Kubernetes concepts, cluster setup, resource management, and troubleshooting.
 * **Linux System Administration**: Proficiency in Linux command-line operations, user and permission management, and basic networking.
-* **Containerization**: Experience with Docker or similar container technologies for building and managing service containers.
-* **Helm**: Familiarity with Helm for managing Kubernetes manifests and deployments.
 * **Networking Fundamentals**: Knowledge of firewalls, load balancers, DNS, and secure network configuration.
+* **Containerisation**: Experience with Docker or similar container technologies for building and managing service containers.
+* **Kubernetes Administration**: Understanding of Kubernetes concepts, cluster setup, resource management, and troubleshooting.
+* **Helm**: Familiarity with Helm for managing Kubernetes manifests and deployments.
 * **Database Management**: Basic skills in managing PostgreSQL or similar databases, including initialization and schema setup.
 * **Configuration Management**: Ability to manage application configuration files, secrets, and certificates securely.
 * **Monitoring and Logging**: Understanding of logging and monitoring tools to observe system health and troubleshoot issues.
@@ -77,24 +77,23 @@ The section helps you to have a quick understanding of what you should expect wh
   * Reverse Proxy
   * CDN/Cache management
   * Load balancing
-* Kubernetes cluster is administered using the Rancher and rke tools.
-  * We have two Kubernetes clusters:
-    * \[Optional] **Observation cluster** - This cluster is part of the observation plane and assists with administrative tasks. By design, this is kept independent from the actual cluster as a good security practice and to ensure clear segregation of roles and responsibilities. As a best practice, this cluster or its services should be internal and should never be exposed to the external world.
+* Kubernetes (k8's) cluster is administered using the rke tools and kubectl commands.
+* We have two k8's clusters:
+  * **Observation cluster** \[Optional] - This cluster is part of the observation plane and assists with administrative tasks. By design, this is kept independent from the actual cluster as a good security practice and to ensure clear segregation of roles and responsibilities. As a best practice, this cluster or its services should be internal and should never be exposed to the external world.
     * Rancher is used for managing the Inji cluster.
     * Keycloak in this cluster is used to manage user access and rights for the observation plane.
-    * It is recommended to configure log monitoring and network monitoring in this cluster.
+    * It is recommended to configure log monitoring and network monitoring in this cluster during production deployment.
     * In case you have an internal container registry, then it should run here.
-  * **Inji cluster** - This cluster runs all the Inji components and certain third-party components like the kafka, keycloak etc.
-  * Inji External Components
-  * Inji Services
+  * **Inji cluster** - This cluster runs all the Inji components and core infrastructure components  like kafka, Postgres, minio, etc.
+    * Inji Services are deployed in this cluster.
 
 ## Prerequisites for Overall Deployment
 
-While we have placed the **Prerequisites** specific to a section under the respective section itself, here, this '**Prerequisites**' lists the common ones here which you will need no matter which component you are deploying such as Wireguard, PC - Tools and Utilities etc.
+While we have placed the **Prerequisites** specific to a section under respective sections itself, here, this '**Prerequisites**' lists the common ones which you will need no matter which component you are deploying such as Wireguard, PC - Tools and Utilities etc.
 
 ### Personal Computer
 
-Follow the steps mentioned here to install the required tools on your personal computer to create and manage the k8 cluster using RKE1.
+Follow the steps mentioned here to install the required tools on your personal computer to create and manage the k8's cluster.
 
 #### Operating Systems
 
@@ -104,41 +103,37 @@ The Inji stack can be deployed with a PC having one of the following operating s
 * **Windows**
 * **macOS (OSX)**
 
-{% hint style="success" %}
-**Note:** Most deployment scripts and tools are tested primarily on Linux.
-{% endhint %}
+{% include "../../.gitbook/includes/note-most-deployment-scrip....md" %}
 
 #### Tools and Utilities
 
 You should have these tools installed on your local machine from where you will be running the ansible playbooks to create and manage the k8 cluster using RKE1.
 
-* [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html).
-* [Rancher](../../inji-wallet/inji-web/rancher/).
+* [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html) - version > 2.12.4
 * Command line utilities:
-  * kubectl
-  * helm
-  * rke (rke version: v1.3.10)
-  * istioctl (istioctl version: v1.15.0)
-*   Helm repos:
+  * [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)- version 2.12.4 or higher
+  * [helm](https://helm.sh/docs/intro/install/)- any client version above 3.0.0 and add below repos as well
 
-    ```sh
-    helm repo add bitnami https://charts.bitnami.com/bitnami
-    helm repo add mosip https://mosip.github.io/mosip-helm
+```
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo add mosip https://mosip.github.io/mosip-helm
+```
 
-    ```
+* [rke](https://rancher.com/docs/rke/latest/en/installation/) : version: [1.3.10](https://github.com/rancher/rke/releases/tag/v1.3.10)
+* [Istioctl](https://istio.io/latest/docs/setup/getting-started/#download) : version: 1.15.0
 *   Create a directory as mosip in your PC and:
 
-    * clone k8’s infra repo with tag : 1.2.0.1 (**whichever is the latest version**) inside mosip directory. `git clone https://github.com/mosip/k8s-infra -b v1.2.0.1`
-    * clone mosip-infra with tag : 1.2.0.1 (**whichever is the latest version**) inside mosip directory. `git clone https://github.com/mosip/mosip-infra -b v1.2.0.1`
-    * Set below mentioned variables in bashrc
+    * clone k8’s infra repo with tag : 1.2.0.2 (**whichever is the latest version**) inside mosip directory. `git clone https://github.com/mosip/k8s-infra -b v1.2.0.2`
+    * clone mosip-infra with tag : 1.2.0.2 (**whichever is the latest version**) inside mosip directory. `git clone https://github.com/mosip/mosip-infra -b v1.2.0.2`
+    * Set below mentioned variables in bashrc and excute command `source .bashrc`
 
     ```
-    export MOSIP_ROOT=<location of mosip directory>
-    export K8_ROOT=$MOSIP_ROOT/k8s-infra
-    export INFRA_ROOT=$MOSIP_ROOT/mosip-infra
+    export INJI_ROOT=<location of mosip directory>
+    export K8_ROOT=$INJI_ROOT/k8s-infra
+    export INFRA_ROOT=$INJI_ROOT/mosip-infra
     ```
 
-    `source .bashrc`
+
 
     > Note: Above mentioned environment variables will be used throughout the installation to move between one directory to other to run install scripts.
 * Wireguard Client - Refer to the [Setup Wireguard Client on your PC](deploy.md#setup-wireguard-client-on-your-pc) section for the instructions.
@@ -215,7 +210,8 @@ ansible-playbook -i hosts.ini docker.yaml
 * Setup Wireguard server
   * SSH to wireguard VM
   * `ssh -i <path to .pem> ubuntu@<Wireguard server public ip>`
-  * Create directory for storing wireguard config files.`mkdir -p wireguard/config`
+  * Create directory for storing wireguard config files.\
+    `mkdir -p wireguard/config`
   *   Install and start wireguard server using docker as given below:
 
       ```sh
@@ -533,7 +529,7 @@ cp hosts.ini.sample hosts.ini
     > Note :
     >
     > * Add below mentioned details:
-    > * ansible\_host : internal IP of NFS server. eg. 10.12.23.21
+    > * ansible\_host : internal IP of NFS server. eg. 10.12.23.21. In our reference implementation using nginx server
     > * ansible\_user : user to be used for installation, in this ref-impl we use Ubuntu user.
     > * ansible\_ssh\_private\_key\_file : path to pem key for ssh to wireguard server. eg. `~/.ssh/wireguard-ssh.pem` ![hosts.ini](../../../_images/nfs-hosts-ini.png).
 * Make sure Kubeconfig file is set correctly to point to required mosip cluster.
@@ -603,7 +599,7 @@ Script prompts for:
 {% endhint %}
 
 * Post installation check:
-  * Check status of NFS Client Provisioner.
+  * Check status of NFS Client Provisioner from your PC, make sure pointing to right kubeconfig file.
 
 ```sh
 kubectl -n nfs get deployment.apps/nfs-client-provisioner 
@@ -618,7 +614,7 @@ kubectl -n nfs get deployment.apps/nfs-client-provisioner
   nfs-client           cluster.local/nfs-client-provisioner   Delete          Immediate           true                   40s
 ```
 
-#### Inji K8 (Kubernetes) cluster Nginx server setup
+#### Inji K8's (Kubernetes) cluster Nginx server setup
 
 **SSL certificate creation**
 
@@ -649,7 +645,7 @@ kubectl -n nfs get deployment.apps/nfs-client-provisioner
     * Certificates created are valid for 3 months only.
 * `Wildcard SSL certificate` [renewal](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/docs/wildcard-ssl-certs-letsencrypt.md#ssl-certificate-renewal). This will increase the validity of the certificate for next 3 months.
 
-**Nginx server setup for MOSIP K8's cluster**
+**Nginx server setup for Inji K8's cluster**
 
 * Move to nginx directory in your local:
 * `cd $K8_ROOT/mosip/on-prem/nginx/`
@@ -698,7 +694,8 @@ node-nginx ansible_host=<internal ip> ansible_user=root ansible_ssh_private_key_
 **Check Overall nginx and istio wiring**
 
 * Install `httpbin`: This utility docker returns http headers received inside the cluster.
-* `httpbin` can be used for general debugging - to check ingress, headers etc.
+* `httpbin` can be used for general debugging - to check ingress, headers etc.\
+  Make sure pointing to right kubeconfig file.
 
 ```sh
   cd $K8_ROOT/utils/httpbin
@@ -791,9 +788,9 @@ cd $K8_ROOT/monitoring/alerting/
 > * For production environments, alternative logging tools can be used.
 > * These steps can also be skipped in development environments if logging is not needed.
 
-MOSIP uses [Rancher Fluentd](https://ranchermanager.docs.rancher.com/v2.0-v2.4/explanations/integrations-in-rancher/cluster-logging/fluentd) and elasticsearch to collect logs from all services and reflect the same in Kibana Dashboard.
+Inji uses [Rancher Fluentd](https://ranchermanager.docs.rancher.com/v2.0-v2.4/explanations/integrations-in-rancher/cluster-logging/fluentd) and elasticsearch to collect logs from all services and reflect the same in Kibana Dashboard.
 
-* Install Rancher FluentD system : Required for screpping logs outs of all the microservices from MOSIP k8 cluster.
+* Install Rancher FluentD system : Required for screpping logs outs of all the microservices from Inji k8 cluster.
   * Install Logging from Apps and marketplace within the Rancher UI.
   * Select Chart Version `100.1.3+up3.17.7` from Rancher console -> Apps & Marketplaces.
 * Configure Rancher FluentD
@@ -815,12 +812,12 @@ MOSIP uses [Rancher Fluentd](https://ranchermanager.docs.rancher.com/v2.0-v2.4/e
 
       ./elasticsearch-ilm-script.sh
       ```
-  * MOSIP provides set of Kibana Dashboards for checking logs and throughputs.
+  * Inji provides set of Kibana Dashboards for checking logs and throughputs.
     * Brief description of these dashboards are as follows:
       * [01-logstash.ndjson](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/logging/dashboards/01-logstash.ndjson) contains the logstash _Index_ Pattern required by the rest of the dashboards.
       * [02-error-only-logs.ndjson](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/logging/dashboards/03-service-logs.ndjson) contains a Search dashboard which shows only the error logs of the services, called `MOSIP Error Logs` dashboard.
-      * [03-service-logs.ndjson](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/logging/dashboards/03-service-logs.ndjson) contains a Search dashboard which show all logs of a particular service, called MOSIP Service Logs dashboard.
-      * [04-insight.ndjson](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/logging/dashboards/04-insight.ndjson) contains dashboards which show insights into MOSIP processes, like the number of UINs generated (total and per hr), the number of Biometric deduplications processed, number of packets uploaded etc, called `MOSIP Insight` dashboard.
+      * [03-service-logs.ndjson](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/logging/dashboards/03-service-logs.ndjson) contains a Search dashboard which show all logs of a particular service, called Inji Service Logs dashboard.
+      * [04-insight.ndjson](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/logging/dashboards/04-insight.ndjson) contains dashboards which show insights into Inji processes, like the number of UINs generated (total and per hr), the number of Biometric deduplications processed, number of packets uploaded etc, called `Inji Insight` dashboard.
       * [05-response-time.ndjson](mosip/on-prem-installation-guidelines.md) contains dashboards which show how quickly different MOSIP Services are responding to different APIs, over time, called `Response Time` dashboard.
 * Import dashboards:
   * `cd K8_ROOT/logging`
@@ -1147,7 +1144,7 @@ Inji Certify is deployed as **containerized microservices** in your Kubernetes c
 
 #### Deployment Architecture for Inji Certify
 
-<figure><img src="../../.gitbook/assets/ic-deployment-diagram.png" alt="Inji Certify Deployment Architecture"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/certify-deployment-diagram-final.drawio.png" alt=""><figcaption></figcaption></figure>
 
 **Where Will it Run?**
 
@@ -1232,11 +1229,27 @@ cd ../inji-certify
 kubectl get pods -n inji-certify
 ```
 
+{% hint style="success" %}
+Note : \
+Ensure nelow mentioned services are listed in the output result of above command.\
+You can even check Rancher incase deployed.\
+1\. inji-certify\
+2\. inji-softhsm
+{% endhint %}
+
 **Verify Service Endpoints**
 
 ```sh
 kubectl get services -n inji-certify
 ```
+
+{% hint style="success" %}
+Note : \
+Ensure below mentioned services are listed in the output result of above command.\
+You can even check Rancher incase deployed.\
+1\. inji-certify\
+2\. inji-softhsm
+{% endhint %}
 
 **Test External Access**
 
@@ -1244,9 +1257,9 @@ kubectl get services -n inji-certify
 curl -k https://injicertify.sandbox.xyz.net/health
 ```
 
-#### Success Criteria for Inji Certify Deployment
+<figure><img src="../../.gitbook/assets/curl-response.png" alt=""><figcaption></figcaption></figure>
 
-**Note:** Screenshots for each success criteria step will be added shortly to provide a visual reference.
+#### Success Criteria for Inji Certify Deployment
 
 1. **Deployment Scripts Executed Successfully**
    * All deployment scripts (`install.sh`) for Redis and Inji Certify microservices complete without errors.
@@ -1284,7 +1297,7 @@ If deployment fails, check:
 
 You can also refer to the [ReadMe](https://github.com/mosip/inji-certify/blob/master/deploy/README.md) file for deployment steps given in individual module repositories.
 
-**Need help or have questions?**  
+**Need help or have questions?**\
 In case you encounter any issues or have queries while using or deploying the application, please post them in the [MOSIP Community](https://community.mosip.io/). The community and maintainers are available to assist you.
 
 ### Deploying Mimoto backend for Inji Wallet
@@ -1476,9 +1489,8 @@ If deployment fails, check:
 
 You can also refer to the [ReadMe](https://github.com/mosip/mimoto/blob/develop/deploy/README.md) file for deployment steps given in individual module repositories.
 
-**Need help or have questions?**  
+**Need help or have questions?**\
 In case you encounter any issues or have queries while using or deploying the application, please post them in the [MOSIP Community](https://community.mosip.io/). The community and maintainers are available to assist you.
-
 
 ### Deploying Inji Web Wallet
 
@@ -1492,7 +1504,7 @@ Inji Web UI and dataShare are deployed as **containerized microservices** in you
 
 #### Deployment Architecture for Inji Web Wallet
 
-<figure><img src="../../.gitbook/assets/iww-deployment-diagram.png" alt="Inji Web Deployment Architecture"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/inji-wallet-web-deployment-final.drawio.png" alt=""><figcaption></figcaption></figure>
 
 **Where Will It Run?**
 
@@ -1645,9 +1657,8 @@ If deployment fails, check:
 
 You can also refer to the [ReadMe](https://github.com/mosip/inji-web/blob/develop/deploy/inji-web/README.md) file for deployment steps given in individual module repositories.
 
-**Need help or have questions?**  
+**Need help or have questions?**\
 In case you encounter any issues or have queries while using or deploying the application, please post them in the [MOSIP Community](https://community.mosip.io/). The community and maintainers are available to assist you.
-
 
 ### Deploying Inji Verify
 
@@ -1661,7 +1672,7 @@ Inji Verify is deployed as **containerized microservices** in your Kubernetes cl
 
 #### Deployment Architecture for Inji Verify
 
-<figure><img src="../../.gitbook/assets/iv-deployment-diagram.png" alt="Inji Verify Deployment Architecture"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/verify-deployment-diagram-final.drawio.png" alt=""><figcaption></figcaption></figure>
 
 **Where Will It Run??**
 
@@ -1808,7 +1819,6 @@ If deployment fails, check:
 5. **Logs**: Check pod logs for errors: `kubectl logs <pod-name> -n inji-verify`
 
 You can also refer to the [ReadMe](https://github.com/mosip/inji-verify/blob/develop/deploy/README.md) file for deployment steps given in individual module repositories.
-
 
 ## Contribution and Community
 
