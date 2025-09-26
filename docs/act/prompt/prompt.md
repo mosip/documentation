@@ -11,6 +11,17 @@ How should I implement Doc-Detective, say for eample' Inji Web Deployment sectio
 
 
 
+## Resources and Youtube video transcript extraction for adding this as description for each video under 'Resources section'
+
+
+* This is the full transcript
+* Summarize the main purpose of the demonstration and explain its value for viewers.
+* Identify and list the five most important takeaways from the video transcript.
+* For each takeaway, provide a brief introductory sentence followed by a concise bullet point.
+* Add your summary and key takeaways at the end of this page, ensuring no existing content is removed.
+
+
+
 ## Pulling content from repo
 
 * The following instruction refers to the repository readme where it has described the process
