@@ -8,7 +8,7 @@
 
 ## Overview
 
-**Inji Certify v0.12.0**, brings enhancements in automation of testing to support latest eSignet release v1.6.2
+**Inji Certify v0.12.1**, brings enhancements in automation of testing to support latest eSignet release v1.6.2
 
 ## Major Highlights/ Features <a href="#major-highlights-features" id="major-highlights-features"></a>
 
