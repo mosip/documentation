@@ -4,7 +4,7 @@
 
 **Support**: Developer Release
 
-**Release Date**: Coming Soon
+**Release Date**: 30th September, 2025
 
 ### Overview
 
@@ -47,13 +47,11 @@ We are excited to announce the release of **Inji Verify v0.14.0**, which brings 
 * Verification results now display **all originally requested credentials**, including any newly shared after a missing credential prompt.
 * Status clearly shown (Valid, Invalid, Valid but Expired) with completion confirmation once all checks are done.
 
-**5. Update Postgres Image Source:** Inji Verify has been updated to stop using Bitnami-hosted Postgres images. The Helm charts, shell scripts, and configurations now point to MOSIP-INT repositories, ensuring greater security, reliability, and long-term availability. All deployments have been validated to work seamlessly with the updated image source.
-
 ### Repositories: Released/Dependent
 
-| Repositories | Tags: Released/Dependent |
-| ------------ | ------------------------ |
-| Inji Verify  | v0.14.0                  |
+| Repositories | Tags: Released/Dependent                                     |
+| ------------ | ------------------------------------------------------------ |
+| Inji Verify  | [v0.14.0](https://github.com/mosip/inji-verify/tree/v0.14.0) |
 
 ### Projects: Released
 
