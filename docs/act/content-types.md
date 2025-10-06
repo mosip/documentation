@@ -1,7 +1,7 @@
 Inji stack is Digital Credentialing stack
 It is open source
 Created for any organization to take it an build upon it
-While we have documentation which covers almost everything as you can learn from our repoand summary.md, I still feet it lacks several content types to help developer community to refer to and easily have a handson with exploring the stack
+While we have documentation which covers almost everything as you can learn from our repo and summary.md, I still feel it lacks several content types to help developer community to refer to and easily have a handson with exploring the stack
 What are the more of content types, category of content, should we add which may suffice
 
 ## Additional Content Types for Enhanced Developer Experience
