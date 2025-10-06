@@ -81,8 +81,8 @@ Below is the list of fixes as part of the 0.14.0 release:
 
 ### Documentation
 
-* [Feature documentation](../../../overview/features.md)
-* [Integration Guide](../../../../inji-wallet/inji-mobile/technical-overview/integration-guide/openid4vp.md)
-* [API Documentation](https://mosip.stoplight.io/studio/inji-verify)
-* [Collab Guide](../../../functional-overview/releases-1/inji-verify-collab-guide.md)
-* [QA Report](test-report.md)
+* [Feature documentation](https://docs.inji.io/inji-verify/overview/features)
+* [Integration Guide](https://docs.inji.io/inji-verify/technical-overview/integration-guides/openid4vp-vp-verification-integration-guide)
+* [API Documentation](https://mosip.stoplight.io/docs/inji-verify)
+* [Collab Guide](https://docs.inji.io/inji-verify/functional-overview/releases-1/inji-verify-collab-guide)
+* [QA Report](https://docs.inji.io/inji-verify/releases/version-0.14.0)
