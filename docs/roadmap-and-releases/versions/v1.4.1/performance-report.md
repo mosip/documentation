@@ -17,8 +17,9 @@ This performance report focuses specifically on benchmarking and evaluating eSig
 
 1. Performance testing is limited to eSignet v1.4.1 and does not extend to earlier or future versions.
 2. Only OTP-based authentication flows were included in the performance assessment. Other factors such as biometrics or password-based flows were excluded.
-3. The system was tested to achieve and maintain a constant throughput of 100 Transactions Per Second (TPS), both with and without intentional delays introduced in the mock IDA system. The goal was to ensure consistent performance while remaining within the predefined Service Level Agreements (SLAs) for response times.
-4. All performance bottlenecks, failures, or irregularities encountered during testing were documented. Where applicable, fixes and optimizations were implemented and validated to ensure compliance with performance targets.
+3. The system was tested to achieve and maintain a constant throughput of 100 requests per second (RPS), which in turn translates to [15 transactions per second (TPS)](#user-content-fn-1)[^1] based on the 7 endpoints required to complete 1 transaction.
+4. System was able to maintain the throughput of 100 RPS both with and without intentional delays introduced in the mock IDA system. The goal was to ensure consistent performance while remaining within the predefined Service Level Agreements (SLAs) for response times.
+5. All performance bottlenecks, failures, or irregularities encountered during testing were documented. Where applicable, fixes and optimizations were implemented and validated to ensure compliance with performance targets.
 
 ## Approach
 
@@ -210,3 +211,6 @@ The performance of the system was evaluated based on the defined scope and appro
 
 
 
+
+
+[^1]: 100 RPS are the individual requests that are hit for each endpoint. For the performance run there are 7 individual endpoints that are required to be hit sequentially to complete 1 transaction. Hence 100/7 = 15 (approx) becomes the TPS for the performance run.
