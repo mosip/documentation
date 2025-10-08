@@ -1,0 +1,37 @@
+did
+mimoto
+did.json
+Zero knowledge
+How add a new VC?
+Where is the UID format documented?
+add credencial
+mimoto setup
+Where can I find DID docs in this space?
+el data provider plugin sobreescribe las variables de conexion del certify-default.properties
+controller uid
+Exception occurred while verification of the verifiable Credentialio.mosip.mimoto.exception.VCVerificationException:  --> Exception during Verification: Error while doing verification of verifiable credential
+mimoto installation
+You need to enable JavaScript to run this app.
+what is an Issuer?
+what is VC?
+mosip.certify.key-values
+offline verification
+Esignet
+Where are the data-provider configs stored?
+API document for INJI Verify
+VP full form
+Where is multi-tenancy covered here?
+Multi-Tenancy
+vc-verification
+oidc
+credential types
+How does an issuer sign VCs?
+Where can I find descentralized identifiers docs in this space?
+What Does Inji Include
+Add a new VC?
+
+On the basis of content types you identified that will help the docs now analyse the summary.md in this repo which is the Information Architecture as well as the Sitemap of this site
+Can you propose a better Information by combining what is already there with the new content types identified? and write below
+
+No, you did not learn from summary.md
+First you put the summary.md structure and then fit the newly identified content types to that structure at appropriate placed

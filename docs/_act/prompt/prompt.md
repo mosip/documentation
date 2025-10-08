@@ -1,6 +1,15 @@
 # Inji Stack deployment guide
 
 
+## Documentation Improvements and missing Content Types
+Inji stack is Digital Credentialing stack
+It is open source
+Created for any organization to take it an build upon it
+While we have documentation which covers almost everything as you can learn from our repo and summary.md, I still feel it lacks several content types to help developer community to refer to and easily have a handson with exploring the stack
+What are the more of content types, category of content, should we add which may suffice
+
+
+
 ## Doc Detective
 This docs now contains the comprensive instructions to deploy inji
 However It is quite lengthy
