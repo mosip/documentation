@@ -82,7 +82,7 @@ Use the QR codes provided below to explore the Inji Verify application for [Scan
 
 ```json
 {
-        "issuanceDate": "2025-09-23T05:02:24.720Z",
+    "credential": {
         "credentialSubject": {
             "gender": "Male",
             "primaryCropType": "Maize",
@@ -96,7 +96,64 @@ Use the QR codes provided below to explore the Inji Verify application for [Scan
             "farmerID": "987654321",
             "villageOrTown": "Koramangala",
             "district": "Bangalore",
-            "id": "did:jwk:eyJrdHkiOiJSU0EiLCJlIjoiQVFBQiIsInVzZSI6InNpZyIsImtpZCI6IklpTzlrcDA3QVJtMHlKcGlVVjNkWGktdzdpUTlZUUxBbk9tRHdBc2JrT0EiLCJhbGciOiJSUzI1NiIsIm4iOiJpVWRaY1BrSFBWSmgyRFlJa2ZqMUM0bmgxLTFkeU9pTDZDSl9IVW1GRlZkMzZrV0p6am5oTnVsS1BXN1NqOXVtUjd6NEhXRG9lWWxxOG5KbHctbk5mZGRGNGg5cTJsOXhjbm51M3NlZHlLOUtfRl90UnVzRFFRbndsTlA3NWl2eGl5OUt3akI1OWZFQjI0VF9BODlRRzhBVWIzdjluV3EtUGR4STBsN0xCcnFabUVBYUUxaVI4YjFnV2pQLXZYTGtqeWI1M3NfSFJHR3hoSlBRNFNBc3pXMjJRb2FYeHJqSWpBcFhEdUhmRXhxMlFZR1g2YWtucFVuR1lBbUc0TTBXdWJDNEY1V2FBWmluNGdBSFE1SkN0czRpRTAyNnRFMmptU3VTZjRMOU90UmN5NUJmTzU3TXNWY1JfTDY4eUN4ZGdyaHU5ODVIZVhWdWFEWS1mY1NJZFEifQ==",
+            "id": "did:jwk:eyJrdHkiOiJSU0EiLCJlIjoiQVFBQiIsInVzZSI6InNpZyIsImtpZCI6Iml3Qkl1Q2QzaFU1NlBWM3VTc3gzekhMc1E4SXdYckdHdmh6YkE1VlJuQkEiLCJhbGciOiJSUzI1NiIsIm4iOiJtMWlMQ0prNzA5VkpIbUF2MURsWUxsblA0UDEtLXFfU3Q3aVo3WjhWbXk0d0Mxb2FTQWxXdjFXZjlKQXg2YmQ3OXdMbDhINEkwa25GeG9FbkktTUhvOUtGRXpFcGdJNXZIUHY2X0M2dWI4RmUwaXphRVFXTlY3VEpVRG54MVZ5OU5UZS15ekFVd2dfWk91Y0pFb3hyQW54VXM5OFcyTWpyUmtZdHVQcTlKRUxVTzRJM0wxX1B5S21hRG8zN0xCR3NVamhLVmQ0X0VzTkVPQ3AwQTZwbnBaUUd1S1RteXVhMUVYSDhLWUVTSEZ4alA4NGVCaGk0YmZPSWMwQjQ2VlZrVG81WG9TeUtnRi1xemRyTGFQRGJwZGxBaVNKMEJ5Vk5jaUE3Z2ctWEJLQkV0QVd1b19EQ3pYZUsxREJKT2txMXlkWEJzeWdjeGtpVmdobnFtUTFsVHcifQ==",
+            "state": "Karnataka",
+            "landOwnershipType": "Owner"
+        },
+        "validUntil": "2027-10-09T03:08:19.711Z",
+        "validFrom": "2025-10-09T03:08:19.711Z",
+        "type": [
+            "VerifiableCredential",
+            "FarmerCredential"
+        ],
+        "@context": [
+            "https://www.w3.org/ns/credentials/v2",
+            "https://piyush7034.github.io/my-files/farmer.json",
+            "https://w3id.org/security/suites/ed25519-2020/v1"
+        ],
+        "issuer": "did:web:piyush7034.github.io:my-files:sample-ed25519",
+        "credentialStatus": {
+            "statusPurpose": "revocation",
+            "statusListIndex": "7",
+            "id": "http://localhost:8090/v1/certify/credentials/status-list/649d3d36-2719-42eb-9f00-ac479a906059#7",
+            "type": "BitstringStatusListEntry",
+            "statusListCredential": "http://localhost:8090/v1/certify/credentials/status-list/649d3d36-2719-42eb-9f00-ac479a906059"
+        },
+        "proof": {
+            "type": "Ed25519Signature2020",
+            "created": "2025-10-08T21:38:19Z",
+            "proofPurpose": "assertionMethod",
+            "verificationMethod": "did:web:piyush7034.github.io:my-files:sample-ed25519#LYs95rEHKsqm1_TIFJxffLUXHZL1rM_h-UuwRi6PtN4",
+            "proofValue": "z5Z3Rj9rhV5b6whiq4EgZaD8gmtsBtfMEqwNXAgasCxtBRCpc35DkiGFyRfy8NYDtXBDX6RjAUpWfgNGn94t2ywgm"
+        }
+    }
+}
+```
+
+### Sample QR code - Valid VC Data
+
+<div align="center"><figure><img src="../../../.gitbook/assets/valid-vc-dm-1-1.PNG" alt="" width="375"><figcaption><p>Valid Verifiable Credentials - Data Model v1.1</p></figcaption></figure></div>
+
+### Data Model v1.1
+
+```json
+{
+    "credential": {
+        "issuanceDate": "2025-10-09T03:05:40.782Z",
+        "credentialSubject": {
+            "gender": "Male",
+            "primaryCropType": "Maize",
+            "mobileNumber": "9876543210",
+            "postalCode": "453000",
+            "landArea": "3 hectares",
+            "fullName": "John Doe",
+            "secondaryCropType": "Rice",
+            "dateOfBirth": "25-05-1990",
+            "face": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAFCAYAAABW1IzHAAAAHklEQVQokWNgGPaAkZHxPyMj439sYrSQo51PBgsAALa0ECF30JSdAAAAAElFTkSuQmCC",
+            "farmerID": "987654321",
+            "villageOrTown": "Koramangala",
+            "district": "Bangalore",
+            "id": "did:jwk:eyJrdHkiOiJSU0EiLCJlIjoiQVFBQiIsInVzZSI6InNpZyIsImtpZCI6IkVIdXU5eU5MN1VFcnFDd0hWOUdPTk5KWWdxQmVvMVhUTmY0OU95Tk1LN0EiLCJhbGciOiJSUzI1NiIsIm4iOiJ2VmF1dFFYa3JMUXVaU2hGWWFDNkRMNEZOcnMzcm5meTVkVjhyWVJRQnhyOW1oZllfdGxwTzc5QzRiZnplS1BzaVBXN0c4NEMtZGt4QlNOR3RXV0wwdy1oX3JOd3Y2eUFMT1VZaGdtcnZVeGhWakhCRzFMdTFtTUhERF9JZlpJb0lpV1JRZkpvMGZYMFBzZ2FrRWhIZmxjWHdPNk1DaVItNGVNTUdhNU0zR2ViTVQtUHlsQVVKYzJiN2NoaGFvTlJYQWNWbTBsZTFmUG5RRGJfQ21XMENxOW9kOHFjQUwtellqc0F3MnJzMWxhZ3RDcTdsSXVIWkszUnF2U0NQb2lmSG1ZZEZvdzZnNkF5eTlyNzhxc2VwYkU3d3JDYS1aRF92TkxHblpTbXVac3RicmxxZkxfelFfdnlwNjM1NTMtRmNPNGlKNW1Md0w4Z2pwTWRrVmVMRFEifQ==",
             "state": "Karnataka",
             "landOwnershipType": "Owner"
         },
@@ -109,71 +166,17 @@ Use the QR codes provided below to explore the Inji Verify application for [Scan
             "https://piyush7034.github.io/my-files/farmer.json",
             "https://w3id.org/security/suites/ed25519-2020/v1"
         ],
-        "issuer": "did:web:piyush7034.github.io:my-files:piyush",
-        "expirationDate": "2027-09-23T05:02:24.720Z",
+        "issuer": "did:web:piyush7034.github.io:my-files:sample-ed25519",
+        "expirationDate": "2027-10-09T03:05:40.782Z",
         "proof": {
             "type": "Ed25519Signature2020",
-            "created": "2025-09-22T23:32:24Z",
+            "created": "2025-10-08T21:35:40Z",
             "proofPurpose": "assertionMethod",
-            "verificationMethod": "did:web:piyush7034.github.io:my-files:piyush#mI5Tk0tnlL4tymGuR7084zLWzKBV7j2Jsz4CPbL7IXI",
-            "proofValue": "z4CSUxdD3EgUfzDTHdCNBbAyFVNqqShwCZYRC6sjpPxvr8iDv3ou9AwWd6CsG81PPGuzsYATterc7bjx6n2zd15kT"
+            "verificationMethod": "did:web:piyush7034.github.io:my-files:sample-ed25519#LYs95rEHKsqm1_TIFJxffLUXHZL1rM_h-UuwRi6PtN4",
+            "proofValue": "z3BW5Tx6ZHJ53rriixAwkrbjGEurLP5eNWwZQQkmEMEEWtLK5qJRThA6wyuyaiin7ucfaUDk4H2BKVBLpSAqcDPcu"
         }
     }
-```
-
-### Sample QR code - Valid VC Data
-
-<div align="center"><figure><img src="../../../.gitbook/assets/valid-vc-dm-1-1.PNG" alt="" width="375"><figcaption><p>Valid Verifiable Credentials - Data Model v1.1</p></figcaption></figure></div>
-
-### Data Model v1.1
-
-```json
-{
-        "credentialSubject": {
-            "gender": "Male",
-            "primaryCropType": "Maize",
-            "mobileNumber": "9876543210",
-            "postalCode": "453000",
-            "landArea": "3 hectares",
-            "fullName": "John Doe",
-            "secondaryCropType": "Rice",
-            "dateOfBirth": "25-05-1990",
-            "face": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAFCAYAAABW1IzHAAAAHklEQVQokWNgGPaAkZHxPyMj439sYrSQo51PBgsAALa0ECF30JSdAAAAAElFTkSuQmCC",
-            "farmerID": "987654321",
-            "villageOrTown": "Koramangala",
-            "district": "Bangalore",
-            "id": "did:jwk:eyJrdHkiOiJSU0EiLCJlIjoiQVFBQiIsInVzZSI6InNpZyIsImtpZCI6InFzNUFQTmxNcGtMNG9NZHhCaVBhR3F6TTFXWElCNW9qUVNlZVBsNHVQeXMiLCJhbGciOiJSUzI1NiIsIm4iOiJxbzhCbHRnRlk3bHFPWmJvYUZ2cjIxSDdVNzZCOTl1TEtmV1ZSWmhuR1o1UUVLUnFRRDl0c0xHeU5qaERPOXZwQ2RfVVJ5ODFlZFl5RkhjSDJiaGxmSXlCaml4U1I0dmFOS1BhMUY5YjJ3b3VfMEF4OC0wQVBoQ3FrVFNPVkhFdmpoTFNnRnhfbHd1T2h3Ykxnai1iaTM3V2FONHJlU1gwZTJlYXZFTWpfUmhUckMwQnNaaFFaNkNONkhzSDNXRkstZjM0cDZUZTFTckhKUWoyTFJvV2RYOGZwNFIyUWtXbzVwYmxla0lLRGtPVUdoc2N3MWsycnFfMWdMQkZFOHc2TlZXakc2M0lMUUdBM2ZrZzhDTE1FS2FNWV8xaXdEdmNXaEZQUS15RDdOVmtyME8xdTI3UkhTTHQ0QmlqSE14YmtSSldsQmk0aXZXMmlXTzV0aDJVQncifQ==",
-            "state": "Karnataka",
-            "landOwnershipType": "Owner"
-        },
-        "validUntil": "2027-09-23T04:57:59.122Z",
-        "validFrom": "2025-09-23T04:57:59.122Z",
-        "type": [
-            "VerifiableCredential",
-            "FarmerCredential"
-        ],
-        "@context": [
-            "https://www.w3.org/ns/credentials/v2",
-            "https://piyush7034.github.io/my-files/farmer.json",
-            "https://w3id.org/security/suites/ed25519-2020/v1"
-        ],
-        "issuer": "did:web:piyush7034.github.io:my-files:piyush",
-        "credentialStatus": {
-            "statusPurpose": "revocation",
-            "statusListIndex": "0",
-            "id": "http://localhost:8090/v1/certify/credentials/status-list/d8813e53-cc35-4e25-ba10-708f74bce23e#0",
-            "type": "BitstringStatusListEntry",
-            "statusListCredential": "http://localhost:8090/v1/certify/credentials/status-list/d8813e53-cc35-4e25-ba10-708f74bce23e"
-        },
-        "proof": {
-            "type": "Ed25519Signature2020",
-            "created": "2025-09-22T23:27:59Z",
-            "proofPurpose": "assertionMethod",
-            "verificationMethod": "did:web:piyush7034.github.io:my-files:piyush#mI5Tk0tnlL4tymGuR7084zLWzKBV7j2Jsz4CPbL7IXI",
-            "proofValue": "z2LYTojiSdg9yGaCegfyEu9quWeQNQHq93nhY7AznMChGnnuJKbjzYthq3rtkqTDSLn7JxLaAa4duZLMz4LgRxit3"
-        }
-    }
-
+}
 ```
 
 

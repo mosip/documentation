@@ -1,6 +1,15 @@
 # Inji Stack deployment guide
 
 
+## Documentation Improvements and missing Content Types
+Inji stack is Digital Credentialing stack
+It is open source
+Created for any organization to take it an build upon it
+While we have documentation which covers almost everything as you can learn from our repo and summary.md, I still feel it lacks several content types to help developer community to refer to and easily have a handson with exploring the stack
+What are the more of content types, category of content, should we add which may suffice
+
+
+
 ## Doc Detective
 This docs now contains the comprensive instructions to deploy inji
 However It is quite lengthy
@@ -8,6 +17,17 @@ Also, We don't want to bother about the Infra Part
 I also want to implement Doc-Detective
 How should I implement Doc-Detective, say for eample' Inji Web Deployment section which first confirmas that the prerequisite infra is ready with VMs, DNS and more and now Inji Web can be deployed
 
+
+
+
+## Resources and Youtube video transcript extraction for adding this as description for each video under 'Resources section'
+
+
+* This is the full transcript
+* Summarize the main purpose of the demonstration and explain its value for viewers.
+* Identify and list the five most important takeaways from the video transcript.
+* For each takeaway, provide a brief introductory sentence followed by a concise bullet point.
+* Add your summary and key takeaways at the end of this page, ensuring no existing content is removed.
 
 
 
