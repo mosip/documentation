@@ -91,14 +91,10 @@ Reuse old content or Connect with DevOps and Rachik
 - Configs for setup
 
 
-
-
 #### Mock Relying Party Setup (Optional)
 - Commands
 - User prompts details
 - Configs for setup
-
-
 
 
 #### Mock Relying Party UI Setup (Optional)
@@ -107,6 +103,11 @@ Reuse old content or Connect with DevOps and Rachik
 - Configs for setup
 
 ### Step 8: Testing the Deployment
+
+
+
+
+
 
 
 

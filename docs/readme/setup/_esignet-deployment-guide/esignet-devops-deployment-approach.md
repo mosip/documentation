@@ -10,7 +10,7 @@ The existing eSignet guide follows infrastructure-first approach similar to Inji
 
 ## Recommended Documentation Structure
 
-### **1. Modern eSignet Deployment Guide Structure**
+### **1. New eSignet Deployment Guide Structure**
 
 ```markdown
 # eSignet Deployment Guide
