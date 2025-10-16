@@ -4,6 +4,14 @@ icon: rocket-launch
 
 # Releases
 
+## Version: 0.20.0
+
+Name: Inji Mobile Wallet 0.20.0
+
+Date: Coming Soon&#x20;
+
+Release Notes
+
 ## Version: 0.19.0
 
 Name: Inji Mobile Wallet 0.19.0
