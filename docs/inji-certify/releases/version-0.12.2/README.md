@@ -58,4 +58,4 @@ The following table outlines the tested and certified compatibility of 0.12.2 wi
 * [Feature Documentation](https://docs.mosip.io/inji/inji-certify/functional-overview/features)
 * [Local Setup](https://docs.mosip.io/inji/inji-certify/build-and-deploy/local-setup)
 * [API Documentation](https://mosip.stoplight.io/docs/inji-certify/25f435617408e-inji-certify)
-* Test Report
+* [Test Report](test-report.md)
