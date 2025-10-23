@@ -4,9 +4,7 @@
 
 **Release Type:** Developer Release
 
-**Release Date:** Coming Soon
-
-
+**Release Date:** 23rd October, 2025
 
 ### **Overview**
 
