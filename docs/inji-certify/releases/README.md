@@ -4,11 +4,23 @@ icon: rocket-launch
 
 # Releases
 
+**Version: 0.12.2**
+
+* Name: Inji Certify 0.12.2
+* Date: 23rd October, 2025
+* [Release Notes](version-0.12.2.md)
+
+**Version: 0.12.1**
+
+* Name: Inji Certify 0.12.1
+* Date: 11th September, 2025
+* [Release Notes](version-0.12.1.md)
+
 **Version: 0.12.0**
 
 * Name: Inji Certify 0.12.0
 * Date: 26th August, 2025
-* [Release Notes](version-0.12.0/)
+* [Release Notes](version-0.12.0)
 
 **Version: 0.11.0**
 
@@ -20,25 +32,25 @@ icon: rocket-launch
 
 * Name: Inji Certify 0.10.2
 * Date: 21st Feb, 2025
-* [Release Notes](version-0.10.2/)
+* [Release Notes](version-0.10.2)
 
 **Version: 0.10.1**
 
 * Name: Inji Certify 0.10.1
 * Date: 3rd February, 2025
-* [Release Notes](version-0.10.1/)
+* [Release Notes](version-0.10.1)
 
 **Version: 0.9.1**
 
 * Name: Inji Certify 0.9.1 (Patch)
 * Date: 3rd October, 2024
-* [Release Notes](version-0.9.1/)
+* [Release Notes](version-0.9.1)
 
 **Version: 0.9.0**
 
 * Name: Inji Certify 0.9.0
 * Date: 22nd August, 2024
-* [Release Notes](version-0.9.0/)
+* [Release Notes](version-0.9.0)
 
 ### Version: 0.8.1 <a href="#version-0.8.0" id="version-0.8.0"></a>
 
@@ -51,4 +63,3 @@ icon: rocket-launch
 * Name: Inji Certify 0.8.0
 * Date: 30th April, 2024
 * [Release Notes](https://docs.mosip.io/inji/inji-certify/releases/release-notes)
-
