@@ -35,7 +35,7 @@ A Persona is a fictional character/user profile created to represent a user type
 
 The verification methods may differ based on how the need was addressed.&#x20;
 
-## Verified configuration  <a href="#heading-h.2d5gtphrcovh" id="heading-h.2d5gtphrcovh"></a>
+## Verified Configuration  <a href="#heading-h.2d5gtphrcovh" id="heading-h.2d5gtphrcovh"></a>
 
 Verification is performed on configurations as mentioned below&#x20;
 
@@ -44,7 +44,7 @@ Verification is performed on configurations as mentioned below&#x20;
 
 {% include "../../../.gitbook/includes/note-most-deployment-scrip....md" %}
 
-### Functional test results <a href="#heading-h.xvtnjotfvch5" id="heading-h.xvtnjotfvch5"></a>
+### Functional Test Results <a href="#heading-h.xvtnjotfvch5" id="heading-h.xvtnjotfvch5"></a>
 
 Below are the test metrics by performing functional testing. The process followed was black box testing which based its test cases on the specifications of the software component under test. Functional test was performed in combination of individual module testing as well as integration testing. Test data were prepared in line with the user stories. Expected results were monitored by examining the user interface. The coverage includes GUI testing, System testing, and End-To-End flows across multiple configurations. The testing cycle included simulation of multiple identity schema and respective UI schema configurations.
 
