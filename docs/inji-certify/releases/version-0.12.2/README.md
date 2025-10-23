@@ -8,7 +8,7 @@
 
 ### **Overview**
 
-Inji Certify v0.12.2 focuses on enabling issuers with greater control and flexibility in managing their credential signing infrastructure, while also improving usability and operational stability.&#x20;
+Inji Certify v0.12.2 focuses on enabling issuers with greater control and flexibility in managing their credential signing infrastructure, while also improving usability and operational stability.
 
 This release introduces new issuer-facing APIs that allow seamless integration with external Certificate Authorities (CAs) through a complete CSR generation and signed certificate upload workflow. By orchestrating with Key Manager, Certify ensures that issuers can securely generate CSRs, validate and store CA-signed certificates, and immediately leverage them for VC signing, thereby expanding deployment capacity and supporting sovereign CA setups.
 
@@ -34,7 +34,7 @@ Below is the list of known issues related to the release v0.12.2. To access all 
 
 ### Repository Released
 
-<table><thead><tr><th width="343">Repositories</th><th>Tags</th></tr></thead><tbody><tr><td>inji-certify</td><td>0.12.2</td></tr></tbody></table>
+<table><thead><tr><th width="343">Repositories</th><th>Tags</th></tr></thead><tbody><tr><td>inji-certify</td><td><a href="https://github.com/mosip/inji-certify/tree/v0.12.2">0.12.2</a></td></tr></tbody></table>
 
 ### Compatible Modules <a href="#compatible-modules" id="compatible-modules"></a>
 
@@ -58,4 +58,4 @@ The following table outlines the tested and certified compatibility of 0.12.2 wi
 * [Feature Documentation](https://docs.mosip.io/inji/inji-certify/functional-overview/features)
 * [Local Setup](https://docs.mosip.io/inji/inji-certify/build-and-deploy/local-setup)
 * [API Documentation](https://mosip.stoplight.io/docs/inji-certify/25f435617408e-inji-certify)
-* [Test Report](link)
+* Test Report

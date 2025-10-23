@@ -5,7 +5,5 @@ title: 'Note: Most deployment scrip...'
 {% hint style="success" %}
 **Note:**&#x20;
 
-* Most deployment scripts and tools have been tested primarily on Linux.
-* For Windows users: Switch to WSL (Windows Subsystem for Linux) to execute Linux commands. Note that a few minor adjustments may be required due to differences in the underlying kernel.
-* For macOS users: Use the terminal to run the deployment commands as outlined in the steps.
+Ignored scenarios are not related to particular use cases and 34 scenarios are known issues can be tracked from [INJICERT-681](https://mosip.atlassian.net/browse/INJICERT-681), [INJICERT-1118](https://mosip.atlassian.net/browse/INJICERT-1118), [INJICERT-1176](https://mosip.atlassian.net/browse/INJICERT-1176)
 {% endhint %}

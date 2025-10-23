@@ -8,7 +8,7 @@ icon: rocket-launch
 
 * Name: Inji Certify 0.12.2
 * Date: 23rd October, 2025
-* [Release Notes](version-0.12.2.md)
+* [Release Notes](version-0.12.2/)
 
 #### **Version: 0.12.1**
 
