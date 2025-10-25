@@ -15,13 +15,12 @@ The diagram below illustrates the **deployment architecture** of the eSignet, hi
 
 ### How is this guide structured and organized? 
 
-1. [**Introduction**](../../readme/setup/deploy.md#introduction): Provides an overview of the eSignet stack + ID System, deployment scenarios, required skill sets and system architecture.
-2. [**Prerequisites**](../../readme/setup/deploy.md#prerequisites-for-overall-deployment): Outlines infrastructure details, hardware/software/network requirements, and initial setup steps.
-3. [**Infrastructure**](../../readme/setup/deploy.md#base-infrastructure-setup): This section assumes that a Kubernetes-based environment is already set up and ready for deploying eSignet. Or it expects you have the ID system already deployed on a kubernettes based infra and next to which you will be deploying eSignet.
-4. [**Deploy eSignet Prerequisites**](../../readme/setup/deploy.md#core-infrastructure-components-setup): Describes running `install-prereq.sh` script, which interactively installs required dependencies such as PostgreSQL, Keycloak, Redis, HSM (or key management), Kafka, API access control, and captcha validation service. The script prompts you to confirm or skip each component based on your environment, allowing you to reuse existing infrastructure or install new services as needed.
-5. [**Deploy eSignet Services**](../../readme/setup/deploy.md#inji-stack-deployment): 
+1. [**Introduction**](#overview): Provides an overview of the eSignet stack + ID System, deployment scenarios, required skill sets and system architecture.
+2. [**Prerequisites**](#prerequisites): Outlines infrastructure details, hardware/software/network requirements, and initial setup steps.
+3. [**Deploy eSignet Prerequisites**](#deploy-esignet): Describes running `install-prereq.sh` script, which interactively installs required dependencies such as PostgreSQL, Keycloak, Redis, HSM (or key management), Kafka, API access control, and captcha validation service. The script prompts you to confirm or skip each component based on your environment, allowing you to reuse existing infrastructure or install new services as needed.
+5. [**Deploy eSignet Services**](#deploy-esignet-services): 
 When you run the install script for eSignet services, it guides you through selecting the appropriate identity management plugin (e.g., MOSIP, Sunbird RC, or custom). Based on your choice, the script deploys eSignet services configured to integrate seamlessly with your selected identity system. This section provides detailed instructions for each integration scenario, ensuring a smooth deployment process.
-6. [**Contribution and Community**](../../readme/setup/deploy.md#contribution-and-community): Highlights how you can contribute code, share feedback, or reach out for support while working with the application.
+6. [**Contribution and Community**](#link): Highlights how you can contribute code, share feedback, or reach out for support while working with the application.
 
 Each section provides direct steps and references to external resources for a streamlined deployment experience.
 
@@ -30,17 +29,17 @@ There are different use cases for eSignet and therefore eSignet can be deployed 
 
 However here within the scope of this deployment guide we will focus on how eSignet can be deployed and integrated with various identity systems. The deployment flow and integration steps may differ based on your existing setup. Below are the typical scenarios and recommended approaches.
 
-> Note: The scenario part is discussed here [Deploy eSignet Services](link) and here you are asked to choose the plugin you want to use for identity management.
+> Note: The scenario part is discussed here [Deploy eSignet Services](#deploy-esignet-services) and here you are asked to choose the plugin you want to use for identity management.
 
 How eSignet can work with different Id systems:
 
 * **eSignet + Mock**: Mock ID (New) + eSignet (New): 
 
-This scenario deploys eSignet with a mock identity provider, allowing you to simulate authentication and authorization flows without integrating with a real ID system. It is ideal for development, testing, and demonstrations, requiring no external dependencies or onboarding steps.
+  This scenario deploys eSignet with a mock identity provider, allowing you to simulate authentication and authorization flows without integrating with a real ID system. It is ideal for development, testing, and demonstrations, requiring no external dependencies or onboarding steps.
 
 * **eSignet + MOSIP**: MOSIP (Exists) + eSignet (New)
 
-eSignet + MOSIP refers to integrating eSignet with the MOSIP identity system. In this scenario, eSignet leverages MOSIP as the identity provider, enabling secure authentication and digital signature workflows based on MOSIP-managed identities. This setup is suitable for environments where MOSIP is already deployed or planned, ensuring seamless identity verification and trust.
+  eSignet + MOSIP refers to integrating eSignet with the MOSIP identity system. In this scenario, eSignet leverages MOSIP as the identity provider, enabling secure authentication and digital signature workflows based on MOSIP-managed identities. This setup is suitable for environments where MOSIP is already deployed or planned, ensuring seamless identity verification and trust.
 
 
 * **eSignet + Identity System (Non-MOSIP)**: Non-MOSIP ID (Exists) + eSignet
@@ -52,64 +51,15 @@ eSignet + MOSIP refers to integrating eSignet with the MOSIP identity system. In
 
   This scenario focuses on integrating eSignet with the Sunbird RC identity system. It enables eSignet to utilize Sunbird RC for identity management, facilitating secure authentication and digital signature processes. This setup is particularly beneficial for organizations that have already implemented Sunbird RC, allowing them to enhance their identity verification and trust mechanisms with eSignet's features.
 
-<!--
-
-### Basic Skill-sets Required
-
-Deploying eSignet is easier while you have Base Infrastructure ready, still, if you want to deploy it 'On-Premise' and from scratch, this guide helps you with the instructions to achieve this.
-
-{% hint style="success" %}
-**Note**: The basic Skill-sets mentioned below, in fact, expects you to know the following to be able to deploy it from scratch and that too on a bare metal servers (On-Premise). This should not get intimidating as in typical scenarios we expect the infrastructure to be deployed by an experienced 'System-Admin/DevOps'. However in case you want to evangelize eSignet in your organization and want to have a hands-on with the deployment, this guide helps you with the steps and instructions to achieve this.
-{% endhint %}
-
-* **Linux System Administration**: Proficiency in Linux command-line operations, user and permission management, and basic networking.
-* **Networking Fundamentals**: Knowledge of firewalls, load balancers, DNS, and secure network configuration.
-* **Containerisation**: Experience with Docker or similar container technologies for building and managing service containers.
-* **Kubernetes Administration**: Understanding of Kubernetes concepts, cluster setup, resource management, and troubleshooting.
-* **Helm**: Familiarity with Helm for managing Kubernetes manifests and deployments.
-* **Database Management**: Basic skills in managing PostgreSQL or similar databases, including initialization and schema setup.
-* **Configuration Management**: Ability to manage application configuration files, secrets, and certificates securely.
-* **Monitoring and Logging**: Understanding of logging and monitoring tools to observe system health and troubleshoot issues.
-* **Security Best Practices**: Awareness of secure credential handling, certificate management, and access control.
-* **Scripting**: Basic scripting skills (e.g., Bash, Python) for automation and operational tasks.
-* **Familiarity with CI/CD Pipelines**: Understanding of continuous integration and deployment processes is a plus.
-
--->
-
-
-<!--
-
-### Deployment Considerations for On-Premise Inji Stack
-
-The section helps you to have a quick understanding of what you should expect when you go about deploying eSignet, especially if you are deploying it 'On-Premise' and from scratch.
-
-* eSignet is deployed as microservices in a Kubernetes cluster.
-* Wireguard is used as a trust network extension to access the admin, control, and observation panes.
-* eSignet uses Nginx server for:
-  * SSL termination
-  * Reverse Proxy
-  * CDN/Cache management
-  * Load balancing
-* Kubernetes (k8's) cluster is administered using the rke tools and kubectl commands.
-* We have two k8's clusters:
-  * **Observation cluster** \[Optional] - This cluster is part of the observation plane and assists with administrative tasks. By design, this is kept independent from the actual cluster as a good security practice and to ensure clear segregation of roles and responsibilities. As a best practice, this cluster or its services should be internal and should never be exposed to the external world.
-    * Rancher is used for managing the Inji cluster.
-    * Keycloak in this cluster is used to manage user access and rights for the observation plane.
-    * It is recommended to configure log monitoring and network monitoring in this cluster during production deployment.
-    * In case you have an internal container registry, then it should run here.
-  * **Inji cluster** - This cluster runs all the Inji components and core infrastructure components  like kafka, Postgres, minio, etc.
-    * Inji Services are deployed in this cluster.
-
--->
-
 # Prerequisites 
 The prerequisite section is segregated into two parts:
-* **Personal Computer**: This section lists the tools and utilities you need to have installed on your personal computer to create/manage the k8's cluster and deploy eSignet on it.
-* **Server Requirements**: This section lists the hardware/software/network requirements for the Kubernetes based server infrastructure where you will deploy eSignet.
+* **Developer Workstation Profile**: This section lists the tools and utilities you need to have installed on your personal computer to create/manage the k8's cluster and deploy eSignet on it.
+* **Developer Environment Setup**: This section lists the specific configurations and settings required for your development environment to work effectively with eSignet.
+* **Cloud Environment Profile**: This section lists the hardware/software/network requirements for the Kubernetes based server infrastructure where you will deploy eSignet.
 
-## PC Requirements and Environment
+## Developer Workstation Profile
 
-The **Personal Computer Prerequisites** lists the common tools and utilities which you will need to have installed on your personal computer to be able to create/manage the k8's cluster and deploy eSignet on it.
+The **Developer Workstation Profile** lists the common tools and utilities which you will need to have installed on your personal computer to be able to create/manage the k8's cluster and deploy eSignet on it.
 
 
 ### Operating Systems
@@ -122,8 +72,7 @@ The eSignet can be deployed with a PC having one of the following operating syst
 
 {% include "../../.gitbook/includes/note-most-deployment-scrip....md" %}
 
-### Tools and Utilities
-
+### Development Environment Setup
 You should have these tools installed on your local machine from which you will be running the kubectl, connect to the k8s cluster and manage the deployment.
 
 * [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html) - version > 2.12.4
@@ -139,7 +88,7 @@ helm repo add mosip https://mosip.github.io/mosip-helm
 * [Istioctl](https://istio.io/latest/docs/setup/getting-started/#download) : version: 1.15.0
 * Wireguard Client - Refer to the [Setup Wireguard Client on your PC](../../readme/setup/deploy.md#setup-wireguard-client-on-your-pc) section for the instructions.
 
-## Server Requirements and Environment
+## Cloud Environment Profile
 **Server Requirements Prerequisites**: Kubernetes based server infrastructure is required to deploy eSignet. It can either have the Identity System (like MOSIP) already deployed on it or you can deploy eSignet along with the ID system.
 
 
@@ -177,9 +126,11 @@ Ask your System Administrator of the 'Deployment Environment' to provide you acc
 <!-- Ask Praful to proofcheck -->
 
 * Kubeconfig file for the cluster (This will also contain namespace permissions).
+
 * Confirm MOSIP is running and healthy
 
 * Set up kubectl access
+
 ```sh
 # Set KUBECONFIG environment variable
 export KUBECONFIG=/path/to/your/kubeconfig
@@ -187,9 +138,9 @@ export KUBECONFIG=/path/to/your/kubeconfig
 # OR copy to default location
 cp kubeconfig ~/.kube/config
 
-```
-* Check cluster context
 ```sh
+* Check cluster context
+
 # Confirm you are operating in the correct cluster context:
 kubectl config get-contexts
 kubectl config use-context <desired-context>
@@ -223,15 +174,13 @@ This allows you to access the deployment scripts and configuration files require
 > Note: Before cloning the repository, you should first ensure your `kubectl` is configured to access the target Kubernetes cluster and that you have the necessary permissions for the relevant namespaces. Once connectivity is verified, you should run the provided deployment scripts (such as `install-prereq.sh`, `initialise-prereq.sh`, and `install-esignet.sh`) from your local machine.
 
 ```sh
-
 # Clone eSignet repository
 git clone https://github.com/mosip/esignet.git
 cd esignet/deploy
-
 ```
 
 ## Deploy eSignet services
-Once steps mentioned above are complete and you have verified access, proceed with the deployment scripts as outlined below.
+Once steps mentioned above are complete and you have verified access, proceed with the deployment scripts as explained below.
 
 
 ### Install Prerequisites
@@ -239,9 +188,9 @@ Once steps mentioned above are complete and you have verified access, proceed wi
 The prerequisites that you install ensures that the environment is ready for deploying eSignet core services and plugins.
 
 > Note: What if I already have some of these dependencies (prerequisites) installed?
-> If you already have dependencies like Postgres or Keycloak installed as part of your existing ID System (e.g. MOSIP) setup, you can skip their installation during the prerequisite step while the installation script is run and you are prompted.
+> If you already have dependencies like Postgres or Keycloak installed as part of your existing ID System (e.g. MOSIP) setup, you can skip the particular component and the respective prompt and jump to the next prompt to proceed on with the running script.
 
-When running the install scripts, you will be prompted to make selections for various components and configurations. This guide outlines the prompts you can expect, along with guidance on when to answer 'y' (yes) or 'n' (no) based on your environment. 
+When running the install scripts, you are prompted to make selections for various components and configurations. This section of the guide outlines the prompts you can expect, along with guidance on when to answer 'y' (yes) or 'n' (no) based on your environment.
 
 Some prompts are chained — your response to one may trigger additional questions. Review the following section to familiarize yourself with the installation flow and prepare your answers in advance for a smoother deployment experience.
 
@@ -430,6 +379,8 @@ Before you run the installation script, you should decide which plugin you want 
 ##### Compatibility matrix
 Here below is a compatibility matrix for different Identity Systems, eSignet versions, and plugin versions. It helps you determine which versions are compatible with each other and guides you to the appropriate integration guide/documentation. Understanding this matrix is crucial for ensuring a stable and supported deployment, avoiding integration issues, and selecting the correct components for your environment.
 
+<!-- link to relevant integration guides wrt compatibility matrix is missing, add them -->
+
 
 | Identity System | eSignet Version | Plugin Version | Status | Integration Guide |
 |----------------|----------------|----------------|---------|-------------------|
@@ -460,7 +411,7 @@ The answer to the above questions is in option number - for example '1', '2', or
 
 ##### esignet-mock-plugin
 
-If you choose 'esignet-mock-plugin', you are not prompted any questions and the installation for mock plugin is completed automatically.
+If you choose 'esignet-mock-plugin', you are not prompted with any further chained questions/prompts and the installation for mock plugin is completed automatically.
 
 When you choose the **esignet-mock-plugin** during installation, the deployment script installs eSignet with a mock identity provider integration. This setup is primarily for testing and demonstration purposes, allowing you to simulate authentication and authorization flows without connecting to a real identity system.
 
@@ -602,3 +553,65 @@ kubectl get pods -n esignet
 **Next Steps:**  
 Proceed to integration and configuration steps as per your scenario.
 <!-- Check with Praful -->
+
+
+# Documentation
+1. Integrations and Configurations topics
+
+
+
+
+
+
+
+
+
+<!--
+
+### Basic Skill-sets Required
+
+Deploying eSignet is easier while you have Base Infrastructure ready, still, if you want to deploy it 'On-Premise' and from scratch, this guide helps you with the instructions to achieve this.
+
+{% hint style="success" %}
+**Note**: The basic Skill-sets mentioned below, in fact, expects you to know the following to be able to deploy it from scratch and that too on a bare metal servers (On-Premise). This should not get intimidating as in typical scenarios we expect the infrastructure to be deployed by an experienced 'System-Admin/DevOps'. However in case you want to evangelize eSignet in your organization and want to have a hands-on with the deployment, this guide helps you with the steps and instructions to achieve this.
+{% endhint %}
+
+* **Linux System Administration**: Proficiency in Linux command-line operations, user and permission management, and basic networking.
+* **Networking Fundamentals**: Knowledge of firewalls, load balancers, DNS, and secure network configuration.
+* **Containerisation**: Experience with Docker or similar container technologies for building and managing service containers.
+* **Kubernetes Administration**: Understanding of Kubernetes concepts, cluster setup, resource management, and troubleshooting.
+* **Helm**: Familiarity with Helm for managing Kubernetes manifests and deployments.
+* **Database Management**: Basic skills in managing PostgreSQL or similar databases, including initialization and schema setup.
+* **Configuration Management**: Ability to manage application configuration files, secrets, and certificates securely.
+* **Monitoring and Logging**: Understanding of logging and monitoring tools to observe system health and troubleshoot issues.
+* **Security Best Practices**: Awareness of secure credential handling, certificate management, and access control.
+* **Scripting**: Basic scripting skills (e.g., Bash, Python) for automation and operational tasks.
+* **Familiarity with CI/CD Pipelines**: Understanding of continuous integration and deployment processes is a plus.
+
+-->
+
+
+<!--
+
+### Deployment Considerations for On-Premise Inji Stack
+
+The section helps you to have a quick understanding of what you should expect when you go about deploying eSignet, especially if you are deploying it 'On-Premise' and from scratch.
+
+* eSignet is deployed as microservices in a Kubernetes cluster.
+* Wireguard is used as a trust network extension to access the admin, control, and observation panes.
+* eSignet uses Nginx server for:
+  * SSL termination
+  * Reverse Proxy
+  * CDN/Cache management
+  * Load balancing
+* Kubernetes (k8's) cluster is administered using the rke tools and kubectl commands.
+* We have two k8's clusters:
+  * **Observation cluster** \[Optional] - This cluster is part of the observation plane and assists with administrative tasks. By design, this is kept independent from the actual cluster as a good security practice and to ensure clear segregation of roles and responsibilities. As a best practice, this cluster or its services should be internal and should never be exposed to the external world.
+    * Rancher is used for managing the Inji cluster.
+    * Keycloak in this cluster is used to manage user access and rights for the observation plane.
+    * It is recommended to configure log monitoring and network monitoring in this cluster during production deployment.
+    * In case you have an internal container registry, then it should run here.
+  * **Inji cluster** - This cluster runs all the Inji components and core infrastructure components  like kafka, Postgres, minio, etc.
+    * Inji Services are deployed in this cluster.
+
+-->
