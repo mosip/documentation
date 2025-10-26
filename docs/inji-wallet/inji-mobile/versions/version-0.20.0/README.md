@@ -61,15 +61,15 @@ This release also includes critical **bug fixes** addressing verification issues
 | inji-openid4vp-ios-swift   | [0.5.0](https://github.com/mosip/inji-openid4vp-ios-swift/tree/v0.5.0)   |
 | vc-verifier                | [1.5.0](https://github.com/mosip/vc-verifier/tree/v1.5.0)                |
 | mimoto                     | [0.19.2](https://github.com/mosip/mimoto/tree/v0.19.2)                   |
-| inji-config                | [0.11.1](https://app.gitbook.com/u/J3VZVcoSqjX2LqmZbSg5nHJZEPI2)         |
+| inji-config                | [0.11.1](https://github.com/mosip/inji-config/tree/v0.11.1)              |
 
 #### Compatible Modules
 
-| Module       | Version                                                          |
-| ------------ | ---------------------------------------------------------------- |
-| Inji Certify | [0.12.1](https://github.com/mosip/inji-certify/tree/v0.12.1)     |
-| Inji Verify  | [0.14.0](https://app.gitbook.com/u/J3VZVcoSqjX2LqmZbSg5nHJZEPI2) |
-| eSignet      | [1.6.2](https://app.gitbook.com/u/J3VZVcoSqjX2LqmZbSg5nHJZEPI2)  |
+| Module       | Version                                                      |
+| ------------ | ------------------------------------------------------------ |
+| Inji Certify | [0.12.1](https://github.com/mosip/inji-certify/tree/v0.12.1) |
+| Inji Verify  | [0.14.0](https://github.com/mosip/inji-verify/tree/v0.14.0)  |
+| eSignet      | [1.6.2](https://github.com/mosip/esignet/tree/v1.6.2)        |
 
 #### Known Issues
 
