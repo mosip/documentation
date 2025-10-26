@@ -270,9 +270,17 @@ Let us understand the process of sharing credentials using an example and see th
 
 > **Note:** Screenshots will be added soon to enhance the user experience and better explain the steps shown below.
 
+Inji Wallet supports two primary modes of sharing Verifiable Credentials (VCs) using the **OpenID4VP** protocol:
+
+* **Same-Device Flow**, where the wallet and verifier are accessed from the same mobile device.
+* **Cross-Device Flow**, where the wallet and verifier operate on separate devices.
+
+Both flows support **standard JSON-LD VCs**, **mDL (ISO 18013-5)**, and IETF **SD-JWT** credentials for full or non-selective disclosure sharing.\
+For privacy-preserving selective disclosure, the **SD-JWT VP** flow is followed, as described below.
+
 #### Cross-Device Flow (OpenID4VP)
 
-This method is used when you're using **Inji Wallet on a mobile phone** and the verifier (e.g., a service provider or kiosk) is using a **separate device** such as a laptop, tablet, or scanner.
+This method is used when the **Inji Wallet** is on a **mobile phone**, and the **verifier** (such as a service provider portal, kiosk, or scanner) operates on a **different device** (e.g., laptop or tablet).
 
 **Steps to Present Credentials:**
 
@@ -287,7 +295,7 @@ This method is used when you're using **Inji Wallet on a mobile phone** and the 
 
 #### Same-Device Flow (OpenID4VP)
 
-This method is useful when you’re **accessing a portal from the same mobile device** that has the Inji Wallet installed.
+This method is useful when you’re accessing a portal from the **same mobile device** that has the **Inji Wallet** installed.
 
 **Steps to Present Credentials:**
 
@@ -301,6 +309,25 @@ This method is useful when you’re **accessing a portal from the same mobile de
 8. Tap **“Share”**.
 9. You are automatically redirected back to the service portal (Android).
    * On **iOS**, you may need to manually switch back to the browser.
+
+#### **Selective Disclosure Flow (IETF SD-JWT VP)**
+
+This method allows users to share **only specific claims** from an IETF **SD-JWT credential**, ensuring **privacy-preserving** and **minimal disclosure** of information.
+
+**Steps to Present Credentials with SD-JWT VP:**
+
+1. Access the verifier’s **portal or service** (same-device or cross-device).
+2. Initiate the **credential request** using the **OpenID4VP flow**.
+3. The verifier specifies **required claims** (e.g., Name, Date of Birth).
+4. The **Inji Wallet** parses the **SD-JWT credential** and identifies which claims can be selectively disclosed.
+5. The wallet displays:
+   * The verifier’s details and request information.
+   * A **list of available claims** within the SD-JWT credential.
+6. The user can **select only the claims** they wish to share.
+7. The wallet generates a **Verifiable Presentation (VP)** containing only the selected claims.
+8. You are prompted for **authentication** (Face) if VC contains a face photo.
+9. Upon confirmation, the **SD-JWT VP** is securely shared with the verifier.
+10. A success message confirms completion of the privacy-preserving sharing process.
 
 ### Pinning a VC
 

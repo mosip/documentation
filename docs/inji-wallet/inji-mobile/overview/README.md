@@ -30,7 +30,7 @@ Whether you're a citizen accessing government services, a developer building dig
 
 Inji Wallet is designed for interoperability and flexibility by supporting a wide range of credential formats:
 
-* **W3C Verifiable Credentials (JSON-LD VCs) Data Model 1.1**
+* **W3C Verifiable Credentials (JSON-LD VCs) Data Model 1.1 and Data Model 2.0**
   * Standards-based credential format is widely adopted across ecosystems.
   * Suitable for general-purpose credential issuance and verification.
 * **ISO 18013-5 (mDL)**
@@ -69,6 +69,20 @@ This multi-format support allows Inji Wallet to work seamlessly across different
 
 * Download credentials via **pre-authorized flow**
 * Supports various credential types: national IDs, driver's licenses, health cards, academic degrees, etc.
+
+#### **SD-JWT OpenIDVP Support**
+
+* Inji Mobile supports **Selective Disclosure JWT (SD-JWT)** credentials.
+* Enables **privacy-preserving presentations**, where users can share only the specific attributes required by a verifier, rather than the entire credential.
+* Fully compliant with the **OpenID for Verifiable Presentations Draft 23 (OpenID4VP)** specification for SD-JWT.
+* Improves compatibility with ecosystems adopting **SD-JWT and OpenID-based verifiable presentation**.
+
+#### **SVG-Based Credential Rendering**
+
+* Introduces support for **SVG templates** via the **Inji VC Renderer** library.
+* Allows credentials to be rendered in a **visually rich, scalable, and customizable format**.
+* Enables **dynamic layouts**, inclusion of **logos, photos, and design elements**, while staying aligned with the **W3C VC Data Model 2.0**.
+* Improves on-screen display and print-ready credential rendering experience.
 
 ### How It Works
 
