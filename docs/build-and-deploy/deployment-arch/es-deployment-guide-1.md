@@ -159,8 +159,8 @@ We have considered MOSIP for an example and scope of this document.
 kubectl get nodes
 
 # Check MOSIP deployment status
-kubectl get pods -n mosip
-kubectl get svc -n mosip
+kubectl get pods -n <namespace>
+kubectl get svc -n <namespace>
 
 # Verify key MOSIP services are running
 kubectl get pods -n mosip | grep -E "(ida|pms|kernel|postgres|keycloak|redis)"
@@ -249,7 +249,7 @@ Run the `./install-prereq.sh` script (from deploy folder) to install required se
 
 #### HSM
 
-["hsm"]="Do you want to deploy hsm for esignet service? Please opt for 'n' if you already have hsm installed: (s - for softhsm, e - external, p - for pkcs12 based key management from mounted file)"
+Do you want to deploy hsm for esignet service? Please opt for 'n' if you already have hsm installed: (s - for softhsm, e - external, p - for pkcs12 based key management from mounted file)"
 
 **Prompts**:
   1. n - If you already have hsm installed
@@ -267,7 +267,7 @@ Run the `./install-prereq.sh` script (from deploy folder) to install required se
 
 ##### apiaccesscontrol
 
-["apiaccesscontrol"] = "Do you want to access control the esignet client management APIs? Please opt for 'n' if not required. Press enter for default y"
+Do you want to access control the esignet client management APIs? Please opt for 'n' if not required. Press enter for default y"
 
 **Prompts**:
   1.  n - "Warning! You have chosen to skip the keycloak initialization. The internal APIs of eSignet will run without access control."
@@ -279,7 +279,7 @@ Run the `./install-prereq.sh` script (from deploy folder) to install required se
     3.  ["adminpassword"] = "Please provide admin password for initialisation"
 
 ##### Kafka
-["kafka"]="Do you want to deploy Kafka in the kafka namespace? Please opt for 'n' if you already have a kafka deployed: Press enter for default y"
+Do you want to deploy Kafka in the kafka namespace? Please opt for 'n' if you already have a kafka deployed: Press enter for default y"
 
 **Prompts**:
 
@@ -290,43 +290,46 @@ Run the `./install-prereq.sh` script (from deploy folder) to install required se
 
 ##### Postgres
 
-["postgres"]="Do you want to deploy postgres in the postgres namespace? Please opt for 'n' if you already have a postgres server deployed: Press enter for default y"
+Do you want to deploy postgres in the postgres namespace? Please opt for 'n' if you already have a postgres server deployed: Press enter for default y"
 
 **Prompts**:
 
 1. y - If you want to install postgres
-2. n - If you already have a postgres server deployed, **The below set of questions [b-e] should be prompted only when the answer to the above is 'n'.**
+2. n - If you already have a postgres server deployed, **The set of questions below (b-e) are prompted**
 
-  1.  ["postgreshostname"] = "Please provide the hostname for the postgres server: "
+  1.  ["postgreshostname"] = "Please provide the hostname for the postgres server:"
 
-  2.  ["postgresport"] = "Please provide the port number for the postgres server: "
+  2.  ["postgresport"] = "Please provide the port number for the postgres server:"
 
-  3.  ["postgresusername"] = "Please provide the username for the postgres server: "
+  3.  ["postgresusername"] = "Please provide the username for the postgres server:"
 
-  4.  ["postgrespassword"] = "Please provide the password for the postgres server: "
+  4.  ["postgrespassword"] = "Please provide the password for the postgres server:"
 
 ##### Redis
 
-["redis"]="Do you want to deploy redis in the redis namespace? Press enter for default y"
+Do you want to deploy redis in the redis namespace? Press enter for default y"
+
 **Prompts**:
 
   1. y - If you want to install redis
-  2. n - If you already have a redis server deployed **The below set of questions [b-d] should be prompted only when the answer to the above is 'n'.**
+  2. n - If you already have a redis server deployed **The set of questions below (b-d) are prompted**
 
-    1.  ["redishostname"] = "Please provide the hostname for the redis server: "
+    1.  ["redishostname"] = "Please provide the hostname for the redis server:"
 
-    2.  ["redisport"] = "Please provide the port number for the redis server: "
+    2.  ["redisport"] = "Please provide the port number for the redis server:"
 
     3.  ["redispassword"] = "Please provide the password for the redis server: "
 
-The installations should begin as per user requirement based on the above set of questions/prompts. Once the installation is completed, user should be asked to enter the below details to complete the setup for captcha validation service.
+The installation begin as per user requirement based on the above set of questions/prompts. Once the installation is completed, you are asked to enter the details to complete the setup for captcha validation service.
 
 ##### Captcha Validation Service
 
-["captchavalidationservice"] = "Do you want to install captcha validation service? Press enter for default y"
-  **Warning message to be shown:** "It is not recommended to use the eSignet without captcha site key and captcha secret key in production env. Press enter to proceed"
+Do you want to install captcha validation service? Press enter for default y
+
+* **Warning message:** "It is not recommended to use the eSignet without captcha site key and captcha secret key in production env. Press enter to proceed.
+
 **Prompts**:
-  1.  y - If you want to install captcha validation service, **The below set of questions [c-d] should be prompted only when the answer to the above is 'y'.**
+  1.  y - If you want to install captcha validation service, **The below set of questions [c-d] is prompted only when the answer to the above is 'y'.**
 
     1.  ["captchasitekey"] = "Please provide the captcha site key"
 
@@ -334,10 +337,11 @@ The installations should begin as per user requirement based on the above set of
 
     3.  If opted 'n' what needs to be done <!-- explain -->
 
-Pre-requisite installation is complete at this stage.
+Prerequisite installation is complete at this stage.
 
 #### Initialise Prerequisites
-Run the `./initialise-prereq.sh` script (from deploy folder) to initialize required services such as the eSignet database and Keycloak. You will be prompted for configuration details based on your environment (e.g., database credentials, IAM scope, service endpoints). Update the relevant values files before executing the script to ensure correct initialization.
+Run the `./initialise-prereq.sh` script (from deploy folder) to initialize required services such as the eSignet database and Keycloak. You will be prompted for configuration details based on your environment (e.g., database credentials, IAM scope, service endpoints). 
+Update the relevant values files before executing the script to ensure correct initialization. <!-- Can we explain this a bit -->
 
 ```sh
 
@@ -345,7 +349,8 @@ Run the `./initialise-prereq.sh` script (from deploy folder) to initialize requi
 
 ```
 
-You are prompted to answer following questions based on whether the eSignet database is present or not in the postgres server url provided above. Therefore, before you run the initialise script, update the Postgres and Keycloak values files as needed and then initialise.
+You are prompted to answer following questions based on whether the eSignet database is present or not in the postgres server url provided above. 
+Therefore, before you run the initialise script, update the Postgres and Keycloak values files as needed and then initialise. <!-- How to for this can again be helpful -->
 
 1.  ["postgres"] = "eSignet database was not found. Running the db scripts to create and initialize the eSignet database:"
 
@@ -390,7 +395,7 @@ Here below is a compatibility matrix for different Identity Systems, eSignet ver
 | Custom API     | 1.6.1         | Custom         |  Custom | [Plugin Development](es-deployment-guide.md#plugin-development) |
 
 
-If you want to install eSignet with plugins, you should navigate to the folder 'esignet-with-plugins' and run below command:
+If you want to install eSignet with plugins, you should navigate to the folder '**esignet-with-plugins**' and run below command:
 
 <!-- Does it mean that there is some folder which is simple, as first case, where in not lots of prompts are there? If yes, then we should mention that too. -->
 
@@ -400,18 +405,18 @@ If you want to install eSignet with plugins, you should navigate to the folder '
 
 You are prompted with following question/prompts to choose from the list of available plugins and install eSignet with only chosen plugin.
 
-1.  ["esignetplugin"] = "Choose the required plugin to proceed with installation".
+1.  `esignetplugin` = Choose the required plugin to proceed with installation.
 
   1.  esignet-mock-plugin
   2.  mosip-identity-plugin
   3.  sunbird-rc-plugin
   4.  custom-plugin:"
 
-The answer to the above questions is in option number - for example '1', '2', or '3'.
+The answer to the above questions is in option number - for example '1', '2', '3' or '4'.
 
 ##### esignet-mock-plugin
 
-If you choose 'esignet-mock-plugin', you are not prompted with any further chained questions/prompts and the installation for mock plugin is completed automatically.
+If you choose '**esignet-mock-plugin**', you are not prompted with any further chained questions/prompts and the installation for mock plugin is completed automatically.
 
 When you choose the **esignet-mock-plugin** during installation, the deployment script installs eSignet with a mock identity provider integration. This setup is primarily for testing and demonstration purposes, allowing you to simulate authentication and authorization flows without connecting to a real identity system.
 
@@ -451,7 +456,7 @@ If you choose `esignet-with-mosip-id` plugin, you are prompted with the question
 
 If you choose `eSignet-with-sunbird` plugin, you are prompted with the question below:
 
-1.  ["mosip.esignet.sunbird-rc.registry-get-url"] = "Please provide the url for sunbird registry get api:"
+1.  `mosip.esignet.sunbird-rc.registry-get-url` = Please provide the url for sunbird registry get api:
 
 Once the above decision inputs are taken from you, eSignet installation should be initialized and completed successfully.
 
@@ -462,7 +467,7 @@ If any error occurs during eSignet installation, You can start the eSignet insta
 
 If you choose eSignet installation without plugin, below question is prompted:
 
-1. ["custompluginurl"] = "Please provide the url for the custom plugin you want to use: "
+1. `custompluginurl` = Please provide the url for the custom plugin you want to use:
 
 Above url can be zip file or jar file, so both zip url and jar file url are supported for above variable.
 
@@ -475,17 +480,17 @@ If any error occurs during eSignet installation, you are able to start the eSign
 
 Once eSignet installation is completed, now, you are prompted to provide relevant inputs for completing oidc ui deployment:
 
-  1.  ["esignetthemes"] = "Please provide the theme for the eSignet UI. Please choose between 'blue' or 'orange' for esignet default theme: Press enter for the default theme. Please provide URL for the custom theme"
+  1.   `esignetthemes` = Please provide the theme for the eSignet UI. Please choose between 'blue' or 'orange' for esignet default theme: Press enter for the default theme. Please provide URL for the custom theme"
 
-  2.  ["defaultlang"] = "Please choose the default lang for esignet. Please press enter for en: "
+  2.   `defaultlang` = Please choose the default lang for esignet. Please press enter for en: "
     - We should provide the existing list.
 
-  3.  ["idprovidername"] = "Please provide the name for eSignet: (Note: This name will be used instead of eSignet on the login page and in other places)"
+  3.   `idprovidername` =  Please provide the name for eSignet: (Note: This name will be used instead of eSignet on the login page and in other places)"
 
 
 #### Mock Relying Party Installation
 
-If you have chosen to install eSignet with mosip ID then the MISP onboarding should be initiated and completed successfully, however if you choose to continue with mock or custom plugin no MISP onboarding is required, and this step should be skipped.
+If you have chosen to install eSignet with mosip ID then the MISP onboarding should be initiated and completed successfully, however if you choose to continue with mock or custom plugin, no MISP onboarding is required, and this step should be skipped.
 
 - Use the onboarder script to register eSignet as a MISP partner and configure the OIDC client.
 - Update any required properties (e.g., MOSIP IDA domain names, client secrets) as per your environment.
@@ -493,8 +498,6 @@ If you have chosen to install eSignet with mosip ID then the MISP onboarding sho
 Refer to the [official onboarding documentation](https://github.com/mosip/esignet-plugins/blob/release-1.3.x/mosip-identity-plugin/src/main/resources/application.properties) for property overrides.
 
 eSignet installation is completed at this step.
-
-
 
 > Note: You can refer to the deployment guide to know more about the mock relying party portal installation, having mock relying party portal installed will be helpful to verify the complete eSignet flow.
 
