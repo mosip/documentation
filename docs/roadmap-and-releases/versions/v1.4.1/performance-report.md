@@ -16,17 +16,17 @@ Read more about eSignet: [eSignet Documentation\
 This performance report focuses specifically on benchmarking and evaluating eSignet v1.4.1 under controlled test conditions using a mock Identity Authentication (IDA) system. The key areas covered within the scope of this report include:
 
 1. Performance testing is limited to eSignet v1.4.1 and does not extend to earlier or future versions.
-2. Only OTP-based authentication flows were included in the performance assessment. Other factors such as biometrics or password-based flows were excluded.
+2. Only OTP-based authentication flows were included in the performance assessment. Other factors such as biometrics or password-based flows were excluded because the performance was conducted with mock ID system, so the change in the auth factor does not impact the response times of user authentication and userinfo exchange.
 3. The system was tested to achieve and maintain a constant throughput of 100 requests per second (RPS), which in turn translates to [15 transactions per second (TPS)](#user-content-fn-1)[^1] based on the 7 endpoints required to complete 1 transaction.
 4. System was able to maintain the throughput of 100 RPS both with and without intentional delays introduced in the mock IDA system. The goal was to ensure consistent performance while remaining within the predefined Service Level Agreements (SLAs) for response times.
 5. All performance bottlenecks, failures, or irregularities encountered during testing were documented. Where applicable, fixes and optimizations were implemented and validated to ensure compliance with performance targets.
 
 ## Approach
 
-To perform the test run, **Apache - JMeter** was used as the load testing tool to simulate **106 users**, maintaining a consistent **throughput of 100 Transactions Per Second (TPS)** for a duration of **30 minutes**.
+To perform the test run, **Apache - JMeter** was used as the load testing tool to simulate **106 users**, maintaining a consistent **throughput of 100 requests per second (RPS)** for a duration of **30 minutes**.
 
-1. **The Constant Throughput Timer** was set to **100 × 60 = 6000 samples per minute** as the target throughput, with **100,000 sample data was** prepared for the run. For example, if the total number of user samples reaches **117,000**, the first **100,000** sample data will be unique, and the **100,001st** sample data will be a repeat of the **1st** sample data from the entry list.
-2. To mimic a real-world scenario, an **additional delay of 1000ms** was introduced for the **send-OTP**, **auth**, and **token** endpoints in the mock identity system. Consequently, the **SLA was updated to 1.5 seconds**, and number of virtual users required to achieve the throughput of 100TPS was calculated using the **Little’s Law**.
+1. **100,000 sample user data was** prepared for the run, if the total number of user samples exceeds **100,000** then the first **100,000** sample user data will be unique, and the **100,001st** sample data will be a repeat of the **1st** sample data from the entry list.
+2. To mimic a real-world scenario, an **additional delay of 1000ms** was introduced for the **send-OTP**, **auth**, and **token** endpoints in the mock identity system. Consequently, the **SLA was updated to 1.5 seconds.**
 
 ## Tools Used
 
@@ -40,9 +40,8 @@ To perform the test run, **Apache - JMeter** was used as the load testing tool t
    1. With 1-second induced delay in mock Identity Authentication (IDA) system
    2. Without induced delay
 3. Load conditions:
-   1. Sustained 100 Transactions Per Second (TPS)
-   2. 106 concurrent virtual users
-   3. 30-minute duration
+   1. Sustained 100 **requests per second** (RPS)
+   2. 30-minute duration
 4. Test environment configuration:
    1. eSignet: 2 pods (1500m CPU, 2250Mi memory each)
    2. Mock ID system: 2 pods (300m CPU, 2250Mi memory each)
@@ -63,8 +62,8 @@ To perform the test run, **Apache - JMeter** was used as the load testing tool t
 
 The performance run is carried out with below assumptions and considerations:
 
-1. Requirement here is to check the performance of eSignet APIs integrating with MOCK IDA.
-2. We will be considering the OTP auth factor. The remaining auth factors follow the same flow as the OTP auth factor.
+1. Performance of eSignet APIs is checked against MOCK ID plugin.
+2. We have considered the OTP auth factor for the performance run.
 
 ### **SLA:**
 
@@ -117,11 +116,11 @@ Performance data load has been populated before the run to ensure realistic resu
 
 #### **User distribution among the scenarios**
 
-<table data-full-width="true"><thead><tr><th>Scenario Name</th><th>Module Name</th><th width="203.640625">API Endpoint</th><th>HTTP Method</th><th width="126.734375">SLA(ms) &#x3C;=</th><th width="129.25">Weightage/Load Distribution</th><th width="85.49609375">Users</th><th>Throughput (TPS)</th></tr></thead><tbody><tr><td><p>User with OTP authentication</p><p> </p></td><td><p> eSignet-service</p><p> </p></td><td> /csrf/token </td><td>GET</td><td> 100</td><td><p> </p><p> 100</p></td><td><p> </p><p> 106</p></td><td><p> </p><p> 100</p></td></tr><tr><td></td><td> </td><td>/authorization/v2/oauth-details </td><td>POST</td><td>100</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>/authorization/send-otp </td><td>POST</td><td>1500</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>/authorization/v3/authenticate </td><td>POST</td><td>1500</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>/authorization/auth-code </td><td>POST</td><td>100</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>/oauth/v2/token </td><td>POST</td><td>1500</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td><strong>/oidc/userinfo</strong>  </td><td>GET</td><td>100</td><td></td><td></td><td></td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th>Scenario Name</th><th>Module Name</th><th width="203.640625">API Endpoint</th><th>HTTP Method</th><th width="126.734375">SLA(ms) &#x3C;=</th><th width="129.25">Weightage/Load Distribution</th><th>Throughput (RPS)</th></tr></thead><tbody><tr><td><p>User with OTP authentication</p><p> </p></td><td><p> eSignet-service</p><p> </p></td><td> /csrf/token </td><td>GET</td><td> 100</td><td><p> </p><p> 100</p></td><td><p> </p><p> 100</p></td></tr><tr><td></td><td> </td><td>/authorization/v2/oauth-details </td><td>POST</td><td>100</td><td></td><td></td></tr><tr><td></td><td></td><td>/authorization/send-otp </td><td>POST</td><td>1500</td><td></td><td></td></tr><tr><td></td><td></td><td>/authorization/v3/authenticate </td><td>POST</td><td>1500</td><td></td><td></td></tr><tr><td></td><td></td><td>/authorization/auth-code </td><td>POST</td><td>100</td><td></td><td></td></tr><tr><td></td><td></td><td>/oauth/v2/token </td><td>POST</td><td>1500</td><td></td><td></td></tr><tr><td></td><td></td><td><strong>/oidc/userinfo</strong>  </td><td>GET</td><td>100</td><td></td><td></td></tr></tbody></table>
 
 ### Resource level configuration
 
-| Container name       | 100TPS             |                                                                                                                                                                                                                                                                                                      |
+| Container name       | 100RPS             |                                                                                                                                                                                                                                                                                                      |
 | -------------------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |                      | **Number of pods** | **Resource configuration**                                                                                                                                                                                                                                                                           |
 | eSignet              | 2                  | <p>resources:</p><p>            limits:</p><p>              cpu: 1500m</p><p>              memory: 2250Mi</p><p>            requests:</p><p>              cpu: 1500m</p><p>              memory: 2250Mi</p><ul><li>name: JDK_JAVA_OPTIONS</li></ul><p>              value: '-Xms2250M -Xmx2250M'</p> |
@@ -131,17 +130,16 @@ Performance data load has been populated before the run to ensure realistic resu
 
 #### Performance test execution results
 
-| **Application Name**        | eSignet              |
-| --------------------------- | -------------------- |
-| **Test Duration**           | 13/03/2025 (30 mins) |
-| **Number of Virtual Users** | 106                  |
-| **Status**                  | Pass                 |
+| **Application Name** | eSignet              |
+| -------------------- | -------------------- |
+| **Test Duration**    | 13/03/2025 (30 mins) |
+| **Status**           | Pass                 |
 
 ### Test Report
 
-1. Test results for 100 TPS with 106 users for a 30-minute run, simulating the real-time ID system by adding a fixed 1-second processing time for each endpoint (send-OTP, auth, and token).
+1. Test results for 100 RPS  for a 30-minute run, simulating the real-time ID system by adding a fixed 1-second processing time for each endpoint (send-OTP, auth, and token).
 
-| **Scenario Name**            | <p><strong>Transaction Name</strong></p><p> </p><p> </p> | **API Endpoint**                | **HTTP Method** | **100 TPS & users : 106**                     |                 |             |              |         |             |
+| **Scenario Name**            | <p><strong>Transaction Name</strong></p><p> </p><p> </p> | **API Endpoint**                | **HTTP Method** | **100 RPS**                                   |                 |             |              |         |             |
 | ---------------------------- | -------------------------------------------------------- | ------------------------------- | --------------- | --------------------------------------------- | --------------- | ----------- | ------------ | ------- | ----------- |
 |                              |                                                          |                                 |                 | **Date : 09/06/2025 (half an hour duration)** |                 |             |              |         |             |
 |                              |                                                          |                                 |                 | **# Samples**                                 | **Min**         | **Average** | **90% Line** | **Max** | **Error %** |
@@ -201,7 +199,7 @@ Based on the scope of the performance run, **no bottlenecks or issues were obser
 
 ### Recommendation
 
-The performance of the system was evaluated based on the defined scope and approach, achieving a consistent **throughput of 100 transactions per second (TPS)** during a **30-minute run with 106 users**. It is recommended to use a **Resource Calculator** for estimating requirements and scaling for the desired number of users and transactions.
+The performance of the system was evaluated based on the defined scope and approach, achieving a consistent **throughput of 100 requests per second (RPS)** during a **30-minute run**. It is recommended to use a **Resource Calculator** for estimating requirements and scaling for the desired number of users and transactions.
 
 ## Annexure:
 
