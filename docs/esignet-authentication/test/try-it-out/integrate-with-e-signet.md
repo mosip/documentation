@@ -1,6 +1,6 @@
 # Integrate with eSignet
 
-If you are a relying party looking to integrate with **eSignet,** you can connect with us by completing the [form](https://docs.google.com/forms/d/1YQKcBDR92uqy_0m6oIV5yLmCPQCGOqJYx043ZOWQnX8/edit) here. This will assist us in facilitating a seamless integration on [collab](https://collab.mosip.net/).
+If you are a relying party looking to integrate with **eSignet,** you can connect with us by completing the [form](https://docs.google.com/forms/d/e/1FAIpQLSerko7k1wiy1sjgfRSfRU5Bjkb7cKc0t2z0FmKt6mSLBqJGXQ/viewform) here. This will assist us in facilitating a seamless integration on [collab](https://collab.mosip.net/).
 
 Here are some FAQs on the Google form.
 
