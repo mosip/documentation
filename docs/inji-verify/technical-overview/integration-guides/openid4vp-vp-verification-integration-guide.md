@@ -134,8 +134,21 @@ If you use presentationDefinition, **do not** pass `presentationDefinitionId`, a
 | ---------------- | -------------------- | -------------------------------------- |
 | verifyServiceUrl | string               | Base URL for your verification backend |
 | protocol         | string               | Protocol for QR (e.g.: "openid4vp://") |
+| clientId         | string               | Unique client identifier for the relaying party  |
 | onQrCodeExpired  | () => void           | Callback when QR expires               |
 | onError          | (err: Error) => void | Error handler callback                 |
+
+
+**Note:**  
+`clientId` can be provided in either of the following formats:
+
+- **DID-based identifier:**  
+  Example: `did:web:verifier.example.com`
+
+- **Standard URL or string:**  
+  Example: `https://verifier.example.com` or `my-relaying-party`
+
+
 
 **Optional Props**
 
@@ -144,6 +157,19 @@ If you use presentationDefinition, **do not** pass `presentationDefinitionId`, a
 | triggerElement | React.ReactNode | Element that triggers verification (e.g., a button) |
 | transactionId  | string          | Optional external tracking ID                       |
 | qrCodeStyles   | object          | Customize QR appearance (size, color, margin, etc.) |
+| isSameDeviceFlowEnabled | boolean | Enables Same-Device flow if true (default: true) |
+
+### Same Device Flow Support
+If `isSameDeviceFlowEnabled={true}` (default):
+
+- **On Mobile or Tablet:**  
+  The component automatically redirects the user to the OpenID4VP URL.  
+  - If multiple compatible wallet apps are installed, the OS prompts the user to select one.  
+  - If only one wallet app is available, it opens directly.
+
+- **On Desktop or when `isSameDeviceFlowEnabled={false}`:**  
+  The component displays a QR code for cross-device scanning. Users can scan the QR code with a wallet app on a separate device to complete verification.
+
 
 ### Integration Examples
 

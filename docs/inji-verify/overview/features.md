@@ -13,10 +13,10 @@ Here is a comprehensive summary of the features offered by Inji Verify.
    * **Secure Authorization Flow**: Upon scanning the QR code, Inji Verify initiates an authorization request, securely retrieving and verifying the credential from Inji Web.
    * **Cross-Device Sharing**: Supports seamless cross-device credential sharing, simplifying verification and minimizing QR code complexity.
    * **Same-Device Sharing**: Inji Verify now supports OpenID4VP Same Device Flow, where both the verifier and wallet operate on the same mobile device.
-   * **Docker Compose for Easy Installation**: Simplifies deployment and setup through Docker Compose, allowing quick and efficient installation.
 4. **Docker Compose for Easy Installation**: Simplifies deployment and setup through Docker Compose, allowing quick and efficient installation.
 5. **Pixel Pass Integration:** Inji Verify seamlessly integrates with Pixel Pass SDK, ensuring accurate decoding of QR code data for verification purposes.
-   * PixelPass library now supports decoding of CBOR-encoded QR codes, enabling Inji Verify to verify CBO&#x52;**-**&#x65;ncoded QR codes. However, CBOR encoding capability within the PixelPass library is still under development.
+  * **CBOR Decoding Support:** PixelPass library now supports decoding of CBOR-encoded QR codes, enabling Inji Verify to verify CBOR-encoded QR codes. 
+  **Note**: CBOR encoding capability within the PixelPass library is still under development.
 6. **Verification SDK:** The portal utilizes a robust Verification SDK to validate decoded data, ensuring the authenticity and integrity of the credentials.
 7. **Credential Display**: Inji Verify retrieves display properties of credentials from the issuer's well-known configuration, ensuring a consistent and accurate representation of credential details.
    * **Valid Credential Display**: These credentials are currently active and verified using the Inji Verify Portal.
@@ -104,6 +104,39 @@ This ensures a secure and flexible way of sharing credentials across different d
 {% hint style="info" %}
 **Note:** The **Inji Verify SDK- Scan / Upload component** to enable developers to easily embed VC verification capabilities into their verifier (relying party) applications will be coming out in future releases! Stay tuned!
 {% endhint %}
+
+
+
+
+
+
+<!--
+0.15.0 Release
+Summary
+
+Inji Verify now supports SD-JWT Verifiable Credentials (VCs) across QR code scanning, upload, and VP verification (cross-device and same-device flows), adhering to OpenID4VP and OpenID4VCI standards. Users can verify SD-JWT VCs by scanning or uploading QR codes, and securely share credentials between devices or on the same device. The portal visually distinguishes disclosed and undisclosed claims, enhancing privacy and transparency. Robust error handling guides users through invalid QR codes or VP submission issues, ensuring a seamless and secure verification experience.
+
+..
+
+**Ability to verify SD-JWT VC using QR Code Scan feature**: Inji Verify now supports SD-JWT based Verifiable Credentials (VCs) which is an additional credential format built on the OpenID4VP and OpenID4VCI specifications. Users can easily scan SD-JWT VC QR codes using their device’s camera for swift and secure verification.
+
+**Ability to verify SD-JWT VC using QR Code Upload feature**: Beyond live scanning, Inji Verify allows users to upload QR code images containing SD-JWT VCs directly to the portal. This provides greater flexibility by enabling verification from stored or shared QR images, ensuring users can complete the verification process conveniently from any device or context.
+
+**Ability to create request and verify SD-JWT VC using VP Verification feature - Cross Device flow**: Inji Verify enables cross-device verification for SD-JWT–based VCs, allowing credentials to be securely shared between devices for instance, from a mobile wallet to a desktop verifier. This flow adheres to OpenID4VP principles, simplifying the verification process, improving interoperability, and reducing QR code complexity for a faster, more reliable exchange.
+
+**Ability to create request and verify SD-JWT VC using VP Verification feature - Same Device flow**: With support for the SD-JWT Same-Device Flow, Inji Verify allows both the verifier and the wallet to operate seamlessly on the same mobile device. This capability, aligned with OpenID4VP and OpenID4VCI standards, ensures a smooth, secure, and user-friendly verification experience eliminating the need to switch devices while maintaining the integrity and privacy of the credential exchange.
+
+**Ability to view the claims that were disclosed/ not disclosed for SD-JWT VC verification**: When verifying SD-JWT–based Verifiable Credentials (VCs), Inji Verify clearly indicates which claims were disclosed and which were withheld by the holder during the verification process.
+
+In line with the OpenID4VP and SD-JWT privacy-preserving principles, this feature enhances transparency and trust by visually differentiating between claims that were intentionally shared for verification and those kept private to safeguard the holder’s personal data.
+
+**Error Handling**: The portal provides robust error handling to guide users in case of:
+
+Invalid, expired, or unreadable QR codes.
+
+VP Submission issues, with appropriate HTTP status codes indicating the type of error.
+
+-->
 
 
 For more detailed information on each step and the underlying systems, click [**here**](../functional-overview/workflow.md)**.**
