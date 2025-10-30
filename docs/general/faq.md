@@ -185,7 +185,7 @@ Relying parties are considered to be **Auth** partners in MOSIP, and hence shoul
 1. **Self Onboarding**\
    To self-onboard, the partners can register directly on the MOSIP [PMS](https://docs.mosip.io/1.2.0/modules/partner-management-services) portal. Please refer [here](https://docs.mosip.io/1.2.0/modules/partner-management-services/pms-revamp/functional-overview/auth-partner/end-user-guide#authentication-partner-workflow) for a step by step process.
 2. **Assisted Onboarding**\
-   Alternatively, partners can also initiate the onboarding process by filling out the form [here](https://docs.google.com/forms/d/1YQKcBDR92uqy_0m6oIV5yLmCPQCGOqJYx043ZOWQnX8/closedform). Once submitted, partners will receive their credentials via email shortly.
+   Alternatively, partners can also initiate the onboarding process by filling out the form [here](https://docs.google.com/forms/d/e/1FAIpQLSerko7k1wiy1sjgfRSfRU5Bjkb7cKc0t2z0FmKt6mSLBqJGXQ/viewform). Once submitted, partners will receive their credentials via email shortly.
 
 Please refer [here](../esignet-authentication/test/try-it-out/integrate-with-e-signet.md) for more details.
 
