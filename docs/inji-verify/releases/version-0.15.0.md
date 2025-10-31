@@ -16,32 +16,29 @@ We are excited to announce the release of **Inji Verify v0.15.0.** This version 
 
 1. **Ability to verify SD-JWT VC using QR Code Scan feature:** Inji Verify now supports SD-JWT based Verifiable Credentials (VCs) which is an additional credential format built on the OpenID4VP and OpenID4VCI specifications.
 2. **Ability to verify SD-JWT VC using QR Code Upload feature:** Beyond live scanning, Inji Verify allows users to upload QR code images containing SD-JWT VCs directly to the portal.
-3. **Ability to create request and verify SD-JWT VC using VP Verification feature - Cross Device flow:** Inji Verify enables cross-device verification for SD-JWT--based VCs, allowing credentials to be securely shared between devices for instance, from a mobile wallet to a desktop verifier.
+3. **Ability to create request and verify SD-JWT VC using VP Verification feature - Cross Device flow:** Inji Verify enables cross-device verification for SD-JWT based VCs, allowing credentials to be securely shared between devices for instance, from a mobile wallet to a desktop verifier.
 4. **Ability to create request and verify SD-JWT VC using VP Verification feature - Same Device flow:** With support for the SD-JWT Same-Device Flow, Inji Verify allows both the verifier and the wallet to operate seamlessly on the same mobile device.
-5. **Ability to view the claims that were disclosed/ not disclosed for SD-JWT VC verification:** When verifying SD-JWT--based Verifiable Credentials (VCs), Inji Verify clearly indicates which claims were disclosed and which were withheld by the holder during the verification process.
+5. **Ability to view the claims that were disclosed/ not disclosed for SD-JWT VC verification:** When verifying SD-JWT based Verifiable Credentials (VCs), Inji Verify clearly indicates which claims were disclosed and which were withheld by the holder during the verification process.
 6. **Error Handling:** The portal provides robust error handling to guide users in case of VP Submission issues, with appropriate HTTP status codes indicating the type of error.
 
+{% hint style="warning" %}
 **Note:** The Inji Verify UI is a _reference implementation_ to demonstrate orchestration. Developers can selectively embed SDK components in the verifier applications as per their needs.
+{% endhint %}
 
 ## **Repositories: Released/Dependent**
 
 <table><thead><tr><th width="352.49609375">Repository</th><th>Tag (Released/Dependent)</th></tr></thead><tbody><tr><td>Inji Verify</td><td><strong>v0.15.0</strong></td></tr></tbody></table>
 
-&#x20;
+
 
 ## **Projects Released**
 
-**Inji Verify Repo** → 4 projects (all these projects are of same version) as below:
+**Inji Verify Repo:** 4 projects (all these projects are of same version) are as follows:
 
-i) inji-verify-service - \<Insert Link Here>
-
-ii) inji-verify-ui (ref implementation) - \<Insert Link Here>
-
-iii) SDK - \<Insert Link Here>
-
-iv) API-Test - \<Insert Link Here>
-
-
+1. inji-verify-service - \<Insert Link Here>
+2. inji-verify-ui (ref implementation) - \<Insert Link Here>
+3. SDK - \<Insert Link Here>
+4. API-Test - \<Insert Link Here>
 
 ## **Compatible modules**
 
@@ -61,7 +58,7 @@ Below is the list of fixes as part of the **0.15.0** release, For a detailed and
 
 Below is a list of some key known issues. For a detailed overview and the complete list of issues related to Inji Verify, please click [**here**](https://mosip.atlassian.net/issues/?jql=project%20%3D%20%22INJIVER%22%20AND%20status%20not%20in%20%28Closed%2C%20Canceled%29%20AND%20type%20%3D%20Bug%20ORDER%20BY%20created%20DESC)**.**
 
-| **Jira ID**                                                     | **Description**                                                                                                                                                                                                                                                                                                                                                                  |
+| Jira ID                                                         | Description                                                                                                                                                                                                                                                                                                                                                                      |
 | --------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [INJIVER-1061](https://mosip.atlassian.net/browse/INJIVER-1061) | In OpenID4VP (Cross device) component, after scanning the health insurance QR code in the injiwallet app, it is displaying the life insurance VC.                                                                                                                                                                                                                                |
 | [INJIVER-1131](https://mosip.atlassian.net/browse/INJIVER-1131) | The OpenID4VP (Cross device) component in Inji Verify currently validates a presentation as successful even when a wrong Verifiable Credential (VC) is submitted. As a temporary workaround, implement credential type validation on the Relaying Party (RP) side, by verifying that the received VC matches the expected type defined in the original presentation\_definition. |
