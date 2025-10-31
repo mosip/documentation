@@ -39,10 +39,46 @@ Verify UI--)Verify UI: 12. Render VC and its statuses accordingly
 6. Wallet Scans QR code
 7. Wallet reads the QR code data and initiates a OpenId4VP flow on wallets end.
 8. Wallet creates a VP based on the VP selected VCs and POST it to responseUri from the QR code
+
+    **Wallet Authorization Response Types**
+
+    The Wallet can return two types of responses to an Authorization Request:
+
+    **1. Successful Authorization Response**
+
+    Includes:
+
+    - **vp_token**: The signed Verifiable Presentation (VP) or an array of VPs.
+    - **presentation_submission**: Mappings between the requested credentials and their location within the VP.
+    - **state**: The transaction identifier, used to correlate with the original request.
+
+    This response indicates that the Wallet has successfully processed the request and generated a valid presentation.
+
+    **2. Error Response**
+
+    Includes:
+
+    - **error**: An error code indicating the reason for failure (e.g., `invalid_request`, `invalid_presentation_definition`, `unsupported_vp_format`).
+    - **error_description**: A human-readable explanation of the error.
+    - **state**: The same transaction identifier used in the original request.
+
+    This response indicates that the Wallet encountered an issue and could not generate or send a valid Verifiable Presentation.
+
 9. Inji Verify UI Starts polling status becomes `VP_SUBMITTED`
 10. Inji Verify UI requests for the submitted result with its verification statuses
 11. Using transactionId Inji v will fetch the data from DB and validate it using vc-verifier and return the response(11) Using transactionId Inji Verify Backed will fetch the data from DB and validate it using `vc-verifier` and returns the response
-12. Inji Verify UI renders the response accordingly
+12. Inji Verify UI renders the response accordingly, the response may be:
+
+    - **JSON VC (already decoded):**
+      - Render the credential details directly in the UI.
+
+    - **SD-JWT VC (encoded string format):**
+      - Decode using [`@sd-jwt/decode`](https://www.npmjs.com/package/@sd-jwt/decode) before rendering.
+
+    - **Display outcomes:**
+      - Show successful validation results.
+      - If verification fails, display error messages and failure details.
+
 
 ### Flow Diagram: OpenID4VP Same Device Flow 
 
@@ -92,15 +128,37 @@ The flow here utilizes the simple redirection to pass the Authorization request 
 
 once the user accepts to share the credentials to the verifier application wallet proceeds to create a verifiable presentation, if the user declines the request, then the wallet prompts a reason or simply cancel request
 
-5. **Authorization Response**: After the user accepts the request then wallet checks for the credentials which matches as per the presentation definition (which the verifier Requested for) and if there are any wallet shows the list to the user allowing them to select and then it constructs a VP response and signs using its private key.
+5. **Authorization Response**: After the user accepts the request, the wallet checks for credentials that match the Presentation Definition (which the verifier Requested for).
 
-* **Response Parameters**:
+If no matching credentials are found in the wallet, or if any issue occurs during credential retrieval or VP creation (such as malformed request, signing error, or invalid presentation definition), the wallet returns an **Error Response** to the verifier.
 
-  * **vp_token** - JSON string or object which contains either a single VP or array of VP’s. Each VC in every VP can be either encoded using base64url or sent as JSON object.
+  **The Error Response includes:**
 
-  * **presentation_submission** - It contains mappings between the requested Verifiable Credentials and where to find them within the returned VP Token.
+  - `error`: The error code indicating the reason for failure (e.g., `no_matching_credentials`, `invalid_request`, `invalid_presentation_definition`, `unsupported_vp_format`).
+  - `error_description`: A human-readable explanation of the issue encountered.
+  - Other parameters include: `state` (request-id), `code`, `id_token`
 
-  * **other parameters** include - state(request-id), code, id_token
+  This indicates that the wallet encountered an issue and could not generate or send a valid Verifiable Presentation.
+
+  If matching credentials are available, the wallet:
+
+  - Displays the list of matching credentials to the user for selection.
+  - Once the user selects the credentials, the wallet constructs a Verifiable Presentation (VP) and signs it using the holder’s private key.
+  - The wallet then sends a **Successful Authorization Response** to the verifier.
+
+  **The Successful Authorization Response includes:**
+
+  - `vp_token`: JSON string or object which contains either a single VP or array of VPs. Each VC in every VP can be either encoded using base64url or sent as JSON object.
+  - `presentation_submission`: Contains mappings between the requested Verifiable Credentials and where to find them within the returned VP Token.
+  - Other parameters include: `state` (request-id), `code`, `id_token`
+
+  * **Response Parameters**:
+
+    * **vp_token** - JSON string or object which contains either a single VP or array of VP’s. Each VC in every VP can be either encoded using base64url or sent as JSON object.
+
+    * **presentation_submission** - It contains mappings between the requested Verifiable Credentials and where to find them within the returned VP Token.
+
+    * **other parameters** include - state(request-id), code, id_token
 
 6. **Transmission of Authorization Response**: Once the Wallet prepares the VP, Wallet sends it back to verifier application (using redirect URI) based on the response_mode and the response_type specified by the verifier application in the Authorization Request
 
@@ -154,7 +212,7 @@ If validation is successful, the verifier grants access or approval to the user.
     * The validity of the VC against the issuer's key (issuer key verification).
     * The integrity of the credential ensures it has not been tampered with.
 * **Displaying the Verified Credential:**
-  * After successful verification, Inji Verify showcases the verified credential in the user interface.
+  * After successful verification and decoding (in case of SD-JWT credentials), Inji Verify renders the verified credential and its verification status in the user interface. If the VC is returned in SD-JWT encoded format (as a string), it is first decoded using the @sd-jwt/decode library before being displayed.
 * **Completion of Verification:**
   * The user is presented with the verified credential, confirming successful online sharing and validation using OpenID4VP standards.
 
@@ -196,7 +254,7 @@ If validation is successful, the verifier grants access or approval to the user.
     * The integrity of the credential, ensuring it has not been tampered with.
     * The VC verification happens at Inji Verify Backend, the Verify UI sends the VC to its backend and performs the verification using [vc-verfier](https://github.com/mosip/vc-verifier/tree/master/vc-verifier/kotlin) library.
 * **Displaying the Verified Credential:**
-  * After successful verification, Inji Verify showcases the verified credential in the user interface.
+  * After successful verification and decoding (in case of SD-JWT credentials), Inji Verify renders the verified credential and its verification status in the user interface. If the VC is returned in SD-JWT encoded format (as a string), it is first decoded using the @sd-jwt/decode library before being displayed.
 * **Completion of Verification:**
   * The user is presented with the verified credential, confirming successful online sharing and validation using OpenID4VP standards.
 
