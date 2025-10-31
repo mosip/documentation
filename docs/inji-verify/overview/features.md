@@ -105,8 +105,9 @@ This ensures a secure and flexible way of sharing credentials across different d
 **Note:** The **Inji Verify SDK- Scan / Upload component** to enable developers to easily embed VC verification capabilities into their verifier (relying party) applications will be coming out in future releases! Stay tuned!
 {% endhint %}
 
-
-
+23. **SD JWT support**: 
+Inji Verify now supports SD-JWT Verifiable Credentials (VCs) across QR code scanning, upload, and VP verification (cross-device and same-device flows), adhering to OpenID4VP and OpenID4VCI standards.
+Users can verify SD-JWT VCs by scanning or uploading QR codes, and securely share credentials between devices or on the same device. The portal visually distinguishes disclosed and undisclosed claims, enhancing privacy and transparency. Robust error handling guides users through invalid QR codes or VP submission issues, ensuring a seamless and secure verification experience.
 
 
 
@@ -114,7 +115,8 @@ This ensures a secure and flexible way of sharing credentials across different d
 0.15.0 Release
 Summary
 
-Inji Verify now supports SD-JWT Verifiable Credentials (VCs) across QR code scanning, upload, and VP verification (cross-device and same-device flows), adhering to OpenID4VP and OpenID4VCI standards. Users can verify SD-JWT VCs by scanning or uploading QR codes, and securely share credentials between devices or on the same device. The portal visually distinguishes disclosed and undisclosed claims, enhancing privacy and transparency. Robust error handling guides users through invalid QR codes or VP submission issues, ensuring a seamless and secure verification experience.
+Inji Verify now supports SD-JWT Verifiable Credentials (VCs) across QR code scanning, upload, and VP verification (cross-device and same-device flows), adhering to OpenID4VP and OpenID4VCI standards. 
+Users can verify SD-JWT VCs by scanning or uploading QR codes, and securely share credentials between devices or on the same device. The portal visually distinguishes disclosed and undisclosed claims, enhancing privacy and transparency. Robust error handling guides users through invalid QR codes or VP submission issues, ensuring a seamless and secure verification experience.
 
 ..
 
