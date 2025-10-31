@@ -48,7 +48,11 @@ The following table outlines the tested and certified compatibility of Inji Veri
 
 ## **Bug Fixes**
 
-Below is the list of fixes as part of the **0.15.0** release, For a detailed and complete list please click [**here**](https://mosip.atlassian.net/issues/?jql=project%3D%22Inji%20Verify%22%20and%20fixVersion%3D0.15.0%20and%20issuetype%3Dbug%20and%20status%3Dclosed).
+Below is the list of fixes as part of the **0.15.0** release.&#x20;
+
+[https://mosip.atlassian.net/issues/?jql=project%3D%22Inji%20Verify%22%20and%20fixVersion%3D0.15.0%20and%20issuetype%3Dbug%20and%20status%3Dclosed](https://mosip.atlassian.net/issues/?jql=project%3D%22Inji%20Verify%22%20and%20fixVersion%3D0.15.0%20and%20issuetype%3Dbug%20and%20status%3Dclosed)
+
+
 
 ## **User Stories**
 
