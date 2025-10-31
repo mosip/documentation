@@ -4,6 +4,12 @@ icon: rocket-launch
 
 # Releases
 
+**Version**: **0.15.0**
+
+* Name: Inji Verify v0.15.0
+* Coming Soon
+* [Release Notes](version-0.15.0.md)
+
 **Version**: **0.14.0**
 
 * Name: Inji Verify v0.14.0
