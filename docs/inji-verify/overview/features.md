@@ -6,17 +6,22 @@ Here is a comprehensive summary of the features offered by Inji Verify.
 
 1. **QR Code Scanning:** Inji Verify allows users to easily scan QR codes using their device's camera, enabling swift verification of credentials. For mobile scans, a zoom slider is available now to adjust magnification, enhancing the scanning and verification experience.
 2. **Upload QR Code:** Users can upload QR code images directly to the portal for verification, providing flexibility in the verification process.
-   * Supports various formats like PDFs and images(JPEG, JPG, and PNG) containing QR codes.
+
+* Supports various formats like PDFs and images(JPEG, JPG, and PNG) containing QR codes.
+
 3. **Verifying QR Codes Using OpenID4VP Standards (Online Sharing)**
-   * **Streamlined Credential Sharing**: Inji Verify utilizes[ **OpenID4VP**](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html#name-cross-device-flow) standards, embedding a URL in the QR code for online credential sharing, reducing the need for embedding dense Verifiable Credentials (VCs).
-   * **Efficient Scanning**: Users can scan the QR code, which directs them to a secure VC storage location like [**Inji Web**](https://docs.mosip.io/inji/inji-web/functional-overview/features#store-verifiable-credentials-vc) or any other platform adhering to OpenID4VP standards.
-   * **Secure Authorization Flow**: Upon scanning the QR code, Inji Verify initiates an authorization request, securely retrieving and verifying the credential from Inji Web.
-   * **Cross-Device Sharing**: Supports seamless cross-device credential sharing, simplifying verification and minimizing QR code complexity.
-   * **Same-Device Sharing**: Inji Verify now supports OpenID4VP Same Device Flow, where both the verifier and wallet operate on the same mobile device.
+
+* **Streamlined Credential Sharing**: Inji Verify utilizes[ **OpenID4VP**](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html#name-cross-device-flow) standards, embedding a URL in the QR code for online credential sharing, reducing the need for embedding dense Verifiable Credentials (VCs).
+* **Efficient Scanning**: Users can scan the QR code, which directs them to a secure VC storage location like [**Inji Web**](https://docs.mosip.io/inji/inji-web/functional-overview/features#store-verifiable-credentials-vc) or any other platform adhering to OpenID4VP standards.
+* **Secure Authorization Flow**: Upon scanning the QR code, Inji Verify initiates an authorization request, securely retrieving and verifying the credential from Inji Web.
+* **Cross-Device Sharing**: Supports seamless cross-device credential sharing, simplifying verification and minimizing QR code complexity.
+* **Same-Device Sharing**: Inji Verify now supports OpenID4VP Same Device Flow, where both the verifier and wallet operate on the same mobile device.
+
 4. **Docker Compose for Easy Installation**: Simplifies deployment and setup through Docker Compose, allowing quick and efficient installation.
 5. **Pixel Pass Integration:** Inji Verify seamlessly integrates with Pixel Pass SDK, ensuring accurate decoding of QR code data for verification purposes.
-  * **CBOR Decoding Support:** PixelPass library now supports decoding of CBOR-encoded QR codes, enabling Inji Verify to verify CBOR-encoded QR codes. 
-  **Note**: CBOR encoding capability within the PixelPass library is still under development.
+
+* **CBOR Decoding Support:** PixelPass library now supports decoding of CBOR-encoded QR codes, enabling Inji Verify to verify CBOR-encoded QR codes. **Note**: CBOR encoding capability within the PixelPass library is still under development.
+
 6. **Verification SDK:** The portal utilizes a robust Verification SDK to validate decoded data, ensuring the authenticity and integrity of the credentials.
 7. **Credential Display**: Inji Verify retrieves display properties of credentials from the issuer's well-known configuration, ensuring a consistent and accurate representation of credential details.
    * **Valid Credential Display**: These credentials are currently active and verified using the Inji Verify Portal.
@@ -40,14 +45,15 @@ This ensures a secure and flexible way of sharing credentials across different d
 * This enables a seamless, app-like user experience for mobile users without requiring a second device.
 
 10. **Ease of Integrating Modular SDK Components with Verifier Applications**:
-   * Inji Verify provides modular SDK components that empower verifier (relying party) applications to seamlessly integrate VC verification workflows—without relying on the full Inji Verify reference application.
-   * **Scan/Upload Component** – Enables QR code scanning or file upload for verifying credentials.
-   * **OpenID4VP VP Verification Component** – Supports Verifiable Presentation: Cross Device and Same Device flows aligned with the OpenID4VP specification
-   * These plug-and-play components are:
-     * Developed using TypeScript and Optimized for React environments
-     * Published as independent NPM modules to ensure flexibility and reusability
-   * This flexibility enables verifiers to easily integrate VC verification into their own UI, use only the modules they need and reduce dependency on the entire Inji Verify codebase
-   * The Inji Verify UI is provided as a reference implementation to demonstrate how the SDK components can be orchestrated in a full-fledged verifier application. It is not required for adoption. Developers are encouraged to go through step-by-step [integration guide](../technical-overview/integration-guides/openid4vp-vp-verification-integration-guide.md) and selectively embed only the components relevant to their business needs.
+
+* Inji Verify provides modular SDK components that empower verifier (relying party) applications to seamlessly integrate VC verification workflows—without relying on the full Inji Verify reference application.
+* **Scan/Upload Component** – Enables QR code scanning or file upload for verifying credentials.
+* **OpenID4VP VP Verification Component** – Supports Verifiable Presentation: Cross Device and Same Device flows aligned with the OpenID4VP specification
+* These plug-and-play components are:
+  * Developed using TypeScript and Optimized for React environments
+  * Published as independent NPM modules to ensure flexibility and reusability
+* This flexibility enables verifiers to easily integrate VC verification into their own UI, use only the modules they need and reduce dependency on the entire Inji Verify codebase
+* The Inji Verify UI is provided as a reference implementation to demonstrate how the SDK components can be orchestrated in a full-fledged verifier application. It is not required for adoption. Developers are encouraged to go through step-by-step [integration guide](../technical-overview/integration-guides/openid4vp-vp-verification-integration-guide.md) and selectively embed only the components relevant to their business needs.
 
 **Note**: Inji Verify SDK components supports React version- 18.2.0
 
@@ -77,68 +83,36 @@ This ensures a secure and flexible way of sharing credentials across different d
     3. Responsive design ensures optimal performance and usability across different screen sizes and resolutions.
     4. Tablet responsiveness tested on specific devices; still under development.
     5. Accessible from anywhere with an internet connection for convenient on-the-go verification.
-
 20. **QR Code Version Compatibility and Technical Requirements**:
 
     **Scan Feature QR Code Compatibility**:
+
     * QR code versions supported for the scan feature range from v22 and below with consistent performance.
     * Versions from v23 to v27 show inconsistent results due to varying data bytes based on the use case for verifiable credentials embedded into the QR code.
     * Versions above v27 are not supported for the scan feature. If you have a QR code version above v27, please use the upload feature to upload the document or QR code for verification.
 
     **Camera Resolution Requirement**:
+
     * The device's front, back, or web camera resolution must exceed 12 megapixels.
     * Resolutions below this range result in inconsistent QR code scanning.
     * Cameras should be used in well-lit environments without filters, ensuring proper alignment for optimal scanning.
 
     **Upload Feature QR Code Compatibility**:
-    * QR code versions supported for the upload feature range from v32 and below.
 
+    * QR code versions supported for the upload feature range from v32 and below.
 21. **Enhanced Security and Data Protection**:
     * Inji Verify employs encryption techniques to protect sensitive information and prevent tampering.
     * Advanced algorithms and cryptographic methods ensure that QR codes have not been tampered with.
     * Utilizes [**pixel pass library v0.5.0**](https://www.npmjs.com/package/@mosip/pixelpass/v/0.5.0) for secure QR code processing.
     * Real-time verification provides instant feedback on credential validity, giving users confidence in authenticity.
-
 22. **Future SDK Development Roadmap**:
 
 {% hint style="info" %}
 **Note:** The **Inji Verify SDK- Scan / Upload component** to enable developers to easily embed VC verification capabilities into their verifier (relying party) applications will be coming out in future releases! Stay tuned!
 {% endhint %}
 
-23. **SD JWT support**: 
-Inji Verify now supports SD-JWT Verifiable Credentials (VCs) across QR code scanning, upload, and VP verification (cross-device and same-device flows), adhering to OpenID4VP and OpenID4VCI standards.
-Users can verify SD-JWT VCs by scanning or uploading QR codes, and securely share credentials between devices or on the same device. The portal visually distinguishes disclosed and undisclosed claims, enhancing privacy and transparency. Robust error handling guides users through invalid QR codes or VP submission issues, ensuring a seamless and secure verification experience.
+23. **SD JWT support**:
 
-
-
-<!--
-0.15.0 Release
-Summary
-
-Inji Verify now supports SD-JWT Verifiable Credentials (VCs) across QR code scanning, upload, and VP verification (cross-device and same-device flows), adhering to OpenID4VP and OpenID4VCI standards. 
-Users can verify SD-JWT VCs by scanning or uploading QR codes, and securely share credentials between devices or on the same device. The portal visually distinguishes disclosed and undisclosed claims, enhancing privacy and transparency. Robust error handling guides users through invalid QR codes or VP submission issues, ensuring a seamless and secure verification experience.
-
-..
-
-**Ability to verify SD-JWT VC using QR Code Scan feature**: Inji Verify now supports SD-JWT based Verifiable Credentials (VCs) which is an additional credential format built on the OpenID4VP and OpenID4VCI specifications. Users can easily scan SD-JWT VC QR codes using their device’s camera for swift and secure verification.
-
-**Ability to verify SD-JWT VC using QR Code Upload feature**: Beyond live scanning, Inji Verify allows users to upload QR code images containing SD-JWT VCs directly to the portal. This provides greater flexibility by enabling verification from stored or shared QR images, ensuring users can complete the verification process conveniently from any device or context.
-
-**Ability to create request and verify SD-JWT VC using VP Verification feature - Cross Device flow**: Inji Verify enables cross-device verification for SD-JWT–based VCs, allowing credentials to be securely shared between devices for instance, from a mobile wallet to a desktop verifier. This flow adheres to OpenID4VP principles, simplifying the verification process, improving interoperability, and reducing QR code complexity for a faster, more reliable exchange.
-
-**Ability to create request and verify SD-JWT VC using VP Verification feature - Same Device flow**: With support for the SD-JWT Same-Device Flow, Inji Verify allows both the verifier and the wallet to operate seamlessly on the same mobile device. This capability, aligned with OpenID4VP and OpenID4VCI standards, ensures a smooth, secure, and user-friendly verification experience eliminating the need to switch devices while maintaining the integrity and privacy of the credential exchange.
-
-**Ability to view the claims that were disclosed/ not disclosed for SD-JWT VC verification**: When verifying SD-JWT–based Verifiable Credentials (VCs), Inji Verify clearly indicates which claims were disclosed and which were withheld by the holder during the verification process.
-
-In line with the OpenID4VP and SD-JWT privacy-preserving principles, this feature enhances transparency and trust by visually differentiating between claims that were intentionally shared for verification and those kept private to safeguard the holder’s personal data.
-
-**Error Handling**: The portal provides robust error handling to guide users in case of:
-
-Invalid, expired, or unreadable QR codes.
-
-VP Submission issues, with appropriate HTTP status codes indicating the type of error.
-
--->
-
+&#x20;Inji Verify now supports SD-JWT Verifiable Credentials (VCs) across QR code scanning, upload, and VP verification (cross-device and same-device flows), adhering to OpenID4VP and OpenID4VCI standards. Users can verify SD-JWT VCs by scanning or uploading QR codes, and securely share credentials between devices or on the same device. The portal visually distinguishes disclosed and undisclosed claims, enhancing privacy and transparency. Robust error handling guides users through invalid QR codes or VP submission issues, ensuring a seamless and secure verification experience.
 
 For more detailed information on each step and the underlying systems, click [**here**](../functional-overview/workflow.md)**.**

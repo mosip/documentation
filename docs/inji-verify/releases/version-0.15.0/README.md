@@ -4,7 +4,7 @@
 
 **Support**: Developer Release
 
-**Release Date**: Coming Soon
+**Release Date**: 31st October, 2025
 
 ## **Overview**
 
@@ -25,7 +25,7 @@ We are excited to announce the release of **Inji Verify v0.15.0.** This version 
 
 ## **Repositories: Released/Dependent**
 
-<table><thead><tr><th width="352.49609375">Repository</th><th>Tag (Released/Dependent)</th></tr></thead><tbody><tr><td>Inji Verify</td><td><strong>v0.15.0</strong></td></tr></tbody></table>
+<table><thead><tr><th width="352.49609375">Repository</th><th>Tag (Released/Dependent)</th></tr></thead><tbody><tr><td>Inji Verify</td><td><a href="https://github.com/mosip/inji-verify/tree/v0.15.0"><strong>v0.15.0</strong></a></td></tr></tbody></table>
 
 ## **Projects Released**
 
@@ -73,5 +73,5 @@ Below is a list of some key known issues. For a detailed overview and the comple
 * [Feature documentation](https://docs.inji.io/inji-verify/overview/features)
 * [Integration Guide](https://docs.inji.io/inji-verify/technical-overview/integration-guides)
 * [API Documentation](https://mosip.stoplight.io/studio/inji-verify)
-* [Collab Guide](../functional-overview/releases-1/inji-verify-collab-guide.md)
+* [Collab Guide](../../functional-overview/releases-1/inji-verify-collab-guide.md)
 * QA Report
