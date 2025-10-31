@@ -33,10 +33,10 @@ We are excited to announce the release of **Inji Verify v0.15.0.** This version 
 
 **Inji Verify Repo:** 4 projects (all these projects are of same version) are as follows:
 
-1. inji-verify-service - \<Insert Link Here>
-2. inji-verify-ui (ref implementation) - \<Insert Link Here>
-3. SDK - \<Insert Link Here>
-4. API-Test - \<Insert Link Here>
+1. [inji-verify-service](https://github.com/mosip/inji-verify/tree/release-0.15.x/verify-service)
+2. [inji-verify-ui (ref implementation)](https://github.com/mosip/inji-verify/tree/release-0.15.x/verify-ui)
+3. [SDK](https://github.com/mosip/inji-verify/tree/release-0.15.x/inji-verify-sdk)
+4. [API-Test](https://github.com/mosip/inji-verify/tree/release-0.15.x/api-test)
 
 ## **Compatible modules**
 
