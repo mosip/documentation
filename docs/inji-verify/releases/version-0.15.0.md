@@ -53,13 +53,9 @@ demonstrate orchestration. Developers can selectively embed SDK
 components in the verifier applications as per their needs.
 
 ## **Repositories: Released/Dependent**
-
-  -----------------------------------------------------------------------
-  **Repositories**        **Tags: Released/Dependent**
-  ----------------------- -----------------------------------------------
-  Inji Verify             **v0.15.0**
-
-  -----------------------------------------------------------------------
+| **Repository**   | **Tag (Released/Dependent)** |
+|------------------|-----------------------------|
+| Inji Verify      | **v0.15.0**                 |
 
  
 
@@ -83,17 +79,12 @@ iv\) API-Test - \<Insert Link Here\>
 The following table outlines the tested and certified compatibility of
 Inji Verify 0.10.0 with other modules.
 
-  ---------------------------------------------------------------------------------------------------------------------
-  **Module**                                      **Version**
-  ----------------------------------------------- ---------------------------------------------------------------------
-  Inji Wallet                                     [0.20.0](https://github.com/mosip/inji-wallet/releases/tag/v0.20.0)
-
-  Inji Web                                        [0.14.0](https://github.com/mosip/inji-web/releases/tag/v0.14.1)
-
-  Pixel-Pass library                              [0.7.0](https://github.com/mosip/pixelpass/releases/tag/v0.7.0)
-
-  vc-verifier library                             [1.5.0](https://github.com/mosip/vc-verifier/releases/tag/v1.5.0)
-  ---------------------------------------------------------------------------------------------------------------------
+  | **Module**              | **Version**                                                                                 |
+  |-------------------------|--------------------------------------------------------------------------------------------|
+  | Inji Wallet             | [0.20.0](https://github.com/mosip/inji-wallet/releases/tag/v0.20.0)                        |
+  | Inji Web                | [0.14.0](https://github.com/mosip/inji-web/releases/tag/v0.14.1)                           |
+  | Pixel-Pass library      | [0.7.0](https://github.com/mosip/pixelpass/releases/tag/v0.7.0)                            |
+  | vc-verifier library     | [1.5.0](https://github.com/mosip/vc-verifier/releases/tag/v1.5.0)                          |
 
  
 
@@ -105,35 +96,15 @@ Below is the list of fixes as part of the **0.15.0** release:
 
 ## **User Stories**:
 
-  ------------------------------------------------------------------------------------------------------
-  **Jira ID**                                                         **Description**
-  ------------------------------------------------------------------- ----------------------------------
-  [INJIVER-1276](https://mosip.atlassian.net/browse/INJIVER-1276) -   To create SD-JWT QR codes for
-  Create test QR codes with SD-JWT format Testing                     testing purpose so that there is
-                                                                      no dependency on any other module
-                                                                      to create SD-JWT QR code
-
-  [INJIVER-1243](https://mosip.atlassian.net/browse/INJIVER-1243) -   VP Verification of SD-JWT QR code
-  OpenID4VP - Same-Device Flow: Receive and display results of SD-JWT for same device flow
-  VP verification Testing                                             
-
-  [INJIVER-1241](https://mosip.atlassian.net/browse/INJIVER-1241) -   VP Verification of SD-JWT QR code
-  OpenID4VP - Cross Device Flow: Receive and display results of       for cross device flow
-  SD-JWT VP verification Testing                                      
-
-  [INJIVER-1239](https://mosip.atlassian.net/browse/INJIVER-1239) -   Uploading and verifying SD-JWT QR
-  Upload SD-JWT VC Testing                                            code
-
-  [INJIVER-1237](https://mosip.atlassian.net/browse/INJIVER-1237) -   Scanning and verifying SD-JWT QR
-  SD-JWT VC QR Code Scanning Testing                                  code
-
-  [INJIVER-1222](https://mosip.atlassian.net/browse/INJIVER-1222) -   Handling VP Verification Errors
-  OpenID4VP- Error Handling Scenarios Testing                         
-
-  [INJIVER-1311](https://mosip.atlassian.net/browse/INJIVER-1311) -   Error handling in VP result API
-  Error Handling in /vp-result/{transactionId} by sending non 200     
-  status code in response Testing                                     
-  ------------------------------------------------------------------------------------------------------
+  | **Jira ID**                                                                 | **Description**                                                                                       |
+  |-----------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
+  | [INJIVER-1276](https://mosip.atlassian.net/browse/INJIVER-1276)             | Create test QR codes with SD-JWT format for testing, removing dependency on other modules.            |
+  | [INJIVER-1243](https://mosip.atlassian.net/browse/INJIVER-1243)             | OpenID4VP - Same-Device Flow: Receive and display results of SD-JWT VP verification (testing).        |
+  | [INJIVER-1241](https://mosip.atlassian.net/browse/INJIVER-1241)             | OpenID4VP - Cross Device Flow: Receive and display results of SD-JWT VP verification (testing).       |
+  | [INJIVER-1239](https://mosip.atlassian.net/browse/INJIVER-1239)             | Upload and verify SD-JWT VC via QR code (testing).                                                    |
+  | [INJIVER-1237](https://mosip.atlassian.net/browse/INJIVER-1237)             | Scan and verify SD-JWT VC QR code (testing).                                                          |
+  | [INJIVER-1222](https://mosip.atlassian.net/browse/INJIVER-1222)             | OpenID4VP - Error Handling Scenarios (testing VP verification errors).                                |
+  | [INJIVER-1311](https://mosip.atlassian.net/browse/INJIVER-1311)             | Error handling in /vp-result/{transactionId} API by sending non-200 status codes in response.         |
 
 ## **Known Issues**
 
@@ -141,56 +112,17 @@ Below is a list of some key known issues. For a detailed overview and
 the complete list of issues related to Inji Verify, please click
 [**[here.]{.underline}**](https://mosip.atlassian.net/issues/?jql=project%20%3D%20%22INJIVER%22%20AND%20status%20not%20in%20%28Closed%2C%20Canceled%29%20AND%20type%20%3D%20Bug%20ORDER%20BY%20created%20DESC)
 
-  ------------------------------------------------------------------------------------------------------------------
-  **Jira ID**                                                         **Description**
-  ------------------------------------------------------------------- ----------------------------------------------
-  [INJIVER-1061](https://mosip.atlassian.net/browse/INJIVER-1061) -   In OpenID4VP (Cross device)component, after
-  INJIVER- In OVP, after scanning the health insurance QR code in the scanning the health insurance QR code in the
-  injiwallet app, it is displaying the life insurance VC. New         injiwallet app, it is displaying the life
-                                                                      insurance VC.
-
-  [INJIVER-1131](https://mosip.atlassian.net/browse/INJIVER-1131) -   The OpenID4VP (Cross device) component in Inji
-  INJI-verify - OVP component is validating success even when a wrong Verify currently validates a presentation as
-  VC is sent New                                                      successful even when a wrong Verifiable
-                                                                      Credential (VC) is submitted. As a temporary
-                                                                      workaround, implement credential type
-                                                                      validation on the Relaying Party (RP) side, by
-                                                                      verifying that the received VC matches the
-                                                                      expected type defined in the original
-                                                                      presentation_definition.
-
-  [INJIVER-1062](https://mosip.atlassian.net/browse/INJIVER-1062) -   We are uploading an invalid QR code, and while
-  INJVER - We are uploading an invalid QR code, and while it displays it displays an error message stating that the
-  an error message stating that the QR code is invalid, the           QR code is invalid, the credential details are
-  credential details are still visible. New                           still visible.
-
-  [INJIVER-1063](https://mosip.atlassian.net/browse/INJIVER-1063) -   On iPhone 8 and iPhone 7, uploading the
-  INJIVER- On iPhone 8 and iPhone 7, uploading the Injiweb QR code    Injiweb QR code PDF shows an error message.
-  PDF shows an error message. New                                     
-
-  [INJIVER-625](https://mosip.atlassian.net/browse/INJIVER-625) -     Inji Verify - Upload not functioning on Mac
-  INJI-Verify Upload Not Functioning on Mac Safari Browser Versions   Safari Browser Versions 16 and below.
-  16 and Below Assigned                                               
-
-  [INJIVER-1220](https://mosip.atlassian.net/browse/INJIVER-1220) -   User friendly error message is not displayed
-  INJI-verify - error message for expired scan scenario is not proper for expired session scenario
-  New                                                                 
-
-  [INJIVER-1194](https://mosip.atlassian.net/browse/INJIVER-1194) -   INJI Verify SDK should be able to support
-  INJI Verify SDK should support non-react components New             integration with applications built on
-                                                                      platforms beyond *React (Typescript)
-                                                                      applications*, such as Angular, PHP, and
-                                                                      others.
-
-  [INJIVER-1069](https://mosip.atlassian.net/browse/INJIVER-1069) -   The MOSIP UIN VCs generated via reg-client are
-  INJI-verify - The MOSIP UIN VC\'s created from reg-client are not   currently not verifiable through INJI Verify.
-  verifiable from INJI-verify Fixed                                   
-
-  [INJIVER-979](https://mosip.atlassian.net/browse/INJIVER-979) -     Long-polling listeners are implemented within
-  Inji verify backend scalability issue New                           the service layer, preventing the backend from
-                                                                      scaling effectively in a multi-pod
-                                                                      (distributed) environment.
-  ------------------------------------------------------------------------------------------------------------------
+  | **Jira ID**                                                                 | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+  |-----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+  | [INJIVER-1061](https://mosip.atlassian.net/browse/INJIVER-1061)             | In OpenID4VP (Cross device) component, after scanning the health insurance QR code in the injiwallet app, it is displaying the life insurance VC.                                                                                                                                                                                                                                                                                                                                                                                                                        |
+  | [INJIVER-1131](https://mosip.atlassian.net/browse/INJIVER-1131)             | The OpenID4VP (Cross device) component in Inji Verify currently validates a presentation as successful even when a wrong Verifiable Credential (VC) is submitted. As a temporary workaround, implement credential type validation on the Relaying Party (RP) side, by verifying that the received VC matches the expected type defined in the original presentation_definition.                                                                                                                                                |
+  | [INJIVER-1062](https://mosip.atlassian.net/browse/INJIVER-1062)             | We are uploading an invalid QR code, and while it displays an error message stating that the QR code is invalid, the credential details are still visible.                                                                                                                                                                                                                                                                                                                                                                                                                |
+  | [INJIVER-1063](https://mosip.atlassian.net/browse/INJIVER-1063)             | On iPhone 8 and iPhone 7, uploading the Injiweb QR code PDF shows an error message.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+  | [INJIVER-625](https://mosip.atlassian.net/browse/INJIVER-625)               | Inji Verify - Upload not functioning on Mac Safari Browser Versions 16 and below.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+  | [INJIVER-1220](https://mosip.atlassian.net/browse/INJIVER-1220)             | User friendly error message is not displayed for expired session scenario.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+  | [INJIVER-1194](https://mosip.atlassian.net/browse/INJIVER-1194)             | INJI Verify SDK should be able to support integration with applications built on platforms beyond *React (Typescript) applications*, such as Angular, PHP, and others.                                                                                                                                                                                                                                                                                                                                                            |
+  | [INJIVER-1069](https://mosip.atlassian.net/browse/INJIVER-1069)             | The MOSIP UIN VCs generated via reg-client are currently not verifiable through INJI Verify.                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+  | [INJIVER-979](https://mosip.atlassian.net/browse/INJIVER-979)               | Long-polling listeners are implemented within the service layer, preventing the backend from scaling effectively in a multi-pod (distributed) environment.                                                                                                                                                                                                                                                                                                                                                                       |
 
 ## **Documentation**
 
