@@ -32,7 +32,6 @@ This release also includes critical **bug fixes** addressing verification issues
 **OpenIDVP and Verifier Enhancements**
 
 * Implemented OpenIDVP compliance with support for signed JWT–based authorization requests.
-* Added configuration support to handle client metadata for pre-registered verifiers.
 * Introduced support for `jwks_uri` trusted verifier configurations for dynamic key resolution.
 * Added configuration to allow unsigned requests for pre-registered verifiers, useful for local or mock setups.
 * Enhanced verifier trust flow by enabling public key resolution using the `did:client-id-scheme` method.
