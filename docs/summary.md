@@ -231,6 +231,7 @@
   * [Version 0.8.1](inji-verify/releases/version-0.8.1.md)
   * [Version 0.8.0](inji-verify/releases/release-notes/README.md)
     * [Test Report](inji-verify/releases/release-notes/test-report.md)
+  * [Version 0.15.1](inji-verify/releases/version-0.15.1.md)
 
 ***
 

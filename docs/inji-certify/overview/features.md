@@ -2,7 +2,7 @@
 
 Inji Certify comes with a comprehensive suite of features designed to make credential issuance seamless, secure, and standards-compliant. Key features include:
 
-1. ### Standards Based Credential Issuance
+1. #### Standards Based Credential Issuance
 
 Inji Certify is built to issue digital credentials that are fully compliant with globally recognized standards, ensuring interoperability across systems and jurisdictions. It:
 
@@ -10,7 +10,7 @@ Inji Certify is built to issue digital credentials that are fully compliant with
 * Implements **OpenID for Verifiable Credential Issuance (OpenID4VCI)** for seamless and secure delivery of credentials to digital wallets.
 * Ensures interoperability across systems and jurisdictions.
 
-2. ### Multiple Credential Support for Issuers:
+2. #### Multiple Credential Support for Issuers:
 
 Inji Certify allows a single issuer to manage and issue multiple types of verifiable credentials within the same ecosystem. This is especially useful for organizations running diverse programs or services under one authority. **Example scenarios:**
 
@@ -21,7 +21,7 @@ Inji Certify allows a single issuer to manage and issue multiple types of verifi
 
 This flexibility ensures that one issuer can cater to multiple credentialing needs without managing separate systems or infrastructures.
 
-3. ### Addition of Credential Type via API post onboarding
+3. #### Addition of Credential Type via API post onboarding
 
 Inji Certify enables issuers to expand their credential portfolio even after the initial onboarding, ensuring they can respond quickly to evolving program or policy needs. Through secure APIs, issuers can create and configure new credential types without system downtime or complex redeployments **Key capabilities include:**
 
@@ -31,7 +31,7 @@ Inji Certify enables issuers to expand their credential portfolio even after the
 
 Access to comprehensive **documentation and guidelines** --- _(refer to this_ [_link_](https://github.com/mosip/inji-certify/blob/master/docs/Credential-Issuer-Configuration.md#credential-configuration) _for details on configuring VC types)_.
 
-4. ### Support for Multiple Credential Formats
+4. #### Support for Multiple Credential Formats
 
 Inji Certify provides issuers with the capability to generate verifiable credentials in multiple **industry-accepted formats**, ensuring broad interoperability across ecosystems, wallets, and verification systems. This flexibility makes it easier for organizations to adopt digital credentials without being locked into a single standard.
 
@@ -50,7 +50,7 @@ Note: in the 0.12.0 release we have included support for SD-jWT as a draft relea
 
 By supporting both **current and emerging standards**, Inji Certify ensures that credentials are **secure, future-ready, and interoperable** with a wide range of applications, wallets, and verification ecosystems.
 
-5. ### Efficient Signing with Multiple Algorithms
+5. #### Efficient Signing with Multiple Algorithms
 
 Inji Certify ensures that every credential is protected through **digital signatures**, guaranteeing authenticity, integrity, and tamper resistance. To meet diverse ecosystem and compliance needs, it offers issuers the flexibility to choose from a wide range of cryptographic signing algorithms.
 
@@ -64,18 +64,15 @@ Inji Certify ensures that every credential is protected through **digital signat
 
 This combination of efficiency, flexibility, and compliance ensures that credentials issued through Inji Certify remain future-ready, secure, and widely interoperable.
 
-6. ### Plugin Support and Integration Capabilities
+6. #### Plugin Support and Integration Capabilities
 
 Inji Certify is built on a **modular plugin architecture**, enabling seamless integration with identity systems, registries, data sources, and third-party services. This design makes the platform highly flexible, customizable, and easy to adopt across diverse ecosystems while simplifying both implementation and testing.
 
 **Key plugin categories include:**
 
-1.  **VC Issuance Plugins** These plugins are responsible for generating and signing verifiable credentials. They typically connect with external identity or authentication systems, obtain the required information, and issue the VC in compliance with global standards. **Currently supported issuance plugins:**
-
-    * **MOSIP Identity Plugin** -- Integrates with MOSIP for trusted identity verification.
-    * **Sunbird Plugin** -- Enables seamless integration with Sunbird-based services.
-
-
+1. **VC Issuance Plugins** These plugins are responsible for generating and signing verifiable credentials. They typically connect with external identity or authentication systems, obtain the required information, and issue the VC in compliance with global standards. **Currently supported issuance plugins:**
+   * **MOSIP Identity Plugin** -- Integrates with MOSIP for trusted identity verification.
+   * **Sunbird Plugin** -- Enables seamless integration with Sunbird-based services.
 2. **Data Provider Plugins** These plugins fetch relevant data from external registries or data sources. The retrieved data is returned as a JSON object which Inji Certify then uses to generate and issue the corresponding verifiable credential. **Currently supported data provider plugins:**
    * **Mock IDA Plugin** -- Provides a simulated identity verification environment for testing and development.
    * **Mock CSV Data Provider Plugin** -- Useful for sandbox environments and test data simulation. Please refer to
@@ -85,7 +82,7 @@ For detailed instructions on configuring the Data Provider Plugin, please refer 
 
 Issuers can easily integrate additional custom plugins by following the detailed guidelines provided in this [link](https://github.com/mosip/inji-certify/blob/master/docs/Custom-Plugin-K8s.md). This extensible plugin framework ensures that Inji Certify can adapt to unique organizational needs without heavy customization. to know more about this feature please refer to this link: [VC Issuance vs Data Provider Plugin](https://github.com/mosip/inji-certify/blob/master/docs/VCIssuance-vs-DataProvider.md)
 
-7. ### Revocation Mechanism \*(Draft Release -- Experimental, JSON-LD Only)
+7. #### Revocation Mechanism \*(Draft Release -- Experimental, JSON-LD Only)
 
 **Important:** This feature is in **draft release** and currently supports **JSON-LD credentials only**. It is intended for experimentation and early feedback, **not for production use**.
 
@@ -100,7 +97,7 @@ Inji Certify introduces an initial implementation of revocation to enhance the t
 
 This draft release establishes the foundation for a standardized revocation mechanism in Inji Certify, with broader credential format support planned in future iterations. Click [here](https://github.com/mosip/inji-certify/blob/master/docs/VC-Revocation-Support.md) to know more about this feature.
 
-8. ### SVG Rendering Support
+8. #### SVG Rendering Support
 
 Inji Certify provides support for **SVG-based credential rendering**, ensuring wallets can display visually consistent and branded representations of issued credentials.
 
@@ -119,7 +116,7 @@ Inji Certify provides support for **SVG-based credential rendering**, ensuring w
 
 Please refer this [guide](https://github.com/mosip/inji-certify/blob/master/docs/Rendering-Template.md) to know more about this feature.
 
-9. ### External Authentication Integration
+9. #### External Authentication Integration
 
 Inji Certify provides support for integrating with external authentication services compliant with OAuth 2.0, such as eSignet, Keycloak, and others. This allows issuers to leverage existing identity and access management solutions seamlessly.
 

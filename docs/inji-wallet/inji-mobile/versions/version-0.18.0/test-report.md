@@ -2,15 +2,15 @@
 
 ### Testing Scope
 
-The scope of testing is to verify fitment to the specification from the perspective of&#x20;
+The scope of testing is to verify fitment to the specification from the perspective of
 
-● Functionality&#x20;
+● Functionality
 
-● Deployability&#x20;
+● Deployability
 
-●  Configurability&#x20;
+● Configurability
 
-●  Customizability
+● Customizability
 
 Verification is performed not only from the end user perspective but also from the System Integrator (SI) point of view. Hence Configurability and Extensibility of the software is also assessed. This ensures the readiness of software for use in multiple countries.
 
@@ -34,25 +34,25 @@ The Inji testing scope revolves around the following flows:
 
 ● Face Auth on Resident's phone with VID
 
-●  Multi language support
+● Multi language support
 
-●  Credential registry
+● Credential registry
 
-●   Backup and restore
+● Backup and restore
 
-●   Wallet binding
+● Wallet binding
 
-●    Deep link navigation
+● Deep link navigation
 
-●   OpenID4VP
+● OpenID4VP
 
-●   QR code Login
+● QR code Login
 
-●    Key Management
+● Key Management
 
-●    Credential Offer
+● Credential Offer
 
-●    Logout
+● Logout
 
 ## Test Approach
 
@@ -60,13 +60,13 @@ Persona based approach has been adopted to perform the IV\&V, by simulating test
 
 A Persona is a fictional character/user profile created to represent a user type that might use a product/or a service in a similar way. Persona based testing is a software testing technique that puts software testers in the customer's shoes, assesses their needs from the software and thereby determines use cases/scenarios that the customers will execute. The persona needs may be addressed through any of the following.
 
-●  Functionality&#x20;
+● Functionality
 
-●  Deployability&#x20;
+● Deployability
 
-●  Configurability&#x20;
+● Configurability
 
-●  Customizability
+● Customizability
 
 The verification methods may differ based on how the need was addressed.
 
@@ -74,7 +74,7 @@ The verification methods may differ based on how the need was addressed.
 
 Verification is performed on various configurations as mentioned below
 
-&#x20;    ●  Default configuration - with 1 Lang
+● Default configuration - with 1 Lang
 
 ## Feature Health
 
@@ -84,19 +84,19 @@ On Android Device:
 
 On iOS Device:
 
-<figure><img src="../../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Test execution statistics
 
 ### Functional test results by modules
 
-Below are the test metrics by performing functional testing using mock MDS and mock ABIS. The process followed was black box testing which based its test cases on the specifications of the software component under test. The functional test was performed in combination with individual module testing as well as integration testing. Test data were prepared in line with the user stories. Expected results were monitored by examining the user interface. The coverage includes GUI testing, System testing, End-To-End flows across multiple languages and configurations. The testing cycle included simulation of multiple identity schema and respective UI schema configurations.&#x20;
+Below are the test metrics by performing functional testing using mock MDS and mock ABIS. The process followed was black box testing which based its test cases on the specifications of the software component under test. The functional test was performed in combination with individual module testing as well as integration testing. Test data were prepared in line with the user stories. Expected results were monitored by examining the user interface. The coverage includes GUI testing, System testing, End-To-End flows across multiple languages and configurations. The testing cycle included simulation of multiple identity schema and respective UI schema configurations.
 
-<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top"><mark style="color:orange;"><strong>Total</strong></mark></td><td valign="top"><mark style="color:$success;"><strong>Passed</strong></mark></td><td valign="top"><mark style="color:red;"><strong>Failed</strong></mark></td><td valign="top"><mark style="color:purple;"><strong>Skipped (N/A)</strong></mark></td></tr><tr><td valign="top">3874</td><td valign="top">3095</td><td valign="top">401</td><td valign="top">0</td></tr><tr><td valign="top">Test Rate: 100% With Pass Rate: 89%</td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top"><mark style="color:orange;"><strong>Total</strong></mark></td><td valign="top"><strong>Passed</strong></td><td valign="top"><mark style="color:red;"><strong>Failed</strong></mark></td><td valign="top"><mark style="color:purple;"><strong>Skipped (N/A)</strong></mark></td></tr><tr><td valign="top">3874</td><td valign="top">3095</td><td valign="top">401</td><td valign="top">0</td></tr><tr><td valign="top">Test Rate: 100% With Pass Rate: 89%</td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
 
-&#x20;Here is the detailed breakdown of metrics for each module:
+Here is the detailed breakdown of metrics for each module:
 
-<table data-header-hidden><thead><tr><th valign="top">Andriod</th><th valign="top">Number of testcase</th></tr></thead><tbody><tr><td valign="top">Total Test cases</td><td valign="top">2025</td></tr><tr><td valign="top">Passed</td><td valign="top">1829</td></tr><tr><td valign="top">Failed</td><td valign="top">196</td></tr><tr><td valign="top">Skipped (N/A)</td><td valign="top">0</td></tr><tr><td valign="top"><strong>iOS</strong> </td><td valign="top"><strong>Number of testcases</strong></td></tr><tr><td valign="top"><strong>Total Test cases</strong></td><td valign="top"><mark style="color:$info;"><strong>1849</strong></mark></td></tr><tr><td valign="top">Passed</td><td valign="top">1644</td></tr><tr><td valign="top">Failed</td><td valign="top">205</td></tr><tr><td valign="top">Skipped (N/A)</td><td valign="top">0</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th valign="top">Andriod</th><th valign="top">Number of testcase</th></tr></thead><tbody><tr><td valign="top">Total Test cases</td><td valign="top">2025</td></tr><tr><td valign="top">Passed</td><td valign="top">1829</td></tr><tr><td valign="top">Failed</td><td valign="top">196</td></tr><tr><td valign="top">Skipped (N/A)</td><td valign="top">0</td></tr><tr><td valign="top"><strong>iOS</strong></td><td valign="top"><strong>Number of testcases</strong></td></tr><tr><td valign="top"><strong>Total Test cases</strong></td><td valign="top"><strong>1849</strong></td></tr><tr><td valign="top">Passed</td><td valign="top">1644</td></tr><tr><td valign="top">Failed</td><td valign="top">205</td></tr><tr><td valign="top">Skipped (N/A)</td><td valign="top">0</td></tr></tbody></table>
 
 ### Testing with various device combinations
 
@@ -108,7 +108,7 @@ Below are the test metrics by performing VC Sharing functionality on various dev
 
 ### Device and Component Details:
 
-<table data-header-hidden><thead><tr><th valign="bottom">Tested with Inji components qa-inji1</th></tr></thead><tbody><tr><td valign="bottom">mosipqa/inji-verify-service:0.14.x</td></tr><tr><td valign="bottom">mosipqa/inji-verify-ui:0.14.x</td></tr><tr><td valign="bottom">mosipqa/inji-certify-with-plugins:0.12.x</td></tr><tr><td valign="bottom">mosipqa/apitest-mimoto:0.18.x</td></tr><tr><td valign="bottom">mosipqa/mimoto:0.18.x</td></tr><tr><td valign="bottom">mosipqa/inji-web:0.13.x</td></tr><tr><td valign="bottom"><mark style="color:$info;"><strong>Tested with components - Released env</strong></mark></td></tr><tr><td valign="bottom">mosipid/mimoto:0.18.1</td></tr><tr><td valign="bottom">mosipid/apitest-mimoto:0.18.1</td></tr><tr><td valign="bottom">mosipid/inji-verify-service:0.13.0</td></tr><tr><td valign="bottom">mosipid/inji-verify-ui:0.13.0</td></tr><tr><td valign="bottom">mosipid/apitest-inji-certify:0.11.0</td></tr><tr><td valign="bottom">mosipid/inji-web:0.13.1</td></tr><tr><td valign="bottom">mosipid/esignet-with-plugins:1.5.1</td></tr><tr><td valign="bottom">mosipid/authentication-service:1.2.1.0</td></tr><tr><td valign="bottom">mosipid/authentication-internal-service:1.2.1.0</td></tr><tr><td valign="bottom">mosipid/authentication-otp-service:1.2.1.0</td></tr><tr><td valign="bottom">mosipid/kernel-notification-service:1.2.0.1</td></tr><tr><td valign="bottom">mosipid/registration-processor-stage-group-1:1.2.1.1</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th valign="bottom">Tested with Inji components qa-inji1</th></tr></thead><tbody><tr><td valign="bottom">mosipqa/inji-verify-service:0.14.x</td></tr><tr><td valign="bottom">mosipqa/inji-verify-ui:0.14.x</td></tr><tr><td valign="bottom">mosipqa/inji-certify-with-plugins:0.12.x</td></tr><tr><td valign="bottom">mosipqa/apitest-mimoto:0.18.x</td></tr><tr><td valign="bottom">mosipqa/mimoto:0.18.x</td></tr><tr><td valign="bottom">mosipqa/inji-web:0.13.x</td></tr><tr><td valign="bottom"><strong>Tested with components - Released env</strong></td></tr><tr><td valign="bottom">mosipid/mimoto:0.18.1</td></tr><tr><td valign="bottom">mosipid/apitest-mimoto:0.18.1</td></tr><tr><td valign="bottom">mosipid/inji-verify-service:0.13.0</td></tr><tr><td valign="bottom">mosipid/inji-verify-ui:0.13.0</td></tr><tr><td valign="bottom">mosipid/apitest-inji-certify:0.11.0</td></tr><tr><td valign="bottom">mosipid/inji-web:0.13.1</td></tr><tr><td valign="bottom">mosipid/esignet-with-plugins:1.5.1</td></tr><tr><td valign="bottom">mosipid/authentication-service:1.2.1.0</td></tr><tr><td valign="bottom">mosipid/authentication-internal-service:1.2.1.0</td></tr><tr><td valign="bottom">mosipid/authentication-otp-service:1.2.1.0</td></tr><tr><td valign="bottom">mosipid/kernel-notification-service:1.2.0.1</td></tr><tr><td valign="bottom">mosipid/registration-processor-stage-group-1:1.2.1.1</td></tr></tbody></table>
 
 <table data-header-hidden><thead><tr><th valign="bottom">Devices Used For Testing</th></tr></thead><tbody><tr><td valign="bottom">Vivo Y73 with Android 13 BLE 5.0</td></tr><tr><td valign="bottom">SS Galaxy A03 core with Android 11 BLE 4.2</td></tr><tr><td valign="bottom">iPhone 11 with iOS 18.3.2 BLE 5.0</td></tr><tr><td valign="bottom">iPhone 8 with i-OS 16.7 BLE 5.0</td></tr><tr><td valign="bottom">iPhone 7 with iphone 15.8 BLE 4.2</td></tr><tr><td valign="bottom">Redmi 7A Android 10 BLE 4.2</td></tr><tr><td valign="bottom">Redmi 6A Android 9 BLE 4.2</td></tr><tr><td valign="bottom">Techno POVA 6 NEO - Android 14</td></tr><tr><td valign="bottom">iTel - Android 14</td></tr><tr><td valign="bottom">iPhone 14 - iOS 18.5</td></tr><tr><td valign="bottom">OPPO A59 5G - Android 15</td></tr><tr><td valign="bottom">ONE PLUS 12R - Android 15</td></tr><tr><td valign="bottom">Xiaomi RedMi NOTE 13 PRO - Android 15</td></tr><tr><td valign="bottom">Infinix NOTE 50X 5G - Android 15</td></tr><tr><td valign="bottom">iPhone 13 - iOS 18.5</td></tr></tbody></table>
 

@@ -33,14 +33,12 @@ We are excited to announce the release of **Inji Verify version 0.8.0**! This re
 As of the current release, Inji Verify supports QR code scanning from laptops/desktops and mobile devices with a front camera, but not on the responsive version of mobile browsers. Additionally, the platform allows for uploading QR codes. However, physical paper scanning is not supported.
 {% endhint %}
 
-
-
 ### Repositories: Released/Dependent
 
-| **Repositories**   | **Tags: Released/Dependent**                                          |
-| ------------------ | --------------------------------------------------------------------- |
-| Inji Verify        |  [**v0.8.0**](https://github.com/mosip/inji-verify/tree/v0.8.0)       |
-| Pixel-Pass Library |  [**v0.1.4**](https://www.npmjs.com/package/@mosip/pixelpass/v/0.1.4) |
+| **Repositories**   | **Tags: Released/Dependent**                                         |
+| ------------------ | -------------------------------------------------------------------- |
+| Inji Verify        | [**v0.8.0**](https://github.com/mosip/inji-verify/tree/v0.8.0)       |
+| Pixel-Pass Library | [**v0.1.4**](https://www.npmjs.com/package/@mosip/pixelpass/v/0.1.4) |
 
 ### **Known Issues**
 
@@ -57,4 +55,4 @@ As of the current release, Inji Verify supports QR code scanning from laptops/de
 
 * [Feature Documentation](https://docs.mosip.io/inji/inji-verify/functional-overview/features)
 * [User Guide](https://docs.mosip.io/inji/inji-verify/functional-overview/end-user-guide)
-* [QA Report ](https://app.gitbook.com/o/-M1FyzBr-VmticWYm8QI/s/aY8BQ4hdzhSchZV814Ev/\~/changes/377/inji-verify/releases/release-notes/test-report)
+* [QA Report](test-report.md)
