@@ -74,4 +74,4 @@ Below is a list of some key known issues. For a detailed overview and the comple
 * [Integration Guide](https://docs.inji.io/inji-verify/technical-overview/integration-guides)
 * [API Documentation](https://mosip.stoplight.io/studio/inji-verify)
 * [Collab Guide](../../functional-overview/releases-1/inji-verify-collab-guide.md)
-* QA Report
+* [QA Report](test-report.md)
