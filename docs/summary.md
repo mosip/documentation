@@ -57,6 +57,7 @@
         * [Credential Holder](esignet-authentication/develop/integration/wallet/credential-holder.md)
         * [Wallet Authenticator](esignet-authentication/develop/integration/wallet/wallet-authenticator.md)
       * [Relying Party](esignet-authentication/develop/integration/relying-party/README.md)
+        * [Integration Options and Discovery Endpoints](esignet-authentication/develop/integration/relying-party/integration-options-and-discovery-endpoints.md)
         * [Relying Party Onboarding](esignet-authentication/develop/integration/relying-party/relying-party-onboarding.md)
         * [Development and Integration with eSignet](esignet-authentication/develop/integration/relying-party/development-and-integration-with-esignet.md)
     * [Components - eSignet](esignet-authentication/develop/components.md)
