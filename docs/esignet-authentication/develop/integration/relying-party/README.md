@@ -8,5 +8,6 @@ Whether it's a financial institution verifying customer identity for KYC complia
 
 To learn more about the integration process and technical requirements, please refer to the following resources:
 
-* [Onboarding Your Relying Party to Any Identity Provider](relying-party-onboarding.md)– A step-by-step guide to help you prepare your service for integration with identity providers.
+* Integration Options and Discovery Endpoints – Know about the options available to integrate with eSignet in MOSIP collab environment and discovery endpoints.
+* [Onboarding Your Relying Party to Any Identity Provider](relying-party-onboarding.md) – A step-by-step guide to help you prepare your service for integration with identity providers.
 * [Development and Integration with eSignet](development-and-integration-with-esignet.md) – Technical documentation and best practices for implementing eSignet as your trusted identity provider.
