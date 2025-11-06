@@ -10,6 +10,14 @@ eSignet supports integration with both **Mock ID** and **MOSIP ID** systems for 
 
 The **integration flow and configuration steps** remain identical for both options, the only difference lies in the **discovery endpoints**, which determine the environment and underlying ID system you connect to.
 
+{% hint style="info" %}
+Note: The two options listed here — **Mock ID** and **MOSIP ID** — are provided **only for testing and proof-of-concept (POC)** purposes within the **MOSIP Collaboration environment**.
+{% endhint %}
+
+{% hint style="info" %}
+In real-world deployments, eSignet can be configured to work with **national ID systems or other identity providers** as per the country’s implementation and integration requirements.
+{% endhint %}
+
 #### **Understanding Discovery Endpoints** <a href="#understanding-discovery-endpoints" id="understanding-discovery-endpoints"></a>
 
 A **discovery endpoint** is a standard part of the **OpenID Connect (OIDC)** specification.\
