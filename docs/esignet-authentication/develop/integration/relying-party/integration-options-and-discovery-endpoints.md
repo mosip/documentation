@@ -11,7 +11,7 @@ eSignet supports integration with both **Mock ID** and **MOSIP ID** systems for 
 The **integration flow and configuration steps** remain identical for both options, the only difference lies in the **discovery endpoints**, which determine the environment and underlying ID system you connect to.
 
 {% hint style="info" %}
-Note: The two options listed here — **Mock ID** and **MOSIP ID** — are provided **only for testing and proof-of-concept (POC)** purposes within the **MOSIP Collaboration environment**.
+Note: The two options listed here — **Mock ID** and **MOSIP ID** — are provided **only for testing and proof-of-concept (POC)** purposes within the [**MOSIP Collab environment**](https://collab.mosip.net/).
 {% endhint %}
 
 {% hint style="info" %}
