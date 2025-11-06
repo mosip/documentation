@@ -40,7 +40,7 @@ We are excited to announce the release of **Inji Verify v0.15.0.** This version 
 
 The following table outlines the tested and certified compatibility of Inji Verify 0.15.0 with other modules.
 
-<table><thead><tr><th width="340.98828125">Module</th><th>Version</th></tr></thead><tbody><tr><td>Inji Wallet</td><td><a href="https://github.com/mosip/inji-wallet/releases/tag/v0.20.0">0.20.0</a></td></tr><tr><td>Inji Web</td><td><a href="https://github.com/mosip/inji-web/releases/tag/v0.14.1">0.14.0</a></td></tr><tr><td>Pixel-Pass library</td><td><a href="https://github.com/mosip/pixelpass/releases/tag/v0.7.0">0.7.0</a></td></tr><tr><td>vc-verifier library</td><td><a href="https://github.com/mosip/vc-verifier/releases/tag/v1.5.0">1.5.0</a></td></tr></tbody></table>
+<table><thead><tr><th width="340.98828125">Module</th><th>Version</th></tr></thead><tbody><tr><td>Inji Wallet</td><td><a href="https://github.com/mosip/inji-wallet/releases/tag/v0.20.0">0.20.0</a></td></tr><tr><td>Inji Web</td><td><a href="https://github.com/mosip/inji-web/releases/tag/v0.14.1">0.14.0</a></td></tr><tr><td>Pixel-Pass library</td><td><a href="https://github.com/mosip/pixelpass/releases/tag/v0.6.0">0.6.0</a></td></tr><tr><td>vc-verifier library</td><td><a href="https://github.com/mosip/vc-verifier/releases/tag/v1.5.0">1.5.0</a></td></tr></tbody></table>
 
 ## **Bug Fixes**
 

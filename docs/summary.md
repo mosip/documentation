@@ -210,6 +210,7 @@
   * [End User Guide](inji-verify/functional-overview/end-user-guide.md)
   * [Functional Overview](inji-verify/functional-overview/functional-overview.md)
 * [Releases](inji-verify/releases/README.md)
+  * [Version 0.15.1](inji-verify/releases/version-0.15.1.md)
   * [Version 0.15.0](inji-verify/releases/version-0.15.0/README.md)
     * [Test Report](inji-verify/releases/version-0.15.0/test-report.md)
   * [Version 0.14.0](inji-verify/releases/version-0.14.0/README.md)
@@ -231,8 +232,6 @@
   * [Version 0.8.1](inji-verify/releases/version-0.8.1.md)
   * [Version 0.8.0](inji-verify/releases/release-notes/README.md)
     * [Test Report](inji-verify/releases/release-notes/test-report.md)
-  * [Version 0.15.1](inji-verify/releases/version-0.15.1.md)
-  * [Version 0.15.1](inji-verify/releases/version-0.15.1-1.md)
 
 ***
 
