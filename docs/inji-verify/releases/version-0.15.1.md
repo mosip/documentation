@@ -14,11 +14,7 @@ This patch release for Inji Verify 0.15.1 addresses critical version alignment i
 
 In 0.15.1, the POM dependency and SDK versions have been aligned and updated for improved stability and compatibility.
 
-| Component                  | Description                                                                                                      | 0.15.1 (Current Release) | 0.15.0 (Previous Release) |
-|----------------------------|------------------------------------------------------------------------------------------------------------------|--------------------------|--------------------------|
-| vc-verifier POM Dependency | The POM dependency of vc-verifier was `1.5.0-SNAPSHOT`. In version 0.15.1, the POM dependency version is `1.5.0`. | 1.5.0                    | 1.5.0-SNAPSHOT           |
-| Inji Verify SDK Version    | The Inji Verify SDK version was `0.15.0-beta.23`, which was also true for Inji Verify UI. Now published as `0.15.0` and consumed by Verify UI. | 0.15.0                   | 0.15.0-beta.23           |
-
+<table><thead><tr><th width="157.6015625">Component</th><th width="250.62890625">Description</th><th>0.15.1 (Current Release)</th><th>0.15.0 (Previous Release)</th></tr></thead><tbody><tr><td>vc-verifier POM Dependency</td><td>The POM dependency of vc-verifier was <code>1.5.0-SNAPSHOT</code>. In version 0.15.1, the POM dependency version is <code>1.5.0</code>.</td><td>1.5.0</td><td>1.5.0-SNAPSHOT</td></tr><tr><td>Inji Verify SDK Version</td><td>The Inji Verify SDK version was <code>0.15.0-beta.23</code>, which was also true for Inji Verify UI. Now published as <code>0.15.0</code> and consumed by Verify UI.</td><td>0.15.0</td><td>0.15.0-beta.23</td></tr></tbody></table>
 
 ### Repositories: Released/Dependent
 
@@ -42,7 +38,7 @@ The following table outlines the tested and certified compatibility of Inji Veri
 | Module              | Version                                                             |
 | ------------------- | ------------------------------------------------------------------- |
 | Inji Wallet         | [0.20.0](https://github.com/mosip/inji-wallet/releases/tag/v0.20.0) |
-| Inji Web            | [0.14.0](https://github.com/mosip/inji-web/releases/tag/v0.14.1)    |
+| Inji Web            | [0.14.1](https://github.com/mosip/inji-web/releases/tag/v0.14.1)    |
 | Pixel-Pass library  | [0.6.0](https://github.com/mosip/pixelpass/releases/tag/v0.6.0)     |
 | vc-verifier library | [1.5.0](https://github.com/mosip/vc-verifier/releases/tag/v1.5.0)   |
 
