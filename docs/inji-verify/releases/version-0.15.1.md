@@ -48,4 +48,4 @@ Please refer to the list of items covered as part of [0.15.0](../releases/versio
 
 * [Feature documentation](../overview/features.md)
 * [API Documentation](https://mosip.stoplight.io/studio/inji-verify)
-* [Collab Guide](../../functional-overview/releases-1/inji-verify-collab-guide.md)
+* [Collab Guide](../functional-overview/releases-1/inji-verify-collab-guide.md)
