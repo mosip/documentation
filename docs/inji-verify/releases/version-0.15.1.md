@@ -48,10 +48,8 @@ The following table outlines the tested and certified compatibility of Inji Veri
 
 #### Learn More
 
-Please refer to the list of items covered as part of [0.15.0](https://docs.inji.io/inji-verify/releases/version-0.15.0) release.
+Please refer to the list of items covered as part of [0.15.0](../releases/version-0.15.0/README.md) release.
 
-* [Feature documentation](../../overview/features.md)
-* [Integration Guide](../../../inji-wallet/inji-mobile/technical-overview/integration-guide/openid4vp.md)
+* [Feature documentation](../overview/features.md)
 * [API Documentation](https://mosip.stoplight.io/studio/inji-verify)
 * [Collab Guide](../../functional-overview/releases-1/inji-verify-collab-guide.md)
-
