@@ -44,7 +44,7 @@ The following table outlines the tested and certified compatibility of Inji Veri
 
 #### Learn More
 
-Please refer to the list of items covered as part of [0.15.0](../releases/version-0.15.0/README.md) release.
+Please refer to the list of items covered as part of [0.15.0](version-0.15.0/) release.
 
 * [Feature documentation](../overview/features.md)
 * [API Documentation](https://mosip.stoplight.io/studio/inji-verify)
