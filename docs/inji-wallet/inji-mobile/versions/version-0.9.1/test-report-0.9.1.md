@@ -48,7 +48,7 @@ Default configuration (with 6 languages)
 
 ## Feature Health
 
-![](../../../../_images/inji-report1.png) ![](../../../../_images/inji-report2.png)
+![](../../../../.gitbook/assets/inji-report1.png) ![](../../../../.gitbook/assets/inji-report2.png)
 
 ## Test execution statistics
 
@@ -92,7 +92,7 @@ Below section provides details on API test metrics by executing MOSIP functional
 
 Below are the test metrics by performing VC Sharing functionality on various device combinations:
 
-![](../../../../_images/inji-device-metrics2.png)
+![](../../../../.gitbook/assets/inji-device-metrics2.png)
 
 | **Total** | **Passed** | **Failed** | **Skipped** |
 | --------- | ---------- | ---------- | ----------- |

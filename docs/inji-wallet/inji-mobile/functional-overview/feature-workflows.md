@@ -185,7 +185,7 @@ This method of VC download illustrates the **OpenID4VCI** method of download usi
 
 The credentials are shared in a peer-to-peer model with the verifier application. The data exchange between devices is done using the BLE Protocol. For more information, refer to [Tuvali](../technical-overview/integration-guide/building-verifiable-credentials-wallet-with-inji-libraries/tuvali/) documentation.
 
-<figure><img src="../../../_images/vc_share.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/vc_share.png" alt=""><figcaption></figcaption></figure>
 
 ### 4. QR code login process
 
@@ -197,11 +197,11 @@ The credentials are shared in a peer-to-peer model with the verifier application
 
 #### Step 1: VC activation process
 
-<div><img src="../../../architecture/_images/vc_activation.png" alt=""> <figure><img src="../../../_images/vc_activation.png" alt=""><figcaption></figcaption></figure></div>
+<div><img src="../../../architecture/_images/vc_activation.png" alt=""> <figure><img src="../../../.gitbook/assets/vc_activation.png" alt=""><figcaption></figcaption></figure></div>
 
 #### Step 2: QR code login
 
-<figure><img src="../../../_images/online_qr_login.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/online_qr_login.png" alt=""><figcaption></figcaption></figure>
 
 ### 5. Data backup and restore
 
