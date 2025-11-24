@@ -1,4 +1,4 @@
-# On-Prem Installation Guidelines
+# eSignet 1.5.0 - On-Prem Installation Guide
 
 ### Overview <a href="#overview" id="overview"></a>
 
@@ -197,8 +197,7 @@ ansible-playbook -i hosts.ini docker.yaml
 * SSH to the wireguard server VM.
 * `cd /home/ubuntu/wireguard/config`
 * Assign one of the PR for yourself and use the same from the PC to connect to the server.
-*   Create `assigned.txt` file to keep track of peer files allocated and update every time some peer is allocated to someone.\
-
+*   Create `assigned.txt` file to keep track of peer files allocated and update every time some peer is allocated to someone.<br>
 
     ```sh
     peer1 :   peername

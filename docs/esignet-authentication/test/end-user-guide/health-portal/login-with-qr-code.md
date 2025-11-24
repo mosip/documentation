@@ -21,19 +21,19 @@
 
 As seen below, the authentication is in progress.
 
-![](../../../../end-user-guide/login-with-qr-code/_images/new4-esignetlogin-inji-authenticating.png)
+![](../../../../.gitbook/assets/new4-esignetlogin-inji-authenticating.png)
 
 4. On Inji, the resident can see the VC that is activated for online login. Select the VC and click _**Verify**_.
 
-![](../../../../end-user-guide/login-with-qr-code/_images/esignet-inji1.png)
+![](../../../../.gitbook/assets/esignet-inji1.png)
 
 5. After clicking on _**Verify**_, the resident is asked to perform face authentication. On successful authentication, the **Consent** screen is displayed.
 
-![](../../../../end-user-guide/login-with-qr-code/_images/esignet-inji2.png)
+![](../../../../.gitbook/assets/esignet-inji2.png)
 
 6. Here, the residents can provide their consent and click _**Allow**_. A successful message is displayed on Inji.
 
-![](../../../../end-user-guide/login-with-qr-code/_images/6-consent.png)
+![](../../../../.gitbook/assets/6-consent.png)
 
 7. The resident can log into the relying party portal and view their details on the user profile page.
 

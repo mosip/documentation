@@ -46,8 +46,7 @@ For developers and integrators, discovery endpoints simplify setup by:
 
 Use this option to integrate with a **Mock ID system**, which is designed to **simulate a real ID system** for **testing and development purposes**.
 
-Please refer [here](https://esignet-mock.collab.mosip.net/) for the Mock ID discovery endpoints.\
-
+Please refer [here](https://esignet-mock.collab.mosip.net/) for the Mock ID discovery endpoints.<br>
 
 **Purpose:**
 
@@ -59,8 +58,7 @@ Please refer [here](https://esignet-mock.collab.mosip.net/) for the Mock ID disc
 
 Use this option if you want to use a **MOSIP ID** for your **use case demonstrations or integration testing**.
 
-Please refer [here](https://esignet-mosipid.collab.mosip.net/) for the MOSIP ID discovery endpoints.\
-
+Please refer [here](https://esignet-mosipid.collab.mosip.net/) for the MOSIP ID discovery endpoints.<br>
 
 **Purpose:**
 

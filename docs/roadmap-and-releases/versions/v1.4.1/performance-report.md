@@ -8,8 +8,7 @@ hidden: true
 
 The eSignet Performance Report provides a comprehensive analysis of the system’s responsiveness, reliability, and scalability under various operational conditions. It captures key performance metrics such as throughput, resource utilization and memory consumption. This report is designed to help stakeholders understand how eSignet performs in real-world scenarios, identify potential bottlenecks, and guide future optimizations to ensure a seamless and secure digital identity experience.
 
-Read more about eSignet: [eSignet Documentation\
-](https://docs.esignet.io)Further reading for eSignet integration with MOSIP: [MOSIP eSignet | MOSIP Docs 1.2.0](https://docs.mosip.io/1.2.0/interoperability/integrations/e-signet)
+Read more about eSignet: [eSignet Documentation<br>](https://docs.esignet.io)Further reading for eSignet integration with MOSIP: [MOSIP eSignet | MOSIP Docs 1.2.0](https://docs.mosip.io/1.2.0/interoperability/integrations/e-signet)
 
 ## Scope
 
@@ -73,11 +72,11 @@ We are considering that the integrated ID system will take 1.5 secs for below in
 2. **KYC Auth  (**/authorization/v3/authenticat&#x65;**)**
 3. **KYC Exchange  (**/oauth/v2/toke&#x6E;**)**
 
-<table data-full-width="true"><thead><tr><th width="214.21875">Module Name</th><th width="134.56640625">Scenario to be tested</th><th width="356.984375">API Endpoint</th><th width="135.8515625">Accepted Response Time</th><th>Weightage</th></tr></thead><tbody><tr><td><p>eSignet</p><p><strong>Pre-requisite:</strong></p><ol start="1"><li>Client ID is generated using eSignet API(/v1/esignet/client-mgmt/oidc-client).</li><li>eSignet API requires PMS auth Token</li></ol></td><td>User authentication with OTP</td><td><ol><li>/csrf/token → GET</li></ol><ol start="2"><li>/authorization/v2/oauth-details → POST</li></ol><ol start="3"><li>/authorization/send-otp → POST</li></ol><ol start="4"><li>/authorization/v3/authenticate → POST</li></ol><ol start="5"><li>/authorization/auth-code → POST</li></ol><ol start="6"><li>/oauth/v2/token → POST</li></ol><ol start="7"><li><strong>/oidc/userinfo</strong> → GET</li></ol></td><td><ol><li>&#x3C;=100ms</li></ol><ol start="2"><li>&#x3C;=100ms</li></ol><ol start="3"><li>&#x3C;=1.5s</li></ol><ol start="4"><li>&#x3C;=1.5s</li></ol><ol start="5"><li>&#x3C;=100ms</li></ol><ol start="6"><li>&#x3C;=1.5s</li></ol><ol start="7"><li>&#x3C;=100ms</li></ol></td><td>100%</td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="214.21875">Module Name</th><th width="134.56640625">Scenario to be tested</th><th width="356.984375">API Endpoint</th><th width="135.8515625">Accepted Response Time</th><th>Weightage</th></tr></thead><tbody><tr><td><p>eSignet</p><p><strong>Pre-requisite:</strong></p><ol start="1"><li>Client ID is generated using eSignet API(/v1/esignet/client-mgmt/oidc-client).</li><li>eSignet API requires PMS auth Token</li></ol></td><td>User authentication with OTP</td><td><ol><li>/csrf/token → GET</li><li>/authorization/v2/oauth-details → POST</li><li>/authorization/send-otp → POST</li><li>/authorization/v3/authenticate → POST</li><li>/authorization/auth-code → POST</li><li>/oauth/v2/token → POST</li><li><strong>/oidc/userinfo</strong> → GET</li></ol></td><td><ol><li>&#x3C;=100ms</li><li>&#x3C;=100ms</li><li>&#x3C;=1.5s</li><li>&#x3C;=1.5s</li><li>&#x3C;=100ms</li><li>&#x3C;=1.5s</li><li>&#x3C;=100ms</li></ol></td><td>100%</td></tr></tbody></table>
 
 ## Test Environment
 
-### Deviation from the default deployment 
+### Deviation from the default deployment<br>
 
 1. Migration from the softhsm to PK12.\
    \

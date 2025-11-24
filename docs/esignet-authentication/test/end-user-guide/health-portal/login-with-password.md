@@ -21,7 +21,7 @@ If the `acr_values` the query parameter is presented with only one `acr` in the 
 
 The password-based authentication is secured with a captcha.
 
-![](../../../../end-user-guide/login-with-password/_images/login-with-pwd-form.png)
+![](../../../../.gitbook/assets/login-with-pwd-form.png)
 
 4\. Next, the resident clicks the **Continue** button.
 
@@ -35,7 +35,7 @@ Note:
 
 5\. The resident is then navigated to the Consent page. On this page, the **Essential** and **Voluntary** claims are displayed.
 
-![](../../../../end-user-guide/login-with-password/_images/consent-page.png)
+![](../../../../.gitbook/assets/consent-page.png)
 
 {% hint style="info" %}
 The consent screen is presented solely to the resident if consent has not previously been obtained. Additionally, a timer is incorporated into the Consent screen, allowing the resident to respond within the designated time frame. If the allotted time elapses, residents will be redirected to the relying party user interface.
@@ -43,4 +43,4 @@ The consent screen is presented solely to the resident if consent has not previo
 
 6\. The resident should now click the **Allow** button. The system navigates the resident to the **User Profile** page which displays all the personal information based on the consent provided.
 
-![](../../../../end-user-guide/login-with-password/_images/healthservices-user-profile.png)
+![](../../../../.gitbook/assets/healthservices-user-profile.png)
