@@ -2,87 +2,102 @@
 
 Inji Certify comes with a comprehensive suite of features designed to make credential issuance seamless, secure, and standards-compliant. Key features include:
 
-1. #### Standards Based Credential Issuance
+## 1. Standards Based Credential Issuance
 
 Inji Certify is built to issue digital credentials that are fully compliant with globally recognized standards, ensuring interoperability across systems and jurisdictions. It:
 
 * Supports **W3C Verifiable Credentials Data Model (versions 1.1 and 2.0)** for secure, portable, and verifiable documents
-* Implements **OpenID for Verifiable Credential Issuance (OpenID4VCI)** for seamless and secure delivery of credentials to digital wallets.
-* Ensures interoperability across systems and jurisdictions.
+* Implements **OpenID for Verifiable Credential Issuance (OpenID4VCI)** for seamless and secure delivery of credentials to digital wallets
+* Ensures interoperability across systems and jurisdictions
 
-2. #### Multiple Credential Support for Issuers:
+## 2. Multiple Credential Support for Issuers
 
-Inji Certify allows a single issuer to manage and issue multiple types of verifiable credentials within the same ecosystem. This is especially useful for organizations running diverse programs or services under one authority. **Example scenarios:**
+Inji Certify allows a single issuer to manage and issue multiple types of verifiable credentials within the same ecosystem. This is especially useful for organizations running diverse programs or services under one authority.
 
-1. A **Transport Authority** issuing both _Driver's Licenses_ and _Commercial Vehicle Permits_.
-2. A **University** issuing _Student ID Cards_, _Degree Certificates_, and _Transcript Credentials_.
-3. A **Health Department** issuing _Vaccination Certificates_ and _Medical Practitioner Licenses_.
-4. A **Border Control Agency** issuing _Cross-Border Transport Passes_ and _Work Permits_.
+**Example scenarios:**
+
+* A **Transport Authority** issuing both _Driver's Licenses_ and _Commercial Vehicle Permits_
+* A **University** issuing _Student ID Cards_, _Degree Certificates_, and _Transcript Credentials_
+* A **Health Department** issuing _Vaccination Certificates_ and _Medical Practitioner Licenses_
+* A **Border Control Agency** issuing _Cross-Border Transport Passes_ and _Work Permits_
 
 This flexibility ensures that one issuer can cater to multiple credentialing needs without managing separate systems or infrastructures.
 
-3. #### Addition of Credential Type via API post onboarding
+## 3. Addition of Credential Type via API Post Onboarding
 
-Inji Certify enables issuers to expand their credential portfolio even after the initial onboarding, ensuring they can respond quickly to evolving program or policy needs. Through secure APIs, issuers can create and configure new credential types without system downtime or complex redeployments **Key capabilities include:**
+Inji Certify enables issuers to expand their credential portfolio even after the initial onboarding, ensuring they can respond quickly to evolving program or policy needs. Through secure APIs, issuers can create and configure new credential types without system downtime or complex redeployments.
 
-* **Post-onboarding expansion** of credential types to support new use cases.
-* **API-driven setup** for fast and seamless integration into existing workflows.
-* **No infrastructure changes required**, minimizing operational overhead.
+**Key capabilities include:**
 
-Access to comprehensive **documentation and guidelines** --- _(refer to this_ [_link_](https://github.com/mosip/inji-certify/blob/master/docs/Credential-Issuer-Configuration.md#credential-configuration) _for details on configuring VC types)_.
+* **Post-onboarding expansion** of credential types to support new use cases
+* **API-driven setup** for fast and seamless integration into existing workflows
+* **No infrastructure changes required**, minimizing operational overhead
 
-4. #### Support for Multiple Credential Formats
+Access to comprehensive **documentation and guidelines** — _(refer to this [link](https://github.com/mosip/inji-certify/blob/master/docs/Credential-Issuer-Configuration.md#credential-configuration) for details on configuring VC types)_.
+
+## 4. Support for Multiple Credential Formats
 
 Inji Certify provides issuers with the capability to generate verifiable credentials in multiple **industry-accepted formats**, ensuring broad interoperability across ecosystems, wallets, and verification systems. This flexibility makes it easier for organizations to adopt digital credentials without being locked into a single standard.
 
 **Currently supported formats:**
 
-* **JSON-LD Credentials** - Standards-based credentials using Linked Data Proofs, widely adopted in decentralized identity ecosystems for interoperability and verifiability.
-* **Signed JWT (JWS)** - Compact, JSON-based credentials that enable efficient transmission and verification across web and enterprise systems.
-* **SD-JWT (Selective Disclosure JWT)** - Draft Release, Experimental\*\* -- Privacy-preserving credentials that allow holders to selectively disclose attributes while keeping the rest private.
+* **JSON-LD Credentials** — Standards-based credentials using Linked Data Proofs, widely adopted in decentralized identity ecosystems for interoperability and verifiability
+* **Signed JWT (JWS)** — Compact, JSON-based credentials that enable efficient transmission and verification across web and enterprise systems
+* **SD-JWT (Selective Disclosure JWT)** — Draft Release, Experimental — Privacy-preserving credentials that allow holders to selectively disclose attributes while keeping the rest private
 
-Note: in the 0.12.0 release we have included support for SD-jWT as a draft release.
+**Note:** In the 0.12.0 release we have included support for SD-JWT as a draft release.
 
 **Upcoming formats (Coming Soon):**
 
-* **mDoc (ISO 18013-5/7)** -- A mobile document format for secure, offline-verifiable digital documents.
-* **mDL (ISO 18013-5/7)** -- A mobile driver's license format, enabling secure and convenient digital driver's license presentation on mobile devices.
+* **mDoc (ISO 18013-5/7)** — A mobile document format for secure, offline-verifiable digital documents
+* **mDL (ISO 18013-5/7)** — A mobile driver's license format, enabling secure and convenient digital driver's license presentation on mobile devices
 
 By supporting both **current and emerging standards**, Inji Certify ensures that credentials are **secure, future-ready, and interoperable** with a wide range of applications, wallets, and verification ecosystems.
 
-5. #### Efficient Signing with Multiple Algorithms
+## 5. Efficient Signing with Multiple Algorithms
 
 Inji Certify ensures that every credential is protected through **digital signatures**, guaranteeing authenticity, integrity, and tamper resistance. To meet diverse ecosystem and compliance needs, it offers issuers the flexibility to choose from a wide range of cryptographic signing algorithms.
 
 **Key capabilities include:**
 
-* **Configurable Signing Algorithms** -- Issuers can select the signing algorithm of choice during credential setup.
-* **Supported Options** -- Includes **RSA**, **Ed25519 (2018 & 2020 specs)**, and **Elliptic Curve (ECC K1 & R1)**.
-* **Enhanced Cryptographic Flexibility** -- Support for Ed25519 and ECC Curve ensures compatibility with modern secure systems, broader wallet ecosystems, and evolving standards.
-* **Standards Compliance** -- All signatures are interoperable and verifiable across wallets and verification systems.
-* **Security and Adaptability** -- Enables issuers to stay aligned with cryptographic best practices and adapt to regional or program-specific security requirements.
+* **Configurable Signing Algorithms** — Issuers can select the signing algorithm of choice during credential setup
+* **Supported Options** — Includes **RSA**, **Ed25519 (2018 & 2020 specs)**, and **Elliptic Curve (ECC K1 & R1)**
+* **Enhanced Cryptographic Flexibility** — Support for Ed25519 and ECC Curve ensures compatibility with modern secure systems, broader wallet ecosystems, and evolving standards
+* **Standards Compliance** — All signatures are interoperable and verifiable across wallets and verification systems
+* **Security and Adaptability** — Enables issuers to stay aligned with cryptographic best practices and adapt to regional or program-specific security requirements
 
 This combination of efficiency, flexibility, and compliance ensures that credentials issued through Inji Certify remain future-ready, secure, and widely interoperable.
 
-6. #### Plugin Support and Integration Capabilities
+## 6. Plugin Support and Integration Capabilities
 
 Inji Certify is built on a **modular plugin architecture**, enabling seamless integration with identity systems, registries, data sources, and third-party services. This design makes the platform highly flexible, customizable, and easy to adopt across diverse ecosystems while simplifying both implementation and testing.
 
 **Key plugin categories include:**
 
-1. **VC Issuance Plugins** These plugins are responsible for generating and signing verifiable credentials. They typically connect with external identity or authentication systems, obtain the required information, and issue the VC in compliance with global standards. **Currently supported issuance plugins:**
-   * **MOSIP Identity Plugin** -- Integrates with MOSIP for trusted identity verification.
-   * **Sunbird Plugin** -- Enables seamless integration with Sunbird-based services.
-2. **Data Provider Plugins** These plugins fetch relevant data from external registries or data sources. The retrieved data is returned as a JSON object which Inji Certify then uses to generate and issue the corresponding verifiable credential. **Currently supported data provider plugins:**
-   * **Mock IDA Plugin** -- Provides a simulated identity verification environment for testing and development.
-   * **Mock CSV Data Provider Plugin** -- Useful for sandbox environments and test data simulation. Please refer to
-   * **Postgres Data Provider Plugin** -- Connects to Postgres databases to fetch real-time data from registries or external systems.
+### VC Issuance Plugins
 
-For detailed instructions on configuring the Data Provider Plugin, please refer to this [guide](https://github.com/mosip/inji-certify/blob/master/docs/Local-Development.md)
+These plugins are responsible for generating and signing verifiable credentials. They typically connect with external identity or authentication systems, obtain the required information, and issue the VC in compliance with global standards.
 
-Issuers can easily integrate additional custom plugins by following the detailed guidelines provided in this [link](https://github.com/mosip/inji-certify/blob/master/docs/Custom-Plugin-K8s.md). This extensible plugin framework ensures that Inji Certify can adapt to unique organizational needs without heavy customization. to know more about this feature please refer to this link: [VC Issuance vs Data Provider Plugin](https://github.com/mosip/inji-certify/blob/master/docs/VCIssuance-vs-DataProvider.md)
+**Currently supported issuance plugins:**
 
-7. #### Revocation Mechanism \*(Draft Release -- Experimental, JSON-LD Only)
+* **MOSIP Identity Plugin** — Integrates with MOSIP for trusted identity verification
+* **Sunbird Plugin** — Enables seamless integration with Sunbird-based services
+
+### Data Provider Plugins
+
+These plugins fetch relevant data from external registries or data sources. The retrieved data is returned as a JSON object which Inji Certify then uses to generate and issue the corresponding verifiable credential.
+
+**Currently supported data provider plugins:**
+
+* **Mock IDA Plugin** — Provides a simulated identity verification environment for testing and development
+* **Mock CSV Data Provider Plugin** — Useful for sandbox environments and test data simulation
+* **Postgres Data Provider Plugin** — Connects to Postgres databases to fetch real-time data from registries or external systems
+
+For detailed instructions on configuring the Data Provider Plugin, please refer to this [guide](https://github.com/mosip/inji-certify/blob/master/docs/Local-Development.md).
+
+Issuers can easily integrate additional custom plugins by following the detailed guidelines provided in this [link](https://github.com/mosip/inji-certify/blob/master/docs/Custom-Plugin-K8s.md). This extensible plugin framework ensures that Inji Certify can adapt to unique organizational needs without heavy customization. To know more about this feature please refer to this link: [VC Issuance vs Data Provider Plugin](https://github.com/mosip/inji-certify/blob/master/docs/VCIssuance-vs-DataProvider.md).
+
+## 7. Revocation Mechanism *(Draft Release — Experimental, JSON-LD Only)*
 
 **Important:** This feature is in **draft release** and currently supports **JSON-LD credentials only**. It is intended for experimentation and early feedback, **not for production use**.
 
@@ -90,14 +105,14 @@ Inji Certify introduces an initial implementation of revocation to enhance the t
 
 **Current draft capabilities include:**
 
-* **Revocation List (Experimental)** -- Maintains a list of revoked JSON-LD credentials.
-* **Revocation API** -- Allows issuers to mark JSON-LD credentials as revoked.
-* **Verification API** -- Enables verifiers to check whether a JSON-LD credential is valid or revoked.
-* **Discovery API** -- Provides access to the most up-to-date revocation list.
+* **Revocation List (Experimental)** — Maintains a list of revoked JSON-LD credentials
+* **Revocation API** — Allows issuers to mark JSON-LD credentials as revoked
+* **Verification API** — Enables verifiers to check whether a JSON-LD credential is valid or revoked
+* **Discovery API** — Provides access to the most up-to-date revocation list
 
 This draft release establishes the foundation for a standardized revocation mechanism in Inji Certify, with broader credential format support planned in future iterations. Click [here](https://github.com/mosip/inji-certify/blob/master/docs/VC-Revocation-Support.md) to know more about this feature.
 
-8. #### SVG Rendering Support
+## 8. SVG Rendering Support
 
 Inji Certify provides support for **SVG-based credential rendering**, ensuring wallets can display visually consistent and branded representations of issued credentials.
 
@@ -105,18 +120,18 @@ Inji Certify provides support for **SVG-based credential rendering**, ensuring w
 
 **How it works:**
 
-* renderMethod **in Metadata** -- Certify includes a renderMethod parameter within the credential metadata, instructing wallets on how the credential should be visually rendered.
+* **renderMethod in Metadata** — Certify includes a renderMethod parameter within the credential metadata, instructing wallets on how the credential should be visually rendered
 
 **Key Benefits:**
 
-* **Consistent Branding** -- Logos, colors, and layouts can be issuer-defined, ensuring uniform credential presentation across different wallets.
-* **Scalable & Device-Friendly** -- SVG ensures high-quality rendering on any screen size, from mobile devices to large displays.
-* **Wallet Interoperability** -- By embedding the rendering method in the credential metadata, any compliant wallet can render credentials without custom logic.
-* **Flexible Output** -- Wallets can convert rendered SVGs into other formats (PNG, PDF) for sharing or offline use.
+* **Consistent Branding** — Logos, colors, and layouts can be issuer-defined, ensuring uniform credential presentation across different wallets
+* **Scalable & Device-Friendly** — SVG ensures high-quality rendering on any screen size, from mobile devices to large displays
+* **Wallet Interoperability** — By embedding the rendering method in the credential metadata, any compliant wallet can render credentials without custom logic
+* **Flexible Output** — Wallets can convert rendered SVGs into other formats (PNG, PDF) for sharing or offline use
 
 Please refer this [guide](https://github.com/mosip/inji-certify/blob/master/docs/Rendering-Template.md) to know more about this feature.
 
-9. #### External Authentication Integration
+## 9. External Authentication Integration
 
 Inji Certify provides support for integrating with external authentication services compliant with OAuth 2.0, such as eSignet, Keycloak, and others. This allows issuers to leverage existing identity and access management solutions seamlessly.
 
@@ -124,283 +139,269 @@ Inji Certify provides support for integrating with external authentication servi
 
 **How it works:**
 
-* **OAuth 2.0 Compliance** -- Certify connects with external authentication services that follow the OAuth 2.0 standard.
-* **Configurable Integration** -- Issuers can configure Certify to integrate with different authentication providers based on their needs (e.g., eSignet for government deployments, Keycloak for open-source identity management, or other OAuth 2.0 providers).
-* **Seamless Authorization** -- Once integrated, the external service handles user authentication, and Certify issues credentials only after successful authorization.
+* **OAuth 2.0 Compliance** — Certify connects with external authentication services that follow the OAuth 2.0 standard
+* **Configurable Integration** — Issuers can configure Certify to integrate with different authentication providers based on their needs (e.g., eSignet for government deployments, Keycloak for open-source identity management, or other OAuth 2.0 providers)
+* **Seamless Authorization** — Once integrated, the external service handles user authentication, and Certify issues credentials only after successful authorization
 
 **Key Benefits:**
 
-* **Flexibility** -- Issuers can choose and configure the authentication provider that suits their ecosystem.
-* **Enhanced Security** -- Leverages robust, battle-tested external identity providers for authentication.
-* **Standards-Based** -- OAuth 2.0 compliance ensures interoperability with widely adopted identity solutions.
-* **Customisable per Issuer** -- Different issuers can configure different authentication services within the same Certify deployment.
+* **Flexibility** — Issuers can choose and configure the authentication provider that suits their ecosystem
+* **Enhanced Security** — Leverages robust, battle-tested external identity providers for authentication
+* **Standards-Based** — OAuth 2.0 compliance ensures interoperability with widely adopted identity solutions
+* **Customizable per Issuer** — Different issuers can configure different authentication services within the same Certify deployment
+
 
 
 <!--
--------------------------------------------
-To be included in feature page
 
-Ledger for Issued Verifiable Credentials
+## 10. Ledger for Issued Verifiable Credentials
 
 Inji Certify includes an optional ledger that records every Verifiable Credential (VC) issued by the system. When enabled, this ledger provides a searchable index of issued credentials, making it easier for issuers to track, audit, and manage credentials throughout their lifecycle.
 
-Why it matters:
-The ledger simplifies operations such as revocation, where the system must quickly locate the credential being revoked. With indexed search support, issuers can retrieve credentials efficiently without maintaining an external lookup system.
+**Why it matters:** The ledger simplifies operations such as revocation, where the system must quickly locate the credential being revoked. With indexed search support, issuers can retrieve credentials efficiently without maintaining an external lookup system.
 
-Key Capabilities:
+**Key Capabilities:**
 
-Configurable Recording — Issuers can choose whether or not to maintain an internal record of all issued VCs.
+* **Configurable Recording** — Issuers can choose whether or not to maintain an internal record of all issued VCs
+* **Indexed Search** — The ledger supports searching issued credentials based on predefined indexes, enabling faster retrieval
+* **Revocation Support** — When revocation is enabled, the ledger must be active, unless the issuer provides an external system capable of performing credential lookup
 
-Indexed Search — The ledger supports searching issued credentials based on predefined indexes, enabling faster retrieval.
+**Considerations:** If the issuer intends to use Inji Certify's built-in revocation workflow, the ledger feature must be turned on. Otherwise, the issuer is responsible for implementing their own mechanism to locate credentials during revocation.
 
-Revocation Support — When revocation is enabled, the ledger must be active, unless the issuer provides an external system capable of performing credential lookup.
-
-Considerations:
-If the issuer intends to use Certify’s built-in revocation workflow, the ledger feature must be turned on. Otherwise, the issuer is responsible for implementing their own mechanism to locate credentials during revocation.
-
-Refer to this link to learn how ledger search is used in the revocation flow.
-
-VC Signing with External CA-Signed Certificates
+## 11. VC Signing with External CA-Signed Certificates
 
 Inji Certify supports the use of externally issued, CA-signed certificates for credential signing, enabling issuers to integrate their own public key infrastructure (PKI) into the credential issuance workflow.
 
-Why it matters:
-By allowing institutions or countries to bring their own CA-signed certificates, Certify ensures seamless alignment with existing national or organizational trust frameworks. This flexibility strengthens trust, simplifies compliance, and makes it easier for adopters to integrate Certify into their broader security ecosystem.
 
-How it works:
+**Key Benefits**
 
-Bring-Your-Own Certificate — Administrators can upload a CA-signed certificate into Inji Certify. The system then generates the signing key material using the uploaded certificate.
-Integrated Signing Pipeline — Once configured, Certify uses the externally signed certificate to sign every Verifiable Credential it issues, ensuring all credentials reflect the issuer’s trusted PKI hierarchy.
-Key Manager Integration — Certify works in tandem with the Key Manager to store, manage, and apply the uploaded certificate and associated keys securely throughout the issuance process.
+* Trust Alignment — Credentials are signed using the issuer’s own CA-backed certificates, reinforcing alignment with local or institutional PKI policies.
 
-Key Benefits:
+* Greater Adoption Flexibility — Countries and organizations can adopt Certify without restructuring their existing certificate management models.
 
-Trust Alignment — Credentials are signed using the issuer’s own CA-backed certificates, reinforcing alignment with local or institutional PKI policies.
+* Seamless Compliance — Using a recognized CA certificate simplifies audits and compliance checks by matching established trust and governance frameworks.
 
-Greater Adoption Flexibility — Countries and organizations can adopt Certify without restructuring their existing certificate management models.
+* End-To-End Security — The signing process remains fully managed through the Key Manager, ensuring secure key handling while maintaining issuer-specific trust anchors.
 
-Seamless Compliance — Using a recognized CA certificate simplifies audits and compliance checks by matching established trust and governance frameworks.
-
-End-to-End Security — The signing process remains fully managed through the Key Manager, ensuring secure key handling while maintaining issuer-specific trust anchors.
-
-To explore the full workflow and configuration, refer to the detailed feature document (Github page need to be created).
-For deeper insights into certificate and key lifecycle handling, see the documentation on the role of the Key Manager in Certify (new page to be created in the docs).
+To explore the full workflow and configuration, refer to the detailed feature document [Github page need to be created](link).
+For deeper insights into certificate and key lifecycle handling, see the documentation on the role of the Key Manager in Certify [new page to be created in the docs](link).
 
 
 
-Multi language support
+12. Multi language support
 
-Inji Certify have capability to issue VC in multiple language based on the configuration done by issuer. During the VC type configuration, VC schema
+Inji Certify have capability to issue VC in multiple language based on the configuration done by issuer. During the VC type configuration, VC schema 
 
 Full work Flow document (to be included in the GitHub)
 
-Configuring Inji Certify to Use an Externally Signed CA Certificate
 
-Inji Certify allows issuers to integrate their own CA-signed certificates into the credential signing pipeline. This workflow guides you through the complete setup—from generating a CSR to uploading the signed certificate—so that all Verifiable Credentials (VCs) are signed using your institution’s PKI.
 
-Overview
+<!-
+
+
+# Configuring Inji Certify to Use an Externally Signed CA Certificate
+
+Inji Certify allows issuers to integrate their own CA-signed certificates into the credential signing pipeline. This workflow guides you through the complete setup—from generating a (CSR) to uploading the signed certificate such that all Verifiable Credentials (VCs) are signed using your institution’s PKI.
+
+## Overview
 
 When using an external CA, the system must be configured with:
 
-A Certificate Signing Request (CSR) generated by Inji Certify
+* A **Certificate Signing Request (CSR)** generated by Inji Certify
+* The **CA's Root/Intermediate Certificate**
+* The **Externally Signed Certificate**
 
-The CA’s root/intermediate certificate
+Once configured, the **Key Manager** will generate and manage keys tied to the **Uploaded Certificates** and use them to sign Verifiable Credentials.
 
-The externally signed certificate
+## Workflow Steps
 
-Once configured, the Key Manager will generate and manage keys tied to the uploaded certificates and use them to sign Verifiable Credentials.
-
-Workflow Steps
-
-1. Generate a Certificate Signing Request (CSR)
+### 1. Generate a Certificate Signing Request (CSR)
 
 Generate a CSR that must be signed by your external Certificate Authority.
 
-Endpoint:
+**Endpoint:**
 
+```
 POST http://localhost:8090/v1/certify/system-info/generate-csr
+```
 
+**Purpose:**
 
-Purpose:
+* Produces a Certificate Signing Request (CSR) data, typically in PEM format.
+* Must be submitted to your CA for signing
+* CA returns a signed certificate based on this CSR
 
-Produces a Certificate Signing Request (CSR) data, typically in PEM format.
+### 2. Upload the CA Certificate
 
-Must be submitted to your CA for signing
+Upload the CA's trust chain (root and/or intermediate certificates).
 
-CA returns a signed certificate based on this CSR
+**Endpoint:**
 
-2. Upload the CA Certificate
-
-Upload the CA’s trust chain (root and/or intermediate certificates).
-
-Endpoint:
-
+```
 POST http://localhost:8090/v1/certify/system-info/upload-ca-certificate
+```
 
+**Purpose:**
 
-Purpose:
+* Registers the CA's trust anchors
+* Allows Certify to validate the certificate chain for VC signing
 
-Registers the CA’s trust anchors
+### 3. Upload the Signed Certificate
 
-Allows Certify to validate the certificate chain for VC signing
+Upload the 'Externally Signed Certificate' received from the CA.
 
-3. Upload the Signed Certificate
+**Endpoint:**
 
-Upload the externally signed certificate received from the CA.
-
-Endpoint:
-
+```
 POST http://localhost:8090/v1/certify/system-info/uploadCertificate
+```
 
-Purpose:
+**Purpose:**
 
-Stores the CA-signed certificate as the active signing certificate
+* Stores the 'CA Signed Certificate' as the active signing certificate
+* Enables the Key Manager to use it for signing VCs
+* Integrates the certificate into the ongoing key lifecycle
 
-Enables the Key Manager to use it for signing VCs
-
-Integrates the certificate into the ongoing key lifecycle
-
-System Behavior After Configuration
+#### System Behavior After Configuration
 
 Once all three steps are completed:
 
-The Key Manager manages signing keys derived from the uploaded certificates.
+* The Key Manager manages signing keys derived from the uploaded certificates.
+* All VCs issued by Inji Certify are signed using the externally provided CA-backed certificate.
+* Issuers maintain alignment with their existing national or institutional PKI.
 
-All VCs issued by Inji Certify are signed using the externally provided CA-backed certificate.
+#### Limitations & Important Considerations
 
-Issuers maintain alignment with their existing national or institutional PKI.
+#### Certificate Expiry Handling
 
-Limitations & Important Considerations
+* Inji Certify does not automatically manage or renew externally signed certificates.
+* If the uploaded certificate expires, the Key Manager will fallback to using a self-signed certificate and regenerate the keys accordingly.
 
-Certificate Expiry Handling
+**To avoid unintended fallback behavior and ensure uninterrupted trust alignment, issuers must:**
 
-Inji Certify does not automatically manage or renew externally signed certificates.
+* Upload a new externally signed certificate before the current certificate expires.
+* This ensures that credential signing continues using the intended CA-signed certificate without disruption.
 
-If the uploaded certificate expires, the Key Manager will fallback to using a self-signed certificate and regenerate the keys accordingly.
 
-To avoid unintended fallback behavior and ensure uninterrupted trust alignment, issuers must:
-Upload a new externally signed certificate before the current certificate expires.
 
-This ensures that credential signing continues using the intended CA-signed certificate without disruption.
-
-Content for the role of key manager in Certify - need to create a new page
-
-Key Manager in Inji Certify
-
-Overview
-
-The Key Manager in Inji Certify is a critical component which is used as an embedded library responsible for secure cryptographic key lifecycle management. It handles:
-
-generation of asymmetric and symmetric keys
-
-storage and encryption of private keys
-
-certificate management (self-signed and externally signed)
-
-digital signing operations (e.g., signing Verifiable Credentials)
-
-key rotation and revocation
-
-secure integration with hardware-backed key stores (e.g., HSM)
-
-By consolidating these cryptographic operations in one trusted service, Certify ensures the integrity, confidentiality, and long-term security of all cryptographic materials.
-
-Capabilities & Responsibilities
-
-Below are the main capabilities and how Key Manager supports them in Inji Certify:
-
-Key Generation
-
-The Key Manager generates various types of keys: root/master keys, module-level keys, and application-specific (base) keys.
-
- Asymmetric algorithms such as  RSA, ECC, Ed25519 etc., are used based on the VC configuration. 
-
-Root and module master keys can be generated at the time of installation of Inji Certify 
-
-Base keys (application-specific) are auto-generated as needed. 
-
-Secure Storage
-
-Private keys are stored securely in a key store. In Inji implementation, a Hardware Security Module (HSM) is used to store root and master keys, while base keys are stored in a database encrypted by module keys.
-
-Key metadata (aliases, identifiers) is maintained in a key-alias table; the encrypted key material resides in a key-store table. 
-
-The Key Manager supports integration with HSMs via PKCS#11 or JCE. 
-
-Certificate Management
-
-Self-Signed Certificates: When no external CA is provided, the Key Manager can generate self-signed certificates. For example, root key is self-signed. 
-
-CSR Generation: It supports generating CSR (Certificate Signing Requests) for any key, so that you can obtain a certificate signed by an external CA. 
-
-Uploading Externally-Signed Certificates: Once you obtain a CA-signed certificate, you can upload it to the Key Manager, updating existing certificate with CA signed certificate.
-
-Signing & Cryptographic Operations
-
-For signing credential (VC) issuance, the Key Manager uses the appropriate key (module or base) and the associated certificate to sign the VC payload.
-
-Key Rotation
-
-Automatic Rotation: Keys have default validity periods. For example, in MOSIP, root keys are valid for ~5 years, module keys for ~3 years, base keys for ~2 years.
-
-Forced Rotation: Admins can force key regeneration via APIs (e.g., a generateMasterKeyAPI) with a “force” flag. Existing keys are invalidated and new ones generated. 
-
-On expiry, key manager automatically generates new keys and ensures that cryptographic operations switch over to the new valid keys.
-
-Duration of key rotation is configurable which is handled through a table named as “key-policy-def“
-
-Key manager has the capability to pre generate keys before expiry. Duration for the pre generation is a configurable which is handled through a table named as “key-policy-def“
-
-Certificate Expiry Handling
-
-Incase of externally CA signed certificate is used for key generation, and certificate expires, the system falls back: Key Manager re-generate keys using a self-signed certificate (or whatever default mechanism is configured).
-
-Mitigation: To avoid lapse in trust or broken signing, users (issuer administrators) must proactively upload a new valid certificate before the current one expires.
-
-Integration with Hardware Security Module (HSM)
-
-The Key Manager is designed to work with HSMs, ensuring that root and module keys never leave secure hardware. 
-
-For setups without HSM, the Key Manager also supports other keystore types (PKCS12), configurable via properties. (This option is note recommended during the production enviornment)
-
-Role of Key Manager Specifically in VC Signing Workflow (In Certify)
-
-Putting the above capabilities in the context of Verifiable Credential (VC) issuance in Inji Certify:
-
-Initial Setup (If PKI is already existing)
-
-The system admin uses Inji Certify API which internally uses KeyManager service to generate a master signing key pair.
-
-The admin can request a CSR from Inji Certify API for the generated signing key (via generateCSR), so they can share it to be externally singed by CA
-
-Once the certificate is signed, they upload the CA certificate to Inji Certify, then upload their signed certificate, binding it to the key.
-
-Credential Issuance
-
-When Certify issues a VC, it calls Key Manager to sign the credential payload.
-
-Key Manager uses the private key associated with the signing key (which is backed by the uploaded certificate) to compute a digital signature.
-
-The signed VC thus has cryptographic integrity and can be verified by relying parties using the public certificate.
-
-Key Benefits for Inji Certify
-
-Security & Trust: All signing keys are managed securely; private keys are never exposed, especially when using HSM.
-
-Flexibility: Support both self-signed workflows (for simplicity) and externally-CA-signed certificates (for integration into existing PKI).
-
-Operational Control: Administrators have full control over key lifecycles, rotation, and certificate management.
-
-Interoperability: By using standard cryptography and certificate formats, Certify’s VCs can be validated by any compliant verifier.
-
-Resilience: With key-rotation and fallback mechanisms, the system can recover from certificate expiry or compromise.
-
-For deeper technical details about the Key Manager component itself, you can refer to the MOSIP documentation here
-
-
----------------------------------
--->
 
 ## Read More
 
 Check [Inji Certify Repository](https://github.com/mosip/inji-certify/tree/master) to explore these above mentioned features.
+
+
+
+
+Content for the role of key manager in Certify - need to create a new page
+
+# Key Manager in Inji Certify
+
+## Overview
+
+The Key Manager in Inji Certify is a critical component which is used as an embedded library responsible for secure cryptographic key lifecycle management. It handles:
+
+* generation of asymmetric and symmetric keys
+
+* storage and encryption of private keys
+
+* certificate management (self-signed and externally signed)
+
+* digital signing operations (e.g., signing Verifiable Credentials)
+* key rotation and revocation
+
+* secure integration with hardware-backed key stores (e.g., HSM)
+
+By consolidating these cryptographic operations in one trusted service, Certify ensures the integrity, confidentiality, and long-term security of all cryptographic materials.
+
+### Capabilities & Responsibilities
+
+Below are the main capabilities and how Key Manager supports them in Inji Certify:
+
+### Key Generation
+
+* The Key Manager generates various types of keys: root/master keys, module-level keys, and application-specific (base) keys.
+
+* Asymmetric algorithms such as  RSA, ECC, Ed25519 etc., are used based on the VC configuration. 
+
+* Root and module master keys can be generated at the time of installation of Inji Certify 
+
+* Base keys (application-specific) are auto-generated as needed. 
+
+### Secure Storage
+
+* Private keys are stored securely in a key store. In Inji implementation, a Hardware Security Module (HSM) is used to store root and master keys, while base keys are stored in a database encrypted by module keys.
+
+* Key metadata (aliases, identifiers) is maintained in a key-alias table; the encrypted key material resides in a key-store table. 
+
+* The Key Manager supports integration with HSMs via PKCS#11 or JCE. 
+
+### Certificate Management
+
+* Self-Signed Certificates: When no external CA is provided, the Key Manager can generate self-signed certificates. For example, root key is self-signed. 
+
+* CSR Generation: It supports generating CSR (Certificate Signing Requests) for any key, so that you can obtain a certificate signed by an external CA. 
+
+* Uploading Externally-Signed Certificates: Once you obtain a CA-signed certificate, you can upload it to the Key Manager, updating existing certificate with CA signed certificate.
+
+### Signing & Cryptographic Operations
+
+For signing credential (VC) issuance, the Key Manager uses the appropriate key (module or base) and the associated certificate to sign the VC payload.
+
+### Key Rotation
+
+* Automatic Rotation: Keys have default validity periods. For example, in MOSIP, root keys are valid for ~5 years, module keys for ~3 years, base keys for ~2 years.
+
+* Forced Rotation: Admins can force key regeneration via APIs (e.g., a generateMasterKeyAPI) with a “force” flag. Existing keys are invalidated and new ones generated. 
+
+* On expiry, key manager automatically generates new keys and ensures that cryptographic operations switch over to the new valid keys.
+
+* Duration of key rotation is configurable which is handled through a table named as “key-policy-def“
+
+* Key manager has the capability to pre generate keys before expiry. Duration for the pre generation is a configurable which is handled through a table named as “key-policy-def“
+
+### Certificate Expiry Handling
+
+In case of externally CA signed certificate is used for key generation, and certificate expires, the system falls back: Key Manager re-generate keys using a self-signed certificate (or whatever default mechanism is configured).
+
+* Mitigation: To avoid lapse in trust or broken signing, users (issuer administrators) must proactively upload a new valid certificate before the current one expires.
+
+### Integration with Hardware Security Module (HSM)
+
+The Key Manager is designed to work with HSMs, ensuring that root and module keys never leave secure hardware. 
+
+* For setups without HSM, the Key Manager also supports other keystore types (PKCS12), configurable via properties. (This option is not recommended during the production environment)
+* Role of Key Manager Specifically in VC Signing Workflow (In Certify)
+
+* Putting the above capabilities in the context of Verifiable Credential (VC) issuance in Inji Certify:
+
+* Initial Setup (If PKI is already existing)
+
+* The system admin uses Inji Certify API which internally uses KeyManager service to generate a master signing key pair.
+
+* The admin can request a CSR from Inji Certify API for the generated signing key (via generateCSR), so they can share it to be externally singed by CA
+
+* Once the certificate is signed, they upload the CA certificate to Inji Certify, then upload their signed certificate, binding it to the key.
+
+### Credential Issuance
+
+When Certify issues a VC, it calls Key Manager to sign the credential payload.
+
+* Key Manager uses the private key associated with the signing key (which is backed by the uploaded certificate) to compute a digital signature.
+
+* The signed VC thus has cryptographic integrity and can be verified by relying parties using the public certificate.
+
+## Key Benefits for Inji Certify
+
+* Security & Trust: All signing keys are managed securely; private keys are never exposed, especially when using HSM.
+
+* Flexibility: Support both self-signed workflows (for simplicity) and externally-CA-signed certificates (for integration into existing PKI).
+
+* Operational Control: Administrators have full control over key lifecycles, rotation, and certificate management.
+* Interoperability: By using standard cryptography and certificate formats, Certify’s VCs can be validated by any compliant verifier.
+
+* Resilience: With key-rotation and fallback mechanisms, the system can recover from certificate expiry or compromise.
+
+For deeper technical details about the Key Manager component itself, you can refer to the MOSIP documentation [here](link)
+
+
+-->
