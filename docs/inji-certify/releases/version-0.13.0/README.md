@@ -1,8 +1,6 @@
 # Version 0.13.0
 
 <!--
-
-
 Version 0.13.0
 
 Release Version: v0.13.0
@@ -13,20 +11,20 @@ Release Date: Coming Soon
 
 ## Overview
 
-Inji Certify v0.13.0 introduces major advances in credential issuance and lifecycle management, including:
+Inji Certify v0.13.0 introduces major advances in credential issuance and lifecycle management, This includes:
 
-A full implementation of the Revocation flow, enabling issuers to mark credentials as revoked and track them via a ledger.
+* A full implementation of the Revocation flow enabling issuers to mark credentials as revoked and track them with a ledger.
 
-Support to upload externally-signed CA certificates into the key-management workflow, allowing organizations to use their own PKI for signing credentials.
+* Support to upload externally-signed CA certificates into the key-management workflow, allowing organizations to use their own PKI for signing credentials.
 
-Full implementation of the SD-JWT (Selective Disclosure JWT) issuance feature 
+* Full implementation of the SD-JWT (Selective Disclosure JWT) issuance feature.
 
-Updated Docker-Compose support that aligns with the latest versions of the associated modules (Inji Web & Mimoto).
+* Updated Docker-Compose support that aligns with the latest versions of the associated modules (Inji Web & Mimoto).
 
 ## Major Highlights & Features
 
 ### Revocation Implementation
-The revocation feature is now fully functional: issuers can revoke VCs, and the ledger can be configured for indexing to support efficient search for revocation lookup. Please refer to this link to know more about this feature [link to feature page](link)
+The revocation feature is now fully functional, issuers can revoke VCs, and the ledger can be configured for indexing to support efficient search for revocation lookup. Please refer to [this link](link) to know more about this feature [link to feature page](link)
 
 ### Externally Signed Certificate Upload
 New APIs allow the following steps:
@@ -40,13 +38,15 @@ Click here to know more about this feature [link to feature page](link)
 ### SD-JWT Implementation
 Credentials can now be issued in SD-JWT format , offering issuers selective disclosure capabilities and enhanced privacy options.
 
-Click here to know more about this 
+Click [here](link) to know more about this 
 
 ### Docker-Compose Upgrade
 The docker-compose.yml definitions have been updated to reference latest versions of Inji Web and Mimoto, helping streamline environment setup, testing, and CI/CD workflows.
 
-Refer here to know more about it [Github link for docker document](link)
+Refer [here](link) to know more about it [Github link for docker document](link)
 
 User Stories Released
+
+
 
 -->
