@@ -160,6 +160,7 @@
   * [Technology Stack](inji-certify/technical-overview/technology-stack.md)
   * [Architecture](inji-certify/technical-overview/architecture.md)
   * [Tested Operating Systems](inji-certify/technical-overview/supported-browsers.md)
+  * [Key Manager](inji-certify/technical-overview/key-manager.md)
 * [Test](inji-certify/functional-overview/README.md)
   * [Functional Overview](inji-certify/functional-overview/functional-overview.md)
   * [Workflow](inji-certify/functional-overview/workflow.md)
