@@ -151,27 +151,26 @@ Inji Certify provides support for integrating with external authentication servi
 * **Customizable per Issuer** — Different issuers can configure different authentication services within the same Certify deployment
 
 
-
-<!--
-
 ## 10. Ledger for Issued Verifiable Credentials
 
 Inji Certify includes an optional ledger that records every Verifiable Credential (VC) issued by the system. When enabled, this ledger provides a searchable index of issued credentials, making it easier for issuers to track, audit, and manage credentials throughout their lifecycle.
 
-**Why it matters:** The ledger simplifies operations such as revocation, where the system must quickly locate the credential being revoked. With indexed search support, issuers can retrieve credentials efficiently without maintaining an external lookup system.
+**Why it matters:** 
+The ledger simplifies operations such as revocation, where the system must quickly locate the credential being revoked. With indexed search support, issuers can retrieve credentials efficiently without maintaining an external lookup system.
 
 **Key Capabilities:**
 
-* **Configurable Recording** — Issuers can choose whether or not to maintain an internal record of all issued VCs
-* **Indexed Search** — The ledger supports searching issued credentials based on predefined indexes, enabling faster retrieval
-* **Revocation Support** — When revocation is enabled, the ledger must be active, unless the issuer provides an external system capable of performing credential lookup
+* **Configurable Recording** — Issuers can choose whether or not to maintain an internal record of all issued VCs.
+
+* **Indexed Search** — The ledger supports searching issued credentials based on predefined indexes, enabling faster retrieval.
+
+* **Revocation Support** — When revocation is enabled, the ledger must be active, unless the issuer provides an external system capable of performing credential lookup.
 
 **Considerations:** If the issuer intends to use Inji Certify's built-in revocation workflow, the ledger feature must be turned on. Otherwise, the issuer is responsible for implementing their own mechanism to locate credentials during revocation.
 
 ## 11. VC Signing with External CA-Signed Certificates
 
 Inji Certify supports the use of externally issued, CA-signed certificates for credential signing, enabling issuers to integrate their own public key infrastructure (PKI) into the credential issuance workflow.
-
 
 **Key Benefits**
 
@@ -183,19 +182,17 @@ Inji Certify supports the use of externally issued, CA-signed certificates for c
 
 * End-To-End Security — The signing process remains fully managed through the Key Manager, ensuring secure key handling while maintaining issuer-specific trust anchors.
 
-To explore the full workflow and configuration, refer to the detailed feature document [Github page need to be created](link).
-For deeper insights into certificate and key lifecycle handling, see the documentation on the role of the Key Manager in Certify [new page to be created in the docs](link).
+To explore the full workflow and configuration, refer to the [detailed feature document](link).
 
+For deeper insights into certificate and key lifecycle handling, see the documentation on the [Role of the Key Manager](../technical-overview/key-manager.md) in Certify.
 
+## 12. Multi language support
 
-12. Multi language support
+Inji Certify have capability to issue VC in multiple language based on the configuration done by issuer. During the VC type configuration, VC schema can be defined in multiple languages. While issuing the VC, based on the preferred language of the user, VC will be issued in that particular language.
 
-Inji Certify have capability to issue VC in multiple language based on the configuration done by issuer. During the VC type configuration, VC schema 
+## Read More
 
-Full work Flow document (to be included in the GitHub)
-
--->
-
+Check [Inji Certify Repository](https://github.com/mosip/inji-certify/tree/master) to explore these above mentioned features.
 
 
 <!--
@@ -287,9 +284,7 @@ Once all three steps are completed:
 
 
 
-## Read More
 
-Check [Inji Certify Repository](https://github.com/mosip/inji-certify/tree/master) to explore these above mentioned features.
 
 
 -->
