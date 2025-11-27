@@ -7,8 +7,6 @@ icon: list-tree
 
 # Deploy
 
-
-UPDATED Version of above
 Effortlessly deploy and configure eSignet with comprehensive guides, architecture insights, and mock environments.
 
 The eSignet solution is designed to be:
@@ -19,4 +17,6 @@ The eSignet solution is designed to be:
 
 The latest stable codebase is available under the master branch of the eSignet repository. All feature development or bug fixes are typically carried out on dedicated feature or development branches.
 
-⚠️ Note: For deployment and testing, it is recommended to use either the master branch or the official released tags.
+{% hint style="info" %}
+Note: For deployment and testing, it is recommended to use either the master branch or the official released tags.
+{% endhint %}
