@@ -118,8 +118,6 @@ const history: TabScreen = {
 
 Card content text color is driven by wellknown exposed by issuing authoriy. If text color is not exposed, default color is being used. To change default Label text color if not provided by issuer:
 
-![](broken-reference)
-
 ```
 export const DefaultTheme = {
   Colors: {
@@ -130,8 +128,6 @@ export const DefaultTheme = {
 ```
 
 To change default Label value color if not provided by issuer:
-
-![](broken-reference)
 
 ```
 export const DefaultTheme = {
@@ -144,8 +140,6 @@ export const DefaultTheme = {
 
 To change the colour of `+` icon colour:
 
-![](broken-reference)
-
 In `HomeScreen.tsx`, refer `DownloadFABIcon` component
 
 ```
@@ -156,8 +150,6 @@ const DownloadFABIcon: React.FC = () => {
 ```
 
 To change the colours of Label in Settings:
-
-![](broken-reference)
 
 ```
 export const DefaultTheme = {
@@ -191,8 +183,6 @@ export const DefaultTheme = {
 ```
 
 To change colour on add new card page:
-
-![](broken-reference)
 
 ```
 export const DefaultTheme = {

@@ -17,6 +17,4 @@ Once the access token is received from eSignet by Mimoto, Mimoto uses it to requ
 
 **Note**: The endpoint attribute is present in the issuer's well-known configuration.
 
-{% openapi src="broken-reference" path="/vci/credential" method="post" %}
-[Broken link](broken-reference)
-{% endopenapi %}
+<mark style="color:green;">`POST`</mark> `undefined/vci/credential`

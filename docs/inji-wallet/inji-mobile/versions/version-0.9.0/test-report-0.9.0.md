@@ -41,7 +41,7 @@ For regression check, `MOSIP Test Rig`, an automation testing suite is indigenou
 
 ## Feature health
 
-![](../../../../.gitbook/assets/inji-test-report1.png) ![](../../../../.gitbook/assets/inji-test-report2.png)
+![](<../../../../.gitbook/assets/inji-test-report1 (1).png>) ![](<../../../../.gitbook/assets/inji-test-report2 (1).png>)
 
 ## Test execution statistics
 
@@ -95,7 +95,7 @@ End-to-end flows are a set of stateful test cases that expects the results acros
 
 Below are the test metrics by performing VC Sharing functionality on various device combinations.
 
-![](../../../../.gitbook/assets/inji-device-metrics.png)
+![](<../../../../.gitbook/assets/inji-device-metrics (1).png>)
 
 | **Total** | **Passed** | **Failed** | **Skipped** |
 | --------- | ---------- | ---------- | ----------- |

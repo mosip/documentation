@@ -4,17 +4,19 @@ hidden: true
 
 # Deploy Inji Certify
 
-# Inji Deployment Guide
+## Deploy Inji Certify
 
-## Overview
+## Inji Deployment Guide
 
-[Inji](../..) is a digital credentialing stack that enables users to securely download, store, share, and verify credentials. This guide is structured to provide a comprehensive approach for deploying the Inji stack (Inji Certify, Mimoto, Inji Web and Inji Verify). Not only the Inji Stack, this deployment guide has taken an approach to cover everything from deploying Wireguard to Base Infrastructure setup, Core Infra setup to configurations and finally the Inji Stack deployment.
+### Overview
 
-### Do I need to read through the entire guide to be able to deploy Inji?
+[Inji](../../) is a digital credentialing stack that enables users to securely download, store, share, and verify credentials. This guide is structured to provide a comprehensive approach for deploying the Inji stack (Inji Certify, Mimoto, Inji Web and Inji Verify). Not only the Inji Stack, this deployment guide has taken an approach to cover everything from deploying Wireguard to Base Infrastructure setup, Core Infra setup to configurations and finally the Inji Stack deployment.
+
+#### Do I need to read through the entire guide to be able to deploy Inji?
 
 This is the first question you could ask and the answer is No! If you have the Infrastructure ready and you just want to deploy the Inji stack you can directly jump to the [Inji Stack Deployment](../../readme/setup/deploy.md#inji-stack-deployment) section.
 
-### How is this guide structured and organized? 
+#### How is this guide structured and organized?
 
 1. [**Introduction**](../../readme/setup/deploy.md#introduction): Provides an overview of the Inji stack, deployment scenarios, required skill sets, system architecture, and key considerations for on-premise deployments.
 2. [**Prerequisites**](../../readme/setup/deploy.md#prerequisites-for-overall-deployment): Outlines infrastructure details, hardware/software/network requirements, and initial setup steps.
@@ -25,7 +27,7 @@ This is the first question you could ask and the answer is No! If you have the I
 
 Each section provides direct steps and references to external resources for a streamlined deployment experience.
 
-### Typical Deployment Scenarios
+#### Typical Deployment Scenarios
 
 The scenarios listed below are only a few examples. Inji Stack can support many more deployment possibilities depending on the country, organization, or individual requirements.
 
@@ -38,7 +40,7 @@ The scenarios listed below are only a few examples. Inji Stack can support many 
 | Hybrid Deployment                                         | Some modules on-premise, some on cloud | Countries with regulatory/data residency constraints, for example issuer to be on-prem while the inji wallet is deployed on cloud |
 | Phased Rollout Deployment                                 | Gradual deployment of modules/regions  | Pilot projects or regional rollouts                                                                                               |
 
-### Basic Skill-sets Required
+#### Basic Skill-sets Required
 
 Deploying Inji Stack is easier while you have Base Infrastructure ready, still, if you want to deploy it 'On-Premise' and from scratch, this guide helps you with the instructions to achieve this.
 
@@ -58,7 +60,7 @@ Deploying Inji Stack is easier while you have Base Infrastructure ready, still, 
 * **Scripting**: Basic scripting skills (e.g., Bash, Python) for automation and operational tasks.
 * **Familiarity with CI/CD Pipelines**: Understanding of continuous integration and deployment processes is a plus.
 
-### Deployment Architecture of Inji
+#### Deployment Architecture of Inji
 
 Links to the deployment architecture diagrams below take you to respective sections of this guide and illustrate the high-level deployment architecture for Inji Stack, showing how core components interact within the Kubernetes cluster, including ingress, services, and external integrations.
 
@@ -68,11 +70,11 @@ Links to the deployment architecture diagrams below take you to respective secti
   * [Mimoto(backend for Wallet)](../../readme/setup/deploy.md#deploying-mimoto-backend-for-inji-wallet)
 * [Inji Verify](../../readme/setup/deploy.md#deploying-inji-verify)
 
-### Typical Deployment Order
+#### Typical Deployment Order
 
 For a smooth and error-free setup of the Inji Stack, it is recommended to follow the deployment order starting with Inji Certify, followed by mimoto backend for Inji Wallet(Mobile+Web), next the Inji Web Wallet, and finally Inji Verify. This sequence ensures that foundational services and dependencies are available before deploying modules that rely on them, leading to a more stable and seamless deployment experience.
 
-### Deployment Considerations for On-Premise Inji Stack
+#### Deployment Considerations for On-Premise Inji Stack
 
 The section helps you to have a quick understanding of what you should expect when you go about deploying Inji-Stack, especially if you are deploying it 'On-Premise' and from scratch.
 
@@ -90,18 +92,18 @@ The section helps you to have a quick understanding of what you should expect wh
     * Keycloak in this cluster is used to manage user access and rights for the observation plane.
     * It is recommended to configure log monitoring and network monitoring in this cluster during production deployment.
     * In case you have an internal container registry, then it should run here.
-  * **Inji cluster** - This cluster runs all the Inji components and core infrastructure components  like kafka, Postgres, minio, etc.
+  * **Inji cluster** - This cluster runs all the Inji components and core infrastructure components like kafka, Postgres, minio, etc.
     * Inji Services are deployed in this cluster.
 
-## Prerequisites for Overall Deployment
+### Prerequisites for Overall Deployment
 
 While we have placed the **Prerequisites** specific to a section under respective sections itself, here, this '**Prerequisites**' lists the common ones which you will need no matter which component you are deploying such as Wireguard, PC - Tools and Utilities etc.
 
-### Personal Computer
+#### Personal Computer
 
 Follow the steps mentioned here to install the required tools on your personal computer to create and manage the k8's cluster.
 
-#### Operating Systems
+**Operating Systems**
 
 The Inji stack can be deployed with a PC having one of the following operating systems, however for this guide we have considered a linux machine with Ubuntu 22.04 LTS.
 
@@ -111,7 +113,7 @@ The Inji stack can be deployed with a PC having one of the following operating s
 
 {% include "../../.gitbook/includes/note-most-deployment-scrip....md" %}
 
-#### Tools and Utilities
+**Tools and Utilities**
 
 You should have these tools installed on your local machine from where you will be running the ansible playbooks to create and manage the k8 cluster using RKE1.
 
@@ -139,12 +141,10 @@ helm repo add mosip https://mosip.github.io/mosip-helm
     export INFRA_ROOT=$INJI_ROOT/mosip-infra
     ```
 
-
-
     > Note: Above mentioned environment variables will be used throughout the installation to move between one directory to other to run install scripts.
 * Wireguard Client - Refer to the [Setup Wireguard Client on your PC](../../readme/setup/deploy.md#setup-wireguard-client-on-your-pc) section for the instructions.
 
-### Setting Up Wireguard
+#### Setting Up Wireguard
 
 {% hint style="success" %}
 **Note**: In case you already have VPN configured to access nodes privately please skip Wireguard installation and continue to use the same VPN.
@@ -162,7 +162,7 @@ WireGuard is a modern, fast, and secure VPN (Virtual Private Network) protocol a
 **Note**: You can also refer to [Wireguard Administrator's Guide](https://github.com/mosip/k8s-infra/blob/main/docs/wireguard-administrators-guide.md) for more on Wireguard configuration and management.
 {% endhint %}
 
-#### Prerequisites to Set Up Wireguard
+**Prerequisites to Set Up Wireguard**
 
 **Wireguard Bastion Host**
 
@@ -173,7 +173,7 @@ WireGuard is a modern, fast, and secure VPN (Virtual Private Network) protocol a
   * Private interface: On the same internal network as all other nodes (e.g., local NAT network).
   * Public interface: Either a direct public IP or a firewall/NAT rule forwarding UDP port 51820 to this interface's IP address.
 
-#### Setting up Wireguard VM and wireguard bastion server
+**Setting up Wireguard VM and wireguard bastion server**
 
 Before proceeding, Create a Wireguard server VM with the mentioned specification under 'Prerequisites' above. This VM will be used to set up the Wireguard server. Once the VM is ready, open the required ports on the Bastion server VM.
 
@@ -192,7 +192,7 @@ Configure the firewall on the Bastion server virtual machine to allow network tr
 * Add below mentioned details:
   * ansible\_host : public IP of Wireguard Bastion server. eg. 100.10.20.56
   * ansible\_user : user to be used for installation. In this ref-impl we use Ubuntu user.
-  * ansible\_ssh\_private\_key\_file : path to pem key for ssh to wireguard server. eg. `~/.ssh/wireguard-ssh.pem`![hosts.ini](../../../_images/wireguard-hosts-ini.png)
+  * ansible\_ssh\_private\_key\_file : path to pem key for ssh to wireguard server. eg. `~/.ssh/wireguard-ssh.pem`
 {% endhint %}
 
 * Execute ports.yml to enable ports on VM level using ufw:`ansible-playbook -i hosts.ini ports.yaml`
@@ -244,7 +244,7 @@ ansible-playbook -i hosts.ini docker.yaml
 * Change the directory to be mounted to wireguard docker as per need. All your wireguard confs will be generated in the mounted directory (`-v /home/ubuntu/wireguard/config:/config`).
 {% endhint %}
 
-#### Setup Wireguard Client on your PC
+**Setup Wireguard Client on your PC**
 
 * Install Wireguard client on your PC using [steps](https://www.wireguard.com/install/).
 * Assign `wireguard.conf`:
@@ -275,9 +275,9 @@ sudo systemctl status wg-quick@wg0
 
 * Once connected to wireguard, you should be now able to login using private IP’s.
 
-## Base Infrastructure Setup
+### Base Infrastructure Setup
 
-## What do we mean here by Base Infrastructure Setup?
+### What do we mean here by Base Infrastructure Setup?
 
 "Base Infrastructure Setup" refers to preparing all foundational resources and configurations needed before deploying the Inji stack. This includes provisioning servers/VMs, configuring networks and firewalls, setting up SSL certificates, installing Kubernetes clusters and required tools (Docker, kubectl, Helm, etc.), establishing secure access (e.g., Wireguard VPN), and deploying essential services like NGINX, storage, monitoring, and logging. It ensures the environment is ready for Inji stack installation.
 
@@ -301,17 +301,17 @@ sudo systemctl status wg-quick@wg0
   * Ensuring only authorized users can access the infrastructure.
 * **Importing clusters into management tools** (e.g., Rancher) for centralized administration.
 
-### Prerequisites for Base Infrastructure Setup
+#### Prerequisites for Base Infrastructure Setup
 
 Before deploying any Inji Stack module, ensure that the following common prerequisites are met. These requirements apply to all modules and must be fulfilled to guarantee a smooth and successful deployment process.
 
-#### On-Prem Server Requirements
+**On-Prem Server Requirements**
 
 > **Note:** You can deploy Inji on an environment and operating system that supports Kubernetes-based deployments. Ensure your chosen OS and infrastructure meet the prerequisites and compatibility requirements. **Note**: This guide references using **Ubuntu Server 22.04 LTS**. **Note:** For large-scale deployments or environments with strict security requirements, an on-premises setup is recommended. For pilot projects, demonstrations, or rapid prototyping, a cloud-based deployment may be more suitable.
 
 > **Note**: Virtual Machines (VMs) can use any operating system as per convenience. For this installation guide, Ubuntu OS is referenced throughout.
 
-#### VMs-Virtual Machines (Hardware, Network, Certificate and DNS) - Along with Nginx server (use Loadbalancer if required)
+**VMs-Virtual Machines (Hardware, Network, Certificate and DNS) - Along with Nginx server (use Loadbalancer if required)**
 
 * **VMs and Hardware Specifications**
   * 3 VMs (allocate etcd, control plane, and worker nodes accordingly for HA)
@@ -331,7 +331,7 @@ Before deploying any Inji Stack module, ensure that the following common prerequ
 * All the VM's should have stable internet connectivity for docker image download (in case of local setup ensure to have a locally accessible docker registry).
 {% endhint %}
 
-#### DNS Requirements
+**DNS Requirements**
 
 Below is a sample mapping of domain names to their respective IP addresses and purposes for a typical Inji deployment. Update these as per your environment.
 
@@ -368,11 +368,11 @@ Below is a sample mapping of domain names to their respective IP addresses and p
 
 > **Note:** Ensure all DNS records are created and point to the correct IP addresses (public or private) as per your network design. For private domains, access is typically restricted via Wireguard VPN.
 
-#### PC Requirements
+**PC Requirements**
 
 See the [Tools and Utilities](../../readme/setup/deploy.md#tools-and-utilities) section for common prerequisites required for all deployments.
 
-### Setting Up Kubernetes Cluster
+#### Setting Up Kubernetes Cluster
 
 > **Note:** For detailed VM provisioning steps and hardware/network prerequisites, see the [Prerequisites](../../readme/setup/deploy.md#prerequisites-for-base-infrastructure-setup) above for VM - Hardware specification and more.
 
@@ -389,7 +389,7 @@ See the [Tools and Utilities](../../readme/setup/deploy.md#tools-and-utilities) 
     > * Ensure you are inside `on-prem` directory as mentioned above.
     > * ansible\_host : internal IP of nodes. eg. 100.10.20.56, 100.10.20.57 ...
     > * ansible\_user : user to be used for installation. In this ref-implementation we use Ubuntu user.
-    > * ansible\_ssh\_private\_key\_file : path to pem key for ssh to wireguard server. eg. `~/.ssh/nodes-ssh.pem`![hosts.ini](../../../_images/nodes-hosts-ini.png)
+    > * ansible\_ssh\_private\_key\_file : path to pem key for ssh to wireguard server. eg. `~/.ssh/nodes-ssh.pem`
 
     * `ansible-playbook -i hosts.ini env-check-setup.yaml`
     * This ansible checks if localhost mapping ia already present in `/etc/hosts` file in all cluster nodes, if not it adds the same.
@@ -492,9 +492,9 @@ See the [Tools and Utilities](../../readme/setup/deploy.md#tools-and-utilities) 
     * `kube_config_cluster.yml`: The [Kubeconfig file](https://rke.docs.rancher.com/kubeconfig) for the cluster, this file contains credentials for full access to the cluster.
     * `cluster.rkestate`: The [Kubernetes Cluster State file](https://rke.docs.rancher.com/installation#kubernetes-cluster-state), this file contains credentials for full access to the cluster.
 
-### K8s (Kubernetes) Cluster Configuration
+#### K8s (Kubernetes) Cluster Configuration
 
-#### Ingress and Storage Class setup
+**Ingress and Storage Class setup**
 
 [**Istio**](https://istio.io/) **Ingress setup**
 
@@ -537,7 +537,7 @@ cp hosts.ini.sample hosts.ini
     > * Add below mentioned details:
     > * ansible\_host : internal IP of NFS server. eg. 10.12.23.21. In our reference implementation using nginx server
     > * ansible\_user : user to be used for installation, in this ref-impl we use Ubuntu user.
-    > * ansible\_ssh\_private\_key\_file : path to pem key for ssh to wireguard server. eg. `~/.ssh/wireguard-ssh.pem` ![hosts.ini](../../../_images/nfs-hosts-ini.png).
+    > * ansible\_ssh\_private\_key\_file : path to pem key for ssh to wireguard server. eg. `~/.ssh/wireguard-ssh.pem` .
 * Make sure Kubeconfig file is set correctly to point to required mosip cluster.
 
 ```sh
@@ -620,7 +620,7 @@ kubectl -n nfs get deployment.apps/nfs-client-provisioner
   nfs-client           cluster.local/nfs-client-provisioner   Delete          Immediate           true                   40s
 ```
 
-#### Inji K8's (Kubernetes) cluster Nginx server setup
+**Inji K8's (Kubernetes) cluster Nginx server setup**
 
 **SSL certificate creation**
 
@@ -715,7 +715,7 @@ curl https://api.sandbox.xyz.net/httpbin/get?show_env=true
 curl https://api-internal.sandbox.xyz.net/httpbin/get?show_env=true
 ```
 
-#### \[Optional] Monitoring module deployment
+**\[Optional] Monitoring module deployment**
 
 > Note :
 >
@@ -741,7 +741,7 @@ curl https://api-internal.sandbox.xyz.net/httpbin/get?show_env=true
     ```
 * Click on `Install`.
 
-#### \[Optional] Alerting setup
+**\[Optional] Alerting setup**
 
 **Note**:
 
@@ -786,7 +786,7 @@ cd $K8_ROOT/monitoring/alerting/
 
 * Alerting is installed.
 
-#### \[Optional] Logging module setup and installation
+**\[Optional] Logging module setup and installation**
 
 > Note :
 >
@@ -834,11 +834,11 @@ Open kibana dashboard from `https://kibana.sandbox.xyz.net`.
 
 Kibana --> Menu (on top left) --> Dashboard --> Select the dashboard.
 
-## Core Infrastructure Components Setup
+### Core Infrastructure Components Setup
 
 This section covers the installation and configuration of essential infrastructure components required for the Inji stack, including configmaps, databases, object storage, secrets management, configuration server, and artifactory.
 
-### Inji Stack Configmap: For inji K8's env
+#### Inji Stack Configmap: For inji K8's env
 
 * `inji-stack-config` configmap: For inji K8's env, `inji-stack-config` configmap in `default` namespace contains Domain related information. Follow below steps to add domain details for `inji-stack-config` configmap.
 * Update the domain names in `inji-stack-cm.yaml` correctly for your environment.
@@ -876,11 +876,11 @@ data:
 EOF
 ```
 
-#### conf-secret installation
+**conf-secret installation**
 
 * [conf-secret installation](https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3/mosip/conf-secrets)
 
-#### Config Server Installation
+**Config Server Installation**
 
 **Create values.yaml**
 
@@ -1126,7 +1126,7 @@ fi
     ./configserver.sh
 ```
 
-## Inji Stack Deployment
+### Inji Stack Deployment
 
 Once **Prerequisites**, **Base Infrastructure**, and the **Core Infrastructure Setup and Configuration** are complete, now you can proceed with the deployment of the Inji stack components.
 
@@ -1138,17 +1138,17 @@ For detailed deployment steps, architecture, and module-level instructions, refe
   * [Mimoto(backend for Wallet)](../../readme/setup/deploy.md#deploying-mimoto-backend-for-inji-wallet)
 * [Inji Verify](../../readme/setup/deploy.md#deploying-inji-verify)
 
-### Deploying Inji Certify
+#### Deploying Inji Certify
 
 While you have a deployment environment ready, you can now proceed with the installation of Inji Certify by following the steps explained here.
 
 **Note:** Before deploying Inji Certify, it is recommended to always use the latest [released version](https://docs.inji.io/inji-certify/releases). Each release includes enhancements, technical upgrades, and new features to ensure the best experience.
 
-#### Understanding the Deployment Approach for Inji Certify
+**Understanding the Deployment Approach for Inji Certify**
 
 Inji Certify is deployed as **containerized microservices** in your Kubernetes cluster.
 
-#### Deployment Architecture for Inji Certify
+**Deployment Architecture for Inji Certify**
 
 <figure><img src="../../.gitbook/assets/certify-deployment-diagram-final.drawio.png" alt=""><figcaption></figcaption></figure>
 
@@ -1165,7 +1165,7 @@ Inji Certify is deployed as **containerized microservices** in your Kubernetes c
 3. **Ingress Rules**: For external access via NGINX
 4. **ConfigMaps & Secrets**: For configuration and credentials
 
-#### Deployment Process
+**Deployment Process**
 
 **Step 1: Pre-Deployment Checklist**
 
@@ -1219,7 +1219,7 @@ cd ../inji-certify
 ./install.sh
 ```
 
-#### What Happens During Installation
+**What Happens During Installation**
 
 1. **Helm Charts Execution**: Downloads and deploys Docker containers
 2. **Service Registration**: Services register with config-server for configuration
@@ -1236,7 +1236,7 @@ kubectl get pods -n inji-certify
 ```
 
 {% hint style="success" %}
-Note : \
+Note :\
 Ensure nelow mentioned services are listed in the output result of above command.\
 You can even check Rancher incase deployed.\
 1\. inji-certify\
@@ -1250,7 +1250,7 @@ kubectl get services -n inji-certify
 ```
 
 {% hint style="success" %}
-Note : \
+Note :\
 Ensure below mentioned services are listed in the output result of above command.\
 You can even check Rancher incase deployed.\
 1\. inji-certify\
@@ -1265,7 +1265,7 @@ curl -k https://injicertify.sandbox.xyz.net/health
 
 <figure><img src="../../.gitbook/assets/curl-response.png" alt=""><figcaption></figcaption></figure>
 
-#### Success Criteria for Inji Certify Deployment
+**Success Criteria for Inji Certify Deployment**
 
 1. **Deployment Scripts Executed Successfully**
    * All deployment scripts (`install.sh`) for Redis and Inji Certify microservices complete without errors.
@@ -1286,13 +1286,13 @@ curl -k https://injicertify.sandbox.xyz.net/health
    * Health endpoint responds successfully `curl -k https://injicertify.sandbox.xyz.net/health`
    * HTTP 200 response received.
 
-#### Important Notes
+**Important Notes**
 
 * **Remote Deployment**: You deploy from your local machine to the remote K8s cluster
 * **Container Registry**: Docker images are pulled from public/private registries during deployment
 * **Configuration**: All configuration comes from your config-server and configmaps
 
-#### Troubleshooting
+**Troubleshooting**
 
 If deployment fails, check:
 
@@ -1306,13 +1306,13 @@ You can also refer to the [ReadMe](https://github.com/mosip/inji-certify/blob/ma
 **Need help or have questions?**\
 In case you encounter any issues or have queries while using or deploying the application, please post them in the [MOSIP Community](https://community.mosip.io/). The community and maintainers are available to assist you.
 
-### Deploying Mimoto backend for Inji Wallet
+#### Deploying Mimoto backend for Inji Wallet
 
 This section provides a structured, step-by-step guide to deploy Mimoto, which serves as the backend for Inji Mobile Wallet and Inji Web Wallet. Follow these instructions to ensure a successful and reproducible deployment.
 
 **Note**: Before deploying mimoto, it is recommended to always use the latest released version. Each release includes enhancements, technical upgrades, and new features to ensure the best experience.
 
-#### Understanding the Deployment Approach of Mimoto
+**Understanding the Deployment Approach of Mimoto**
 
 Mimoto is deployed as **containerized microservices** in your Kubernetes cluster.
 
@@ -1329,7 +1329,7 @@ Mimoto is deployed as **containerized microservices** in your Kubernetes cluster
 3. **Ingress Rules**: For external access via NGINX/Istio
 4. **ConfigMaps & Secrets**: For configuration and credentials
 
-#### Deployment Process
+**Deployment Process**
 
 **Step 1: Pre-Deployment Checklist**
 
@@ -1422,7 +1422,7 @@ To onboard a new issuer for VCI:
 
 For more details, refer to the official documentation or the relevant section in the repository.
 
-#### Verification Steps
+**Verification Steps**
 
 *   **Check Pod Status:**
 
@@ -1440,13 +1440,13 @@ For more details, refer to the official documentation or the relevant section in
     curl -k https://<your-mimoto-domain>/health
     ```
 
-#### Important Notes
+**Important Notes**
 
 * **Remote Deployment**: You deploy from your local machine to the remote K8s cluster.
 * **Container Registry**: Docker images are pulled from public/private registries during deployment.
 * **Configuration**: All configuration comes from your config-server and configmaps.
 
-#### Success Criteria for Mimoto Deployment
+**Success Criteria for Mimoto Deployment**
 
 **Note:** Screenshots for each success criteria step will be added shortly to provide a visual reference.
 
@@ -1479,7 +1479,7 @@ For more details, refer to the official documentation or the relevant section in
    * Health endpoint responds successfully `curl -k https://<your-mimoto-domain>/health`
    * HTTP 200 response received.
 
-#### Troubleshooting
+**Troubleshooting**
 
 If deployment fails, check:
 
@@ -1498,17 +1498,17 @@ You can also refer to the [ReadMe](https://github.com/mosip/mimoto/blob/develop/
 **Need help or have questions?**\
 In case you encounter any issues or have queries while using or deploying the application, please post them in the [MOSIP Community](https://community.mosip.io/). The community and maintainers are available to assist you.
 
-### Deploying Inji Web Wallet
+#### Deploying Inji Web Wallet
 
 This section explains how to deploy the Inji Web Wallet, which comes with a **reference** web UI and DataShare. This web UI serves as a sample implementation to help integrators and countries build their own customized user interface.
 
 **Note**: Before deploying Inji Web Wallet, it is recommended to always use the latest [released version](https://docs.inji.io/inji-wallet/inji-web/inji-web). Each release includes enhancements, technical upgrades, and new features to ensure the best experience.
 
-#### Understanding the Deployment Approach of Inji Web Wallet
+**Understanding the Deployment Approach of Inji Web Wallet**
 
 Inji Web UI and dataShare are deployed as **containerized microservices** in your Kubernetes cluster.
 
-#### Deployment Architecture for Inji Web Wallet
+**Deployment Architecture for Inji Web Wallet**
 
 <figure><img src="../../.gitbook/assets/inji-wallet-web-deployment-final.drawio.png" alt=""><figcaption></figcaption></figure>
 
@@ -1525,7 +1525,7 @@ Inji Web UI and dataShare are deployed as **containerized microservices** in you
 3. **Ingress Rules**: For external access via NGINX/Istio
 4. **ConfigMaps & Secrets**: For configuration and credentials
 
-#### Deployment Process of Inji Web Wallet
+**Deployment Process of Inji Web Wallet**
 
 **Step 1: Pre-Deployment Checklist**
 
@@ -1606,13 +1606,13 @@ cd injiweb
 * Confirm that the `active_profile_env` in the config-server-share config map is set as described above.
 * Ensure DNS records for `injiweb.sandbox.xyz.net` and any DataShare endpoints are correctly mapped to your ingress controller.
 
-#### Important Notes
+**Important Notes**
 
 * **Remote Deployment**: You deploy from your local machine to the remote K8s cluster
 * **Container Registry**: Docker images are pulled from public/private registries during deployment
 * **Configuration**: All configuration comes from your config-server and configmaps
 
-#### Success Criteria for Inji Web Wallet Deployment
+**Success Criteria for Inji Web Wallet Deployment**
 
 **Note:** Screenshots for each success criteria step will be added shortly to provide a visual reference.
 
@@ -1647,7 +1647,7 @@ cd injiweb
 
 * Reviewing logs (`kubectl logs <pod-name> -n injiweb`) shows no failures during startup or runtime.
 
-#### Troubleshooting
+**Troubleshooting**
 
 If deployment fails, check:
 
@@ -1666,17 +1666,17 @@ You can also refer to the [ReadMe](https://github.com/mosip/inji-web/blob/develo
 **Need help or have questions?**\
 In case you encounter any issues or have queries while using or deploying the application, please post them in the [MOSIP Community](https://community.mosip.io/). The community and maintainers are available to assist you.
 
-### Deploying Inji Verify
+#### Deploying Inji Verify
 
 This section provides step-by-step instructions to install Inji Verify. Please follow these guidelines to make sure a successful setup in your environment.
 
 **Note:** Before deploying Inji Verify, it is recommended to always use the latest [released version](https://docs.inji.io/inji-verify/releases). Each release includes enhancements, technical upgrades, and new features to ensure the best experience.
 
-#### Understanding the Deployment Approach of Inji Verify
+**Understanding the Deployment Approach of Inji Verify**
 
 Inji Verify is deployed as **containerized microservices** in your Kubernetes cluster.
 
-#### Deployment Architecture for Inji Verify
+**Deployment Architecture for Inji Verify**
 
 <figure><img src="../../.gitbook/assets/verify-deployment-diagram-final.drawio.png" alt=""><figcaption></figcaption></figure>
 
@@ -1693,7 +1693,7 @@ Inji Verify is deployed as **containerized microservices** in your Kubernetes cl
 3. **Ingress Rules**: For external access via NGINX
 4. **ConfigMaps & Secrets**: For configuration and credentials
 
-#### Deployment Process of Inji Verify
+**Deployment Process of Inji Verify**
 
 **Step 1: Pre-Deployment Checklist**
 
@@ -1737,7 +1737,7 @@ cd ../deploy
 ./install-all.sh
 ```
 
-#### What Happens During Installation
+**What Happens During Installation**
 
 1. **Helm Charts Execution**: Downloads and deploys Docker containers
 2. **Service Registration**: Services register with config-server for configuration
@@ -1745,7 +1745,7 @@ cd ../deploy
 4. **Ingress Configuration**: Configures routes through Istio gateway
 5. **Health Checks**: Verifies all pods are running and healthy
 
-#### Verification Steps
+**Verification Steps**
 
 **Check Pod Status**
 
@@ -1765,7 +1765,7 @@ kubectl get services -n inji-verify
 curl -k https://injiverify.sandbox.xyz.net/health
 ```
 
-### Managing Inji Verify Services
+#### Managing Inji Verify Services
 
 *   **Delete all services:**
 
@@ -1778,13 +1778,13 @@ curl -k https://injiverify.sandbox.xyz.net/health
     ./restart-all.sh
     ```
 
-#### Important Notes
+**Important Notes**
 
 * **Remote Deployment**: You deploy from your local machine to the remote K8s cluster
 * **Container Registry**: Docker images are pulled from public/private registries during deployment
 * **Configuration**: All configuration comes from your config-server and configmaps
 
-#### Success Criteria for Inji Verify Deployment
+**Success Criteria for Inji Verify Deployment**
 
 **Note:** Screenshots for each success criteria step will be added shortly to provide a visual reference.
 
@@ -1810,7 +1810,7 @@ curl -k https://injiverify.sandbox.xyz.net/health
    * Ability to restart services using `./restart-all.sh`.
    * Ability to delete services using `./delete-all.sh`.
 
-### Troubleshooting
+#### Troubleshooting
 
 If deployment fails, check:
 
@@ -1826,7 +1826,7 @@ If deployment fails, check:
 
 You can also refer to the [ReadMe](https://github.com/mosip/inji-verify/blob/develop/deploy/README.md) file for deployment steps given in individual module repositories.
 
-## Contribution and Community
+### Contribution and Community
 
 We welcome contributions from everyone!
 

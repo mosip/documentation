@@ -50,8 +50,6 @@ The following table outlines the tested and certified compatibility of Inji Web 
 | Inji Verify  | [**0.10.0**](https://github.com/mosip/inji-verify/tree/v0.10.0) |
 | Inji Certify | [**0.9.1**](https://github.com/mosip/inji-certify/tree/v0.9.1)  |
 
-
-
 ### **Bugs/Security Fixes**
 
 #### **Known Open Bugs**
@@ -72,8 +70,7 @@ Below is the list of **known** issues. To read in detail click [**here**](https:
 
 ### Documentation
 
-* [Feature documentation](../../overview/features.md)
+* [Feature documentation](../../overview/features/)
 * [User guide](../../functional-overview/end-user-guide.md)
 * [QA Report](test-report.md)
 * [API Documentation](https://docs.mosip.io/inji/inji-web/technical-overview/backend-services/mimoto-bff)
-

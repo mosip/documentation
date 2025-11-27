@@ -38,7 +38,7 @@ Before we understand how Tuvali works, let's go through BLE communication.
 
 ## How does BLE Communication work?
 
-![BLE Communication](../../../../../../.gitbook/assets/ble-high-level-comm-generic.png)
+![BLE Communication](<../../../../../../.gitbook/assets/ble-high-level-comm-generic (1).png>)
 
 In BLE communication, one device is designated as Peripheral and another one designated as Central.
 
@@ -71,7 +71,7 @@ More details about other BLE terminology used here can be found in standard BLE 
 
 ## How Tuvali works with BLE to transfer VC from Central to Peripheral
 
-![OpenID for VP over BLE Implementation](../../../../../../.gitbook/assets/openid-for-vp-over-ble-spec-impl.png)
+![OpenID for VP over BLE Implementation](<../../../../../../.gitbook/assets/openid-for-vp-over-ble-spec-impl (1).png>)
 
 > Note: Tuvali is supposed to implement OpenID for VP over BLE specification. As part of it, both VP request and response transfer should be implemented. However the current version of Tuvali only transfers VC from Central to Peripheral.
 
@@ -176,11 +176,11 @@ Current Supported Stages: CON(Connection) | KEX(Key Exchange) | ENC(Encryption) 
 
 Below are the exception message and the disconnect message which appears on the screen during the error.
 
-![Exception Message](../../../../../../.gitbook/assets/failedToTransferError.jpeg)
+![Exception Message](<../../../../../../.gitbook/assets/failedToTransferError (1).jpeg>)
 
 > This message is displayed on the device throwing the exception.
 
-> <img src="../../../../../../.gitbook/assets/disconnect-message.png" alt="" data-size="original">
+> <img src="../../../../../../.gitbook/assets/disconnect-message (1).png" alt="" data-size="original">
 >
 > This message is displayed whenever a device gets disconnected.
 

@@ -8,7 +8,7 @@
 
 ### **Overview**
 
-This release of **Inji Web v0.14.0** delivers support for [**IETF SD-JWT** ](../../overview/features.md#multiple-credential-format-support)Verifiable Credential (VC) downloads, improvements in login UI, and enhancements to key handling for credential flows. It also includes multiple usability fixes, technical debt cleanups, and improvements in error handling and code coverage.
+This release of **Inji Web v0.14.0** delivers support for [**IETF SD-JWT** ](../../overview/features/#multiple-credential-format-support)Verifiable Credential (VC) downloads, improvements in login UI, and enhancements to key handling for credential flows. It also includes multiple usability fixes, technical debt cleanups, and improvements in error handling and code coverage.
 
 Key highlights include [**IETF** **SD-JWT**](https://docs.inji.io/inji-wallet/inji-web/overview#capabilities-snapshot) **VC parsing & storage**, **UI/UX refinements**, and **security fixes** that align Inji Web with the broader Verifiable Credential ecosystem.
 
@@ -19,7 +19,7 @@ Key highlights include [**IETF** **SD-JWT**](https://docs.inji.io/inji-wallet/in
 * **IETF SD-JWT VC Support**
   * Added parsing of SD-JWT VC responses and storage in DB once issued via Mimoto.
   * Updated SD-JWT VC PDF template design for improved readability.
-  * Refer to the [**feature description**](../../overview/features.md#verifying-credential-authenticity) to know more about this feature
+  * Refer to the [**feature description**](../../overview/features/#verifying-credential-authenticity) to know more about this feature
 
 #### **Improvements to Existing Features**
 
@@ -35,7 +35,7 @@ Key highlights include [**IETF** **SD-JWT**](https://docs.inji.io/inji-wallet/in
   * Compared & aligned Mimoto Docker and Local properties for consistency.
   * Improved code coverage and addressed Sonar security hotspots.
 
-### **Features Released**&#x20;
+### **Features Released**
 
 | Type                  | Feature / Enhancement                                           | Jira Link                                                       |
 | --------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
@@ -89,12 +89,12 @@ Below is the list of bug fixes as part of the [**0.14.0**](https://app.gitbook.c
 
 ### Release Documentation
 
-* [Feature Documentation](../../overview/features.md#verifying-credential-authenticity)
+* [Feature Documentation](../../overview/features/#verifying-credential-authenticity)
 * [QA Report](test-report.md)
 
 ### Additional Resources
 
-* [Feature Documentation](../../overview/features.md) - Contains detailed explanations of all available features of Inji Web Waller and its usage.
+* [Feature Documentation](../../overview/features/) - Contains detailed explanations of all available features of Inji Web Waller and its usage.
 * [Backend Services ](../../technical-overview/backend-services/)- Provides detailed instructions to set up the backend for the Inji Web Wallet.
 * [End User Guide](../../functional-overview/end-user-guide.md) - Offers end-to-end guidance for end users on setup and daily usage.
 * [API Documentation](https://mosip.stoplight.io/docs/mimoto/k6907m3dzc1gi-mimoto) - Includes comprehensive details of all APIs, endpoints, request/response formats, and examples.

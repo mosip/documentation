@@ -21,7 +21,7 @@ It’s ideal for communities with limited smartphone access and ensures full int
 * **Web Accessibility for All**\
   Full credential access via desktop or shared devices.
 * **Standard-Compliant Architecture**\
-  Based on OpenID4VCI, W3C VC Data Model, IETF SD-JWT, and OpenID4VP (upcoming).
+  Based on OpenID4VCI, W3C VC Data Model, IETF SD-JWT, and OpenID4VP support for presenting JSON-LD Verifiable Credentials to any compliant verifier.
 * **User-Controlled Credential Sharing**\
   Complete control over how, when, and with whom to share.
 * **Modular and Configurable Login System**\
@@ -41,6 +41,9 @@ Inji Wallet is designed for interoperability and flexibility by supporting a wid
 * **IETF SD-JWT**
   * **IETF** **SD-JWT Verifiable Credentials**: Enables holders to download and share credentials in IETF **SD-JWT format**. This allows users to share only the necessary attributes while keeping other data private, ensuring **privacy-preserving credential sharing**.
   * Allows users to share only the required claims with verifiers via the OpenIDVP flow, where these selectively disclosable claims can be shared as per the user's need. _**(Coming Soon)**_
+* **OpenID4VP Credential Presentation for JSON-LD VC Format**
+  * Enables users to present W3C JSON-LD Verifiable Credentials directly to verifiers using OpenID4VP flows.
+  * Fully interoperable with Inji Verify and any OpenID4VP-compliant verifier.
 * **Login with Any IdP**\
   Access your wallet using Google or any OpenID-compliant Identity Provider.
 * **Download from Trusted Issuers**\
@@ -53,8 +56,10 @@ Inji Wallet is designed for interoperability and flexibility by supporting a wid
 *   **Local PDF Download Support**
 
     Optionally download credentials as **PDFs** with embedded QR codes for physical copies. Users can present these PDFs to verifiers to access services without requiring a web session.
-* **Easy Credential Sharing**\
-  Share credentials via QR code scan, PDF upload, or printed presentation.
+* **Easy Credential Sharing and Presentation**\
+  Share credentials via QR code scan, PDF upload, or printed presentation.\
+  \
+  Present Credentials via OpenID4VP: Users can now share JSON-LD VCs using a live, secure OpenID4VP presentation flow.
 * **Interoperability with Verifiers**\
   Fully compatible with Inji Verify and other OpenID4VP-compliant verifier portals.
 * **Flexible Identity Inputs**\
@@ -70,11 +75,16 @@ Inji Wallet is designed for interoperability and flexibility by supporting a wid
    Provide UIN, Date of Birth, or Registration Number.
 4. **Download Credential**\
    Receive a PDF with an embedded QR code.
-5. **Share Credential**
+5. **Share Credential via Scan & Upload**
    * Upload the PDF containing the QR code to the verifier portal.
    * Scan the QR code from the PDF via the verifier portal.
    * Present the credentials in printed form
-6. **Use as Guest (No Login)** Skip login using Guest Mode — no IdP required.
+6. **Share via OpenID4VP Presentation Flow**
+   * Select the credential you wish to present.
+   * Inji Web launches an OpenID4VP flow with the verifier.
+   * User reviews and approves credential sharing.
+   * Verifier receives a cryptographically verifiable VP.
+7. **Use as Guest (No Login)** Skip login using Guest Mode — no IdP required.
    * Direct credential download only (no storage in web wallet).
 
 ### Sneak Peek: Upcoming Features

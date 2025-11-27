@@ -9,6 +9,7 @@ Inji Wallet is designed for interoperability and flexibility by supporting a wid
 * **W3C Verifiable Credentials (JSON-LD VCs) Data Model 1.1**
   * Standards-based credential format is widely adopted across ecosystems.
   * Suitable for general-purpose credential issuance and verification.
+  * Supports OpenID4VP-based live presentation of JSON-LD VCs to any compliant verifier
 * **ISO 18013-5 (mDL)**
   * Mobile Driving License and Mobile Document specification.
   * Supports use cases like identity verification in transport, law enforcement, and service access.
@@ -43,23 +44,9 @@ This multi-format support allows Inji Wallet to work seamlessly across different
 ## Verifying Credential Authenticity
 
 * Inji Web Wallet uses robust cryptography to verify that the VC is:
-  * Digitally signed by a trusted issuer.
-  * Cryptographically valid based on proof type.
-  *   In addition to traditional VC formats like JSON-LD, I**nji Web** now supports Multiple Credential Format Support. Inji Web Wallet is designed for interoperability and flexibility by supporting a wide range of credential formats:
-
-      * **W3C Verifiable Credentials (JSON-LD VCs) Data Model 1.1**
-        * Standards-based credential format is widely adopted across ecosystems.
-        * Suitable for general-purpose credential issuance and verification.
-      * **IETF SD-JWT**
-        * **IETF** **SD-JWT Verifiable Credentials**: Enables holders to download and share credentials in IETF **SD-JWT format**. This allows users to share only the necessary attributes while keeping other data private, ensuring **privacy-preserving credential sharing**.
-        * Allows users to share only the required claims with verifiers via the OpenIDVP flow, where these selectively disclosable claims can be shared as per the user's need. _**(Coming Soon in the upcoming release)**_
-      * **ISO 18013-5 (mDL)&#x20;**_**(Coming Soon in the upcoming release)**_
-        * Mobile Driving License and Mobile Document specification.
-        * Supports use cases like identity verification in transport, law enforcement, and service access.
-
-      This multi-format support allows Inji Wallet to work seamlessly across different ecosystems, ensuring **compatibility, security, and user privacy**. Multiple Credential Format Support
-
-      Inji Web Wallet is designed for interoperability and flexibility by supporting a wide range of credential formats:
+  * Digitally signed by a trusted issuer
+  * Cryptographically valid based on its proof type
+  * Tamper-evident and verifiable using Inji Verify or any compliant verifier
 
 ## Storage Options
 
@@ -70,21 +57,18 @@ This multi-format support allows Inji Wallet to work seamlessly across different
 
 ## Credential Sharing Options
 
-| Method                  | Description                                  | Connectivity |
-| ----------------------- | -------------------------------------------- | ------------ |
-| **Scan PDF**            | Scan PDF on verifier portal (Inji Verify)    | Online       |
-| **Print or Screenshot** | For physical presentation or screen scanning | Offline      |
-| **Upload PDF**          | Used in verifier workflows like Inji Verify  | Online       |
+| Method                                                       | Description                                                                                                                                                                                                                                                               | Connectivity |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| **Scan PDF**                                                 | Scan PDF on verifier portal (Inji Verify)                                                                                                                                                                                                                                 | Online       |
+| **Print or Screenshot**                                      | For physical presentation or screen scanning                                                                                                                                                                                                                              | Offline      |
+| **Upload PDF**                                               | Used in verifier workflows like Inji Verify                                                                                                                                                                                                                               | Online       |
+| <p></p><p><strong>OpenID4VP Presentation</strong></p><p></p> | <ul><li>Users can present <strong>JSON-LD VCs</strong> through an <strong>OpenID4VP-compliant</strong> flow.</li><li>Enables secure, real-time credential sharing with user consent.</li><li>Fully interoperable with Inji Verify and other compliant verifiers</li></ul> | Online       |
 
 ## User Experience Highlights
 
-* No app install—fully browser-based
+* Browser-based; no app installation needed
 * Clear distinction between **wallet-stored** and **locally stored** credentials
 * Guided flows and contextual help for all users
-
-## Signature Algorithm Support
-
-**Signature Algorithm Support in Inji Web**
 
 | Format                 | Signature Algorithm      | Web Wallet (Login) | Guest Mode (Without Login) | Notes                                               |
 | ---------------------- | ------------------------ | ------------------ | -------------------------- | --------------------------------------------------- |
@@ -112,11 +96,11 @@ This multi-format support allows Inji Wallet to work seamlessly across different
 | mDoc / mDL             | ES256                    | Planned            | Planned                    | Emerging support for high-security mobile documents |
 | mDoc / mDL             | x509 (PKI v3)            | Planned            | Planned                    | x509 certificate chain                              |
 
-## Planned Features
+## Features in the Pipeline
 
 * Selective Disclosure using SD-JWT via OpenIDVP Flow
-* OpenIDVP Support for Credential Sharing
 * Presentation During Issuance
+* Revocation Status
 * Support of mDoc/mDL VC format
 
 ## Read More

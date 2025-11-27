@@ -127,7 +127,7 @@ Used in public campaigns or mass rollouts (e.g., vaccine certificates, land card
 
 7. The wallet recognizes the embedded **credential offer**, without needing to log in or enter any data, your credential starts downloading.\
    \
-   &#x20;![](../../../.gitbook/assets/iwm-eug-credential-offer-9.png)
+   ![](../../../.gitbook/assets/iwm-eug-credential-offer-9.png)
 8. You’ll see a **success message** and the VC will appear in your wallet.
 
 ![](../../../.gitbook/assets/iwm-eug-credential-offer-11.png) ![](../../../.gitbook/assets/iwm-eug-credential-offer-12.png) ![](../../../.gitbook/assets/iwm-eug-credential-offer-13.png)
@@ -232,7 +232,7 @@ Let us understand the process of sharing credentials using an example and see th
 
 <div><figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-resident-1.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-resident-2.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-resident-3.png" alt="" width="188"><figcaption></figcaption></figure></div>
 
-<div><figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-resident-4.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-resident-5.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-resident-6.png" alt="" width="188"><figcaption></figcaption></figure></div>
+<div><figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-resident-4.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-resident-5.png" alt="" width="188"><figcaption></figcaption></figure></div>
 
 <div><figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-resident-7.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-resident-8.png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/iw-android-share-a-vc-with-selfie-resident-9.png" alt="" width="188"><figcaption></figcaption></figure></div>
 

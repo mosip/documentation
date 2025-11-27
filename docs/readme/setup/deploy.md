@@ -8,7 +8,7 @@
 
 This is the first question you could ask and the answer is No! If you have the Infrastructure ready and you just want to deploy the Inji stack you can directly jump to the [Inji Stack Deployment](deploy.md#inji-stack-deployment) section.
 
-### How is this guide structured and organized? 
+### How is this guide structured and organized?
 
 1. [**Introduction**](deploy.md#introduction): Provides an overview of the Inji stack, deployment scenarios, required skill sets, system architecture, and key considerations for on-premise deployments.
 2. [**Prerequisites**](deploy.md#prerequisites-for-overall-deployment): Outlines infrastructure details, hardware/software/network requirements, and initial setup steps.
@@ -84,7 +84,7 @@ The section helps you to have a quick understanding of what you should expect wh
     * Keycloak in this cluster is used to manage user access and rights for the observation plane.
     * It is recommended to configure log monitoring and network monitoring in this cluster during production deployment.
     * In case you have an internal container registry, then it should run here.
-  * **Inji cluster** - This cluster runs all the Inji components and core infrastructure components  like kafka, Postgres, minio, etc.
+  * **Inji cluster** - This cluster runs all the Inji components and core infrastructure components like kafka, Postgres, minio, etc.
     * Inji Services are deployed in this cluster.
 
 ## Prerequisites for Overall Deployment
@@ -132,8 +132,6 @@ helm repo add mosip https://mosip.github.io/mosip-helm
     export K8_ROOT=$INJI_ROOT/k8s-infra
     export INFRA_ROOT=$INJI_ROOT/mosip-infra
     ```
-
-
 
     > Note: Above mentioned environment variables will be used throughout the installation to move between one directory to other to run install scripts.
 * Wireguard Client - Refer to the [Setup Wireguard Client on your PC](deploy.md#setup-wireguard-client-on-your-pc) section for the instructions.
@@ -186,7 +184,7 @@ Configure the firewall on the Bastion server virtual machine to allow network tr
 * Add below mentioned details:
   * ansible\_host : public IP of Wireguard Bastion server. eg. 100.10.20.56
   * ansible\_user : user to be used for installation. In this ref-impl we use Ubuntu user.
-  * ansible\_ssh\_private\_key\_file : path to pem key for ssh to wireguard server. eg. `~/.ssh/wireguard-ssh.pem`![hosts.ini](../../../_images/wireguard-hosts-ini.png)
+  * ansible\_ssh\_private\_key\_file : path to pem key for ssh to wireguard server. eg. `~/.ssh/wireguard-ssh.pem`
 {% endhint %}
 
 * Execute ports.yml to enable ports on VM level using ufw:`ansible-playbook -i hosts.ini ports.yaml`
@@ -383,7 +381,7 @@ See the [Tools and Utilities](deploy.md#tools-and-utilities) section for common 
     > * Ensure you are inside `on-prem` directory as mentioned above.
     > * ansible\_host : internal IP of nodes. eg. 100.10.20.56, 100.10.20.57 ...
     > * ansible\_user : user to be used for installation. In this ref-implementation we use Ubuntu user.
-    > * ansible\_ssh\_private\_key\_file : path to pem key for ssh to wireguard server. eg. `~/.ssh/nodes-ssh.pem`![hosts.ini](../../../_images/nodes-hosts-ini.png)
+    > * ansible\_ssh\_private\_key\_file : path to pem key for ssh to wireguard server. eg. `~/.ssh/nodes-ssh.pem`
 
     * `ansible-playbook -i hosts.ini env-check-setup.yaml`
     * This ansible checks if localhost mapping ia already present in `/etc/hosts` file in all cluster nodes, if not it adds the same.
@@ -531,7 +529,7 @@ cp hosts.ini.sample hosts.ini
     > * Add below mentioned details:
     > * ansible\_host : internal IP of NFS server. eg. 10.12.23.21. In our reference implementation using nginx server
     > * ansible\_user : user to be used for installation, in this ref-impl we use Ubuntu user.
-    > * ansible\_ssh\_private\_key\_file : path to pem key for ssh to wireguard server. eg. `~/.ssh/wireguard-ssh.pem` ![hosts.ini](../../../_images/nfs-hosts-ini.png).
+    > * ansible\_ssh\_private\_key\_file : path to pem key for ssh to wireguard server. eg. `~/.ssh/wireguard-ssh.pem` .
 * Make sure Kubeconfig file is set correctly to point to required mosip cluster.
 
 ```sh
@@ -1230,7 +1228,7 @@ kubectl get pods -n inji-certify
 ```
 
 {% hint style="success" %}
-Note : \
+Note :\
 Ensure nelow mentioned services are listed in the output result of above command.\
 You can even check Rancher incase deployed.\
 1\. inji-certify\
@@ -1244,7 +1242,7 @@ kubectl get services -n inji-certify
 ```
 
 {% hint style="success" %}
-Note : \
+Note :\
 Ensure below mentioned services are listed in the output result of above command.\
 You can even check Rancher incase deployed.\
 1\. inji-certify\
