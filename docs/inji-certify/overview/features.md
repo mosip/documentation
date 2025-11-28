@@ -43,7 +43,7 @@ Inji Certify provides issuers with the capability to generate verifiable credent
 
 * **JSON-LD Credentials** — Standards-based credentials using Linked Data Proofs, widely adopted in decentralized identity ecosystems for interoperability and verifiability
 * **Signed JWT (JWS)** — Compact, JSON-based credentials that enable efficient transmission and verification across web and enterprise systems
-* **SD-JWT (Selective Disclosure JWT)** — Full implementation of Privacy-preserving credentials (SD-JWT - Selective Disclosure JWT) that allow holders to selectively disclose attributes while keeping the rest private
+* **SD-JWT (Selective Disclosure JWT)** — Privacy-preserving credentials that allow holders to selectively disclose attributes while keeping the rest private
 
 **Note:** In the 0.12.0 release we have included support for SD-JWT as a draft release.
 
