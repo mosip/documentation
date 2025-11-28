@@ -97,7 +97,7 @@ For detailed instructions on configuring the Data Provider Plugin, please refer 
 
 Issuers can easily integrate additional custom plugins by following the detailed guidelines provided in this [link](https://github.com/mosip/inji-certify/blob/master/docs/Custom-Plugin-K8s.md). This extensible plugin framework ensures that Inji Certify can adapt to unique organizational needs without heavy customization. To know more about this feature please refer to this link: [VC Issuance vs Data Provider Plugin](https://github.com/mosip/inji-certify/blob/master/docs/VCIssuance-vs-DataProvider.md).
 
-## 7. Revocation Mechanism JSON-LD Only)*
+## 7. Revocation Mechanism (JSON-LD Only)
 
 **Important:** This feature currently supports **JSON-LD credentials only**. It is intended for experimentation and early feedback, **not for production use**.
 
