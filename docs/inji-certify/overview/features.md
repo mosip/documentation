@@ -33,7 +33,7 @@ Inji Certify enables issuers to expand their credential portfolio even after the
 * **API-driven setup** for fast and seamless integration into existing workflows
 * **No infrastructure changes required**, minimizing operational overhead
 
-Access to comprehensive **documentation and guidelines** — _(refer to this [link](https://github.com/mosip/inji-certify/blob/master/docs/Credential-Issuer-Configuration.md#credential-configuration) for details on configuring VC types)_.
+Access to comprehensive **documentation and guidelines** — _(refer to this_ [_link_](https://github.com/mosip/inji-certify/blob/master/docs/Credential-Issuer-Configuration.md#credential-configuration) _for details on configuring VC types)_.
 
 ## 4. Support for Multiple Credential Formats
 
@@ -98,6 +98,7 @@ For detailed instructions on configuring the Data Provider Plugin, please refer 
 Issuers can easily integrate additional custom plugins by following the detailed guidelines provided in this [link](https://github.com/mosip/inji-certify/blob/master/docs/Custom-Plugin-K8s.md). This extensible plugin framework ensures that Inji Certify can adapt to unique organizational needs without heavy customization. To know more about this feature please refer to this link: [VC Issuance vs Data Provider Plugin](https://github.com/mosip/inji-certify/blob/master/docs/VCIssuance-vs-DataProvider.md).
 
 ## 7. Revocation Mechanism (JSON-LD Only)
+
 Inji Certify introduces an initial implementation of revocation to enhance the trust and reliability of Verifiable Credentials (VCs).
 
 **Capabilities include:**
@@ -113,19 +114,15 @@ This release establishes the foundation for a standardized revocation mechanism 
 
 Inji Certify includes an optional ledger that records every Verifiable Credential (VC) issued by the system. When enabled, this ledger provides a searchable index of issued credentials, making it easier for issuers to track, audit, and manage credentials throughout their lifecycle.
 
-**Why it matters:** 
-The ledger simplifies operations such as revocation, where the system must quickly locate the credential being revoked. With indexed search support, issuers can retrieve credentials efficiently without maintaining an external lookup system.
+**Why it matters:** The ledger simplifies operations such as revocation, where the system must quickly locate the credential being revoked. With indexed search support, issuers can retrieve credentials efficiently without maintaining an external lookup system.
 
 **Key Capabilities:**
 
 * **Configurable Recording** — Issuers can choose whether or not to maintain an internal record of all issued VCs.
-
 * **Indexed Search** — The ledger supports searching issued credentials based on predefined indexes, enabling faster retrieval.
-
 * **Revocation Support** — When revocation is enabled, the ledger must be active, unless the issuer provides an external system capable of performing credential lookup.
 
 **Considerations:** If the issuer intends to use Inji Certify's built-in revocation workflow, the ledger feature must be turned on. Otherwise, the issuer is responsible for implementing their own mechanism to locate credentials during revocation.
-
 
 ## 9. SVG Rendering Support
 
@@ -165,7 +162,6 @@ Inji Certify provides support for integrating with external authentication servi
 * **Standards-Based** — OAuth 2.0 compliance ensures interoperability with widely adopted identity solutions
 * **Customizable per Issuer** — Different issuers can configure different authentication services within the same Certify deployment
 
-
 ## 11. VC Signing with External CA-Signed Certificates
 
 Inji Certify supports the use of externally issued, CA-signed certificates for credential signing, enabling issuers to integrate their own public key infrastructure (PKI) into the credential issuance workflow.
@@ -173,14 +169,11 @@ Inji Certify supports the use of externally issued, CA-signed certificates for c
 **Key Benefits**
 
 * Trust Alignment — Credentials are signed using the issuer’s own CA-backed certificates, reinforcing alignment with local or institutional PKI policies.
-
 * Greater Adoption Flexibility — Countries and organizations can adopt Certify without restructuring their existing certificate management models.
-
 * Seamless Compliance — Using a recognized CA certificate simplifies audits and compliance checks by matching established trust and governance frameworks.
-
 * End-To-End Security — The signing process remains fully managed through the Key Manager, ensuring secure key handling while maintaining issuer-specific trust anchors.
 
-To explore the full workflow and configuration, refer to the [detailed feature document](link).
+To explore the full workflow and configuration, refer to the [detailed feature document.](https://github.com/mosip/inji-certify/blob/release-0.13.x/docs/PKI-Support-and-Integration-with-SD-JWT-VC.md)
 
 For deeper insights into certificate and key lifecycle handling, see the documentation on the [Role of the Key Manager](../technical-overview/key-manager.md) in Certify.
 
@@ -191,98 +184,3 @@ Inji Certify have capability to issue VC in multiple language based on the confi
 ## Read More
 
 Check [Inji Certify Repository](https://github.com/mosip/inji-certify/tree/master) to explore these above mentioned features.
-
-
-<!--
-
-
-# Configuring Inji Certify to Use an Externally Signed CA Certificate
-
-Inji Certify allows issuers to integrate their own CA-signed certificates into the credential signing pipeline. This workflow guides you through the complete setup—from generating a (CSR) to uploading the signed certificate such that all Verifiable Credentials (VCs) are signed using your institution’s PKI.
-
-## Overview
-
-When using an external CA, the system must be configured with:
-
-* A **Certificate Signing Request (CSR)** generated by Inji Certify
-* The **CA's Root/Intermediate Certificate**
-* The **Externally Signed Certificate**
-
-Once configured, the **Key Manager** will generate and manage keys tied to the **Uploaded Certificates** and use them to sign Verifiable Credentials.
-
-## Workflow Steps
-
-### 1. Generate a Certificate Signing Request (CSR)
-
-Generate a CSR that must be signed by your external Certificate Authority.
-
-**Endpoint:**
-
-```
-POST http://localhost:8090/v1/certify/system-info/generate-csr
-```
-
-**Purpose:**
-
-* Produces a Certificate Signing Request (CSR) data, typically in PEM format.
-* Must be submitted to your CA for signing
-* CA returns a signed certificate based on this CSR
-
-### 2. Upload the CA Certificate
-
-Upload the CA's trust chain (root and/or intermediate certificates).
-
-**Endpoint:**
-
-```
-POST http://localhost:8090/v1/certify/system-info/upload-ca-certificate
-```
-
-**Purpose:**
-
-* Registers the CA's trust anchors
-* Allows Certify to validate the certificate chain for VC signing
-
-### 3. Upload the Signed Certificate
-
-Upload the 'Externally Signed Certificate' received from the CA.
-
-**Endpoint:**
-
-```
-POST http://localhost:8090/v1/certify/system-info/uploadCertificate
-```
-
-**Purpose:**
-
-* Stores the 'CA Signed Certificate' as the active signing certificate
-* Enables the Key Manager to use it for signing VCs
-* Integrates the certificate into the ongoing key lifecycle
-
-#### System Behavior After Configuration
-
-Once all three steps are completed:
-
-* The Key Manager manages signing keys derived from the uploaded certificates.
-* All VCs issued by Inji Certify are signed using the externally provided CA-backed certificate.
-* Issuers maintain alignment with their existing national or institutional PKI.
-
-#### Limitations & Important Considerations
-
-#### Certificate Expiry Handling
-
-* Inji Certify does not automatically manage or renew externally signed certificates.
-* If the uploaded certificate expires, the Key Manager will fallback to using a self-signed certificate and regenerate the keys accordingly.
-
-**To avoid unintended fallback behavior and ensure uninterrupted trust alignment, issuers must:**
-
-* Upload a new externally signed certificate before the current certificate expires.
-* This ensures that credential signing continues using the intended CA-signed certificate without disruption.
-
-
-
-
-
-
-
--->
