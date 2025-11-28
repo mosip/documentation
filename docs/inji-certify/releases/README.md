@@ -7,7 +7,7 @@ icon: rocket-launch
 #### **Version: 0.13.0**
 
 * Name: Inji Certify 0.13.0
-* Date: Coming Soon
+* Date: 28th November, 2025
 * [Release Notes](version-0.13.0/)
 
 #### **Version: 0.12.2**
