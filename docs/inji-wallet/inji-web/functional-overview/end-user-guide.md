@@ -123,7 +123,7 @@ You can choose your preferred language using '**language Selection**' options av
 
 <figure><img src="../../../.gitbook/assets/inji-web-language-change.png" alt=""><figcaption><p>Language Preference</p></figcaption></figure>
 
-## Login to Download/Store Credentials in the Web Wallet&#x20;
+## Login to Download/Store Credentials in the Web Wallet
 
 **Note:** Screenshots will be added soon to enhance the user experience and better explain the steps shown below.
 
@@ -302,20 +302,19 @@ This section describes how to **present your JSON-LD Verifiable Credentials (VCs
 * The verifier supports **OpenID4VP**.
 
 {% hint style="warning" %}
-## Important Note (Reference Image Only)
+### Important Note (Reference Image Only)
 
 The images shown above are **reference designs** intended to help users and implementers understand **how the OpenID4VP flow will look end-to-end**—from a **verifier initiating a Verifiable Presentation (VP) request** to the **Inji Web Wallet opening and completing the presentation,** not to represent functionality currently available in Inji Verify.
 
 These screens illustrate the **expected user journey**, including:
 
-* How a verifier request specific credential types&#x20;
+* How a verifier request specific credential types
 * How a user select cards in Inji Web Wallet
 * How wallet selection and redirection may look in future releases
 
-### Current Capability Status
+#### Current Capability Status
 
-At the moment, **Inji Verify doesn't yet support OpenID4VP initiation or redirection**.
-This feature is **planned for an upcoming release** of Inji Verify.
+At the moment, **Inji Verify doesn't yet support OpenID4VP initiation or redirection**. This feature is **planned for an upcoming release** of Inji Verify.
 
 Therefore:
 
@@ -351,7 +350,7 @@ This enables you to fully experience the **verifier → wallet → verifier** fl
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2025-11-20 at 6.58.29 PM (1).png" alt=""><figcaption><p><strong>Verifier Trust Screen</strong></p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2025-11-20 at 7.00.27 PM (1).png" alt=""><figcaption><p><strong>Verifier Trust Info</strong> </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2025-11-20 at 7.00.27 PM (1).png" alt=""><figcaption><p><strong>Verifier Trust Info</strong></p></figcaption></figure>
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2025-11-20 at 6.59.29 PM (1).png" alt=""><figcaption><p><strong>Verifer Trust Cancel Pop-up</strong></p></figcaption></figure>
 
@@ -359,7 +358,7 @@ This enables you to fully experience the **verifier → wallet → verifier** fl
 
 * After the user confirms **'Yes, I trust this Verifier'**, Inji Web displays a screen showing the cards(Verifiable Credentials) requested by the verifier. The user can review each requested card (Verifiable Credentials), select the ones they wish to share, and then click **'I Consent & Share'** to proceed. If the user doesn't want to continue, they may click **'Cancel'** to stop the presentation flow with no information shared.
 
-<figure><img src="../../../.gitbook/assets/image (18).png" alt=""><figcaption><p><strong>Selection of Cards and Consent</strong> </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (18).png" alt=""><figcaption><p><strong>Selection of Cards and Consent</strong></p></figcaption></figure>
 
 **No Matching Credentials Found**
 
