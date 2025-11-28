@@ -35,6 +35,8 @@
       * [Test Report](roadmap-and-releases/versions/v1.0.0/test-report.md)
     * [v0.9.0](roadmap-and-releases/versions/v0.9.0/README.md)
       * [Test Report](roadmap-and-releases/versions/v0.9.0/test-report.md)
+    * [v1.7.0](roadmap-and-releases/versions/v1.7.0/README.md)
+      * [Test Report](roadmap-and-releases/versions/v1.7.0/test-report.md)
 * [Interoperability](interoperability/README.md)
   * [MOSIP](interoperability/mosip.md)
   * [Inji](interoperability/inji.md)
