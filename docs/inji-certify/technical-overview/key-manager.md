@@ -1,4 +1,4 @@
-# Key Manager
+# The Role of Key Manager in Inji Certify
 
 ## Overview
 
@@ -66,7 +66,7 @@ The Key Manager is designed to work with HSMs, ensuring that root and module key
   * Initial Setup (If PKI is already existing)
   * The system admin uses Inji Certify API which internally uses KeyManager service to generate a master signing key pair.
   * The admin can request a CSR from Inji Certify API for the generated signing key (via generateCSR), so they can share it to be externally singed by CA
-* Once the certificate is signed, they upload the CA certificate to Inji Certify, then upload their signed certificate, binding it to the key.
+  * Once the certificate is signed, they upload the CA certificate to Inji Certify, then upload their signed certificate, binding it to the key.
 
 ### Credential Issuance
 
@@ -81,6 +81,6 @@ When Certify issues a VC, it calls Key Manager to sign the credential payload.
 * Flexibility: Support both self-signed workflows (for simplicity) and externally-CA-signed certificates (for integration into existing PKI).
 * Operational Control: Administrators have full control over key lifecycles, rotation, and certificate management.
 * Interoperability: By using standard cryptography and certificate formats, Certify’s VCs can be validated by any compliant verifier.
-* Resilience: With key-rotation and fallback mechanisms, the system can recover from certificate expiry or compromise.
+* Resilience: With key-rotation and fallback mechanisms, the system can recover from certificate expiry.
 
-For deeper technical details about the Key Manager component itself, you can refer to the MOSIP documentation [here](link).
+For deeper technical details about the Key Manager component itself, you can refer to the MOSIP documentation [here](https://docs.mosip.io/1.2.0/id-lifecycle-management/supporting-components/keymanager).
