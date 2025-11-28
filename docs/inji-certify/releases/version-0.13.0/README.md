@@ -41,7 +41,7 @@ You can now Issue Credentials in [**SD-JWT - Selective Disclosure JWT**](https:/
     You can now Issue Credentials in [**SD-JWT - Selective Disclosure JWT**](https://docs.inji.io/inji-certify/overview/features#id-4.-support-for-multiple-credential-formats) format, offering issuers selective disclosure capabilities and enhanced privacy options.
 *   **Docker-Compose Upgrade**
 
-    We have now [Updated The docker-compose.yml definitions](link/) to reference latest versions of Inji Web and Mimoto, helping streamline environment setup, testing, and CI/CD workflows.
+    We have now Updated The docker-compose.yml definitions to reference latest versions of Inji Web and Mimoto, helping streamline environment setup, testing, and CI/CD workflows.
 
 ## User Stories Released <a href="#user-stories-released" id="user-stories-released"></a>
 
