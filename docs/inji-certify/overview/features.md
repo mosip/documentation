@@ -43,7 +43,7 @@ Inji Certify provides issuers with the capability to generate verifiable credent
 
 * **JSON-LD Credentials** — Standards-based credentials using Linked Data Proofs, widely adopted in decentralized identity ecosystems for interoperability and verifiability
 * **Signed JWT (JWS)** — Compact, JSON-based credentials that enable efficient transmission and verification across web and enterprise systems
-* **SD-JWT (Selective Disclosure JWT)** — Draft Release, Experimental — Privacy-preserving credentials that allow holders to selectively disclose attributes while keeping the rest private
+* **SD-JWT (Selective Disclosure JWT)** — Full implementation of Privacy-preserving credentials (SD-JWT - Selective Disclosure JWT) that allow holders to selectively disclose attributes while keeping the rest private
 
 **Note:** In the 0.12.0 release we have included support for SD-JWT as a draft release.
 
@@ -98,21 +98,36 @@ For detailed instructions on configuring the Data Provider Plugin, please refer 
 Issuers can easily integrate additional custom plugins by following the detailed guidelines provided in this [link](https://github.com/mosip/inji-certify/blob/master/docs/Custom-Plugin-K8s.md). This extensible plugin framework ensures that Inji Certify can adapt to unique organizational needs without heavy customization. To know more about this feature please refer to this link: [VC Issuance vs Data Provider Plugin](https://github.com/mosip/inji-certify/blob/master/docs/VCIssuance-vs-DataProvider.md).
 
 ## 7. Revocation Mechanism (JSON-LD Only)
-
-**Important:** This feature currently supports **JSON-LD credentials only**. It is intended for experimentation and early feedback, **not for production use**.
-
 Inji Certify introduces an initial implementation of revocation to enhance the trust and reliability of Verifiable Credentials (VCs).
 
-**Current draft capabilities include:**
+**Capabilities include:**
 
-* **Revocation List (Experimental)** — Maintains a list of revoked JSON-LD credentials
+* **Revocation List** — Maintains a list of revoked JSON-LD credentials
 * **Revocation API** — Allows issuers to mark JSON-LD credentials as revoked
 * **Verification API** — Enables verifiers to check whether a JSON-LD credential is valid or revoked
 * **Discovery API** — Provides access to the most up-to-date revocation list
 
-This draft release establishes the foundation for a standardized revocation mechanism in Inji Certify, with broader credential format support planned in future iterations. Click [here](https://github.com/mosip/inji-certify/blob/master/docs/VC-Revocation-Support.md) to know more about this feature.
+This release establishes the foundation for a standardized revocation mechanism in Inji Certify, with broader credential format support planned in future iterations. Click [here](https://github.com/mosip/inji-certify/blob/master/docs/VC-Revocation-Support.md) to know more about this feature.
 
-## 8. SVG Rendering Support
+## 8. Ledger for Issued Verifiable Credentials
+
+Inji Certify includes an optional ledger that records every Verifiable Credential (VC) issued by the system. When enabled, this ledger provides a searchable index of issued credentials, making it easier for issuers to track, audit, and manage credentials throughout their lifecycle.
+
+**Why it matters:** 
+The ledger simplifies operations such as revocation, where the system must quickly locate the credential being revoked. With indexed search support, issuers can retrieve credentials efficiently without maintaining an external lookup system.
+
+**Key Capabilities:**
+
+* **Configurable Recording** — Issuers can choose whether or not to maintain an internal record of all issued VCs.
+
+* **Indexed Search** — The ledger supports searching issued credentials based on predefined indexes, enabling faster retrieval.
+
+* **Revocation Support** — When revocation is enabled, the ledger must be active, unless the issuer provides an external system capable of performing credential lookup.
+
+**Considerations:** If the issuer intends to use Inji Certify's built-in revocation workflow, the ledger feature must be turned on. Otherwise, the issuer is responsible for implementing their own mechanism to locate credentials during revocation.
+
+
+## 9. SVG Rendering Support
 
 Inji Certify provides support for **SVG-based credential rendering**, ensuring wallets can display visually consistent and branded representations of issued credentials.
 
@@ -131,7 +146,7 @@ Inji Certify provides support for **SVG-based credential rendering**, ensuring w
 
 Please refer this [guide](https://github.com/mosip/inji-certify/blob/master/docs/Rendering-Template.md) to know more about this feature.
 
-## 9. External Authentication Integration
+## 10. External Authentication Integration
 
 Inji Certify provides support for integrating with external authentication services compliant with OAuth 2.0, such as eSignet, Keycloak, and others. This allows issuers to leverage existing identity and access management solutions seamlessly.
 
@@ -150,23 +165,6 @@ Inji Certify provides support for integrating with external authentication servi
 * **Standards-Based** — OAuth 2.0 compliance ensures interoperability with widely adopted identity solutions
 * **Customizable per Issuer** — Different issuers can configure different authentication services within the same Certify deployment
 
-
-## 10. Ledger for Issued Verifiable Credentials
-
-Inji Certify includes an optional ledger that records every Verifiable Credential (VC) issued by the system. When enabled, this ledger provides a searchable index of issued credentials, making it easier for issuers to track, audit, and manage credentials throughout their lifecycle.
-
-**Why it matters:** 
-The ledger simplifies operations such as revocation, where the system must quickly locate the credential being revoked. With indexed search support, issuers can retrieve credentials efficiently without maintaining an external lookup system.
-
-**Key Capabilities:**
-
-* **Configurable Recording** — Issuers can choose whether or not to maintain an internal record of all issued VCs.
-
-* **Indexed Search** — The ledger supports searching issued credentials based on predefined indexes, enabling faster retrieval.
-
-* **Revocation Support** — When revocation is enabled, the ledger must be active, unless the issuer provides an external system capable of performing credential lookup.
-
-**Considerations:** If the issuer intends to use Inji Certify's built-in revocation workflow, the ledger feature must be turned on. Otherwise, the issuer is responsible for implementing their own mechanism to locate credentials during revocation.
 
 ## 11. VC Signing with External CA-Signed Certificates
 
