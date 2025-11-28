@@ -1,9 +1,5 @@
 # Version 0.13.0
 
-Coming Soon!
-
-<!-
-
 **Release Version** 0.13.0
 
 **Release Type**: Developer Release
@@ -25,10 +21,10 @@ Inji Certify v0.13.0 introduces major advances in credential issuance and lifecy
 ## Major Highlights & Features
 
 ### Revocation Implementation
-The [Revocation feature](l../../overview/features.md#10-ledger-for-issued-verifiable-credentials) is now fully functional, issuers can revoke VCs, and the ledger can be configured for indexing to support efficient search for revocation lookup.
+The [Revocation feature](../../overview/features.md#7-revocation-mechanism-draft-release--experimental-json-ld-only) is now fully functional, issuers can revoke VCs, and the ledger can be configured for indexing to support efficient search for revocation lookup.
 
 ### Externally Signed Certificate Upload
-Organizations can now [integrate their own PKI by uploading externally signed CA certificates](../../overview/features.md#11-vc-signing-with-external-ca-signed-certificates) into Inji Certify's Key Manager.
+Organizations can now integrate their own PKI by uploading [externally signed CA certificates](../../overview/features.md#11-vc-signing-with-external-ca-signed-certificates) into Inji Certify's Key Manager.
 
 New APIs allow the following steps:
 * Generate a CSR via the generateCSR endpoint.
