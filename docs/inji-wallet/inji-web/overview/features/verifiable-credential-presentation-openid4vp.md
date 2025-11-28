@@ -19,12 +19,12 @@ This enables **real-time, standards-compliant, privacy-respecting** credential s
 
 ### **Supported Credential Types**
 
-Currently supported:
+**Currently supported**:
 
 * **W3C JSON-LD Verifiable Credentials (VC Data Model 1.1)**\
-  ✔ Supported for full OpenID4VP presentation flow
+  * Supported for full OpenID4VP presentation flow
 
-Coming Soon:
+**Coming Soon**:
 
 * **IETF SD-JWT** (Selective disclosure via OpenID4VP)
 * **ISO 18013-5 mDL / mDoc**
@@ -54,7 +54,7 @@ For a step-by-step walkthrough of how users start the flow from the verifier and
 * Only **JSON-LD credentials** are supported today.
 * SD-JWT selective disclosure is not yet supported(coming in a future release).
 
-### **Testing the Feature Today**
+### **Test the Feature Today**
 
 To try OpenID4VP with Inji Web, refer [here](../../functional-overview/end-user-guide.md#openid4vp-presenting-verifiable-credentials)!
 

@@ -7,7 +7,7 @@ Inji Wallet (Web) end-user guide is structured as below:
 * Interface Overview
 * Downloading VCs as PDF
 * Preference
-  * Change Language&#x20;
+  * Change Language
 * Login to download/store credentials in the web wallet
   * Log in with Google or any other IDP
 * OpenIDVP - Presenting Verifiable Credential
@@ -263,12 +263,12 @@ If you forget your passcode during login, you can click **“Forgot Passcode”*
 
 #### Lockout Rules
 
-* ❌ 5 wrong attempts → Wallet locked temporarily for **1 hour**.
+* 5 Wrong attempts → Wallet locked temporarily for **1 hour**.
 * After 1 hour → You can try again (Round 2).
-* ❌ 5 wrong attempts again → Wallet locked temporarily for **1 more hour**.
+* 5 wrong attempts again → Wallet locked temporarily for **1 more hour**.
 * On the **last round (3rd attempt)**:
   * You will see a **warning message** (“Last attempt left before permanent lock”).
-  * ❌ If entered incorrectly again, your wallet will be **permanently locked**.
+  * If entered incorrectly again, your wallet will be **permanently locked**.
 
 #### Permanent Lock
 
@@ -296,25 +296,25 @@ If you forget your passcode during login, you can click **“Forgot Passcode”*
 
 This section describes how to **present your JSON-LD Verifiable Credentials (VCs)** from **Inji Web Wallet** using the **OpenID4VP** presentation flow. It covers the entry points for the user actions inside the wallet based on the verifier request.
 
-#### Prerequisites
+### Prerequisites
 
-* You have one or more **JSON-LD VCs** stored in **Stored Cards** (post-login)&#x20;
+* You have one or more **JSON-LD VCs** stored in **Stored Cards** (post-login)
 * The verifier supports **OpenID4VP**.
 
 {% hint style="warning" %}
-## **Important Note (Reference Image Only)**
+## Important Note (Reference Image Only)
 
 The images shown above are **reference designs** intended to help users and implementers understand **how the OpenID4VP flow will look end-to-end**—from a **verifier initiating a Verifiable Presentation (VP) request** to the **Inji Web Wallet opening and completing the presentation,** not to represent functionality currently available in Inji Verify.
 
 These screens illustrate the **expected user journey**, including:
 
-* How a verifier will request specific credential types&#x20;
-* How a user will select cards in Inji Web Wallet
+* How a verifier request specific credential types&#x20;
+* How a user select cards in Inji Web Wallet
 * How wallet selection and redirection may look in future releases
 
-#### **Current Capability Status**
+### Current Capability Status
 
-At the moment, **Inji Verify does NOT yet support OpenID4VP initiation or redirection**.\
+At the moment, **Inji Verify doesn't yet support OpenID4VP initiation or redirection**.
 This feature is **planned for an upcoming release** of Inji Verify.
 
 Therefore:
@@ -329,13 +329,13 @@ Therefore:
 
 <figure><img src="../../../.gitbook/assets/image (17).png" alt=""><figcaption><p><strong>Wallet Selection Panel from Verifer</strong></p></figcaption></figure>
 
-### **Step-by-Step Flow**&#x20;
+### Step-by-Step Flow
 
 If you want to try the **OpenID4VP feature in Inji Web Wallet right now**, you can:
 
-&#x20;**Set up the Inji Mock OpenID4VP Services locally**
+**Set up the Inji Mock OpenID4VP Services locally**
 
-* These [**mock** ](https://github.com/mosip/inji-mock-services/blob/release-0.5.x/openid4vp-service/README.md)services can generate OpenID4VP requests. Set up the mock verifiable presentation services using the [README](https://github.com/mosip/inji-mock-services/blob/release-0.5.x/openid4vp-service/README.md).&#x20;
+* These [**mock** ](https://github.com/mosip/inji-mock-services/blob/release-0.5.x/openid4vp-service/README.md)services can generate OpenID4VP requests. Set up the mock verifiable presentation services using the [README](https://github.com/mosip/inji-mock-services/blob/release-0.5.x/openid4vp-service/README.md).
 * They allow implementors and integrators to test the complete flow
 * Useful for sandbox testing, demos, and development purposes
 
@@ -343,11 +343,11 @@ This enables you to fully experience the **verifier → wallet → verifier** fl
 
 **Receive the request**
 
-* Click the verifier’s **“Request Verifiable Credentials”** via the verifier portal, which redirects you to the Inji Web Wallet post selection from the verifier portal itself. To test the flow, follow the above steps for the [local setup](https://github.com/mosip/inji-mock-services/blob/release-0.5.x/openid4vp-service/README.md).
+* Click the verifier’s **“Request Verifiable Credentials”** via the verifier portal, which redirects you to the **Inji Web Wallet** post selection from the verifier portal itself. To test the flow, follow the above steps for the [local setup](https://github.com/mosip/inji-mock-services/blob/release-0.5.x/openid4vp-service/README.md).
 
 **Open the presentation screen**
 
-* Inji Web presents a trust-screen displaying the verifier’s identity. The user may select **“Yes, proceed”** to continue with the request or **“No, cancel”** if they do not trust the verifier.
+* Inji Web presents a trust-screen displaying the verifier’s identity. The user may select **Yes, proceed** to continue with the request or **No, cancel** if they do not trust the verifier.
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2025-11-20 at 6.58.29 PM (1).png" alt=""><figcaption><p><strong>Verifier Trust Screen</strong></p></figcaption></figure>
 
@@ -357,13 +357,13 @@ This enables you to fully experience the **verifier → wallet → verifier** fl
 
 **Credential Selection & Consent**
 
-* After the user confirms **“Yes, I trust this Verifier”**, Inji Web displays a screen showing the cards(Verifiable Credentials) requested by the verifier. The user can review each requested card (Verifiable Credentials), select the ones they wish to share, and then click **“I Consent & Share”** to proceed. If the user does not want to continue, they may click **“Cancel”** to stop the presentation flow with no information shared.
+* After the user confirms **'Yes, I trust this Verifier'**, Inji Web displays a screen showing the cards(Verifiable Credentials) requested by the verifier. The user can review each requested card (Verifiable Credentials), select the ones they wish to share, and then click **'I Consent & Share'** to proceed. If the user doesn't want to continue, they may click **'Cancel'** to stop the presentation flow with no information shared.
 
 <figure><img src="../../../.gitbook/assets/image (18).png" alt=""><figcaption><p><strong>Selection of Cards and Consent</strong> </p></figcaption></figure>
 
 **No Matching Credentials Found**
 
-If the verifier’s request does not match any cards (Verifiable Credentials) stored in the user’s Inji Web Wallet, the wallet displays a **“No matching credentials found”** message. This informs the user that they do not hold any cards (Verifiable Credentials) that satisfies the verifier’s request. The user can click **“Go to Home”** to return to the main dashboard and either download new credentials or try a different request.
+If the verifier’s request does not match any cards (Verifiable Credentials) stored in the user’s Inji Web Wallet, the wallet displays a **No matching credentials found** message. This informs the user that they do not hold any cards (Verifiable Credentials) that satisfies the verifier’s request. The user can click **Go to Home** to return to the main dashboard and either download new credentials or try a different request.
 
 <figure><img src="../../../.gitbook/assets/image (19).png" alt=""><figcaption><p><strong>No Matching Credential Found</strong></p></figcaption></figure>
 
