@@ -1,4 +1,4 @@
-# The Role of Key Manager in Inji Certify
+# Role of Key Manager in Inji Certify
 
 ## Overview
 
