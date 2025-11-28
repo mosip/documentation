@@ -61,7 +61,7 @@ Below is the list of known issues related to the release v0.13.0. To access all 
 
 ## Repository Released
 
-<table><thead><tr><th width="373.5859375">Repositories</th><th>Tags</th></tr></thead><tbody><tr><td>inji-certify</td><td><a href="https://github.com/mosip/inji-config/tree/v0.12.0">v0.13.0</a></td></tr><tr><td>inji-config</td><td><a href="https://github.com/mosip/inji-certify/tree/v0.13.0">v0.12.0</a></td></tr><tr><td>keymanager</td><td><a href="https://github.com/mosip/keymanager/tree/v1.3.0-beta.5">v1.3.0-beta.5</a></td></tr><tr><td>mosip-functional-tests</td><td><a href="https://github.com/mosip/mosip-functional-tests/tree/v1.3.5">v1.3.5</a></td></tr></tbody></table>
+<table><thead><tr><th width="373.5859375">Repositories</th><th>Tags</th></tr></thead><tbody><tr><td>inji-certify</td><td><a href="https://github.com/mosip/inji-certify/tree/v0.13.0">v0.13.0</a></td></tr><tr><td>inji-config</td><td><a href="https://github.com/mosip/inji-config/tree/v0.12.0">v0.12.0</a></td></tr><tr><td>keymanager</td><td><a href="https://github.com/mosip/keymanager/tree/v1.3.0-beta.5">v1.3.0-beta.5</a></td></tr><tr><td>mosip-functional-tests</td><td><a href="https://github.com/mosip/mosip-functional-tests/tree/v1.3.5">v1.3.5</a></td></tr></tbody></table>
 
 ## Compatible Modules
 
