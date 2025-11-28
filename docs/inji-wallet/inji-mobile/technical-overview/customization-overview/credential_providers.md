@@ -43,7 +43,7 @@ If you are looking to try out wallet and certify building locally, then you can 
 
 2. Use `wallet-demo` as client id in `mimoto-issuers-config.json`
 3. Use `wallet-demo-client` as client alias in `mimoto-issuers-config.json`
-4. oidckeystore.p12 file is attached [**here**](../../../../.gitbook/assets/oidckeystore.p12) password to unlock this is `xy4gh6swa2i`
+4. oidckeystore.p12 file is attached [**here**](../../../../.gitbook/assets/oidckeystore.p12.zip) password to unlock this is `xy4gh6swa2i`
 5. authorization server to use in `well-known` is `https://esignet-mock.collab.mosip.net`
 
 After configuring issuers and data as mentioned above, we will be able to successfully authenticate through esigent and download credential in wallet.
