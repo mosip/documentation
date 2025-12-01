@@ -57,7 +57,7 @@ Below are a few key bugs that have been addressed as part of this release. Pleas
 
 Below is the list of known issues related to the release v0.13.0. To access all known issues related to Inji Certify please click [**here**](https://mosip.atlassian.net/issues/INJICERT-852?filter=11419\&jql=project%20%3D%20%22Inji%20Certify%22%20AND%20issuetype%20%3D%20Bug%20%20AND%20labels%20not%20in%20%28API_Automation%2C%20AWSdevicefarm%2C%20device_specific%2C%20qa-inji-UI-auto%29%20%20and%20status%20NOT%20IN%20%28Closed%2C%20Fixed%2C%20Canceled%2CCancelled%29%20%20ORDER%20BY%20created%20DESC%2C%20updated%20DESC)**.**
 
-<table data-header-hidden><thead><tr><th width="174.8515625">JIRA</th><th>Description</th></tr></thead><tbody><tr><td><a href="https://mosip.atlassian.net/browse/INJICERT-1265">INJICERT-1265</a></td><td>Upload ca cert for ecck1 signalgo is failing</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="174.8515625">JIRA</th><th>Description</th></tr></thead><tbody><tr><td><a href="https://mosip.atlassian.net/browse/INJICERT-1265">INJICERT-1265</a></td><td>Upload ca cert for ecck1 signalgo is failing</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJICERT-1279">INJICERT-1279</a></td><td>Authenticate user API failing with test automation</td></tr></tbody></table>
 
 ## Repository Released
 
