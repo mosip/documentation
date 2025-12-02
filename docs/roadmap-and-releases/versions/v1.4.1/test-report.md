@@ -2,15 +2,15 @@
 
 ## Testing Scope
 
-The scope of testing is to verify fitment to the specification from the perspective of&#x20;
+The scope of testing is to verify fitment to the specification from the perspective of
 
-●     Functionality&#x20;
+● Functionality
 
-●     Deployability&#x20;
+● Deployability
 
-●     Configurability&#x20;
+● Configurability
 
-●     Customizability
+● Customizability
 
 Verification is performed not only from the end user perspective but also from the System Integrator (SI) point of view. Hence, the Configurability and Extensibility of the software is also assessed. This ensures the readiness of software for use in multiple countries. Since MOSIP is an “API First” product platform, the Verification scope required comprehensive automation testing for all the MOSIP APIs. An automated Test Rig is created for the same.
 
@@ -20,13 +20,13 @@ Persona based approach has been adopted to perform the IV\&V, by simulating test
 
 A Persona is a fictional character/user profile created to represent a user type that might use a product/or a service in a similar way. Persona based testing is a software testing technique that puts software testers in the customer's shoes, assesses their needs from the software, and thereby determines use cases/scenarios that the customers will execute. The persona's needs may be addressed through any of the following.
 
-●     Functionality&#x20;
+● Functionality
 
-●     Deployability&#x20;
+● Deployability
 
-●     Configurability&#x20;
+● Configurability
 
-●     Customizability
+● Customizability
 
 The verification methods may differ based on how the need was addressed.
 
@@ -36,7 +36,7 @@ For regression check, “MOSIP Test Rig” - an automation testing suite - is in
 
 Verification is performed on various configurations as mentioned below
 
-&#x20;    ●  Default configuration - with 7 Lang (English/Khmer/Hindi/Kannada/Tamil/Arabic/French).
+● Default configuration - with 7 Lang (English/Khmer/Hindi/Kannada/Tamil/Arabic/French).
 
 ## Main Features Tested:
 
@@ -57,9 +57,9 @@ Verification is performed on various configurations as mentioned below
 
 Below are the test metrics by performing functional testing using mock MDS, mock Auth, and mock ABIS. The process followed was black box testing which based its test cases on the specifications of the software component under test. The functional test was performed in combination with individual module testing as well as integration testing. Test data were prepared in line with the user stories. Expected results were monitored by examining the user interface. The coverage includes GUI testing, System testing, End-To-End flows across multiple languages and configurations. The testing cycle included the simulation of multiple identity schema and respective UI schema configurations.
 
-| Total | Passed        | Failed | Skipped |
-| ----- | ------------- | ------ | ------- |
-| 2265  | 2191          | 59     | 15      |
+| Total | Passed | Failed | Skipped |
+| ----- | ------ | ------ | ------- |
+| 2265  | 2191   | 59     | 15      |
 
 **Test Rate:** 99% with **Pass rate:** 97%
 
@@ -113,8 +113,4 @@ The various metrics that assist in test tracking and efficiency are as follows:
 
 <figure><img src="../../../.gitbook/assets/eSignet sonar.png" alt=""><figcaption><p>eSignet Sonar Report</p></figcaption></figure>
 
-#### &#x20;eSignet Signup Repo:
-
-<figure><img src="broken-reference" alt=""><figcaption><p>eSignet Signup Repo</p></figcaption></figure>
-
-&#x20;
+#### eSignet Signup Repo:

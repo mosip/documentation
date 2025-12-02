@@ -4,7 +4,7 @@ The login with biometrics is illustrated with the help of a demo health portal.
 
 1\. On the portal, the resident clicks on _**Sign In with eSignet**_.
 
-<figure><img src="../../../../.gitbook/assets/Health services home page otp.png" alt=""><figcaption><p>Health Portal login page</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Health services home page (1).png" alt=""><figcaption><p>Health Portal login page</p></figcaption></figure>
 
 2\. To get started with login using biometrics, the resident clicks _**Login with Biometrics**_.
 

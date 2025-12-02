@@ -48,7 +48,7 @@ Verification is performed on various configurations as mentioned below:
 
 ### Feature health
 
-<figure><img src="../../../.gitbook/assets/Feature Health (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Feature Health (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Test Execution Statistics
 
@@ -118,5 +118,3 @@ Link for the [detailed test report](https://github.com/mosip/test-management/tre
 <figure><img src="../../../.gitbook/assets/eSignet.png" alt=""><figcaption></figcaption></figure>
 
 ### eSignet Signup Repository
-
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>

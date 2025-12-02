@@ -68,9 +68,9 @@ The performance run is carried out with below assumptions and considerations:
 
 We are considering that the integrated ID system will take 1.5 secs for below integration points to return back the response:
 
-1. **Send OTP  (**/authorization/send-ot&#x70;**)**
-2. **KYC Auth  (**/authorization/v3/authenticat&#x65;**)**
-3. **KYC Exchange  (**/oauth/v2/toke&#x6E;**)**
+1. **Send OTP (**/authorization/send-ot&#x70;**)**
+2. **KYC Auth (**/authorization/v3/authenticat&#x65;**)**
+3. **KYC Exchange (**/oauth/v2/toke&#x6E;**)**
 
 <table data-full-width="true"><thead><tr><th width="214.21875">Module Name</th><th width="134.56640625">Scenario to be tested</th><th width="356.984375">API Endpoint</th><th width="135.8515625">Accepted Response Time</th><th>Weightage</th></tr></thead><tbody><tr><td><p>eSignet</p><p><strong>Pre-requisite:</strong></p><ol start="1"><li>Client ID is generated using eSignet API(/v1/esignet/client-mgmt/oidc-client).</li><li>eSignet API requires PMS auth Token</li></ol></td><td>User authentication with OTP</td><td><ol><li>/csrf/token → GET</li><li>/authorization/v2/oauth-details → POST</li><li>/authorization/send-otp → POST</li><li>/authorization/v3/authenticate → POST</li><li>/authorization/auth-code → POST</li><li>/oauth/v2/token → POST</li><li><strong>/oidc/userinfo</strong> → GET</li></ol></td><td><ol><li>&#x3C;=100ms</li><li>&#x3C;=100ms</li><li>&#x3C;=1.5s</li><li>&#x3C;=1.5s</li><li>&#x3C;=100ms</li><li>&#x3C;=1.5s</li><li>&#x3C;=100ms</li></ol></td><td>100%</td></tr></tbody></table>
 
@@ -88,24 +88,24 @@ Following ‘Images’ were under the scope of ‘Performance Testing’:
 
 #### Modules Segregation
 
-| Image ID                                                   | Tag Name                                                                                               | Comments                                                                      |
-| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------- |
-| mosipid/esignet:1.4.1                                      |  [release-1.4.1](https://github.com/mosip/esignet/tree/v1.4.1)                                         |                                                                               |
-| <p>mosipid/mock-identity-system:release-0.11.0</p><p> </p> | [release-0.11.0](https://github.com/mosip/esignet-mock-services/tree/v0.11.0/mock-identity-system)     | The changes are tested with mosipqa image and are available in release-0.11.x |
-| mosipid/mock-relying-party-ui:0.9.2                        | [release-0.9.2](https://github.com/mosip/esignet-mock-services/tree/v0.9.2/mock-relying-party-ui)      |                                                                               |
-| mosipid/mock-relying-party-service:0.9.2                   | [release-0.9.2](https://github.com/mosip/esignet-mock-services/tree/v0.9.2/mock-relying-party-service) |                                                                               |
-| mosipid/oidc-ui:1.4.1                                      | [release-1.4.1](https://github.com/mosip/esignet/tree/v1.4.1/oidc-ui)                                  |                                                                               |
+| Image ID                                    | Tag Name                                                                                               | Comments                                                                      |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------- |
+| mosipid/esignet:1.4.1                       | [release-1.4.1](https://github.com/mosip/esignet/tree/v1.4.1)                                          |                                                                               |
+| mosipid/mock-identity-system:release-0.11.0 | [release-0.11.0](https://github.com/mosip/esignet-mock-services/tree/v0.11.0/mock-identity-system)     | The changes are tested with mosipqa image and are available in release-0.11.x |
+| mosipid/mock-relying-party-ui:0.9.2         | [release-0.9.2](https://github.com/mosip/esignet-mock-services/tree/v0.9.2/mock-relying-party-ui)      |                                                                               |
+| mosipid/mock-relying-party-service:0.9.2    | [release-0.9.2](https://github.com/mosip/esignet-mock-services/tree/v0.9.2/mock-relying-party-service) |                                                                               |
+| mosipid/oidc-ui:1.4.1                       | [release-1.4.1](https://github.com/mosip/esignet/tree/v1.4.1/oidc-ui)                                  |                                                                               |
 
 #### Test Data
 
 Performance data load has been populated before the run to ensure realistic results.
 
-| DB                           | Table Name  | Number Of Records/Sample Data |
-| ---------------------------- | ----------- | ----------------------------- |
-| <p>mock identity</p><p> </p> |  uin        |  100000                       |
-|                              |  fullName   | 100000                        |
-|                              |  emailId    | 100000                        |
-|                              | phoneNumber | 100000                        |
+| DB            | Table Name  | Number Of Records/Sample Data |
+| ------------- | ----------- | ----------------------------- |
+| mock identity | uin         | 100000                        |
+|               | fullName    | 100000                        |
+|               | emailId     | 100000                        |
+|               | phoneNumber | 100000                        |
 
 ### Test Design
 
@@ -115,15 +115,15 @@ Performance data load has been populated before the run to ensure realistic resu
 
 #### **User distribution among the scenarios**
 
-<table data-full-width="true"><thead><tr><th>Scenario Name</th><th>Module Name</th><th width="203.640625">API Endpoint</th><th>HTTP Method</th><th width="126.734375">SLA(ms) &#x3C;=</th><th width="129.25">Weightage/Load Distribution</th><th>Throughput (RPS)</th></tr></thead><tbody><tr><td><p>User with OTP authentication</p><p> </p></td><td><p> eSignet-service</p><p> </p></td><td> /csrf/token </td><td>GET</td><td> 100</td><td><p> </p><p> 100</p></td><td><p> </p><p> 100</p></td></tr><tr><td></td><td> </td><td>/authorization/v2/oauth-details </td><td>POST</td><td>100</td><td></td><td></td></tr><tr><td></td><td></td><td>/authorization/send-otp </td><td>POST</td><td>1500</td><td></td><td></td></tr><tr><td></td><td></td><td>/authorization/v3/authenticate </td><td>POST</td><td>1500</td><td></td><td></td></tr><tr><td></td><td></td><td>/authorization/auth-code </td><td>POST</td><td>100</td><td></td><td></td></tr><tr><td></td><td></td><td>/oauth/v2/token </td><td>POST</td><td>1500</td><td></td><td></td></tr><tr><td></td><td></td><td><strong>/oidc/userinfo</strong>  </td><td>GET</td><td>100</td><td></td><td></td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th>Scenario Name</th><th>Module Name</th><th width="203.640625">API Endpoint</th><th>HTTP Method</th><th width="126.734375">SLA(ms) &#x3C;=</th><th width="129.25">Weightage/Load Distribution</th><th>Throughput (RPS)</th></tr></thead><tbody><tr><td>User with OTP authentication</td><td>eSignet-service</td><td>/csrf/token</td><td>GET</td><td>100</td><td>100</td><td>100</td></tr><tr><td></td><td></td><td>/authorization/v2/oauth-details</td><td>POST</td><td>100</td><td></td><td></td></tr><tr><td></td><td></td><td>/authorization/send-otp</td><td>POST</td><td>1500</td><td></td><td></td></tr><tr><td></td><td></td><td>/authorization/v3/authenticate</td><td>POST</td><td>1500</td><td></td><td></td></tr><tr><td></td><td></td><td>/authorization/auth-code</td><td>POST</td><td>100</td><td></td><td></td></tr><tr><td></td><td></td><td>/oauth/v2/token</td><td>POST</td><td>1500</td><td></td><td></td></tr><tr><td></td><td></td><td><strong>/oidc/userinfo</strong></td><td>GET</td><td>100</td><td></td><td></td></tr></tbody></table>
 
 ### Resource level configuration
 
-| Container name       | 100RPS             |                                                                                                                                                                                                                                                                                                      |
-| -------------------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|                      | **Number of pods** | **Resource configuration**                                                                                                                                                                                                                                                                           |
-| eSignet              | 2                  | <p>resources:</p><p>            limits:</p><p>              cpu: 1500m</p><p>              memory: 2250Mi</p><p>            requests:</p><p>              cpu: 1500m</p><p>              memory: 2250Mi</p><ul><li>name: JDK_JAVA_OPTIONS</li></ul><p>              value: '-Xms2250M -Xmx2250M'</p> |
-| mock-identity-system | 2                  | <p>resources:</p><p>            limits:</p><p>              cpu: '300m'</p><p>              memory: 2250Mi</p><p>            requests:</p><p>              cpu: 300m</p><p>              memory: 2250Mi</p><ul><li>name: JDK_JAVA_OPTIONS</li></ul><p>              value: '-Xms1500M -Xmx1500M'</p> |
+| Container name       | 100RPS             |                                                                                                                                                                                                        |
+| -------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|                      | **Number of pods** | **Resource configuration**                                                                                                                                                                             |
+| eSignet              | 2                  | <p>resources:</p><p>limits:</p><p>cpu: 1500m</p><p>memory: 2250Mi</p><p>requests:</p><p>cpu: 1500m</p><p>memory: 2250Mi</p><ul><li>name: JDK_JAVA_OPTIONS</li></ul><p>value: '-Xms2250M -Xmx2250M'</p> |
+| mock-identity-system | 2                  | <p>resources:</p><p>limits:</p><p>cpu: '300m'</p><p>memory: 2250Mi</p><p>requests:</p><p>cpu: 300m</p><p>memory: 2250Mi</p><ul><li>name: JDK_JAVA_OPTIONS</li></ul><p>value: '-Xms1500M -Xmx1500M'</p> |
 
 ## Test Result
 
@@ -136,31 +136,29 @@ Performance data load has been populated before the run to ensure realistic resu
 
 ### Test Report
 
-1. Test results for 100 RPS  for a 30-minute run, simulating the real-time ID system by adding a fixed 1-second processing time for each endpoint (send-OTP, auth, and token).
+1. Test results for 100 RPS for a 30-minute run, simulating the real-time ID system by adding a fixed 1-second processing time for each endpoint (send-OTP, auth, and token).
 
-| **Scenario Name**            | <p><strong>Transaction Name</strong></p><p> </p><p> </p> | **API Endpoint**                | **HTTP Method** | **100 RPS**                                   |                 |             |              |         |             |
-| ---------------------------- | -------------------------------------------------------- | ------------------------------- | --------------- | --------------------------------------------- | --------------- | ----------- | ------------ | ------- | ----------- |
-|                              |                                                          |                                 |                 | **Date : 09/06/2025 (half an hour duration)** |                 |             |              |         |             |
-|                              |                                                          |                                 |                 | **# Samples**                                 | **Min**         | **Average** | **90% Line** | **Max** | **Error %** |
-| User with OTP authentication | S01 T01 GetCsrf                                          |  /csrf/token                    | GET             | 25969                                         | 7               | 12          | 17           | 358     | 0.00%       |
-|                              | S01 T02 OAuthdetails                                     | /authorization/v2/oauth-details | POST            | 25968                                         | 6               | 12          | 17           | 391     | 0.00%       |
-|                              | S01 T03 Send OTP                                         | /authorization/send-otp         | POST            | 25968                                         | 1017            | 1095        | 1260         | 1719    | 0.00%       |
-|                              | S01 T04 Authentication                                   | /authorization/v3/authenticate  | POST            | 25952                                         | 1025            | 1101        | 1258         | 1754    | 0.03%       |
-|                              | S01 T05 Autorization                                     | /authorization/auth-code        | POST            | 25934                                         | 7               | 14          | 19           | 1026    | 0.00%       |
-|                              | S01 T06 Token                                            | /oauth/v2/token                 | POST            | 25934                                         | <p>1030<br></p> | 1106        | 1267         | 1964    | 0.00%       |
-|                              | S01 T07 Userinfo                                         | **/oidc/userinfo**              | GET             | 25918                                         | 6               | 12          | 17           | 437     | 0.00%       |
+| **Scenario Name**            | **Transaction Name**   | **API Endpoint**                | **HTTP Method** | **100 RPS**                                   |                 |             |              |         |             |
+| ---------------------------- | ---------------------- | ------------------------------- | --------------- | --------------------------------------------- | --------------- | ----------- | ------------ | ------- | ----------- |
+|                              |                        |                                 |                 | **Date : 09/06/2025 (half an hour duration)** |                 |             |              |         |             |
+|                              |                        |                                 |                 | **# Samples**                                 | **Min**         | **Average** | **90% Line** | **Max** | **Error %** |
+| User with OTP authentication | S01 T01 GetCsrf        | /csrf/token                     | GET             | 25969                                         | 7               | 12          | 17           | 358     | 0.00%       |
+|                              | S01 T02 OAuthdetails   | /authorization/v2/oauth-details | POST            | 25968                                         | 6               | 12          | 17           | 391     | 0.00%       |
+|                              | S01 T03 Send OTP       | /authorization/send-otp         | POST            | 25968                                         | 1017            | 1095        | 1260         | 1719    | 0.00%       |
+|                              | S01 T04 Authentication | /authorization/v3/authenticate  | POST            | 25952                                         | 1025            | 1101        | 1258         | 1754    | 0.03%       |
+|                              | S01 T05 Autorization   | /authorization/auth-code        | POST            | 25934                                         | 7               | 14          | 19           | 1026    | 0.00%       |
+|                              | S01 T06 Token          | /oauth/v2/token                 | POST            | 25934                                         | <p>1030<br></p> | 1106        | 1267         | 1964    | 0.00%       |
+|                              | S01 T07 Userinfo       | **/oidc/userinfo**              | GET             | 25918                                         | 6               | 12          | 17           | 437     | 0.00%       |
 
 ### Metrics
 
 **Table of eSignet endpoint metrics**
 
-<figure><img src="../../../.gitbook/assets/Perfromance 1.4.1 - Endpoint Metrics.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Metrics Perfromance Report (1).png" alt=""><figcaption></figcaption></figure>
 
 **Time chart of 90th percentile response time for eSignet services**
 
 <figure><img src="../../../.gitbook/assets/Performance 1.4.1 - Timechart 90th percentile Response time.png" alt=""><figcaption></figcaption></figure>
-
-
 
 #### Dependent services metrics
 
@@ -205,9 +203,5 @@ The performance of the system was evaluated based on the defined scope and appro
 * References:
   * [Little's law](https://en.wikipedia.org/wiki/Little's_law)
   * [Little’s Law in Performance Testing](https://www.perfmatrix.com/littles-law-in-performance-testing/)
-
-
-
-
 
 [^1]: 100 RPS are the individual requests that are hit for each endpoint. For the performance run there are 7 individual endpoints that are required to be hit sequentially to complete 1 transaction. Hence 100/7 = 15 (approx) becomes the TPS for the performance run.

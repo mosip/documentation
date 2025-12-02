@@ -38,7 +38,7 @@ Verification is performed on various configurations as mentioned below:
 
 ## Feature health
 
-![](../../../.gitbook/assets/feature-health-1.1.0.png)
+![](../../../.gitbook/assets/feature-health.png)
 
 ## Functional test results for eSignet
 
@@ -93,4 +93,4 @@ Link for the [detailed test report](https://github.com/mosip/test-management/tre
 
 ### Sonar Report
 
-![](../../../.gitbook/assets/esignet-sonar-v110.png)
+![](../../../.gitbook/assets/sonar.png)
