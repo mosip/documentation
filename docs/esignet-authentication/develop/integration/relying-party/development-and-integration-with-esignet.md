@@ -1,5 +1,16 @@
 # Development and Integration with eSignet
 
+
+
+
+
+
+
+
+
+
+<!-- Older content - before 1.7.0 release
+
 #### Development of Relying party application
 
 Setup your development environment. Once done you need to follow the following steps
@@ -179,3 +190,6 @@ Other online tools are listed below:
 * [https://pem2jwk.vercel.app/](https://pem2jwk.vercel.app/)
 * [https://8gwifi.org/jwkconvertfunctions.jsp](https://8gwifi.org/jwkconvertfunctions.jsp)
 * [https://irrte.ch/jwt-js-decode/pem2jwk.html](https://irrte.ch/jwt-js-decode/pem2jwk.html)
+
+
+-->
