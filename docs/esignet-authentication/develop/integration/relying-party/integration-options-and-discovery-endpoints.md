@@ -6,7 +6,7 @@ description: >-
 
 # Integration Options and Discovery Endpoints
 
-eSignet supports integration with both **Mock ID** and **MOSIP ID** systems for authentication and identity verification.
+eSignet supports integration with both [**Mock ID**](integration-options-and-discovery-endpoints.md#id-1.-mock-id-integration) and [**MOSIP ID**](integration-options-and-discovery-endpoints.md#id-2.-mosip-id-integration) systems for authentication and identity verification.
 
 The **integration flow and configuration steps** remain identical for both options, the only difference lies in the **discovery endpoints**, which determine the environment and underlying ID system you connect to.
 
@@ -18,7 +18,9 @@ Note: The two options listed here — **Mock ID** and **MOSIP ID** — are provi
 In real-world deployments, eSignet can be configured to work with **national ID systems or other identity providers** as per the country’s implementation and integration requirements.
 {% endhint %}
 
-#### **Understanding Discovery Endpoints** <a href="#understanding-discovery-endpoints" id="understanding-discovery-endpoints"></a>
+<details>
+
+<summary><strong>Understanding Discovery Endpoints</strong></summary>
 
 A **discovery endpoint** is a standard part of the **OpenID Connect (OIDC)** specification.\
 It provides a **metadata document** (commonly located at `/.well-known/openid-configuration`) that allows relying parties (RPs) to automatically discover key configuration details for integrating with the identity provider (IdP).
@@ -32,13 +34,19 @@ It provides a **metadata document** (commonly located at `/.well-known/openid-co
 
 **For more details refer** [**here**](https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata)**.**
 
-#### **Why Discovery Endpoints Matter for Relying Parties** <a href="#why-discovery-endpoints-matter-for-relying-parties" id="why-discovery-endpoints-matter-for-relying-parties"></a>
+</details>
+
+<details>
+
+<summary><strong>Why Discovery Endpoints Matter for Relying Parties</strong></summary>
 
 For developers and integrators, discovery endpoints simplify setup by:
 
 1. **Automating configuration:** No need to hardcode or manually maintain endpoint URLs.
 2. **Ensuring consistency:** RPs always use up-to-date endpoint details published by eSignet.
 3. **Reducing errors:** Helps avoid misconfigurations in authorization or token flows.
+
+</details>
 
 ### **Discovery Endpoints for Mock ID and MOSIP ID Integration** <a href="#discovery-endpoints-for-mock-id-and-mosip-id-integration" id="discovery-endpoints-for-mock-id-and-mosip-id-integration"></a>
 

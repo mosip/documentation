@@ -50,7 +50,9 @@ Beyond profile creation, the module also offers support for **identity verificat
 * **Protection Against Unwanted Profiling** Safeguards personal data by preventing unauthorized tracking or profiling of users.
 * **Multiple Assurance Levels** Supports varying levels of identity assurance, depending on the authentication method employed.
 * **Digital Wallet Integration** Enables secure, device-based authentication through [integration with digital wallets](esignet-authentication/develop/integration/wallet/).
-* **KYC-Verified Signup** Support for user's identity verification through video-eKYC during registration by leveraging its [Signup module](esignet-signup/features.md#identity-assurance-flow-ekyc-verification).
+* **Verified Claims Support:** eSignet now includes [_verified claims_ ](readme/standards.md#id-2.-interoperability) in its identity response, enabling relying parties to consume high-assurance user attributes.
+* **KYC-Verified Signup:** eSignet’s [Signup module](esignet-signup/) allows user registration with _Video eKYC_, enabling identities to be onboarded with verified claims from the start.
+* **FAPI 2.0 Compliance:** eSignet now complies with the FAPI 2.0 Security Profile, offering higher security and improved interoperability.
 
 ### **What Differentiates eSignet**
 
@@ -85,7 +87,7 @@ eSignet is engineered to ensure inclusive access to digital identity verificatio
 * **Assisted Verification and Data Collection** Enables identity verification with the assistance of an operator or at a physical kiosk.
 * **Self-Identification for Online Services** Allows users to independently verify their identity through remote digital channels.
 
-#### **Verification Modalities**
+#### [**Verification Modalities**](esignet-authentication/features.md#supported-authentication-methods)
 
 * **OTP-Based Authentication (Feature Phone Users)** Offers SMS-based OTP login for users with basic mobile devices.
 * **Wallet-Based Facial Authentication (Smartphone Users)** Enables face recognition authentication via digital wallets on smartphones.

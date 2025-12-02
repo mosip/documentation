@@ -2,20 +2,40 @@
 
 This guide helps the developers of the relying party to get started with their development environment.
 
-## Pre-requisites
+## **Pre-requisites** <a href="#pre-requisites" id="pre-requisites"></a>
 
-**Setup your development machine:**
+Before integrating with eSignet, ensure the following setup is completed:
 
-* Choose the technology stack (PHP, Python, Java, Node, Kotlin, Swift etc).
-* Choose your OPENID client library as per your chosen tech stack. Please refer this link here for reference.
-  * Userinfo JWT can be signed and encrypted or just signed. Choose your JWT plugin to decrypt , verify parse your JWT.
-* Create keys - eSignet only supports confidential clients with the private-key-jwt authentication method. Make sure to store the private key in the password-protected safe storage(production-grade hardened machines/vault/HSM). The public key should be shared with the eSignet. It is extremely dangerous to use the same key pair in test or development, or production environments. Make sure to use a different set of keys for each environment. It is suggested to rotate the keys after every 6-12 months and regenerate if the keys are compromised.
-  * The public key shared with eSignet is expected to be in JSON Web Key format.
-  * The key pair generated should be set by default for “signing” usage.
+#### **1. Prepare Your Development Environment** <a href="#id-1.-prepare-your-development-environment" id="id-1.-prepare-your-development-environment"></a>
 
-**Note**: Only the RSA key format is supported. We are working on adding other key formats.
+* Select your preferred technology stack (e.g., PHP, Python, Java, Node, Kotlin, Swift, etc.).
+* Choose an appropriate **OpenID Connect client library** for your selected stack. _(Refer to the library list here.)_
 
-* Design your callback API. The callback API is redirected by eSignet over the user's browser upon successful / failed authentication. As best practice, please ensure the callback API can render the UX as soon as possible, so the user is aware of the progress. Please note that the user is redirected on both success and failure authentication. On failure, the user will be redirected with an error code and without an authorization code. So, based on the authentication response relying party portal needs to take the necessary action before allowing the user to move forward.
+#### **2. Plan for UserInfo JWT Handling** <a href="#id-2.-plan-for-userinfo-jwt-handling" id="id-2.-plan-for-userinfo-jwt-handling"></a>
+
+* eSignet returns the UserInfo response as a **signed or signed-and-encrypted JWT**.
+* Choose a compatible JWT plugin to **decrypt, verify, and parse** the UserInfo JWT.
+
+#### **3. Generate and Manage Cryptographic Keys** <a href="#id-3.-generate-and-manage-cryptographic-keys" id="id-3.-generate-and-manage-cryptographic-keys"></a>
+
+* eSignet supports only **confidential clients** using the **private\_key\_jwt** client authentication method.
+* Generate a key pair and store the **private key** securely in password-protected, hardened storage (machine, vault, HSM).
+* Share the **public key** with eSignet in **JSON Web Key (JWK)** format.
+* Use **different key pairs for development, test, and production**—never reuse keys across environments.
+* Rotate keys every **6–12 months**, or immediately if compromised.
+* The generated key pair must default to **"signing"** usage.
+
+{% hint style="info" %}
+Only **RSA** key format is currently supported; additional key formats are planned.
+{% endhint %}
+
+#### **4. Design Your Callback API** <a href="#id-4.-design-your-callback-api" id="id-4.-design-your-callback-api"></a>
+
+* The callback API is the endpoint to which eSignet redirects the user’s browser after authentication success or failure.
+* Ensure the callback can **render a user interface promptly**, keeping the user informed of the authentication result.
+* On **successful authentication**, the user is redirected with an **authorization code**.
+* On **failure**, the user is redirected **without a code**, but with an **error code**.
+* The relying party must handle the callback response appropriately before allowing the user to proceed.&#x20;
 
 ## Onboarding Your Relying Party (RP) as an OIDC Client with an ID Provider
 
@@ -68,7 +88,3 @@ Wildcard patterns (_`*`_) are acceptable for development but **should be avoided
 ## 5. Await Client ID
 
 Once the required information is submitted, the ID provider will process your registration and issue a **Client ID**. This ID will uniquely identify your application in all future authentication requests.
-
-## 6. Be Aware of Additional Requirements
-
-Some eSignet providers may have **non-technical onboarding requirements** (e.g., legal agreements, privacy policies, business verification). These are outside the scope of this document and should be discussed directly with the provider.

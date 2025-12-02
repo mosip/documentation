@@ -59,6 +59,14 @@ eSignet provides a limited implementation of the OpenID protocol, supporting the
 * [Identity Assurance 1.0](https://openid.net/specs/openid-connect-4-identity-assurance-1_0.html)
 * [IEEE SA P3167 SBI 2.0](https://openid.net/specs/openid-connect-4-identity-assurance-1_0.html)
 
+**d. FAPI 2.0 Security Profile:**
+
+eSignet now adheres to the **FAPI 2.0 Security Profile**, ensuring enhanced security, phishing resistance, and standards-based interoperability. The implementation includes support for the following key RFCs:
+
+* [RFC-9126](https://datatracker.ietf.org/doc/html/rfc9126) - Pushed Authorization Request (PAR)
+* [RFC-9449](https://datatracker.ietf.org/doc/html/rfc9449) - Demonstrate Proof of Possession (Dpop)
+* [RFC-9207](https://www.rfc-editor.org/rfc/rfc9207) - Authorization Server issuer Metadata
+
 #### 3. Supported Authentication Flows
 
 As eSignet incorporates **OpenID Connect**, a wide range of client libraries are available for seamless integration. Therefore, it is recommended to avoid creating custom code for the integration process.

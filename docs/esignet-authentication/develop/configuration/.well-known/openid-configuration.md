@@ -1,6 +1,12 @@
-# openid-configuration
+# OpenID Provider Configuration Well-Known
 
-eSignet's `openid-configuration` well-known endpoint holds the map, which is the same as the [openid-configuration's](https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderConfigurationResponse) well-known specification.
+## **Overview:**
+
+eSignet's `openid-configuration` well-known endpoint provides metadata in a standardized JSON format, following the [OpenID Connect specification](../../../../readme/standards.md#id-2.-supported-standards-and-rfcs). This endpoint exposes information such as authentication endpoints, supported flows, and capabilities, enabling relying parties to dynamically discover and integrate with eSignet securely.
+
+## Open ID Provider Well Known Configuration <a href="#open-id-provider-well-knownconfiguration" id="open-id-provider-well-knownconfiguration"></a>
+
+Please refer below for more details.
 
 ```json
 {
@@ -76,6 +82,8 @@ eSignet's `openid-configuration` well-known endpoint holds the map, which is the
   ]
 }
 ```
+
+## Parameter Details and Descriptions <a href="#parameter-details-and-descriptions" id="parameter-details-and-descriptions"></a>
 
 * `issuer`: The base URL or identifier of the OpenID Connect provider. The value comes from the configuration property mosip.esignet.discovery.issuer-id.
 * `authorization_endpoint`: The URL where the authorization request can be initiated.

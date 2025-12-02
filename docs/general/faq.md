@@ -155,7 +155,7 @@ eSignet will be deployed across various platforms, focusing on secure authentica
 
 <summary><strong>Which version of eSignet can be used?</strong></summary>
 
-* Currently, eSignet uses[ v1.4.1](../roadmap-and-releases/versions/v1.4.1/).
+* Currently, eSignet uses[ v1.4.1](../roadmap-and-releases/versions/v1.4.1).
 * Please refer [here ](../roadmap-and-releases/versions/)for all the latest releases.
 
 </details>
@@ -414,12 +414,6 @@ The VC Issuance plugin interface provides methods to return Verifiable Credentia
 <summary><strong>How to configure Knowledge Based Identification (KBI) form in eSignet UI?</strong></summary>
 
 KBI form can be configured based on the fields required to identify a user via Knowledge based identification, please refer to the use case [example](../esignet-authentication/test/end-user-guide/health-portal/knowledge-based-authentication.md) here and please find the below properties to be changed to reflect the fields in the KBI form on eSignet UI.
-
-```
-Update the below sub properties inside mosip.esignet.ui.config.key-values property
-'auth.factor.kba.individual-id-field' : '${mosip.esignet.authenticator.sunbird-rc.auth-factor.kba.individual-id-field}',\
-'auth.factor.kba.field-details':${mosip.esignet.authenticator.sunbird-rc.auth-factor.kba.field-details}
-```
 
 To know more about how to configure the KBI Form in eSignet please refer [here](https://github.com/mosip/digital-credential-plugins/blob/master/sunbird-rc-esignet-integration-impl/README.md)
 
