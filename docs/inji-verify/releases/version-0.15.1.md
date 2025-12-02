@@ -1,39 +1,43 @@
-# Version 0.15.1
+# Version 0.15.2
 
-**Release Name**: Inji Verify v0.15.1
+**Release Name**: Inji Verify v0.15.2
 
 **Support**: Patch Release
 
-**Release Date**: 4th Nov, 2025
+**Release Date**: 2nd Dec, 2025
 
 ### Overview
 
-This patch release for Inji Verify 0.15.1 addresses critical version alignment issues identified in 0.15.0. By updating key dependencies and SDK versions, this release ensures greater stability, compatibility, and a smoother deployment experience.
+The Inji Verify 0.15.2 patch release includes critical fixes to ensure reliable testing and smooth deployment. This update resolves the expiry issue with non-dynamic QR codes in the UI test rig and addresses gaps in the API Automation smoke tests such that all test cases execute and pass as expected.
 
 ### Key Updates
 
-In 0.15.1, the POM dependency and SDK versions have been aligned and updated for improved stability and compatibility.
-
-<table><thead><tr><th width="157.6015625">Component</th><th width="250.62890625">Description</th><th>0.15.1 (Current Release)</th><th>0.15.0 (Previous Release)</th></tr></thead><tbody><tr><td>vc-verifier POM Dependency</td><td>The POM dependency of vc-verifier was <code>1.5.0-SNAPSHOT</code>. In version 0.15.1, the POM dependency version is <code>1.5.0</code>.</td><td>1.5.0</td><td>1.5.0-SNAPSHOT</td></tr><tr><td>Inji Verify SDK Version</td><td>The Inji Verify SDK version was <code>0.15.0-beta.23</code>, which was also true for Inji Verify UI. Now published as <code>0.15.0</code> and consumed by Verify UI.</td><td>0.15.0</td><td>0.15.0-beta.23</td></tr></tbody></table>
+* **Expiry of Non-Dynamic QR Codes in INJI-Verify UI Test Rig**:
+  * An issue was identified in the INJI-Verify UI test rig, where non-dynamic QR codes intended to remain static for testing purposes were expiring after a certain duration. This behaviour caused interruptions in automated test flows and inconsistencies during repeated verification scenarios.
+  * **Fix made:** In this release, the expiry logic for non-dynamic QR codes has been corrected to ensure they remain valid for the entire testing lifecycle, enabling stable, repeatable, and reliable UI test executions.
+* **API Automation v0.15.1 | Smoke Test Results and Fix:**
+  * During the execution of the 0.15.1 API Automation smoke test suite, no failures were observed. The expected outcome is for all test cases to execute and pass without any skips. The skipped tests indicate underlying issues that require attention. The results showed: T-12, P-8, S-4, F-0.
+    * T (Total): 12 test cases executed
+    * P (Passed): 8 test cases completed successfully
+    * S (Skipped): 4 test cases skipped due to configuration or dependency gaps
+    * F (Failed): 0 failures recorded
+  * **Fix made:** As part of this release, we have now fixed these gaps to ensure that all smoke tests run as intended and achieve a 100% pass rate in subsequent executions.
 
 ### Repositories: Released/Dependent
 
 | Repositories | Tags: Released/Dependent                                             |
 | ------------ | -------------------------------------------------------------------- |
-| Inji Verify  | [v0.15.1](https://github.com/mosip/inji-verify/releases/tag/v0.15.1) |
+| Inji Verify  | [v0.15.2](https://github.com/mosip/inji-verify/releases/tag/v0.15.2) |
 
 ### Projects: Released
 
 Inji Verify Repositories Released:
 
-1. inji-verify-service - [https://github.com/mosip/inji-verify/tree/release-0.15.x/verify-service](https://github.com/mosip/inji-verify/tree/release-0.15.x/verify-service)
-2. inji-verify-ui (ref implementation) - [https://github.com/mosip/inji-verify/tree/release-0.15.x/verify-ui](https://github.com/mosip/inji-verify/tree/release-0.15.x/verify-ui)
-3. SDK - [https://github.com/mosip/inji-verify/tree/release-0.15.x/inji-verify-sdk](https://github.com/mosip/inji-verify/tree/release-0.15.x/inji-verify-sdk)
-4. API-Test - [https://github.com/mosip/inji-verify/tree/release-0.15.x/api-test](https://github.com/mosip/inji-verify/tree/release-0.15.x/api-test)
+1. API-Test - [https://github.com/mosip/inji-verify/tree/release-0.15.x/api-test](https://github.com/mosip/inji-verify/tree/release-0.15.x/api-test)
 
 ### Compatible modules
 
-The following table outlines the tested and certified compatibility of Inji Verify 0.15.1 with other modules.
+The following table outlines the tested and certified compatibility of Inji Verify 0.15.2 with other modules.
 
 | Module              | Version                                                             |
 | ------------------- | ------------------------------------------------------------------- |
@@ -44,7 +48,7 @@ The following table outlines the tested and certified compatibility of Inji Veri
 
 #### Learn More
 
-Please refer to the list of items covered as part of [0.15.0](version-0.15.0/) release.
+Please refer to the list of items covered as part of [0.15.0](https://docs.inji.io/inji-verify/releases/version-0.15.0) and [0.15.1](https://docs.inji.io/inji-verify/releases/version-0.15.1) release.
 
 * [Feature documentation](../overview/features.md)
 * [API Documentation](https://mosip.stoplight.io/studio/inji-verify)
