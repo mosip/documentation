@@ -8,7 +8,7 @@
 
 ## **Overview**
 
-Inji Web **0.15.0** introduces a major milestone with the **first end-to-end** [**OpenID4VP** ](https://openid.net/specs/openid-4-verifiable-presentations-1_0-ID3.html#name-same-device-flow)**VC Presentation support**, along with significant UI enhancements, improved security, updated libraries, functional bug fixes, and extensive code quality improvements.
+Inji Web **0.15.0** introduces a major milestone with the first end-to-end [OpenID4VP ](https://openid.net/specs/openid-4-verifiable-presentations-1_0-ID3.html#name-same-device-flow)VC Presentation support, along with significant UI enhancements, improved security, updated libraries, functional bug fixes, and extensive code quality improvements.
 
 This release brings the Inji Web Wallet closer to full support for verifier-driven flows and aligns with open standards.
 
@@ -28,21 +28,14 @@ This release delivers the first complete implementation of the [OpenID4VP](https
 * UI for negative flows (No matching credentials / No internet/API Failures)
 * Updated verifier request URL format
 
-Visual and interaction improvements across the app, including refined branding, cleaner components, and smoother credential selection experiences.
+### Additional Enhancements
 
-### UI/UX Enhancements
-
-UI and UX improvements across the wallet enhance user experience and include the following.
-
-#### **Platform Improvements**
-
-### Platform Improvements
-
-Resolved CORS issues and introduced configurable Redis for flexible deployments, alongside stronger error handling and improved documentation for clarity and maintainability.
+* UI and UX improvements across the wallet enhance user experience and include the following.
+* Resolved CORS issues and introduced configurable Redis for flexible deployments, alongside stronger error handling and improved documentation for clarity and maintainability.
 
 ## **Features Released**
 
-<table><thead><tr><th width="132.23828125">Type</th><th>Feature / Enhancement</th><th>Jira Link</th></tr></thead><tbody><tr><td>Story</td><td>OpenID4VP Flow – Verifier request URL format change</td><td><a href="https://mosip.atlassian.net/browse/INJIWEB-1747">INJIWEB-1747</a></td></tr><tr><td>Story</td><td>Enhance error handling in OpenID4VP flow with retry &#x26; close</td><td><a href="https://mosip.atlassian.net/browse/INJIWEB-1735">INJIWEB-1735</a></td></tr><tr><td>Story</td><td>Branding updates across Inji Web UI</td><td><a href="https://mosip.atlassian.net/browse/INJIWEB-1726">INJIWEB-1726</a></td></tr><tr><td>Story</td><td>UI – Results, redirect back &#x26; negative flows (No internet)</td><td><a href="https://mosip.atlassian.net/browse/INJIWEB-1717">INJIWEB-1717</a></td></tr><tr><td>Story</td><td>UI – Credential selection, consent &#x26; no matching credential flow</td><td><a href="https://mosip.atlassian.net/browse/INJIWEB-1715">INJIWEB-1715</a></td></tr><tr><td>Story</td><td>UI – Redirect from verifier &#x26; display trust screen</td><td><a href="https://mosip.atlassian.net/browse/INJIWEB-1714">INJIWEB-1714</a></td></tr><tr><td>Story</td><td>API – Manage verifier trust decision</td><td><a href="https://mosip.atlassian.net/browse/INJIWEB-1713">INJIWEB-1713</a></td></tr><tr><td>Story</td><td>API – Credential selection, consent &#x26; submission</td><td><a href="https://mosip.atlassian.net/browse/INJIWEB-1712">INJIWEB-1712</a></td></tr><tr><td>Story</td><td>API – Get matching credentials for presentation</td><td><a href="https://mosip.atlassian.net/browse/INJIWEB-1711">INJIWEB-1711</a></td></tr><tr><td>Story</td><td>API – Implement OpenID4VP Authorization Request Handler</td><td><a href="https://mosip.atlassian.net/browse/INJIWEB-1704">INJIWEB-1704</a></td></tr><tr><td>Story</td><td>Configure special keys to identify face rendering</td><td><a href="https://mosip.atlassian.net/browse/INJIWEB-1673">INJIWEB-1673</a></td></tr></tbody></table>
+<table><thead><tr><th width="132.23828125">Type</th><th>Feature / Enhancement</th><th>Jira Link</th></tr></thead><tbody><tr><td>Story</td><td>OpenID4VP Flow – Verifier request URL format change</td><td><a href="https://mosip.atlassian.net/browse/INJIWEB-1747">INJIWEB-1747</a></td></tr><tr><td>Story</td><td>Enhance error handling in OpenID4VP flow with retry &#x26; close</td><td><a href="https://mosip.atlassian.net/browse/INJIWEB-1735">INJIWEB-1735</a></td></tr><tr><td>Story</td><td>UI – Results, redirect back &#x26; negative flows (No internet)</td><td><a href="https://mosip.atlassian.net/browse/INJIWEB-1717">INJIWEB-1717</a></td></tr><tr><td>Story</td><td>UI – Credential selection, consent &#x26; no matching credential flow</td><td><a href="https://mosip.atlassian.net/browse/INJIWEB-1715">INJIWEB-1715</a></td></tr><tr><td>Story</td><td>UI – Redirect from verifier &#x26; display trust screen</td><td><a href="https://mosip.atlassian.net/browse/INJIWEB-1714">INJIWEB-1714</a></td></tr><tr><td>Story</td><td>API – Manage verifier trust decision</td><td><a href="https://mosip.atlassian.net/browse/INJIWEB-1713">INJIWEB-1713</a></td></tr><tr><td>Story</td><td>API – Credential selection, consent &#x26; submission</td><td><a href="https://mosip.atlassian.net/browse/INJIWEB-1712">INJIWEB-1712</a></td></tr><tr><td>Story</td><td>API – Get matching credentials for presentation</td><td><a href="https://mosip.atlassian.net/browse/INJIWEB-1711">INJIWEB-1711</a></td></tr><tr><td>Story</td><td>API – Implement OpenID4VP Authorization Request Handler</td><td><a href="https://mosip.atlassian.net/browse/INJIWEB-1704">INJIWEB-1704</a></td></tr><tr><td>Story</td><td>Configure special keys to identify face rendering</td><td><a href="https://mosip.atlassian.net/browse/INJIWEB-1673">INJIWEB-1673</a></td></tr></tbody></table>
 
 ## **Repositories Released**
 
@@ -89,7 +82,7 @@ Below is the list of bug fixes as part of the **0.15.0** release:
 * [Feature Documentation](../../overview/features/verifiable-credential-presentation-openid4vp.md)
 * [End User Guide](../../functional-overview/end-user-guide.md#openid4vp-presenting-verifiable-credentials)
 * [API Documentation](https://mosip.stoplight.io/docs/mimoto/x4k8ruhin2f09-authorize-verifiable-presentation)
-* QA Report
+* [QA Report](test-report.md)
 
 ## Additional Resources
 
