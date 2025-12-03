@@ -8,7 +8,7 @@
 
 ## **Overview**
 
-Inji Web **0.15.0** introduces a major milestone with the first end-to-end [OpenID4VP ](https://openid.net/specs/openid-4-verifiable-presentations-1_0-ID3.html#name-same-device-flow)VC Presentation support, along with significant UI enhancements, improved security, updated libraries, functional bug fixes, and extensive code quality improvements.
+Inji Web **0.15.0** introduces a major milestone with the first end-to-end [OpenID4VP ](https://openid.net/specs/openid-4-verifiable-presentations-1_0-ID3.html#name-same-device-flow) verifiable credentials presentation support, along with significant UI enhancements, improved security, updated libraries, functional bug fixes, and extensive code quality improvements.
 
 This release brings the Inji Web Wallet closer to full support for verifier-driven flows and aligns with open standards.
 
