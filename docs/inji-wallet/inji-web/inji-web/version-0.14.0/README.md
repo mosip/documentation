@@ -71,6 +71,7 @@ Below is the list of key known issues specific to this release. For all known is
 | [INJIWEB-1629](https://mosip.atlassian.net/browse/INJIWEB-1629) | Injiweb-API: Download credentials and fetch credentials fails on the server side.                                                 |
 | [INJIWEB-1624](https://mosip.atlassian.net/browse/INJIWEB-1624) | Injiweb-API: Fetch credentials with empty wallet ID and empty `accept-language` header returns improper error codes and messages. |
 | [INJIWEB-1619](https://mosip.atlassian.net/browse/INJIWEB-1619) | Injiweb-API: Downloading wallet credentials with a null/empty wallet ID returns improper error codes and messages.                |
+|                                                                 |                                                                                                                                   |
 
 ### Bug Fixes
 

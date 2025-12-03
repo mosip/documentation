@@ -2,20 +2,19 @@
 
 Testing Scope
 
-The scope of testing is to verify fitment to the specification from the perspective of &#x20;
+The scope of testing is to verify fitment to the specification from the perspective of
 
-* Functionality &#x20;
-* Deployability &#x20;
-* Configurability &#x20;
+* Functionality
+* Deployability
+* Configurability
 * Customizability
 
-Verification is performed not only from the end user perspective but also from the System Integrator (SI) point of view. Hence, the Configurability and Extensibility of the software are also assessed. This ensures the readiness of the software for use in multiple countries. MOSIP is an “API First” product platform.&#x20;
+Verification is performed not only from the end user perspective but also from the System Integrator (SI) point of view. Hence, the Configurability and Extensibility of the software are also assessed. This ensures the readiness of the software for use in multiple countries. MOSIP is an “API First” product platform.
 
-The testing scope has been focused on the following features:\
-
+The testing scope has been focused on the following features:\\
 
 * Inji Home page
-* Issuer and Credential selection&#x20;
+* Issuer and Credential selection
 * Authenticating with user credentials
 * PDF Generation and Auto Download
 * Success/Failure notification after downloading the VC PDF
@@ -34,7 +33,7 @@ The testing scope has been focused on the following features:\
 * Log in with Google
 * OpenID4VP Implementation
 * Latest draft changes support for OpenID4VCI
-* FAQ Support&#x20;
+* FAQ Support
 * UI UX Design updates
 * Swagger update
 * Secure Time-Bound Storage
@@ -46,22 +45,22 @@ The testing scope has been focused on the following features:\
 
 ### Test Approach
 
-A personal-based approach has been adopted to perform the IV\&V by simulating test scenarios that resemble a real-time implementation.&#x20;
+A personal-based approach has been adopted to perform the IV\&V by simulating test scenarios that resemble a real-time implementation.
 
-A Persona is a fictional character/user profile created to represent a user type that might use a product/or a service in a similar way. Persona-based testing is a software testing technique that puts software testers in the customer's shoes, assesses their needs from the software and thereby determines use cases/scenarios that the customers will execute. The persona's needs may be addressed through any of the following.&#x20;
+A Persona is a fictional character/user profile created to represent a user type that might use a product/or a service in a similar way. Persona-based testing is a software testing technique that puts software testers in the customer's shoes, assesses their needs from the software and thereby determines use cases/scenarios that the customers will execute. The persona's needs may be addressed through any of the following.
 
-* Functionality &#x20;
-* Deployability &#x20;
-* Configurability &#x20;
+* Functionality
+* Deployability
+* Configurability
 * Customizability
 
-The verification methods may differ based on how the need was addressed.&#x20;
+The verification methods may differ based on how the need was addressed.
 
-### Verified configuration&#x20;
+### Verified configuration
 
-Verification is performed on various configurations as mentioned below&#x20;
+Verification is performed on various configurations as mentioned below
 
-* Default configuration - with 7 Lang&#x20;
+* Default configuration - with 7 Lang
 * English
 * French
 * Arabic
@@ -70,13 +69,13 @@ Verification is performed on various configurations as mentioned below&#x20;
 * Kannada
 * Portuguese
 
-The UI will render in all the above languages, but the PDF file after download will only be in English language as Certify is currently only supporting English. When any language is selected in UI, as a fallback, the PDF will be in English.&#x20;
+The UI will render in all the above languages, but the PDF file after download will only be in English language as Certify is currently only supporting English. When any language is selected in UI, as a fallback, the PDF will be in English.
 
 ### Feature Health
 
-<figure><img src="../../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
-### Test execution statistics&#x20;
+### Test execution statistics
 
 #### Functional test results
 
@@ -128,7 +127,7 @@ The functional and test rig code base branch, which is used for the above metric
 
 ### Detailed Test Metrics
 
-Below are the detailed test metrics by performing manual/automation testing. The project metrics are derived from Defect density, Test coverage, Test execution coverage, test tracking and efficiency.&#x20;
+Below are the detailed test metrics by performing manual/automation testing. The project metrics are derived from Defect density, Test coverage, Test execution coverage, test tracking and efficiency.
 
 The various metrics that assist in test tracking and efficiency are as follows:
 

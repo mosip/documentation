@@ -322,7 +322,7 @@ Therefore:
 * But Inji Verify cannot yet generate the VP request for the web-based wallet flow
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption><p><strong>Presentation Request from Verifier</strong></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (1).png" alt=""><figcaption><p><strong>Presentation Request from Verifier</strong></p></figcaption></figure>
 
 <figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption><p><strong>Credential Selection Panel from Verifier</strong></p></figcaption></figure>
 

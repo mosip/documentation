@@ -167,7 +167,7 @@ This method of VC download illustrates the **OpenID4VCI** method of download usi
 
 This method of VC download illustrates the **OpenID4VCI** method of download using KBI (Knowledge Based Identification). In this, eSignet plays the authentication, authorisation and credential issuance end point to connect to the credential provider. To understand more about Onboarding Mimoto (Inji BFF) as an OIDC client to support credential issuance from any issuer who supports **OpenID4VCI** protocol, refer [here](https://docs.mosip.io/inji/inji-mobile-wallet/customization-overview/credential_providers).
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 **Appendix**:
 

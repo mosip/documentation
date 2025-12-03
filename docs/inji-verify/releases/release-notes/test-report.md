@@ -4,23 +4,23 @@
 
 The scope of testing is to verify fitment to the specification from the perspective of the following functions:
 
-●     Functionality&#x20;
+● Functionality
 
-●     Deployability&#x20;
+● Deployability
 
-●     Configurability&#x20;
+● Configurability
 
-●     Customizability
+● Customizability
 
 Verification is performed not only from the end user perspective but also from the System Integrator (SI) point of view. Hence Configurability and Extensibility of the software is also assessed. This ensures readiness of software for use in multiple countries. Since MOSIP is an “API First” product platform.
 
 **Testing scope has been focused around the below features:**
 
-●     Inji Verify Home page
+● Inji Verify Home page
 
-●     Verify Scan Feature
+● Verify Scan Feature
 
-●     Verify Upload Feature
+● Verify Upload Feature
 
 Below are the combinations that QA verified and Certified Inji Verify:
 
@@ -46,13 +46,13 @@ Persona based approach has been adopted to perform the IV\&V, by simulating test
 
 A Persona is a fictional character/user profile created to represent a user type that might use a product/or a service in a similar way. Persona based testing is a software testing technique that puts software testers in the customer's shoes, assesses their needs from the software and thereby determines use cases/scenarios that the customers will execute. The persona needs may be addressed through any of the following functions.
 
-●     Functionality&#x20;
+● Functionality
 
-●     Deployability&#x20;
+● Deployability
 
-●     Configurability&#x20;
+● Configurability
 
-●     Customizability
+● Customizability
 
 The verification methods may differ based on how the need was addressed.
 
@@ -60,11 +60,11 @@ The verification methods may differ based on how the need was addressed.
 
 Verification is performed on various configurations as mentioned below
 
-&#x20;    ●        Default configuration - with 1 language which is **English**.
+● Default configuration - with 1 language which is **English**.
 
 ## Feature Health <a href="#id-1t3h5sf" id="id-1t3h5sf"></a>
 
-<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Test execution statistics <a href="#id-4d34og8" id="id-4d34og8"></a>
 
@@ -89,8 +89,8 @@ Below are the detailed test metrics by performing manual/automation testing. The
 
 The various metrics that assist in test tracking and efficiency are as follows:
 
-●  Passed Test Cases Coverage: It measures the percentage of passed test cases. (Number of passed tests / Total number of tests executed) x 100.
+● Passed Test Cases Coverage: It measures the percentage of passed test cases. (Number of passed tests / Total number of tests executed) x 100.
 
-●  Failed Test Case Coverage: It measures the percentage of all the failed test cases. (Number of failed tests / Total number of test cases executed) x 100.
+● Failed Test Case Coverage: It measures the percentage of all the failed test cases. (Number of failed tests / Total number of test cases executed) x 100.
 
 Inji-Verify 0.8.0 - Verification - Report
