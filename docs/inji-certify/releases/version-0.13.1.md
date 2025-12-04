@@ -1,34 +1,30 @@
 # Version 0.13.1
 
-Coming Soon!
-
-
-
-Release Version: v0.13.1
+**Release Version**: v0.13.1
 
 **Release Type:** Developer Release
 
-**Release Date:** _Coming Soon_
+**Release Date:** <mark style="color:red;">**Coming Soon!**</mark>
 
-#### **Overview** <a href="#overview" id="overview"></a>
+### **Overview** <a href="#overview" id="overview"></a>
 
-This patch release includes an automation bug fix required to support the new features introduced in version 0.13.0.
+Inji Certify v0.13.1 release includes an automation bug fix required to support the new features introduced in version 0.13.0.
 
-**Major Highlights / Features**
+### **Major Highlights / Features**
 
 * Corrected the certificate path in the automation scripts to ensure the appropriate certificates are used for generating biometric data during prerequisite creation for MOSIP ID use cases.
 
-#### Bug Fixes <a href="#bug-fixes" id="bug-fixes"></a>
+### Bug Fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
-| **JIRA**                                                          | **Description**                                    |
+| JIRA                                                              | Description                                        |
 | ----------------------------------------------------------------- | -------------------------------------------------- |
 | [INJICERT-1279](https://mosip.atlassian.net/browse/INJICERT-1279) | Authenticate user API failing with test automation |
 
-#### Repository Released <a href="#repository-released" id="repository-released"></a>
+### Repository Released <a href="#repository-released" id="repository-released"></a>
 
-| **Repository** | **Version** |
-| -------------- | ----------- |
-| inji-certify   | v0.13.1     |
+| Repository   | Version |
+| ------------ | ------- |
+| inji-certify | v0.13.1 |
 
 ### Known Issues <a href="#known-issues" id="known-issues"></a>
 
@@ -40,10 +36,7 @@ Below is the list of known issues related to the release v0.13.1. To access all 
 
 ### Compatible Modules <a href="#compatible-modules" id="compatible-modules"></a>
 
-| **Repositories** | **Version** |
-| ---------------- | ----------- |
-
-| **Repositories**      | **Version**                                                                     |
+| Repositories          | Version                                                                         |
 | --------------------- | ------------------------------------------------------------------------------- |
 | eSignet               | [v1.6.2](https://github.com/mosip/esignet/tree/v1.6.2)                          |
 | IDA                   | [1.2.1.0](https://github.com/mosip/id-authentication/tree/v1.2.1.0)             |

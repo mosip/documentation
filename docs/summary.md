@@ -171,6 +171,7 @@
   * [Local Setup](inji-certify/build-and-deploy/local-setup.md)
   * [Deploy Inji Certify](inji-certify/build-and-deploy/deploy-inji-certify.md)
 * [Releases](inji-certify/releases/README.md)
+  * [Version 0.13.1](inji-certify/releases/version-0.13.1.md)
   * [Version 0.13.0](inji-certify/releases/version-0.13.0/README.md)
     * [Test Report](inji-certify/releases/version-0.13.0/test-report.md)
   * [Version 0.12.2](inji-certify/releases/version-0.12.2/README.md)
@@ -190,7 +191,6 @@
     * [Test Report](inji-certify/releases/version-0.9.0/test-report.md)
   * [Version 0.8.1](inji-certify/releases/release-notes.md)
   * [Version 0.8.0](inji-certify/releases/version-0.8.0.md)
-  * [Version 0.13.1](inji-certify/releases/version-0.13.1.md)
 * [FAQ](inji-certify/faq/README.md)
   * [FAQ](inji-certify/faq/faq.md)
 
