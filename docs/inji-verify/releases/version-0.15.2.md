@@ -4,7 +4,7 @@
 
 **Support**: Patch Release
 
-**Release Date**: 2nd Dec, 2025
+**Release Date**: 4th December, 2025
 
 ### Overview
 
@@ -51,5 +51,5 @@ The following table outlines the tested and certified compatibility of Inji Veri
 Please refer to the list of items covered as part of [0.15.0](https://docs.inji.io/inji-verify/releases/version-0.15.0) and [0.15.1](https://docs.inji.io/inji-verify/releases/version-0.15.1) release.
 
 * [Feature documentation](../overview/features.md)
-* [API Documentation](https://mosip.stoplight.io/studio/inji-verify)
+* [API Documentation](https://mosip.stoplight.io/docs/inji-verify/63da8fc2ca609-open-id-4-vp-verifier-api-inji-verify)
 * [Collab Guide](../functional-overview/releases-1/inji-verify-collab-guide.md)

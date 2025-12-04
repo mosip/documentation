@@ -4,11 +4,17 @@ icon: rocket-launch
 
 # Releases
 
-**Version**: **0.15.0**
+**Version**: **0.15.2**
 
-* Name: Inji Verify v0.15.0
+* Name: Inji Verify v0.15.2
+* 4th December, 2025
+* [Release Notes](version-0.15.2.md)
+
+**Version**: **0.15.1**
+
+* Name: Inji Verify v0.15.1
 * 4th November, 2025
-* [Release Notes](version-0.15.1.md)
+* [Release Notes](https://docs.inji.io/inji-verify/releases/version-0.15.1)
 
 **Version**: **0.15.0**
 
