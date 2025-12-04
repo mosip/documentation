@@ -41,5 +41,8 @@ eSignet currently supports the below ACR values:
   For Knowledge Based identification(KBI), demographic data based authentication.
 
 {% hint style="info" %}
-**Note:** acr\_values request parameter in the `/authorize` request takes the above values as a space-separated list in any combination.
+**Note:**&#x20;
+
+* acr\_values request parameter in the `/authorize` request takes the above values as a space-separated list in any combination.
+* Wallet binding is a separate process where the RSA public key and the individual ID are shared with the server, and the server then returns the signed certificate to the wallet.
 {% endhint %}

@@ -1,16 +1,22 @@
 # Credential Holder
 
+#### Digital Wallet Credential Management <a href="#digital-wallet-credential-management-only-heading-update" id="digital-wallet-credential-management-only-heading-update"></a>
+
 A digital wallet that aims to function as a credential holder application in eSignet must go through the onboarding process as a relying party. This document outlines the necessary steps for a wallet to utilize eSignet for downloading credentials issued by a VC Issuer using the[ OpenID4VCI authorization code flow](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html#name-authorization-code-flow).
 
 The sequence diagram below illustrates the steps involved in the authorization code flow that are required for downloading a verified credential.
 
+#### Sequence Diagram <a href="#sequence-diagram-only-heading-update" id="sequence-diagram-only-heading-update"></a>
+
 <figure><img src="../../../../.gitbook/assets/auth-code-flow.png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="warning" %}
 **Note**:
 
 * Currently, only the `ldp_vc` format in the [Credential request](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html#name-credential-request-4) is supported.
 * Also, the [Pre-Authorized Code Flow](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html#name-pre-authorized-code-flow) is not supported as yet.
 * The `private-key-jwt` is supported to enforce better security.
+{% endhint %}
 
 {% hint style="info" %}
 To gain a better understanding of the VC Issuance flow in eSignet, please refer to the activity diagram provided in the [VC Issuance Plugin](https://docs.inji.io/inji-certify/overview#verifiable-credentials-issuance-through-inji-certify) document.

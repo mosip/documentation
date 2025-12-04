@@ -1,5 +1,7 @@
 # Identity Verifier Plugin
 
+### What is Identity Verifier Plugin? <a href="#what-is-identity-verifier-plugin-only-heading-update" id="what-is-identity-verifier-plugin-only-heading-update"></a>
+
 Identity Verifier plugin helps an external relying party to come as a trusted eKYC partner (verifier). The plugin is used by the verifier to verify an authenticated user (who already signed up with eSignet). An 'authenticated user' can now go to the signup portal, and choose from the list of trusted verifiers, and go through the verification process to update his/her profile with verification metadata and mark claims as verified. With this identity Verifier plugin a video based online verification process has been designed.
 
 The video based process can be used to verify for following:
@@ -41,9 +43,10 @@ The signup service has a provision to add any steps between the **start** and **
 
 Refer to signup-idv\_mock-identity-verifier.json the sample workflow details file. Note the file name is prepended with constant "signup-idv\_"
 
+### Sequence Diagram <a href="#sequence-diagram-only-heading-update" id="sequence-diagram-only-heading-update"></a>
+
 Please refer to the sequence diagram below for the detailed working flow of the identity verifier plugin.
 
 <figure><img src="../../../.gitbook/assets/Integration_Verifier.png" alt=""><figcaption><p>Integration Verifier</p></figcaption></figure>
 
 Please[ refer here](https://github.com/mosip/esignet-signup/blob/master/signup-integration-api/src/main/java/io/mosip/signup/api/spi/IdentityVerifierPlugin.java) for the Identity Verifier Plugin reference implementation.
-

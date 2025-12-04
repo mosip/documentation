@@ -1,6 +1,6 @@
 # jwks.json
 
-## Overview: <a href="#overview" id="overview"></a>
+## Overview <a href="#overview" id="overview"></a>
 
 The JSON Web Key Set (JWKS) is a collection of public keys used to verify any JSON Web Token (JWT) issued by the Authorization Server. These keys are signed using the RS256 signing algorithm and are exposed through the JWKS well-known endpoint for relying parties to fetch and use for token verification.
 

@@ -65,7 +65,7 @@
     * [Components - eSignet](esignet-authentication/develop/components.md)
     * [Configure eSignet](esignet-authentication/develop/configuration/README.md)
       * [ACR](esignet-authentication/develop/configuration/acr.md)
-      * [Claims](esignet-authentication/develop/configuration/claims.md)
+      * [Claims in Authentication and Authorization](esignet-authentication/develop/configuration/claims.md)
       * [Login ID Configuration in eSignet](esignet-authentication/develop/configuration/login-id-configuration-in-esignet.md)
       * [Purpose-Based UI Rendering in eSignet](esignet-authentication/develop/configuration/purpose-based-ui-rendering-in-esignet.md)
       * [.well-known](esignet-authentication/develop/configuration/.well-known/README.md)

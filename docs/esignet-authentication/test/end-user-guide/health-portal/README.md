@@ -4,6 +4,16 @@ description: 'Explore eSignet Authentication: Your Interactive Health Portal Exp
 
 # Health Portal
 
-**Welcome to the eSignet Health Portal** – your interactive hub for exploring the full potential and versatility of eSignet authentication! Hosted on the secure MOSIP Collab sandbox environment, this portal offers you a seamless, hands-on experience with eSignet’s robust features. Whether you’re using a real MOSIP ID or a mock ID, the Health Portal gives you access to a wide array of authentication options, including OTP, biometrics, and the INji wallet, ensuring a flexible and secure login experience.
+### **Experience eSignet in Action Through Our Demo Health Portal** <a href="#experience-esignet-in-action-through-our-demo-health-portal" id="experience-esignet-in-action-through-our-demo-health-portal"></a>
 
-By simply providing your National ID (UIN), you can dive into a personalized and secure authentication journey. The Health Portal not only lets you test various authentication methods but also helps you discover the power of eSignet’s multi-modal capabilities. Whether you’re exploring cutting-edge login methods or evaluating system performance, the Health Portal is the perfect environment to experience the future of secure authentication with eSignet.
+Explore eSignet in action through a **Health Services Portal** designed to mimic the role of a relying party. This portal allows you to experience how eSignet seamlessly integrates into any service application that requires secure resident authentication.
+
+Hosted on the **MOSIP Collab Sandbox**, this portal gives you an interactive space to try out eSignet as an actual user would. With just your National ID (UIN), you can explore:
+
+* [**OTP authentication**](login-with-otp.md)
+* [**Biometric authentication**](login-with-biometrics.md)
+* [**INJI Wallet authentication**](login-with-qr-code.md)
+
+Real MOSIP ID or mock ID — both work. In just a few clicks, you get a secure, smooth, and personalized login journey.
+
+Use this demo portal as your **hands-on playground** to understand eSignet’s multi-modal capabilities and experience how easily it fits into service portals across sectors — health, education, social welfare, or any platform that needs trusted resident authentication.

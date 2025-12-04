@@ -1,6 +1,9 @@
 # Signup and Login with OTP for Verified Claims
 
-eSignet Signup service can be used by users to register and create their user profiles seamlessly. The below mentioned steps outline the signup process in detail:
+### Sign up and Try Video eKYC <a href="#sign-up-and-try-video-ekyc" id="sign-up-and-try-video-ekyc"></a>
+
+Use the eSignet Signup service to register and create your user profile.\
+Follow the steps below to complete registration and experience the **video eKYC** verification flow.
 
 1. The user navigates to the portal.
 2. They click on the **Sign in with eSignet** to initiate the registration process.
