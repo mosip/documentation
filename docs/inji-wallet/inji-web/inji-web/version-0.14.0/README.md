@@ -98,4 +98,4 @@ Below is the list of bug fixes as part of the [**0.14.0**](https://app.gitbook.c
 * [Feature Documentation](../../overview/features/) - Contains detailed explanations of all available features of Inji Web Waller and its usage.
 * [Backend Services ](../../technical-overview/backend-services/)- Provides detailed instructions to set up the backend for the Inji Web Wallet.
 * [End User Guide](../../functional-overview/end-user-guide.md) - Offers end-to-end guidance for end users on setup and daily usage.
-* [API Documentation](https://mosip.stoplight.io/docs/mimoto/k6907m3dzc1gi-mimoto) - Includes comprehensive details of all APIs, endpoints, request/response formats, and examples.
+* [API Documentation](https://docs.mosip.io/inji/inji-web/technical-overview/backend-services/mimoto-bff) - Includes comprehensive details of all APIs, endpoints, request/response formats, and examples.

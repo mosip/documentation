@@ -124,5 +124,5 @@ Below is the list of known issues for Inji Web Wallet as of version [0.13.0](htt
 * [Feature Documentation](https://docs.inji.io/inji-wallet/inji-web/overview/features)
 * [Integration Guides](https://docs.inji.io/inji-wallet/inji-web/technical-overview)
 * [User Guide](https://docs.inji.io/inji-wallet/inji-web/functional-overview/end-user-guide)
-* [API Documentation](https://docs.inji.io/inji-wallet/inji-web/technical-overview/backend-services/mimoto-bff)
+* [API Documentation](https://docs.mosip.io/inji/inji-web/technical-overview/backend-services/mimoto-bff)
 * [QA Report](test-report.md)

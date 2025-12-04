@@ -2,7 +2,7 @@
 
 **Release Name:** Inji Web Wallet 0.14.1
 
-**Release Type:** Patch&#x20;
+**Release Type:** Patch
 
 **Release Date:** 25th Sept, 2025
 
@@ -58,6 +58,6 @@ This patch is focused solely on infrastructure image updates. No new documentati
 * [Feature Documentation](https://docs.inji.io/inji-wallet/inji-web/overview/features) - Contains detailed explanations of all available features of Inji Web Waller and its usage.
 * [Backend Services ](https://docs.inji.io/inji-wallet/inji-web/technical-overview/backend-services)- Provides detailed instructions to set up the backend for the Inji Web Wallet.
 * [End User Guide](https://docs.inji.io/inji-wallet/inji-web/functional-overview/end-user-guide) - Offers end-to-end guidance for end users on setup and daily usage.
-* [API Documentation](https://mosip.stoplight.io/docs/mimoto/k6907m3dzc1gi-mimoto) - Includes comprehensive details of all APIs, endpoints, request/response formats, and examples.
+* [API Documentation](https://docs.mosip.io/inji/inji-web/technical-overview/backend-services/mimoto-bff) - Includes comprehensive details of all APIs, endpoints, request/response formats, and examples.
 
-\
+\\
