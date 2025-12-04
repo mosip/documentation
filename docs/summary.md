@@ -42,7 +42,7 @@
   * [Inji](interoperability/inji.md)
   * [OpenCRVS](interoperability/opencrvs.md)
 * [Deploy](build-and-deploy/README.md)
-  * [Deployment Guid](build-and-deploy/deployment-guid.md)
+  * [Deployment Guide](build-and-deploy/deployment-guide.md)
   * [Deployment Architecture](build-and-deploy/deployment-arch/README.md)
     * [eSignet 1.5.0 - On-Prem Installation Guide](build-and-deploy/deployment-arch/on-prem-installation-guidelines.md)
     * [eSignet 1.6.1 - On-Prem Installation Guide](build-and-deploy/deployment-arch/deployment-guide-1.6.0.md)
