@@ -8,7 +8,7 @@
 
 ## **Overview**
 
-We’re excited to announce the release of [**eSignet v1.7.0**](https://github.com/mosip/esignet/tree/release-1.7.x), a feature-rich upgrade over v1.6.1 that introduces major advancements in security, enhanced user interaction flexibility, and improved deployment efficiency. This release includes full support for the **FAPI 2.0 Security Profile** (<mark style="background-color:red;">link to feature page</mark>), implemented through multiple industry-standard RFCs, and brings dynamic, schema-driven UI enhancements for both Sign-Up and KBI authentication—while ensuring complete backward compatibility with existing authentication flows.
+We’re excited to announce the release of [**eSignet v1.7.0**](https://github.com/mosip/esignet/tree/release-1.7.x), a feature-rich upgrade over v1.6.1 that introduces major advancements in security, enhanced user interaction flexibility, and improved deployment efficiency. This release includes full support for the [**FAPI 2.0 Security Profile**](https://docs.esignet.io/esignet-authentication/features#fapi-2.0-security-profile), implemented through multiple industry-standard RFCs, and brings dynamic, schema-driven UI enhancements for both Sign-Up and KBI authentication—while ensuring complete backward compatibility with existing authentication flows.
 
 ## **Major Highlights**
 
@@ -32,14 +32,14 @@ If a client does **not** enforce the FAPI 2.0 profile, their authentication flow
 
 ### **Enhancements**
 
-#### [**Dynamic Schema-Driven Sign-Up UI**](https://docs.esignet.io/esignet-signup/features#dynamic-signup-form-schema-driven-ui)
+#### **Dynamic Schema-Driven Sign-Up UI**
 
-The Sign-Up experience has been improved with the UI that can now be generated dynamically based on a backend-driven UI schema.\
+The Sign-Up experience has been improved with the [UI that can now be generated dynamically based on a backend-driven UI schema](https://docs.esignet.io/esignet-signup/features#dynamic-signup-form-schema-driven-ui).\
 This leverages a JSON form-builder library for improved flexibility and faster configuration changes.
 
-#### [**Dynamic Schema-Driven KBI Authentication UI**](https://docs.esignet.io/esignet-signup/features#id-2.-signup-with-video-ekyc)
+#### **Dynamic Schema-Driven KBI Authentication UI**
 
-The KBI authentication UI is now also fully dynamic and powered by the same schema-based JSON form builder, enhancing consistency and maintainability.
+[The KBI authentication UI](https://docs.esignet.io/esignet-signup/features#id-2.-signup-with-video-ekyc) is now also fully dynamic and powered by the same schema-based JSON form builder, enhancing consistency and maintainability.
 
 #### **Improved Deployment Scripts**
 
@@ -49,7 +49,7 @@ Deployment scripts for the eSignet service have been refined to simplify setup, 
 
 Several known issues from the previous release have been addressed to improve platform stability and performance. Please refer to the [link here](https://mosip.atlassian.net/issues/?jql=issuetype%20%3D%20Bug%20and%20project%20%3D%20eSignet%20and%20%22Release%20Number%5BLabels%5D%22%20%3D%20eSignet_v1.7.0\&selectedIssue=ES-2730) for the complete list of resolved issues.
 
-\<Add some bugs in tabular format>
+<mark style="color:red;">\<Add some bugs in tabular format></mark>
 
 ### Known Issues
 
@@ -72,7 +72,7 @@ Please [refer here](https://mosip.atlassian.net/issues/?jql=issuetype%20%3D%20Bu
 
 ### Compatible Modules
 
-#### eSignet compatibility with MOSIP&#x20;
+#### eSignet compatibility with MOSIP
 
 | Module/Repo | Compatible Version                                                                                                                  |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------------- |
@@ -85,7 +85,7 @@ Please [refer here](https://mosip.atlassian.net/issues/?jql=issuetype%20%3D%20Bu
 | ----------- | --------------------------------------------------------------------------- |
 | Sunbird     | [v2.0.0-rc3](https://github.com/Sunbird-RC/sunbird-rc-core/tree/v2.0.0-rc3) |
 
-#### eSignet Signup compatibility with MOSIP&#x20;
+#### eSignet Signup compatibility with MOSIP
 
 | Module/Repo                 | Compatible Version                                                                                                                  |
 | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |

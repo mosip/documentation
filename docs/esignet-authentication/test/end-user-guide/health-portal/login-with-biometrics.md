@@ -36,4 +36,4 @@ The consent screen is presented solely to the resident if consent has not previo
 
 7\. The resident clicks on the _**Allow**_ button. The system navigates the resident to the User Profile page and the page displays their details based on the consent provided.
 
-![Profile page](../../../../.gitbook/assets/new8-healthServices-user-profile.png)
+![Profile page](<../../../../.gitbook/assets/new8-healthServices-user-profile (1).png>)
