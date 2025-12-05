@@ -1,7 +1,5 @@
 # Deployment Guide
 
-## Deployment Guid
-
 <mark style="background-color:red;">Coming Soon!</mark>
 
 ### Overview
@@ -277,7 +275,7 @@ Do you want to deploy postgres in the postgres namespace? Please opt for 'n' if 
 **Prompts**:
 
 1. y - If you want to install postgres
-2. n - If you already have a postgres server deployed, **The set of questions below (b-e) are prompted**
+2. n - If you already have a postgres server deployed
 3. \["postgreshostname"] = "Please provide the hostname for the postgres server:"
 4. \["postgresport"] = "Please provide the port number for the postgres server:"
 5. \["postgresusername"] = "Please provide the username for the postgres server:"
@@ -290,7 +288,7 @@ Do you want to deploy redis in the redis namespace? Press enter for default y"
 **Prompts**:
 
 1. y - If you want to install redis
-2. n - If you already have a redis server deployed **The set of questions below (b-d) are prompted**
+2. n - If you already have a redis server deployed
 
 ```
 1.  ["redishostname"] = "Please provide the hostname for the redis server:"
@@ -312,17 +310,19 @@ Do you want to install captcha validation service? Press enter for default y
 
 **Prompts**:
 
-1. y - If you want to install captcha validation service, **The below set of questions \[c-d] is prompted only when the answer to the above is 'y'.**
+1. y - If you want to install captcha validation service
 
 ```
 1.  ["captchasitekey"] = "Please provide the captcha site key"
-```
-
-```
 2.  ["captchasecretkey"] = "Please provide the captcha secret key"
-
-3.  If opted 'n' what needs to be done <!-- explain -->
 ```
+
+<pre><code><strong>2. If you are opting for 'n', the captcha service installation will be skipped.
+</strong><strong>Please make sure to update the below property is blank in the env properties:
+</strong>mosip.esignet.captcha.required=
+</code></pre>
+
+
 
 Prerequisite installation is complete at this stage.
 
@@ -439,12 +439,14 @@ If any error occurs during eSignet installation, you are able to start the eSign
 Once eSignet installation is completed, now, you are prompted to provide relevant inputs for completing oidc ui deployment:
 
 1. `esignetthemes` = Please provide the theme for the eSignet UI. Please choose between 'blue' or 'orange' for esignet default theme: Press enter for the default theme. Please provide URL for the custom theme"
-2. `defaultlang` = Please choose the default lang for esignet. Please press enter for en: " - We should provide the existing list.
+2. `defaultlang` = Please choose the default lang for esignet. Please press enter for en
 3. `idprovidername` = Please provide the name for eSignet: (Note: This name will be used instead of eSignet on the login page and in other places)"
 
-**Mock Relying Party Installation**
+### **Onboarding**
 
 If you have chosen to install eSignet with mosip ID then the MISP onboarding should be initiated and completed successfully, however if you choose to continue with mock or custom plugin, no MISP onboarding is required, and this step should be skipped.
+
+#### Onboarding eSignet as MISP partner when using the MOSIP ID plugin
 
 * Use the onboarder script to register eSignet as a MISP partner and configure the OIDC client.
 * Update any required properties (e.g., MOSIP IDA domain names, client secrets) as per your environment.
@@ -454,6 +456,18 @@ Refer to the [official onboarding documentation](https://github.com/mosip/esigne
 eSignet installation is completed at this step.
 
 > Note: You can refer to the deployment guide to know more about the mock relying party portal installation, having mock relying party portal installed will be helpful to verify the complete eSignet flow.
+
+Please make this as section as Onboarding which will have 2 points :
+
+#### Onboarding relying parties&#x20;
+
+MOCK
+
+* Snippet from openapi yaml v3 version of client management endpoint and MOSIP ID
+
+Sunbird&#x20;
+
+Point to PMS documentation.
 
 ### Verify Deployment
 
