@@ -4,7 +4,7 @@
 
 **Release Type:** Developer Release
 
-**Release Date:** <mark style="color:red;">**Coming Soon!**</mark>
+**Release Date:** 05th December, 2025
 
 ### **Overview** <a href="#overview" id="overview"></a>
 
