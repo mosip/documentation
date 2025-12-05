@@ -28,7 +28,7 @@ eSignet Auth allows service providers to define and configure authentication fac
 
 eSignet’s KBI authentication flow now supports **dynamic, UI Schema–based form rendering**, replacing the earlier fixed and static field layout. Relying Parties can now **configure and adapt the KBI form fields** as per their verification needs, offering greater flexibility and customization without code changes.
 
-_For detailed configuration and supported input types, please refer to the technical guide on GitHub._
+_For detailed configuration and supported input types, please refer to the_ [_technical guide on GitHub_](https://github.com/mosip/esignet/blob/master/docs/design/dynamic-forms.md)_._
 {% endhint %}
 
 * **Biometric Authentication** Authentication using biometrics through devices compliant with IEEE P3167 SBI 2.0 standards.
@@ -77,11 +77,11 @@ eSignet handles high-assurance identity and authentication transactions. Adoptin
 
 To align eSignet with the FAPI 2.0 profile, v1.7.0 introduces support for three RFCs that together harden authorization flows:
 
-* [**Pushed Authorization Requests (PAR)**](features.md#what-is-par-sub-section-of-the-fapi-2.0-security-profile-section-above)  — moves authorization requests from the browser front-channel to a secure server-to-server POST. PAR prevents exposure and tampering of authorization parameters (redirect URIs, scopes, claims) in browser URLs and ensures the authorization server processes exactly what the client intended.
+* [**Pushed Authorization Requests (PAR)**](features.md#what-is-par-sub-section-of-the-fapi-2.0-security-profile-section-above) — moves authorization requests from the browser front-channel to a secure server-to-server POST. PAR prevents exposure and tampering of authorization parameters (redirect URIs, scopes, claims) in browser URLs and ensures the authorization server processes exactly what the client intended.
 * **Demonstrating Proof-of-Possession (DPoP)** — binds access tokens to a client-held cryptographic key and requires the client to present a signed, per-request proof. DPoP makes stolen tokens unusable by third parties and prevents replay or misuse of intercepted tokens.
 * **Authorization Server Issuer Identification (OIDC Metadata checks)** — enforces clear, verifiable issuer metadata so clients can confirm they are interacting with the intended authorization server. This prevents environment mix-ups and server impersonation attacks (e.g., sandbox vs production confusion or malicious endpoints).
 
-#### **What is PAR?**  <a href="#what-is-par-sub-section-of-the-fapi-2.0-security-profile-section-above" id="what-is-par-sub-section-of-the-fapi-2.0-security-profile-section-above"></a>
+#### **What is PAR?** <a href="#what-is-par-sub-section-of-the-fapi-2.0-security-profile-section-above" id="what-is-par-sub-section-of-the-fapi-2.0-security-profile-section-above"></a>
 
 Pushed Authorization Requests (PAR) introduce a more secure way for a Relying Party (RP) to initiate the OAuth/OIDC authorization flow. Instead of sending sensitive authorization parameters (such as redirect URIs, scopes, claims, and client details) through a browser redirect, the RP “pushes” these parameters directly to eSignet using a secure, back-channel POST request. eSignet returns a **request URI**, which is then used in the front-channel redirect to complete the flow.\
 This design ensures that the _actual authorization request_ is exchanged only between trusted servers and never exposed to the user’s browser, links, logs, or intermediaries.
@@ -207,6 +207,3 @@ To ensure inclusive access for diverse user groups, eSignet offers multilingual 
 
 [How to remove a language from the eSignet default setup?](https://docs.esignet.io/general/faq#how-to-remove-a-language-from-the-esignet-default-setup)
 {% endhint %}
-
-
-
