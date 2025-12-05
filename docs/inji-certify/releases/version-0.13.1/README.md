@@ -4,7 +4,7 @@
 
 **Release Type:** Developer Release
 
-**Release Date:** 05th December, 2025
+**Release Date:** 5th December, 2025
 
 ### **Overview** <a href="#overview" id="overview"></a>
 
@@ -22,9 +22,9 @@ Inji Certify v0.13.1 release includes an automation bug fix required to support 
 
 ### Repository Released <a href="#repository-released" id="repository-released"></a>
 
-| Repository   | Version |
-| ------------ | ------- |
-| inji-certify | v0.13.1 |
+| Repository   | Version                                                       |
+| ------------ | ------------------------------------------------------------- |
+| inji-certify | [v0.13.1](https://github.com/mosip/inji-certify/tree/v0.13.1) |
 
 ### Known Issues <a href="#known-issues" id="known-issues"></a>
 

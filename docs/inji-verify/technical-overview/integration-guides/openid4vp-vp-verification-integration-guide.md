@@ -60,9 +60,9 @@ To use the component, you must host a verification backend that implements the O
 * The component expects these endpoints to be accessible via a base URL (verifyServiceUrl).
 {% endhint %}
 
-<mark style="color:$primary;background-color:$info;">**Example**</mark>
+**Example**
 
-<mark style="color:$primary;background-color:$info;">If you deploy the inji-verify/verify-service at:</mark>[<mark style="color:$primary;background-color:$info;">https://injiverify-service.example.com</mark>](https://injiverify-service.example.com)\ <mark style="color:$primary;background-color:$info;">Then use this as the verifyServiceUrl in the component:</mark>\ <mark style="color:$primary;background-color:$info;">verifyServiceUrl="</mark>[<mark style="color:$primary;background-color:$info;">https://injiverify-service.example.com/v1/verify</mark>](https://injiverify-service.example.com/v1/verify)"
+If you deploy the inji-verify/verify-service at:[https://injiverify-service.example.com](https://injiverify-service.example.com)\ Then use this as the verifyServiceUrl in the component:\ verifyServiceUrl="[https://injiverify-service.example.com/v1/verify](https://injiverify-service.example.com/v1/verify)"
 
 ### Installation
 
@@ -130,46 +130,41 @@ If you use presentationDefinition, **do not** pass `presentationDefinitionId`, a
 
 **Required Props**
 
-| Prop             | Type                 | Description                            |
-| ---------------- | -------------------- | -------------------------------------- |
-| verifyServiceUrl | string               | Base URL for your verification backend |
-| protocol         | string               | Protocol for QR (e.g.: "openid4vp://") |
-| clientId         | string               | Unique client identifier for the relaying party  |
-| onQrCodeExpired  | () => void           | Callback when QR expires               |
-| onError          | (err: Error) => void | Error handler callback                 |
+| Prop             | Type                 | Description                                     |
+| ---------------- | -------------------- | ----------------------------------------------- |
+| verifyServiceUrl | string               | Base URL for your verification backend          |
+| protocol         | string               | Protocol for QR (e.g.: "openid4vp://")          |
+| clientId         | string               | Unique client identifier for the relaying party |
+| onQrCodeExpired  | () => void           | Callback when QR expires                        |
+| onError          | (err: Error) => void | Error handler callback                          |
 
-
-**Note:**  
+**Note:**\
 `clientId` can be provided in either of the following formats:
 
-- **DID-based identifier:**  
+* **DID-based identifier:**\
   Example: `did:web:verifier.example.com`
-
-- **Standard URL or string:**  
+* **Standard URL or string:**\
   Example: `https://verifier.example.com` or `my-relaying-party`
-
-
 
 **Optional Props**
 
-| Prop           | Type            | Description                                         |
-| -------------- | --------------- | --------------------------------------------------- |
-| triggerElement | React.ReactNode | Element that triggers verification (e.g., a button) |
-| transactionId  | string          | Optional external tracking ID                       |
-| qrCodeStyles   | object          | Customize QR appearance (size, color, margin, etc.) |
-| isSameDeviceFlowEnabled | boolean | Enables Same-Device flow if true (default: true) |
+| Prop                    | Type            | Description                                         |
+| ----------------------- | --------------- | --------------------------------------------------- |
+| triggerElement          | React.ReactNode | Element that triggers verification (e.g., a button) |
+| transactionId           | string          | Optional external tracking ID                       |
+| qrCodeStyles            | object          | Customize QR appearance (size, color, margin, etc.) |
+| isSameDeviceFlowEnabled | boolean         | Enables Same-Device flow if true (default: true)    |
 
 ### Same Device Flow Support
+
 If `isSameDeviceFlowEnabled={true}` (default):
 
-- **On Mobile or Tablet:**  
-  The component automatically redirects the user to the OpenID4VP URL.  
-  - If multiple compatible wallet apps are installed, the OS prompts the user to select one.  
-  - If only one wallet app is available, it opens directly.
-
-- **On Desktop or when `isSameDeviceFlowEnabled={false}`:**  
+* **On Mobile or Tablet:**\
+  The component automatically redirects the user to the OpenID4VP URL.
+  * If multiple compatible wallet apps are installed, the OS prompts the user to select one.
+  * If only one wallet app is available, it opens directly.
+* **On Desktop or when `isSameDeviceFlowEnabled={false}`:**\
   The component displays a QR code for cross-device scanning. Users can scan the QR code with a wallet app on a separate device to complete verification.
-
 
 ### Integration Examples
 
@@ -222,7 +217,7 @@ If `isSameDeviceFlowEnabled={true}` (default):
 
 ## QR Code Verification
 
-This guide explains how to integrate the <mark style="color:$success;">**QR Code Verification**</mark> component into your React TypeScript project. The component enables two main verification flows:
+This guide explains how to integrate the **QR Code Verification** component into your React TypeScript project. The component enables two main verification flows:
 
 * **QR Code Scanning** – Allow users to scan a QR code for credential verification.
 * **Image Upload** – Let users upload an image containing a QR code for verification.

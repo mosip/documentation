@@ -7,8 +7,8 @@ icon: rocket-launch
 #### **Version: 0.13.1**
 
 * Name: **Release Version**: v0.13.1
-* Date: <mark style="color:red;">**Coming Soon!**</mark>
-* [Release Notes](version-0.13.1.md)
+* Date: 5th December, 2025
+* [Release Notes](version-0.13.1/)
 
 #### **Version: 0.13.0**
 
