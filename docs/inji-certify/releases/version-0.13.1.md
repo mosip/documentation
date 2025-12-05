@@ -30,9 +30,9 @@ Inji Certify v0.13.1 release includes an automation bug fix required to support 
 
 Below is the list of known issues related to the release v0.13.1. To access all known issues related to Inji Certify please click [**here**](https://mosip.atlassian.net/issues/INJICERT-852?filter=11419\&jql=project%20%3D%20%22Inji%20Certify%22%20AND%20issuetype%20%3D%20Bug%20%20AND%20labels%20not%20in%20%28API_Automation%2C%20AWSdevicefarm%2C%20device_specific%2C%20qa-inji-UI-auto%29%20%20and%20status%20NOT%20IN%20%28Closed%2C%20Fixed%2C%20Canceled%2CCancelled%29%20%20ORDER%20BY%20created%20DESC%2C%20updated%20DESC)
 
-| **JIRA** | **Description** |
-| -------- | --------------- |
-|          |                 |
+| **JIRA**                                                          | **Description**                            |
+| ----------------------------------------------------------------- | ------------------------------------------ |
+|  [INJICERT-43526](https://mosip.atlassian.net/browse/MOSIP-43526) |  Hardcoded domain in IDA automation script |
 
 ### Compatible Modules <a href="#compatible-modules" id="compatible-modules"></a>
 
@@ -52,4 +52,4 @@ Below is the list of known issues related to the release v0.13.1. To access all 
 * [Feature Documentation](https://docs.mosip.io/inji/inji-certify/functional-overview/features)
 * [Local Setup](https://docs.mosip.io/inji/inji-certify/build-and-deploy/local-setup)
 * [API Documentation](https://mosip.stoplight.io/docs/inji-certify/25f435617408e-inji-certify)
-* Test Report
+* [Test Report](https://github.com/mosip/test-management/tree/master/inji-certify/0.13.1)

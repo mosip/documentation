@@ -4,6 +4,12 @@ icon: rocket-launch
 
 # Releases
 
+#### **Version: 0.13.1**
+
+* Name: **Release Version**: v0.13.1
+* Date: <mark style="color:red;">**Coming Soon!**</mark>
+* [Release Notes](version-0.13.1.md)
+
 #### **Version: 0.13.0**
 
 * Name: Inji Certify 0.13.0
