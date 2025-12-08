@@ -77,129 +77,19 @@ eSignet handles high-assurance identity and authentication transactions. Adoptin
 
 To align eSignet with the FAPI 2.0 profile, v1.7.0 introduces support for three RFCs that together harden authorization flows:
 
-* [**Pushed Authorization Requests (PAR)**](features.md#what-is-par-sub-section-of-the-fapi-2.0-security-profile-section-above) — moves authorization requests from the browser front-channel to a secure server-to-server POST. PAR prevents exposure and tampering of authorization parameters (redirect URIs, scopes, claims) in browser URLs and ensures the authorization server processes exactly what the client intended.
+* **Pushed Authorization Requests (PAR)** — moves authorization requests from the browser front-channel to a secure server-to-server POST. PAR prevents exposure and tampering of authorization parameters (redirect URIs, scopes, claims) in browser URLs and ensures the authorization server processes exactly what the client intended.
 * **Demonstrating Proof-of-Possession (DPoP)** — binds access tokens to a client-held cryptographic key and requires the client to present a signed, per-request proof. DPoP makes stolen tokens unusable by third parties and prevents replay or misuse of intercepted tokens.
 * **Authorization Server Issuer Identification (OIDC Metadata checks)** — enforces clear, verifiable issuer metadata so clients can confirm they are interacting with the intended authorization server. This prevents environment mix-ups and server impersonation attacks (e.g., sandbox vs production confusion or malicious endpoints).
 
+{% hint style="success" %}
+FAPI 2.0 For a deeper understanding of FAPI 2.0 and the mechanisms implemented in eSignet, see the FAPI 2.0 Security Profile specification: https://openid.net/specs/fapi-security-profile-2\_0-final.html.
+{% endhint %}
 
-
-> FAPI 2.0
-For a deeper understanding of FAPI 2.0 and the mechanisms implemented in eSignet, see the FAPI 2.0 Security Profile specification: https://openid.net/specs/fapi-security-profile-2_0-final.html. 
-
-> Attacker model and mitigations with FAPI 2.0
+{% hint style="success" %}
+Attacker model and mitigations with FAPI 2.0
 
 FAPI 2.0 defends high-risk OAuth/OIDC flows against tampering, mix-up, phishing, token theft/replay, and leakage via front-channel exposure. To know more about this refer [here](https://openid.net/specs/fapi-2_0-attacker-model.html)
-
-
-<!--
-
-#### **What is PAR?** <a href="#what-is-par-sub-section-of-the-fapi-2.0-security-profile-section-above" id="what-is-par-sub-section-of-the-fapi-2.0-security-profile-section-above"></a>
-
-Pushed Authorization Requests (PAR) introduce a more secure way for a Relying Party (RP) to initiate the OAuth/OIDC authorization flow. Instead of sending sensitive authorization parameters (such as redirect URIs, scopes, claims, and client details) through a browser redirect, the RP “pushes” these parameters directly to eSignet using a secure, back-channel POST request. eSignet returns a **request URI**, which is then used in the front-channel redirect to complete the flow.\
-This design ensures that the _actual authorization request_ is exchanged only between trusted servers and never exposed to the user’s browser, links, logs, or intermediaries.
-
-#### **Why PAR was introduced**
-
-Traditional OAuth flows rely on front-channel redirects where authorization parameters appear in the URL. These URLs may pass through multiple layers—browser history, proxies, referrers, server logs—exposing sensitive data and enabling tampering. PAR eliminates these weaknesses by shifting the critical parts of the request to a protected server-to-server interaction.
-
-#### **What attacks PAR prevents**
-
-PAR strengthens authorization security by mitigating:
-
-* **Request Parameter Injection / Tampering:** Attackers cannot modify scopes, redirect URLs, or claims because these parameters are never in the browser.
-* **Open Redirect & Redirect URI Manipulation:** The server-to-server flow ensures redirect URIs are validated and bound to the pushed request.
-* **Phishing via Modified Authorization Requests:** Attackers cannot alter the authorization flow to trick users into consenting to malicious scopes.
-* **Exposure of Sensitive Parameters:** Prevents leakage through browser history, logs, referrers, or intermediary systems.
-* **Replay Attacks on Request Objects:** The request URI has a short validity and is bound to a specific pushed request, limiting misuse.
-
-#### **What can Relying Parties expect when integrating with PAR?**
-
-RPs adopting PAR with eSignet should expect:
-
-* A requirement to send authorization requests via a **secure POST request** to the `/par` endpoint.
-* eSignet will return a **request\_uri** and expiry value.
-* The browser redirect will use only the `request_uri`, keeping the full request confidential.
-* Reduced risk of invalid, manipulated, or tampered authorization requests.
-* Seamless compatibility with modern OAuth/OIDC libraries that support PAR.
-
-#### **Specification implemented**
-
-eSignet implements [**RFC 9126 – OAuth 2.0 Pushed Authorization Requests**](https://datatracker.ietf.org/doc/html/rfc9126), which standardizes this server-to-server mechanism for high-assurance authorization flows.
-
-\
-Refer to the **eSignet PAR documentation** in the GitHub repository for endpoint details, sample requests, and integration steps.
-
-#### **What is DPoP ?**
-
-Demonstrating Proof of Possession (DPoP) is a security mechanism designed to ensure that access tokens issued by eSignet cannot be used by anyone other than the client that originally obtained them.\
-In traditional OAuth flows, access tokens are often **bearer tokens**, meaning _anyone who has the token can use it_. DPoP strengthens this by binding each token to a public key generated by the RP. Every request to eSignet’s protected endpoints must include a **DPoP proof** — a signed JWT that proves the client holds the private key.
-
-This transforms access tokens from simple bearer tokens into **sender-constrained tokens**, making intercepting or stealing them useless.
-
-#### **Why DPoP was introduced**
-
-Bearer tokens, while convenient, pose a high risk in distributed environments. If intercepted in transit, logs, compromised apps, or browser storage, they can be reused by attackers.\
-DPoP ensures that even if a token leaks, it _cannot_ be used without the corresponding private key, which attackers do not possess.
-
-#### **What attacks DPoP prevents**
-
-DPoP prevents a set of high-impact token misuse scenarios, including:
-
-* **Token Replay Attacks** – Stolen tokens cannot be reused by attackers.
-* **Token Theft Via Browser or App Compromise** – Tokens are unusable without the private key.
-* **Interception by Malicious Intermediaries / Proxies** – Sender-constrained tokens render interception ineffective.
-* **Cross-Device Abuse** – Tokens are bound to the RP’s key, preventing use from another device or service.
-
-#### **Specification implemented**
-
-eSignet implements [**RFC 9449 – OAuth 2.0 Demonstrating Proof-of-Possession (DPoP)**](https://datatracker.ietf.org/doc/html/rfc9449), which defines the creation and verification of DPoP proofs and sender-constrained access tokens.
-
-#### **What should relying parties expect when integrating with eSignet?**
-
-Relying Parties integrating with DPoP in eSignet will need to:
-
-* Generate and manage a key pair (public/private) for DPoP.
-* Include a **DPoP proof JWT** in requests to token and resource endpoints.
-* Receive **DPoP-bound access tokens**, which only work when accompanied by valid proofs.
-* Ensure backend services can sign DPoP proofs (since private keys must never be exposed to browser clients).
-
-\
-Please refer to the **DPoP section in the eSignet documentation** on GitHub for implementation steps and example payloads.
-
-#### **What is Authorization Server Issuer Identification?**
-
-Authorization Server Issuer Identification ensures that a Relying Party (RP) can **cryptographically verify the identity of the Authorization Server (eSignet)** before processing tokens or responses issued by it.\
-Traditionally, OAuth/OIDC clients rely on the `issuer` value published in the `.well-known` metadata and assume that all tokens and endpoints they interact with belong to that same issuer.\
-However, sophisticated attacks—such as mix-up attacks—exploit situations where clients are tricked into sending tokens or requests to the wrong authorization server.
-
-To prevent this, the Authorization Server must include an **explicit** `iss` **(issuer) identifier** in authorization responses and tokens, allowing clients to ensure that the response actually originated from the expected authorization server.
-
-#### **What attacks this prevents**
-
-Authorization Server Issuer Identification primarily protects RPs against:
-
-* **Authorization Server Mix-Up Attacks** – Prevents attackers from redirecting the client to a malicious authorization server.
-* **Token Substitution Attacks** – Ensures tokens cannot be injected from another issuer.
-* **Cross-AS Confusion** – Prevents clients from accidentally mixing tokens from multiple identity providers.
-* **Phishing-style Authorization Redirections** – RP can verify it is interacting with the legitimate eSignet Authorization Server.
-
-By validating the `iss` claim, clients ensure strong trust in the source of all authorization artifacts.
-
-#### **Specification implemented**
-
-eSignet implements the [**RFC-9207** - **OAuth 2.0 Authorization Server Issuer Identifier specification**](https://datatracker.ietf.org/doc/html/rfc9207)
-
-#### **What can Relying Parties expect when integrating with this?**
-
-Relying Parties integrating with eSignet should expect the following behavior:
-
-* All authorization responses will include a mandatory `iss` **(issuer) parameter**.
-* RPs must validate that the issuer in the response **matches the issuer value retrieved from eSignet’s** `.well-known/openid-configuration`.
-* Token responses and ID tokens will remain consistent with the expected issuer to prevent cross-provider confusion.
-* RP libraries that support FAPI 2.0 or modern OIDC security profiles will automatically validate these issuer claims.
-* This significantly reduces the risk of authorization mix-up scenarios during integration.
-
--->
+{% endhint %}
 
 ## Customizable UI
 

@@ -18,69 +18,159 @@ An Identity system can be as simple as a table in a database or an Excel file st
 
 Any organization intending to integrate eSignet with an [identity system](https://docs.esignet.io/general/glossary) of its choice must make necessary customizations to the authenticator plugin. These modifications ensure that the plugin can seamlessly interface with the target identity system and support its specific authentication and verification workflows. This approach enables eSignet to integrate efficiently with a wide range of identity systems. Please keep reading for further details.
 
-"Authenticator = bridge between eSignet and the Identity Registry"
+In the eSignet architecture, the Authenticator acts as the bridge between eSignet and the Identity Registry. All protocol-related responsibilities are handled entirely within eSignet, while all identity-related logic is implemented within the Authenticator interface. This separation ensures a clean, modular design and clear ownership of responsibilities.
 
-#### **Authenticator Interface Overview**
+**eSignet responsibilities**
 
-The **Authenticator interface** defines a set of methods that must be implemented:
+* OAuth / OIDC / FAPI specification adherence
+* Consent handling
+* Token issuance
 
-1. doKycAuth
-2. doKycExchange
-3. sendOtp
-4. isSupportedOtpChannel
-5. getAllKycSigningCertificates
-6. doVerifiedKycExchange
+**Authenticator responsibilities**
+
+* Authenticate user
+* Fetch verified user attributes (KYC)
+* Return data to eSignet in agreed structure
 
 #### **Before You Implement**
 
 Consider the authentication scenario and the type of identity system you are using.\
-For example, assume your identity system supports **only OTP and password-based login**. For any other authentication factor, you can return an error.
+For example, Lets assume your identity system supports **only OTP based login**.
 
-#### **Flow and Method Details**
+**Sample Pseudocode: Authenticator Implementation**
 
-**1. OTP Sending (sendOtp)**
+```java
+package sample;
 
-* When a user initiates authentication to **eSignet** from a relying-party application, they provide an \`individualId\`.
-* If the user selects **OTP** for verification:
-  * A request for sendOtp will be triggered.
-  * Your implementation should:
-    * Validate that the given individualId exists in the identity system.
-    * Determine how to send the OTP (email or SMS).
-    * Optionally, use a hardcoded OTP for testing.
-    * Implement isSupportedOtpChannel to return the supported OTP channels.
 
-**2. Authentication (doKycAuth)**
+public class SampleAuthenticator implements Authenticator {
 
-* After OTP verification or if the user chooses **password-based authentication**, they will call the **authenticate API**.
-* The request includes:
-  * individualId
-  * A challenge list containing the auth factor and actual challenge.
-* Your implementation should:
-  * Validate individualId in the identity system.
-  * Check for valid auth factors (OTP and password only).
-    * If any other factor is present, throw invalid\_auth\_factor.
-  * Generate:
-    * **kyc\_token** (e.g., hash of a random UUID).
-    * **PSUT** (Partner Specific User Token) by hashing individualId + relyingPartyId.
-  * Return these values in kycAuthResult.
 
-**3. KYC Exchange (doKycExchange)**
+    /**
+     * Step 1: Validate requested OTP channel
+     * Called during the OIDC Authorization flow
+     */
+    public boolean isSupportedOtpChannel(String channel) {
+         // 1. Define ALLOWED_CHANNELS and check if the 
+         // requested channel is allowed.
+         return ALLOWED_CHANNELS.contains(channel);
+    }
 
-* After authentication, the user gives consent for claims.
-* These claims are included in the **auth-code API call**, which returns an authCode.
-* When the user exchanges authCode for an OAuth token:
-  * Implement doKycExchange:
-    * Fetch details using the kyc\_token generated earlier.
-    * Since a simple identity system may not manage signing certificates:
-      * Generate your own signing certificate.
-      * Store it in **eSignet’s SoftHSM** or your custom keystore.
-    * Create a JWT containing accepted claims for the individualId.
-    * Sign the JWT with the generated certificate.
-    * Return this JWT as the OAuth token.
+    /**
+     * Step 2: Send OTP to the user
+     * Called during the OIDC Authorization flow
+     */
+    public SendOtpResult sendOtp(String relyingPartyId, String clientId, SendOtpDto sendOtpDto)
+            throws SendOtpException {
+            
+         // 1. Generate OTP 
+         // 2. Fetch email / mobile from ID system.
+         // 3. trigger OTP notification
+         // Note: You may use kernel-otpmanager and kernel-notification-service are MOSIP 
+         // modules that provides this functionality.
+         // Set and return the result, if failed throw SendOtpException
+         
+         SendOtpResult sendOtpResult = new SendOtpResult();
+         sendOtpResult.setMaskedEmail(****);
+         sendOtpResult.setMaskedMobile(****);
+         return sendOtpResult;
+    }
 
-**4. Verified KYC Exchange (doVerifiedKycExchange)**
+    /**
+     * Step 3: Authenticate the user
+     * Called during the OIDC Authorization flow
+     */
+    @Override
+    public KycAuthResult doKycAuth(String relyingPartyId, String clientId, KycAuthDto kycAuthDto)
+            throws KycAuthException {
 
-* If claims include **verified claims**, implement this method to handle verification before token issuance.
+        // 1. Extract authentication parameters
+        String userId = kycAuthDto.getIndividualId();
+        AuthChallenge authChallenge = request.getChallengeList().get(0);
+
+        // 2. Validate credentials against Identity System
+        // Note: It may be a endpoint call, direct DB access from this method.
+        boolean authenticated = identitySystem.verify(
+            userId,
+            "OTP",
+            authChallenge.getChallenge()
+        );
+
+        if (!authenticated) {
+            throw new KycAuthException("AUTH_FAILED", "Invalid credentials");
+        }
+
+        // 3. Generate a KYC token for the input transactionId,
+        // This token should be used to affirm that kyc-exchange is invoked only after
+        // successful kyc-auth for the given transaction
+        // For simplicity, using uuid as kyc token
+        String kycToken = UUID.toString();
+
+        // 4. Cache / store the transcation and kyc-token
+
+        // 5. Build authentication success response
+        KycAuthResult kycAuthResult = new KycAuthResult();
+        kycAuthResult.setKycToken(kycToken);
+
+        // 6. To support pairwise pseudorandom ID
+        kycAuthResult.setPartnerSpecificUserToken(<hash(userId, relyingPartyId)>);
+        
+        return kycAuthResult;
+    }
+
+    /**
+     * Step 4: Exchange KYC / Identity attributes
+     * Called AFTER successful authentication & user consent
+     */
+    @Override
+    public KycExchangeResult doKycExchange(String relyingPartyId, String clientId, KycExchangeDto kycExchangeDto)
+            throws KycExchangeException {
+
+        // 1. Validate request.getKycToken()
+        // if invalid or expired throw KycExchangeException
+        
+        // 2. Fetch user identity for the given request.getIndividualId()
+        // Throw exception if unable to find user or not allowed to as per relying party mapped policy.
+
+        JWT userJWT = new JWT();
+
+        // 3. 'sub' claim must hold the same value as value returned in the partnerSpecificUserToken
+        userJWT.put("sub", "<hash(userId, relyingPartyId)>");
+
+        for(String userClaim : requestedAttributes) {
+          // 4. Add user claims to the JWT ONLY in the requested request.getClaimsLocales()
+        }
+
+        // 5. Sign the user JWT
+        String signedJWT = ""
+
+        String finalKyc = ""
+        if(request.getUserInfoResponseType().equals("JWE")) {
+          // 6. Additionally encrypt user JWS, using Relying party specific encryption public key.
+          finalKyc = encrypt(signedJWT)
+        }
+
+        KycExchangeResult exchangeResult = new KycExchangeResult();
+        exchangeResult.setEncryptedKyc(finalKyc);
+        return exchangeResult;
+    }
+
+    /**
+     * Step 5: Provide signing certificates (optional but common)
+     * These keys are published in the eSignet .well-known/jwks.json
+     */
+    @Override
+    public List<X509Certificate> getAllCertificates()
+            throws CertificateException {
+
+        // Return certificates corresponding to keys used
+        // to sign KYC
+        return keyStore.loadSigningCertificates();
+    }
+}
+```
+
+####
 
 {% hint style="warning" %}
 **Note**:
@@ -99,6 +189,3 @@ Reference implementations of the Authenticator Plugin for MOCK ID and MOSIP ID a
 1. Please refer to how our [mock-plugin](https://github.com/mosip/esignet-plugins/blob/master/mock-plugin/src/main/java/io/mosip/esignet/plugin/mock/service/MockAuthenticationService.java) implements the eSignet Authenticator plugin to integrate eSignet with the mock identity system.
 2. Also, look at the [MOSIP plugin](https://github.com/mosip/esignet-plugins/blob/master/mosip-identity-plugin/src/main/java/io/mosip/esignet/plugin/mosipid/service/IdaAuthenticatorImpl.java) reference implementation enabling the eSignet integration with the MOSIP identity system.
 {% endhint %}
-
-
-
