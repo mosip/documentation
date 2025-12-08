@@ -18,7 +18,7 @@ eSignet is designed with the architectural principles mentioned below. These arc
 
 eSignet prioritizes user privacy by minimizing data exposure and ensuring secure interactions:
 
-* **No ID Storage by Relying Parties:** Users enter their ID directly on the eSignet page, preventing relying parties from storing it. This reduces the risk of profiling in case of data breaches.
+* **No PII Data Storage by eSignet:** eSignet does not store any personally identifiable information (PII); sensitive data is processed transiently for authentication and never retained.
 * **Privacy-Enabled Token (PSUT):** Instead of sharing user IDs, eSignet issues a unique **Partner Specific User Token (PSUT)** for each user-relying party pair.
 * **Protection of Sensitive Data:** Sensitive information is never stored or logged in clear text.
 * **User Controlled Consent:** Users have full control over what data is shared with relying parties.
@@ -46,15 +46,12 @@ eSignet is optimized for cost-efficiency and scalability:
 
 Security is a core principle of eSignet, ensuring end-to-end protection:
 
-* **Encryption at All Stages:** Data is encrypted **in transit and at rest** to prevent unauthorized access.
 * **Trusted Integrations:** eSignet only integrates with verified and **trusted applications**.
 * **Fraud Prevention:** Authentication is tied to specific transactions, reducing the risk of unauthorized access.
-* **Digital Signatures:** Every incoming and outgoing request is digitally signed to ensure authenticity.
-* **Encrypted Data Sharing:** All data shared with relying parties is encrypted for additional security.
-* **Internal Threat Protection:** Database records are secured with **integrity checks** to detect tampering.
 * **Centralized Key Management:** A robust key management system ensures secure cryptographic operations.
-* **API Security:** All APIs are protected using **OAuth 2.0**, ensuring secure access control.
+* **API Security:** All the data modification APIs (Client management end points) are protected using **OAuth 2.0**, ensuring secure access control.
 
+All state-changing APIs are protected with OAuth 2.0, enforcing authenticated and authorized access.
 
 
 

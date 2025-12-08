@@ -38,7 +38,7 @@ Trust is foundational to eSignet Auth’s architecture, achieved through strong 
 * **No Data Storage**\
   eSignet Auth does **not store any personally identifiable information (PII)**. It acts solely as a verification and authentication layer, reducing exposure to privacy risks.
 * **Prevention of Unwanted Profiling**\
-  Issues **partner-specific user tokens** for each relying party, ensuring that user activity cannot be tracked or correlated across services—thus preserving privacy and stopping cross-service profiling.
+  Issues **relying-party-specific user tokens** for each relying party, ensuring that user activity cannot be tracked or correlated across services—thus preserving privacy and stopping cross-service profiling.
 
 #### 4. Seamless Integration Across Ecosystems
 

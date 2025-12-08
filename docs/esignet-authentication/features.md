@@ -81,6 +81,18 @@ To align eSignet with the FAPI 2.0 profile, v1.7.0 introduces support for three 
 * **Demonstrating Proof-of-Possession (DPoP)** — binds access tokens to a client-held cryptographic key and requires the client to present a signed, per-request proof. DPoP makes stolen tokens unusable by third parties and prevents replay or misuse of intercepted tokens.
 * **Authorization Server Issuer Identification (OIDC Metadata checks)** — enforces clear, verifiable issuer metadata so clients can confirm they are interacting with the intended authorization server. This prevents environment mix-ups and server impersonation attacks (e.g., sandbox vs production confusion or malicious endpoints).
 
+
+
+> FAPI 2.0
+For a deeper understanding of FAPI 2.0 and the mechanisms implemented in eSignet, see the FAPI 2.0 Security Profile specification: https://openid.net/specs/fapi-security-profile-2_0-final.html. 
+
+> Attacker model and mitigations with FAPI 2.0
+
+FAPI 2.0 defends high-risk OAuth/OIDC flows against tampering, mix-up, phishing, token theft/replay, and leakage via front-channel exposure. To know more about this refer [here](https://openid.net/specs/fapi-2_0-attacker-model.html)
+
+
+<!--
+
 #### **What is PAR?** <a href="#what-is-par-sub-section-of-the-fapi-2.0-security-profile-section-above" id="what-is-par-sub-section-of-the-fapi-2.0-security-profile-section-above"></a>
 
 Pushed Authorization Requests (PAR) introduce a more secure way for a Relying Party (RP) to initiate the OAuth/OIDC authorization flow. Instead of sending sensitive authorization parameters (such as redirect URIs, scopes, claims, and client details) through a browser redirect, the RP “pushes” these parameters directly to eSignet using a secure, back-channel POST request. eSignet returns a **request URI**, which is then used in the front-channel redirect to complete the flow.\
@@ -186,6 +198,8 @@ Relying Parties integrating with eSignet should expect the following behavior:
 * Token responses and ID tokens will remain consistent with the expected issuer to prevent cross-provider confusion.
 * RP libraries that support FAPI 2.0 or modern OIDC security profiles will automatically validate these issuer claims.
 * This significantly reduces the risk of authorization mix-up scenarios during integration.
+
+-->
 
 ## Customizable UI
 
