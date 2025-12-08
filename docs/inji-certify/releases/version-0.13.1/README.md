@@ -51,4 +51,4 @@ Below is the list of known issue(s) related to the release v0.13.1.&#x20;
 * [Feature Documentation](https://docs.mosip.io/inji/inji-certify/functional-overview/features)
 * [Local Setup](https://docs.mosip.io/inji/inji-certify/build-and-deploy/local-setup)
 * [API Documentation](https://mosip.stoplight.io/docs/inji-certify/25f435617408e-inji-certify)
-* [Test Report](https://github.com/mosip/test-management/tree/master/inji-certify/0.13.1)
+* [Test Report](test-report.md)
