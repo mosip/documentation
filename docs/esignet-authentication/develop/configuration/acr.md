@@ -38,7 +38,7 @@ eSignet currently supports the below ACR values:
 * **mosip:idp:acr:password**\
   For password-based authentication.
 * **mosip:idp:acr:knowledge**\
-  For Knowledge Based identification(KBI), demographic data based authentication.
+  For Knowledge Based identification(KBI), demographic data based identity authentication.
 
 {% hint style="info" %}
 **Note:**&#x20;

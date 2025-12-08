@@ -18,6 +18,8 @@ An Identity system can be as simple as a table in a database or an Excel file st
 
 Any organization intending to integrate eSignet with an [identity system](https://docs.esignet.io/general/glossary) of its choice must make necessary customizations to the authenticator plugin. These modifications ensure that the plugin can seamlessly interface with the target identity system and support its specific authentication and verification workflows. This approach enables eSignet to integrate efficiently with a wide range of identity systems. Please keep reading for further details.
 
+"Authenticator = bridge between eSignet and the Identity Registry"
+
 #### **Authenticator Interface Overview**
 
 The **Authenticator interface** defines a set of methods that must be implemented:

@@ -73,3 +73,6 @@ Please refer [here](https://esignet-mosipid.collab.mosip.net/) for the MOSIP ID 
 1. Connects to the live MOSIP identity system for real user authentication.
 2. Returns genuine user claims and ID tokens after successful login.
 3. Suitable for end-to-end verification before deployment.
+
+
+To get started with integration. and onboard your client to eSignet please refer to this [page](../../../test/try-it-out/integrate-with-e-signet.md)
