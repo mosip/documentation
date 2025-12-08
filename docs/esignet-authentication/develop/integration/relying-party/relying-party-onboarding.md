@@ -2,21 +2,21 @@
 
 This guide helps the developers of the relying party to get started with their development environment.
 
-## **Pre-requisites** <a href="#pre-requisites" id="pre-requisites"></a>
+## Pre-requisites
 
 Before integrating with eSignet, ensure the following setup is completed:
 
-#### **1. Prepare Your Development Environment** <a href="#id-1.-prepare-your-development-environment" id="id-1.-prepare-your-development-environment"></a>
+### 1. Prepare Your Development Environment
 
 * Select your preferred technology stack (e.g., PHP, Python, Java, Node, Kotlin, Swift, etc.).
 * Choose an appropriate **OpenID Connect client library** for your selected stack. _(Refer to the library list here.)_
 
-#### **2. Plan for UserInfo JWT Handling** <a href="#id-2.-plan-for-userinfo-jwt-handling" id="id-2.-plan-for-userinfo-jwt-handling"></a>
+### 2. Plan for UserInfo JWT Handling
 
 * eSignet returns the UserInfo response as a **signed or signed-and-encrypted JWT**.
 * Choose a compatible JWT plugin to **decrypt, verify, and parse** the UserInfo JWT.
 
-#### **3. Generate and Manage Cryptographic Keys** <a href="#id-3.-generate-and-manage-cryptographic-keys" id="id-3.-generate-and-manage-cryptographic-keys"></a>
+### 3. Generate and Manage Cryptographic Keys
 
 * eSignet supports only **confidential clients** using the **private\_key\_jwt** client authentication method.
 * Generate a key pair and store the **private key** securely in password-protected, hardened storage (machine, vault, HSM).
@@ -29,8 +29,7 @@ Before integrating with eSignet, ensure the following setup is completed:
 Only **RSA** key format is currently supported; additional key formats are planned.
 {% endhint %}
 
-#### **4. Design Your Callback API** <a href="#id-4.-design-your-callback-api" id="id-4.-design-your-callback-api"></a>
-
+### 4. Design Your Callback API
 * The callback API is the endpoint to which eSignet redirects the user’s browser after authentication success or failure.
 * Ensure the callback can **render a user interface promptly**, keeping the user informed of the authentication result.
 * On **successful authentication**, the user is redirected with an **authorization code**.
