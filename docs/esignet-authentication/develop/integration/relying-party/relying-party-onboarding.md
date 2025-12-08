@@ -30,11 +30,12 @@ Only **RSA** key format is currently supported; additional key formats are plann
 {% endhint %}
 
 ### 4. Design Your Callback API
+
 * The callback API is the endpoint to which eSignet redirects the user’s browser after authentication success or failure.
 * Ensure the callback can **render a user interface promptly**, keeping the user informed of the authentication result.
 * On **successful authentication**, the user is redirected with an **authorization code**.
 * On **failure**, the user is redirected **without a code**, but with an **error code**.
-* The relying party must handle the callback response appropriately before allowing the user to proceed.&#x20;
+* The relying party must handle the callback response appropriately before allowing the user to proceed.
 
 ## Onboarding Your Relying Party (RP) as an OIDC Client with an ID Provider
 
@@ -83,6 +84,11 @@ Wildcard patterns (_`*`_) are acceptable for development but **should be avoided
 * `https://*` (invalid wildcard usage)
 * `https://domain*`
 * `residentapp://*`
+
+{% hint style="warning" %}
+Redirect URIs can either be fully qualified URLs or partial URLs with wildcards. Allowing partial URLs with wildcards provides flexibility for clients, enabling them to use multiple URLs by changing only certain paths or query parameters without frequently updating the client configuration.\
+However, when using the redirect URI in the authorize API call and the token API call, it must be a fully qualified URL and must be identical in both calls. If the redirect URI differs between these calls, an "invalid assertion" error will occur. Additionally, if the redirect URI does not match any of the registered redirect URIs, the request will fail with an "invalid redirect URI" error.
+{% endhint %}
 
 ## 5. Await Client ID
 

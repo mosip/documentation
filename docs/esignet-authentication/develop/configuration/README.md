@@ -23,18 +23,23 @@ These are very basic configuration properties of the eSignet service. Most of th
   `mosip.esignet.ui.wallet.config={{'wallet.name': 'walletName', 'wallet.logo-url': '/images/qr_code.png', 'wallet.download-uri': '#',`\
   `'wallet.deep-link-uri': 'io.mosip.residentapp.inji://wla-auth?linkCode=LINK_CODE&linkExpireDateTime=LINK_EXPIRE_DT' }}`
 * Configuration required to display KBI form. individual-id-field is set with field id which should be considered as an individual ID in the authenticate request.
-* form-details holds the list of field details like below:
+* Please find the list of field and details below:
+  * id -> unique field id, type -> holds datatype, format -> only supported for date fields, regex -> pattern to validate the input value, maxLength -> number of allowed characters.
+  * `mosip.esignet.authenticator.default.auth-factor.kbi.individual-id-field=policyID`
+  * `mosip.esignet.authenticator.default.auth-factor.kba.field-details={{'id': '${mosip.esignet.authenticator.default.auth-factor.kba.individual-id-field}', 'type':'text', 'format':'', 'maxLength': 50, 'regex': '^\s*[+-]?(\d+|\d*\.\d+|\d+\.\d*)([Ee][+-]?\d*)?\s*$'},{'id':'fullName', 'type':'text', 'format':'', 'maxLength': 50, 'regex': '^[A-Za-z\s]{1,}[\.]{0,1}[A-Za-z\s]{0,}$'},{'id':'dob', 'type':'date', 'format':'dd/mm/yyyy'}}`
+* Dynamically render the KBI form as per JSON Schema by using the property below:
+  * `MOSIP_ESIGNET_AUTHENTICATOR_DEFAULT_AUTH_FACTOR_KBI_FIELD_DETAILS_URL`
 
-id -> unique field id, type -> holds datatype, format -> only supported for date fields, regex -> pattern to validate the input value, maxLength -> number of allowed characters.
+{% hint style="success" %}
+**Important**
 
-`mosip.esignet.authenticator.default.auth-factor.kbi.individual-id-field=policyID`
+1. URL pointing to the raw JSON schema defining the KBI field details.
+2. The schema must include the fields, their types, validation rules, and multilingual labels used for KBI authentication.
+3. Example: https://example.com/path/to/kbi\_schema.json
+{% endhint %}
 
-`mosip.esignet.authenticator.default.auth-factor.kba.field-details={{'id': '${mosip.esignet.authenticator.default.auth-factor.kba.individual-id-field}', 'type':'text', 'format':'', 'maxLength': 50, 'regex': '^\s*[+-]?(\d+|\d*\.\d+|\d+\.\d*)([Ee][+-]?\d*)?\s*$'},{'id':'fullName', 'type':'text', 'format':'', 'maxLength': 50, 'regex': '^[A-Za-z\s]{1,}[\.]{0,1}[A-Za-z\s]{0,}$'},{'id':'dob', 'type':'date', 'format':'dd/mm/yyyy'}}`
-
-* Prefix and Postfix support is added to support the MOSIP handle feature, Prefix will be visible in the oidc-ui, but postfix is automatically added to the entered individual. Finally, the individual sent to the backend has both prefix and postfix appended if configured.
-
-`mosip.esignet.ui.config.username.prefix= mosip.esignet.ui.config.username.postfix=`
-
+* Supports multiple configurable login ID types (e.g., Mobile Number, NRC ID, VID, Email), allowing users to log in using any of them, with optional **prefix** and **postfix** handling.
+  * `mosip.esignet.ui.config.login-id.options={ \ { "id": "mobile", "svg": "mobile_icon", "prefixes": [{"label": "IND", "value": "+91", "maxLength": "", "regex": ""}, {"label": "KHM", "value": "+855"}], "postfix": "@phone", "maxLength": "", "regex": "" }, \ { "id": "nrc", "svg": "nrc_id_icon", "prefixes": "", "postfix": "@NRC", "maxLength": "", "regex": "" }, \ { "id": "vid", "svg": "vid_icon", "prefixes": "", "postfix": "@ID", "maxLength": "", "regex": "" }, \ { "id": "email", "svg": "email_icon", "prefixes": "", "postfix": "@email", "maxLength": "", "regex": "" } \ }`
 * eSignet uses logback for logging. The **log level** of the application can be easily changed with this property.\
   `logging.level.io.mosip.esignet=INFO`
 

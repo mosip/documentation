@@ -36,7 +36,7 @@ This leverages a JSON form-builder library for improved flexibility and faster c
 
 #### **Dynamic Schema-Driven KBI Authentication UI**
 
-[The KBI authentication UI](https://docs.esignet.io/esignet-signup/features#id-2.-signup-with-video-ekyc) is now also fully dynamic and powered by the same schema-based JSON form builder, enhancing consistency and maintainability.
+[The KBI authentication UI](https://docs.esignet.io/esignet-authentication/features#supported-authentication-methods) is now also fully dynamic and powered by the same schema-based JSON form builder, enhancing consistency and maintainability.
 
 #### **Improved Deployment Scripts**
 
