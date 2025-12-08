@@ -361,10 +361,10 @@ Here below is a compatibility matrix for different Identity Systems, eSignet ver
 
 | Identity System | eSignet Version | Plugin Version | Status | Integration Guide                                                 |
 | --------------- | --------------- | -------------- | ------ | ----------------------------------------------------------------- |
-| MOSIP 1.2.x     | 1.6.1           | 1.3.x          | Stable | [MOSIP Integration](es-deployment-guide.md#mosip-integration)     |
-| MOSIP 1.1.x     | 1.5.x           | 1.2.x          | Legacy | [Legacy MOSIP](es-deployment-guide.md#legacy-mosip)               |
-| Sunbird RC 2.x  | 1.6.1           | 1.0.x          | Stable | [Sunbird Integration](es-deployment-guide.md#sunbird-integration) |
-| Custom API      | 1.6.1           | Custom         | Custom | [Plugin Development](es-deployment-guide.md#plugin-development)   |
+| MOSIP 1.2.x     | 1.6.1           | 1.3.x          | Stable | [MOSIP Integration](deployment-guide.md#mosip-integration)     |
+| MOSIP 1.1.x     | 1.5.x           | 1.2.x          | Legacy | [Legacy MOSIP](deployment-guide.md#legacy-mosip)               |
+| Sunbird RC 2.x  | 1.6.1           | 1.0.x          | Stable | [Sunbird Integration](deployment-guide.md#sunbird-integration) |
+| Custom API      | 1.6.1           | Custom         | Custom | [Plugin Development](deployment-guide.md#plugin-development)   |
 
 If you want to install eSignet with plugins, you should navigate to the folder '**esignet-with-plugins**' and run below command:
 
@@ -442,11 +442,11 @@ Once eSignet installation is completed, now, you are prompted to provide relevan
 2. `defaultlang` = Please choose the default lang for esignet. Please press enter for en
 3. `idprovidername` = Please provide the name for eSignet: (Note: This name will be used instead of eSignet on the login page and in other places)"
 
-### **Onboarding**
+## **Onboarding**
 
 If you have chosen to install eSignet with mosip ID then the MISP onboarding should be initiated and completed successfully, however if you choose to continue with mock or custom plugin, no MISP onboarding is required, and this step should be skipped.
 
-#### Onboarding eSignet as MISP partner when using the MOSIP ID plugin
+### Onboarding eSignet as MISP partner when using MOSIP ID plugin
 
 * Use the onboarder script to register eSignet as a MISP partner and configure the OIDC client.
 * Update any required properties (e.g., MOSIP IDA domain names, client secrets) as per your environment.
@@ -457,17 +457,21 @@ eSignet installation is completed at this step.
 
 > Note: You can refer to the deployment guide to know more about the mock relying party portal installation, having mock relying party portal installed will be helpful to verify the complete eSignet flow.
 
-Please make this as section as Onboarding which will have 2 points :
 
-#### Onboarding relying parties&#x20;
+### Onboarding relying parties
 
+Refer to the [Relying Party Onboarding Guide](../esignet-authentication/develop/integration/relying-party/relying-party-onboarding.md) for detailed steps on how to onboard relying parties.
+
+
+<!--
 MOCK
 
 * Snippet from openapi yaml v3 version of client management endpoint and MOSIP ID
 
-Sunbird&#x20;
+Sunbird
 
 Point to PMS documentation.
+-->
 
 ### Verify Deployment
 
