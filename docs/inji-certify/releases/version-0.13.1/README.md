@@ -16,6 +16,8 @@ Inji Certify v0.13.1 release includes an automation bug fix required to support 
 
 ### Bug Fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
+Here below is the bug which has been addressed as part of this release.
+
 | JIRA                                                              | Description                                        |
 | ----------------------------------------------------------------- | -------------------------------------------------- |
 | [INJICERT-1279](https://mosip.atlassian.net/browse/INJICERT-1279) | Authenticate user API failing with test automation |
@@ -28,10 +30,11 @@ Inji Certify v0.13.1 release includes an automation bug fix required to support 
 
 ### Known Issues <a href="#known-issues" id="known-issues"></a>
 
-Below is the list of known issue(s) related to the release v0.13.1.&#x20;
+Below is the list of known issue(s) related to the release v0.13.1. To access all the known issues related to Inji Certify please refer [here](https://mosip.atlassian.net/issues/?filter=16603).
 
-|  [INJICERT-43526](https://mosip.atlassian.net/browse/MOSIP-43526) |  Hardcoded domain in IDA automation script |
+| JIRA                                                              | Description                                |
 | ----------------------------------------------------------------- | ------------------------------------------ |
+|  [INJICERT-43526](https://mosip.atlassian.net/browse/MOSIP-43526) |  Hardcoded domain in IDA automation script |
 
 ### Compatible Modules <a href="#compatible-modules" id="compatible-modules"></a>
 
