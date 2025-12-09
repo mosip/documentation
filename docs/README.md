@@ -9,7 +9,7 @@ icon: globe
 
 Digital identity is rapidly becoming the standard for citizen identificatio, Whether accessing services on government platforms or private service portals, user authentication is now a critical requirement. To ensure secure, private, and inclusive access, authentication mechanisms must adhere to established standards that guarantee data protection and build user trust.
 
-### Where does eSignet fits in?
+### Where does eSignet fit in?
 
 **eSignet** plays a critical role by providing a secure, standards-compliant digital identity solution that empowers both users and service providers. It enables:
 
@@ -27,7 +27,7 @@ eSignet ensures that digital interactions are not only seamless but also secure,
 
 #### What is eSignet Authentication?
 
-[**eSignet** authentication](esignet-authentication/) is a powerful, open-source digital identity authentication module that enables secure and standardised access to online services. It is developed by **MOSIP** and built by implementing specific OpenID Connect (OIDC) RFCs to provide high assurance.&#x20;
+[**eSignet** authentication](esignet-authentication/) is a powerful, open-source digital identity authentication module that enables secure and standardised access to online services. It is developed by **MOSIP** and built by implementing specific OpenID Connect (OIDC) RFCs to provide high assurance.
 
 It is designed to be **independent and be used as a standalone authentication module** and can be easily integrated with **any identity system or repository** that supports authentication and attribute retrieval. While it includes reference integrations with MOSIP, its architecture is flexible and open enough to be adopted for a wide range of digital services ecosystems.
 
@@ -50,7 +50,7 @@ Beyond profile creation, the module also offers support for **identity verificat
 * **Protection Against Unwanted Profiling** Safeguards personal data by preventing unauthorized tracking or profiling of users.
 * **Multiple Assurance Levels** Supports varying levels of identity assurance, depending on the authentication method employed.
 * **Digital Wallet Integration** Enables secure, device-based authentication through [integration with digital wallets](esignet-authentication/develop/integration/wallet/).
-* **Verified Claims Support:** eSignet now includes [_verified claims_ ](readme/standards.md#id-2.-interoperability) in its identity response, enabling relying parties to consume high-assurance user attributes.
+* **Verified Claims Support:** eSignet now includes [_verified claims_ ](readme/standards.md#id-2.-interoperability)in its identity response, enabling relying parties to consume high-assurance user attributes.
 * **KYC-Verified Signup:** eSignet’s [Signup module](esignet-signup/) allows user registration with _Video eKYC_, enabling identities to be onboarded with verified claims from the start.
 * **FAPI 2.0 Compliance:** eSignet now complies with the FAPI 2.0 Security Profile, offering higher security and improved interoperability.
 
@@ -118,4 +118,3 @@ Refer below to know more about eSignet principles, standards and tech:
 * [Explore eSignet’s principles of privacy, security, and flexibility](https://docs.esignet.io/readme/principles).
 * [Explore eSignet’s standards and secure authentication flows](https://docs.esignet.io/readme/standards).
 * [Explore the technology leveraged to design eSignet.](readme/technology/)
-
