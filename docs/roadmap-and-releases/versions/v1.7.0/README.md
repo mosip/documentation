@@ -6,7 +6,7 @@
 
 ## **Overview**
 
-We’re excited to announce the release of [**eSignet v1.7.0**](https://github.com/mosip/esignet/tree/release-1.7.x), a feature-rich upgrade over v1.6.1 that introduces major advancements in security, enhanced user interaction flexibility, and improved deployment efficiency. This release includes full support for the [**FAPI 2.0 Security Profile**](https://docs.esignet.io/esignet-authentication/features#fapi-2.0-security-profile), implemented through multiple industry-standard RFCs, and brings dynamic, schema-driven UI enhancements for both Sign-Up and KBI authentication—while ensuring complete backward compatibility with existing authentication flows.
+We’re excited to announce the release of [**eSignet v1.7.0**](https://github.com/mosip/esignet/tree/release-1.7.x), a feature-rich upgrade over v1.6.1 that introduces major advancements in security, enhanced user interaction flexibility, and improved deployment efficiency. This release includes full support for the [**FAPI 2.0 Security Profile**](https://docs.esignet.io/esignet-authentication/features#fapi-2.0-security-profile), implemented through multiple industry-standard RFCs, and brings dynamic, schema-driven UI enhancements for both Signup and KBI authentication—while ensuring complete backward compatibility with existing authentication flows.
 
 ## **Major Highlights**
 
@@ -29,9 +29,9 @@ If a client does **not** enforce the FAPI 2.0 profile, their authentication flow
 
 ### **Enhancements**
 
-#### **Dynamic Schema-Driven Sign-Up UI**
+#### **Dynamic Schema-Driven Signup UI**
 
-The Sign-Up experience has been improved with the [UI that can now be generated dynamically based on a backend-driven UI schema](https://docs.esignet.io/esignet-signup/features#dynamic-signup-form-schema-driven-ui).\
+The Signup UI has been improved and [can now be generated dynamically based on a backend-driven UI schema](https://docs.esignet.io/esignet-signup/features#dynamic-signup-form-schema-driven-ui).\
 This leverages a JSON form-builder library for improved flexibility and faster configuration changes.
 
 #### **Dynamic Schema-Driven KBI Authentication UI**
@@ -102,14 +102,14 @@ Please refer [here](https://mosip.atlassian.net/issues/?jql=issuetype%20%3D%20Bu
 ### Config Changes
 
 * **eSignet**: The properties listed below are newly added to the eSignet default configuration. For a comprehensive view of all configuration properties in eSignet, please [refer here](https://github.com/mosip/esignet/blob/master/esignet-service/src/main/resources/application-default.properties).
-  * mosip.esignet.par.expire-seconds=60
-  * mosip.esignet.par.request-uri.prefix=urn:ietf:params:oauth:request\_uri:
-  * mosip.esignet.dpop.clock-skew=10
-  * mosip.esignet.dpop.nonce.expire.seconds=15
-  * mosip.esignet.kbispec.ttl.seconds=18000
-  * mosip.esignet.client-assertion.unique.jti.required=true
+  * `mosip.esignet.par.expire-seconds=60`
+  * `mosip.esignet.par.request-uri.prefix=urn:ietf:params:oauth:request_uri:`
+  * `mosip.esignet.dpop.clock-skew=10`
+  * `mosip.esignet.dpop.nonce.expire.seconds=15`
+  * `mosip.esignet.kbispec.ttl.seconds=18000`
+  * `mosip.esignet.client-assertion.unique.jti.required=true`
 * **Signup**: The properties listed below are newly added to the Signup default configuration. For a comprehensive view of all configuration properties in eSignet, please [refer here](https://github.com/mosip/esignet-signup/blob/master/signup-service/src/main/resources/application-default.properties).
-  * mosip.signup.uispec.ttl.seconds=18000
+  * `mosip.signup.uispec.ttl.seconds=18000`
 
 ### Documentation
 
