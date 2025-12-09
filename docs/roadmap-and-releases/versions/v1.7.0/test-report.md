@@ -37,43 +37,27 @@ Default configuration -
 
 ### Main feature tested
 
-Signup Portal with mock ID
-
-Login with Password with mock ID
-
-Forgot Password with mock ID
-
-Login with OTP and biometrics with mock ID
-
-Login with KBI with mock ID
-
-Identity verification process (L2 flow) with mock ID and MOSIP ID
-
-Identity verification process (L1 flow) with Cre
-
-Wallet login performed cre for release environment
-
-Signup Portal with MOSIP IDA
-
-Login with Password with MOSIP IDA
-
-Forgot Password with MOSIP IDA
-
-Login with OTP and biometrics MOSIP IDA
-
-Sunbird Plugin with KBI login
-
-DPoP and PAR in all plugins
-
-Docker Compose testing for esignet, esignet-signup, esignet-mock-services (windows,linux,MAC)
-
-Deployment testing on mock plugin (esignet,signup and FAPI 2.0)
+* Signup Portal with mock ID
+* Login with Password with mock ID
+* Forgot Password with mock ID
+* Login with OTP and biometrics with mock ID
+* Login with KBI with mock ID
+* Identity verification process (L2 flow) with mock ID and MOSIP ID
+* Identity verification process (L1 flow) with Cre
+* Wallet login performed cre for release environment
+* Signup Portal with MOSIP IDA
+* Login with Password with MOSIP IDA
+* Forgot Password with MOSIP IDA
+* Login with OTP and biometrics MOSIP IDA
+* Sunbird Plugin with KBI login
+* DPoP and PAR in all plugins
+* Docker Compose testing for esignet, esignet-signup, esignet-mock-services (windows,linux,MAC)
+* Deployment testing on mock plugin (esignet,signup and FAPI 2.0)
 
 ### Features not in scope
 
-Deployment testing on MOSIPID and Sunbird
-
-UI Automation for Signup
+* Deployment testing on MOSIPID and Sunbird
+* UI Automation for Signup
 
 ## Feature Health <a href="#heading-h.sbd4cdkrmh84" id="heading-h.sbd4cdkrmh84"></a>
 
@@ -87,27 +71,29 @@ Below are the test metrics by performing functional testing using mock MDS, mock
 
 <table><thead><tr><th width="318.9921875" valign="top">Total</th><th valign="top">Passed</th><th valign="top">Failed</th><th valign="top">Skipped</th></tr></thead><tbody><tr><td valign="top">3443</td><td valign="top">3357</td><td valign="top">51</td><td valign="top">35</td></tr><tr><td valign="top">Test Rate: 98% with Pass rate: 98%</td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
 
-Note: In API-based testing, 35 test cases were marked as skipped because they were not automated and cannot be executed using Postman.<br>
+{% hint style="success" %}
+**Note**: In API-based testing, 35 test cases were marked as skipped because they were not automated and cannot be executed using Postman.
+{% endhint %}
 
-Here is the detailed breakdown:
+**Here is the detailed breakdown**:
 
 <table><thead><tr><th valign="top"></th><th valign="top"></th><th>Test cases</th></tr></thead><tbody><tr><td valign="top"> </td><td valign="top"></td><td></td></tr><tr><td valign="top"><p> </p><p> </p><p>API Based Testing - eSignet</p></td><td valign="top">Total</td><td>2192</td></tr><tr><td valign="top"></td><td valign="top">Passed</td><td>2129</td></tr><tr><td valign="top"></td><td valign="top">Failed</td><td>28</td></tr><tr><td valign="top"></td><td valign="top">Skipped</td><td>35</td></tr><tr><td valign="top"><p> </p><p> </p><p>UI Based Testing</p><p> </p></td><td valign="top">Total</td><td>1251</td></tr><tr><td valign="top"></td><td valign="top">Passed</td><td>1228</td></tr><tr><td valign="top"></td><td valign="top">Failed</td><td>23</td></tr><tr><td valign="top"></td><td valign="top">Skipped</td><td>0</td></tr></tbody></table>
 
-
-
-API Testrig results for eSignet and Signup with Mock ID:
+**API Testrig results for eSignet and Signup with Mock ID**:
 
 <table><thead><tr><th valign="top"></th><th valign="top"></th><th>Test cases</th></tr></thead><tbody><tr><td valign="top"> </td><td valign="top"></td><td></td></tr><tr><td valign="top"><p> </p><p> </p><p>API Based Testrig - eSignet</p></td><td valign="top">Total</td><td>1273</td></tr><tr><td valign="top"></td><td valign="top">Passed</td><td>729</td></tr><tr><td valign="top"></td><td valign="top">Failed</td><td>0</td></tr><tr><td valign="top"></td><td valign="top">Skipped</td><td>0</td></tr><tr><td valign="top"></td><td valign="top">Ignored</td><td>544</td></tr><tr><td valign="top"></td><td valign="top">Known issues</td><td>0</td></tr><tr><td valign="top"><p> </p><p> </p><p> </p><p>API Based Testrig - eSignet-signup</p></td><td valign="top">Total</td><td>             665</td></tr><tr><td valign="top"></td><td valign="top">Passed</td><td>635</td></tr><tr><td valign="top"></td><td valign="top">Failed</td><td>0</td></tr><tr><td valign="top"></td><td valign="top">Skipped</td><td>0</td></tr><tr><td valign="top"></td><td valign="top">Ignored</td><td>30</td></tr><tr><td valign="top"></td><td valign="top">Known issues</td><td>0</td></tr></tbody></table>
 
+{% hint style="success" %}
 **Note**: 544 test cases in esignet and 30 test cases in signup related to the MOSIP ID plug-in are currently being ignored.
+{% endhint %}
 
-API Testrig results for eSignet and Signup with MOSIP - CRE:
+**API Testrig results for eSignet and Signup with MOSIP - CRE**:
 
 <table><thead><tr><th valign="top"></th><th valign="top"></th><th>Test cases</th></tr></thead><tbody><tr><td valign="top"><p> </p><p> </p><p>API Based Testrig - eSignet</p></td><td valign="top">Total</td><td>1273</td></tr><tr><td valign="top"></td><td valign="top">Passed</td><td>1091</td></tr><tr><td valign="top"></td><td valign="top">Failed</td><td>8</td></tr><tr><td valign="top"></td><td valign="top">Skipped</td><td>8</td></tr><tr><td valign="top"></td><td valign="top">Ignored</td><td>166</td></tr><tr><td valign="top"></td><td valign="top">Known issues</td><td>0</td></tr><tr><td valign="top"><p> </p><p> </p><p> </p><p>API Based Testrig - eSignet-signup</p></td><td valign="top">Total</td><td>665</td></tr><tr><td valign="top"></td><td valign="top">Passed</td><td>405</td></tr><tr><td valign="top"></td><td valign="top">Failed</td><td>53</td></tr><tr><td valign="top"></td><td valign="top">Skipped</td><td>190</td></tr><tr><td valign="top"></td><td valign="top">Ignored</td><td>17</td></tr><tr><td valign="top"></td><td valign="top">Known issues</td><td>0</td></tr></tbody></table>
 
-&#x20;**Note**:
-
-* 61 Failures in esignet and signup 198 are skipped due to L2 flow is not supported in esignet and signup
+{% hint style="success" %}
+**Note**: 61 Failures in esignet and signup 198 are skipped due to L2 flow is not supported in esignet and signup.
+{% endhint %}
 
 **API Testrig results for eSignet and Signup with MOSIP – qa-base**:   &#x20;
 
@@ -119,9 +105,11 @@ API Testrig results for eSignet and Signup with Sunbird:
 
 <table><thead><tr><th valign="top"></th><th valign="top"></th><th>Test cases</th></tr></thead><tbody><tr><td valign="top"><p> </p><p> </p><p>API Based Testrig - Sunbird</p></td><td valign="top">Total</td><td>1273</td></tr><tr><td valign="top"></td><td valign="top">Passed</td><td>93</td></tr><tr><td valign="top"></td><td valign="top">Failed</td><td>0</td></tr><tr><td valign="top"></td><td valign="top">Skipped</td><td>0</td></tr><tr><td valign="top"></td><td valign="top">Ignored</td><td>1180</td></tr><tr><td valign="top"> </td><td valign="top">Known issues</td><td>0</td></tr></tbody></table>
 
-&#x20;Note: mock and mosipid plugin test cases are getting ignored
+{% hint style="success" %}
+**Note**: mock and mosipid plugin test cases are getting ignored
+{% endhint %}
 
-Detailed Test metrics:
+**Detailed Test metrics**:
 
 Below are the detailed test metrics by performing manual/automation testing. The project metrics are derived from Defect density, Test coverage, Test execution coverage, test tracking, and efficiency.
 
@@ -130,7 +118,7 @@ The various metrics that assist in test tracking and efficiency are as follows:
 * Passed Test Cases Coverage: It measures the percentage of passed test cases. (Number of passed tests / Total number of tests executed) x 100
 * Failed Test Case Coverage: It measures the percentage of all failed test cases. (Number of failed tests / Total number of test cases executed) x 100
 
-Sonar Report:
+**Sonar Report:**
 
 <table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Repo Name</td><td valign="top">Branch Name</td><td valign="top">Release Version (POM)</td><td valign="top">Coverage (>80%)</td><td valign="top">Reliability (0)</td><td valign="top">Security (0)</td><td valign="top">Hotspots (0)</td><td valign="top">Duplications<br> (Less than 3%)</td></tr><tr><td valign="top">eSigent</td><td valign="top">release-1.7.x</td><td valign="top">release-1.7.0</td><td valign="top">84.7</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0%</td></tr><tr><td valign="top"><p> </p><p>eSignet Signup</p></td><td valign="top">release-1.3.x</td><td valign="top">release-1.3.0</td><td valign="top">81.9</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0%</td></tr><tr><td valign="top">esignet-mock-services</td><td valign="top"><p> </p><p> release-0.12.x</p></td><td valign="top"><p> </p><p>release-0.12.0</p></td><td valign="top">85.2</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0%</td></tr><tr><td valign="top">esignet-plugins(mock-plugin)</td><td valign="top">release-1.3.x</td><td valign="top">release-1.3.4</td><td valign="top">83</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0</td><td valign="top">2.9%</td></tr><tr><td valign="top">esignet-plugins(mosip-identity-plugin)</td><td valign="top"><p> </p><p>release-1.3.x</p></td><td valign="top"><p> </p><p>release-1.3.4</p></td><td valign="top">69.1</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0%</td></tr><tr><td valign="top"><p> </p><p>esignet-plugins(sunbird-rc-plugin)</p></td><td valign="top"><p> </p><p>release-1.3.x</p></td><td valign="top"><p> </p><p>release-1.3.4</p></td><td valign="top">83</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0%</td></tr></tbody></table>
 
