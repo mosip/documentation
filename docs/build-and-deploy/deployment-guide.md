@@ -1,7 +1,5 @@
 # Deployment Guide
 
-<mark style="background-color:red;">Coming Soon!</mark>
-
 ### Overview
 
 This deployment guide provides a comprehensive, step-by-step approach to deploying and configuring eSignet on a Kubernetes based infrastructure and environment. The guide expects you to have the necessary Kubernetes infrastructure in place and required tools to integrate eSignet with various identity systems (MOSIP, Sunbird RC or Custom).
@@ -30,7 +28,9 @@ There are different use cases for eSignet and therefore eSignet can be deployed 
 
 However here within the scope of this deployment guide we will focus on how eSignet can be deployed and integrated with various identity systems. The deployment flow and integration steps may differ based on your existing setup. Below are the typical scenarios and recommended approaches.
 
-> Note: The scenario part is discussed here [Deploy eSignet Services](deployment-guide.md#deploy-esignet-services) and here you are asked to choose the plugin you want to use for identity management.
+{% hint style="success" %}
+**Note**: The scenario part is discussed here [Deploy eSignet Services](deployment-guide.md#deploy-esignet-services) and here you are asked to choose the plugin you want to use for identity management.
+{% endhint %}
 
 How eSignet can work with different Id systems:
 
@@ -163,7 +163,9 @@ kubectl get pods -n mosip | grep -E "(ida|pms|kernel|postgres|keycloak|redis)"
 
 This allows you to access the deployment scripts and configuration files required for installing eSignet.
 
-> Note: Before cloning the repository, you should first ensure your `kubectl` is configured to access the target Kubernetes cluster and that you have the necessary permissions for the relevant namespaces. Once connectivity is verified, you should run the provided deployment scripts (such as `install-prereq.sh`, `initialise-prereq.sh`, and `install-esignet.sh`) from your local machine.
+{% hint style="success" %}
+**Note**: Before cloning the repository, you should first ensure your `kubectl` is configured to access the target Kubernetes cluster and that you have the necessary permissions for the relevant namespaces. Once connectivity is verified, you should run the provided deployment scripts (such as `install-prereq.sh`, `initialise-prereq.sh`, and `install-esignet.sh`) from your local machine.
+{% endhint %}
 
 ```sh
 # Clone eSignet repository
@@ -179,7 +181,9 @@ Once steps mentioned above are complete and you have verified access, proceed wi
 
 The prerequisites that you install ensures that the environment is ready for deploying eSignet core services and plugins.
 
-> Note: What if I already have some of these dependencies (prerequisites) installed? If you already have dependencies like Postgres or Keycloak installed as part of your existing ID System (e.g. MOSIP) setup, you can skip the particular component and the respective prompt and jump to the next prompt to proceed on with the running script.
+{% hint style="success" %}
+**Note**: What if I already have some of these dependencies (prerequisites) installed? If you already have dependencies like Postgres or Keycloak installed as part of your existing ID System (e.g. MOSIP) setup, you can skip the particular component and the respective prompt and jump to the next prompt to proceed on with the running script.
+{% endhint %}
 
 When running the install scripts, you are prompted to make selections for various components and configurations. This section of the guide outlines the prompts you can expect, along with guidance on when to answer 'y' (yes) or 'n' (no) based on your environment.
 
@@ -213,10 +217,12 @@ cp esignet-global-cm.yaml.sample esignet-global-cm.yaml
 * Set up Google reCAPTCHA v2 by generating site and secret keys for your domain at [Recaptcha Admin](https://www.google.com/recaptcha/about/) and updating the configmap accordingly.
 * If using an external IAM, copy the required secrets and create a Kubernetes secret named `keycloak-client-secrets` in the `esignet` namespace.
 
-> **Note:**
+{% hint style="success" %}
+**Note**:
 
 1. The `esignet-global-cm.yaml` file typically contains domain names, API endpoints, and other parameters required for eSignet to function in your environment.
 2. eSignet namespace is also created if it does not exist already.
+{% endhint %}
 
 Once the configmap is updated, proceed with the prerequisite installation.
 
@@ -322,8 +328,6 @@ Do you want to install captcha validation service? Press enter for default y
 </strong>mosip.esignet.captcha.required=
 </code></pre>
 
-
-
 Prerequisite installation is complete at this stage.
 
 **Initialise Prerequisites**
@@ -331,9 +335,7 @@ Prerequisite installation is complete at this stage.
 Run the `./initialise-prereq.sh` script (from deploy folder) to initialize required services such as the eSignet database and Keycloak. You will be prompted for configuration details based on your environment (e.g., database credentials, IAM scope, service endpoints). Update the relevant values files before executing the script to ensure correct initialization.
 
 ```sh
-
 ./initialise-prereq.sh
-
 ```
 
 You are prompted to answer following questions based on whether the eSignet database is present or not in the postgres server url provided above. Therefore, before you run the initialise script, update the Postgres and Keycloak values files as needed and then initialise.
@@ -359,12 +361,7 @@ Before you run the installation script, you should decide which plugin you want 
 
 Here below is a compatibility matrix for different Identity Systems, eSignet versions, and plugin versions. It helps you determine which versions are compatible with each other and guides you to the appropriate integration guide/documentation. Understanding this matrix is crucial for ensuring a stable and supported deployment, avoiding integration issues, and selecting the correct components for your environment.
 
-| Identity System | eSignet Version | Plugin Version | Status | Integration Guide                                                 |
-| --------------- | --------------- | -------------- | ------ | ----------------------------------------------------------------- |
-| MOSIP 1.2.x     | 1.6.1           | 1.3.x          | Stable | [MOSIP Integration](deployment-guide.md#mosip-integration)     |
-| MOSIP 1.1.x     | 1.5.x           | 1.2.x          | Legacy | [Legacy MOSIP](deployment-guide.md#legacy-mosip)               |
-| Sunbird RC 2.x  | 1.6.1           | 1.0.x          | Stable | [Sunbird Integration](deployment-guide.md#sunbird-integration) |
-| Custom API      | 1.6.1           | Custom         | Custom | [Plugin Development](deployment-guide.md#plugin-development)   |
+<table><thead><tr><th width="154.43359375">Identity System</th><th width="114.7421875">eSignet Version</th><th width="114.21484375">Plugin Version</th><th width="119.45703125">Status</th><th>Integration Guide</th></tr></thead><tbody><tr><td>MOSIP 1.2.x</td><td>1.7.0</td><td>1.3.x</td><td>Stable</td><td><a href="https://docs.mosip.io/1.2.0/interoperability/integrations/e-signet">MOSIP Integration</a></td></tr><tr><td>MOSIP 1.1.x</td><td>1.5.x</td><td>1.2.x</td><td>Legacy</td><td>Legacy MOSIP</td></tr><tr><td>Sunbird RC 2.x</td><td>1.7.0</td><td>1.0.x</td><td>Stable</td><td>Sunbird Integration</td></tr><tr><td>Custom API</td><td>1.7.0</td><td>Custom</td><td>Custom</td><td><a href="../esignet-authentication/develop/integration/authenticator.md">Plugin Development</a></td></tr></tbody></table>
 
 If you want to install eSignet with plugins, you should navigate to the folder '**esignet-with-plugins**' and run below command:
 
@@ -455,23 +452,13 @@ Refer to the [official onboarding documentation](https://github.com/mosip/esigne
 
 eSignet installation is completed at this step.
 
-> Note: You can refer to the deployment guide to know more about the mock relying party portal installation, having mock relying party portal installed will be helpful to verify the complete eSignet flow.
-
+{% hint style="success" %}
+**Note**: You can refer to the deployment guide to know more about the mock relying party portal installation, having mock relying party portal installed will be helpful to verify the complete eSignet flow.
+{% endhint %}
 
 ### Onboarding relying parties
 
 Refer to the [Relying Party Onboarding Guide](../esignet-authentication/develop/integration/relying-party/relying-party-onboarding.md) for detailed steps on how to onboard relying parties.
-
-
-<!--
-MOCK
-
-* Snippet from openapi yaml v3 version of client management endpoint and MOSIP ID
-
-Sunbird
-
-Point to PMS documentation.
--->
 
 ### Verify Deployment
 
@@ -479,9 +466,12 @@ You can check the status of eSignet pods after deployment, use the following com
 
 ```sh
 kubectl get pods -n esignet
-
 ```
 
 ## Documentation
 
-1. Integrations and Configurations topics
+* Relying Party Onboarding
+  * [Relying Party Onboarding](../esignet-authentication/develop/integration/relying-party/relying-party-onboarding.md)
+  * [Integration Options and Discovery Endpoints](../esignet-authentication/develop/integration/relying-party/integration-options-and-discovery-endpoints.md)
+  * [Development and Integration with eSignet](../esignet-authentication/develop/integration/relying-party/development-and-integration-with-esignet.md)
+
