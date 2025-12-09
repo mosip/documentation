@@ -18,7 +18,7 @@ eSignet now [implements key RFCs required for FAPI 2.0 compliance](https://docs.
 
 * **Pushed Authorization Request (PAR)** – A new PAR endpoint is introduced to support secure, tamper-resistant authorization requests.
 * **Demonstration of Proof of Possession (DPoP)** – Adds cryptographic proof-of-possession for access tokens, preventing token replay attacks.
-* **Authorization Server Issuer Identification** – Enhances security by enabling the ‘Authorization Server’ to uniquely identify itself during authorization flows; includes updates to .well-known/oauth-authorization-server configuration.
+* **Authorization Server Issuer Identification** – Enhances security by enabling the ‘Authorization Server’ to uniquely identify itself during authorization flows; includes updates to configurations in [oauth authorization server well-known](../../../esignet-authentication/develop/configuration/.well-known/oauth-configuration.md).
 
 {% hint style="success" %}
 **Tips**:
