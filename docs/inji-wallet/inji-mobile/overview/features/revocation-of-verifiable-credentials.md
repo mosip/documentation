@@ -45,7 +45,7 @@ A functional walkthrough of the complete user journey:
 
 * Wallet logs the activity. The action (“Status checked”) is saved in your **History** so you always know when the last check happened.
 
-<figure><img src="../../../.gitbook/assets/OpenID4VP Credential-2025-12-10-041250.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/OpenID4VP Credential-2025-12-10-041250.png" alt=""><figcaption></figcaption></figure>
 
 For a step-by-step walkthrough of how users start the flow, see the **End User Guide**.
 

@@ -21,11 +21,11 @@ This release also includes critical **bug fixes** addressing verification issues
 * **SD-JWT OpenID4VP Implementation**
   * Added complete SD-JWT VP sharing for both Android (Kotlin) and iOS (Swift) platforms, which allows selective sharing of claims with the verifier.
   * Refer to the library [**docs**](https://github.com/mosip/inji-wallet/blob/master/docs/sdjwt-vp-support.md) folder to know more about this update.
-  * Refer to the [**feature description**](../../overview/features.md#id-3.-sharing-verifiable-credentials) to know more about this feature
+  * Refer to the [**feature description**](../../overview/features/#id-3.-sharing-verifiable-credentials) to know more about this feature
 * **SVG Template Rendering Support**
   * Introduced **SVG-based VC rendering** through integration of the `inji-vc-renderer` library in Kotlin and Swift.
   * Refer to the library [**docs** ](https://github.com/mosip/inji-vc-renderer/blob/v0.1.0/kotlin/docs/inji-vc-renderer-flow.md)folder to know more about this update.
-  * Refer to the [**feature description**](../../overview/features.md#id-4.-svg-based-credential-rendering) to know more about this feature
+  * Refer to the [**feature description**](../../overview/features/#id-4.-svg-based-credential-rendering) to know more about this feature
 
 #### Technical Enhancements
 
@@ -74,11 +74,11 @@ This release also includes critical **bug fixes** addressing verification issues
 
 Below is the list of key known issues specific to this release. For all known issues, [click here](https://mosip.atlassian.net/jira/software/c/projects/INJIMOB/issues/?jql=project%20%3D%20%22INJIMOB%22%20AND%20type%20%3D%20Bug%20AND%20status%20IN%20%28New%2C%20Assigned%29%20ORDER%20BY%20created%20DESC).
 
-| Jira Issue                                                     | Description                                                                                   |
-| -------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| [INJIMOB-3530](https://your-jira-instance/browse/INJIMOB-3530) | VCVerifer - SD JWT - without leaf cert and public key from x5c, not receiving the errorCode.  |
-| [INJIMOB-3526](https://your-jira-instance/browse/INJIMOB-3526) | VCVerifer - SD JWT - without signature, not receiving the errorCode.                          |
-| [INJIMOB-1530](https://your-jira-instance/browse/INJIMOB-1530) | iOS - "Share QR Code" is not working on iPhone 8.                                             |
+| Jira Issue                                                     | Description                                                                                  |
+| -------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| [INJIMOB-3530](https://your-jira-instance/browse/INJIMOB-3530) | VCVerifer - SD JWT - without leaf cert and public key from x5c, not receiving the errorCode. |
+| [INJIMOB-3526](https://your-jira-instance/browse/INJIMOB-3526) | VCVerifer - SD JWT - without signature, not receiving the errorCode.                         |
+| [INJIMOB-1530](https://your-jira-instance/browse/INJIMOB-1530) | iOS - "Share QR Code" is not working on iPhone 8.                                            |
 
 #### Bug Fixes
 
@@ -111,8 +111,8 @@ Below is the list of bug fixes as part of the [**0.20.0** ](https://mosip.atlass
 
 #### Release Documentation <a href="#release-documentation" id="release-documentation"></a>
 
-* [Feature Documentation](../../overview/features.md#id-3.-sharing-verifiable-credentials)
-* [QA Report](test-report.md)&#x20;
+* [Feature Documentation](../../overview/features/#id-3.-sharing-verifiable-credentials)
+* [QA Report](test-report.md)
 
 #### Additional Resources <a href="#additional-resources" id="additional-resources"></a>
 
