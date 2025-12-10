@@ -23,8 +23,8 @@ eSignet now [implements key RFCs required for FAPI 2.0 compliance](https://docs.
 {% hint style="success" %}
 **Tips**:
 
-**FAPI 2.0 support is now fully enabled in eSignet.** However, enforcement of the FAPI 2.0 security profile is **client-configurable**. Each client can choose whether or not to enable FAPI 2.0 for their integrations.\
-If a client does **not** enforce the FAPI 2.0 profile, their authentication flows will continue to work **seamlessly without any change**.
+**eSignet now supports FAPI 2.0 security profile.** However, enforcement of the FAPI 2.0 security profile is **client-configurable**. Each client can choose whether or not to enable FAPI 2.0 security profile for their integrations.\
+If a client does **not** enforce the FAPI 2.0 security profile, their authentication flows will continue to work **seamlessly without any change**.
 {% endhint %}
 
 ### **Enhancements**
@@ -53,8 +53,6 @@ Several known issues from the previous release have been addressed to improve pl
 Please refer [here](https://mosip.atlassian.net/issues/?jql=issuetype%20%3D%20Bug%20and%20labels%20%3D%20known_issue_eSignet_1.7.0) for full list of known issues.
 
 <table><thead><tr><th width="189.52734375">Jira ID</th><th>Summary</th></tr></thead><tbody><tr><td><a href="https://mosip.atlassian.net/browse/ES-2716">ES-2716</a></td><td>esignet mosip id SendBindingOtp and WalletBinding test cases are failing with "errorCode": "IDA-MLC-018".</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/ES-2709">ES-2709</a></td><td>In mock when we are providing "trust_framework": null we are getting the user info response for first claim.</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/MOSIP-43956">MOSIP-43956</a></td><td>Update documentation for partner-onboarding/esignet.</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/MOSIP-43957">MOSIP-43957</a></td><td>Update keycloak init scripts in esignet-signup.</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/MOSIP-43958">MOSIP-43958</a></td><td>Issue in partner on boarder script for eSignet.</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/MOSIP-43960">MOSIP-43960</a></td><td>Partner on boarder script issue in esignet-signup.</td></tr></tbody></table>
-
-
 
 ### Story Development
 
