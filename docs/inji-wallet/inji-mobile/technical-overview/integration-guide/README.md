@@ -23,13 +23,13 @@ To ensure seamless integration with **Inji Wallet**, SDKs must follow these requ
 
 Use Inji’s modular SDKs and libraries to assemble a wallet tailored to your needs. Each library provides specific capabilities that can be integrated into your application.
 
-Build your own wallet using Inji libraries – click here!
+Build your own wallet using Inji libraries – click [here](building-verifiable-credentials-wallet-with-inji-libraries/)!
 
 **List of Libraries and SDKs**
 
 * [**VCI Client Library**](../architecture.md) – Issue and download Verifiable Credentials (VCs).
 * [**PixelPass Library**](../architecture.md) – Compress, encode, and decode JSON for QR codes.
-* [**OpenID4VP Library**](../architecture.md)  – Enable credential sharing through OpenID4VP protocols.
+* [**OpenID4VP Library**](../architecture.md) – Enable credential sharing through OpenID4VP protocols.
 * [**BLE Verifier Library** ](../architecture.md)– Verify VCs received over Bluetooth.
 * [**Tuvali Library** ](../architecture.md)**(BLE Sharing)** – Share credentials offline via Bluetooth Low Energy.
 * [**Secure Keystore Library** ](../architecture.md)– Manage secure storage of keys and sensitive data.
