@@ -1,14 +1,10 @@
----
-hidden: true
----
-
 # Version 0.16.0
 
 **Release Name**: Inji Verify v0.16.0
 
 **Support**: Developer Release
 
-**Release Date**: Coming Soon
+**Release Date**: <mark style="color:red;">**Coming Soon**</mark>
 
 ### **Overview** <a href="#overview" id="overview"></a>
 
