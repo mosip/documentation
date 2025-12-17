@@ -38,7 +38,7 @@ Inji Wallet is designed for interoperability and flexibility by supporting a wid
   * Supports use cases like identity verification in transport, law enforcement, and service access.
 * **IETF SD-JWT**
   * **IETF** **SD-JWT Verifiable Credentials**: Enables holders to download and share credentials in IETF **SD-JWT format**. This allows users to share only the necessary attributes while keeping other data private, ensuring **privacy-preserving credential sharing**.
-  * Allows users to share only the required claims with verifiers via the OpenIDVP flow, where these selectively disclosable claims can be shared as per the user's need. _**(Coming Soon in the upcoming release)**_
+  * Allows users to share only the required claims with verifiers via the OpenIDVP flow, where these selectively disclosable claims can be shared as per the user's need.&#x20;
 
 This multi-format support allows Inji Wallet to work seamlessly across different ecosystems, ensuring **compatibility, security, and user privacy**.
 
@@ -84,6 +84,13 @@ This multi-format support allows Inji Wallet to work seamlessly across different
 * Enables **dynamic layouts**, inclusion of **logos, photos, and design elements**, while staying aligned with the **W3C VC Data Model 2.0**.
 * Improves on-screen display and print-ready credential rendering experience.
 
+#### Revocation Support
+
+* **Automatically checks if a card is still valid** by reading the issuer’s revocation list whenever a credential is downloaded or refreshed.
+* **Uses W3C Bitstring Status List**, ensuring global, standards-based detection of revoked.
+* **Shows clear status indicators** (Valid, Revoked, Pending) so users immediately know whether a card can be safely shared.
+* Supports manual status checks&#x20;
+
 ### How It Works
 
 1. **Credential Download**\
@@ -107,7 +114,6 @@ This multi-format support allows Inji Wallet to work seamlessly across different
 * Support for **JWT-format credentials**
 * **Presentation During Issuance**
 * **Wallet Login with IdPs** (OpenID4VP-based WLA)
-* **Credential Revocation Support**
 
 ### Technology and Integration
 

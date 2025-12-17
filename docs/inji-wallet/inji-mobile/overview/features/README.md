@@ -16,7 +16,7 @@ Inji Wallet is designed for interoperability and flexibility by supporting a wid
   * Supports use cases like identity verification in transport, law enforcement, and service access.
 * **IETF SD-JWT**
   * **IETF** **SD-JWT Verifiable Credentials**: Enables holders to download and share credentials in IETF **SD-JWT format**. This allows users to share only the necessary attributes while keeping other data private, ensuring **privacy-preserving credential sharing**.
-  * Allows users to share only the required claims with verifiers via the OpenIDVP flow, where these selectively disclosable claims can be shared as per the user's need.&#x20;
+  * Allows users to share only the required claims with verifiers via the OpenIDVP flow, where these selectively disclosable claims can be shared as per the user's need.
 
 This multi-format support allows Inji Wallet to work seamlessly across different ecosystems, ensuring **compatibility, security, and user privacy**.
 
@@ -64,7 +64,7 @@ Inji Mobile Wallet uses robust cryptographic libraries to verify that the VC is:
 
 Inji Wallet supports secure sharing of Verifiable Credentials (VCs) in multiple ways — both **online and offline** — with strong privacy and authentication.
 
-<table><thead><tr><th width="176.83203125">Method</th><th width="287.495361328125">Description</th><th>Connectivity</th><th>User Control / Notes</th></tr></thead><tbody><tr><td><strong>QR Code Sharing</strong></td><td>Generate QR using PixelPass. Scan or upload on verifier portal.</td><td>Online</td><td>Quick and compact</td></tr><tr><td><strong>BLE (Bluetooth) Sharing</strong></td><td>Share VCs offline using Bluetooth Low Energy.</td><td>Offline</td><td>Peer-to-peer; face match supported</td></tr><tr><td><strong>SSO via QR Code</strong></td><td>Scan QR on service portal → share selected VCs after user consent.</td><td>Online</td><td>Fine-grained VC selection and SSO login</td></tr><tr><td><strong>OpenID4VP – Cross-Device</strong></td><td>Scan verifier’s QR from another device → present VCs post face verification.<br><br>Example: Sharing of JSON-LD,mDoc VCs etc</td><td>Online</td><td>Secure, decentralized VC presentation</td></tr><tr><td><strong>OpenID4VP – Same Device</strong></td><td>Tap QR on browser → deep-link opens wallet → share credentials.<br><br>Example: Sharing of JSON-LD,mDoc VCs etc</td><td>Online</td><td>Seamless redirect</td></tr><tr><td><strong>SD-JWT Verifiable Presentation (VP) Support</strong></td><td><p></p><ul><li>Inji Wallet supports <strong>OpenID for Verifiable Presentations (OpenID4VP)</strong> flow for credentials in the <strong>IETF SD-JWT</strong> format.</li></ul><ul><li>Holders can selectively disclose specific claims while keeping other attributes private.</li></ul><ul><li>This ensures privacy-preserving credential sharing with verifiers, aligning with IETF SD-JWT and OpenID4VP standards.</li></ul><ul><li>The wallet validates signed authorization requests and presents only the chosen claims, ensuring security and consent-driven sharing.</li></ul></td><td>Online</td><td>Consent-based sharing</td></tr></tbody></table>
+<table><thead><tr><th width="176.83203125">Method</th><th width="287.495361328125">Description</th><th>Connectivity</th><th>User Control / Notes</th></tr></thead><tbody><tr><td><strong>QR Code Sharing</strong></td><td>Generate QR using PixelPass. Scan or upload on verifier portal.</td><td>Online</td><td>Quick and compact</td></tr><tr><td><strong>BLE (Bluetooth) Sharing</strong></td><td>Share VCs offline using Bluetooth Low Energy.</td><td>Offline</td><td>Peer-to-peer; face match supported</td></tr><tr><td><strong>SSO via QR Code</strong></td><td>Scan QR on service portal → share selected VCs after user consent.</td><td>Online</td><td>Fine-grained VC selection and SSO login</td></tr><tr><td><strong>OpenID4VP – Cross-Device</strong></td><td>Scan verifier’s QR from another device → present VCs post face verification.<br><br>Example: Sharing of JSON-LD,mDoc VCs etc</td><td>Online</td><td>Secure, decentralized VC presentation</td></tr><tr><td><strong>OpenID4VP – Same Device</strong></td><td>Tap QR on browser → deep-link opens wallet → share credentials.<br><br>Example: Sharing of JSON-LD,mDoc VCs etc</td><td>Online</td><td>Seamless redirect</td></tr><tr><td><strong>SD-JWT Verifiable Presentation (VP) Support</strong></td><td><ul><li>Inji Wallet supports <strong>OpenID for Verifiable Presentations (OpenID4VP)</strong> flow for credentials in the <strong>IETF SD-JWT</strong> format.</li><li>Holders can selectively disclose specific claims while keeping other attributes private.</li><li>This ensures privacy-preserving credential sharing with verifiers, aligning with IETF SD-JWT and OpenID4VP standards.</li><li>The wallet validates signed authorization requests and presents only the chosen claims, ensuring security and consent-driven sharing.</li></ul></td><td>Online</td><td>Consent-based sharing</td></tr></tbody></table>
 
 **Note:** All methods include **user consent** and **privacy-by-design** to ensure secure, context-aware interactions.
 
@@ -76,9 +76,16 @@ Inji Wallet supports secure sharing of Verifiable Credentials (VCs) in multiple 
 * This enhancement improves **readability**, **user trust**, and **consistency** while maintaining alignment with the underlying verifiable data.
 * Support for SVG rendering for other data models may be added in future versions.
 
-### 5. Additional Mobile Wallet Features
+### 5. Revocation Support
 
-#### 5.1 Backup and Restore
+* **Automatic Status Check** – The wallet automatically checks if a card is valid, revoked, or pending when it is downloaded.
+* **Manual Recheck Anytime** – Users can recheck a card’s status whenever needed, with clear results shown instantly.
+* **Easy-to-Understand Status Labels** – Cards clearly show one of three states: **Valid**, **Revoked**, **Expired** and **Pending**.
+* **History Tracking** – Whenever there is a change in status, it reflects in the user’s History for easy tracking and transparency.
+
+### 6. Additional Mobile Wallet Features
+
+#### 6.1 Backup and Restore
 
 Inji Wallet includes a secure, one-time backup setup based on the platform:
 
@@ -92,7 +99,7 @@ Inji Wallet includes a secure, one-time backup setup based on the platform:
 * Phone upgrades
 * App crashes or resets
 
-#### 5.2 User-Friendly Interface & Quick Actions
+#### 6.2 User-Friendly Interface & Quick Actions
 
 Designed for ease of use with intuitive UI components:
 
@@ -104,7 +111,7 @@ Designed for ease of use with intuitive UI components:
 * VCs grouped by type (ID, insurance, education)
 * Recent VCs shown first
 
-#### 5.3 Wallet Security & Device Features
+#### 6.3 Wallet Security & Device Features
 
 * **Biometric / Passcode Access**
   * App requires authentication on every open or session timeout
@@ -113,9 +120,8 @@ Designed for ease of use with intuitive UI components:
   * Private keys are stored using Android Keystore / iOS Secure Enclave
   * Keys cannot be exported or tampered
 
-### 6. Features in the Pipeline
+### 7. Features in the Pipeline
 
-* Revocation Status
 * Presentation during Issuance
 * Injii Mobile Wallet Login
 * Claim 169 QR Code Parsing and Download
