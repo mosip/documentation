@@ -6,28 +6,27 @@
 
 **Release Date**: <mark style="color:red;">**Coming Soon**</mark>
 
-### **Overview** <a href="#overview" id="overview"></a>
+## Overview
 
 We are excited to announce the release of **Inji Verify v0.16.0.** This version introduces the **revocation feature, multi-lingual support, SVG Rendering,** and **MOSIP UIN VC Verification.**
 
-#### **New Features:** <a href="#new-features" id="new-features"></a>
+## New Features
 
-1. **Revocation:** Inji Verify now supports real-time revocation checks using the W3C Status List 2021 mechanism. During verification, the system reads the credentialStatus field, fetches the issuer’s Status List Credential, validates its proof, and determines whether the credential is valid, revoked, suspended, or invalid. The verification result is displayed clearly while preserving the VC’s original layout. This enhancement ensures secure, privacy-preserving, standards-compliant verification without exposing user data.
+1. **Revocation:** Inji Verify now supports real-time revocation checks using the **W3C BitString Status List 2021** mechanism. During verification, the system reads the credentialStatus field, fetches the issuer’s Status List Credential, validates its proof, and determines whether the credential is valid, revoked, suspended, or invalid. The verification result is displayed clearly while preserving the VC’s original layout. This enhancement ensures secure, privacy-preserving, standards-compliant verification without exposing user data.
 2. **Multi-Lingual Support:** Inji Verify now supports viewing credential data and verification results in multiple languages. The system auto-detects the browser language (defaulting to English) and displays all VC claims, metadata, and validation outcomes accordingly. Users can switch languages without affecting verification results or credential layout, ensuring clarity and consistency across regions.
 3. **SVG Rendering:** Inji Verify now supports rendering Verifiable Credentials using SVG templates, ensuring the credential’s original design, layout, fonts, and branding remain intact. Verification results (Valid/Invalid/Expired) are overlaid seamlessly without altering the visual integrity. The system also supports uploading QR codes in SVG and other compatible formats, with improved error handling, consistent UI, and accessibility compliance.
 4. **MOSIP UIN VC Verification**: Inji Verify now fully supports the verification of MOSIP-issued UIN Verifiable Credentials, enabling seamless, secure, and standards-based validation of identity information. The system automatically decodes the UIN VC, validates its cryptographic proof, checks its revocation status, and displays a clear verification outcome—while preserving the credential’s original visual design. This enhancement ensures verifiers can confidently authenticate MOSIP UIN credentials across services, improving interoperability, trust, and user experience within the MOSIP ecosystem.
 
 **Note:** The Inji Verify UI is a _reference implementation_ to demonstrate orchestration. Developers can selectively embed SDK components in the verifier applications as per their needs.
 
-### **Repositories: Released/Dependent** <a href="#repositories-released-dependent" id="repositories-released-dependent"></a>
+## **Repositories: Released/Dependent**
 
 | **Repositories** | **Tags: Released/Dependent** |
 | ---------------- | ---------------------------- |
 | Inji Verify      | **v0.16.0**                  |
 
-&#x20;
 
-### **Projects: Released** <a href="#projects-released" id="projects-released"></a>
+## **Projects: Released**
 
 **Inji Verify Repo** → 4 projects (all these projects are of same version) as below:
 
@@ -39,9 +38,8 @@ iii) SDK - `<Insert Link Here>`
 
 iv) API-Test - `<Insert Link Here>`
 
-&#x20;
 
-### **Compatible modules:** <a href="#compatible-modules" id="compatible-modules"></a>
+## Compatible modules
 
 The following table outlines the tested and certified compatibility of Inji Verify 0.10.0 with other modules.
 
@@ -52,15 +50,12 @@ The following table outlines the tested and certified compatibility of Inji Veri
 | Pixel-Pass library  | [0.7.0](https://github.com/mosip/pixelpass/releases/tag/v0.7.0)     |
 | vc-verifier library | [1.5.0](https://github.com/mosip/vc-verifier/releases/tag/v1.5.0)   |
 
-&#x20;
 
-### **Bug Fixes** <a href="#bug-fixes" id="bug-fixes"></a>
+## Bug Fixes
 
 Below is the list of fixes as part of the **0.16.0** release:
 
 **Query**: project=injiver and fixVersion=0.16.0 and issuetype=bug
-
-&#x20;
 
 | Key                                                                                   | Summary                                                                                                                |
 | ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
@@ -91,9 +86,8 @@ Below is the list of fixes as part of the **0.16.0** release:
 
 Synced just now•[24 items](https://mosip.atlassian.net/issues/?jql=project%3Dinjiver%20and%20fixVersion%3D0.16.0%20and%20issuetype%3DBug)
 
-&#x20;
 
-### **User Stories**: <a href="#user-stories" id="user-stories"></a>
+## User Stories
 
 | **Jira ID**                                                                                                                                                                                                                                                                                     | **Description**                                                                                                                                                                                                                                                                                                                                                                            |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -104,7 +98,7 @@ Synced just now•[24 items](https://mosip.atlassian.net/issues/?jql=project%3Di
 | [INJIVER-1358: Revocation: As a Verifier, I should be able to read the flag status in the VC, so that I can know if the VC has been revoked or notTesting](https://mosip.atlassian.net/browse/INJIVER-1358)                                                                                     | Inji Verify now performs real-time revocation checks using W3C Status List 2021, ensuring secure and privacy-preserving validation of credential status.                                                                                                                                                                                                                                   |
 | [INJIVER-1308: Support SD-JWT verification submitted via "/vc-submission" in the "/vp-result/{transactionId}" Fixed](https://mosip.atlassian.net/browse/INJIVER-1308)                                                                                                                           | Inji Verify now supports SD-JWT credential submissions via `/vc-submission`, automatically generating a `transactionId` when one is not provided and storing the credential for processing. Verifiers can then retrieve the full VC and its verification status through `/vp-result/{transactionId}`, enabling seamless end-to-end SD-JWT verification.                                    |
 
-### **Known Issues** <a href="#known-issues" id="known-issues"></a>
+## Known Issues
 
 Below is a list of some key known issues. For a detailed overview and the complete list of issues related to Inji Verify, please click [**here.**](https://mosip.atlassian.net/issues/?jql=project%20%3D%20%22INJIVER%22%20AND%20status%20not%20in%20%28Closed%2C%20Canceled%29%20AND%20type%20%3D%20Bug%20ORDER%20BY%20created%20DESC)
 
@@ -120,7 +114,7 @@ Below is a list of some key known issues. For a detailed overview and the comple
 | [INJIVER-1069: INJI-verify - The MOSIP UIN VC's created from reg-client are not verifiable from INJI-verifyTesting](https://mosip.atlassian.net/browse/INJIVER-1069)                                                                    | The MOSIP UIN VCs generated via reg-client are currently not verifiable through INJI Verify.                                                                                                                                                                                                                                                                                      |
 | [INJIVER-979: Inji verify backend scalability issueNew](https://mosip.atlassian.net/browse/INJIVER-979)                                                                                                                                 | Long-polling listeners are implemented within the service layer, preventing the backend from scaling effectively in a multi-pod (distributed) environment.                                                                                                                                                                                                                        |
 
-### **Documentation** <a href="#documentation" id="documentation"></a>
+## Documentation
 
 * [Feature documentation](https://docs.inji.io/inji-verify/overview/features)
 * [Integration Guide](https://docs.inji.io/inji-verify/technical-overview/integration-guides)

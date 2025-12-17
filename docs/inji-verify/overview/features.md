@@ -116,3 +116,77 @@ This ensures a secure and flexible way of sharing credentials across different d
 &#x20;Inji Verify now supports SD-JWT Verifiable Credentials (VCs) across QR code scanning, upload, and VP verification (cross-device and same-device flows), adhering to OpenID4VP and OpenID4VCI standards. Users can verify SD-JWT VCs by scanning or uploading QR codes, and securely share credentials between devices or on the same device. The portal visually distinguishes disclosed and undisclosed claims, enhancing privacy and transparency. Robust error handling guides users through invalid QR codes or VP submission issues, ensuring a seamless and secure verification experience.
 
 For more detailed information on each step and the underlying systems, click [**here**](../functional-overview/workflow.md)**.**
+
+
+24. **Revocation Support**: This feature introduces the ability to update a Verifiable Credential (VC) status to “Revoked” when it is invalidated by the issuer. It ensures that verifiers can always check the latest credential status and helps maintain the integrity and trustworthiness of the verification process.
+
+25. **Multilingual Support**: With this enhancement, VCs can now display claims in multiple languages. It allows issuers to include localized claim values, enabling verifiers and holders to view credentials in their preferred language, thereby improving accessibility and inclusivity across different regions and user groups.
+
+26. **SVG Rendering Support**: This feature enables the rendering of Verifiable Credentials in Scalable Vector Graphics (SVG) format, preserving the original design, layout, and branding of the credential. As a result, the displayed credential closely matches the issuer’s intended visual presentation, ensuring both authenticity and aesthetic consistency.
+
+27. **Support for MOSIP UIN-based VCs**: This enhancement adds compatibility for Verifiable Credentials issued using MOSIP Unique Identification Numbers (UINs). It allows verifiers to process and validate these credentials seamlessly, strengthening the ecosystem’s alignment with MOSIP’s identity framework and enabling broader interoperability.
+
+<!--
+
+## Revoked Credential Detection (Verifier)
+
+### Overview
+Inji Verify performs issuer-driven revocation checks during verification to ensure the credential presented is still valid. It resolves and evaluates the issuer’s status information and clearly communicates the outcome to the verifier: Valid, Revoked, or Pending (unable to determine now).
+
+### Why this matters
+- Prevents acceptance of credentials that the issuer has invalidated
+- Preserves trust and reduces operational risk for relying parties
+- Provides transparent status to operators with consistent UI feedback
+
+### Supported credential types (status checks)
+- JSON-LD Linked Data Proof VCs that include a `credentialStatus` entry following the W3C Bitstring Status List specification (also known as “Status List 2021”) with `statusPurpose = "revocation"`
+- Multi-bit status lists are supported (index = 0 indicates valid; non‑zero indicates revoked)
+
+References:
+- W3C: Bitstring Status List for Verifiable Credentials — https://www.w3.org/TR/vc-bitstring-status-list/
+- Related wallet feature (design details): ../../inji-wallet/inji-mobile/overview/features/revocation-of-verifiable-credentials.md
+
+### How it works in Inji Verify
+1. Intake: The verifier receives a QR (direct content) or a Verifiable Presentation (OpenID4VP cross‑device or same‑device).
+2. Decode & validate: Inji Verify decodes the payload, validates signatures/structure, and extracts issuer metadata.
+3. Resolve status: Using `credentialStatus`, it fetches the relevant Status List Credential (SLC) and decodes the bitstring at the credential’s index.
+4. Determine outcome:
+  - 0 → Valid
+  - >0 → Revoked
+  - Unavailable (network/error) → Pending
+5. Display result: The UI shows a clear status badge and color coding on the result cards. Multiple VCs in a single presentation are evaluated independently.
+
+### UI behavior (Verifier)
+- Valid: Green status, verification passes; details remain accessible
+- Revoked: Red status with reason “Revoked by issuer”; verification fails
+- Pending: Yellow status when the revocation source cannot be reached or verified; treatment depends on verifier policy
+
+### Error handling and messages
+- Network/timeouts while fetching status list → “Pending – status could not be determined now”
+- Invalid/expired Status List Credential → “Pending – issuer status source not verifiable”
+- Missing `credentialStatus` → “No issuer status available” (VC can still be validated cryptographically; acceptance is policy‑driven)
+
+### Operational notes for integrators
+- Cache & TTL: Inji Verify may cache Status List Credentials to reduce network load; configure appropriate TTLs to balance freshness and performance
+- Timeouts & retries: Configure HTTP timeouts/backoff for status-list fetches
+- Observability: Log status resolution outcomes without storing PII or full VCs
+- Policy hooks: Downstream systems can treat “Pending” per risk policy (e.g., soft‑fail vs. hard‑fail)
+
+### Limitations (current)
+- Status checks apply only when issuers publish a compatible Bitstring Status List
+- Other purposes (e.g., suspension) are not evaluated
+- If the status source is unreachable, the result is “Pending” until connectivity is restored
+
+### Security and privacy
+- Status lookups happen server‑side; payloads are handled minimally and not shared with third parties
+- Logs avoid sensitive fields and store only the outcome required for auditability
+
+### Future improvements
+- SD‑JWT status evaluation (when issuer metadata and libraries support it)
+- Additional status purposes (e.g., suspension) and richer error granularity
+- Push/near‑real‑time updates where supported by issuer ecosystems
+
+End‑user walkthrough and screenshots will be added in the Inji Verify End‑User Guide when available.
+
+-->
+

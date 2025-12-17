@@ -78,6 +78,14 @@ Inji Verify offers a comprehensive set of features tailored to meet the verifica
   * verificationMethod is `https://` and in combination with proofValue or jws
 {% endhint %}
 
+* **Revocation Support**: Enables issuers to update a VC’s status to “Revoked,” ensuring verifiers always access the latest status and maintaining trust in the verification process.
+
+* **Multilingual Support**: Allows VCs to include claims in multiple languages so holders and verifiers can view credentials in their preferred language, improving accessibility and inclusivity.
+
+* **SVG Rendering₹ Support**: Supports rendering VCs in SVG format, preserving the original layout, design, and branding for accurate and visually consistent display.
+
+* **Support for MOSIP UIN-based VCs**: Adds compatibility for VCs issued with MOSIP UINs, enabling seamless verification and improving interoperability within the MOSIP ecosystem.
+
 **Future Implementations Planned for Inji Verify**
 
 * **Offline Verification using BLE Technology**: Future updates will also include the ability to verify credentials offline using Bluetooth Low Energy (BLE) technology, adhering to OpenID standards. This approach is designed for environments where internet connectivity is limited or unavailable. Holders can share their credentials with verifiers via BLE, allowing for quick and secure credential validation without the need for an online connection. This offline solution will ensure flexibility and accessibility in remote or network-constrained areas, expanding the use cases for Inji Verify in various sectors.
