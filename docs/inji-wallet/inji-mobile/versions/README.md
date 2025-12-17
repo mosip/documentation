@@ -6,75 +6,57 @@ icon: rocket-launch
 
 ## Version: 0.21.0
 
-Name: Inji Mobile Wallet 0.21.0
-
-Date: Coming Soon&#x20;
-
-[Release Notes](./#version-0.21.0)
+* Name: Inji Mobile Wallet 0.21.0
+* Date: <mark style="color:red;">Coming Soon</mark>&#x20;
+* [Release Notes](./#version-0.21.0)
 
 ## Version: 0.20.0
 
-Name: Inji Mobile Wallet 0.20.0
-
-Date: 22nd October, 2025
-
-[Release Notes](version-0.20.0/)
+* Name: Inji Mobile Wallet 0.20.0
+* Date: 22nd October, 2025
+* [Release Notes](version-0.20.0/)
 
 ## Version: 0.19.0
 
-Name: Inji Mobile Wallet 0.19.0
-
-Date: 8th September, 2025
-
-[Release Notes](version-0.19.0.md)
+* Name: Inji Mobile Wallet 0.19.0
+* Date: 8th September, 2025
+* [Release Notes](version-0.19.0.md)
 
 ## Version: 0.18.0
 
-Name: Inji Mobile Wallet 0.18.0
-
-Date: 19th August, 2025
-
-[Release Notes](version-0.18.0/)
+* Name: Inji Mobile Wallet 0.18.0
+* Date: 19th August, 2025
+* [Release Notes](version-0.18.0/)
 
 ## Version: 0.17.0
 
-Name: Inji Mobile Wallet 0.17.0
-
-Date: 25th July, 2025
-
-[Release Notes](version-0.17.0/)
+* Name: Inji Mobile Wallet 0.17.0
+* Date: 25th July, 2025
+* [Release Notes](version-0.17.0/)
 
 ## Version: 0.17.1
 
-Name: Mimoto 0.17.1(Patch)
-
-Date: 16th June, 2025
-
-[Release Notes](version-0.17.1/)
+* Name: Mimoto 0.17.1(Patch)
+* Date: 16th June, 2025
+* [Release Notes](version-0.17.1/)
 
 ## Version: 0.16.0
 
-Name: Inji Mobile Wallet 0.16.0
-
-Date: 28th April, 2025
-
-[Release Notes](version-0.16.0/)
+* Name: Inji Mobile Wallet 0.16.0
+* Date: 28th April, 2025
+* [Release Notes](version-0.16.0/)
 
 ## Version: 0.15.1
 
-Name: Inji Mobile Wallet 0.15.1
-
-Date: 27th March, 2025
-
-[Release Notes](version-0.15.1/)
+* Name: Inji Mobile Wallet 0.15.1
+* Date: 27th March, 2025
+* [Release Notes](version-0.15.1/)
 
 ## Version: 0.15.0
 
-Name: Inji Mobile Wallet 0.15.0
-
-Date: 18th Feb, 2025
-
-[Release Notes](version-0.15.0/)
+* Name: Inji Mobile Wallet 0.15.0
+* Date: 18th Feb, 2025
+* [Release Notes](version-0.15.0/)
 
 ## Version: 0.14.1
 
