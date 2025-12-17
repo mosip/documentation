@@ -25,29 +25,26 @@ Revocation in Inji Mobile Wallet is the mechanism that allows the wallet to dete
 
 ### How does the Revocation Flow Work?
 
-A functional walkthrough of the complete user journey:
+End-to-end workflow of the user journey:
 
 #### **User Flow (Step-by-Step)**
 
 * When a verifiable credential is downloaded into the wallet, the app automatically checks whether it is still valid.
-* The wallet looks up the status for every credential downloaded, where the wallet checks if the issuing authority has marked it as still active or revoked (no longer valid)
+* The wallet looks up the status for every credential downloaded, where the wallet checks if the issuing authority has marked it as still active or revoked (no longer valid).
 * The wallet verifies the information before trusting the response. The wallet makes sure the data is correct:
-
-&#x20;      a) It checks that the file is valid. \
-&#x20;      b) It checks that the information is up-to-date.\
-&#x20;      c) It checks (on Android) that the file is digitally signed and secure.
-
-* &#x20;The wallet updates the screen, and the app now shows the correct status:
-
-&#x20;    a) 🟢 **Valid** — you can use or share it\
-&#x20;    b) 🔴 **Revoked** — you cannot use it\
-&#x20;    c) 🟡 **Pending** — try again later; internet may be required
+   a) It checks that the file is valid. <!-- file or VC? -->
+   b) It checks that the information is up-to-date.
+   c) It checks (on Android) that the file is digitally signed and secure. <!-- is it correct to say digitally signed -->
+* The wallet updates the screen, and the app now shows the correct status:
+   a) 🟢 **Valid** — You can use or share it
+   b) 🔴 **Revoked** — You cannot use it
+   c) 🟡 **Pending** — Try again later; internet may be required
 
 * Wallet logs the activity. The action (“Status checked”) is saved in your **History** so you always know when the last check happened.
 
 <figure><img src="../../../../.gitbook/assets/OpenID4VP Credential-2025-12-10-041250.png" alt=""><figcaption></figcaption></figure>
 
-For a step-by-step walkthrough of how users start the flow, see the **End User Guide**.
+For an step-by-step walkthrough of how users start the flow, see the **End User Guide**.
 
 ### Current Limitations
 
@@ -66,6 +63,6 @@ For a step-by-step walkthrough of how users start the flow, see the **End User G
 7. **Scale of encodedList:**
    * Very large encodedList files for population-scale deployments may require optimized storage, streaming, and verification strategies (e.g., segmented lists, CDN usage).
 
-#### **Test the Feature Today** <a href="#test-the-feature-today" id="test-the-feature-today"></a>
+## Learn More
 
-To learn how revocation works with Inji Mobile Wallet, refer to this page!
+* [End User Guide](link): To learn how revocation works with Inji Mobile Wallet
