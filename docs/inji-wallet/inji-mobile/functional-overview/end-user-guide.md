@@ -329,6 +329,29 @@ This method allows users to share **only specific claims** from an IETF **SD-JWT
 9. Upon confirmation, the **SD-JWT VP** is securely shared with the verifier.
 10. A success message confirms completion of the privacy-preserving sharing process.
 
+### **Revocation Check**
+
+1. **Download a new credential into the Inji Wallet.**\
+   As soon as the download finishes, the app automatically begins checking whether the credential is still valid.
+2. **The wallet looks up the status of the credential.**\
+   It checks if the issuing authority has marked the credential as:
+   * Active (valid)
+   * Revoked (no longer valid)
+   * Or if the status cannot be confirmed yet
+3. **The wallet verifies the information.**\
+   To make sure the status is trustworthy, the wallet:
+   * Confirms the status file is valid
+   * Checks that the information is current
+4. **The wallet updates the credential status on the screen.**\
+   Based on the result, you will see:
+   * 🟢 **Valid** — you can use or share the credential
+   * 🔴 **Revoked** — you cannot use it
+   * 🟡 **Pending** — try again later; internet may be required
+5. **The wallet logs the status check.**\
+   The app saves a record in your **History** showing when the status was last checked.
+6. **Manually check the status anytime.**\
+   To check the status later, you can go to the card options and tap **Check Status**.
+
 ### Pinning a VC
 
 After clicking on the ellipsis button on the downloaded VC, a button will appear allowing for the VC to be pinned. Selecting this option will pin the specific VC to the top of the screen.
