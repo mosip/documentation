@@ -25,31 +25,30 @@ Revocation in Inji Mobile Wallet is the mechanism that allows the wallet to dete
 
 ### How does the Revocation Flow Work?
 
-End-to-end workflow of the user journey:
+Step wise user flow:
 
 #### **User Flow (Step-by-Step)**
 
 * When a verifiable credential is downloaded into the wallet, the app automatically checks whether it is still valid.
 * The wallet looks up the status for every credential downloaded, where the wallet checks if the issuing authority has marked it as still active or revoked (no longer valid).
-* The wallet verifies the information before trusting the response. The wallet makes sure the data is correct:
-   a) It checks that the file is valid. <!-- file or VC? -->
-   b) It checks that the information is up-to-date.
-   c) It checks (on Android) that the file is digitally signed and secure. <!-- is it correct to say digitally signed -->
-* The wallet updates the screen, and the app now shows the correct status:
-   a) 🟢 **Valid** — You can use or share it
-   b) 🔴 **Revoked** — You cannot use it
-   c) 🟡 **Pending** — Try again later; internet may be required
-
+* The wallet verifies the information before trusting the response. The wallet makes sure the data is correct:&#x20;
+  * a) It checks that the file is valid.&#x20;
+  * b) It checks that the information is up-to-date.&#x20;
+  * c) It checks (on Android) that the file is digitally signed and secure.
+* The wallet updates the screen, and the app now shows the correct status:&#x20;
+  * a) 🟢 **Valid** — You can use or share it&#x20;
+  * b) 🔴 **Revoked** — You cannot use it&#x20;
+  * c) 🟡 **Pending** — Try again later; internet may be required
 * Wallet logs the activity. The action (“Status checked”) is saved in your **History** so you always know when the last check happened.
 
 <figure><img src="../../../../.gitbook/assets/OpenID4VP Credential-2025-12-10-041250.png" alt=""><figcaption></figcaption></figure>
 
-For an step-by-step walkthrough of how users start the flow, see the **End User Guide**.
+For an step-by-step workflow of how users start the flow, see the **End User Guide**.
 
 ### Current Limitations
 
 1. **Format coverage:**
-   * Revocation checks currently apply only to credentials using the [**W3C Bitstring Status List**](https://www.w3.org/TR/vc-bitstring-status-list/)  (LDP-VC). SD-JWT and some other credential formats are **bypassed** for status checks until issuers provide compatible status-list metadata or wallet libraries add support.
+   * Revocation checks currently apply only to credentials using the [**W3C Bitstring Status List**](https://www.w3.org/TR/vc-bitstring-status-list/) (LDP-VC). SD-JWT and some other credential formats are **bypassed** for status checks until issuers provide compatible status-list metadata or wallet libraries add support.
 2. **iOS signature verification:**
    * Full cryptographic signature verification of the Status List Credential is **skipped on iOS** for the current release (processing still decodes bitstring). iOS signature verification is planned for a future update.
 3. **Network dependence & offline UX:**
@@ -63,6 +62,8 @@ For an step-by-step walkthrough of how users start the flow, see the **End User 
 7. **Scale of encodedList:**
    * Very large encodedList files for population-scale deployments may require optimized storage, streaming, and verification strategies (e.g., segmented lists, CDN usage).
 
+***
+
 ## Learn More
 
-* [End User Guide](link): To learn how revocation works with Inji Mobile Wallet
+* [End User Guide](link/): To learn how revocation works with Inji Mobile Wallet
