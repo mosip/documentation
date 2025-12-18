@@ -5,6 +5,7 @@
 {% endhint %}
 
 ## Overview
+
 This document serves as a concise guide for end users, providing comprehensive step-by-step information on the features and functionalities offered by Inji Verify.
 
 ### Supported Credential Formats
@@ -12,18 +13,19 @@ This document serves as a concise guide for end users, providing comprehensive s
 Inji Verify now supports multiple verifiable credential formats to ensure broad compatibility:
 
 #### **SD-JWT (Selective Disclosure JWT)** NEW
-- **Privacy-First**: Share only the information you choose to reveal
-- **Selective Disclosure**: Hide sensitive data while proving specific claims
-- **Example Use Case**: Prove you're over 18 without revealing your exact age or birthdate
-- **Format**: Based on JWT with privacy-preserving extensions
+
+* **Privacy-First**: Share only the information you choose to reveal
+* **Selective Disclosure**: Hide sensitive data while proving specific claims
+* **Example Use Case**: Prove you're over 18 without revealing your exact age or birthdate
+* **Format**: Based on JWT with privacy-preserving extensions
 
 #### **JSON-LD Verifiable Credentials**
-- **Semantic Web Standard**: W3C compliant verifiable credentials
-- **Rich Data Relationships**: Complex, interconnected credential data
-- **Global Vocabularies**: Standardized data meanings across systems
 
-*All verification methods below work with both credential formats.*
+* **Semantic Web Standard**: W3C compliant verifiable credentials
+* **Rich Data Relationships**: Complex, interconnected credential data
+* **Global Vocabularies**: Standardized data meanings across systems
 
+_All verification methods below work with both credential formats._
 
 ## Verify by scanning the QR Code
 
@@ -264,12 +266,12 @@ Options are provided to **Download JSON** or **Expand View**.
 #### Credential Status Examples
 
 * **Invalid VC display:**\
-  &#xNAN;_&#x53;hows the credential marked as invalid._
+  \&#xNAN;_Shows the credential marked as invalid._
 
 <figure><img src="../../.gitbook/assets/eug-iv-vpv-sdf-invalid-vc-display.png" alt="" width="400"><figcaption></figcaption></figure>
 
 * **Expired VC:**\
-  &#xNAN;_&#x53;hows the credential marked as expired._
+  \&#xNAN;_Shows the credential marked as expired._
 
 <figure><img src="../../.gitbook/assets/eug-iv-vpv-sdf-expired-vc.png" alt="" width="200"><figcaption></figcaption></figure>
 
@@ -303,13 +305,13 @@ The Help section includes three sub-sections or sub-menus:
 * **Documentation**: This directs you to the Inji Verify documentation page for detailed information about Inji Verify.
 * **FAQ**: This section is still under development.
 
-<figure><img src="../../.gitbook/assets/image37.png" alt="" width="200"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image37.png" alt=""><figcaption></figcaption></figure>
 
 ### **Language Selection**
 
 Language dropdown is provided for verifier to select a language of his interest for better usability . The languages currently supported are: Portuguese, Spanish, French, English, Arabic, Tamil, Khmer, Hindi and Kannada.
 
-<figure><img src="../../.gitbook/assets/image38.png" alt="" width="200"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image38.png" alt=""><figcaption></figcaption></figure>
 
 ## **Credential Display Capability**
 
@@ -317,45 +319,41 @@ Language dropdown is provided for verifier to select a language of his interest 
 
 * These credentials are currently active and verified using the Inji Verify Portal.
 
-<figure><img src="../../.gitbook/assets/image14.png" alt="" width="200"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image14.png" alt=""><figcaption></figcaption></figure>
 
 **Invalid Credentials**:
 
 * These credentials are currently active but invalid.
 
-<figure><img src="../../.gitbook/assets/image39.png" alt="" width="200"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image39.png" alt=""><figcaption></figcaption></figure>
 
 **Expired Credentials**
 
 * These credentials have passed their validity period and are no longer active.
 
-<figure><img src="../../.gitbook/assets/image40.png" alt="" width="200"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image40.png" alt=""><figcaption></figcaption></figure>
 
 **Revoked Credentials**
+
 * These credentials have been revoked and are no longer valid.
 
-<figure><img src="../../.gitbook/assets/iv-0160-revokedvc-1.png" alt="" width="200"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/iv-0160-revokedvc-1.png" alt=""><figcaption></figcaption></figure>
 
 **SVG Credential Rendering**
 
 This feature enables the rendering of Verifiable Credentials in Scalable Vector Graphics (SVG) format, preserving the original design, layout, and branding of the credential. As a result, the displayed credential closely matches the issuer’s intended visual presentation, ensuring both authenticity and aesthetic consistency.
 
-<figure><img src="../../.gitbook/assets/iv-0160-svg-credential-1.png" alt="" width="200"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/iv-0160-svg-credential-1.png" alt=""><figcaption></figcaption></figure>
 
+**Multilingual Credentials** With this enhancement, VCs can now display claims in multiple languages. It allows issuers to include localized claim values, enabling verifiers and holders to view credentials in their preferred language, thereby improving accessibility and inclusivity across different regions and user groups.
 
-**Multilingual Credentials**
-With this enhancement, VCs can now display claims in multiple languages. It allows issuers to include localized claim values, enabling verifiers and holders to view credentials in their preferred language, thereby improving accessibility and inclusivity across different regions and user groups.
+<figure><img src="../../.gitbook/assets/iv-0160-multilingual-vc-rendering-1.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/iv-0160-multilingual-vc-rendering-1.png" alt="" width="200"><figcaption></figcaption></figure>
+**Revoked Credentials** This feature introduces the ability to update a Verifiable Credential (VC) status to “Revoked” when it is invalidated by the issuer. It ensures that verifiers can always check the latest credential status and helps maintain the integrity and trustworthiness of the verification process.
 
+<figure><img src="../../.gitbook/assets/iv-0160-revokedvc-1.png" alt=""><figcaption></figcaption></figure>
 
-**Revoked Credentials**
-This feature introduces the ability to update a Verifiable Credential (VC) status to “Revoked” when it is invalidated by the issuer. It ensures that verifiers can always check the latest credential status and helps maintain the integrity and trustworthiness of the verification process.
-
-<figure><img src="../../.gitbook/assets/iv-0160-revokedvc-1.png" alt="" width="200"><figcaption></figcaption></figure>
-
-
-## **Error Handling:**
+## **Error Handling**
 
 **Scenario 1:** If Pixel Pass encounters difficulties in decoding the data or encounters an unsupported QR code format, Inji Verify returns to the home screen.
 
@@ -392,4 +390,3 @@ This feature introduces the ability to update a Verifiable Credential (VC) statu
 <figure><img src="../../.gitbook/assets/image35.png" alt="" width="500"><figcaption></figcaption></figure>
 
 **Scenario 8:** When the server is down, then the error message displayed is - 'The service is currently unavailable. Please try again later'.
-
