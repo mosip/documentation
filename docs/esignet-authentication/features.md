@@ -82,7 +82,7 @@ To align eSignet with the FAPI 2.0 profile, v1.7.0 introduces support for three 
 * **Authorization Server Issuer Identification (OIDC Metadata checks)** — enforces clear, verifiable issuer metadata so clients can confirm they are interacting with the intended authorization server. This prevents environment mix-ups and server impersonation attacks (e.g., sandbox vs production confusion or malicious endpoints).
 
 {% hint style="success" %}
-FAPI 2.0 For a deeper understanding of FAPI 2.0 and the mechanisms implemented in eSignet, see the FAPI 2.0 Security Profile specification: https://openid.net/specs/fapi-security-profile-2\_0-final.html.
+FAPI 2.0 For a deeper understanding of FAPI 2.0 and the mechanisms implemented in eSignet, see the [FAPI 2.0 Security Profile specification](https://openid.net/specs/fapi-security-profile-2_0-final.html).
 {% endhint %}
 
 {% hint style="success" %}
