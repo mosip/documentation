@@ -66,4 +66,4 @@ For an step-by-step workflow of how users start the flow, see the **End User Gui
 
 ## Learn More
 
-* [End User Guide](link/): To learn how revocation works with Inji Mobile Wallet
+* [End User Guide](https://github.com/mosip/inji-wallet/blob/master/docs/revocation-support.md): To learn how revocation works with Inji Mobile Wallet
