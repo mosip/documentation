@@ -8,6 +8,46 @@ Here we present the product roadmap for the entire **Inji Stack** for the calend
 
 For detailed module-wise roadmaps, please refer to the respective sections; Inji Wallet (Mobile, Web), Inji Certify and Inji Verify.
 
+
+
+## Inji Wallet
+
+
+
+### Inji Mobile
+
+<details>
+
+<summary>Vision</summary>
+
+_Building a trust-first digital wallet experience simplified sharing, enhanced protection, and frictionless verification for every user, everywhere._
+
+Inji Mobile Wallet’s 2026 vision is to evolve into a fully interoperable, standards-aligned verifiable credential wallet that is secure, user-centric, and future-ready. The roadmap focuses on strengthening foundational capabilities—OpenID4VP & VCI final spec compliance, advanced cryptographic support (ECC R1, BBS+), unified key management, profile creation, and end-to-end revocation across all major VC formats (SD-JWT, JWT, mDoc). These upgrades ensure the wallet remains globally interoperable while meeting the needs of governments, implementers, and ecosystems adopting Inji.
+
+We aim to deliver a highly reliable and scalable wallet that supports cross-platform verification, richer offline and BLE capabilities, multi-format rendering (SVG, PDF), and enhanced privacy models. Q4 introduces strategic features such as Shamir’s Secret Sharing for key recovery, BLE enhancements for iOS↔iOS, mDoc revocation, and a dedicated iOS verification library. Longer-term (2027+) innovation tracks explore multi-user credentials, one-time/bulk credential patterns, consent management, DIDComm, anonymous credentials, and multi-tech-stack portability—setting the foundation for Inji as a universal, secure, and inclusive digital credential wallet for global public infrastructure.
+
+</details>
+
+
+
+<table><thead><tr><th width="90.9296875">Priority</th><th width="206.45703125">Features 🛠️</th><th width="206.90625">Details 📝</th><th>Status 📊</th><th>Details 📌</th></tr></thead><tbody><tr><td>P0</td><td>Presentation During Issuance</td><td><a href="https://github.com/mosip/inji-wallet/issues/2178">https://github.com/mosip/inji-wallet/issues/2178</a></td><td>In-Progress</td><td>0.22.0</td></tr><tr><td>P0</td><td>Claim 169 QR Code Support</td><td><a href="https://github.com/mosip/inji-wallet/issues/2179">https://github.com/mosip/inji-wallet/issues/2179</a></td><td>🔵 Planned</td><td>0.22.0</td></tr><tr><td>P1</td><td>Wallet Login &#x26; Common Key Management</td><td><a href="https://github.com/mosip/inji-wallet/issues/2119">https://github.com/mosip/inji-wallet/issues/2119</a></td><td>🔵 Planned</td><td></td></tr><tr><td>P1</td><td>Create Profile - Profiling with Single VC</td><td></td><td>🔵 Planned</td><td></td></tr><tr><td>P1</td><td>Support for ECC R1</td><td></td><td>🔵 Planned</td><td></td></tr><tr><td>P1</td><td>Credential Refresh Support</td><td></td><td>🔵 Planned</td><td></td></tr><tr><td>P1</td><td>DC API Support</td><td></td><td>🔵 Planned</td><td></td></tr><tr><td>P1</td><td>Upgrade to OpenIDVCI final version 1.0</td><td></td><td>🔵 Planned</td><td></td></tr><tr><td>P1</td><td>Upgrade to OpenIDVP final version 1.0</td><td></td><td>🔵 Planned</td><td></td></tr><tr><td>P1</td><td>W3C Data Model 2.0-based SD-JWT &#x26; JWT VC Support</td><td></td><td>🔵 Planned</td><td></td></tr><tr><td>P1</td><td>IETF based SD-JWT &#x26; JWT SVG Rendering</td><td></td><td>🔵 Planned</td><td></td></tr><tr><td>P1</td><td>Delegated Access Support from <strong>Issuer</strong></td><td></td><td>🔵 Planned</td><td></td></tr><tr><td>P1</td><td>Shamir’s secret open standard Implementation</td><td></td><td>🔵 Planned</td><td></td></tr><tr><td>P1</td><td>Revocation of mDoc/mDL VC Format</td><td></td><td>🔵 Planned</td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
+
+
+
+### Inji Web
+
+<details>
+
+<summary>Vision</summary>
+
+The vision for the Inji Web roadmap is to build a secure, interoperable, and user-friendly web wallet that fully supports the next generation of global verifiable credential standards. By introducing capabilities such as W3C Data Model 2.0, SD-JWT, mDoc/mDL, revocation, credential refresh, profile management, delegated access, and offline/USSD-based sharing, Inji Web aims to offer citizens and organizations a trusted platform to receive, manage, and present credentials across diverse digital ecosystems. With enhanced privacy features like BBS+ and seamless integration with identity providers and verifier services, Inji Web will evolve into a comprehensive, inclusive, and scalable wallet experience suitable for national-level deployments and cross-sector use cases.
+
+</details>
+
+
+
+<table data-header-hidden><thead><tr><th width="97.7421875">Priority</th><th width="239.6484375">Features 🛠️</th><th width="187.765625">Feature Details📝</th><th>Status 📊</th><th>Details 📌</th></tr></thead><tbody><tr><td>P1</td><td>W3C Data Model 2.0 &#x26; SVG Render Method</td><td></td><td>In-Progress</td><td>0.16.0</td></tr><tr><td>P1</td><td>Revocation of Data Model 2.0 VC</td><td></td><td>🔵 Planned</td><td>0.16.0</td></tr><tr><td>P1</td><td>Claim 169 QR Code Support</td><td></td><td>🔵 Planned</td><td>0.16.0</td></tr><tr><td>P1</td><td>SD-JWT via OpenIDVP Flow</td><td></td><td>🔵 Planned</td><td>0.17.0</td></tr><tr><td>P1</td><td>Pre-Auth Code Flow</td><td></td><td>🔵 Planned</td><td>0.17.0</td></tr><tr><td>P2</td><td>Recovery of Web Wallet</td><td></td><td>🔵 Planned</td><td>0.17.0</td></tr><tr><td>P1</td><td>Create Profile - Profiling with Single VC</td><td><p>Profile Management</p><p>Multi-profile</p></td><td>🔵 Planned</td><td>0.17.0</td></tr><tr><td>P1</td><td>Presentation During Issuance</td><td></td><td>🔵 Planned</td><td>0.18.0</td></tr><tr><td>P1</td><td>mDoc/mDL VC Support</td><td></td><td>🔵 Planned</td><td>0.18.0</td></tr><tr><td>P2</td><td>Credential refresh</td><td></td><td>🔵 Planned</td><td>0.18.0</td></tr><tr><td>P2</td><td>Enhancement to Inji Web Login: Support other ID provider login like eSignet</td><td></td><td>🔵 Planned</td><td>0.18.0</td></tr><tr><td>P2</td><td>Delegated Access Support from <strong>Issuer</strong></td><td></td><td></td><td>0.19.0</td></tr><tr><td>P2</td><td>USSD Support</td><td><p>Offline VC sharing via a feature phone</p><p>USSD Wallet</p></td><td>🔵 Planned</td><td>0.19.0</td></tr><tr><td>P2</td><td><p>BBS+ Support</p><ul><li>Improve user privacy</li><li>1 secret, and a domain-specific public key.</li></ul></td><td></td><td>🔵 Planned</td><td>0.19.0</td></tr><tr><td>P2</td><td>W3C Data Model 2.0 SD-JWT &#x26; JWT VC Support</td><td></td><td>🔵 Planned</td><td>0.19.0</td></tr><tr><td>P3</td><td>Enhancement to Inji Web Login: Audit Mechanism with Inji web login</td><td></td><td>🔵 Planned</td><td>0.19.0</td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
+
 ### Inji Certify
 
 <details>
