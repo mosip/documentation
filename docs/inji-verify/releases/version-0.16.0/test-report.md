@@ -19,21 +19,19 @@ The scope of testing is to verify fitment to the specification from the perspect
 
 The Functional verification of the Inji verify application is performed on Android and iOS platforms to ensure alignment with product specifications and business requirements. Analyzed with respect to functional stability, data integrity, and UI consistency. The validation adopts a persona-based testing strategy, simulating real-world user scenarios across diverse device matrices and multi-language configurations to ensure robustness in both online and offline environments.
 
-☐ Functionality
-
-☐ Combination
-
-☐ Configurability &#x20;
-
-☐ Customizability
-
-☐ Library verification (vc-verifier)
+* Functionality
+* Combination
+* Configurability
+* Customizability
+* Library verification (vc-verifier)
 
 ## Test Organization <a href="#yy2hvty9khcf" id="yy2hvty9khcf"></a>
 
-Table 1: Test Organization
+
 
 <table><thead><tr><th width="164.19921875" valign="top">Name</th><th width="220.4609375" valign="top">Functional Role</th><th valign="top">Responsibilities</th></tr></thead><tbody><tr><td valign="top"><p>Santosh</p><p> </p></td><td valign="top">QA Engineer</td><td valign="top">Verifying the functionality, stability of the application,and report preparation. and performing combination testing.</td></tr><tr><td valign="top">Chaitanya K</td><td valign="top">QA Manager</td><td valign="top">Overviewing the test execution and review of the report.</td></tr><tr><td valign="top">Ragini Krishna</td><td valign="top">Senior QA Manager</td><td valign="top">High-level governance and executive reviews of reports and execution.</td></tr></tbody></table>
+
+<p align="center">Test Organization</p>
 
 ### Test Planning <a href="#emzastw6he1" id="emzastw6he1"></a>
 
@@ -43,9 +41,9 @@ Table 1: Test Organization
 
 ### Test Devices <a href="#vpx2sf8k0ohy" id="vpx2sf8k0ohy"></a>
 
-&#x20;Table 2: Test Devices
-
 <table><thead><tr><th width="275.72265625" valign="top">Device Model</th><th valign="top">OS and BLE version</th></tr></thead><tbody><tr><td valign="top">iPhone 7</td><td valign="top">iOS 15.8 BLE 4.2</td></tr><tr><td valign="top">iPhone 11</td><td valign="top">iOS 26.1 BLE 5.0</td></tr><tr><td valign="top">iPhone 13</td><td valign="top">iOS 18.6.2 BLE 5.0</td></tr><tr><td valign="top">iPhone 14</td><td valign="top">iOS 26.2 BLE 5.3</td></tr><tr><td valign="top">SS Galaxy A03 core</td><td valign="top">Android 11 BLE 4.2</td></tr><tr><td valign="top">Vivo Y73</td><td valign="top">Android 13 BLE 5.0</td></tr><tr><td valign="top">Redmi 6A</td><td valign="top">Android 9 BLE 4.2</td></tr><tr><td valign="top">Techno POVA 6 NEO</td><td valign="top">Android 14 BLE 5.0</td></tr><tr><td valign="top">OPPO A59 5G</td><td valign="top">Android 13 BLE 5.3</td></tr><tr><td valign="top">ONE PLUS 12R</td><td valign="top">Android 15 BLE 5.3</td></tr><tr><td valign="top">Infinix NOTE 50X 5G</td><td valign="top">Android 15 BLE 5.4</td></tr><tr><td valign="top">Redmi 7A</td><td valign="top">Android 10 BLE 4.2</td></tr><tr><td valign="top">iTel</td><td valign="top">Android 14 BLE 5.0</td></tr><tr><td valign="top">Xiaomi Redmi NOTE 13 Pro</td><td valign="top">Android 15 BLE 5.2</td></tr></tbody></table>
+
+<p align="center"> Test Devices</p>
 
 ### Browser Versions <a href="#kqeupn1mwhel" id="kqeupn1mwhel"></a>
 
@@ -58,45 +56,43 @@ Used the below browser versions in testing INJI Verify
 
 ### Test Environment <a href="#rcclvtbximd" id="rcclvtbximd"></a>
 
-Table 3: Test Environment
-
 <table><thead><tr><th valign="top">Images (qa-inji1 env)</th></tr></thead><tbody><tr><td valign="top">mosipqa/inji-verify-service:0.16.x</td></tr><tr><td valign="top">mosipqa/inji-verify-ui:0.16.x</td></tr><tr><td valign="top">mosipqa/inji-certify-with-plugins:0.13.x</td></tr><tr><td valign="top">mosipid/apitest-mimoto:0.20.0</td></tr><tr><td valign="top">mosipqa/mimoto:develop</td></tr><tr><td valign="top">mosipqa/inji-web:develop</td></tr></tbody></table>
 
-&#x20;
+<p align="center"> Test Environment</p>
 
 <table><thead><tr><th valign="top">Images (released env)</th></tr></thead><tbody><tr><td valign="top">mosipid/mimoto:0.20.0</td></tr><tr><td valign="top">mosipid/apitest-mimoto:0.20.0</td></tr><tr><td valign="top">mosipid/inji-verify-service:0.15.2</td></tr><tr><td valign="top">mosipid/inji-verify-ui:0.15.2</td></tr><tr><td valign="top">mosipid/inji-certify-with-plugins:0.13.1</td></tr><tr><td valign="top">mosipid/inji-web:0.15.0</td></tr><tr><td valign="top">mosipid/esignet-with-plugins:1.6.2</td></tr><tr><td valign="top">mosipid/authentication-service:1.2.1.0</td></tr><tr><td valign="top">mosipid/authentication-internal-service:1.2.1.0</td></tr><tr><td valign="top">mosipid/authentication-otp-service:1.2.1.0</td></tr><tr><td valign="top">mosipid/kernel-notification-service:1.2.0.1</td></tr><tr><td valign="top">mosipid/registration-processor-stage-group-1:1.2.1.1</td></tr></tbody></table>
 
-
+<p align="center">Test Environment</p>
 
 ## Test Execution Report <a href="#jntklky0i18z" id="jntklky0i18z"></a>
 
 ### Test case execution summary <a href="#id-75ge18cptbkd" id="id-75ge18cptbkd"></a>
 
-Table 4: Test Execution Summary
-
 <table><thead><tr><th width="282.56640625" valign="top">Platform</th><th valign="top">Total</th><th valign="top">Pass</th><th valign="top">Fail</th><th valign="top">Skip</th></tr></thead><tbody><tr><td valign="top">INJI Verify</td><td valign="top">953</td><td valign="top">857</td><td valign="top">96</td><td valign="top">0</td></tr><tr><td valign="top">Test Rate: 100% With Pass Rate: 90%</td><td valign="top"></td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
+
+<p align="center">Test Execution Summary</p>
 
 ### Combination Testing with device components <a href="#ti9wmz43h1i4" id="ti9wmz43h1i4"></a>
 
 This section details Combination Testing results for Inji-verify on Windows, Android and iOS, specifically validating workflows like sharing Verifiable Credentials (VCs) across devices. These tests confirm the application's stability when orchestrating multiple components such as Bluetooth, camera, and biometrics during these cross-platform interactions.
 
-Table 5: Combination Result
-
 <table><thead><tr><th width="358.2734375" valign="top">Total</th><th valign="top">Passed</th><th valign="top">Failed</th><th valign="top">Skip</th></tr></thead><tbody><tr><td valign="top">220     </td><td valign="top">197</td><td valign="top">23</td><td valign="top">0</td></tr><tr><td valign="top">Test Rate: 100% With Pass Rate: 89.54%</td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
 
-
+<p align="center">Combination Result</p>
 
 ### Automation INJI Verify UI <a href="#id-7n89naae489u" id="id-7n89naae489u"></a>
 
-Table 6: UI Automation
-
 <table><thead><tr><th width="253.9375" valign="top">Total</th><th valign="top">Pass</th><th valign="top">Fail</th><th valign="top">Known Issues</th><th valign="top">Ignored</th></tr></thead><tbody><tr><td valign="top">23</td><td valign="top">23</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0</td></tr><tr><td valign="top">Test Rate: 100% With Pass Rate: 100%</td><td valign="top"></td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
+
+<p align="center">UI Automation</p>
 
 ### Automation INJI Verify API <a href="#vlcy6sv7sovh" id="vlcy6sv7sovh"></a>
 
-Table 7: API Automation Result
+
 
 <table><thead><tr><th width="260.296875" valign="top">Total</th><th valign="top">Pass</th><th valign="top">Fail</th><th valign="top">Known Issues</th><th valign="top">Ignored</th></tr></thead><tbody><tr><td valign="top">35</td><td valign="top">35</td><td valign="top">0</td><td valign="top">0</td><td valign="top">0</td></tr><tr><td valign="top">Test Rate: 100% With Pass Rate: 100%</td><td valign="top"></td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
+
+<p align="center">API Automation Result</p>
 
 ## Defect Metrics <a href="#id-60l1o5j1jbrg" id="id-60l1o5j1jbrg"></a>
 
@@ -104,19 +100,21 @@ Table 7: API Automation Result
 
 The following table depicts only the bugs which are found and not addressed in the current release.
 
-Table 8: Defect Metrics for the Release
-
 <table><thead><tr><th valign="top">Blocker</th><th valign="top">Critical</th><th valign="top">Major</th><th valign="top">Minor</th><th valign="top">Total</th></tr></thead><tbody><tr><td valign="top">0</td><td valign="top">0</td><td valign="top">8</td><td valign="top">5</td><td valign="top">13</td></tr></tbody></table>
 
-### &#x20;Known Issues Metrics
+<p align="center"> Defect Metrics for the Release</p>
+
+### Known Issues Metrics
 
 This section focuses on a separate category of issues that are known but not addressed in the current release. It provides a count and severity distribution for these defects across releases.
 
-Table 9: Defect Metrics for the known issues
+
 
 <table><thead><tr><th valign="top">Blocker</th><th valign="top">Critical</th><th valign="top">Major</th><th valign="top">Minor</th><th valign="top">Total</th></tr></thead><tbody><tr><td valign="top">0</td><td valign="top">0</td><td valign="top">47</td><td valign="top">13</td><td valign="top">60</td></tr></tbody></table>
 
-### &#x20;Conclusion
+<p align="center">Defect Metrics for the known issues</p>
+
+### Conclusion
 
 This section summarizes the key findings of test execution. It also provides a final QA recommendation on the build's readiness for release. The functional verification for Inji-verify version 016.0 has been successfully completed. The testing cycle achieved a 100% execution rate with a 90% pass rate across a total of 953 test cases. Additionally, API automation achieved a 100% pass rate.
 
@@ -131,11 +129,11 @@ The build has successfully met the defined exit criteria and is recommended for 
 * Documentation Sign-off: All test artifacts and reports are finalized.
 * Test Environment Stability: The test environment remained stable throughout the execution cycle.
 
-&#x20;Table 10: Report is signed off details
-
 <table><thead><tr><th valign="top">Name</th><th valign="top">Functional Role</th><th valign="top">Responsibilities</th></tr></thead><tbody><tr><td valign="top">Chaitanya K</td><td valign="top">QA Manager</td><td valign="top"> </td></tr><tr><td valign="top">Ragini Krishna</td><td valign="top">Senior QA Manager</td><td valign="top"> </td></tr></tbody></table>
 
-### &#x20;Appendix
+<p align="center">Report is signed off details</p>
+
+### Appendix
 
 This includes additional reference information for the report. It contains a history of document versions and a list of acronyms and their meanings.
 
