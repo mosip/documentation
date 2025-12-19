@@ -87,6 +87,10 @@ Test Execution Summary
 
 <table data-header-hidden><thead><tr><th width="294.25" valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Platform</td><td valign="top">Total</td><td valign="top">Pass</td><td valign="top">Fail</td><td valign="top">Skip</td></tr><tr><td valign="top">Android</td><td valign="top">2187</td><td valign="top">2017</td><td valign="top">170</td><td valign="top">0</td></tr><tr><td valign="top">iOS</td><td valign="top">2020</td><td valign="top">1846</td><td valign="top">174</td><td valign="top">0</td></tr><tr><td valign="top">Total</td><td valign="top">4207</td><td valign="top">3863</td><td valign="top">344</td><td valign="top">0</td></tr><tr><td valign="top"><p>                           Test cases: 4207 Passed: 3863 Failed: 344 Skipped: 0</p><p>                              Test Rate: 100% With Pass Rate: 91%</p></td><td valign="top"></td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
 
+
+<figure><img src="../../../../.gitbook/assets/iwm0210-tr-functional-execution-analysis.png" alt=""><figcaption></figcaption></figure>
+
+
 #### &#x20;Combination Testing with device components
 
 This section details Combination Testing results for Inji Mobile on Android and iOS, specifically validating workflows like sharing Verifiable Credentials (VCs) across devices. These tests confirm the application's stability when orchestrating multiple components such as Bluetooth, camera, and biometrics during these cross-platform interactions.
@@ -104,6 +108,8 @@ VC Verifier Library
 <table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Total</td><td valign="top">Pass</td><td valign="top">Fail</td><td valign="top">Known Issues</td><td valign="top">Ignored</td></tr><tr><td valign="top">155</td><td valign="top">118</td><td valign="top">37</td><td valign="top">0</td><td valign="top">0</td></tr><tr><td valign="top">Test Rate: 100% With Pass Rate: 76.12%</td><td valign="top"></td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
 
 
+<figure><img src="../../../../.gitbook/assets/iwm0210-tr-vc-verifier-library-execution.png" alt=""><figcaption></figcaption></figure>
+
 
 ### Automation Result Mimoto API
 
@@ -112,6 +118,8 @@ Mimoto is the Backend for Frontend (BFF) service for Inji Wallet, acting as a se
 Mimoto API Automation Result
 
 <table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Total</td><td valign="top">Pass</td><td valign="top">Fail</td><td valign="top">Known Issues</td><td valign="top">Ignored</td></tr><tr><td valign="top">349</td><td valign="top">312</td><td valign="top">0</td><td valign="top">4</td><td valign="top">33</td></tr><tr><td valign="top">Test Rate: 100% With Pass Rate: 89%</td><td valign="top"></td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
+
+<figure><img src="../../../../.gitbook/assets/iwm0210-tr-mimoto-api-test.png" alt=""><figcaption></figcaption></figure>
 
 ## Defect Metrics
 
@@ -136,6 +144,8 @@ Table 9: Defect Metrics for the known issues
 &#x20;
 
 &#x20;
+
+<figure><img src="../../../../.gitbook/assets/iwm0210-tr-known-issues.png" alt=""><figcaption></figcaption></figure>
 
 Known Issues Table Representation Chart
 
