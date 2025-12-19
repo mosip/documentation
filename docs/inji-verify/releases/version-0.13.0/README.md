@@ -89,7 +89,7 @@ Below is the list of fixes as part of the 0.13.0 release:
 
 ### Documentation
 
-* [Feature documentation](../../overview/features.md)
+* [Feature documentation](../../overview/features/)
 * [Integration Guide](../../../inji-wallet/inji-mobile/technical-overview/integration-guide/building-verifiable-credentials-wallet-with-inji-libraries/openid4vp.md)
 * [API Documentation](https://mosip.stoplight.io/studio/inji-verify)
 * [Collab Guide](../../functional-overview/releases-1/inji-verify-collab-guide.md)

@@ -202,7 +202,8 @@
 ## INJI VERIFY
 
 * [Overview](inji-verify/overview/README.md)
-  * [Features](inji-verify/overview/features.md)
+  * [Features](inji-verify/overview/features/README.md)
+    * [Credential Revocation](inji-verify/overview/features/credential-revocation.md)
 * [Develop](inji-verify/technical-overview/README.md)
   * [Technology Stack](inji-verify/technical-overview/tech-stack.md)
   * [Components](inji-verify/technical-overview/components.md)

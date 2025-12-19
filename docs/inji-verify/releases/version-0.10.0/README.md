@@ -69,8 +69,6 @@ Below is the list of known issues. To read in detail and view all the issues rel
 | [**INJIVER-387**](https://mosip.atlassian.net/browse/INJIVER-387) | INJIVER- When the user turns on the internet connection, they encounter a 'no internet' error screen." |
 | [**INJIVER-422**](https://mosip.atlassian.net/browse/INJIVER-422) | Inji Verify- The alignment on the no internet error screen is not correct on mobile                    |
 
-
-
 ### **Bug Fixes**
 
 Below is the list of fixes as part of the **0.10.0** release:
@@ -99,6 +97,6 @@ Below is the list of fixes as part of the **0.10.0** release:
 
 ### **Documentation**
 
-* [Feature Documentation](../../overview/features.md)
+* [Feature Documentation](../../overview/features/)
 * [User guide](../../functional-overview/end-user-guide.md)
 * [QA Report](test-report.md)

@@ -46,6 +46,6 @@ The following table outlines the tested and certified compatibility of Inji Veri
 
 Please refer to the list of items covered as part of [0.15.0](version-0.15.0) release.
 
-* [Feature documentation](../overview/features.md)
+* [Feature documentation](../overview/features/)
 * [API Documentation](https://mosip.stoplight.io/docs/inji-verify/63da8fc2ca609-open-id-4-vp-verifier-api-inji-verify)
 * [Collab Guide](../functional-overview/releases-1/inji-verify-collab-guide.md)
