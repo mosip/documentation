@@ -31,13 +31,13 @@ Step wise user flow:
 
 * When a verifiable credential is downloaded into the wallet, the app automatically checks whether it is still valid.
 * The wallet looks up the status for every credential downloaded, where the wallet checks if the issuing authority has marked it as still active or revoked (no longer valid).
-* The wallet verifies the information before trusting the response. The wallet makes sure the data is correct:&#x20;
-  * a) It checks that the file is valid.&#x20;
-  * b) It checks that the information is up-to-date.&#x20;
+* The wallet verifies the information before trusting the response. The wallet makes sure the data is correct:
+  * a) It checks that the file is valid.
+  * b) It checks that the information is up-to-date.
   * c) It checks (on Android) that the file is digitally signed and secure.
-* The wallet updates the screen, and the app now shows the correct status:&#x20;
-  * a) 🟢 **Valid** — You can use or share it&#x20;
-  * b) 🔴 **Revoked** — You cannot use it&#x20;
+* The wallet updates the screen, and the app now shows the correct status:
+  * a) 🟢 **Valid** — You can use or share it
+  * b) 🔴 **Revoked** — You cannot use it
   * c) 🟡 **Pending** — Try again later; internet may be required
 * Wallet logs the activity. The action (“Status checked”) is saved in your **History** so you always know when the last check happened.
 
@@ -66,4 +66,4 @@ For an step-by-step workflow of how users start the flow, see the **End User Gui
 
 ## Learn More
 
-* [End User Guide](https://github.com/mosip/inji-wallet/blob/master/docs/revocation-support.md): To learn how revocation works with Inji Mobile Wallet
+* [Revocation Check - Inji Wallet](https://github.com/mosip/inji-wallet/blob/master/docs/revocation-support.md): To learn how revocation works with Inji Mobile Wallet

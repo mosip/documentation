@@ -44,9 +44,9 @@ The update strengthens wallet reliability across verifiable credential flows, im
 
 ## Repositories Released
 
-| Module      | Version |
-| ----------- | ------- |
-| inji-wallet | [0.21.0](https://github.com/mosip/inji-wallet/tree/v0.21.0)  |
+| Module      | Version                                                     |
+| ----------- | ----------------------------------------------------------- |
+| inji-wallet | [0.21.0](https://github.com/mosip/inji-wallet/tree/v0.21.0) |
 | vc-verifier | [1.6.0](https://github.com/mosip/vc-verifier/tree/v1.6.0)   |
 
 ## Compatible Modules
@@ -82,4 +82,4 @@ Here below is the complete list of bug fixes included in the [**0.21.0**](https:
 * [Features](https://docs.inji.io/inji-wallet/inji-mobile/overview/features)
 * [Integration Guides](https://docs.inji.io/inji-wallet/inji-mobile/technical-overview/integration-guide)
 * [End User Guide](https://docs.inji.io/inji-wallet/inji-mobile/functional-overview/end-user-guide)
-* [API Documentation](https://mosip.stoplight.io/docs/mimoto/k6907m3dzc1gi-mimoto)
+* [API Documentation](https://mosip.stoplight.io/docs/mimoto/5bf5a1n68g4tq-mimoto)
