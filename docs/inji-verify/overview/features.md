@@ -142,9 +142,6 @@ Inji Verify performs issuer-driven revocation checks during verification to ensu
 - JSON-LD Linked Data Proof VCs that include a `credentialStatus` entry following the W3C Bitstring Status List specification (also known as “Status List 2021”) with `statusPurpose = "revocation"`
 - Multi-bit status lists are supported (index = 0 indicates valid; non‑zero indicates revoked)
 
-References:
-- W3C: Bitstring Status List for Verifiable Credentials — https://www.w3.org/TR/vc-bitstring-status-list/
-- Related wallet feature (design details): ../../inji-wallet/inji-mobile/overview/features/revocation-of-verifiable-credentials.md
 
 ### How it works in Inji Verify
 1. Intake: The verifier receives a QR (direct content) or a Verifiable Presentation (OpenID4VP cross‑device or same‑device).
@@ -186,6 +183,9 @@ References:
 - Additional status purposes (e.g., suspension) and richer error granularity
 - Push/near‑real‑time updates where supported by issuer ecosystems
 
+References:
+- W3C: Bitstring Status List for Verifiable Credentials — https://www.w3.org/TR/vc-bitstring-status-list/
+- Related wallet feature (design details): ../../inji-wallet/inji-mobile/overview/features/revocation-of-verifiable-credentials.md
 End‑user walkthrough and screenshots will be added in the Inji Verify End‑User Guide when available.
 
 -->
