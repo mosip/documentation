@@ -4,7 +4,7 @@
 
 **Support**: Developer Release
 
-**Release Date**: <mark style="color:red;">**Coming Soon!**</mark>
+**Release Date**: 19th December, 2026
 
 ## Overview
 
@@ -12,23 +12,22 @@ We are excited to announce the release of **Inji Verify v0.16.0.** This version 
 
 ## New Features
 
-1. **Revocation:** Inji Verify now supports real-time revocation checks using the **W3C BitString Status List 2021** mechanism. During verification, the system reads the credentialStatus field, fetches the issuer’s Status List Credential, validates its proof, and determines whether the credential is valid, revoked, suspended, or invalid. The verification result is displayed clearly while preserving the VC’s original layout. This enhancement ensures secure, privacy-preserving, standards-compliant verification without exposing user data.
-
+1. **Revocation:** Inji Verify now supports real-time revocation checks using the [**W3C BitString Status List 2021**](https://www.w3.org/TR/vc-bitstring-status-list/) mechanism. During verification, the system reads the credentialStatus field, fetches the issuer’s Status List Credential, validates its proof, and determines whether the credential is valid, revoked, suspended, or invalid. The verification result is displayed clearly while preserving the VC’s original layout. This enhancement ensures secure, privacy-preserving, standards-compliant verification without exposing user data.
 2. **Multi-Lingual Support:** Inji Verify now [supports viewing credential data and verification results in multiple languages](../../functional-overview/end-user-guide.md#credential-display-capability). The system auto-detects the browser language (defaulting to English) and displays all VC claims, metadata, and validation outcomes accordingly. Users can switch languages without affecting verification results or credential layout, ensuring clarity and consistency across regions.
-
-3. **SVG Rendering:** Inji Verify now [supports rendering Verifiable Credentials using SVG templates](../../functional-overview/end-user-guide.md#), ensuring the credential’s original design, layout, fonts, and branding remain intact. Verification results (Valid/Invalid/Expired) are overlaid seamlessly without altering the visual integrity. The system also supports uploading QR codes in SVG and other compatible formats, with improved error handling, consistent UI, and accessibility compliance.
+3. **SVG Rendering:** Inji Verify now [supports rendering Verifiable Credentials using SVG templates](./), ensuring the credential’s original design, layout, fonts, and branding remain intact. Verification results (Valid/Invalid/Expired) are overlaid seamlessly without altering the visual integrity. The system also supports uploading QR codes in SVG and other compatible formats, with improved error handling, consistent UI, and accessibility compliance.
+4. **MOSIP UIN VC Verification**: Inji Verify now fully supports the verification of MOSIP-issued UIN Verifiable Credentials, enabling seamless, secure, and standards-based validation of identity information. The system automatically decodes the UIN VC, validates its cryptographic proof, checks its revocation status, and displays a clear verification outcome—while preserving the credential’s original visual design. This enhancement ensures verifiers can confidently authenticate MOSIP UIN credentials across services, improving interoperability, trust, and user experience within the MOSIP ecosystem.
 
 {% hint style="success" %}
-**Tips:**&#x20;
+**Tips:**
 
 * The Inji Verify UI is a _reference implementation_ to demonstrate orchestration. Developers can selectively embed SDK components in the verifier applications as per their needs.
 {% endhint %}
 
 ## **Repositories: Released/Dependent**
 
-| Repositories | Tags: Released/Dependent |
-| ------------ | ------------------------ |
-| Inji Verify  | **v0.16.0**              |
+| Repositories | Tags: Released/Dependent                                         |
+| ------------ | ---------------------------------------------------------------- |
+| Inji Verify  | [**v0.16.0**](https://github.com/mosip/inji-verify/tree/v0.16.0) |
 
 ## **Projects: Released**
 
@@ -55,11 +54,11 @@ The following table outlines the tested and certified compatibility of Inji Veri
 
 ## Bug Fixes
 
-Below is the list of fixes as part of the **0.16.0** release, For the list of the total bugs that got fixed, refer here (**Query**: project=injiver and fixVersion=0.16.0 and issuetype=bug).
+Below is the list of fixes as part of the **0.16.0** release, For the list of the total bugs which got fixed, refer [here](https://mosip.atlassian.net/issues/?jql=project%3Dinjiver%20and%20fixVersion%3D0.16.0%20and%20issuetype%3DBug).
 
 <table><thead><tr><th width="196.5703125">JIRA</th><th>Summary</th></tr></thead><tbody><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1461">INJIVER-1461</a><br></td><td>Request verifiable credential button is not aligned in arabic language RTL<br></td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1442">INJIVER-1442</a><br></td><td>Premature Expiry and Page Reload When Verifying VCs Sequentially<br></td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1441">INJIVER-1441</a><br></td><td>Incorrect Error Message Displayed on VC Verification<br></td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1440">INJIVER-1440</a><br></td><td>Mis-alignment in "download" and "open in flow" button<br></td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1436">INJIVER-1436</a><br></td><td>Secuirty testing: inji-verify(0.16.0) - docker vulnerabilities as per Snyk report<br></td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1424">INJIVER-1424</a><br></td><td>Language dropdown values are missing locators to locate them<br></td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1406">INJIVER-1406</a><br></td><td>Unable to verify a newly created vc in qa-inji1 environment<br></td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1399">INJIVER-1399</a><br></td><td>For farmer VC we are seeing N/A in Inji Verify UI<br></td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1395">INJIVER-1395</a><br></td><td>Getting error when we try to upload a TAN VC<br></td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1393">INJIVER-1393</a><br></td><td>Cross device flow is failing in specific set of device<br></td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1392">INJIVER-1392</a><br></td><td>Same device flow is failing in specific set of device<br></td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1391">INJIVER-1391</a><br></td><td>Old MOSIP data share VC verification is failing<br></td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1328">INJIVER-1328</a><br></td><td>Fix the "reliability bugs" in sonar for "verify-ui" in "develop" branch<br></td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1326">INJIVER-1326</a><br></td><td>Security testing: Inji-verify :Using user-controlled data in methods such as innerHTML, outerHTML<br></td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1323">INJIVER-1323</a><br></td><td>Security testing: Inji-verify: Using setAccessible(true) issue<br></td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1322">INJIVER-1322</a><br></td><td>Security testing: inji-verify :Using dynamic expressions to access object properties<br></td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1321">INJIVER-1321</a><br></td><td>Security testing: update vulnerable libraries in api-test/pom.xml &#x26; ui-test/pom.xml as per Snyk report<br></td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1310">INJIVER-1310</a><br></td><td>Security Testing (0.14.0 / 0.16.0): License Compliance Issue<br></td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1308">INJIVER-1308</a><br></td><td>Support SD-JWT verification submitted via "/vc-submission" in the "/vp-result/{transactionId}"<br></td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1226">INJIVER-1226</a><br></td><td>In mobile view we dont have copyrights-content present in upload screen<br></td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1220">INJIVER-1220</a><br></td><td>Error message for expired scan scenario is not proper<br></td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1218">INJIVER-1218</a><br></td><td>Scan and Upload component's loading bar is not aligned in middle<br></td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1103">INJIVER-1103</a><br></td><td>injiweb: no.of field values in VC document and scanned documnet are not the same<br></td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1069">INJIVER-1069</a><br></td><td>The MOSIP UIN VC's created from reg-client are not verifiable from INJI-verify<br></td></tr></tbody></table>
 
-Synced just now•[24 items](https://mosip.atlassian.net/issues/?jql=project%3Dinjiver%20and%20fixVersion%3D0.16.0%20and%20issuetype%3DBug)
+
 
 ## User Stories
 
