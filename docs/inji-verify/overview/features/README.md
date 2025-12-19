@@ -117,10 +117,14 @@ Inji Verify now supports SD-JWT Verifiable Credentials (VCs) across QR code scan
 
 For more detailed information on each step and the underlying systems, click [**here**](../../functional-overview/workflow.md)**.**
 
-24. **Revocation Support**: This feature introduces the ability to update a Verifiable Credential (VC) status to “Revoked” when it is invalidated by the issuer. It ensures that verifiers can always check the latest credential status and helps maintain the integrity and trustworthiness of the verification process.
+24. **Revocation Support**: 
+  This feature introduces the ability to update a Verifiable Credential (VC) status to “Revoked” when it is invalidated by the issuer. It ensures that verifiers can always check the latest credential status and helps maintain the integrity and trustworthiness of the verification process.
 
-25. **Multilingual Support**: With this enhancement, VCs can now display claims in multiple languages. It allows issuers to include localized claim values, enabling verifiers and holders to view credentials in their preferred language, thereby improving accessibility and inclusivity across different regions and user groups.
+25. **Multilingual Support**:
+  With this enhancement, VCs can now display claims in multiple languages. It allows issuers to include localized claim values, enabling verifiers and holders to view credentials in their preferred language, thereby improving accessibility and inclusivity across different regions and user groups.
 
-26. **SVG Rendering Support**: This feature enables the rendering of Verifiable Credentials in Scalable Vector Graphics (SVG) format, preserving the original design, layout, and branding of the credential. As a result, the displayed credential closely matches the issuer’s intended visual presentation, ensuring both authenticity and aesthetic consistency.
+26. **SVG Rendering Support**:
+  This feature enables the rendering of Verifiable Credentials in Scalable Vector Graphics (SVG) format, preserving the original design, layout, and branding of the credential. As a result, the displayed credential closely matches the issuer’s intended visual presentation, ensuring both authenticity and aesthetic consistency.
 
-27. **Support for MOSIP UIN-based VCs**: This enhancement adds compatibility for Verifiable Credentials issued using MOSIP Unique Identification Numbers (UINs). It allows verifiers to process and validate these credentials seamlessly, strengthening the ecosystem’s alignment with MOSIP’s identity framework and enabling broader interoperability.
+27. **Support for MOSIP UIN-based VCs**:
+  This enhancement adds compatibility for Verifiable Credentials issued using MOSIP Unique Identification Numbers (UINs). It allows verifiers to process and validate these credentials seamlessly, strengthening the ecosystem’s alignment with MOSIP’s identity framework and enabling broader interoperability.

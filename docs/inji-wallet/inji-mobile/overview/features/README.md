@@ -128,4 +128,4 @@ Designed for ease of use with intuitive UI components:
 
 ### Read More <a href="#read-more" id="read-more"></a>
 
-Check the [Inji Mobile Wallet Repository](https://github.com/mosip/inji-wallet/tree/master/docs) to explore the above-mentioned features.
+Check the [Inji Mobile Wallet Repository](https://github.com/mosip/inji-wallet/tree/master/docs/) to explore the above-mentioned features.
