@@ -84,7 +84,7 @@ Inji Verify offers a comprehensive set of features tailored to meet the verifica
 
 * **SVG Rendering₹ Support**: Supports rendering VCs in SVG format, preserving the original layout, design, and branding for accurate and visually consistent display.
 
-* **Support for MOSIP UIN-based VCs**: Adds compatibility for VCs issued with MOSIP UINs, enabling seamless verification and improving interoperability within the MOSIP ecosystem.
+* **Support for MOSIP UIN-based VCs**: Adds compatibility for VCs issued with MOSIP UINs, enabling seamless verification and improving interoperability with the MOSIP ecosystem.
 
 **Future Implementations Planned for Inji Verify**
 

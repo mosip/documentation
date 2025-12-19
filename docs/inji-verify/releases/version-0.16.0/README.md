@@ -13,8 +13,10 @@ We are excited to announce the release of **Inji Verify v0.16.0.** This version 
 ## New Features
 
 1. **Revocation:** Inji Verify now supports real-time revocation checks using the **W3C BitString Status List 2021** mechanism. During verification, the system reads the credentialStatus field, fetches the issuer’s Status List Credential, validates its proof, and determines whether the credential is valid, revoked, suspended, or invalid. The verification result is displayed clearly while preserving the VC’s original layout. This enhancement ensures secure, privacy-preserving, standards-compliant verification without exposing user data.
-2. **Multi-Lingual Support:** Inji Verify now supports viewing credential data and verification results in multiple languages. The system auto-detects the browser language (defaulting to English) and displays all VC claims, metadata, and validation outcomes accordingly. Users can switch languages without affecting verification results or credential layout, ensuring clarity and consistency across regions.
-3. **SVG Rendering:** Inji Verify now supports rendering Verifiable Credentials using SVG templates, ensuring the credential’s original design, layout, fonts, and branding remain intact. Verification results (Valid/Invalid/Expired) are overlaid seamlessly without altering the visual integrity. The system also supports uploading QR codes in SVG and other compatible formats, with improved error handling, consistent UI, and accessibility compliance.
+
+2. **Multi-Lingual Support:** Inji Verify now [supports viewing credential data and verification results in multiple languages](../../functional-overview/end-user-guide.md#credential-display-capability). The system auto-detects the browser language (defaulting to English) and displays all VC claims, metadata, and validation outcomes accordingly. Users can switch languages without affecting verification results or credential layout, ensuring clarity and consistency across regions.
+
+3. **SVG Rendering:** Inji Verify now [supports rendering Verifiable Credentials using SVG templates](../../functional-overview/end-user-guide.md#), ensuring the credential’s original design, layout, fonts, and branding remain intact. Verification results (Valid/Invalid/Expired) are overlaid seamlessly without altering the visual integrity. The system also supports uploading QR codes in SVG and other compatible formats, with improved error handling, consistent UI, and accessibility compliance.
 
 {% hint style="success" %}
 **Tips:**&#x20;

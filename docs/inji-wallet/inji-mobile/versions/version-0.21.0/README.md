@@ -8,7 +8,7 @@
 
 ## Overview
 
-This release of Inji Mobile Wallet v0.21.0 focuses on the revocation feature using [**W3C Bitstring Status List**](https://www.w3.org/TR/vc-bitstring-status-list/), <mark style="color:red;">minor</mark> UI/UX refinements, OpenID4VP interoperability fixes, and a large set of stability and security improvements across both Android (Kotlin) and iOS (Swift).
+This release of Inji Mobile Wallet v0.21.0 focuses on the [revocation feature](../../overview/features/revocation-of-verifiable-credentials.md) using [**W3C Bitstring Status List**](https://www.w3.org/TR/vc-bitstring-status-list/), <mark style="color:red;">minor</mark> UI/UX refinements, OpenID4VP interoperability fixes, and a large set of stability and security improvements across both Android (Kotlin) and iOS (Swift).
 
 The update strengthens wallet reliability across verifiable credential flows, improves visual consistency and addresses critical functional defects. This version ensures better alignment with the latest verifier flows, making the app more compliant, accessible, and robust for large-scale deployments.
 
@@ -16,8 +16,8 @@ The update strengthens wallet reliability across verifiable credential flows, im
 
 ### 1. Revocation Feature
 
-* **Automatic & Manual Revocation Checks:** The wallet now automatically verifies the revocation status of every credential during download and allows users to manually re-check status anytime, ensuring real-time accuracy of credential validity.
-* **Clear Status Updates Across UI:** Credentials now display **Valid**, **Revoked**, or **Pending** states based on the issuer’s status list, with enhanced UI indicators and activity logs to help users understand and track credential status easily.
+* [**Automatic & Manual Revocation Checks:**](../../overview/features/README.md#5-revocation-support) The wallet now automatically verifies the revocation status of every credential during download and allows users to manually re-check status anytime, ensuring real-time accuracy of credential validity.
+* [**Clear Status Updates Across UI:**](../../overview/features/README.md#5-revocation-support) Credentials now display **Valid**, **Revoked**, or **Pending** states based on the issuer’s status list, with enhanced UI indicators and activity logs to help users understand and track credential status easily.
 
 ### 2. UI Consistency Enhancements
 
@@ -74,12 +74,12 @@ Here below is the complete list of bug fixes included in the [**0.21.0**](https:
 
 **Release Documentation**
 
-* [Feature Documentation](../../overview/features/revocation-of-verifiable-credentials.md)
-* QA Report
+* [Revocation Of Verifiable-credentials](../../overview/features/revocation-of-verifiable-credentials.md)
+* [QA Report](test-report.md)
 
 **Additional Resources**
 
-* [Feature Documentation](https://docs.inji.io/inji-wallet/inji-mobile/overview/features)
+* [Features](https://docs.inji.io/inji-wallet/inji-mobile/overview/features)
 * [Integration Guides](https://docs.inji.io/inji-wallet/inji-mobile/technical-overview/integration-guide)
 * [End User Guide](https://docs.inji.io/inji-wallet/inji-mobile/functional-overview/end-user-guide)
 * [API Documentation](https://mosip.stoplight.io/docs/mimoto/k6907m3dzc1gi-mimoto)

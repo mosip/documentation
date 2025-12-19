@@ -8,7 +8,7 @@ icon: rocket-launch
 
 * Name: Inji Mobile Wallet 0.21.0
 * Date: <mark style="color:red;">Coming Soon</mark>&#x20;
-* [Release Notes](./#version-0.21.0)
+* [Release Notes](version-0.21.0/README.md)
 
 ## Version: 0.20.0
 
