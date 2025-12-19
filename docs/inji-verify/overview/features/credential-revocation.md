@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Credential Revocation
 
 ## Revoked Credential Detection (Verifier)
@@ -10,102 +14,60 @@ This feature focuses on the verifier experience: how revocation is checked durin
 
 ### Why It Matters
 
-- Protects relying parties: Prevents acceptance of credentials that an issuer has invalidated (lost, compromised, or superseded).
-- Maintains trust: Ensures only valid, current credentials pass verification.
-- Clear outcomes: Distinct UI states for Valid, Revoked, Expired, Pending, and No Status Information.
-- Operational consistency: A predictable policy point for handling network outages or issuer status list issues.
+* Protects relying parties: Prevents acceptance of credentials that an issuer has invalidated (lost, compromised, or superseded).
+* Maintains trust: Ensures only valid, current credentials pass verification.
+* Clear outcomes: Distinct UI states for Valid, Revoked, Expired, Pending, and No Status Information.
+* Operational consistency: A predictable policy point for handling network outages or issuer status list issues.
 
 ### Where You See It in Inji Verify
 
-- Scan QR Code: Revocation status is evaluated and shown with the verification result card(s).
-- Upload QR Code: Same evaluation path as scan; status shown on result cards.
-- VP Verification (Cross Device and Same Device): Each credential card shows its status; multi-credential responses display per-card states.
-- Result actions: Expand view and Download JSON include the resolved status.
+* Scan QR Code: Revocation status is evaluated and shown with the verification result card(s).
+* Upload QR Code: Same evaluation path as scan; status shown on result cards.
+* VP Verification (Cross Device and Same Device): Each credential card shows its status; multi-credential responses display per-card states.
+* Result actions: Expand view and Download JSON include the resolved status.
 
 ### Supported Credential Types
 
-- JSON-LD Verifiable Credentials (LDP-VC):
-  - Supported when the VC contains `credentialStatus` with `statusPurpose == "revocation"` and compatible Status List metadata.
-  - Multi-bit status lists are supported (`statusSize > 1`): bit value 0 → valid, value > 0 → revoked.
-  - Status List Credential (SLC) signature verification is performed when supported by platform and libraries.
-
-- SD-JWT (Selective Disclosure JWT):
-  - Revocation check is currently bypassed due to lack of standardized status-list metadata in typical SD-JWT deployments.
-  - Verification still enforces signature validation and expiry as applicable.
-
-- Credentials without `credentialStatus` or unsupported `statusPurpose`:
-  - Shown with "No Status Information" (policy-driven handling); expiry and signature checks still apply.
+* JSON-LD Verifiable Credentials (LDP-VC):
+  * Supported when the VC contains `credentialStatus` with `statusPurpose == "revocation"` and compatible Status List metadata.
+  * Multi-bit status lists are supported (`statusSize > 1`): bit value 0 → valid, value > 0 → revoked.
+  * Status List Credential (SLC) signature verification is performed when supported by platform and libraries.
+* SD-JWT (Selective Disclosure JWT):
+  * Revocation check is currently bypassed due to lack of standardized status-list metadata in typical SD-JWT deployments.
+  * Verification still enforces signature validation and expiry as applicable.
+* Credentials without `credentialStatus` or unsupported `statusPurpose`:
+  * Shown with "No Status Information" (policy-driven handling); expiry and signature checks still apply.
 
 ### How Revocation Checking Works (Verifier)
 
 1. Extract status metadata:
-	- From the VC’s `credentialStatus`, read status list parameters like `statusListCredential`, `statusListIndex`, and `statusPurpose`.
-
+   * From the VC’s `credentialStatus`, read status list parameters like `statusListCredential`, `statusListIndex`, and `statusPurpose`.
 2. Fetch Status List Credential (SLC):
-	- Retrieve the issuer’s SLC (often via HTTPS). Respect caching and reasonable TTLs to avoid excessive network calls.
-
+   * Retrieve the issuer’s SLC (often via HTTPS). Respect caching and reasonable TTLs to avoid excessive network calls.
 3. Decode the status list:
-	- Parse and decode `encodedList` according to W3C Bitstring Status List semantics.
-	- Use `statusListIndex` and `statusSize` to locate the correct bit segment for the VC.
-
+   * Parse and decode `encodedList` according to W3C Bitstring Status List semantics.
+   * Use `statusListIndex` and `statusSize` to locate the correct bit segment for the VC.
 4. Validate the SLC (when supported):
-	- Verify issuer signature over the SLC.
-	- Confirm the issuer matches the VC.
-
+   * Verify issuer signature over the SLC.
+   * Confirm the issuer matches the VC.
 5. Determine status:
-	- Bit value 0 → Valid (not revoked).
-	- Bit value > 0 → Revoked.
-	- Network or decoding issues → Pending.
-	- Missing/unsupported status metadata → No Status Information.
-
+   * Bit value 0 → Valid (not revoked).
+   * Bit value > 0 → Revoked.
+   * Network or decoding issues → Pending.
+   * Missing/unsupported status metadata → No Status Information.
 6. Display in UI:
-	- Each credential card shows a clear badge: Valid, Revoked, Expired, Pending, or No Status Information.
+   * Each credential card shows a clear badge: Valid, Revoked, Expired, Pending, or No Status Information.
 
 ### UI States and Verifier Guidance
 
-- Valid: Credential passes signature, expiry, and revocation checks.
-- Revoked: Credential is explicitly marked revoked in the status list; reject.
-- Expired: Credential validity period has ended; reject per policy.
-- Pending: Status could not be confirmed (offline, SLC unreachable, decode error). Handle per verifier policy — e.g., retry or reject.
-- No Status Information: The credential format or issuer metadata does not provide revocation details; rely on signature, issuer trust, and expiry policy.
-
-<!--
-
-### Error Handling
-
-- Status list unreachable/timeouts → Pending.
-- SLC signature invalid or mismatched issuer → Pending or Invalid (policy-dependent; typically treat as Pending).
-- Decode/index errors (e.g., `encodedList` malformed, out-of-range index) → Pending.
-- Rate-limited or oversized status list → Pending; advise a retry.
-
-### Integrator and Operations Notes
-
-- Caching and TTL: Cache SLC responses with conservative TTLs to reduce latency and load; refresh on-demand.
-- Resilience: Use sane timeouts and retries for SLC fetches; surface Pending rather than blocking UI.
-- Security: Fetch SLC via HTTPS; validate issuer bindings; harden against SSRF by whitelisting known issuers.
-- Scale: For population-scale status lists, prefer CDN delivery, segmented lists, and streaming decoders.
-- Auditing: Log revocation lookups and outcomes in server logs for traceability.
-
-### Privacy & Security Considerations
-
-- The SLC conveys revocation bits, not PII; verification reads the minimal data required.
-- Signature checks (where supported) ensure the SLC is authentic and untampered.
-- Network calls are limited, cached, and strictly scoped to issuer-provided endpoints.
-
-### Current Limitations
-
-1. Format coverage: Revocation applies to JSON-LD VCs using W3C Bitstring Status List. SD-JWT revocation is not yet standardized in typical deployments and is bypassed.
-2. Platform verification gaps: Some platforms may skip full cryptographic verification of the SLC in current releases; decoding still determines bit values.
-3. Network dependence: When offline or issuer endpoints are unreachable, status is Pending; your policy should define acceptance criteria.
-4. Pull model: Revocation is checked on demand; push-based near-real-time updates are not yet supported.
-5. Other purposes: Only `statusPurpose = "revocation"` is considered; other purposes like suspension are not handled.
-6. Error granularity: Pending may group multiple failure types; future releases may add more specific error messages.
-7. Large lists: Very large `encodedList` files benefit from CDN, segmentation, and streaming to improve performance.
-
--->
+* Valid: Credential passes signature, expiry, and revocation checks.
+* Revoked: Credential is explicitly marked revoked in the status list; reject.
+* Expired: Credential validity period has ended; reject per policy.
+* Pending: Status could not be confirmed (offline, SLC unreachable, decode error). Handle per verifier policy — e.g., retry or reject.
+* No Status Information: The credential format or issuer metadata does not provide revocation details; rely on signature, issuer trust, and expiry policy.
 
 ### Learn More
 
-- End User Guide: See the verification flows and screenshots in [End User Guide](../../functional-overview/end-user-guide.md#credential-display-capability).
-- Wallet Feature Reference: The holder-side behavior is described in [Revocation of Verifiable Credentials (Wallet)](../../../inji-wallet/inji-mobile/overview/features/revocation-of-verifiable-credentials.md).
-- W3C Specification: [VC Bitstring Status List](https://www.w3.org/TR/vc-bitstring-status-list/).
+* End User Guide: See the verification flows and screenshots in [End User Guide](../../functional-overview/end-user-guide.md#credential-display-capability).
+* Wallet Feature Reference: The holder-side behavior is described in [Revocation of Verifiable Credentials (Wallet)](../../../inji-wallet/inji-mobile/overview/features/revocation-of-verifiable-credentials.md).
+* W3C Specification: [VC Bitstring Status List](https://www.w3.org/TR/vc-bitstring-status-list/).
