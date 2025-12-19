@@ -6,33 +6,33 @@
 
 **Release Date:** <mark style="color:red;">**Coming Soon!**</mark>
 
-## **Overview**
+## Overview
 
 This release of Inji Mobile Wallet v0.21.0 focuses on the revocation feature using [**W3C Bitstring Status List**](https://www.w3.org/TR/vc-bitstring-status-list/), <mark style="color:red;">minor</mark> UI/UX refinements, OpenID4VP interoperability fixes, and a large set of stability and security improvements across both Android (Kotlin) and iOS (Swift).
 
 The update strengthens wallet reliability across verifiable credential flows, improves visual consistency and addresses critical functional defects. This version ensures better alignment with the latest verifier flows, making the app more compliant, accessible, and robust for large-scale deployments.
 
-## **Key Highlights**
+## Key Highlights
 
-#### &#x20;**1. Revocation Feature**
+### 1. Revocation Feature
 
-* **Automatic & Manual Revocation Checks:**\
+* **Automatic & Manual Revocation Checks:**
   The wallet now automatically verifies the revocation status of every credential during download and allows users to manually re-check status anytime, ensuring real-time accuracy of credential validity.
-* **Clear Status Updates Across UI:**\
+* **Clear Status Updates Across UI:**
   Credentials now display **Valid**, **Revoked**, or **Pending** states based on the issuer’s status list, with enhanced UI indicators and activity logs to help users understand and track credential status easily.
 
-#### **2. UI Consistency Enhancements**
+### 2. UI Consistency Enhancements
 
 * Fixes for alignment, spacing, icon visibility, and UI rendering on both iOS and Android.
 * Updated About Page with new disclaimer text and styling improvements.
 
-#### **3. Functional Fixes & Stability Improvements**
+### 3. Functional Fixes & Stability Improvements
 
 * The history page now refreshes correctly after VC sharing events.
 * Multiple UI crashes and rendering issues resolved, especially around mDL downloads, BLE flows.
 * Corrections to pin icon overlap, status icon visibility, and text alignment.
 
-#### **4. Technical Feature Support**
+### 4. Technical Feature Support
 
 * Transaction data not supported error is to be introduced in the OpenIDVP Flow.
 * Enhance VC Verifier to handle credentialStatus as both an Object and an Array.
@@ -40,18 +40,18 @@ The update strengthens wallet reliability across verifiable credential flows, im
 * Handle Verifier's Response for response\_uri from library.
 * Support RSA256 and ES256K public key with JWK.
 
-### **Features Released**
+## Features Released
 
 <table><thead><tr><th width="566.66796875">Feature / Enhancement</th><th>Jira Link</th></tr></thead><tbody><tr><td>UI – Revocation Feature for Inji Mobile Wallet</td><td><a href="https://mosip.atlassian.net/browse/INJIMOB-3207">INJIMOB-3207</a></td></tr><tr><td>Revocation logic for iOS Wallet</td><td><a href="https://mosip.atlassian.net/browse/INJIMOB-3600">INJIMOB-3600</a></td></tr><tr><td>Kotlin: Enhance VC Verifier to Handle credentialStatus as Both Object and Array</td><td><a href="https://mosip.atlassian.net/browse/INJIMOB-3593">INJIMOB-3593</a></td></tr><tr><td>Kotlin/Swift: OpenIDVP request by value as signed request</td><td><a href="https://mosip.atlassian.net/browse/INJIMOB-3576">INJIMOB-3576</a></td></tr><tr><td>VC Verifier Library – Support RSA256 and ES256K public key with JWK</td><td><a href="https://mosip.atlassian.net/browse/INJIMOB-3557">INJIMOB-3557</a></td></tr><tr><td>Swift: Handle Verifier's Response for response_uri</td><td><a href="https://mosip.atlassian.net/browse/INJIMOB-3551">INJIMOB-3551</a></td></tr><tr><td>Kotlin: Handle Verifier's Response for response_uri</td><td><a href="https://mosip.atlassian.net/browse/INJIMOB-3550">INJIMOB-3550</a></td></tr><tr><td>Transaction data not supported error – OVP Flow (Swift)</td><td><a href="https://mosip.atlassian.net/browse/INJIMOB-3534">INJIMOB-3534</a></td></tr><tr><td>Transaction data not supported error – OVP Flow (Kotlin)</td><td><a href="https://mosip.atlassian.net/browse/INJIMOB-3533">INJIMOB-3533</a></td></tr><tr><td>Inji Mobile – Branding Alignment with Gradient Color Scheme &#x26; Montserrat Font</td><td><a href="https://mosip.atlassian.net/browse/INJIMOB-3651">INJIMOB-3651</a></td></tr></tbody></table>
 
-### **Repositories Released**
+## Repositories Released
 
 | Module      | Version |
 | ----------- | ------- |
 | inji-wallet | 0.21.0  |
 | vc-verifier | 1.6.0   |
 
-### **Compatible Modules**
+## Compatible Modules
 
 | Module       | Version                                                             |
 | ------------ | ------------------------------------------------------------------- |
@@ -60,13 +60,13 @@ The update strengthens wallet reliability across verifiable credential flows, im
 | eSignet      | [1.6.2](https://github.com/mosip/esignet/tree/v1.6.2)               |
 | inji-config  | [0.11.1](https://github.com/mosip/inji-config/tree/v0.11.1)         |
 
-### **Known Issues**
+## Known Issues
 
 Below is the list of key known issues specific to this release. For all known issues, [click here](https://mosip.atlassian.net/jira/software/c/projects/INJIMOB/issues/?jql=project%20%3D%20%22INJIMOB%22%20AND%20type%20%3D%20Bug%20AND%20status%20IN%20%28New%2C%20Assigned%29%20ORDER%20BY%20created%20DESC).
 
 <table><thead><tr><th width="200.87109375">Jira Issue</th><th>Description</th></tr></thead><tbody><tr><td><a href="https://mosip.atlassian.net/browse/INJIMOB-3639">INJIMOB-3639</a></td><td>Face ID permission consent screen displays the app name as <strong>“Resident app”</strong> instead of the correct Inji app branding.</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIMOB-3636">INJIMOB-3636</a></td><td>The back button’s orange background color is missing on both the <strong>Receive Card</strong> and <strong>Incoming Card</strong> pages.</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIMOB-3628">INJIMOB-3628</a></td><td>Status info icons are <strong>cut off</strong>, and scrolling is not possible on the status information section.</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIMOB-3625">INJIMOB-3625</a></td><td>Revocation status <strong>date and time format</strong> are not aligned with the approved Figma design.</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIMOB-3609">INJIMOB-3609</a></td><td>In the <strong>OVP same-device flow</strong>, the wallet sends an <code>invalid_transaction_data</code> error, but the UI incorrectly displays <strong>“No matching credentials found to fulfill the request.”</strong></td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIMOB-3469">INJIMOB-3469</a></td><td>The <strong>info icon</strong> does not appear for languages other than English on the ID Details view page.</td></tr></tbody></table>
 
-## **Bug Fixes**
+## Bug Fixes
 
 Here below is the complete list of bug fixes included in the [**0.21.0**](https://mosip.atlassian.net/issues/?jql=labels%20%3D%20%22qa-inji_mob_release0210%22%20AND%20status%20%3D%20Closed%20AND%20type%20%3D%20Bug\&selectedIssue=INJIMOB-3644) release.
 
