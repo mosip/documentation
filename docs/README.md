@@ -91,7 +91,7 @@ This section will contain a clear diagram illustrating the interaction between I
 * **Presentation**: When needed, the holder can present the VC (or a verifiable presentation, which can include multiple VCs or selectively disclosed information) to a verifier.
 * **Verification**: The verifier uses the cryptographic proofs within the VC to confirm that it was issued by a trusted party and has not been tampered with. This verification often involves checking against a "Verifiable Data Registry" where public keys of issuers are stored.
 
-![Component Diagram](.gitbook/assets/inji-home-page-component-diagram.png)
+![Component Diagram](.gitbook/assets/inji-components-22-dec-2025.png)
 
 ### Summary
 
