@@ -60,11 +60,11 @@ Please [refer here](https://mosip.atlassian.net/issues?jql=issuetype%20%3D%20Bug
 
 ### **Repositories Released** <a href="#repositories-released" id="repositories-released"></a>
 
-| Repository     | Tag     |
-| -------------- | ------- |
-| esignet        | v1.7.1  |
-| esignet-signup | v1.3.1  |
-| mosip-sdk      | v0.10.1 |
+| Repository     | Tag                                                           |
+| -------------- | ------------------------------------------------------------- |
+| esignet        | [v1.7.1](https://github.com/mosip/esignet/tree/v1.7.1)        |
+| esignet-signup | [v1.3.1](https://github.com/mosip/esignet-signup/tree/v1.3.1) |
+| mosip-sdk      | [v0.10.1](https://github.com/mosip/mosip-sdk/tree/v0.10.1)    |
 
 ### **Compatible Modules** <a href="#compatible-modules" id="compatible-modules"></a>
 
