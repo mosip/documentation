@@ -1,12 +1,8 @@
----
-hidden: true
----
-
 # Roadmap 2026
 
 Here we present the eSignet product roadmap for 2026 and our strategic horizon forward. This roadmap outlines the planned features, progress, and release details for eSignet.&#x20;
 
-Annual product cycle of eSignet commences in January and concludes in December.
+> Annual product cycle of eSignet commences in January and concludes in December.
 
 <details>
 
