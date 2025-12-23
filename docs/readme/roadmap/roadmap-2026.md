@@ -1,12 +1,15 @@
 # Roadmap 2026
 
-Here we present the **Inji-stack product roadmap for 2026** and our strategic horizon forward. This roadmap outlines the planned features, progress, and release details for eSignet.
+Here we present the **Inji-Stack product roadmap for 2026** and our strategic horizon forward. This roadmap outlines the planned features, progress, and release details for **Inji Stack**.
 
 > The **annual product cycle** for the Inji Stack begins in **January** and concludes in **December**.
 
 For detailed module-wise roadmaps, please refer to the respective sections; Inji Wallet ([Mobile](roadmap-2026.md#inji-mobile), [Web](roadmap-2026.md#inji-web)), [Inji Certify](roadmap-2026.md#inji-certify) and [Inji Verify](roadmap-2026.md#inji-verify).
 
 ## Inji Wallet
+
+* [Inji Mobile](roadmap-2026.md#inji-mobile)
+* [Inji Web](roadmap-2026.md#inji-web)
 
 ### Inji Mobile
 

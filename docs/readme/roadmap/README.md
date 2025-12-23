@@ -10,6 +10,6 @@ Inji's principles, as discussed here, underpin the design and development of the
 
 Head below to navigate through our year-wise roadmap that provides a strategic overview of the journey ahead and highlights the key milestones & objectives for each year!
 
+* [Roadmap 2026](roadmap-2026.md)
 * [Roadmap 2025](https://docs.inji.io/readme/roadmap/roadmap-2025)
 * [Roadmap 2024](https://docs.inji.io/readme/roadmap/roadmap-2024)
-
