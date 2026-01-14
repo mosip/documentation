@@ -1,3 +1,0 @@
-# Manual
-
-Content coming soon
