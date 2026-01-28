@@ -89,6 +89,7 @@
         * [Login with OTP](esignet-authentication/test/end-user-guide/health-portal/login-with-otp.md)
         * [Login with QR code (Inji)](esignet-authentication/test/end-user-guide/health-portal/login-with-qr-code.md)
         * [Knowledge Based Identification](esignet-authentication/test/end-user-guide/health-portal/knowledge-based-authentication.md)
+      * [Telecom Portal](esignet-authentication/test/end-user-guide/telecom-portal.md)
 * [eSignet Signup](esignet-signup/README.md)
   * [Signup Portal](esignet-signup/signup-portal.md)
   * [Features](esignet-signup/features.md)
