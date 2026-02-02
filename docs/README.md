@@ -7,7 +7,7 @@ icon: globe
 
 ## Overview
 
-Digital identity is rapidly becoming the standard for citizen identification, Whether accessing services on government platforms or private service portals, user authentication is now a critical requirement. To ensure secure, private, and inclusive access, authentication mechanisms must adhere to established standards that guarantee data protection and build user trust.
+Digital identity is rapidly becoming the standard means of citizen identification across both government platforms and private service portals. As access to services increasingly relies on digital channels, secure user authentication has become a critical requirement. To ensure privacy, security, and inclusivity, authentication mechanisms must adhere to established standards that protect data and foster user trust.
 
 ### Where does eSignet fit in?
 
