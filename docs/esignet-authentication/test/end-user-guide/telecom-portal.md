@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Telecom Portal
 
 #### Experience eSignet in Action Through the eSIM Allocation Demo Portal <a href="#experience-esignet-in-action-through-the-esim-allocation-demo-portal" id="experience-esignet-in-action-through-the-esim-allocation-demo-portal"></a>
@@ -10,8 +6,8 @@ Experience eSignet in action with a demo eSIM allocation on the **Fyntel Telecom
 
 Hosted on the [**MOSIP Collab Sandbox**](https://collab.mosip.net/), this portal acts as a relying party application and allows you to experience how eSignet integrates seamlessly into service workflows that require trusted identity authentication. Using a **National ID (UIN)**, you can authenticate and login to proceed with eSIM allocation using the following authentication methods:
 
-* [**OTP-based authentication**](login-with-otp.md)
-* [**INJI Wallet–based authentication**](login-with-inji-wallet-app.md)
+* [**OTP-based authentication**](telecom-portal/login-with-otp.md)
+* [**INJI Wallet–based authentication**](telecom-portal/login-with-inji-wallet-app.md)
 
 The portal supports **real MOSIP IDs** , enabling easy exploration without prerequisites. In just a few steps, you can experience a secure and smooth authentication flow that culminates in the allocation of an eSIM linked to the authenticated National ID.
 
