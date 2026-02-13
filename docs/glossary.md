@@ -8,3 +8,6 @@ The secure storage of Verifiable Credentials on a user's device or in a secure c
 
 ## Inji Verify
 Inji Verify is a secure and user-friendly wallet platform designed to store and manage Verifiable Credentials. It provides a seamless experience for users to access, share, and verify their credentials while ensuring the highest level of security and privacy.
+
+## Inji Certify
+Inji certify is a secure and user-friendly wallet platform designed to store and manage Verifiable Credentials. It provides a seamless experience for users to access, share, and verify their credentials while ensuring the highest level of security and privacy.
