@@ -253,4 +253,5 @@
 ***
 
 * [FAQ](page-1.md)
+* [Glossary](glossary.md)
 * [Experiment](experiment.md)
