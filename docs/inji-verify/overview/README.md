@@ -6,7 +6,7 @@ icon: house
 
 ## **Pioneering Verifiable Credential Validation with Inji Verify**
 
-<**Inji Verify**> stands out as a robust verification tool specifically designed to validate the verifiable credentials encoded in QR codes through an intuitive web portal interface. The process involves decoding the data stored within the QR code using the PixelPass library and subsequently validating the verifiable credential. These credentials represent a digitally secured version of both traditional paper and digital credentials, ensuring a secure and reliable method of verification across various industries and use cases.
+<Inji Verify> stands out as a robust verification tool specifically designed to validate the verifiable credentials encoded in QR codes through an intuitive web portal interface. The process involves decoding the data stored within the QR code using the PixelPass library and subsequently validating the verifiable credential. These credentials represent a digitally secured version of both traditional paper and digital credentials, ensuring a secure and reliable method of verification across various industries and use cases.
 
 **Certainly! Here's how the use cases for Inji Verify can be presented as given below:**
 
