@@ -6,7 +6,7 @@ icon: house
 
 ## **Pioneering Verifiable Credential Validation with Inji Verify**
 
-<Inji Verify> stands out as a robust verification tool specifically designed to validate the verifiable credentials encoded in QR codes through an intuitive web portal interface. The process involves decoding the data stored within the QR code using the PixelPass library and subsequently validating the verifiable credential. These credentials represent a digitally secured version of both traditional paper and digital credentials, ensuring a secure and reliable method of verification across various industries and use cases.
+[Inji Verify](#user-content-fn-1)[^1] stands out as a robust verification tool specifically designed to validate the verifiable credentials encoded in QR codes through an intuitive web portal interface. The process involves decoding the data stored within the QR code using the PixelPass library and subsequently validating the verifiable credential. These credentials represent a digitally secured version of both traditional paper and digital credentials, ensuring a secure and reliable method of verification across various industries and use cases.
 
 **Certainly! Here's how the use cases for Inji Verify can be presented as given below:**
 
@@ -79,11 +79,8 @@ Inji Verify offers a comprehensive set of features tailored to meet the verifica
 {% endhint %}
 
 * **Revocation Support**: Enables issuers to update a VC’s status to “Revoked,” ensuring verifiers always access the latest status and maintaining trust in the verification process.
-
 * **Multilingual Support**: Allows VCs to include claims in multiple languages so holders and verifiers can view credentials in their preferred language, improving accessibility and inclusivity.
-
 * **SVG Rendering₹ Support**: Supports rendering VCs in SVG format, preserving the original layout, design, and branding for accurate and visually consistent display.
-
 * **Support for MOSIP UIN-based VCs**: Adds compatibility for VCs issued with MOSIP UINs, enabling seamless verification and improving interoperability with the MOSIP ecosystem.
 
 **Future Implementations Planned for Inji Verify**
@@ -93,3 +90,5 @@ Inji Verify offers a comprehensive set of features tailored to meet the verifica
 #### **Conclusion**
 
 Inji Verify is a powerful tool for securely verifying credentials encoded in QR codes. With an easy-to-use interface and features like QR code scanning, file uploads, and support for CBOR encoded and JSON-LD QR codes via PixelPass, it provides reliable credential verification across industries. Using cryptographic methods and standardized formats, Inji Verify ensures the authenticity of credentials, making verification simple and trustworthy for both users and service providers. Future updates will include offline verification, and enhancing security and privacy with advanced OpenID standards.
+
+[^1]: Inji Verify is a secure and user-friendly wallet platform designed to store and manage Verifiable Credentials. It provides a seamless experience for users to access, share, and verify their credentials while ensuring the highest level of security and privacy.
