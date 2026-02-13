@@ -50,9 +50,9 @@ The intended users of Inji Certify are divided into two main groups:
 Inji Certify is designed to meet the needs of both organizations and individuals by providing a robust, secure, and easy-to-use platform for issuing and managing verifiable credentials. By supporting multiple data formats and integrating seamlessly with existing databases, Inji Certify caters to diverse use cases across various sectors and industries.
 
 
-
-
 ---
+
+<!--
 
 > ❗ **Important\!** Before you proceed, you should be aware of OpenID4VC & W3C VC. Please read the following standards before proceeding:
 >
@@ -205,6 +205,4 @@ We welcome contributions from everyone\!
 * [Check here](https://docs.inji.io/readme/contribution/code-contribution) to learn how you can contribute code to this application.
 * If you have any questions or run into issues while trying out the application, feel free to post them in the [MOSIP Community](https://community.mosip.io/) — we’ll be happy to help you out.
 
-
-
-
+-->
