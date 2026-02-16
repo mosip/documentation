@@ -1,32 +1,57 @@
-# Features Page Writing Guidelines
-## Overview
+---
+name: software-features-writing
+description: Guidelines for writing professional, user-centric features pages
+version: 1.0.0
+author: Keshav Singh
+triggers:
+  - "write features page"
+  - "features documentation"
+  - "feature writing"
+applies_to:
+  - "docs/**/*.md"
+related_skills:
+  - overview-template
+tags:
+  - documentation
+  - features
+  - writing-guidelines
+---
 
-This guide provides comprehensive guidelines for writing professional, user-centric features pages for MOSIP modules. These guidelines ensure consistency, clarity, and industry-standard quality across all MOSIP documentation.
+# Feature
+Feature writing guidelines
 
-## Core Principles
+# Overview
 
-### **1. User-Centric Approach**
+Feature writing skill does write user-centric features for the software. These guidelines ensure consistency, clarity, and industry-standard quality across all software documentation.
+
+# Core Principles
+
+## User-Centric Approach
 - **Lead with benefits**: Start with what users can achieve, not just what the system does
 - **Problem-solution mapping**: Each feature should address a specific user challenge
 - **Multi-stakeholder focus**: Consider end users, administrators, developers, and integration partners
 
-### **2. Progressive Information Architecture**
-- **Logical flow**: Organize features by user journey, not technical architecture
-- **Scannable structure**: Use clear headings and consistent formatting
-- **Cross-reference integration**: Link to related documentation and user guides
+## Progressive Information Architecture
+- Logical flow: Organize features by user journey, not technical architecture
+- Scannable structure: Use clear headings and consistent formatting
+- Cross-reference integration: Link to related documentation and user guides
 
-### **3. Professional Standards**
-- **Action-oriented language**: Use active verbs and clear, concise descriptions
-- **Consistent terminology**: Maintain standardized language across all modules
-- **Industry benchmarks**: Match quality standards of top software companies
+## Professional Standards
+- Action-oriented language: Use active verbs and clear, concise descriptions
+- Consistent terminology: Maintain standardized language across all modules
+- Industry benchmarks: Match quality standards of top software companies
+
+
+
 
 ## Document Structure Template
 
-### **Required Sections:**
+### Required Sections
 
-#### **1. Overview Section**
+#### Overview Section
 
 # Features
+
 
 ## Overview
 [2-3 paragraphs that:]
@@ -34,29 +59,32 @@ This guide provides comprehensive guidelines for writing professional, user-cent
 - Address key challenges the module solves
 - Summarize the collective benefit of all features
 
-## Core Features (Organized by User Journey)
+## Core Features
+
+[Organized by User Journey]
 
 
-### [Primary User Journey Step]
+### Primary User Journey Step
 [Brief description of this step's purpose]
 
-#### [Specific Feature Name]
+#### Specific Feature Name
 [One-sentence description of what users can accomplish]
 
-- **[Capability 1]**: Detailed description with user benefit
-- **[Capability 2]**: Detailed description with user benefit
-- **[Capability 3]**: Detailed description with user benefit
+- [Capability 1]: Detailed description with user benefit
+- [Capability 2]: Detailed description with user benefit
+- [Capability 3]: Detailed description with user benefit
 
+## Advanced Features
 
-## [Advanced Features]
-
-### [Technical/Administrative Capabilities]
+### Technical/Administrative Capabilities
 [Features for power users, administrators, or technical implementers]
 
 
-### Integration and Security (if applicable)
+### Integration and Security
 
-## [Integration/Security] Features
+[If applicable]
+
+## Integration/Security Features
 [System-level capabilities, API integrations, security measures]
 
 
@@ -64,42 +92,44 @@ This guide provides comprehensive guidelines for writing professional, user-cent
 
 ### Feature Naming Conventions
 
-#### Good Examples:
+#### Good Examples
 - "Multi-channel Data Collection" (describes capability)
 - "Smart Process Management" (benefit-focused)
 - "Real-time Status Tracking" (outcome-oriented)
 
-#### Avoid:
+#### Avoid
 - "Data Module" (too generic)
 - "API Integration" (too technical without context)
 - "Database Management" (system-focused, not user-focused)
+
 
 ### Description Writing Rules
 
 #### Lead with User Value
 
- Good: "Users can complete their process from home, reducing center visit time by up to 70%"
- Avoid: "System provides online functionality"
+- Good: "Users can complete their process from home, reducing center visit time by up to 70%"
+- Avoid: "System provides online functionality"
 
 
 #### Use Action-Oriented Language**
- Good: "Streamline identity processing with online enrollment"
- Avoid: "The system allows for identity processing to be done online"
+- Good: "Streamline identity processing with online enrollment"
+- Avoid: "The system allows for identity processing to be done online"
 
 #### Provide Specific Benefits
- Good: "Real-time availability updates prevent scheduling conflicts"
- Avoid: "System updates availability information"
+- Good: "Real-time availability updates prevent scheduling conflicts"
+- Avoid: "System updates availability information"
 
 
 ### Bullet Point Standards
 
-#### Format Pattern:
-- [Capability Name]**: [What it does] + [why it matters/benefit]
+#### Format Pattern
+- [Feature Name]**: [What it does] + [why it matters/benefit]
 
 #### Examples:
 - Multi-language Support: Interface available in multiple languages, ensuring accessibility for diverse populations
 - Offline Capability: Continue operations without internet connectivity, maintaining service continuity
 - Automatic Validation: Real-time data validation prevents errors and improves data quality
+
 
 ## Cross-Reference Strategy
 
