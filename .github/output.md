@@ -1,12 +1,11 @@
+## Overview
+
+Inji Verify enables verifiers to validate Verifiable Credentials encoded in QR codes through an intuitive web portal and embeddable SDK components. It follows the standards of OpenID4VP and W3C Verifiable Credentials Data Model (1.1 & 2.0). Verifiers can scan, upload, or receive credentials via secure online sharing to instantly authenticate identity documents, certificates, and digital credentials across industries.
+
 > ❗ **Important!** Before you proceed, you should be aware of the relevant standards. Please read the following before proceeding:
 >
 >   * [OpenID4VP - OpenID for Verifiable Presentations 1.0](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html)
 >   * [W3C VC - Verifiable Credentials Data Model](https://www.w3.org/TR/vc-data-model/)
-
-
-## Overview
-
-Inji Verify enables verifiers to validate Verifiable Credentials encoded in QR codes through an intuitive web portal and embeddable SDK components. It follows the standards of OpenID4VP and W3C Verifiable Credentials Data Model (1.1 & 2.0). Verifiers can scan, upload, or receive credentials via secure online sharing to instantly authenticate identity documents, certificates, and digital credentials across industries.
 
 In particular, Inji Verify focuses on the verifier's role and provides the following features:
 
@@ -25,6 +24,9 @@ In particular, Inji Verify focuses on the verifier's role and provides the follo
 | Offline Verification via BLE                                            | ❌        |
 
 To know more about features available in Inji Verify, please refer to [this documentation](https://docs.inji.io/inji-verify/functional-overview/functional-overview).
+
+## Try It Out
+[**Inji Verify Collab Guide**](/docs/inji-verify/functional-overview/releases-1/inji-verify-collab-guide.md) helps you with exploring Inji Verify in our [Sandbox Collab Environment](https://collab.mosip.net/).
 
 ## Architecture
 
