@@ -102,10 +102,6 @@ Inji Web interacts with:
 * [Mimoto APIs](https://mosip.stoplight.io/docs/mimoto/5bf5a1n68g4tq-mimoto) for managing issuer details, facilitating VC download and generating PDF
 * [eSignet APIs](https://mosip.stoplight.io/docs/identity-provider/jlmszj6dlxigw-e-signet) for authentication
 
-### Get Involved
-
-
-
 ***
 
 ### Learn More
