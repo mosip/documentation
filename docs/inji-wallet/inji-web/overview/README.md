@@ -114,11 +114,4 @@ Inji Web interacts with:
 
 <i class="fa-pen">:pen:</i> Glossary: [Glossary Of Terms](../../../glossary.md)
 
-#### <i class="fa-lightbulb">:lightbulb:</i> Useful Links
-
-<i class="fa-comment-question">:comment-question:</i> Help: [GitHub repository](https://github.com/mosip/inji-web)
-
-<i class="fa-users">:users:</i> Community: [Raise A Query](https://community.mosip.io)
-
-
-
+{% include "../../../.gitbook/includes/useful-links.md" %}

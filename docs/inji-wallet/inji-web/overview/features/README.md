@@ -57,12 +57,12 @@ This multi-format support allows Inji Wallet to work seamlessly across different
 
 ## Credential Sharing Options
 
-| Method                                                       | Description                                                                                                                                                                                                                                                               | Connectivity |
-| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
-| **Scan PDF**                                                 | Scan PDF on verifier portal (Inji Verify)                                                                                                                                                                                                                                 | Online       |
-| **Print or Screenshot**                                      | For physical presentation or screen scanning                                                                                                                                                                                                                              | Offline      |
-| **Upload PDF**                                               | Used in verifier workflows like Inji Verify                                                                                                                                                                                                                               | Online       |
-| <p></p><p><strong>OpenID4VP Presentation</strong></p><p></p> | <ul><li>Users can present <strong>JSON-LD VCs</strong> through an <strong>OpenID4VP-compliant</strong> flow.</li><li>Enables secure, real-time credential sharing with user consent.</li><li>Fully interoperable with Inji Verify and other compliant verifiers</li></ul> | Online       |
+| Method                     | Description                                                                                                                                                                                                                                                               | Connectivity |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| **Scan PDF**               | Scan PDF on verifier portal (Inji Verify)                                                                                                                                                                                                                                 | Online       |
+| **Print or Screenshot**    | For physical presentation or screen scanning                                                                                                                                                                                                                              | Offline      |
+| **Upload PDF**             | Used in verifier workflows like Inji Verify                                                                                                                                                                                                                               | Online       |
+| **OpenID4VP Presentation** | <ul><li>Users can present <strong>JSON-LD VCs</strong> through an <strong>OpenID4VP-compliant</strong> flow.</li><li>Enables secure, real-time credential sharing with user consent.</li><li>Fully interoperable with Inji Verify and other compliant verifiers</li></ul> | Online       |
 
 ## User Experience Highlights
 
@@ -95,6 +95,10 @@ This multi-format support allows Inji Wallet to work seamlessly across different
 | mDoc / mDL             | ES256K                   | Planned            | Planned                    | Used in various driver license implementations      |
 | mDoc / mDL             | ES256                    | Planned            | Planned                    | Emerging support for high-security mobile documents |
 | mDoc / mDL             | x509 (PKI v3)            | Planned            | Planned                    | x509 certificate chain                              |
+
+***
+
+{% include "../../../../.gitbook/includes/useful-links.md" %}
 
 ## Features in the Pipeline
 
