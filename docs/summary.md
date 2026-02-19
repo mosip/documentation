@@ -26,12 +26,13 @@
 
 ## Inji Certify
 
-* [Page 1](inji-certify/page-1.md)
 * [Overview](inji-certify/overview/README.md)
   * [Features](inji-certify/overview/features.md)
 * [Test](inji-certify/functional-overview/README.md)
-  * [Functional Overview](inji-certify/functional-overview/functional-overview.md)
+  * [Try It Out](inji-certify/functional-overview/try-it-out.md)
   * [Workflow](inji-certify/functional-overview/workflow.md)
+  * [End User Guide](inji-certify/functional-overview/end-user-guide.md)
+  * [Functional Overview](inji-certify/functional-overview/functional-overview.md)
 * [Setup](inji-certify/build-and-deploy/README.md)
   * [Local Setup](inji-certify/build-and-deploy/local-setup.md)
   * [Deploy Inji Certify](inji-certify/build-and-deploy/deploy-inji-certify.md)
@@ -206,8 +207,6 @@
       * [Test Report](inji-wallet/inji-web/inji-web/version-0.8.0/test-report.md)
     * [Version 0.14.0](inji-wallet/inji-web/inji-web/version-0.14.0-1/README.md)
       * [Test Report](inji-wallet/inji-web/inji-web/version-0.14.0-1/test-report.md)
-
-## INJI CERTIFY <a href="#inji-certify-1" id="inji-certify-1"></a>
 
 ## INJI VERIFY
 

@@ -4,6 +4,24 @@ icon: gamepad-modern
 
 # Test
 
+This section is for **hands-on testing** of **Inji Web**. Use it to validate real end-user flows in a sandbox setup.
+
+#### What you’ll find in this section
+
+* [Try It Out](try-it-out/). Quick start guide for exploring Inji Web in Collab.
+* [Workflow](workflow.md). The end-to-end flow, from issuer selection to sharing.
+* [End User Guide](end-user-guide.md). Step-by-step instructions for downloading and sharing VCs.
+
+
+
+
+
+
+
+
+
+
+
 Verifiable Credentials (VCs) are digital equivalents of physical documents such as passports or licenses. They are digitally signed, ensuring they are tamper-resistant and can be instantly verified. Issued by trusted entities, VCs can be stored in digital wallet apps like Inji Wallet or downloaded as a PDF file by individuals using Inji Web, a smart web-based solution.
 
 Below are the key features provided by Inji Web:

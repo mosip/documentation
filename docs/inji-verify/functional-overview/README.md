@@ -4,6 +4,23 @@ icon: gamepad-modern
 
 # Test
 
+This section is for **hands-on testing** of **Inji Verify**. Use it to validate verification flows with sample credentials.
+
+#### What you’ll find in this section
+
+* [Try It Out](releases-1/). Quick start in a sandbox environment.
+* [Workflow](workflow.md). End-to-end verification flow and key steps.
+* [End User Guide](end-user-guide.md). Step-by-step instructions for scan, upload, and VP verification.
+* [Functional Overview](functional-overview.md). Core concepts and feature overview.
+
+
+
+
+
+
+
+
+
 **Inji Verify** is a powerful tool for validating and verifying credentials through QR codes. Users can scan QR codes using smartphones or computers, retrieving credential information quickly. Advanced algorithms and the pixel pass library ensure QR code authenticity, providing real-time verification and instant feedback.
 
 The portal displays valid credentials securely, including detailed information such as name, DOB, gender, expiration date, and associated claims, in a user-friendly interface. Inji Verify employs encryption techniques to protect sensitive information and prevent tampering.
