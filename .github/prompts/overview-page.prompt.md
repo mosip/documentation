@@ -56,10 +56,10 @@ Template that contains the structure of the feature that you will process from c
 https://raw.githubusercontent.com/svahsek/.github/main/templates/overview/overview-template.md
 
 ## Input
-Inji Verify
+Inji Web
 
-- Crude content 1 (Inji Verify Documentation files): docs/inji-verify
-- Crude Content 2 (File from which the content has to be taken up and modified): docs/inji-verify/overview/README.md
+- Crude content 1 (Inji Web Documentation files): docs/inji-wallet/inji-web
+- Crude Content 2 (File from which the content has to be taken up and modified): docs/inji-wallet/inji-web/overview/README.md
 
 
 ### Output
