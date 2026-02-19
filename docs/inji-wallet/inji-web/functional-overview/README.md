@@ -19,7 +19,7 @@ This section is for **hands-on testing** of **Inji Web**. Use it to validate rea
 
 
 
-
+<!-- Content to revise and segregate
 
 
 Verifiable Credentials (VCs) are digital equivalents of physical documents such as passports or licenses. They are digitally signed, ensuring they are tamper-resistant and can be instantly verified. Issued by trusted entities, VCs can be stored in digital wallet apps like Inji Wallet or downloaded as a PDF file by individuals using Inji Web, a smart web-based solution.
@@ -43,3 +43,6 @@ _**Manage (coming soon)**_
 Users can view the downloaded credentials and access their activity logs for additional auditing purposes.
 
 <table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><img src="../../../.gitbook/assets/Features (1).png" alt="Features" data-size="original"></td><td></td><td><strong>Features</strong></td><td><a href="https://docs.mosip.io/inji/inji-web/functional-overview/features">https://docs.mosip.io/inji/inji-web/functional-overview/features</a></td></tr><tr><td><img src="../../../.gitbook/assets/Workflow (1) (1).png" alt="\WorkFlow" data-size="original"></td><td></td><td><strong>Workflow</strong></td><td><a href="https://docs.mosip.io/inji/inji-web/functional-overview/workflow">https://docs.mosip.io/inji/inji-web/functional-overview/workflow</a></td></tr><tr><td><img src="../../../.gitbook/assets/End User Guide.png" alt="" data-size="original"></td><td></td><td><strong>End User Guide</strong></td><td><a href="https://docs.mosip.io/inji/inji-web/functional-overview/end-user-guide">https://docs.mosip.io/inji/inji-web/functional-overview/end-user-guide</a></td></tr></tbody></table>
+
+
+-->

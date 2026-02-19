@@ -21,7 +21,7 @@ It includes sandbox exercises and user-facing guidance. Use it when you want to 
 
 
 
-
+<!-- Content to revise and segregate
 
 
 **Inji Mobile** is a versatile digital wallet designed to securely manage, store, and share **trusted data as** **Verifiable Credentials (VCs)** through a seamless and user-friendly interface. This mobile application offers several key functionalities aimed at enhancing the user experience, ensuring robust data security, and simplifying digital credential management.
@@ -43,3 +43,5 @@ Inji Wallet supports Single Sign-On (SSO), simplifying the authentication proces
 ## [**Offline Sharing (BLE-based)**](https://docs.mosip.io/inji/inji-wallet/functional-overview/features#sharing-verifiable-credentials-without-the-internet)
 
 Inji Wallet offers a seamless way to share the trusted data as verifiable credentials without internet connection, but through BLE-based (Bluetooth Low Energy) sharing. For added security, users must complete decentralized face verification for presence assurance during offline interactions, ensuring the rightful owner is sharing their credentials.
+
+-->
