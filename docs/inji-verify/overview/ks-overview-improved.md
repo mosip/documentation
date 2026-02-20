@@ -1,150 +1,271 @@
+# Features
+
 ## Overview
 
-Inji Verify enables verifiers to validate Verifiable Credentials encoded in QR codes through an intuitive web portal and embeddable SDK components. It follows the standards of OpenID4VP and W3C Verifiable Credentials Data Model (1.1 & 2.0). Verifiers can scan, upload, or receive credentials via secure online sharing to instantly authenticate identity documents, certificates, and digital credentials across industries.
+Inji Verify empowers organizations to validate Verifiable Credentials (VCs) instantly through an intuitive web portal. Whether scanning QR codes, uploading documents, or verifying credentials via secure OpenID4VP flows, verifiers can confirm credential authenticity in seconds—reducing manual verification time and ensuring trust across education, healthcare, government, and enterprise sectors.
 
-> ❗ **Important!** Before you proceed, you should be aware of the relevant standards. Please read the following before proceeding:
->
->   * [OpenID4VP - OpenID for Verifiable Presentations 1.0](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html)
->   * [W3C VC - Verifiable Credentials Data Model](https://www.w3.org/TR/vc-data-model/)
+The platform combines modular SDK components with enterprise-grade security, enabling seamless integration into existing verifier applications while maintaining compliance with W3C VC Data Model standards.
 
-In particular, Inji Verify focuses on the verifier's role and provides the following features:
+---
 
-| Feature                                                                 | Coverage |
-|:------------------------------------------------------------------------|:---------|
-| QR Code Scanning (camera-based)                                         | ✅        |
-| QR Code Upload (file-based)                                             | ✅        |
-| OpenID4VP Verifiable Presentation (Cross-Device & Same-Device)          | ✅        |
-| Support for JSON-LD VC Format                                           | ✅        |
-| Support for SD-JWT VC Format                                            | ✅        |
-| Revocation Status Verification                                          | ✅        |
-| Multi-lingual Credential Display                                        | ✅        |
-| SVG Rendering Support                                                   | ✅        |
-| MOSIP UIN VC Verification                                               | ✅        |
-| Embeddable SDK Components                                               | ✅        |
-| Offline Verification via BLE                                            | ❌        |
+## Standards Compliance
 
-To know more about features available in Inji Verify, please refer to [this documentation](https://docs.inji.io/inji-verify/functional-overview/functional-overview).
+Inji Verify adheres to industry standards for interoperable and trustworthy credential verification.
 
-## Try It Out
-[**Inji Verify Collab Guide**](/docs/inji-verify/functional-overview/releases-1/inji-verify-collab-guide.md) helps you with exploring Inji Verify in our [Sandbox Collab Environment](https://collab.mosip.net/).
+### Credential Formats
 
-## Architecture
+| Format | Description |
+|--------|-------------|
+| **W3C VC Data Model 1.1 & 2.0** | Industry-standard Verifiable Credentials ensuring interoperability |
+| **JSON-LD** | Linked data credentials with semantic context |
+| **SD-JWT** | Selective Disclosure JWT credentials with privacy-preserving claim sharing |
 
-Inji Verify features a modular architecture with a React-based frontend and a Java Spring Boot backend. It interacts with digital wallets and credential holders via QR codes and OpenID4VP protocols for secure credential presentation and verification.
+### Cryptographic Algorithms
 
-**Key Technical Components:**
+| Algorithm | Support Status |
+|-----------|----------------|
+| Ed25519 Verification Key 2018 | Supported |
+| Ed25519 Verification Key 2020 | Supported |
+| RSA Verification Key 2018 | Supported |
 
-- **Inji Verify UI**: React-based web portal serving as the primary interface for QR code scanning, uploading, and verification results display
-- **Inji Verify Backend**: Java Spring Boot service handling VC verification, OpenID4VP flows, and cryptographic validation
-- **PixelPass Library**: Decodes CBOR-encoded and standard QR codes for credential extraction
-- **VC Verifier Library**: Validates credentials using Ed25519 and RSA cryptographic standards
-- **PostgreSQL Database**: Stores OpenID4VP transaction data, presentation definitions, and VP tokens
+### Verification Methods
 
-For a detailed view of Inji Verify's architecture and components, check this [link](https://docs.inji.io/inji-verify/technical-overview/components).
+- `did:web` with proofValue or JWS
+- `https://` endpoints with proofValue or JWS
 
-## SDK Integration
+### Protocol Support
 
-Inji Verify provides an **SDK-first architecture** that enables verifier applications to embed credential verification capabilities directly, without deploying the full Inji Verify application.
+- **OpenID4VP**: Cross-device and same-device Verifiable Presentation flows per OpenID specifications
 
-### SDK Components
+---
 
-* **OpenID4VP VP Verification Component**
-  Enables cross-device and same-device Verifiable Presentation verification flows using OpenID4VP standards.
-* **Scan/Upload Component** *(Coming Soon)*
-  Embeddable QR code scanning and upload functionality for direct integration into verifier applications.
+## Core Verification Capabilities
 
-### How to Use the SDK
+### QR Code Scanning → [End User Guide](../docs/inji-verify/functional-overview/end-user-guide.md)
 
-* **[OpenID4VP Integration Guide](https://docs.inji.io/inji-verify/technical-overview/integration-guides/openid4vp-vp-verification-integration-guide)** – Step-by-step guide covering installation, setup, and usage
-* **[SDK Documentation](https://github.com/mosip/inji-verify/blob/release-0.14.x/inji-verify-sdk/Readme.md)** – Technical reference for SDK components and APIs
+Verify credentials instantly by scanning QR codes directly through your device's camera.
 
-The Inji Verify UI serves as a reference implementation demonstrating how these SDK components can be orchestrated into a complete verifier application.
+- **Real-time Camera Scanning**: Point your device camera at any QR code to initiate instant verification, eliminating manual data entry and reducing verification time to seconds
+- **Mobile Zoom Control**: Adjust magnification using the zoom slider for optimal scanning accuracy, especially useful for small or densely-encoded QR codes
+- **Multi-Version Support**: Compatible with QR code versions v1 through v27, ensuring broad interoperability with credentials from various issuers
 
-## Deployment
+### Document Upload Verification → [Workflow](../docs/inji-verify/functional-overview/workflow/)
 
-Inji Verify supports two modes of deployment to cater to different users with different purposes:
+Upload credential documents directly to the portal for verification when scanning isn't possible.
 
-1.  **Local Development Setup**
+- **Multi-Format Support**: Upload PDFs, JPEG, JPG, and PNG files containing embedded QR codes, providing flexibility for different credential formats
+- **Extended QR Support**: Process QR code versions up to v32 through the upload feature, supporting higher-density credentials that exceed scan capability
+- **Batch Document Processing**: Verify credentials embedded in multi-page documents without extracting individual pages
 
-    * Intended for experimentation and development. Local Setup can be carried out in two ways:
-        * **Developer Setup with Docker Compose**
-            * Recommended for developers who want full-featured access for development and testing.
-            * Refer to [this guide](https://github.com/mosip/inji-verify/blob/release-0.11.x/README.md#developer-setup) to try this mode of setup.
-        * **Demo Setup with Docker Compose**
-            * Recommended for showcasing specific use cases with simplified configuration.
-            * Refer to [this guide](https://github.com/mosip/inji-verify/blob/release-0.11.x/README.md#demo-setup) to try this mode of setup.
-    * This is for developers, community members, and country representatives to explore the application, demonstrate its usage to external stakeholders, or conduct proof-of-concepts (POCs).
+### OpenID4VP Presentation Verification
 
-2.  **Deployment with Kubernetes cluster**
+Verify Verifiable Presentations securely using OpenID4VP standards for both cross-device and same-device scenarios.
 
-    * Designed for production environments.
-    * Enables organizations to host and utilize the verification platform at scale.
-    * Click [here](https://docs.inji.io/readme/setup/deploy#deploying-inji-verify) to learn more about this mode of deployment.
+- **Cross-Device Flow**: Generate authorization requests as QR codes that users scan with their mobile wallet (Inji Web or any OpenID4VP-compliant wallet), receive signed Verifiable Presentations, and display validated results
+- **Same-Device Flow**: Initiate verification on the same mobile device via deep links, enabling seamless app-to-app credential sharing without a second device
+- **Streamlined Online Sharing**: Embed URLs instead of dense VCs in QR codes, reducing complexity while maintaining secure credential retrieval from designated storage locations
 
-## Configurations
+### SD-JWT Credential Verification
 
-In this section, you will find the key configurations required to enable specific features or to run the application.
+Verify selective disclosure credentials while preserving holder privacy.
 
-### Environment Configuration
+- **Selective Attribute Display**: Visually distinguish disclosed claims from undisclosed attributes, providing transparency about what information is shared
+- **Cross-Flow Compatibility**: Verify SD-JWT VCs via QR scanning, upload, and VP verification flows with consistent behavior
+- **Privacy-Preserving Validation**: Confirm credential authenticity without requiring disclosure of all embedded claims
 
-For local development and Docker Compose deployments, configure the following environment variables:
+### Real-Time Verification
 
-```properties
-# Backend Configuration
-SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/inji_verify
-SPRING_DATASOURCE_USERNAME=postgres
-SPRING_DATASOURCE_PASSWORD=your_password
+Instant validation results without processing delays.
 
-# Frontend Configuration
-REACT_APP_BACKEND_URL=http://localhost:8080
-```
+- **Immediate Feedback**: Verification results displayed within seconds of submission
+- **No Queue Processing**: Direct validation without batch processing delays
+- **Live Status Updates**: Progress indicators during credential processing
 
-**Note**: Ensure PostgreSQL is running before starting the backend service.
+---
 
-To know more about configuration options, please refer to [this link](https://github.com/mosip/inji-verify/blob/release-0.12.x/README.md).
+## Credential Display & Status
 
-### QR Code Compatibility
+### Revocation Status Checking
 
-Configure scanning parameters based on your use case:
+Ensure credentials are current and valid by checking issuer revocation status.
 
-| Feature | Supported Versions |
-|:--------|:-------------------|
-| QR Code Scanning | v22 and below (consistent), v23-v27 (variable) |
-| QR Code Upload | v32 and below |
-| Camera Resolution | 12+ megapixels recommended |
+- **Real-time Status Verification**: Query credential status against issuer registries to detect revoked credentials immediately
+- **Visual Status Indicators**: Display clear valid, invalid, or revoked status with color-coded results for instant comprehension
+- **Trust Maintenance**: Prevent acceptance of invalidated credentials, protecting organizational integrity
 
-## Databases
+### Credential Status Display
 
-Inji Verify uses PostgreSQL for persistent storage of OpenID4VP transaction data, presentation definitions, and VP tokens. Refer to the [repository documentation](https://github.com/mosip/inji-verify) for database setup scripts.
+Clear visual presentation of verification results.
 
-## Upgrades
+- **Valid Credentials**: Green indicators confirm active, verified credentials with full claim display
+- **Invalid Credentials**: Red indicators highlight credentials that fail cryptographic validation
+- **Expired Credentials**: Amber indicators show credentials past their validity period
 
-### Upgrade from 0.15.x to 0.16.0
+### Multilingual Credential Display
 
-Please refer to the [release notes](https://docs.inji.io/inji-verify/releases/version-0.16.0) for upgrade considerations and new features in version 0.16.0.
+View and verify credentials in multiple languages for global accessibility.
+
+- **Localized Claim Values**: Display credential claims in the holder's or verifier's preferred language based on issuer-provided translations
+- **11 Language Support**: Interface available in English, Portuguese, Spanish, French, Arabic, Khmer, Tamil, Hindi, and Kannada
+- **Regional Accessibility**: Improve verification experiences across diverse populations and geographic regions
+
+### SVG Credential Rendering
+
+Display credentials with issuer-intended visual presentation and branding.
+
+- **Original Design Preservation**: Render credentials in Scalable Vector Graphics format maintaining layout, typography, and visual elements
+- **Brand Consistency**: Display credentials exactly as issuers designed them, ensuring visual authenticity alongside cryptographic validation
+- **High-Resolution Output**: Crisp credential display across all screen sizes and resolutions
+
+### Error Handling & User Guidance
+
+Guide users through verification issues with actionable feedback.
+
+- **Invalid QR Detection**: Clear messaging when QR codes contain malformed or unreadable data
+- **Expired Credential Alerts**: Informative notices when credentials have passed validity dates
+- **Decoding Failure Guidance**: Step-by-step instructions for resolving upload or scanning issues
+
+---
+
+## Integrations & SDK → [Integration Guide](../docs/inji-verify/technical-overview/integration-guides/openid4vp-vp-verification-integration-guide.md)
+
+### Modular SDK Components
+
+Embed verification capabilities directly into your verifier applications using plug-and-play components.
+
+- **Scan/Upload Component**: Integrate QR code scanning or file upload functionality into your application without building from scratch
+- **OpenID4VP VP Verification Component**: Add cross-device and same-device VP verification flows aligned with OpenID4VP specifications
+- **Independent NPM Modules**: Import only the components you need, reducing bundle size and dependency overhead
+
+| Component | Technology | Purpose |
+|-----------|------------|---------|
+| Scan/Upload | TypeScript / React 18.2.0 | QR code capture and file upload |
+| VP Verification | TypeScript / React 18.2.0 | OpenID4VP presentation verification |
+
+### PixelPass Library Integration
+
+Decode QR codes accurately using the integrated PixelPass SDK.
+
+- **CBOR Decoding**: Process CBOR-encoded QR codes for compact credential verification
+- **Reliable Data Extraction**: Ensure accurate decoding of embedded credential data for downstream validation
+- **Library Version**: Integrated [PixelPass v0.5.0](https://www.npmjs.com/package/@mosip/pixelpass/v/0.5.0) for secure processing
+
+### Backend Verification Services
+
+Robust server-side verification with persistent data storage.
+
+- **VC-Verifier Library Integration**: Server-side verification supporting Ed25519 and RSA cryptographic standards
+- **PostgreSQL Database**: Durable data storage replacing in-memory solutions, ensuring verification continuity and audit trails
+- **VP Proof Verification**: Validate both Verifiable Credentials and Verifiable Presentations server-side
+
+### API Documentation
+
+- [Inji Verify APIs](../docs/inji-verify/api.md)
+
+---
+
+## Ecosystem Compatibility
+
+### MOSIP UIN-Based VC Support
+
+Verify credentials issued using MOSIP Unique Identification Numbers.
+
+- **MOSIP Ecosystem Integration**: Seamlessly validate UIN-based credentials within MOSIP identity frameworks
+- **Expanded Interoperability**: Support verification of national ID credentials across MOSIP-aligned implementations
+
+### DID Method Support
+
+- **did:web**: Resolve issuer keys from web-hosted DID documents
+- **HTTPS Endpoints**: Direct key resolution from issuer-hosted verification endpoints
+
+---
+
+## Deployment & Platform Support
+
+### Docker Compose Deployment
+
+Simplify installation and deployment with containerized setup.
+
+- **Quick Setup**: Deploy the complete verification stack with a single Docker Compose command
+- **Environment Consistency**: Ensure identical configurations across development, staging, and production environments
+- **Resource Isolation**: Run verification services in isolated containers for security and performance
+
+### Scalable Architecture
+
+Handle growing verification volumes without performance degradation.
+
+- **Horizontal Scaling**: Distribute load across multiple verification instances
+- **Optimized Performance**: Efficient resource utilization under varying demand
+- **Enterprise-Ready**: Support high-volume verification scenarios for large organizations
+
+### UI Theme Customization
+
+Adapt the verification portal appearance to match organizational branding.
+
+- **Custom Theming**: Configure colors, logos, and visual elements to align with your organization's identity
+- **White-Label Ready**: Deploy branded verification portals for country-specific or enterprise implementations
+
+### Supported Browsers
+
+| Browser | Minimum Version |
+|---------|-----------------|
+| Google Chrome | 103.0+ |
+| Mozilla Firefox | 100.0+ |
+| Microsoft Edge | 104.0+ |
+| Safari (macOS) | 14.1+ |
+
+### Camera Requirements for Scanning
+
+| Requirement | Specification |
+|-------------|---------------|
+| Resolution | 12 megapixels or higher |
+| Quality | 1020p minimum |
+| Lighting | Well-lit environment |
+| Effects | No filters or dark mode |
+
+### QR Code Version Compatibility
+
+| Feature | Supported Versions | Notes |
+|---------|-------------------|-------|
+| Scan | v1 - v22 | Consistent performance |
+| Scan | v23 - v27 | Variable results based on content density |
+| Upload | v1 - v32 | Full support |
+
+---
+
+## Additional Capabilities
+
+Features that enhance the overall verification experience:
+
+### Responsive Interface Design
+
+Optimal verification experience across all devices and screen sizes.
+
+- **Mobile-First Design**: Full functionality on smartphones with back camera scanning capability
+- **Desktop Optimization**: Enhanced layout for larger screens with keyboard accessibility
+- **Cross-Browser Compatibility**: Consistent experience across Chrome, Firefox, Edge, and Safari
+
+### Enhanced Security
+
+Protect sensitive credential data throughout the verification process.
+
+- **Digital Signature Validation**: Cryptographic verification ensures credential authenticity and detects tampering
+- **Encryption Protection**: Secure handling of sensitive information during processing
+- **PixelPass Security**: Secure QR code processing through audited library implementation
+
+---
 
 ## Upcoming Features
 
-* Offline Verification using BLE Technology
-* Scan/Upload SDK Component for direct embedding
-* Enhanced tablet responsiveness
-* CBOR encoding capability in PixelPass library
+- **Offline BLE Verification**: Verify credentials offline using Bluetooth Low Energy technology for network-constrained environments
+- **Scan/Upload SDK Component**: Standalone NPM module enabling easy VC verification embedding in third-party verifier applications
 
-**Note**: Offline BLE verification will enable credential validation without internet connectivity, adhering to OpenID standards for network-constrained environments.
+---
 
-## Documentation
+## Learn More
 
-* **API Documentation:**
-  API endpoints and server details are available via Stoplight documentation: [Inji Verify API Documentation](https://mosip.stoplight.io/docs/inji-verify/branches/main/).
+- **Workflow Documentation**: [Verification Workflows](../docs/inji-verify/functional-overview/workflow/)
+- **Integration Guide**: [SDK Integration](../docs/inji-verify/technical-overview/integration-guides/openid4vp-vp-verification-integration-guide.md)
+- **API Documentation**: [Inji Verify APIs](../docs/inji-verify/api.md)
+- **Community**: [MOSIP Community Forum](https://community.mosip.io/c/inji/16)
 
-* **Product Documentation:**
-
-    * To know more about Inji Verify from a functional and use case perspective, you can refer to our main document: [Overview | Inji Verify](https://docs.inji.io/inji-verify/overview)
-    * Inji Verify is part of Inji Stack, to know more about Inji Stack you can refer to our stack document: [Inji | Inji](https://docs.inji.io/)
-
-## Contribution & Community
-
-We welcome contributions from everyone!
-
-* [Check here](https://docs.inji.io/readme/contribution/code-contribution) to learn how you can contribute code to this application.
-* If you have any questions or run into issues while trying out the application, feel free to post them in the [MOSIP Community](https://community.mosip.io/) — we'll be happy to help you out.
