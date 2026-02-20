@@ -68,6 +68,6 @@ This feature focuses on the verifier experience: how revocation is checked durin
 
 ### Learn More
 
-* End User Guide: See the verification flows and screenshots in [End User Guide](../../functional-overview/end-user-guide.md#credential-display-capability).
+* End User Guide: See the verification flows and screenshots in [End User Guide](../../functional-overview/end-user-guide/#credential-display-capability).
 * Wallet Feature Reference: The holder-side behavior is described in [Revocation of Verifiable Credentials (Wallet)](../../../inji-wallet/inji-mobile/overview/features/revocation-of-verifiable-credentials.md).
 * W3C Specification: [VC Bitstring Status List](https://www.w3.org/TR/vc-bitstring-status-list/).

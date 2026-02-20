@@ -8,12 +8,12 @@ The Inji Verify SDK is a library that exposes React components for seamlessly in
 
 * The **OpenID4VP component** is responsible for generating a QR code and managing the backend flow for credential sharing using the OpenID4VP protocol.
   * This enables a **cross-device flow**, where users can scan the QR code on a different device (e.g., mobile wallet) to securely present their credentials.
-  * The detailed steps for performing this flow are available in the [End User Guide](../../functional-overview/end-user-guide.md).
+  * The detailed steps for performing this flow are available in the [End User Guide](../../functional-overview/end-user-guide/).
 * The **QRCodeVerification component** allows verifiers to validate verifiable credentials by either:
   * **Scanning** a QR code, or
   * **Uploading** an image containing the QR code.
   * This enables flexible verification flows for both in-person and remote use cases.
-  * The detailed steps for using this component are provided in the [End User Guide](../../functional-overview/end-user-guide.md).
+  * The detailed steps for using this component are provided in the [End User Guide](../../functional-overview/end-user-guide/).
 
 #### Usage
 

@@ -98,5 +98,5 @@ Below is the list of fixes as part of the **0.10.0** release:
 ### **Documentation**
 
 * [Feature Documentation](../../overview/features/)
-* [User guide](../../functional-overview/end-user-guide.md)
+* [User guide](../../functional-overview/end-user-guide/)
 * [QA Report](test-report.md)
