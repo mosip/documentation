@@ -8,9 +8,7 @@ Organizations using Inji Certify reduce credential issuance time by up to 80%, e
 
 The platform's modular architecture means you don't need to replace your existing systems. Connect to your current identity providers, databases, and registries through simple plugins, issue credentials in any format your users need, and maintain complete control over security and branding—all from a single, unified platform.
 
----
-
-## Standards Compliance
+## Standards, Specifications and Compliance
 
 Inji Certify adheres to international standards, ensuring your credentials are trusted and accepted by verification systems worldwide.
 
@@ -46,9 +44,8 @@ Inji Certify adheres to international standards, ensuring your credentials are t
 | **Ed25519 (2018 & 2020)** | 128-bit security with 10x smaller keys—faster mobile verification |
 | **Elliptic Curve (ECC K1 & R1)** | Quantum-resistant compatible, high-performance signing |
 
----
 
-## Core Capabilities
+## Core Features
 
 ### Credential Creation and Issuance
 
@@ -87,9 +84,8 @@ Protect every credential with military-grade digital signatures.
 - **High-Performance Processing**: Sign thousands of credentials per minute on standard hardware
 - **Universal Verification**: All signatures instantly verifiable across any compliant wallet or verification system
 
----
 
-## Credential Lifecycle & Status
+## Credential Lifecycle and Status Management
 
 ### Revocation Mechanism
 
@@ -116,9 +112,8 @@ Maintain comprehensive audit trails and enable rapid credential lookup with an o
 
 **Important**: Built-in revocation requires an enabled ledger unless you provide an external credential lookup mechanism.
 
----
 
-## Credential Branding
+## Credential Branding and Customization
 
 ### SVG-Based Credential Rendering
 
@@ -142,7 +137,6 @@ Reach diverse populations by issuing credentials in users' preferred languages.
 - **Global Deployment Support**: Issue credentials for diverse populations across multiple countries from a single platform
 - **Verification Integrity**: All language variants contain identical verifiable information with the same cryptographic signatures
 
----
 
 ## Integrations → [Plugin Comparison Guide](https://github.com/mosip/inji-certify/blob/master/docs/VCIssuance-vs-DataProvider.md)
 
@@ -196,7 +190,6 @@ Integrate your organization's existing Certificate Authority infrastructure.
 
 Explore detailed configuration: [PKI Support Guide](https://github.com/mosip/inji-certify/blob/release-0.13.x/docs/PKI-Support-and-Integration-with-SD-JWT-VC.md) | [Key Manager Documentation](../technical-overview/key-manager.md)
 
----
 
 ## Deployment
 
@@ -224,7 +217,6 @@ Built-in security features protect credentials from issuance through verificatio
 - **PKI Integration**: Support for CA-signed certificates with existing certificate infrastructure
 - **Comprehensive Audit Logging**: Every issuance, revocation, and configuration change logged with timestamps and user information
 
----
 
 ## Additional Capabilities
 
@@ -239,7 +231,6 @@ Accelerate implementation with extensive documentation and reference implementat
 - **Local Development Setup**: [Development Guide](https://github.com/mosip/inji-certify/blob/master/docs/Local-Development.md)
 - **Complete Reference**: [Inji Certify GitHub Repository](https://github.com/mosip/inji-certify/tree/master)
 
----
 
 ## Getting Started
 
@@ -253,7 +244,6 @@ Transform your credential issuance process in days, not months:
 6. **Customize Appearance** → [Rendering Guide](https://github.com/mosip/inji-certify/blob/master/docs/Rendering-Template.md)
 7. **Go Live** → Issue credentials with confidence
 
----
 
 ## Learn More
 
