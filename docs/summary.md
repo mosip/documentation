@@ -27,7 +27,9 @@
 ## Inji Certify
 
 * [Overview](inji-certify/overview/README.md)
-  * [Features](inji-certify/overview/features.md)
+  * [Features](inji-certify/overview/features/README.md)
+    * [VC Issuance with Pre Authorised Code and Credential Offer](inji-certify/overview/features/vc-issuance-with-pre-authorised-code-and-credential-offer.md)
+    * [Presentation During Issuance](inji-certify/overview/features/presentation-during-issuance.md)
 * [Test](inji-certify/functional-overview/README.md)
   * [Try It Out](inji-certify/functional-overview/try-it-out.md)
   * [Workflow](inji-certify/functional-overview/workflow.md)
