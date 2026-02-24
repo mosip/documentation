@@ -1,6 +1,4 @@
-
-
-Presentation During Issuance
+# New Features in Inji Certify
 
 Inji Certify introduces support for an additional issuance mode called Presentation During Issuance, enhancing trust and security in credential issuance workflows.
 
@@ -57,12 +55,3 @@ Transaction Code Support — Optional support for requiring a PIN/transaction co
 This release enhances Inji Certify’s interoperability with OpenID4VCI ecosystems and improves the user experience for VC issuance in trusted workflows.
 
 
-
-
-Standards
-Core Capabilities
-Credential Lifecycle & Status
-Credential Branding
-Integrations
-ID Ecosystems
-Deployment

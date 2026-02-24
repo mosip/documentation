@@ -6,9 +6,8 @@ Inji Verify empowers organizations to validate Verifiable Credentials (VCs) inst
 
 The platform combines modular SDK components with enterprise-grade security, enabling seamless integration into existing verifier applications while maintaining compliance with W3C VC Data Model standards.
 
----
 
-## Standards Compliance
+## Standards, Specifications, and Compliance
 
 Inji Verify adheres to industry standards for interoperable and trustworthy credential verification.
 
@@ -37,9 +36,7 @@ Inji Verify adheres to industry standards for interoperable and trustworthy cred
 
 - **OpenID4VP**: Cross-device and same-device Verifiable Presentation flows per OpenID specifications
 
----
-
-## Core Verification Capabilities
+## Core Verification Features
 
 ### QR Code Scanning → [End User Guide](../docs/inji-verify/functional-overview/end-user-guide.md)
 
@@ -81,7 +78,6 @@ Instant validation results without processing delays.
 - **No Queue Processing**: Direct validation without batch processing delays
 - **Live Status Updates**: Progress indicators during credential processing
 
----
 
 ## Credential Display & Status
 
@@ -125,7 +121,6 @@ Guide users through verification issues with actionable feedback.
 - **Expired Credential Alerts**: Informative notices when credentials have passed validity dates
 - **Decoding Failure Guidance**: Step-by-step instructions for resolving upload or scanning issues
 
----
 
 ## Integrations & SDK → [Integration Guide](../docs/inji-verify/technical-overview/integration-guides/openid4vp-vp-verification-integration-guide.md)
 
@@ -162,8 +157,6 @@ Robust server-side verification with persistent data storage.
 
 - [Inji Verify APIs](../docs/inji-verify/api.md)
 
----
-
 ## Ecosystem Compatibility
 
 ### MOSIP UIN-Based VC Support
@@ -177,8 +170,6 @@ Verify credentials issued using MOSIP Unique Identification Numbers.
 
 - **did:web**: Resolve issuer keys from web-hosted DID documents
 - **HTTPS Endpoints**: Direct key resolution from issuer-hosted verification endpoints
-
----
 
 ## Deployment & Platform Support
 
@@ -231,8 +222,6 @@ Adapt the verification portal appearance to match organizational branding.
 | Scan | v23 - v27 | Variable results based on content density |
 | Upload | v1 - v32 | Full support |
 
----
-
 ## Additional Capabilities
 
 Features that enhance the overall verification experience:
@@ -253,14 +242,10 @@ Protect sensitive credential data throughout the verification process.
 - **Encryption Protection**: Secure handling of sensitive information during processing
 - **PixelPass Security**: Secure QR code processing through audited library implementation
 
----
-
 ## Upcoming Features
 
 - **Offline BLE Verification**: Verify credentials offline using Bluetooth Low Energy technology for network-constrained environments
 - **Scan/Upload SDK Component**: Standalone NPM module enabling easy VC verification embedding in third-party verifier applications
-
----
 
 ## Learn More
 
