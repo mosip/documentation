@@ -55,10 +55,41 @@ Not Available
 Template that contains the structure of the feature that you will process from crude-content and as per guidelines instructed to you as per https://raw.githubusercontent.com/svahsek/.github/main/templates/features/features-page.template.md, https://raw.githubusercontent.com/svahsek/.github/main/templates/features/features-page.guidelines.md and then put the revised writeup in [.github/output.md].
 
 ## Input
-- Inji Verify: docs/inji-verify
-- Crude Content: docs/inji-verify/overview/features/README.md
+- Inji Verify: .github/input.md
+- Crude Content: .github/input.md
+- #codebase - docs/inji-certify
+- Roadmap 2026: docs/readme/roadmap/roadmap-2026.md
+- Inji Certify Repo: https://github.com/inji/inji-certify.git
+- Inji Certify features page which has to be updated with the new content: docs/inji-certify/overview/ks-inji-certify-features-improved.md , There fore give me the content in .github/output.md organised exactly as per the structure of docs/inji-certify/overview/ks-inji-certify-features-improved.md and then I will update the content in that file with the content you give me in .github/output.md
 
-
-### Output
+## Output
 
 - Put the output in the file: [.github/output.md]
+
+## Guardrails
+- Do not assume
+- Do not make up information
+- Do not add any information that is not present in the input or related files
+- Do not delete any information that is present in the input or related files
+- Do not change the meaning of any information that is present in the input or related files
+- Do not add any information that is not present in the input or related files
+- Do not change the meaning of any information that is present in the input or related files
+- Do not delete any information that is present in the input or related files
+- Do not change the meaning of any information that is present in the input or related files
+- Do not add any information that is not present in the input or related files
+
+
+
+<!--
+Features page organization
+
+- Standards
+- Core Capabilities
+- Credential Lifecycle & Status
+- Credential Branding
+- Integrations
+- ID Ecosystems
+- Deployment
+
+
+-->
