@@ -4,7 +4,7 @@ icon: gamepad-modern
 
 # Test
 
-This section is for **hands-on testing** and **user-facing flows** in Inji Certify. Use it when you want to validate an end-to-end issuance journey.
+This section is for **hands-on exploration** and **user-facing flows** in Inji Certify. Use it when you want to validate an end-to-end issuance journey.
 
 You’ll find quick reference diagrams and functional overview.
 

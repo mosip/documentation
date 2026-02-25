@@ -8,7 +8,23 @@ icon: house
 
 Inji Certify enables issuers to generate, sign and issue a verifiable credentials. It follows the standard of OpenID4VCI (Open ID For VC Issuance) draft 13. It also issues VC complaints with W3C Verifiable Credentials (1.1 & 2.0). Issuers can configure credential schemas for different certificate types, generating credentials in different VC formats such JSON-LD, SD-JWT etc.
 
-> ❗ **Important!** Before you proceed, you should be aware of OpenID4VC & W3C VC. Please read the following standards before proceeding:
+### How is the 'Inji Certify Documentation' organised?
+
+The docs follow the typical journey: understand → try → set up → build → integrate → deploy → operate.
+
+* [**Overview**](./)**:** Get the product basics and the mental model. Subsections cover capabilities and core concepts like [Features](features/).
+* [**Test**](../functional-overview/)**:** Run a working flow end-to-end before you invest in setup. Subsections cover “Try it out”, workflow, and end-user steps.
+* [**Setup**](../build-and-deploy/)**:** Get Certify running locally or in a shared environment. Subsections cover local setup and a guided deployment path.
+* [**Develop**](../technical-overview/)**:** Go deeper on how Certify is built and how to extend it. Subsections cover the tech stack, architecture, supported OS, and key management.
+* [**API**](../api.md)**:** Use the API reference to integrate wallets, clients, and surrounding services. Expect endpoint-level details, request/response shapes, and auth expectations.
+* [**Deploy**](/broken/spaces/aY8BQ4hdzhSchZV814Ev/pages/ZNmtG0GlL4fe4bqA0rKO)**:** Jump straight to production-style deployment instructions. This points to the Kubernetes-focused deployment guide.
+* [**Releases**](../releases/)**:** Track what changed between versions and what to upgrade to. Subsections include per-version notes and test reports.
+
+
+
+### Standards, Specifications and Compliance
+
+> ❗ **Important!** Before you proceed, you can acuaint yourself with OpenID4VC & W3C VC. Refer to the following standards before proceeding:
 >
 > * [OpenID4VC - OpenID for Verifiable Credential Issuance - draft 13](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-ID1.html)
 > * [W3C VC - Verifiable Credentials Overview](https://www.w3.org/TR/vc-overview/)
