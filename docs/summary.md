@@ -228,6 +228,8 @@
     * [Interface Overview](inji-verify/functional-overview/end-user-guide/interface-overview.md)
     * [Verify by scanning the QR Code](inji-verify/functional-overview/end-user-guide/verify-by-scanning-the-qr-code.md)
     * [Verify by uploading the QR Code](inji-verify/functional-overview/end-user-guide/verify-by-uploading-the-qr-code.md)
+    * [VP Verification - Cross Device Flow](inji-verify/functional-overview/end-user-guide/vp-verification-cross-device-flow.md)
+    * [VP Verification - Same Device Flow](inji-verify/functional-overview/end-user-guide/vp-verification-same-device-flow.md)
     * [Credential Display Capabilties](inji-verify/functional-overview/end-user-guide/credential-display-capabilties.md)
     * [Error Handling](inji-verify/functional-overview/end-user-guide/error-handling.md)
   * [Functional Overview](inji-verify/functional-overview/functional-overview.md)
