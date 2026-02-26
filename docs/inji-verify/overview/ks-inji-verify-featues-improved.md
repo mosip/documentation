@@ -6,7 +6,6 @@ Inji Verify empowers organizations to validate Verifiable Credentials (VCs) inst
 
 The platform combines modular SDK components with enterprise-grade security, enabling seamless integration into existing verifier applications while maintaining compliance with W3C VC Data Model standards.
 
-
 ## Standards, Specifications, and Compliance
 
 Inji Verify adheres to industry standards for interoperable and trustworthy credential verification.
@@ -18,6 +17,12 @@ Inji Verify adheres to industry standards for interoperable and trustworthy cred
 | **W3C VC Data Model 1.1 & 2.0** | Industry-standard Verifiable Credentials ensuring interoperability |
 | **JSON-LD** | Linked data credentials with semantic context |
 | **SD-JWT** | Selective Disclosure JWT credentials with privacy-preserving claim sharing |
+
+### QR Code Encoding Standards
+
+| Standard | Description |
+|----------|-------------|
+| **Claim 169** | MOSIP specification for encoding credentials into compact, machine-readable QR codes using CBOR (Concise Binary Object Representation) for efficient, offline-friendly credential delivery |
 
 ### Cryptographic Algorithms
 
@@ -40,9 +45,10 @@ Inji Verify adheres to industry standards for interoperable and trustworthy cred
 
 ### QR Code Scanning → [End User Guide](../docs/inji-verify/functional-overview/end-user-guide.md)
 
-Verify credentials instantly by scanning QR codes directly through your device's camera.
+Verify credentials instantly by scanning QR codes directly through your device's camera, including Claim 169–encoded credentials.
 
 - **Real-time Camera Scanning**: Point your device camera at any QR code to initiate instant verification, eliminating manual data entry and reducing verification time to seconds
+- **Claim 169 Support**: Verify compact QR-encoded credentials mapped to Claim 169 standard for offline-friendly credential delivery
 - **Mobile Zoom Control**: Adjust magnification using the zoom slider for optimal scanning accuracy, especially useful for small or densely-encoded QR codes
 - **Multi-Version Support**: Compatible with QR code versions v1 through v27, ensuring broad interoperability with credentials from various issuers
 
@@ -77,7 +83,6 @@ Instant validation results without processing delays.
 - **Immediate Feedback**: Verification results displayed within seconds of submission
 - **No Queue Processing**: Direct validation without batch processing delays
 - **Live Status Updates**: Progress indicators during credential processing
-
 
 ## Credential Display & Status
 
@@ -120,7 +125,6 @@ Guide users through verification issues with actionable feedback.
 - **Invalid QR Detection**: Clear messaging when QR codes contain malformed or unreadable data
 - **Expired Credential Alerts**: Informative notices when credentials have passed validity dates
 - **Decoding Failure Guidance**: Step-by-step instructions for resolving upload or scanning issues
-
 
 ## Integrations & SDK → [Integration Guide](../docs/inji-verify/technical-overview/integration-guides/openid4vp-vp-verification-integration-guide.md)
 
@@ -254,3 +258,15 @@ Protect sensitive credential data throughout the verification process.
 - **API Documentation**: [Inji Verify APIs](../docs/inji-verify/api.md)
 - **Community**: [MOSIP Community Forum](https://community.mosip.io/c/inji/16)
 
+
+---
+
+Inji Verify 0.17.0 Enhancements
+
+### Richer Verification Responses
+
+The `/vc-verification` and `/vp-result/{txnId}` endpoints now return contextual details beyond simple success or failure status:
+
+- **Detailed Failure Reasons**: Distinguish between expiry, revocation, schema mismatch, signature issues, or policy checks
+- **Per-Credential Status**: Identify which credentials passed or failed in multi-credential presentations
+- **Actionable Outcomes**: Enable applications to prompt users to retry, present alternative credentials, or escalate to manual review
