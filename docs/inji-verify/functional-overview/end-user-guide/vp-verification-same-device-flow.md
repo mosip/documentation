@@ -1,5 +1,11 @@
 # VP Verification - Same Device Flow
 
+## Overview
+
+This guide covers the same-device Verifiable Presentation (VP) verification flow, where both the verifier portal and credential wallet operate on the same mobile device. Instead of scanning a QR code, Inji Verify invokes the wallet directly via deep link, enabling seamless app-to-app credential sharing without requiring a second device.
+
+This flow follows the OpenID4VP specification with `response_mode=direct_post`. The wallet receives the authorization request containing credential requirements, authenticates the user, collects consent, and returns the VP response back to Inji Verify for validation and result display.
+
 ### Step 1: Initiate VP Request Process
 
 Navigate to the **VP Verification** tab in Inji Verify on your mobile device.\

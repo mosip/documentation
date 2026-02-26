@@ -4,6 +4,9 @@
 
 This document serves as a concise guide for end users, providing comprehensive step-by-step information on the features and functionalities offered by Inji Verify.
 
+
+<!-- Segregate content
+
 ### Supported Credential Formats
 
 Inji Verify now supports multiple verifiable credential formats to ensure broad compatibility:
@@ -22,3 +25,6 @@ Inji Verify now supports multiple verifiable credential formats to ensure broad 
 * **Global Vocabularies**: Standardized data meanings across systems
 
 _All verification methods below work with both credential formats._
+
+
+-->

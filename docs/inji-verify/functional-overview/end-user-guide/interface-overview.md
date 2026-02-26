@@ -1,10 +1,14 @@
 # Interface Overview
 
+## Introduction
+
+This guide provides an overview of the Inji Verify user interface based on the reference implementation. It covers the key sections and features available to end users for credential verification workflows.
+
+For hands-on exploration and testing, you can refer to the Inji Verify collab environment.
+
 ## **Header Section**
 
 ### **Home**
-
-* The "Home" Screen is not available now so you will be able to see the "Upload QR Code" Page instead.
 
 ### **Verify Credentials**
 

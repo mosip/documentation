@@ -1,6 +1,10 @@
-# Credential Display Capabilties
+# Credential Display Capabilities
 
+## Overview
 
+This guide covers how Inji Verify displays verification results and renders credentials after validation. Understanding these display capabilities helps verifiers quickly interpret credential status, view issuer-branded presentations, and access multilingual claim values.
+
+Inji Verify provides clear visual indicators for credential validity, supports SVG-based rendering to preserve issuer branding, and enables multilingual display for global accessibility.
 
 ### Valid Credentials
 

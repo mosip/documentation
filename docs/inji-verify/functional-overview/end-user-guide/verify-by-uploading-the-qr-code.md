@@ -1,5 +1,11 @@
 # Verify by uploading the QR Code
 
+## Overview
+
+This guide explains how to verify credentials by uploading documents containing QR codes when camera scanning isn't available or practical. The upload feature supports PDF, JPEG, JPG, and PNG files, and can process higher-density QR codes (up to version 32) that may exceed camera scanning capability.
+
+Once uploaded, Inji Verify extracts the QR data using the PixelPass library and validates the credential using the Verification SDK, displaying the full credential details upon successful verification.
+
 ## Verify by uploading the QR Code
 
 1. **Upload QR Code:** - Go to the Inji Verify portal and select the tab **Upload QR Code** where the Upload QR code section will come up and click on the **Upload** button to initiate the process.
