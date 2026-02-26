@@ -1,6 +1,12 @@
 # Verify by scanning the QR Code
 
-### Verify by scanning the QR Code
+## Overview
+
+This guide walks you through verifying credentials by scanning QR codes directly using your device's camera. 
+The scan feature provides real-time verification—simply point your camera at a QR code, and Inji Verify decodes the credential data using the PixelPass library and validates it using the Verification SDK.
+The scanning workflow supports zoom controls for optimal capture accuracy and displays verification results with full credential details upon successful validation.
+
+## Verify by scanning the QR Code
 
 1. **Initiate Scan Request:** Go to the Inji Verify portal and select the tab "Scan the QR Code" where the Scan QR code section will come up.
 2. Click on the Scan button to initiate the scanning process.

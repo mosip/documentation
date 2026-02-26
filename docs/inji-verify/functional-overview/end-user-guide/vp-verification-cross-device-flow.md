@@ -1,5 +1,11 @@
 # VP Verification - Cross Device Flow
 
+## Overview
+
+This guide covers the cross-device Verifiable Presentation (VP) verification flow, where the verifier and credential holder use separate devices. The verifier generates a QR code containing an authorization request, which the holder scans using their mobile wallet (such as Inji Wallet) on a different device.
+
+This flow follows the OpenID4VP specification and enables secure credential sharing without requiring the verifier and holder to be on the same device. The wallet authenticates the user, collects consent, and sends the VP response back to Inji Verify for validation and result display.
+
 ## VP Verification (Cross Device Flow)
 
 1. **Initiate VP Request Process**

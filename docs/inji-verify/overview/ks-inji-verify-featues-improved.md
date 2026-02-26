@@ -147,7 +147,7 @@ Decode QR codes accurately using the integrated PixelPass SDK.
 
 - **CBOR Decoding**: Process CBOR-encoded QR codes for compact credential verification
 - **Reliable Data Extraction**: Ensure accurate decoding of embedded credential data for downstream validation
-- **Library Version**: Integrated [PixelPass v0.5.0](https://www.npmjs.com/package/@mosip/pixelpass/v/0.5.0) for secure processing
+- **Library Version**: Integrated [PixelPass v0.7.0](https://www.npmjs.com/package/@mosip/pixelpass/v/0.7.0) for secure processing
 
 ### Backend Verification Services
 
@@ -249,7 +249,6 @@ Protect sensitive credential data throughout the verification process.
 ## Upcoming Features
 
 - **Offline BLE Verification**: Verify credentials offline using Bluetooth Low Energy technology for network-constrained environments
-- **Scan/Upload SDK Component**: Standalone NPM module enabling easy VC verification embedding in third-party verifier applications
 
 ## Learn More
 
