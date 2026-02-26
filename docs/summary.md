@@ -248,6 +248,8 @@
 * [API](inji-verify/api.md)
 * [Deploy](readme/setup/deploy.md#deploying-inji-verify)
 * [Releases](inji-verify/releases/README.md)
+  * [Version 0.17.0](inji-verify/releases/version-0.17.0/README.md)
+    * [Test Report](inji-verify/releases/version-0.17.0/test-report.md)
   * [Version 0.16.0](inji-verify/releases/version-0.16.0/README.md)
     * [Test Report](inji-verify/releases/version-0.16.0/test-report.md)
   * [Version 0.15.2](inji-verify/releases/version-0.15.2.md)
