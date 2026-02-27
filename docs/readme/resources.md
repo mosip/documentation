@@ -1,5 +1,5 @@
 ---
-icon: book-open
+icon: video
 ---
 
 # Resources
@@ -37,7 +37,7 @@ Each demonstration video explains the product’s purpose, setup, features, and 
 
 {% embed url="https://youtu.be/VdF3UpTb6wY?si=cPorpyKUJ6bvwmqx" %}
 
-### **Inji Certify: Local Setup & Deployment using Docker Compose**
+#### **Local Setup & Deployment using Docker Compose**
 
 **What you'll learn**:
 
@@ -47,7 +47,7 @@ Each demonstration video explains the product’s purpose, setup, features, and 
 
 {% embed url="https://youtu.be/3jMP-X8PAvM?si=7dgg2-w21vHCOax1" %}
 
-### **Inji Certify: Technical Deep Dive -- Verifiable Credential Issuance**
+#### **Technical Deep Dive - Verifiable Credential Issuance**
 
 **What you'll learn**:
 
@@ -59,7 +59,9 @@ Each demonstration video explains the product’s purpose, setup, features, and 
 
 
 
-### **Inji Mobile Wallet: Product Overview**
+### **Inji Mobile Wallet**
+
+#### **Product Overview**
 
 **What you'll learn**:
 
@@ -74,7 +76,9 @@ Each demonstration video explains the product’s purpose, setup, features, and 
 
 {% embed url="https://youtu.be/hO12UQXtkqI?si=_ULdhdOpP7bcGw3M" %}
 
-### **Inji Web Wallet: Product Overview**
+### **Inji Web Wallet**
+
+#### **Product Overview**
 
 **What you'll learn**:
 
@@ -85,7 +89,7 @@ Each demonstration video explains the product’s purpose, setup, features, and 
 
 {% embed url="https://youtu.be/hcCn2AGe6AY?si=Ks4XWIIam-BzIWXe" %}
 
-### **Inji Web Wallet: Local Setup Guide**
+#### **Local Setup Guide**
 
 **What you'll learn**:
 
@@ -95,7 +99,7 @@ Each demonstration video explains the product’s purpose, setup, features, and 
 
 {% embed url="https://youtu.be/QYUI-ovSVX8?si=UGhskY9IxqK-AJX9" %}
 
-### **Inji Wallet: Mimoto Setup**
+#### **Mimoto Setup**
 
 **What you'll learn**:
 
@@ -105,7 +109,9 @@ Each demonstration video explains the product’s purpose, setup, features, and 
 
 {% embed url="https://youtu.be/yzK6arInf40?si=6dNhYc7QhEi8F0TY" %}
 
-### **Inji Verify: Product Overview - Your Gateway to Trusted Verifiable Credential Verification**
+### **Inji Verify**
+
+#### **Product Overview - Your Gateway to Trusted Verifiable Credential Verification**
 
 **What you'll learn**:
 
@@ -115,7 +121,7 @@ Each demonstration video explains the product’s purpose, setup, features, and 
 
 {% embed url="https://youtu.be/0mDMG-4anaE?si=wuETz8iV_pDZ9-gt" %}
 
-### **Inji Verify: Technical Deep Dive**
+#### **Technical Deep Dive**
 
 **What you'll learn**:
 
