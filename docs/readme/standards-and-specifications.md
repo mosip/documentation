@@ -78,3 +78,61 @@ Inji follows globally recognized specifications to support **trusted digital ver
 ***
 
 
+
+# README
+
+Standards & Specifications:
+OpenID for Verifiable Credential Issuance (OpenID4VCI) - Draft 13
+🔗 Specification (Draft 13): https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-13.html
+OpenID for Verifiable Presentations (OpenID4VP) - Draft 23
+🔗 Specification (Draft 23): https://openid.net/specs/openid-4-verifiable-presentations-1_0-23.html
+Selective Disclosure for JWTs (SD-JWT)
+🔗 IETF Internet-Draft: https://datatracker.ietf.org/doc/html/draft-ietf-oauth-selective-disclosure-jwt
+ISO/IEC 18013-5:2021 – Mobile Driving Licence (mDL)
+🔗 ISO 18013-5 Overview: https://www.iso.org/standard/69084.html
+⚠️ Note: ISO documents are paid standards; only summaries are public.
+W3C Verifiable Credentials Data Model v1.1
+🔗 W3C Recommendation: https://www.w3.org/TR/vc-data-model-1.1/
+W3C Verifiable Credentials Data Model v2.0
+🔗 W3C Working Draft (latest): https://www.w3.org/TR/vc-data-model-2.0/
+Bitstring Status List v2.0
+🔗 W3C Specification: https://www.w3.org/TR/vc-bitstring-status-list/
+🔗 Status List vocabulary: https://www.w3.org/ns/credentials/status/
+Claim169 - QR Code based Verifiable Credentials
+🔗 169 - QR Code Specifications: https://docs.mosip.io/1.2.0/readme/standards-and-specifications/mosip-standards/169-qr-code-specification
+
+
+
+
+# INJI WEB
+
+
+| Format                 | Signature Algorithm      | Web Wallet (Login) | Guest Mode (Without Login) | Notes                                               |
+| ---------------------- | ------------------------ | ------------------ | -------------------------- | --------------------------------------------------- |
+| W3C JSON-LD            | ED25519 2018             | Supported          | Supported                  | Compact, fast signatures with high security         |
+| W3C JSON-LD            | ED25519 2020             | Supported          | Supported                  | Enhanced key format with better structure           |
+| W3C JSON-LD            | RS256 (RSA with SHA-256) | Supported          | Supported                  | Backward compatibility; legacy systems              |
+| W3C JSON-LD            | ECC K1                   | Supported          | Supported                  | Common in OpenID ecosystem                          |
+| W3C JSON-LD            | ECC R1                   | Planned            | Planned                    | Strong elliptic curve variant                       |
+| W3C Data Integrity 2.0 | RS256                    | Planned            | Planned                    | JWS with canonicalized digest                       |
+| W3C Data Integrity 2.0 | EdDSA (Ed25519)          | Planned            | Planned                    | Based on JWS EdDSA                                  |
+| W3C Data Integrity 2.0 | ES256K                   | Planned            | Planned                    | JWS-based signing with secp256k1                    |
+| W3C Data Integrity 2.0 | ES256                    | Planned            | Planned                    | Strong elliptic curve variant                       |
+| JWT VC                 | RS256                    | Planned            | Planned                    | Planned under VC-JWT compliance                     |
+| JWT VC                 | ES256K                   | Planned            | Planned                    | Awaiting certification                              |
+| JWT VC                 | ES256                    | Planned            | Planned                    | Under consideration                                 |
+| JWT VC                 | x509 (PKI v3)            | Planned            | Planned                    | Public key in JWT header; x509 cert chain planned   |
+| SD-JWT VC              | RS256                    | Supported          | Supported                  | SD-JWT verification being integrated                |
+| SD-JWT VC              | ES256K                   | Supported          | Supported                  | Selective Disclosure compatible                     |
+| SD-JWT VC              | ES256                    | Planned            | Supported                  | Strong elliptic curve variant                       |
+| SD-JWT VC              | EdDSA (Ed25519)          | Supported          | Supported                  | Not yet supported in Certify (issuer side)          |
+| SD-JWT VC              | x509 (PKI v3)            | In Progress        | In Progress                | Used for advanced SD-JWT scenarios                  |
+| mDoc / mDL             | RS256                    | Planned            | Planned                    | Used in mobile document ecosystems                  |
+| mDoc / mDL             | EdDSA(Ed25519)           | Planned            | Planned                    | Widely used in mobile identity contexts             |
+| mDoc / mDL             | ES256K                   | Planned            | Planned                    | Used in various driver license implementations      |
+| mDoc / mDL             | ES256                    | Planned            | Planned                    | Emerging support for high-security mobile documents |
+| mDoc / mDL             | x509 (PKI v3)            | Planned            | Planned                    | x509 certificate chain                              |
+
+
+
+
