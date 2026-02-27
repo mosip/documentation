@@ -14,7 +14,7 @@ Each demonstration video explains the product’s purpose, setup, features, and 
 
 **Watch the complete series on YouTube:** [Inji Stack Demonstration Playlist](https://www.youtube.com/playlist?list=PLJH-POb_55z_kaiEpAzaT_H4hUdGW6QcQ)
 
-### **1. Inji Stack: Overview**
+### **Inji Stack: Overview**
 
 **What you'll learn**:
 
@@ -25,7 +25,41 @@ Each demonstration video explains the product’s purpose, setup, features, and 
 
 {% embed url="https://youtu.be/WQI3qan8egY?si=iVbP4xMqW7zbw29L" %}
 
-### **2. Inji Mobile Wallet: Product Overview**
+### **Inji Certify**
+
+#### **Product Overview**
+
+**What you'll learn**:
+
+* Introduction to **Inji Certify**, the credential issuance module of the Inji Stack.
+* Demonstrates how authorized entities can issue, manage, and revoke verifiable digital credentials.
+* Explains interoperability with **OpenID4VC**, **W3C VC**, and other standards.
+
+{% embed url="https://youtu.be/VdF3UpTb6wY?si=cPorpyKUJ6bvwmqx" %}
+
+### **Inji Certify: Local Setup & Deployment using Docker Compose**
+
+**What you'll learn**:
+
+* Step-by-step local deployment of **Inji Certify** using Docker Compose.
+* Explains configuration of plug-ins, environment variables, and credential templates.
+* Demonstrates issuance and revocation flows in a local testing environment.
+
+{% embed url="https://youtu.be/3jMP-X8PAvM?si=7dgg2-w21vHCOax1" %}
+
+### **Inji Certify: Technical Deep Dive -- Verifiable Credential Issuance**
+
+**What you'll learn**:
+
+* In-depth look at **Inji Certify's credential issuance architecture**.
+* Explains credential templates, signing algorithms, revocation APIs, and integration with data sources.
+* Details plug-in architecture for flexible issuance from multiple registries or databases.
+
+{% embed url="https://youtu.be/r_HnbLYQfVo?si=4ISNQSEHT-LZ2zcC" %}
+
+
+
+### **Inji Mobile Wallet: Product Overview**
 
 **What you'll learn**:
 
@@ -40,9 +74,7 @@ Each demonstration video explains the product’s purpose, setup, features, and 
 
 {% embed url="https://youtu.be/hO12UQXtkqI?si=_ULdhdOpP7bcGw3M" %}
 
-
-
-### **3. Inji Web Wallet: Product Overview**
+### **Inji Web Wallet: Product Overview**
 
 **What you'll learn**:
 
@@ -53,9 +85,7 @@ Each demonstration video explains the product’s purpose, setup, features, and 
 
 {% embed url="https://youtu.be/hcCn2AGe6AY?si=Ks4XWIIam-BzIWXe" %}
 
-
-
-### **4. Inji Web Wallet: Local Setup Guide**
+### **Inji Web Wallet: Local Setup Guide**
 
 **What you'll learn**:
 
@@ -65,9 +95,7 @@ Each demonstration video explains the product’s purpose, setup, features, and 
 
 {% embed url="https://youtu.be/QYUI-ovSVX8?si=UGhskY9IxqK-AJX9" %}
 
-
-
-### **5. Inji Wallet: Mimoto Setup**
+### **Inji Wallet: Mimoto Setup**
 
 **What you'll learn**:
 
@@ -77,7 +105,7 @@ Each demonstration video explains the product’s purpose, setup, features, and 
 
 {% embed url="https://youtu.be/yzK6arInf40?si=6dNhYc7QhEi8F0TY" %}
 
-### **6. Inji Verify: Product Overview -- Your Gateway to Trusted Verifiable Credential Verification**
+### **Inji Verify: Product Overview - Your Gateway to Trusted Verifiable Credential Verification**
 
 **What you'll learn**:
 
@@ -87,7 +115,7 @@ Each demonstration video explains the product’s purpose, setup, features, and 
 
 {% embed url="https://youtu.be/0mDMG-4anaE?si=wuETz8iV_pDZ9-gt" %}
 
-### **7. Inji Verify: Technical Deep Dive**
+### **Inji Verify: Technical Deep Dive**
 
 **What you'll learn**:
 
@@ -97,45 +125,7 @@ Each demonstration video explains the product’s purpose, setup, features, and 
 
 {% embed url="https://youtu.be/odf_bo38NKI?si=IkE3_6Cz0P3njBrK" %}
 
-### **8. Inji Certify: Product Overview**
 
-**What you'll learn**:
-
-* Introduction to **Inji Certify**, the credential issuance module of the Inji Stack.
-* Demonstrates how authorized entities can issue, manage, and revoke verifiable digital credentials.
-* Explains interoperability with **OpenID4VC**, **W3C VC**, and other standards.
-
-
-
-{% embed url="https://youtu.be/VdF3UpTb6wY?si=cPorpyKUJ6bvwmqx" %}
-
-
-
-### **9. Inji Certify: Local Setup & Deployment using Docker Compose**
-
-**What you'll learn**:
-
-* Step-by-step local deployment of **Inji Certify** using Docker Compose.
-* Explains configuration of plug-ins, environment variables, and credential templates.
-* Demonstrates issuance and revocation flows in a local testing environment.
-
-
-
-{% embed url="https://youtu.be/3jMP-X8PAvM?si=7dgg2-w21vHCOax1" %}
-
-
-
-### **10. Inji Certify: Technical Deep Dive -- Verifiable Credential Issuance**
-
-**What you'll learn**:
-
-* In-depth look at **Inji Certify's credential issuance architecture**.
-* Explains credential templates, signing algorithms, revocation APIs, and integration with data sources.
-* Details plug-in architecture for flexible issuance from multiple registries or databases.
-
-
-
-{% embed url="https://youtu.be/r_HnbLYQfVo?si=4ISNQSEHT-LZ2zcC" %}
 
 
 
