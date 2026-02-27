@@ -8,7 +8,9 @@ Once uploaded, Inji Verify extracts the QR data using the PixelPass library and 
 
 ## Verify by uploading the QR Code
 
-1. **Upload QR Code:** - Go to the Inji Verify portal and select the tab **Upload QR Code** where the Upload QR code section will come up and click on the **Upload** button to initiate the process.
+**Upload QR Code:**
+
+1. Go to the Inji Verify portal and select the tab **Upload QR Code** where the Upload QR code section will come up and click on the **Upload** button to initiate the process.
 
 <figure><img src="../../../.gitbook/assets/image10.png" alt="" width="500"><figcaption><p>Desktop View</p></figcaption></figure>
 

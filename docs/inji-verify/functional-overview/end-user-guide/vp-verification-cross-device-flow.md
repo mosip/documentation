@@ -17,14 +17,14 @@ This flow follows the OpenID4VP specification and enables secure credential shar
 2. **Select Credentials & Generate QR Code**: The verifier is presented with a list of verifiable credential types with specific credentials already pre-selected(configurable) based on a specific usecase.
 
 * Pre-selected credential types are listed on the top and rest of the credentials (non-selected ones) are displayed in alphabetical order.
-* The list of VCs can also be sorted in ascending or descending order using Sort option.
+* The list of VCs can also sorted in ascending or descending order using Sort option.
 * Each credential type is displayed with a checkbox next to it.
 * The verifier reviews the list and selects the desired credentials by clicking the checkboxes provided in the list.
 * Verifier can also search for a credential by entering the credential type (1 or more letters to be entered in the search box and filtered results appear in the dropdown).
 
 <figure><img src="../../../.gitbook/assets/image16.png" alt="" width="500"><figcaption></figcaption></figure>
 
-* Choose the required verifiable credentials from the popup window and click '**Generate QR Code'**, If the verifier does not wish to select any credentials, he can click on Go Back Button. Clicking on it navigates to main screen of 'VP Verification' tab in Inji Verify portal
+* Choose the required verifiable credentials from the popup window and click '**Generate QR Code'**.
 
 <figure><img src="../../../.gitbook/assets/image17.png" alt="" width="500"><figcaption></figcaption></figure>
 
