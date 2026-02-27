@@ -91,6 +91,30 @@ This multi-format support allows Inji Wallet to work seamlessly across different
 * **Shows clear status indicators** (Valid, Revoked, Pending) so users immediately know whether a card can be safely shared.
 * Supports manual status checks&#x20;
 
+#### Presentation During Issuance (PDI)
+
+Inji Mobile supports **Presentation During Issuance (PDI)** a secure flow where users can **prove eligibility using an existing credential before receiving a new one**.
+
+Instead of repeating identity checks or submitting documents again, the wallet can present a **Verifiable Presentation (VP)** of an already stored credential to the issuer during the issuance process.
+
+**Example:** Present your **National ID credential** → Receive a **Driving License or Health Card**
+
+* Receive new credentials faster without repeating onboarding steps
+* Reuse trusted credentials already stored in the wallet
+* Approve exactly what information is shared before issuance
+
+## Claim-169 QR Code Support
+
+Inji Mobile supports **Claim-169 QR Codes**, a standardized QR format used to support receiving and using Verifiable Credentials (VCs) that contain **Claim 169–formatted QR code blocks**, issued as **CBOR-based CWT (CBOR Web Tokens)** inside the credential.\
+This ensures secure, compact, and privacy-preserving QR sharing ideally suited for offline or quick verification scenarios.
+
+The goal of this feature is to allow the wallet to:
+
+* Download credentials containing embedded Claim 169 QR blocks
+* Store and render these QR blocks for display
+* Allow users to present the QR-based identity data when required
+* Ensure proper validation and security checks (size, format, signature, structure)
+
 ### How It Works
 
 1. **Credential Download**\
@@ -109,11 +133,10 @@ This multi-format support allows Inji Wallet to work seamlessly across different
 
 ### Sneak Peek: Upcoming Features
 
-* Support for **W3C Data Model 2.0** and **SVG Templates**
-* **IETF** **SD-JWT-based** Selective Disclosure via **OpenID4VP**
 * Support for **JWT-format credentials**
-* **Presentation During Issuance**
-* **Wallet Login with IdPs** (OpenID4VP-based WLA)
+* **Wallet Login with IdPs**&#x20;
+* Multiple Profile Creation
+* Credential Refresh Support
 
 ### Technology and Integration
 

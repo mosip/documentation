@@ -50,15 +50,31 @@ Residents can download VCs from trusted issuers integrated with OpenID for the V
 * User enters code in-app to retrieve VC securely
 * Ideal for privacy-sensitive issuance (e.g., mDL, insurance)
 
+#### d) Presentation During Issuance
+
+* Enables users to **present an existing credential before receiving a new one**, reducing repeated verification steps.
+* Allows issuers to verify eligibility securely using **Verifiable Presentations (VPs)**.
+* Improves user experience with **consent-based sharing directly from the wallet**.
+* Built on **OpenID4VCI and OpenID4VP standards** for interoperable issuance flows.
+* Helps prevent fraud and ensures credentials are issued only to **eligible users**.
+
+#### e) Claim 169 QR Code Support&#x20;
+
+* Supports **standardized QR codes** for initiating credential download and sharing flows.
+* Download credentials containing embedded Claim 169 QR blocks
+* Store and render these QR blocks for display
+* Allow users to present the QR-based identity data when required
+* Ensure proper validation and security checks (size, format, signature, structure)
+
 #### 2.2 Verifying Credential Authenticity
 
 Inji Mobile Wallet uses robust cryptographic libraries to verify that the VC is:
 
 * **Digitally signed by a trusted issuer,** ensuring the credential originates from a valid and recognized entity.
-* **Cryptographically valid based on proof type** — verifying the integrity of the data using the appropriate proof mechanisms (e.g., JSON-LD proof, JWT, IETF SD-JWT, etc.).
-* **Not revoked or expired** — performing revocation status checks using status lists, revocation registries, or endpoints defined in the VC metadata.
-* **Untampered** — confirming that no field or claim in the credential has been altered since issuance.
-* **Bound to the correct holder (where applicable)** — verifying holder binding in cases where the VC includes a subject proof (e.g., via DID or SD-JWT binding).
+* **Cryptographically valid based on proof type** verifying the integrity of the data using the appropriate proof mechanisms (e.g., JSON-LD proof, JWT, IETF SD-JWT, etc.).
+* **Not revoked or expired** performing revocation status checks using status lists, revocation registries, or endpoints defined in the VC metadata.
+* **Untampered** confirming that no field or claim in the credential has been altered since issuance.
+* **Bound to the correct holder (where applicable)** verifying holder binding in cases where the VC includes a subject proof (e.g., via DID or SD-JWT binding).
 
 ### 3. Sharing Verifiable Credentials
 
@@ -119,12 +135,6 @@ Designed for ease of use with intuitive UI components:
 * **Private Key Storage in Secure Enclave**
   * Private keys are stored using Android Keystore / iOS Secure Enclave
   * Keys cannot be exported or tampered
-
-### 7. Features in the Pipeline
-
-* Presentation during Issuance
-* Injii Mobile Wallet Login
-* Claim 169 QR Code Parsing and Download
 
 ### Read More <a href="#read-more" id="read-more"></a>
 

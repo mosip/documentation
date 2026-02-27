@@ -78,6 +78,7 @@
       * [Revocation of Verifiable Credentials](inji-wallet/inji-mobile/overview/features/revocation-of-verifiable-credentials.md)
       * [Presentation During Issuance (PDI)](inji-wallet/inji-mobile/overview/features/presentation-during-issuance-pdi.md)
       * [Claim 169](inji-wallet/inji-mobile/overview/features/claim-169.md)
+      * [Claim 169 QR Code Support](inji-wallet/inji-mobile/overview/features/claim-169-qr-code-support.md)
   * [Test](inji-wallet/inji-mobile/functional-overview/README.md)
     * [Try It Out](inji-wallet/inji-mobile/functional-overview/sandbox-details/README.md)
       * [Inji Mobile - Collab Guide](inji-wallet/inji-mobile/functional-overview/sandbox-details/inji-setup-guide.md)

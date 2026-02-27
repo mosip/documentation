@@ -25,8 +25,6 @@ Revocation in Inji Mobile Wallet is the mechanism that allows the wallet to dete
 
 ### How does the Revocation Flow Work?
 
-Step wise user flow:
-
 #### **User Flow (Step-by-Step)**
 
 * When a verifiable credential is downloaded into the wallet, the app automatically checks whether it is still valid.
@@ -41,9 +39,7 @@ Step wise user flow:
   * c) 🟡 **Pending** — Try again later; internet may be required
 * Wallet logs the activity. The action (“Status checked”) is saved in your **History** so you always know when the last check happened.
 
-<figure><img src="../../../../.gitbook/assets/OpenID4VP Credential-2025-12-10-041250.png" alt=""><figcaption></figcaption></figure>
-
-For an step-by-step workflow of how users start the flow, see the **End User Guide**.
+<div data-with-frame="true"><figure><img src="../../../../.gitbook/assets/OpenID4VP Credential-2025-12-10-041250.png" alt=""><figcaption></figcaption></figure></div>
 
 ### Current Limitations
 
