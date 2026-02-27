@@ -121,4 +121,5 @@ The wallet lists each QR separately and allows the user to select which one to p
 
 ### Learn More
 
-**Claim 169 QR Code Support**: To learn how revocation works with Inji Mobile Wallet
+**Claim 169 QR Code Support**: To learn how this QR code is issued and works with Inji Mobile Wallet, please click [here](https://github.com/inji/inji-certify/blob/release-0.14.x/docs/Claim-169-QR-Code-Support.md) to understand its issuance.
+

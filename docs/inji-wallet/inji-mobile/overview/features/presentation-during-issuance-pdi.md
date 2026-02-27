@@ -100,5 +100,4 @@ Any verifiable credential that:
 
 ### Learn More
 
-**Presentation During Issuance – Inji Wallet**\
-Learn how PDI works end-to-end, including issuer policies, presentation exchange, and issuance flows.
+**Presentation During Issuance – Inji Wallet:** To **l**earn how PDI works end-to-end, including issuer policies, presentation exchange, and issuance flows.

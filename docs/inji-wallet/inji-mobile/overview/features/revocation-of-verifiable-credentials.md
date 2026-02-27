@@ -58,8 +58,6 @@ Revocation in Inji Mobile Wallet is the mechanism that allows the wallet to dete
 7. **Scale of encodedList:**
    * Very large encodedList files for population-scale deployments may require optimized storage, streaming, and verification strategies (e.g., segmented lists, CDN usage).
 
-***
-
-## Learn More
+### Learn More
 
 * [Revocation Check - Inji Wallet](https://github.com/mosip/inji-wallet/blob/master/docs/revocation-support.md): To learn how revocation works with Inji Mobile Wallet
