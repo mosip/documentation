@@ -21,13 +21,15 @@ We are excited to announce the release of **Inji Verify v0.17.0.** This version 
   * Similarly, the **/vp-result/{txnId}** endpoint is updated to return richer information for each credential, rather than only the final status, enabling the relying party to make informed decisions.
 * **Claim 169**: Inji Verify now has the ability to verify the VC QR codes (uploaded and scanned) with claims mapped to Claim 169 (for single QR code)
 
+{% hint style="info" %}
 **Note:** The Inji Verify UI is a _reference implementation_ to demonstrate orchestration. Developers can selectively embed SDK components in the verifier applications as per their needs.
+{% endhint %}
 
 ### **Repositories: Released/Dependent**
 
-| **Repositories** | **Tags: Released/Dependent** |
-| ---------------- | ---------------------------- |
-| Inji Verify      | **v0.17.0**                  |
+| Repositories | Tags: Released/Dependent |
+| ------------ | ------------------------ |
+| Inji Verify  | **v0.17.0**              |
 
 &#x20;
 
