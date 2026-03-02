@@ -43,22 +43,26 @@ Inji Verify adheres to industry standards for interoperable and trustworthy cred
 
 ## Core Verification Features
 
-### QR Code Scanning → [End User Guide](../docs/inji-verify/functional-overview/end-user-guide.md)
-
+### QR Code Scanning
 Verify credentials instantly by scanning QR codes directly through your device's camera, including Claim 169–encoded credentials.
+
+[End User Guide](../docs/inji-verify/functional-overview/end-user-guide.md)
 
 - **Real-time Camera Scanning**: Point your device camera at any QR code to initiate instant verification, eliminating manual data entry and reducing verification time to seconds
 - **Claim 169 Support**: Verify compact QR-encoded credentials mapped to Claim 169 standard for offline-friendly credential delivery
 - **Mobile Zoom Control**: Adjust magnification using the zoom slider for optimal scanning accuracy, especially useful for small or densely-encoded QR codes
 - **Multi-Version Support**: Compatible with QR code versions v1 through v27, ensuring broad interoperability with credentials from various issuers
 
-### Document Upload Verification → [Workflow](../docs/inji-verify/functional-overview/workflow/)
+### Document Upload Verification
+
+[Workflow](../docs/inji-verify/functional-overview/workflow/)
 
 Upload credential documents directly to the portal for verification when scanning isn't possible.
 
 - **Multi-Format Support**: Upload PDFs, JPEG, JPG, and PNG files containing embedded QR codes, providing flexibility for different credential formats
 - **Extended QR Support**: Process QR code versions up to v32 through the upload feature, supporting higher-density credentials that exceed scan capability
 - **Batch Document Processing**: Verify credentials embedded in multi-page documents without extracting individual pages
+
 
 ### OpenID4VP Presentation Verification
 
@@ -126,7 +130,9 @@ Guide users through verification issues with actionable feedback.
 - **Expired Credential Alerts**: Informative notices when credentials have passed validity dates
 - **Decoding Failure Guidance**: Step-by-step instructions for resolving upload or scanning issues
 
-## Integrations & SDK → [Integration Guide](../docs/inji-verify/technical-overview/integration-guides/openid4vp-vp-verification-integration-guide.md)
+## Integrations & SDK
+
+[Integration Guide](../docs/inji-verify/technical-overview/integration-guides/openid4vp-vp-verification-integration-guide.md)
 
 ### Modular SDK Components
 
@@ -248,7 +254,11 @@ Protect sensitive credential data throughout the verification process.
 
 ## Upcoming Features
 
-- **Offline BLE Verification**: Verify credentials offline using Bluetooth Low Energy technology for network-constrained environments
+Refer to Roadmap 2026 to keep updated about the upcoming features. 
+
+
+<!--
+
 
 ## Learn More
 
@@ -269,3 +279,5 @@ The `/vc-verification` and `/vp-result/{txnId}` endpoints now return contextual 
 - **Detailed Failure Reasons**: Distinguish between expiry, revocation, schema mismatch, signature issues, or policy checks
 - **Per-Credential Status**: Identify which credentials passed or failed in multi-credential presentations
 - **Actionable Outcomes**: Enable applications to prompt users to retry, present alternative credentials, or escalate to manual review
+
+-->
