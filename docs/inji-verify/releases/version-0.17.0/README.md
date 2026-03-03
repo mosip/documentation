@@ -1,27 +1,21 @@
 # Version 0.17.0
 
-Coming Soon!
-
-
-
 **Release Name**: Inji Verify v0.17.0
 
 **Support**: Developer Release
 
-**Release Date**: March 2026
+**Release Date**: Coming Soon!
 
 ### **Overview**
 
 We are excited to announce the release of **Inji Verify v0.17.0.** This version introduces **enhancements in API design for /vc-verification** endpoint and the **/vp-result/{txnId}** endpoint and verification support for **Claim 169** QR code.
 
-#### **New Features:**
+### **New Features**
 
 * **API Redesign**:
   * We have redesigned the Inji Verify **/vc-verification** endpoint so that it provides more than just the final status (SUCCESS / INVALID / EXPIRED / REVOKED). The response now includes additional details that allow the relying party application to determine the next steps.
   * Similarly, the **/vp-result/{txnId}** endpoint is updated to return richer information for each credential, rather than only the final status, enabling the relying party to make informed decisions.
-
-* **Claim 169 QR Code Verification**: Standardized Compact Credential Encoding: Inji Verify now supports verification of Claim 169-encoded QR credentials—an [IANA-registered MOSIP standard (1.1.0)](https://docs.mosip.io/1.2.0/readme/standards-and-specifications/mosip-standards/169-qr-code-specification-1) for compact, cryptographically-signed identity QR codes. This standardized encoding enables efficient credential delivery and verification across diverse deployment scenarios. What This Enables:
-
+* **Claim 169 QR Code Verification**: Standardised Compact Credential Encoding: Inji Verify now supports verification of Claim 169-encoded QR credentials—an [IANA-registered MOSIP standard (1.1.0)](https://docs.mosip.io/1.2.0/readme/standards-and-specifications/mosip-standards/169-qr-code-specification-1) for compact, cryptographically-signed identity QR codes. This standardised encoding enables efficient credential delivery and verification across diverse deployment scenarios. What This Enables:
   * **QR Code Verification**: Scan or upload Claim 169 QR codes through camera scanning (versions 1–v27) or document upload (versions 1–v32).
   * **CBOR Decoding & Signature Validation**: Automatically decode CBOR-encoded QR payloads and validate Ed25519 cryptographic signatures to authenticate credential authenticity.
   * **Selective Attribute Verification**: Handle credentials containing multiple QR codes, each encoding different identity attributes (demographic data, biometrics) for granular verification workflows.
@@ -38,8 +32,6 @@ We are excited to announce the release of **Inji Verify v0.17.0.** This version 
 | ------------ | ------------------------ |
 | Inji Verify  | **v0.17.0**              |
 
-
-
 ### **Projects: Released**
 
 **Inji Verify Repo** → 4 projects (all these projects are of same version) as below:
@@ -52,15 +44,12 @@ iii) SDK - \<Insert Link Here>
 
 iv) API-Test - \<Insert Link Here>
 
+### **Compatible modules**
 
+The following table outlines the tested and certified compatibility of Inji Verify 0.17.0 with other modules.
 
-### **Compatible modules:**
-
-The following table outlines the tested and certified compatibility of Inji Verify 0.10.0 with other modules.
-
-| **Module**          | **Version**                                                         |
-| ------------------- | ------------------------------------------------------------------- |
 | Inji Wallet         | [0.20.0](https://github.com/mosip/inji-wallet/releases/tag/v0.20.0) |
+| ------------------- | ------------------------------------------------------------------- |
 | Inji Web            | [0.14.0](https://github.com/mosip/inji-web/releases/tag/v0.14.1)    |
 | Pixel-Pass library  | [0.7.0](https://github.com/mosip/pixelpass/releases/tag/v0.7.0)     |
 | vc-verifier library | [1.5.0](https://github.com/mosip/vc-verifier/releases/tag/v1.5.0)   |
@@ -68,7 +57,6 @@ The following table outlines the tested and certified compatibility of Inji Veri
 ### **Bug Fixes**
 
 Below is the list of fixes as part of the **0.17.0** release, for the complete list refer [here](https://mosip.atlassian.net/issues/?jql=project%3Dinjiver%20and%20fixVersion%3D0.17.0%20and%20issuetype%3DBug).
-
 
 ### **User Stories**:
 
@@ -87,4 +75,3 @@ Below is a list of some key known issues. For a detailed overview and the comple
 * [API Documentation](https://mosip.stoplight.io/studio/inji-verify)
 * [Collab Guide](https://mosip.atlassian.net/wiki/spaces/PROD/pages/1306984580)
 * QA Report
-

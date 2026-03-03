@@ -1,30 +1,16 @@
 # Overview
 
-## Overview
+Inji Verify is a verifier portal. It helps you validate verifiable credentials (VCs).
 
-This document serves as a concise guide for end users, providing comprehensive step-by-step information on the features and functionalities offered by Inji Verify.
+Use this end user guide when you need to check a VC quickly. Use it when you need to request a VP from a wallet.
 
+* [Verify by scanning the QR Code](verify-by-scanning-the-qr-code.md)
+* [Verify by uploading the QR Code](verify-by-uploading-the-qr-code.md)
+* [VP Verification - Cross Device Flow](vp-verification-cross-device-flow.md)
+* [VP Verification - Same Device Flow](vp-verification-same-device-flow.md)
+* [Credential Display Capabilties](credential-display-capabilties.md)
+* [Error Handling](error-handling.md)
 
-<!-- Segregate content
-
-### Supported Credential Formats
-
-Inji Verify now supports multiple verifiable credential formats to ensure broad compatibility:
-
-#### **SD-JWT (Selective Disclosure JWT)** NEW
-
-* **Privacy-First**: Share only the information you choose to reveal
-* **Selective Disclosure**: Hide sensitive data while proving specific claims
-* **Example Use Case**: Prove you're over 18 without revealing your exact age or birthdate
-* **Format**: Based on JWT with privacy-preserving extensions
-
-#### **JSON-LD Verifiable Credentials**
-
-* **Semantic Web Standard**: W3C compliant verifiable credentials
-* **Rich Data Relationships**: Complex, interconnected credential data
-* **Global Vocabularies**: Standardized data meanings across systems
-
-_All verification methods below work with both credential formats._
-
-
--->
+{% hint style="info" %}
+If scan fails, switch to upload. It handles QR codes that are harder to scan.
+{% endhint %}
