@@ -129,10 +129,13 @@ Guide users through verification issues with actionable feedback.
 - **Invalid QR Detection**: Clear messaging when QR codes contain malformed or unreadable data
 - **Expired Credential Alerts**: Informative notices when credentials have passed validity dates
 - **Decoding Failure Guidance**: Step-by-step instructions for resolving upload or scanning issues
+- **API v2 Diagnostic Information**: The redesigned /vc-verification and /vp-result/{txnId} endpoints now return diagnostic details beyond simple pass/fail status, including specific failure reasons (expiry, revocation, signature issues, policy mismatches). This enables applications to provide targeted, actionable error guidance to users with precise next steps, significantly reducing the need for custom error handling logic on the integrator side
 
 ## Integrations & SDK
 
-[Integration Guide](../docs/inji-verify/technical-overview/integration-guides/openid4vp-vp-verification-integration-guide.md)
+
+Also read:
+- [Integration Guide](../docs/inji-verify/technical-overview/integration-guides/openid4vp-vp-verification-integration-guide.md)
 
 ### Modular SDK Components
 
@@ -166,6 +169,18 @@ Robust server-side verification with persistent data storage.
 ### API Documentation
 
 - [Inji Verify APIs](https://mosip.stoplight.io/docs/inji-verify/63da8fc2ca609-open-id-4-vp-verifier-api-inji-verify)
+
+### API v2 Enhancements for Seamless Integration (Came with 0.17.0 Release)
+
+Inji Verify's redesigned v2 endpoints introduce structured, detailed verification responses that significantly simplify integration for verifier applications.
+
+- **Structured Response Design**: The `/vc-verification` and `/vp-result/{txnId}` endpoints deliver comprehensive verification details beyond simple success/failure status, enabling relying parties to understand outcomes and determine appropriate next steps
+- **Flexible Request Parameters**: Configure verification checks based on your application's specific requirements, adapting credential validation to match your business logic without custom processing
+- **Reduced API Calls**: Richer responses in single requests eliminate the need for follow-up API calls to gather additional verification context, streamlining integration workflows
+- **Simplified Custom Processing**: Detailed diagnostic information (per-credential status, specific failure reasons, actionable outcomes) is returned natively, reducing custom post-processing logic on the integrator side
+- **Faster Developer Onboarding**: Clear, predictable API contracts enable teams to build reliable verification workflows with reduced complexity and faster time-to-integration
+
+These enhancements position Inji Verify as a developer-friendly verification platform where integration complexity is minimized and reliability is maximized.
 
 ## Ecosystem Compatibility
 

@@ -1,5 +1,7 @@
 # Version 0.17.0
 
+Coming Soon!
+
 **Release Name**: Inji Verify v0.17.0
 
 **Support**: Developer Release
@@ -12,10 +14,14 @@ We are excited to announce the release of **Inji Verify v0.17.0.** This version 
 
 ### **New Features**
 
-* **API Redesign**:
-  * We have redesigned the Inji Verify **/vc-verification** endpoint so that it provides more than just the final status (SUCCESS / INVALID / EXPIRED / REVOKED). The response now includes additional details that allow the relying party application to determine the next steps.
-  * Similarly, the **/vp-result/{txnId}** endpoint is updated to return richer information for each credential, rather than only the final status, enabling the relying party to make informed decisions.
-* **Claim 169 QR Code Verification**: Standardised Compact Credential Encoding: Inji Verify now supports verification of Claim 169-encoded QR credentials—an [IANA-registered MOSIP standard (1.1.0)](https://docs.mosip.io/1.2.0/readme/standards-and-specifications/mosip-standards/169-qr-code-specification-1) for compact, cryptographically-signed identity QR codes. This standardised encoding enables efficient credential delivery and verification across diverse deployment scenarios. What This Enables:
+* [**API Redesign**](../../overview/features/README.md#api-v2-enhancements-for-seamless-integration-came-with-0170-release):
+  * We have redesigned the Inji Verify **/vc-verification** endpoint to deliver structured, detailed verification responses with flexible request parameters. Instead of just the final status (SUCCESS / INVALID / EXPIRED / REVOKED), the response now includes comprehensive diagnostic information and configurable verification checks. This enables relying party applications to make informed decisions about next steps with reduced custom processing.
+  * Similarly, the **/vp-result/{txnId}** endpoint is enhanced to return richer, granular information for each credential, rather than only the final status. With these detailed insights, integrators can build faster, more reliable workflows with fewer API calls, significantly simplifying integration across diverse verifier applications.
+
+* [**Claim 169 QR Code Verification**](../../overview/features/README.md#standards-specifications-and-compliance): 
+
+ Compact Credential Encoding: Inji Verify now supports verification of Claim 169-encoded QR credentials—an [IANA-registered MOSIP standard (1.1.0)](https://docs.mosip.io/1.2.0/readme/standards-and-specifications/mosip-standards/169-qr-code-specification-1) for compact, cryptographically-signed identity QR codes. This standardized encoding enables efficient credential delivery and verification across diverse deployment scenarios. What This Enables:
+
   * **QR Code Verification**: Scan or upload Claim 169 QR codes through camera scanning (versions 1–v27) or document upload (versions 1–v32).
   * **CBOR Decoding & Signature Validation**: Automatically decode CBOR-encoded QR payloads and validate Ed25519 cryptographic signatures to authenticate credential authenticity.
   * **Selective Attribute Verification**: Handle credentials containing multiple QR codes, each encoding different identity attributes (demographic data, biometrics) for granular verification workflows.
