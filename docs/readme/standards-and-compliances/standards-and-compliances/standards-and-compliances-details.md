@@ -1,4 +1,4 @@
-# Standards, Specifications and Specifications
+# Standards and Compliances Details
 
 #### W3C Verifiable Credentials Data Model
 
