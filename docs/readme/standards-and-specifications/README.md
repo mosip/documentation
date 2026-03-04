@@ -5,26 +5,92 @@ icon: nfc
 
 # Standards and Specifications
 
+
+
+<table data-header-hidden><thead><tr><th valign="top"></th><th width="135.41015625" valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Standard</td><td valign="top">Version</td><td valign="top">Certify</td><td valign="top">Mobile</td><td valign="top">Web</td><td valign="top">Verify</td><td valign="top">Primary RFC/Link</td></tr><tr><td valign="top">W3C VC Data Model</td><td valign="top">1.1</td><td valign="top"><a href="../../inji-certify/technical-overview/standards-specifications-and-compliance.md#w3c-verifiable-credentials-data-model">Use</a></td><td valign="top">Link</td><td valign="top"></td><td valign="top">Link</td><td valign="top">https://www.w3.org/TR/vc-data-model/</td></tr><tr><td valign="top">W3C VC Data Model</td><td valign="top">2.0</td><td valign="top">Link</td><td valign="top">Link</td><td valign="top">🔲</td><td valign="top">Link</td><td valign="top">https://www.w3.org/TR/vc-data-model-2.0/</td></tr><tr><td valign="top">OAuth 2.0</td><td valign="top">RFC 6749</td><td valign="top">Link</td><td valign="top">Link</td><td valign="top">Link</td><td valign="top">-</td><td valign="top">https://tools.ietf.org/html/rfc6749</td></tr><tr><td valign="top">OpenID Connect</td><td valign="top">1.0</td><td valign="top">Link -  (via eSignet)</td><td valign="top">Link</td><td valign="top">Link</td><td valign="top">-</td><td valign="top">https://openid.net/connect/</td></tr><tr><td valign="top">OpenID4VCI</td><td valign="top">Draft 13</td><td valign="top">Link - Issuer</td><td valign="top">Link - Client</td><td valign="top">Link Client</td><td valign="top">-</td><td valign="top">https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-13.html</td></tr><tr><td valign="top">OpenID4VP</td><td valign="top">Draft 23</td><td valign="top">-</td><td valign="top">Link - Client</td><td valign="top">Link - Client</td><td valign="top">Link - Server</td><td valign="top">https://openid.net/specs/openid-4-verifiable-presentations-1_0-23.html</td></tr><tr><td valign="top">OpenID4VP-BLE</td><td valign="top">Draft 23 Ext</td><td valign="top">-</td><td valign="top">Link - (Offline)</td><td valign="top">-</td><td valign="top">🔲 Server</td><td valign="top">https://github.com/openid/OpenID4VP</td></tr><tr><td valign="top">W3C DIDs</td><td valign="top">1.0</td><td valign="top">Link</td><td valign="top">Link</td><td valign="top">Link</td><td valign="top">Link</td><td valign="top">https://www.w3.org/TR/did-core/</td></tr><tr><td valign="top">JSON-LD</td><td valign="top">1.1</td><td valign="top">Link</td><td valign="top">Link</td><td valign="top">Link</td><td valign="top">Link</td><td valign="top">https://www.w3.org/TR/json-ld11/</td></tr><tr><td valign="top">SD-JWT</td><td valign="top">IETF Draft</td><td valign="top">Link</td><td valign="top">Link</td><td valign="top">Link</td><td valign="top">Link</td><td valign="top">https://datatracker.ietf.org/doc/html/draft-ietf-oauth-selective-disclosure-jwt</td></tr><tr><td valign="top">W3C Bitstring Status List</td><td valign="top">2.0</td><td valign="top">Link</td><td valign="top">Link</td><td valign="top">Link</td><td valign="top">Link</td><td valign="top">https://www.w3.org/TR/vc-bitstring-status-list/</td></tr><tr><td valign="top">CBOR</td><td valign="top">RFC 7049</td><td valign="top">Link</td><td valign="top">Link</td><td valign="top">-</td><td valign="top">Link</td><td valign="top">https://tools.ietf.org/html/rfc7049</td></tr><tr><td valign="top">CWT/COSE</td><td valign="top">RFC 8152/9052</td><td valign="top">🔲</td><td valign="top">Link</td><td valign="top">-</td><td valign="top">Link</td><td valign="top">https://tools.ietf.org/html/rfc8152</td></tr><tr><td valign="top">Claim 169</td><td valign="top">MOSIP v1.2.0</td><td valign="top">🔲 v0.14</td><td valign="top">Link</td><td valign="top">-</td><td valign="top">Link</td><td valign="top">https://docs.mosip.io/1.2.0/readme/standards-and-specifications/mosip-standards/169-qr-code-specification</td></tr><tr><td valign="top">ISO 18013-5</td><td valign="top">mDL</td><td valign="top">🔲</td><td valign="top">Link</td><td valign="top">🔲</td><td valign="top">🔲</td><td valign="top">https://www.iso.org/standard/69084.html</td></tr><tr><td valign="top">ISO 18013-7</td><td valign="top">mDoc</td><td valign="top">🔲</td><td valign="top">🔲 Dev</td><td valign="top">🔲</td><td valign="top">🔲 Dev</td><td valign="top">https://www.iso.org/standard/80601.html</td></tr><tr><td valign="top">W3C Data Integrity 2.0</td><td valign="top">WD</td><td valign="top">🔲</td><td valign="top">-</td><td valign="top">🔲</td><td valign="top">-</td><td valign="top">https://www.w3.org/TR/vc-data-integrity/</td></tr><tr><td valign="top">JWT</td><td valign="top">RFC 7519</td><td valign="top">Link</td><td valign="top">Link</td><td valign="top">Link</td><td valign="top">Link</td><td valign="top">https://tools.ietf.org/html/rfc7519</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Crude Content
+
+
+
+## Standards and Specifications
+
 > **Building on open standards isn’t just about technology—it’s about creating a seamless, secure, and globally trusted way for people to own, share, and verify their credentials effortlessly, no matter where they are.**
 
 Inji is built on open standards to ensure **interoperability, security, and trust** in verifiable credentials. It adheres to globally recognized frameworks, making it **technically compliant with open standards**, allowing for **large-scale adoption across multiple countries**.
 
 This document provides an overview of the **standards followed by Inji** and how they guide the development of features for **credential issuance, storage, sharing, and verification**.
 
-### **1. Why Standards Matter?**
+#### **1. Why Standards Matter?**
 
 By adhering to open standards, Inji ensures that:
 
 * **Credentials are portable and verifiable** across different ecosystems.
 * **Trust frameworks are standardized**, enabling seamless interoperability.
-* **Security and privacy** are maintained through globally accepted cryptographic methods.&#x20;
+* **Security and privacy** are maintained through globally accepted cryptographic methods.
 * It supports **adoption at scale**, allowing organizations, governments, and enterprises to integrate verifiable credentials efficiently.
 
-### **2. Open Standards Followed**
+#### **2. Open Standards Followed**
 
 Inji follows globally recognized specifications to support **trusted digital verifiable credential solutions**:
 
-#### **A. Verifiable Credentials & Data Models**
+**A. Verifiable Credentials & Data Models**
 
 **W3C Verifiable Credentials Data Model 1.1 & 2.0**:
 
@@ -36,17 +102,17 @@ Inji follows globally recognized specifications to support **trusted digital ver
 
 **ISO/IEC 18013-5** – International standard for mobile driving licenses (mDL).
 
-#### **B. Credential Issuance & Presentation**
+**B. Credential Issuance & Presentation**
 
 * **OpenID4VCI** – Standardized process for issuing verifiable credentials.
 * **OpenID4VP & OpenID4VP\_BLE** – Enables verifiable presentations via OpenID protocols, including **offline sharing using BLE**.
 
-#### **C. Secure Claims & Cryptographic Standards**
+**C. Secure Claims & Cryptographic Standards**
 
 * **Claim 169: IANA CBOR Web Token (CWT)** – Compact, privacy-preserving claims format for credentials.
 * **Elliptic Curve Cryptography (ECC), RSA, and EdDSA** – Ensures **strong cryptographic protection** for credential signing.
 
-### **3. Standards Followed in Inji**
+#### **3. Standards Followed in Inji**
 
 **A. W3C Verifiable Credentials (VC)**
 
@@ -75,37 +141,14 @@ Inji follows globally recognized specifications to support **trusted digital ver
 
 * Uses W3C DID standards for self-sovereign identity.
 * Implements DIDComm for secure peer-to-peer communication between holders, verifiers, and issuers.
+
 ***
 
+## README
 
+Standards & Specifications: OpenID for Verifiable Credential Issuance (OpenID4VCI) - Draft 13 🔗 Specification (Draft 13): https://openid.net/specs/openid-4-verifiable-credential-issuance-1\_0-13.html OpenID for Verifiable Presentations (OpenID4VP) - Draft 23 🔗 Specification (Draft 23): https://openid.net/specs/openid-4-verifiable-presentations-1\_0-23.html Selective Disclosure for JWTs (SD-JWT) 🔗 IETF Internet-Draft: https://datatracker.ietf.org/doc/html/draft-ietf-oauth-selective-disclosure-jwt ISO/IEC 18013-5:2021 – Mobile Driving Licence (mDL) 🔗 ISO 18013-5 Overview: https://www.iso.org/standard/69084.html ⚠️ Note: ISO documents are paid standards; only summaries are public. W3C Verifiable Credentials Data Model v1.1 🔗 W3C Recommendation: https://www.w3.org/TR/vc-data-model-1.1/ W3C Verifiable Credentials Data Model v2.0 🔗 W3C Working Draft (latest): https://www.w3.org/TR/vc-data-model-2.0/ Bitstring Status List v2.0 🔗 W3C Specification: https://www.w3.org/TR/vc-bitstring-status-list/ 🔗 Status List vocabulary: https://www.w3.org/ns/credentials/status/ Claim169 - QR Code based Verifiable Credentials 🔗 169 - QR Code Specifications: https://docs.mosip.io/1.2.0/readme/standards-and-specifications/mosip-standards/169-qr-code-specification
 
-# README
-
-Standards & Specifications:
-OpenID for Verifiable Credential Issuance (OpenID4VCI) - Draft 13
-🔗 Specification (Draft 13): https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-13.html
-OpenID for Verifiable Presentations (OpenID4VP) - Draft 23
-🔗 Specification (Draft 23): https://openid.net/specs/openid-4-verifiable-presentations-1_0-23.html
-Selective Disclosure for JWTs (SD-JWT)
-🔗 IETF Internet-Draft: https://datatracker.ietf.org/doc/html/draft-ietf-oauth-selective-disclosure-jwt
-ISO/IEC 18013-5:2021 – Mobile Driving Licence (mDL)
-🔗 ISO 18013-5 Overview: https://www.iso.org/standard/69084.html
-⚠️ Note: ISO documents are paid standards; only summaries are public.
-W3C Verifiable Credentials Data Model v1.1
-🔗 W3C Recommendation: https://www.w3.org/TR/vc-data-model-1.1/
-W3C Verifiable Credentials Data Model v2.0
-🔗 W3C Working Draft (latest): https://www.w3.org/TR/vc-data-model-2.0/
-Bitstring Status List v2.0
-🔗 W3C Specification: https://www.w3.org/TR/vc-bitstring-status-list/
-🔗 Status List vocabulary: https://www.w3.org/ns/credentials/status/
-Claim169 - QR Code based Verifiable Credentials
-🔗 169 - QR Code Specifications: https://docs.mosip.io/1.2.0/readme/standards-and-specifications/mosip-standards/169-qr-code-specification
-
-
-
-
-# INJI WEB
-
+## INJI WEB
 
 | Format                 | Signature Algorithm      | Web Wallet (Login) | Guest Mode (Without Login) | Notes                                               |
 | ---------------------- | ------------------------ | ------------------ | -------------------------- | --------------------------------------------------- |
@@ -132,7 +175,3 @@ Claim169 - QR Code based Verifiable Credentials
 | mDoc / mDL             | ES256K                   | Planned            | Planned                    | Used in various driver license implementations      |
 | mDoc / mDL             | ES256                    | Planned            | Planned                    | Emerging support for high-security mobile documents |
 | mDoc / mDL             | x509 (PKI v3)            | Planned            | Planned                    | x509 certificate chain                              |
-
-
-
-
