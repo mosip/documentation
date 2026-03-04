@@ -8,7 +8,6 @@
   * [Standards and Compliances](readme/standards-and-compliances/README.md)
     * [Standards and Compliances](readme/standards-and-compliances/standards-and-compliances/README.md)
       * [Standards and Compliances Details](readme/standards-and-compliances/standards-and-compliances/standards-and-compliances-details.md)
-    * [Standards and Specifications](readme/standards-and-compliances/standards-and-specifications.md)
   * [Roadmap](readme/roadmap/README.md)
     * [Roadmap 2026 & Beyond](readme/roadmap/roadmap-2026.md)
     * [Roadmap 2025](readme/roadmap/roadmap-2025.md)
