@@ -2,7 +2,7 @@
 
 ## Overview
 
-Inji Verify empowers organizations to validate Verifiable Credentials (VCs) instantly through an intuitive web portal. Whether scanning QR codes, uploading documents, or verifying credentials via secure OpenID4VP flows, verifiers can confirm credential authenticity in seconds—reducing manual verification time and ensuring trust across education, healthcare, government, and enterprise sectors.
+Inji Verify empowers organizations to validate Verifiable Credentials (VCs) instantly through an intuitive web portal. Whether scanning QR codes, uploading documents, or verifying credentials via secure OpenID4VP flows, verifiers can confirm credential authenticity in seconds—reducing manual verification time and ensuring trust across education, healthcare, government, and enterprise sectors..
 
 The platform combines modular SDK components with enterprise-grade security, enabling seamless integration into existing verifier applications while maintaining compliance with W3C VC Data Model standards.
 

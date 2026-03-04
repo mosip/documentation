@@ -10,9 +10,9 @@ Coming Soon!
 
 ### **Overview**
 
-We are excited to announce the release of **Inji Verify v0.17.0.** This version introduces **enhancements in API design for /vc-verification** endpoint and the **/vp-result/{txnId}** endpoint and verification support for **Claim 169** QR code.
+We are excited to announce the release of **Inji Verify v0.17.0.** This version introduces **enhancements in API design for /vc-verification** endpoint and the **/vp-result/{txnId}** endpoint and verification support for **Claim 169** QR code..
 
-### **New Features**
+#### **New Features:**
 
 * [**API Redesign**](../../overview/features/README.md#api-v2-enhancements-for-seamless-integration-came-with-0170-release):
   * We have redesigned the Inji Verify **/vc-verification** endpoint to deliver structured, detailed verification responses with flexible request parameters. Instead of just the final status (SUCCESS / INVALID / EXPIRED / REVOKED), the response now includes comprehensive diagnostic information and configurable verification checks. This enables relying party applications to make informed decisions about next steps with reduced custom processing.
@@ -38,6 +38,8 @@ We are excited to announce the release of **Inji Verify v0.17.0.** This version 
 | ------------ | ------------------------ |
 | Inji Verify  | **v0.17.0**              |
 
+
+
 ### **Projects: Released**
 
 **Inji Verify Repo** → 4 projects (all these projects are of same version) as below:
@@ -50,12 +52,15 @@ iii) SDK - \<Insert Link Here>
 
 iv) API-Test - \<Insert Link Here>
 
-### **Compatible modules**
 
-The following table outlines the tested and certified compatibility of Inji Verify 0.17.0 with other modules.
 
-| Inji Wallet         | [0.20.0](https://github.com/mosip/inji-wallet/releases/tag/v0.20.0) |
+### **Compatible modules:**
+
+The following table outlines the tested and certified compatibility of Inji Verify 0.10.0 with other modules.
+
+| **Module**          | **Version**                                                         |
 | ------------------- | ------------------------------------------------------------------- |
+| Inji Wallet         | [0.20.0](https://github.com/mosip/inji-wallet/releases/tag/v0.20.0) |
 | Inji Web            | [0.14.0](https://github.com/mosip/inji-web/releases/tag/v0.14.1)    |
 | Pixel-Pass library  | [0.7.0](https://github.com/mosip/pixelpass/releases/tag/v0.7.0)     |
 | vc-verifier library | [1.5.0](https://github.com/mosip/vc-verifier/releases/tag/v1.5.0)   |
@@ -63,6 +68,7 @@ The following table outlines the tested and certified compatibility of Inji Veri
 ### **Bug Fixes**
 
 Below is the list of fixes as part of the **0.17.0** release, for the complete list refer [here](https://mosip.atlassian.net/issues/?jql=project%3Dinjiver%20and%20fixVersion%3D0.17.0%20and%20issuetype%3DBug).
+
 
 ### **User Stories**:
 
@@ -81,3 +87,4 @@ Below is a list of some key known issues. For a detailed overview and the comple
 * [API Documentation](https://mosip.stoplight.io/studio/inji-verify)
 * [Collab Guide](https://mosip.atlassian.net/wiki/spaces/PROD/pages/1306984580)
 * QA Report
+
