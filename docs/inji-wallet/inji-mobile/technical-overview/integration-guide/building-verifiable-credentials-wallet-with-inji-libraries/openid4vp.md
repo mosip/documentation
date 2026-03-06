@@ -16,32 +16,35 @@ This library enables consumer applications (mobile wallet) to share users Verifi
 
 ##### Supported features
 
-| Feature                                                    | Supported values                                                                                                                                                                                                                                                                                                                                                   |
-|------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Device flow                                                | cross device flow                                                                                                                                                                                                                                                                                                                                                  |
-| Client id scheme                                           | `pre-registered`, `redirect_uri`, `did`                                                                                                                                                                                                                                                                                                                            |
-| Signed authorization request verification algorithms       | ed25519                                                                                                                                                                                                                                                                                                                                                            |
-| Obtaining authorization request                            | By value, By reference ( via `request_uri` method) <br> _[Note: Authorization request by value is not supported for the did client ID scheme, as it requires a signed request. Instead, a Request URI should be used to fetch the signed authorization request ([reference](https://openid.net/specs/openid-4-verifiable-presentations-1_0-21.html#section-3.2))]_ |
-| Obtaining presentation definition in authorization request | By value, By reference (via `presentation_definition_uri`)                                                                                                                                                                                                                                                                                                         |
-| Authorization Response mode                                | `direct_post` and `direct_post.jwt`                                                                                                                                                                                                                                                                                                                                                      |
-| Authorization Response type                                | `vp_token`                                                                                                                                                                                                                                                                                                                                                         |
-| Supported Verifiable Presentations for Online sharing      | Credential format: `ldp_vc` and `mso_mdoc`                                                                                                                                                                                                                                                                                                                                        |
+| Feature                                                    | Supported values                                                                                                                                                                                                                                                 |
+|------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Device flow                                                | Cross device flow, Same device flow (only `direct_post` and `direct_post.jwt` supported)                                                                                                                                                                         |
+| Client id scheme                                           | `pre-registered`, `redirect_uri`, `did`                                                                                                                                                                                                                          |
+| Signed authorization request verification algorithms       | Ed25519                                                                                                                                                                                                                                                          |
+| Obtaining authorization request                            | - By value : both signed (via `request` param) and unsigned (via URL encoded parameters)<br/> - By reference ( via `request_uri` method)<br/>_Note: The use of signed or unsigned requests, is determined by the `client_id_scheme` associated with the client._ |
+| Obtaining presentation definition in authorization request | By value, By reference (via `presentation_definition_uri`)                                                                                                                                                                                                       |
+| Authorization Response content encryption algorithms       | `A256GCM`                                                                                                                                                                                                                                                        |
+| Authorization Response key encryption algorithms           | `ECDH-ES`                                                                                                                                                                                                                                                        |
+| Credential formats                                         | `ldp_vc`, `mso_mdoc`, `dc+sd-jwt`, `vc+sd-jwt`                                                                                                                                                                                                                   |
+| Authorization Response mode                                | `direct_post`, `direct_post.jwt` (with encrypted & unsigned responses) and `iar-post` (unencrypted response), `iar-post.jwt` (Encrypted and unsigned response)                                                                                                   |
+| Authorization Response type                                | `vp_token`                                                                                                                                                                                                                                                       |
 
 
 ### Android: Kotlin package for OpenID4VP:
 
 #### Repository
 
-* inji-openid4vp kotlin repo - [here](https://github.com/mosip/inji-openid4vp)
+* inji-openid4vp kotlin repo - [here](https://github.com/inji/inji-openid4vp)
 
 #### Installation
 
-Snapshot builds are available [here](https://central.sonatype.com/artifact/io.mosip/inji-openid4vp).
+Snapshot builds are available - [aar](https://central.sonatype.com/artifact/io.inji/inji-openid4vp-aar) and [jar](https://central.sonatype.com/artifact/io.inji/inji-openid4vp-jar)
 
 {% hint style="info" %}
-Note: implementation "io.mosip:inji-openID4VP:0.1.0-SNAPSHOT"
+Note: implementation "io.inji:inji-openID4VP:0.7.0"
 {% endhint %}
 
+<!--
 #### Create instance of OpenID4VP library to invoke its methods
 
 val openID4VP = OpenID4VP("test-OpenID4VP")
@@ -146,19 +149,21 @@ This method will also notify the Verifier about the error by sending it to the r
 
 1. InterruptedIOException is thrown if the connection is timed out when network call is made.
 2. NetworkRequestFailed exception is thrown when there is any other exception occurred when sending the response over http post request.
+-->
 
 ### iOS: Swift package for OpenID4VP:
 
 #### Repository
 
-* inji-openid4vp-ios-swift swift repo -> [here](https://github.com/mosip/inji-openid4vp-ios-swift)
+* inji-openid4vp-ios-swift swift repo -> [here](https://github.com/inji/inji-openid4vp-ios-swift)
 
 #### Installation
 
 1. Clone the repo.
-2. In your swift application go to file > add package dependency > add the https://github.com/mosip/inji-openid4vp-ios-swift in git search bar > add package.
+2. In your swift application go to file > add package dependency > add the https://github.com/inji/inji-openid4vp-ios-swift in git search bar > add package.
 3. Import the library and use.
 
+<!--
 #### Create instance of OpenID4VP library to invoke its methods
 
 let openID4VP = OpenID4VP(traceabilityId: "AXESWSAW123", networkManager: NetworkManager)
@@ -262,7 +267,24 @@ This method will also notify the Verifier about the error by sending it to the r
 
 1. InterruptedIOException is thrown if the connection is timed out when network call is made.
 2. NetworkRequestFailed exception is thrown when there is any other exception occurred when sending the response over http post request.
+-->
 
+### APIs
+
+The OpenID4VP library provides the following APIs for implementing the OpenID4VP flow:
+
+| API Method                      | Use Case                                                                                           |
+|---------------------------------|----------------------------------------------------------------------------------------------------|
+| `authenticateVerifier`          | Validate and decode the verifier's authorization request                                           |
+| `constructUnsignedVPToken`      | Create unsigned VP tokens (V1 API) from verifiable credentials for signing by the wallet          |
+| `constructUnsignedVPTokenV2`    | Create flattened list of unsigned VP tokens (V2 API) with signing metadata for simplified workflow |
+| `constructVPResponse`           | Construct the VP response (V1 API) with signed tokens ready to be sent to the verifier            |
+| `constructVPResponseV2`         | Construct the VP response (V2 API) from simplified signing results                                |
+| `sendVPResponseToVerifier`      | Construct VP response and send it to the verifier via HTTP POST                                   |
+| `constructErrorInfo`            | Construct an authorization error response as per OpenID4VP specification                          |
+| `sendErrorInfoToVerifier`       | Construct and send error response to the verifier via HTTP POST                                   |
+
+> **For detailed API reference including parameters, response structures, examples, and exceptions, refer to the [Kotlin API Reference](https://github.com/inji/inji-openid4vp/tree/master/kotlin#apis) or [Swift API Reference](https://github.com/inji/inji-openid4vp-ios-swift?tab=readme-ov-file#apis) accordingly.**
 #### OpenID4VP library and Inji Wallet integration:
 
 The below diagram shows the interactions between Inji Wallet, Verifier and OpenID4VP library.
@@ -271,7 +293,7 @@ The below diagram shows the interactions between Inji Wallet, Verifier and OpenI
 sequenceDiagram
     participant Verifier as 🔍 Verifier
     participant Wallet as 📱 Wallet
-    participant Library as 📚 Native Library
+    participant Library as 📚 OpenID4VP Library
     
     Note over Verifier: Generate QR Code with<br/>Authorization Request
     Wallet -->> Verifier: Scan QR Code
