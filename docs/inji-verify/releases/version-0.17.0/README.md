@@ -78,4 +78,4 @@ Below is a list of some key known issues. For a detailed overview and the comple
 * [Integration Guide](https://docs.inji.io/inji-verify/technical-overview/integration-guides)
 * [API Documentation](https://mosip.stoplight.io/studio/inji-verify)
 * [Collab Guide](https://mosip.atlassian.net/wiki/spaces/PROD/pages/1306984580)
-* QA Report
+* [QA Report](https://docs.inji.io/inji-verify/releases/version-0.17.0/test-report)
