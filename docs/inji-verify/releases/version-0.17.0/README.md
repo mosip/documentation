@@ -55,7 +55,7 @@ The following table outlines the tested and certified compatibility of Inji Veri
 | ------------------- | ------------------------------------------------------------------- |
 | Inji Wallet         | [0.20.0](https://github.com/mosip/inji-wallet/releases/tag/v0.20.0) |
 | Inji Web            | [0.14.0](https://github.com/mosip/inji-web/releases/tag/v0.14.1)    |
-| Pixel-Pass library  | [0.7.0](https://github.com/mosip/pixelpass/releases/tag/v0.7.0)     |
+| Pixel-Pass library  | [0.8.0](https://github.com/inji/pixelpass/tree/v0.8.0)              |
 | vc-verifier library | [1.5.0](https://github.com/mosip/vc-verifier/releases/tag/v1.5.0)   |
 
 ### **Bug Fixes**
