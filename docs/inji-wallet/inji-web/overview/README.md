@@ -64,6 +64,19 @@ Inji Wallet is designed for interoperability and flexibility by supporting a wid
   Fully compatible with Inji Verify and other OpenID4VP-compliant verifier portals.
 * **Flexible Identity Inputs**\
   Authenticate using UIN, Date of Birth, or Registration Number for credential retrieval.
+* **SVG-Based Credential Rendering**
+  * Introduces support for **SVG templates** via the **Inji VC Renderer** library.
+  * Allows credentials to be rendered in a **visually rich, scalable, and customizable format**.
+  * Enables **dynamic layouts**, inclusion of **logos, photos, and design elements**, while staying aligned with the **W3C VC Data Model 2.0**.
+  * Improves on-screen display and print-ready credential rendering experience.
+*   **Claim-169 QR Code Support** Inji Web supports **Claim-169 QR Codes**, a standardized QR format used to support receiving and using Verifiable Credentials (VCs) that contain **Claim 169–formatted QR code blocks**, issued as **CBOR-based CWT (CBOR Web Tokens)** inside the credential. This ensures secure, compact, and privacy-preserving QR sharing ideally suited for offline or quick verification scenarios.
+
+    The goal of this feature is to allow the wallet to:
+
+    * Download credentials containing embedded Claim 169 QR blocks
+    * Store and render these QR blocks for display
+    * Allow users to present the QR-based identity data when required
+    * Ensure proper validation and security checks (size, format, signature, structure)
 
 ### How It Works
 
@@ -89,8 +102,6 @@ Inji Wallet is designed for interoperability and flexibility by supporting a wid
 
 ### Sneak Peek: Upcoming Features
 
-* W3C VC Data Model 2.0 Support
-* SVG-based Credential Templates
 * Sharing of IETF SD-JWT Selective Disclosure via OpenIDVP
 * Presentation During Issuance
 * Credential Revocation
@@ -101,8 +112,6 @@ Inji Web interacts with:
 
 * [Mimoto APIs](https://mosip.stoplight.io/docs/mimoto/5bf5a1n68g4tq-mimoto) for managing issuer details, facilitating VC download and generating PDF
 * [eSignet APIs](https://mosip.stoplight.io/docs/identity-provider/jlmszj6dlxigw-e-signet) for authentication
-
-***
 
 ### Learn More
 

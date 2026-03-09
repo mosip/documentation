@@ -2,7 +2,7 @@
 
 **Inji Web Wallet** is a browser-based, open-source digital wallet designed for secure **download, verification, storage, and sharing** of Verifiable Credentials (VCs). It supports **OpenID4VCI**, **OpenID4VP**, **IETF** **SD-JWT**, and **W3C VC** standards—no app install required.
 
-## **Multiple Credential Format Support**
+### **Multiple Credential Format Support**
 
 Inji Wallet is designed for interoperability and flexibility by supporting a wide range of credential formats:
 
@@ -19,7 +19,7 @@ Inji Wallet is designed for interoperability and flexibility by supporting a wid
 
 This multi-format support allows Inji Wallet to work seamlessly across different ecosystems, ensuring **compatibility, security, and user privacy**.
 
-## Login with Any Identity Provider (IdP)
+### Login with Any Identity Provider (IdP)
 
 * Supports Google and other OpenID-compliant IdPs
 * Credentials are stored securely in the browser-based wallet after login, enabling access across sessions and devices, depending on the configuration.
@@ -27,12 +27,12 @@ This multi-format support allows Inji Wallet to work seamlessly across different
 * You can view and download the credential as a PDF file locally on your system, or print it out once downloaded.
 * You can reset your passcode if you forget it during login. However, the option to change the passcode after logging in is currently not available.
 
-## Guest Mode (No Login Required)
+### Guest Mode (No Login Required)
 
 * Ideal for privacy-sensitive or public campaigns
 * Credentials are downloaded directly to the local device (not stored in the wallet)
 
-## Credential Download Options
+### Credential Download Options
 
 * **OpenID for VC Issuance**: Interoperable with trusted issuers
 * **Example Issuers**:
@@ -41,7 +41,23 @@ This multi-format support allows Inji Wallet to work seamlessly across different
   * Republic of Veridonia Tax Department - Tax ID
   * AgroVeritas Property & Land Registry - Land Record
 
-## Verifying Credential Authenticity
+### **Claim 169 QR Code Support**
+
+* Supports **standardized QR codes** for initiating credential download and sharing flows.
+* Download credentials containing embedded Claim 169 QR blocks
+* Store and render these QR blocks for display
+* Allow users to present the QR-based identity data when required
+* Ensure proper validation and security checks (size, format, signature, structure)
+
+### **SVG-based Credential Rendering** <a href="#id-4.-svg-based-credential-rendering" id="id-4.-svg-based-credential-rendering"></a>
+
+* Inji Web Wallet now supports **SVG-based credential rendering** for **Data Model 2.0 VCs**.
+* This allows credentials issued under the Data Model 2.0 schema to be displayed as **secure, dynamic SVG visuals** within the wallet.
+* The rendering ensures that displayed information (such as name, ID, issuer, and other attributes) directly corresponds to the **cryptographically verified credential data**.
+* This enhancement improves **readability**, **user trust**, and **consistency** while maintaining alignment with the underlying verifiable data.
+* Support for SVG rendering for other data models may be added in future versions.
+
+### Verifying Credential Authenticity
 
 * Inji Web Wallet uses robust cryptography to verify that the VC is:
   * Digitally signed by a trusted issuer

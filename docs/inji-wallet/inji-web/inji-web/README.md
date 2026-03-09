@@ -4,6 +4,12 @@ icon: rocket-launch
 
 # Releases
 
+## Version: 0.16.0
+
+* Name: 0.16.0
+* Date: Coming Soon !
+* [Release Notes](./#version-0.16.0)
+
 ## Version: 0.15.0
 
 * Name: 0.15.0

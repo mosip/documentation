@@ -100,7 +100,7 @@ For verifier interactions:
 
 No additional data leaves the device beyond what is encoded in the QR.
 
-**Step 4: Multi-QR Credential Support**
+#### **Multi-QR Credential Support**
 
 A single credential may contain multiple QR codes, for example:
 
@@ -108,7 +108,7 @@ A single credential may contain multiple QR codes, for example:
 * Address Verification
 * Identity Proof
 
-The wallet lists each QR separately and allows the user to select which one to present.
+**Note:** While **Inji Certify** supports the design for issuing **multiple QR codes**, **Inji Wallet currently does not support multiple QR codes for Claim-169 credentials.**
 
 <div data-with-frame="true"><figure><img src="../../../../.gitbook/assets/Claim 169 - Wallet (1).png" alt=""><figcaption></figcaption></figure></div>
 
