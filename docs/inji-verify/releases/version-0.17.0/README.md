@@ -4,7 +4,7 @@
 
 **Support**: Developer Release
 
-**Release Date**: Coming Soon!
+**Release Date**: 4th March, 2026
 
 ### **Overview**
 
@@ -12,12 +12,12 @@ We are excited to announce the release of **Inji Verify v0.17.0.** This version 
 
 ### **New Features**
 
-#### [**API Redesign**](../../overview/features/README.md#api-v2-enhancements-for-seamless-integration)
+#### [**API Redesign**](https://docs.inji.io/inji-verify/overview/features#api-v2-enhancements-for-seamless-integration-came-with-0.17.0-release)
 
 * We have redesigned the Inji Verify **/vc-verification** endpoint to deliver structured, detailed verification responses with flexible request parameters. Instead of just the final status (SUCCESS / INVALID / EXPIRED / REVOKED), the response now includes comprehensive diagnostic information and configurable verification checks. This enables relying party applications to make informed decisions about next steps with reduced custom processing.
 * Similarly, the **/vp-result/{txnId}** endpoint is enhanced to return richer, granular information for each credential, rather than only the final status. With these detailed insights, integrators can build faster, more reliable workflows with fewer API calls, significantly simplifying integration across diverse verifier applications.
 
-#### [**Claim 169 QR Code Verification**](../../overview/features/README.md#standards-specifications-and-compliance)
+#### [**Claim 169 QR Code Verification**](../../overview/features/#standards-specifications-and-compliance)
 
 Compact Credential Encoding: Inji Verify now supports verification of Claim 169-encoded QR credentials—an [IANA-registered MOSIP standard (1.1.0)](https://docs.mosip.io/1.2.0/readme/standards-and-specifications/mosip-standards/169-qr-code-specification-1) for compact, cryptographically-signed identity QR codes. This standardized encoding enables efficient credential delivery and verification across diverse deployment scenarios. What This Enables:
 
@@ -33,23 +33,21 @@ Compact Credential Encoding: Inji Verify now supports verification of Claim 169-
 
 ### **Repositories: Released/Dependent**
 
-| Repositories | Tags: Released/Dependent |
-| ------------ | ------------------------ |
-| Inji Verify  | **v0.17.0**              |
+| Repositories | Tags: Released/Dependent                                        |
+| ------------ | --------------------------------------------------------------- |
+| Inji Verify  | [**v0.17.0**](https://github.com/inji/inji-verify/tree/v0.17.0) |
 
 ### **Projects: Released**
 
-**Inji Verify Repo** → 4 projects (all these projects are of same version) as below:
+**Inji Verify Repo** → 3 projects as below:
 
-i) inji-verify-service - \<Insert Link Here>
+i) [inji-verify-service](https://github.com/inji/vc-verifier/tree/v1.7.0)
 
-ii) inji-verify-ui (ref implementation) - \<Insert Link Here>
+ii) [Pixelpass](https://github.com/inji/pixelpass/tree/v0.8.0)
 
-iii) SDK - \<Insert Link Here>
+iii) [API-Test](https://github.com/mosip/mosip-functional-tests/tree/v1.4.1)
 
-iv) API-Test - \<Insert Link Here>
-
-### **Compatible modules:**
+### **Compatible modules**
 
 The following table outlines the tested and certified compatibility of Inji Verify 0.10.0 with other modules.
 
@@ -64,7 +62,7 @@ The following table outlines the tested and certified compatibility of Inji Veri
 
 Below is the list of fixes as part of the **0.17.0** release, for the complete list refer [here](https://mosip.atlassian.net/issues/?jql=project%3Dinjiver%20and%20fixVersion%3D0.17.0%20and%20issuetype%3DBug).
 
-### **User Stories**:
+### **User Stories**
 
 <table><thead><tr><th width="175.33984375">Jira ID</th><th>Description</th></tr></thead><tbody><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1366">INJIVER-1366</a></td><td>As a Verifier, I should be able to Upload and Scan to Verify the VCs with claims mapped to Claim 169 (for single QR code)</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/INJIVER-1490">INJIVER-1490</a></td><td>The /vc-verification and /vp-result/{txnId} endpoints have been enhanced to return detailed verification information in addition to the final status. These richer responses enable relying party applications to understand verification outcomes better and make informed decisions on next steps.</td></tr></tbody></table>
 
