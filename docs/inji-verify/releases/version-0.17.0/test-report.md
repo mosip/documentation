@@ -57,11 +57,11 @@ Used the below browser versions in testing INJI Verify
 
 Table: Test Environment
 
-<table><thead><tr><th valign="top">Images (qa-inji1 env)</th></tr></thead><tbody><tr><td valign="top">mosipqa/inji-verify-service:0.17.x</td></tr><tr><td valign="top">mosipqa/inji-verify-ui:0.17.x</td></tr><tr><td valign="top">mosipqa/inji-certify-with-plugins:0.13.x</td></tr><tr><td valign="top">mosipqa/inji-web:develop</td></tr></tbody></table>
+<table><thead><tr><th valign="top">Images (qa-inji1 env)</th></tr></thead><tbody><tr><td valign="top">injistackqa/inji-verify-service:0.17.x</td></tr><tr><td valign="top">injistackqa/inji-verify-ui:0.17.x</td></tr><tr><td valign="top">injistackqa/inji-certify-with-plugins:0.13.x</td></tr><tr><td valign="top">injistackqa/inji-web:develop</td></tr></tbody></table>
 
 &#x20;
 
-<table><thead><tr><th valign="top">Images (released env)</th></tr></thead><tbody><tr><td valign="top">mosipid/mimoto:0.20.0</td></tr><tr><td valign="top">mosipid/inji-verify-service:0.15.2</td></tr><tr><td valign="top">mosipid/inji-verify-ui:0.15.2</td></tr><tr><td valign="top">mosipid/inji-certify-with-plugins:0.13.1</td></tr><tr><td valign="top">mosipid/authentication-service:1.2.1.0</td></tr><tr><td valign="top">mosipid/authentication-internal-service:1.2.1.0</td></tr><tr><td valign="top">mosipid/authentication-otp-service:1.2.1.0</td></tr></tbody></table>
+<table><thead><tr><th valign="top">Images (released env)</th></tr></thead><tbody><tr><td valign="top">injistackqa/mimoto:0.20.0</td></tr><tr><td valign="top">injistackqa/inji-verify-service:0.15.2</td></tr><tr><td valign="top">injistackqa/inji-verify-ui:0.15.2</td></tr><tr><td valign="top">injistackqa/inji-certify-with-plugins:0.13.1</td></tr><tr><td valign="top">injistackqa/authentication-service:1.2.1.0</td></tr><tr><td valign="top">injistackqa/authentication-internal-service:1.2.1.0</td></tr><tr><td valign="top">injistackqa/authentication-otp-service:1.2.1.0</td></tr></tbody></table>
 
 ## Test Execution Report <a href="#jntklky0i18z" id="jntklky0i18z"></a>
 
