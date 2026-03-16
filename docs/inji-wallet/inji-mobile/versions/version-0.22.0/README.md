@@ -4,7 +4,7 @@
 
 **Release Type:** Developer
 
-**Release Date:** Coming Soon!
+**Release Date:** 6th March 2026
 
 {% hint style="info" icon="exclamation" %}
 **⚠️ Compatibility Notice**
@@ -111,23 +111,23 @@ Enhancements include:
 
 ## Repositories Released
 
-| Module                        | Version |
-| ----------------------------- | ------- |
-| **inji-wallet**               | 0.22.0  |
-| **inji-openid4vp**            | 0.7.0   |
-| **inji-openid4vp-ios-swift**  | 0.7.0   |
-| **inji-vci-client**           | 0.7.0   |
-| **inji-vci-client-ios-swift** | 0.7.0   |
+| Module                        | Version                                                                |
+| ----------------------------- | ---------------------------------------------------------------------- |
+| **inji-wallet**               | [0.22.0](https://github.com/inji/inji-wallet/tree/v0.22.0)             |
+| **inji-openid4vp**            | [0.7.0](https://github.com/inji/inji-openid4vp/tree/v0.7.0)            |
+| **inji-openid4vp-ios-swift**  | [0.7.0](https://github.com/inji/inji-openid4vp-ios-swift/tree/v0.7.0)  |
+| **inji-vci-client**           | [0.7.0](https://github.com/inji/inji-vci-client/tree/v0.7.0)           |
+| **inji-vci-client-ios-swift** | [0.7.0](https://github.com/inji/inji-vci-client-ios-swift/tree/v0.7.0) |
 
 ## Compatible Modules
 
-| Module       | Version |
-| ------------ | ------- |
-| Mimoto       | 0.20.0  |
-| Inji Certify | 0.13.0  |
-| Inji Verify  | 0.17.0  |
-| eSignet      | 1.6.2   |
-| inji-config  | 0.13.0  |
+| Module       | Version                                                     |
+| ------------ | ----------------------------------------------------------- |
+| Mimoto       | [0.21.0](https://github.com/inji/mimoto/tree/v0.21.0)       |
+| Inji Certify | [0.13.1](https://github.com/inji/inji-certify/tree/v0.13.1) |
+| Inji Verify  | [0.17.0](https://github.com/inji/inji-verify/tree/v0.17.0)  |
+| eSignet      | [1.6.2](https://github.com/mosip/esignet/tree/v1.6.2)       |
+| inji-config  | [0.13.0](https://github.com/mosip/inji-config/tree/v0.13.0) |
 
 ## Known Issues
 
@@ -143,9 +143,9 @@ Below is the complete list of bug fixes included in the [**0.22.0** ](https://mo
 
 ## Release Documentation
 
-* [Presentation During Issuance](../overview/features/presentation-during-issuance-pdi.md)
-* [Claim 169 QR Code Support](../overview/features/claim-169-qr-code-support.md)
-* QA Report
+* [Presentation During Issuance](../../overview/features/presentation-during-issuance-pdi.md)
+* [Claim 169 QR Code Support](../../overview/features/claim-169-qr-code-support.md)
+* [QA Report](test-report.md)
 
 ## Additional Resources
 

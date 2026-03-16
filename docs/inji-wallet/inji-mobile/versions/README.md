@@ -7,8 +7,8 @@ icon: rocket-launch
 ## Version: 0.22.0
 
 * Name: Inji Mobile Wallet 0.22.0
-* Date: Coming Soon
-* [Release Notes](./#version-0.22.0)
+* Date: 6th March 2026
+* [Release Notes](version-0.22.0/)
 
 ## Version: 0.21.0
 
