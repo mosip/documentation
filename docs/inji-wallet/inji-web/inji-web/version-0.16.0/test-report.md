@@ -73,11 +73,9 @@ Table: Test Execution Summary
 
 <table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Platform</td><td valign="top">Total</td><td valign="top">Pass</td><td valign="top">Fail</td><td valign="top">Skip</td></tr><tr><td valign="top">INJI WEB</td><td valign="top">1125</td><td valign="top">1036</td><td valign="top">89</td><td valign="top">0</td></tr><tr><td valign="top">                              Test Rate: 100% With Pass Rate: 93%</td><td valign="top"></td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
 
-### &#x20; <a href="#id-2tpt1w6qxcnx" id="id-2tpt1w6qxcnx"></a>
 
-\[Image]
 
-&#x20;
+<figure><img src="../../../../.gitbook/assets/iww-0160-tr-1.png" alt=""><figcaption></figcaption></figure>
 
 ### Automation INJI Web UI <a href="#wg3avooz4hhp" id="wg3avooz4hhp"></a>
 
@@ -87,7 +85,7 @@ Table: UI Automation
 
 &#x20;
 
-\[Image]
+<figure><img src="../../../../.gitbook/assets/iww-0160-tr-2.png" alt=""><figcaption></figcaption></figure>
 
 &#x20;
 
@@ -99,7 +97,7 @@ Table: API Automation Result
 
 &#x20;
 
-\[Image]
+<figure><img src="../../../../.gitbook/assets/iww-0160-tr-3.png" alt=""><figcaption></figcaption></figure>
 
 ## Defect Metrics <a href="#vvom4mmfexvq" id="vvom4mmfexvq"></a>
 
@@ -121,8 +119,6 @@ Table: Defect Metrics for the known issues
 
 <table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Blocker</td><td valign="top">Critical</td><td valign="top">Major</td><td valign="top">Minor</td><td valign="top">Total</td></tr><tr><td valign="top">0</td><td valign="top">0</td><td valign="top">54</td><td valign="top">28</td><td valign="top">82</td></tr></tbody></table>
 
-
-
 ## Conclusion <a href="#jynb8ufha8k" id="jynb8ufha8k"></a>
 
 This section summarizes the key findings of test execution. It also provides a final QA recommendation on the build's readiness for release. The functional verification for Inji-web version 0.16.0 has been successfully completed. The testing cycle achieved a 100% execution rate with a 92% pass rate across a total of 1125 test cases. Additionally, API automation achieved a 100% pass rate.
@@ -138,13 +134,9 @@ The build has successfully met the defined exit criteria and is recommended for 
 * Documentation Sign-off: All test artifacts and reports are finalized.
 * Test Environment Stability: The test environment remained stable throughout the execution cycle.
 
-&#x20;
-
 Table: Report is signed off details
 
 <table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Name</td><td valign="top">Functional Role</td><td valign="top">Responsibilities</td></tr><tr><td valign="top">Chaitanya K</td><td valign="top">QA Manager</td><td valign="top"> </td></tr><tr><td valign="top">Ragini Krishna</td><td valign="top">Senior QA Manager</td><td valign="top"> </td></tr></tbody></table>
-
-&#x20;
 
 ## Appendix <a href="#yn78otslfu9" id="yn78otslfu9"></a>
 
@@ -160,8 +152,9 @@ This includes additional reference information for the report. It contains a his
 
 It outlines the strategy used to ensure a comprehensive evaluation.
 
-
-
 <table data-header-hidden><thead><tr><th></th><th></th><th></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td>Version</td><td>Author</td><td>Date</td><td valign="top">Review</td><td valign="top">Affected Sections</td></tr><tr><td>V1.0</td><td>Mrudula</td><td>7/3/2026</td><td valign="top"><ol start="1"><li>Chaitanya Kesiraju</li><li>Ragini Krishna</li></ol></td><td valign="top">New Document</td></tr></tbody></table>
 
 &#x20;
+
+Github link for the xls file is [**here**](https://github.com/mosip/test-management/tree/master/inji-web/inji%20web%200.16.0).
+
