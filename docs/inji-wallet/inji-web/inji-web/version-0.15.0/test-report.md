@@ -75,7 +75,7 @@ The UI will render in all the above languages but the PDF file after download wi
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 ## Test execution statistics&#x20;
 
