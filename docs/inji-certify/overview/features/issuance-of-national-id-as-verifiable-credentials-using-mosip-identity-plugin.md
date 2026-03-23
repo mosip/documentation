@@ -14,19 +14,19 @@ Instead of relying on a fixed IDA-driven issuance flow, Certify now leverages a 
 
 The introduction of the IDA Data Provider Plugin and enhanced issuance flow brings several key benefits:
 
-* **Flexible Data Integration:**\
+* **Flexible Data Integration:**
   Allows Certify to fetch raw KYC data directly from IDA APIs, enabling custom credential structures instead of relying on predefined formats.
-* **Expanded Cryptographic Support:**\
+* **Expanded Cryptographic Support:**
   Supports multiple key types such as RSA, EC R1, ECK1, and ED, overcoming earlier limitations where only RSA-based signing was supported.
-* **Improved Customization:**\
+* **Improved Customization:**
   Enables dynamic mapping of claims using templates, including support for custom claims and localized attributes (e.g., multi-language names and addresses).
-* **Decoupled Architecture:**\
+* **Decoupled Architecture:**
   Separates data fetching from credential issuance using plugin models, making the system more modular and extensible.
-* **Enhanced Trust & Verification:**\
+* **Enhanced Trust & Verification:**
   Supports country-specific signing keys with public key verification via DID URLs, allowing issuers to validate credential authenticity independently.
-* **Operational Resilience:**\
+* **Operational Resilience:**
   Automatically falls back to internal key manager certificates if external signing certificates expire, ensuring uninterrupted issuance.
-* **Optimized QR Code Generation:**\
+* **Optimized QR Code Generation:**
   Introduces image compression via the kernel biometric API to efficiently embed photos in QR codes without performance issues.
 
 ### How It Works – Step-by-Step (Certify Perspective)
@@ -35,7 +35,7 @@ The following sequence describes how Inji Certify handles UIN-based credential i
 
 #### 1. Certify Initiates Data Fetch via Plugin
 
-Certify invokes the **IDA Data Provider Plugin**, which implements the DataProviderPlugin interface.\
+Certify invokes the **IDA Data Provider Plugin**, which implements the DataProviderPlugin interface.
 The plugin uses the fetchData method to construct a request containing:
 
 * Individual ID (UIN/VID)
@@ -105,16 +105,16 @@ The credential is then returned to the requesting wallet or system.
 
 ### Security Considerations
 
-**Secure Data Handling:**\
+**Secure Data Handling:**
 Sensitive identifiers (UIN/VID) can be encrypted based on configuration, though compatibility with e-Signet must be ensured.
 
-**OIDC-Based Authentication:**\
+**OIDC-Based Authentication:**
 All KYC data requests are secured via access tokens obtained through OIDC flows.
 
-**Key Transparency & Trust:**\
+**Key Transparency & Trust:**
 Public keys published via DID URLs allow independent verification of credential signatures.
 
-**Certificate Lifecycle Management:**\
+**Certificate Lifecycle Management:**
 Automatic fallback ensures continuity, but proper monitoring and renewal of certificates is critical.
 
 ### Limitations

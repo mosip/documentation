@@ -12,7 +12,6 @@ In this flow, the issuer enforces a verification step during issuance, where the
 
 This approach ensures that issuance is conditional, secure, and user‑consented, while avoiding reliance on external or offline verification mechanisms.
 
-***
 
 ### Why This Feature Matters
 
@@ -24,13 +23,13 @@ Presentation During Issuance brings several advantages:
 * **Standards Alignment:** Leverages OpenID4VCI and OpenID4VP, improving interoperability across issuers and wallets.
 * **Privacy by Design:** Credentials are shared only for verification purposes and are not persisted beyond the issuance transaction.
 
-***
 
 ### How It Works – Step‑by‑Step (Certify Perspective)
 
 The following sequence describes how Inji Certify handles Driving License issuance using the Presentation During Issuance feature.
 
-***
+<!-- Put this as notes that 'Driving License' has bben taken for an example. -->
+
 
 #### 1. Certify Receives Issuance Request
 
@@ -82,9 +81,6 @@ The wallet securely stores the issued Driving License VC for the resident’s us
 #### 6. Issuance Completion
 
 The resident can now view and use the **Driving License VC** from their wallet. If verification fails at any stage, the issuance is terminated and an appropriate error is returned.
-
-
-
 
 
 \[Image]

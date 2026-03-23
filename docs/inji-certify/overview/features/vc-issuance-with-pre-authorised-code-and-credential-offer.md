@@ -70,9 +70,7 @@ Certify receives a credential request from the wallet at the Credential Endpoint
 The wallet then securely stores the credential for the holder’s use.
 
 
-
 \[Image]
-
 
 
 ### Security Considerations
@@ -89,7 +87,7 @@ The wallet then securely stores the credential for the holder’s use.
 * Pre-Authorized Code Flow **without PIN** – direct token exchange using pre-authorized code
 * Pre-Authorized Code Flow **with PIN** – token exchange requires both a pre-authorized code and a user transaction code
 
-Please refer to this link \<Link to GitHub docs link > to know more about the technical design and configuration
+Please refer to this [link](Link to GitHub docs link) to know more about the technical design and configuration.
 
 
 
