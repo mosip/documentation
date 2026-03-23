@@ -111,11 +111,7 @@ The resident can:
 
 Refer to the architecture and sequence diagrams for detailed flow of QR data preparation, encoding, signing, and embedding within the VC.
 
-
-
-\[Image]
-
-
+<figure><img src="../../../.gitbook/assets/ic-0140-issuance-of-verifiable-credentials-with-qr-code.png" alt=""><figcaption></figcaption></figure>
 
 ### **Security Considerations**
 
@@ -173,12 +169,3 @@ Issuers can define:
 * Offline mapping resolution is dependent on external mechanisms
 * QR payload size constraints may limit data inclusion
 * VC format supported is only JSON-LD
-
-
-
-
-
-
-
-
-
