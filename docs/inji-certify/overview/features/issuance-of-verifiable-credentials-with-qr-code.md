@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Issuance of Verifiable Credentials with QR code
 
 ### **Overview**

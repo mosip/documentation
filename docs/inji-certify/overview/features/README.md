@@ -43,12 +43,7 @@ Inji Certify provides issuers with the capability to generate verifiable credent
 
 * **JSON-LD Credentials** — Standards-based credentials using Linked Data Proofs, widely adopted in decentralized identity ecosystems for interoperability and verifiability
 * **Signed JWT (JWS)** — Compact, JSON-based credentials that enable efficient transmission and verification across web and enterprise systems
-* **SD-JWT (Selective Disclosure JWT)** — Privacy-preserving credentials that allow holders to selectively disclose attributes while keeping the rest private
-
-**Note:** In the 0.12.0 release we have included support for SD-JWT as a draft release.
-
-**Upcoming formats (Coming Soon):**
-
+* **SD-JWT (Selective Disclosure JWT)** — Privacy-preserving credentials that allow holders to selectively disclose attributes while keeping the rest private, **Note:** With the Inji Certify 0.13.0 release we have included full Insupport for SD-JWT.
 * **mDoc (ISO 18013-5/7)** — A mobile document format for secure, offline-verifiable digital documents
 * **mDL (ISO 18013-5/7)** — A mobile driver's license format, enabling secure and convenient digital driver's license presentation on mobile devices
 

@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Presentation During Issuance
 
 ### Overview

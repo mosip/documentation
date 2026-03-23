@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # VC Issuance with Pre Authorised Code and Credential Offer
 
 ### Overview
