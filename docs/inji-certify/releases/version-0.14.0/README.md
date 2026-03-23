@@ -14,20 +14,23 @@ Major updates include support for presentation during issuance, mDoc/mDL credent
 
 #### Major Highlights / Features
 
-* **Presentation during Issuance**\
+* **Presentation during Issuance**
   Introduced a new issuance mode enabling residents to present an existing Verifiable Credential to obtain another credential.
-* **Pre-Authorized Code Flow**\
+* **Pre-Authorized Code Flow**
   Enabled a simplified issuance flow where users can securely download credentials using a pre-authorized and transaction code.
-* **Support for Issuance in mDoc/mDL Format**\
+* **Support for Issuance in mDoc/mDL Format**
   Added support for issuing Verifiable Credentials in standardized mDoc/mDL formats.
-* **Error Message Revamp**\
+* **Error Message Revamp**
   Improved the error handling framework with clearer, more structured, and developer-friendly messages.
-* **MOSIP Identity Plugin Integration**\
+* **MOSIP Identity Plugin Integration**
   Integrated with MOSIP APIs to fetch identity data and generate Verifiable Credentials within Certify.
-*   **Embedding Data in QR Code for VC Issuance**\
-    Enabled Claim 169 compliant data embedding within QR codes for secure credential download and verification.
+* **Embedding Data in QR Code for VC Issuance**
+  Enabled Claim 169 compliant data embedding within QR codes for secure credential download and verification.
 
+<!-- Instead of this line we can add separate link.
     **Learn more about all features:** _Click here to explore the detailed feature documentation._
+
+-->
 
 #### User Stories Released
 
@@ -93,7 +96,7 @@ Below is the list of known issues related to the release v0.13.0. To access all 
 
 ### Documentation
 
-* Feature Documentation
-* Local Setup
-* API Documentation
-* Test Report
+* [Feature Documentation]
+* [Local Setup]
+* [API Documentation]
+* [Test Report]

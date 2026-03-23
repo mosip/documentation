@@ -19,7 +19,7 @@ QR Code Embedded VC brings several advantages:
 * **Privacy by Design**: Enables selective disclosure, ensuring only required attributes are shared.
 * **Improved User Experience**: Simplifies verification through QR scanning without full credential sharing.
 * **Offline Verification Support**: QR codes enable verification even in low-connectivity environments.
-* **Standards Compliance**: Aligns with Claim 169, CBOR, and CWT specifications.
+* **Standards Compliance**: Aligns with [Claim 169](https://docs.mosip.io/1.2.0/readme/standards-and-specifications/mosip-standards/169-qr-code-specification-1), CBOR, and CWT specifications.
 * **Flexible Configuration**: Issuers can define multiple QR codes with different attribute sets.
 
 ### **How It Works – Step-by-Step (Certify Perspective)**
