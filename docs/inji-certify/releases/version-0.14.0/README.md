@@ -16,7 +16,7 @@ Major updates include support for presentation during issuance, mDoc/mDL credent
 
 * [**Presentation during Issuance**](https://docs.inji.io/inji-certify/overview/features#id-13.-presentation-during-issuance)**:** Introduced a new issuance mode enabling residents to present an existing Verifiable Credential to obtain another credential.
 * [**Pre-Authorized Code Flow**](https://docs.inji.io/inji-certify/overview/features#id-15.-vc-issuance-with-pre-authorised-code-pre-auth-code-flow)**:** Enabled a simplified issuance flow where users can securely download credentials using a pre-authorized and transaction code.
-* **Support for Issuance in mDoc/mDL Format:** Added support for issuing Verifiable Credentials in standardized mDoc/mDL formats.
+* [**Support for Issuance in mDoc/mDL Format**](https://docs.inji.io/inji-certify/overview/features#id-4.-support-for-multiple-credential-formats)**:** Added support for issuing Verifiable Credentials in standardized mDoc/mDL formats.
 * **Error Message Revamp:** Improved the error handling framework with clearer, more structured, and developer-friendly messages.
 * **MOSIP Identity Plugin Integration:** Integrated with MOSIP APIs to fetch identity data and generate Verifiable Credentials within Certify.
 * [**Embedding Data in QR Code for VC Issuance**](https://docs.inji.io/inji-certify/overview/features#id-14.-issuance-of-verifiable-credentials-with-qr-code)**:** Enabled Claim 169 compliant data embedding within QR codes for secure credential download and verification.
