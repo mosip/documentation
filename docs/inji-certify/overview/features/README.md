@@ -75,18 +75,20 @@ These plugins are responsible for generating and signing verifiable credentials.
 
 **Currently supported issuance plugins:**
 
-* **MOSIP Identity Plugin** — Integrates with MOSIP for trusted identity verification
 * **Sunbird Plugin** — Enables seamless integration with Sunbird-based services
 
 ### Data Provider Plugins
 
-These plugins fetch relevant data from external registries or data sources. The retrieved data is returned as a JSON object which Inji Certify then uses to generate and issue the corresponding verifiable credential.
+Data Provider Plugins are responsible for fetching relevant data from external registries or data sources. The retrieved data is returned in JSON format and is used by Inji Certify to construct and issue the corresponding Verifiable Credential (VC).
 
-**Currently supported data provider plugins:**
+The data source for these plugins can be a database, a CSV file, or an external API.
 
-* **Mock IDA Plugin** — Provides a simulated identity verification environment for testing and development
-* **Mock CSV Data Provider Plugin** — Useful for sandbox environments and test data simulation
-* **Postgres Data Provider Plugin** — Connects to Postgres databases to fetch real-time data from registries or external systems
+**Currently supported Data Provider Plugins include:**
+
+* **Mock IDA Plugin** — Provides a simulated identity data and verification environment for testing and development purposes
+* **Mock CSV Data Provider Plugin** — Enables data retrieval from CSV files, primarily for sandbox and test data simulation
+* **PostgreSQL Data Provider Plugin** — Connects to PostgreSQL databases to fetch real-time data from registries or external systems
+* **MOSIP Identity Plugin** — Integrates with MOSIP APIs to retrieve identity data and construct Verifiable Credentials within Inji Certify
 
 For detailed instructions on configuring the Data Provider Plugin, please refer to this [guide](https://github.com/mosip/inji-certify/blob/master/docs/Local-Development.md).
 
