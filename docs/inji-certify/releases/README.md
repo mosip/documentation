@@ -4,6 +4,12 @@ icon: rocket-launch
 
 # Releases
 
+#### **Version: 0.14.0**
+
+* Name: **Release Version**: 0.14.0
+* Date: 25th March, 2026
+* [Release Notes](version-0.14.0/)
+
 #### **Version: 0.13.1**
 
 * Name: **Release Version**: v0.13.1
