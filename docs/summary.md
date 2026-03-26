@@ -30,10 +30,10 @@
 
 * [Overview](inji-certify/overview/README.md)
   * [Features](inji-certify/overview/features/README.md)
-    * [VC Issuance with Pre Authorised Code and Credential Offer](inji-certify/overview/features/vc-issuance-with-pre-authorised-code-and-credential-offer.md)
+    * [National ID VC Issuance](inji-certify/overview/features/issuance-of-national-id-as-verifiable-credentials-using-mosip-identity-plugin.md)
+    * [Pre-Authorized Issuance](inji-certify/overview/features/vc-issuance-with-pre-authorised-code-and-credential-offer.md)
     * [Presentation During Issuance](inji-certify/overview/features/presentation-during-issuance.md)
-    * [Issuance of Verifiable Credentials with QR code](inji-certify/overview/features/issuance-of-verifiable-credentials-with-qr-code.md)
-    * [Issuance of National ID as Verifiable Credentials using MOSIP Identity Plugin](inji-certify/overview/features/issuance-of-national-id-as-verifiable-credentials-using-mosip-identity-plugin.md)
+    * [Issuing VC with QR Code](inji-certify/overview/features/issuance-of-verifiable-credentials-with-qr-code.md)
 * [Resources](readme/resources.md#inji-certify)
 * [Test](inji-certify/functional-overview/README.md)
   * [Try It Out](inji-certify/functional-overview/try-it-out.md)

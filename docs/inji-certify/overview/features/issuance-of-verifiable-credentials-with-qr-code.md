@@ -1,4 +1,4 @@
-# Issuance of Verifiable Credentials with QR code
+# Issuing VC with QR Code
 
 ### **Overview**
 
@@ -165,3 +165,7 @@ Issuers can define:
 * Offline mapping resolution is dependent on external mechanisms
 * QR payload size constraints may limit data inclusion
 * VC format supported is only JSON-LD
+
+
+
+Please refer to the relevant [GitHub technical documentation](https://github.com/inji/inji-certify/tree/master/docs) for detailed configuration, policy setup, and API‑level implementation details.

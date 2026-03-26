@@ -1,4 +1,4 @@
-# Issuance of National ID as Verifiable Credentials using MOSIP Identity Plugin
+# National ID VC Issuance
 
 ### Overview
 
@@ -115,3 +115,5 @@ The credential is then returned to the requesting wallet or system.
 * Template-driven VC generation with localization support
 * QR code optimization with compressed images
 * DID-based public key exposure for verification
+
+Please refer to the relevant [GitHub technical documentation](https://github.com/inji/inji-certify/tree/master/docs) for detailed configuration, policy setup, and API‑level implementation details.

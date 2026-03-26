@@ -88,7 +88,7 @@ The data source for these plugins can be a database, a CSV file, or an external 
 * **Mock IDA Plugin** — Provides a simulated identity data and verification environment for testing and development purposes
 * **Mock CSV Data Provider Plugin** — Enables data retrieval from CSV files, primarily for sandbox and test data simulation
 * **PostgreSQL Data Provider Plugin** — Connects to PostgreSQL databases to fetch real-time data from registries or external systems
-* **MOSIP Identity Plugin** — Integrates with MOSIP APIs to retrieve identity data and construct Verifiable Credentials within Inji Certify
+* [**MOSIP Identity Plugin**](issuance-of-national-id-as-verifiable-credentials-using-mosip-identity-plugin.md) — Integrates with MOSIP APIs to retrieve identity data and construct Verifiable Credentials within Inji Certify
 
 For detailed instructions on configuring the Data Provider Plugin, please refer to this [guide](https://github.com/mosip/inji-certify/blob/master/docs/Local-Development.md).
 
@@ -180,7 +180,7 @@ Inji Certify have capability to issue VC in multiple language based on the confi
 
 ## 13. Presentation During Issuance
 
-Inji Certify introduces support for an additional issuance mode called Presentation During Issuance, enhancing trust and security in credential issuance workflows.
+Inji Certify introduces support for an additional issuance mode called [Presentation During Issuance](presentation-during-issuance.md), enhancing trust and security in credential issuance workflows.
 
 In this mode, the issuer requests the presentation of an existing Verifiable Credential (VC) from the wallet as part of issuing a new VC. The submitted presentation is verified internally by Inji Certify, and upon successful verification, the issuance of the new VC is triggered and delivered to the wallet.
 
@@ -196,23 +196,23 @@ This feature strengthens security, trust, and interoperability and is typically 
 
 ## 14. Issuance of Verifiable Credentials with QR code
 
-Inji Certify introduces support for QR-code-based VC issuance using Claim 169, enabling privacy-preserving and interoperable credential issuance directly via standardized, compact QR codes.
+Inji Certify introduces '[Issuance of Verifiable Credentials with QR code](issuance-of-verifiable-credentials-with-qr-code.md)' support for QR-code-based VC issuance using [**169 - QR Code Specifications 1.1.0**](https://docs.mosip.io/1.2.0/readme/standards-and-specifications/mosip-standards/169-qr-code-specification-1), enabling privacy-preserving and interoperable credential issuance directly via standardised, compact QR codes.
 
-With this feature, Inji Certify can generate verifiable credentials that are encoded into CBOR Web Token (CWT) form and delivered through QR codes compliant with [Claim 169 specifications](link/) — a specification for embedding identity data in QR codes that supports compact, secure, and machine-readable representation of credential data.
+With this feature, Inji Certify can generate verifiable credentials that are encoded into CBOR Web Token (CWT) form and delivered through QR codes compliant with [**Claim 169 specifications**](https://docs.mosip.io/1.2.0/readme/standards-and-specifications/mosip-standards/169-qr-code-specification-1) — a specification for embedding identity data in QR codes that supports compact, secure, and machine-readable representation of credential data.
 
 This capability allows wallets and other consumer applications to request and obtain credentials by scanning a Claim 169-formatted QR code, improving usability in offline or low-connectivity environments and ensuring alignment with an interoperable QR standard.
 
 **Capabilities include**:
 
-* Claim 169 QR Generation — Ability to encode issued VCs into Claim 169–compliant QR codes
+* Claim 169 QR Generation — Ability to encode issued VCs into [Claim 169](https://docs.mosip.io/1.2.0/readme/standards-and-specifications/mosip-standards/169-qr-code-specification-1)–compliant QR codes
 * CBOR-CWT Encoding — Support for compact, privacy-preserving CBOR Web Token encoding of VC data
 * Standard-Based Issuance — Delivery of QR-encoded credentials that adhere to global standards for machine-readable identity
 
-'Inji Certify 0.14.0 Release' expands Inji Certify’s issuance modalities to include QR code–centric workflows using standardized Claim 169 structures, enhancing accessibility and interoperability with ecosystem wallets and verification tools.
+'Inji Certify 0.14.0 Release' expands Inji Certify’s issuance modalities to include QR code–centric workflows using standardised Claim 169 structures, enhancing accessibility and interoperability with ecosystem wallets and verification tools.
 
 ## 15. VC Issuance with pre authorised code (Pre Auth Code Flow)
 
-Inji Certify introduces support for the Pre-Authorized Code Flow with Credential Offer, enabling streamlined and user-friendly issuance of Verifiable Credentials (VCs).
+Inji Certify introduces support for the [Pre-Authorized Code Flow with Credential Offer](vc-issuance-with-pre-authorised-code-and-credential-offer.md), enabling streamlined and user-friendly issuance of Verifiable Credentials (VCs).
 
 This feature implements the OpenID4VCI pre-authorized code flow, where Inji Certify can issue a credential offer containing a pre-authorized code that the wallet uses to obtain an access token and then request a VC — without requiring the end user to re-authenticate during the issuance process. This flow is ideal for scenarios where the issuer has already verified the user’s identity and wants to simplify credential delivery.
 

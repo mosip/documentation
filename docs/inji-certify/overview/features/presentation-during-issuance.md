@@ -92,4 +92,4 @@ The resident can now view and use the **Driving License VC** from their wallet. 
 * Only a single issuance mode can be configured per issuer.
 * If Presentation During Issuance is enabled, alternative issuance modes (e.g., simple wallet‑initiated issuance without verification) are not supported for the same issuer.)
 
-Please refer to the relevant GitHub technical documentation for detailed configuration, policy setup, and API‑level implementation details.
+Please refer to the relevant [GitHub technical documentation](https://github.com/inji/inji-certify/tree/master/docs) for detailed configuration, policy setup, and API‑level implementation details.
