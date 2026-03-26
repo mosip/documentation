@@ -37,7 +37,7 @@ Below is the list of known issues related to the release v0.13.0. To access all 
 
 ### Repository Released
 
-<table><thead><tr><th width="208.9765625">Repositories</th><th>Tags</th></tr></thead><tbody><tr><td>inji-certify</td><td><a href="https://github.com/inji/inji-certify/tree/v0.14.0">v0.14.0</a></td></tr><tr><td>inji-config</td><td><a href="https://github.com/inji/inji-config/tree/v0.15.0">v0.14.0</a></td></tr><tr><td>keymanager</td><td><a href="https://github.com/mosip/keymanager/tree/v1.4.0">v1.4.0</a></td></tr><tr><td>digital-credential-plugin</td><td><a href="https://github.com/inji/digital-credential-plugins/tree/v0.6.0">v0.6.0</a></td></tr><tr><td>mosip-functional-tests</td><td></td></tr></tbody></table>
+<table><thead><tr><th width="208.9765625">Repositories</th><th>Tags</th></tr></thead><tbody><tr><td>inji-certify</td><td><a href="https://github.com/inji/inji-certify/tree/v0.14.0">v0.14.0</a></td></tr><tr><td>inji-config</td><td><a href="https://github.com/inji/inji-config/tree/v0.15.0">v0.14.0</a></td></tr><tr><td>keymanager</td><td><a href="https://github.com/mosip/keymanager/tree/v1.4.0">v1.4.0</a></td></tr><tr><td>digital-credential-plugin</td><td><a href="https://github.com/inji/digital-credential-plugins/tree/v0.6.0">v0.6.0</a></td></tr><tr><td>mosip-functional-tests</td><td><a href="https://github.com/mosip/mosip-functional-tests/tree/v1.5.0">v1.5.0</a></td></tr></tbody></table>
 
 ### Compatible Modules
 
