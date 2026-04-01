@@ -6,32 +6,6 @@
 
 **Release Date:** 6th March 2026
 
-{% hint style="info" icon="exclamation" %}
-**⚠️ Compatibility Notice**
-
-**Important:** Some features introduced in **Inji Mobile Wallet 0.22.0** require updates in **Inji Certify** and are not fully compatible with the currently released **Inji Certify** [**0.13.0.**](https://github.com/inji/inji-certify/tree/v0.13.0)
-
-The following features will **not function with Certify** [**0.13.0**](https://github.com/inji/inji-certify/tree/v0.13.0):
-
-* **Presentation During Issuance (PDI)**
-* **Claim 169 QR Code Credential Support**
-
-These features depend on enhancements that will be available in the **upcoming Inji Certify 0.14.0 release**, which is expected to be released in the coming weeks.
-
-#### What this means for the community
-
-* The **Inji Mobile Wallet 0.22.0 codebase is being released now** and is fully compatible with **Inji Certify 0.13.0**, except for the features listed above.
-* Community members, partners, and country implementers who want to **experiment with or test the new PDI and Claim 169 features** should set up their environment using:
-
-```
-Inji Mobile Wallet 0.22.0
-+
-Inji Certify 0.14.0 (upcoming release)
-```
-
-Once **Inji Certify 0.14.0** is released, these features will be fully functional and can be tested end-to-end.
-{% endhint %}
-
 ## Overview
 
 This release of **Inji Mobile Wallet v0.22.0** introduces support for [**Presentation During Issuance**](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html) **(PDI)** and enhancements to credential issuance and verification workflows aligned with **OpenID4VCI and OpenID4VP standards**.
@@ -124,10 +98,10 @@ Enhancements include:
 | Module       | Version                                                     |
 | ------------ | ----------------------------------------------------------- |
 | Mimoto       | [0.21.0](https://github.com/inji/mimoto/tree/v0.21.0)       |
-| Inji Certify | [0.13.1](https://github.com/inji/inji-certify/tree/v0.13.1) |
+| Inji Certify | [0.14.0](https://github.com/inji/inji-certify/tree/v0.14.0) |
 | Inji Verify  | [0.17.0](https://github.com/inji/inji-verify/tree/v0.17.0)  |
 | eSignet      | [1.6.2](https://github.com/mosip/esignet/tree/v1.6.2)       |
-| inji-config  | [0.13.0](https://github.com/mosip/inji-config/tree/v0.13.0) |
+| inji-config  | [0.15.0](https://github.com/inji/inji-config/tree/v0.15.0)  |
 
 ## Known Issues
 
