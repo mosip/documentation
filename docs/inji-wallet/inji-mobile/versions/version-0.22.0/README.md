@@ -8,7 +8,7 @@
 
 ## Overview
 
-This release of **Inji Mobile Wallet v0.22.0** introduces support for [**Presentation During Issuance**](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html) **(PDI)** and enhancements to credential issuance and verification workflows aligned with **OpenID4VCI and OpenID4VP standards**.
+This release of **Inji Mobile Wallet v0.22.0** introduces support for [**Presentation During Issuance**](https://github.com/openid/OpenID4VCI/blob/31636e9bb7f0eef6933175e1e41c78ce79a69783/1.1/openid-4-verifiable-credential-issuance-1_1.md) **(PDI)** and enhancements to credential issuance and verification workflows aligned with **OpenID4VCI and OpenID4VP standards**.
 
 The release also adds support for [**Claim 169**](https://docs.mosip.io/1.2.0/readme/standards-and-specifications/mosip-standards/169-qr-code-specification) **QR Code–based credential rendering**, enabling the wallet to store and display credentials containing embedded QR blocks used for quick verification scenarios.
 
