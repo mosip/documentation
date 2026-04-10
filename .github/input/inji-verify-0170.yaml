@@ -1,0 +1,9 @@
+title: Title of the Release Notes
+summary: A brief summary of the changes included in this release.
+pr_url: URL of the pull request
+  url-1: 
+issue_urls: URLs of the related issues
+discussion_urls: URLs of the related discussions
+impact: Type of impact (feature, fix, breaking, security)
+evidence_url: URL of the test run, demo, or design
+confidence (high, medium, low)
