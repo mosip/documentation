@@ -44,6 +44,7 @@
   * [MOSIP](interoperability/mosip.md)
   * [Inji](interoperability/inji.md)
   * [OpenCRVS](interoperability/opencrvs.md)
+  * [DHIS2](interoperability/dhis2.md)
 * [Deploy](build-and-deploy/README.md)
   * [Deployment Guide](build-and-deploy/deployment-guide.md)
   * [Deployment Architecture](build-and-deploy/deployment-arch/README.md)
