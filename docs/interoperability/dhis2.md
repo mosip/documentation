@@ -1,7 +1,5 @@
 # DHIS2
 
-<mark style="color:$danger;">In Progress - Coming Soon!</mark>
-
 ## Overview
 
 This document outlines the integration of eSignet (a digital identity verification system) with DHIS2 healthcare portals to streamline maternal health record management across three user-facing applications.
@@ -10,11 +8,15 @@ This document outlines the integration of eSignet (a digital identity verificati
 
 The system uses this verified identity approach to ensure secure, verified access to patient information while preventing duplicates through PHN (Patient Health Number) validation. Data flows between DHIS2, eSignet, PHN systems, and FHIR servers to create an interoperable healthcare ecosystem that reduces manual errors and improves accessibility for patients, midwives, and doctors.
 
+<!--
+
 ### Purpose
 
 The purpose of this collaboration/engagement is to demonstrate how digital identity verification using eSignet can be integrated into healthcare workflows to streamline the registration, access, and management of maternal health records.
 
 This approach enables secure and verified access to patient information across multiple systems while ensuring that patient identity is consistently validated at each interaction point within the healthcare ecosystem.
+
+-->
 
 ### Use Case Overview
 
@@ -129,11 +131,12 @@ Refer to a [comprehensive article](https://developers.dhis2.org/blog/2026/02/mos
 * Data flow to and from the PHN system
 * Storage and exchange of health records via the FHIR server
 
-## Demo Recording
+## Integration Demo
 
 A recording of the demonstration conducted for this use case is available below:
 
 {% embed url="https://www.youtube.com/watch?v=2KTFUAhd6LI" %}
+
 
 ### Abbreviations
 
