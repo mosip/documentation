@@ -1,6 +1,9 @@
 # DHIS2
 
-## Overview
+**DHIS2** (District Health Information Software 2) is an open-source, web-based platform developed at the University of Oslo, deployed in more than 80 countries for health, logistics, and education data management. 
+This document provides an overview of how eSignet integrates with DHIS2 powered ANC (Ante Natal Care) ecosystem across three portals: the **PHM-Assisted DHIS2 Registration Portal**, the **Doctor-Assisted VOG Portal**, and the **Self-Service Health Portal**.
+
+## Purpose
 
 This document outlines the integration of eSignet (a digital identity verification system) with DHIS2 healthcare portals to streamline maternal health record management across three user-facing applications.
 
@@ -18,7 +21,7 @@ This approach enables secure and verified access to patient information across m
 
 -->
 
-### Use Case Overview
+### Use Cases
 
 This use case outlines an end-to-end **ANC (Ante Natal Care)** patient journey, integrating identity verification with healthcare systems using eSignet.
 
