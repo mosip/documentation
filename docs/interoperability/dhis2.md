@@ -1,16 +1,25 @@
 # DHIS2
 
-**DHIS2** (District Health Information Software 2) is an open-source, web-based platform developed at the University of Oslo, deployed in more than 80 countries for health, logistics, and education data management.&#x20;
+**DHIS2** (District Health Information Software 2) is an open-source, web-based platform developed at the University of Oslo, deployed in more than 80 countries for health, logistics, and education data management. 
+This document provides an overview of how eSignet integrates with DHIS2 powered ANC (Ante Natal Care) ecosystem across three portals: the **PHM-Assisted DHIS2 Registration Portal**, the **Doctor-Assisted VOG Portal**, and the **Self-Service Health Portal**.
 
 ## Purpose
 
-Through this document we observe how eSignet integrates with and is used by DHIS2 powered ANC (Ante Natal Care) ecosystem to streamline maternal health record management across three portals: the **PHM-Assisted DHIS2 Registration Portal**, the **Doctor-Assisted VOG Portal**, and the **Self-Service Health Portal**.
+This document outlines the integration of eSignet (a digital identity verification system) with DHIS2 healthcare portals to streamline maternal health record management across three user-facing applications.
 
 **eSignet's Role**: eSignet serves as the primary identity verification and authentication backbone, enabling secure National ID-based authentication across all portals. It verifies patient identity, fetches verified demographic details from the identity system, and manages user consent for data access—ensuring that every interaction within the healthcare ecosystem is tied to a verified identity.
 
-The system uses this verified identity approach to ensure secure, verified access to patient information while preventing duplicates through PHN (Patient Health Number) validation. Data flows between DHIS2, eSignet, PHN systems, and FHIR servers to create an interoperable healthcare ecosystem that reduces manual errors and improves accessibility for patients, midwives, and doctors.
+<!--
 
-### Use Case Overview
+### Purpose
+
+The purpose of this collaboration/engagement is to demonstrate how digital identity verification using eSignet can be integrated into healthcare workflows to streamline the registration, access, and management of maternal health records.
+
+This approach enables secure and verified access to patient information across multiple systems while ensuring that patient identity is consistently validated at each interaction point within the healthcare ecosystem.
+
+-->
+
+### Use Cases
 
 This use case outlines an end-to-end **ANC (Ante Natal Care)** patient journey, integrating identity verification with healthcare systems using eSignet.
 
@@ -24,14 +33,14 @@ Across all portals, eSignet-based authentication using National ID is used to en
 
 The system also integrates with backend systems such as:
 
-* **PHN (Patient Health Number)** system for patient identification
-* **FHIR (Fast Healthcare Interoperability Resources) server** for storing and exchanging health data
+* **FHIR (Fast Healthcare Interoperability Resources)** server for storing and exchanging health data across multiple portals - only this point we can keep
 
 ## Portal Workflows and User Journeys
 
 ### 1. PHM-Assisted DHIS2 Registration Portal
 
-**Purpose**: To register the pregnant mother in the health registry system and issue a Patient Health Number (PHN).
+**Purpose**:
+To register the pregnant mother in the health registry system and issue a Patient Health Number (PHN).
 
 **User Journey**:
 
@@ -65,7 +74,8 @@ The system also integrates with backend systems such as:
 
 ### 2. Doctor-Assisted VOG Portal
 
-**Purpose**: To allow doctors to access and review patient medical history for diagnosis and treatment.
+**Purpose**:
+To allow doctors to access and review patient medical history for diagnosis and treatment.
 
 **User Journey**:
 
@@ -76,9 +86,10 @@ The system also integrates with backend systems such as:
 * The doctor reviews the medical history, updates relevant information, and provides treatment.
 * All updates made by the doctor are pushed to the FHIR server.
 
-#### 3. Self-Service Health Portal
+### 3. Self-Service Health Portal
 
-**Purpose**: To enable patients to access their own ANC records and upcoming appointments.
+**Purpose**:
+To enable patients to access their own ANC records and upcoming appointments.
 
 **User Journey**:
 
@@ -98,10 +109,10 @@ The system also integrates with backend systems such as:
   * Upcoming appointments
 
 ## How does eSignet Integrate
-
-* eSignet is integrated as the primary authentication mechanism across all three portals.
-* It is used to verify the patient’s identity using their National ID and to fetch demographic details from the identity system.
-* eSignet also manages user consent for data access and sharing across systems.
+* eSignet is used as the primary authentication mechanism during patient registration in the DHIS2 patient registration portal.
+* Upon successful authentication using the National ID, the fetched user information is used to pre-populate PII fields in the registration form.
+* eSignet is also used in the Patient Self-Service Portal, allowing patients to log in and access their medical records.
+* eSignet manages user consent for data access and sharing across systems.
 
 ## Benefits
 
@@ -114,7 +125,7 @@ The system also integrates with backend systems such as:
 
 ## High-Level Architecture
 
-Refer to a [comprehensive article](https://developers.dhis2.org/blog/2026/02/mosip-integration-demo/) detailing the architecture outlining this integration. This article illustrates the overall system architecture, including:
+Refer to a [comprehensive article](https://developers.dhis2.org/blog/2026/02/mosip-integration-demo/) detailing the architecture and outlining this integration. This article illustrates the overall system architecture, including:
 
 * Integration between DHIS2 portals and eSignet
 * Interaction with the identity system
@@ -126,6 +137,7 @@ Refer to a [comprehensive article](https://developers.dhis2.org/blog/2026/02/mos
 A recording of the demonstration conducted for this use case is available below:
 
 {% embed url="https://www.youtube.com/watch?v=2KTFUAhd6LI" %}
+
 
 ### Abbreviations
 
