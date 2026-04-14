@@ -1,6 +1,7 @@
 # DHIS2
 
-**DHIS2** (District Health Information Software 2) is an open-source, web-based platform developed at the University of Oslo, deployed in more than 80 countries for health, logistics, and education data management. 
+**DHIS2** (District Health Information Software 2) is an open-source, web-based platform developed at the University of Oslo, deployed in more than 80 countries for health, logistics, and education data management.&#x20;
+
 This document provides an overview of how eSignet integrates with DHIS2 powered ANC (Ante Natal Care) ecosystem across three portals: the **PHM-Assisted DHIS2 Registration Portal**, the **Doctor-Assisted VOG Portal**, and the **Self-Service Health Portal**.
 
 ## Purpose
@@ -8,16 +9,6 @@ This document provides an overview of how eSignet integrates with DHIS2 powered 
 This document outlines the integration of eSignet (a digital identity verification system) with DHIS2 healthcare portals to streamline maternal health record management across three user-facing applications.
 
 **eSignet's Role**: eSignet serves as the primary identity verification and authentication backbone, enabling secure National ID-based authentication across all portals. It verifies patient identity, fetches verified demographic details from the identity system, and manages user consent for data access—ensuring that every interaction within the healthcare ecosystem is tied to a verified identity.
-
-<!--
-
-### Purpose
-
-The purpose of this collaboration/engagement is to demonstrate how digital identity verification using eSignet can be integrated into healthcare workflows to streamline the registration, access, and management of maternal health records.
-
-This approach enables secure and verified access to patient information across multiple systems while ensuring that patient identity is consistently validated at each interaction point within the healthcare ecosystem.
-
--->
 
 ### Use Cases
 
@@ -39,8 +30,7 @@ The system also integrates with backend systems such as:
 
 ### 1. PHM-Assisted DHIS2 Registration Portal
 
-**Purpose**:
-To register the pregnant mother in the health registry system and issue a Patient Health Number (PHN).
+**Purpose**: To register the pregnant mother in the health registry system and issue a Patient Health Number (PHN).
 
 **User Journey**:
 
@@ -74,8 +64,7 @@ To register the pregnant mother in the health registry system and issue a Patien
 
 ### 2. Doctor-Assisted VOG Portal
 
-**Purpose**:
-To allow doctors to access and review patient medical history for diagnosis and treatment.
+**Purpose**: To allow doctors to access and review patient medical history for diagnosis and treatment.
 
 **User Journey**:
 
@@ -88,8 +77,7 @@ To allow doctors to access and review patient medical history for diagnosis and 
 
 ### 3. Self-Service Health Portal
 
-**Purpose**:
-To enable patients to access their own ANC records and upcoming appointments.
+**Purpose**: To enable patients to access their own ANC records and upcoming appointments.
 
 **User Journey**:
 
@@ -108,7 +96,8 @@ To enable patients to access their own ANC records and upcoming appointments.
   * ANC visit history
   * Upcoming appointments
 
-## How does eSignet Integrate
+## How does eSignet integrate
+
 * eSignet is used as the primary authentication mechanism during patient registration in the DHIS2 patient registration portal.
 * Upon successful authentication using the National ID, the fetched user information is used to pre-populate PII fields in the registration form.
 * eSignet is also used in the Patient Self-Service Portal, allowing patients to log in and access their medical records.
@@ -137,7 +126,6 @@ Refer to a [comprehensive article](https://developers.dhis2.org/blog/2026/02/mos
 A recording of the demonstration conducted for this use case is available below:
 
 {% embed url="https://www.youtube.com/watch?v=2KTFUAhd6LI" %}
-
 
 ### Abbreviations
 
