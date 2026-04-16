@@ -1,0 +1,9 @@
+- https://docs.mosip.io/1.2.0/general/collab-getting-started-guide/generating-demo-credentials
+- https://docs.mosip.io/1.2.0/id-lifecycle-management/identity-management/resident-services/test/collab-resident-portal-guide
+- https://docs.mosip.io/1.2.0/id-lifecycle-management/identity-management/resident-services/test/resident-portal-user-guide
+- https://docs.mosip.io/1.2.0/id-lifecycle-management/identity-management/resident-services/test/functional-overview
+- https://docs.mosip.io/1.2.0/id-lifecycle-management/identity-management/identifiers
+- https://docs.mosip.io/1.2.0/id-lifecycle-management/supporting-components/commons/id-generator
+- https://docs.mosip.io/1.2.0/id-lifecycle-management/identity-management/resident-services/deploy/resident-portal-configuration-guide
+- https://docs.mosip.io/1.2.0/id-lifecycle-management/supporting-services/mock-services
+- https://docs.mosip.io/1.2.0/setup/upgrade/upgrade-runbook/mock-services
