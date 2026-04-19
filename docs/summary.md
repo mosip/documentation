@@ -174,7 +174,7 @@
     * [Features](inji-wallet/inji-web/overview/features/README.md)
       * [Verifiable Credential Presentation (OpenID4VP)](inji-wallet/inji-web/overview/features/verifiable-credential-presentation-openid4vp.md)
       * [Claim 169 QR Code Support](inji-wallet/inji-web/overview/features/claim-169-qr-code-support.md)
-      * [SVG-based Credential Rendering](inji-wallet/inji-web/overview/features/svg-based-credential-rendering.md)
+      * [SVG based Credential Rendering](inji-wallet/inji-web/overview/features/svg-based-credential-rendering.md)
   * [Resources](readme/resources.md#inji-web-wallet)
   * [Test](inji-wallet/inji-web/functional-overview/README.md)
     * [Try It Out](inji-wallet/inji-web/functional-overview/try-it-out/README.md)
