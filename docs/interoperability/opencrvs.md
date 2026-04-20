@@ -29,4 +29,4 @@ eSignet is used to authenticate the person reporting a vital event, such as a pa
 3. **Death Registration**\
    eSignet verifies the identity of authorized family members or officials before registering a death in OpenCRVS, ensuring the integrity of national identity records and preventing fraudulent use of deceased individuals' identities.
 
-👉 Learn more about integration with [OpenCRVS](https://docs.mosip.io/1.2.0/integrations/mosip-opencrvs-integration).
+👉 Learn more about integration with [OpenCRVS](https://docs.mosip.io/1.2.0/interoperability/integrations/mosip-crvs-integration).
