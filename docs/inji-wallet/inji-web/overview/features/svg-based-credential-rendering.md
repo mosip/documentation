@@ -1,6 +1,6 @@
 # SVG based Credential Rendering
 
-### **1. Overview**
+### 1. Overview
 
 SVG Template Rendering enables **issuer-controlled visual representation of Verifiable Credentials (VCs)** in **Inji Web**, aligned with the W3C VC Render Method specification.
 
@@ -10,7 +10,7 @@ Instead of relying on static HTML layouts, Inji Web dynamically renders credenti
 * **renderMethod (**&#x73;vg-mustach&#x65;**) in VC**
 * **inji-vc-renderer library for binding VC data → SVG**
 
-### **2. Why This Feature Matters**
+### 2. Why This Feature Matters
 
 #### Key Benefits
 
@@ -41,11 +41,11 @@ Instead of relying on static HTML layouts, Inji Web dynamically renders credenti
 
 **5. Security via Template Integrity**
 
-* digestMultibase ensures:
+* `digestMultibase` ensures:
   * Template is **not tampered**
   * Trusted rendering source
 
-### **3. Supported Credential Types**
+### 3. Supported Credential Types
 
 #### Supported
 
@@ -67,7 +67,7 @@ Instead of relying on static HTML layouts, Inji Web dynamically renders credenti
 * Student ID / Hall Ticket
 * Vaccination Certificate
 
-### **4. How does the Flow Work? (User Flow)**
+### 4. How does the Flow Work? (User Flow)
 
 #### Step-by-Step Flow (Inji Web)
 
@@ -82,18 +82,12 @@ Instead of relying on static HTML layouts, Inji Web dynamically renders credenti
 
 * Inji Web checks:
   * VC format = JSON-LD 2.0
-  * renderMethod present
-  * renderSuite = svg-mustache
+  * `renderMethod` present
+  * `renderSuite` = `svg-mustache`
 
 **Step 3: Invoke Renderer**
 
-* Call:
-
-```
-renderSvg(vcJsonData)
-```
-
-(from inji-vc-renderer)
+* Call `renderSvg(vcJsonData)` (from `inji-vc-renderer`)
 
 **Step 4: Fetch Template**
 
@@ -102,28 +96,21 @@ renderSvg(vcJsonData)
 
 **Step 5: Verify Integrity**
 
-* Compare:
-
-```
-digestMultibase (VC) vs actual template hash
-```
+* Compare `digestMultibase` (VC) vs actual template hash
 
 * If mismatch → ❌ fail rendering
 
 **Step 6: Pre-processing (Library Logic)**
 
-From renderer capabilities :
+From renderer capabilities:
 
 *   Locale transformation:
 
-    ```
-    gender → gender.eng / gender.fr
-    ```
+  gender → gender.eng / gender.fr
 *   QR Code injection:
 
-    ```
-    credentialSubject.qrCodeImage
-    ```
+  `credentialSubject.qrCodeImage`
+
 * Multi-line formatting:
   * Benefits
   * Address fields
@@ -131,19 +118,16 @@ From renderer capabilities :
 **Step 7: Placeholder Replacement**
 
 Example:
-
 ```
 <svg>{{credentialSubject/fullName}}</svg>
 ```
-
-→
+-->
 
 ```
 <svg>John Doe</svg>
 ```
 
 **Step 8: Render Output**
-
 * SVG displayed in UI
 * Optional:
   * Convert SVG → PDF (download/share)
@@ -157,13 +141,9 @@ If not eligible:
 * HTML templates
 * Default credential card UI
 
+[Image] - Flow
 
-
-\[Image] - Flow
-
-
-
-### **5. Current Limitations**
+### 5. Current Limitations
 
 #### Technical Constraints
 
@@ -191,7 +171,7 @@ If not eligible:
 
 **4. Integrity Dependency**
 
-* If digestMultibase fails:
+* If `digestMultibase` fails:
   * Rendering is blocked
 
 **5. Limited Dynamic Layout Handling**
@@ -211,7 +191,7 @@ If not eligible:
 
 → Template may not align
 
-### **6. Test the Feature Today**
+### 6. Test the Feature Today
 
 #### How to Enable
 
@@ -241,12 +221,12 @@ mosip.certify.data-provider-plugin.rendering-template-id=<TEMPLATE_ID>
 
 * Ensure:
   * Public URL
-  * Correct MIME: image/svg+xml
+  * Correct MIME: `image/svg+xml`
 
 **Step 4: Issue Credential**
 
 * Via OpenID4VCI flow
-* Ensure VC contains renderMethod
+* Ensure VC contains `renderMethod`
 
 **Step 5: Load in Inji Web**
 
