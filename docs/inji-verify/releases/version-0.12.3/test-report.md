@@ -48,9 +48,9 @@ Below are the combinations that QA verified and Certified INJI Verify:
 
 Below are the results for Upload, Scan and OVP flow functionality with Windows, Android phone, MAC, Android Tablet, iPad and iPhone with different browsers:
 
-<figure><img src="../../../.gitbook/assets/iv-0-12-0-tr-image-1 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iv-0-12-0-tr-image-1.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/iv-0-12-0-tr-image-2 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iv-0-12-0-tr-image-2.png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../../.gitbook/assets/iv012.3.png" alt=""><figcaption></figcaption></figure>
 

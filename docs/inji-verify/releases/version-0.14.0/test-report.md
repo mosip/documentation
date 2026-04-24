@@ -53,9 +53,9 @@ Verification is performed from both end-user and System Integrator (SI) viewpoin
 
 Results for Upload, Scan, and OVP flow functionality were validated across Windows, Android phone, Mac, Android Tablet, iPad, and iPhone with various browsers.
 
-<figure><img src="../../../.gitbook/assets/iv-0-12-0-tr-image-1 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iv-0-12-0-tr-image-1.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/iv-0-12-0-tr-image-2 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/iv-0-12-0-tr-image-2.png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../../.gitbook/assets/iv-0-14-0-openid4vp.png" alt=""><figcaption></figcaption></figure>
 

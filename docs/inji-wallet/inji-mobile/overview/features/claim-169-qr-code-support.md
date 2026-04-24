@@ -110,7 +110,7 @@ A single credential may contain multiple QR codes, for example:
 
 **Note:** While **Inji Certify** supports the design for issuing **multiple QR codes**, **Inji Wallet currently does not support multiple QR codes for Claim-169 credentials.**
 
-<div data-with-frame="true"><figure><img src="../../../../.gitbook/assets/Claim 169 - Wallet (1).png" alt=""><figcaption></figcaption></figure></div>
+<div data-with-frame="true"><figure><img src="../../../../.gitbook/assets/Claim 169 - Wallet.png" alt=""><figcaption></figcaption></figure></div>
 
 ### Current Limitations
 
@@ -122,4 +122,3 @@ A single credential may contain multiple QR codes, for example:
 ### Learn More
 
 **Claim 169 QR Code Support**: To learn how this QR code is issued and works with Inji Mobile Wallet, please click [here](https://github.com/inji/inji-certify/blob/release-0.14.x/docs/Claim-169-QR-Code-Support.md) to understand its issuance.
-

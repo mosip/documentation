@@ -302,7 +302,7 @@ This section describes how to **present your JSON-LD Verifiable Credentials (VCs
 * The verifier supports **OpenID4VP**.
 
 {% hint style="warning" %}
-### Important Note (Reference Image Only)
+#### Important Note (Reference Image Only)
 
 The images shown above are **reference designs** intended to help users and implementers understand **how the OpenID4VP flow will look end-to-end**—from a **verifier initiating a Verifiable Presentation (VP) request** to the **Inji Web Wallet opening and completing the presentation,** not to represent functionality currently available in Inji Verify.
 
@@ -312,7 +312,7 @@ These screens illustrate the **expected user journey**, including:
 * How a user select cards in Inji Web Wallet
 * How wallet selection and redirection may look in future releases
 
-#### Current Capability Status
+**Current Capability Status**
 
 At the moment, **Inji Verify doesn't yet support OpenID4VP initiation or redirection**. This feature is **planned for an upcoming release** of Inji Verify.
 

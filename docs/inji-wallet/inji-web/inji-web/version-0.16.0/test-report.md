@@ -39,7 +39,7 @@ The Functional verification of the Inji Web application is performed on Windows,
 
 **Table:** Test Organization
 
-<table data-header-hidden><thead><tr><th width="145.37890625" valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top"><strong>Name</strong></td><td valign="top"><strong>Functional Role</strong></td><td valign="top"><strong>Responsibilities</strong></td></tr><tr><td valign="top"><p>Mrudula</p><p> </p></td><td valign="top">QA Engineer</td><td valign="top">Verifying the functionality, stability of the application,and report preparation.</td></tr><tr><td valign="top">Chaitanya K</td><td valign="top">QA Manager</td><td valign="top">Overviewing the test execution and review of the report.</td></tr><tr><td valign="top">Ragini Krishna</td><td valign="top">Senior QA Manager</td><td valign="top">High-level governance and executive reviews of reports and execution.</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="145.37890625" valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top"><strong>Name</strong></td><td valign="top"><strong>Functional Role</strong></td><td valign="top"><strong>Responsibilities</strong></td></tr><tr><td valign="top">Mrudula</td><td valign="top">QA Engineer</td><td valign="top">Verifying the functionality, stability of the application,and report preparation.</td></tr><tr><td valign="top">Chaitanya K</td><td valign="top">QA Manager</td><td valign="top">Overviewing the test execution and review of the report.</td></tr><tr><td valign="top">Ragini Krishna</td><td valign="top">Senior QA Manager</td><td valign="top">High-level governance and executive reviews of reports and execution.</td></tr></tbody></table>
 
 ### Test Planning <a href="#r96y5s58vmiy" id="r96y5s58vmiy"></a>
 
@@ -50,9 +50,9 @@ The Functional verification of the Inji Web application is performed on Windows,
 
 Used the below browser versions in testing INJI WEB
 
-* Chrome: Version  145.0.7632.160
+* Chrome: Version 145.0.7632.160
 * Firefox: Version 148.0 (64-bit)
-* Edge: Version  145.0.3800.82
+* Edge: Version 145.0.3800.82
 * Safari : Version 17
 
 ### Test Environment <a href="#c8n2pgmek7rr" id="c8n2pgmek7rr"></a>
@@ -67,9 +67,9 @@ Table: Test Environment
 
 Table: Test Execution Summary
 
-<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Platform</td><td valign="top">Total</td><td valign="top">Pass</td><td valign="top">Fail</td><td valign="top">Skip</td></tr><tr><td valign="top">INJI WEB</td><td valign="top">1125</td><td valign="top">1036</td><td valign="top">89</td><td valign="top">0</td></tr><tr><td valign="top">                              Test Rate: 100% With Pass Rate: 93%</td><td valign="top"></td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Platform</td><td valign="top">Total</td><td valign="top">Pass</td><td valign="top">Fail</td><td valign="top">Skip</td></tr><tr><td valign="top">INJI WEB</td><td valign="top">1125</td><td valign="top">1036</td><td valign="top">89</td><td valign="top">0</td></tr><tr><td valign="top">Test Rate: 100% With Pass Rate: 93%</td><td valign="top"></td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
 
-### &#x20; <a href="#id-2tpt1w6qxcnx" id="id-2tpt1w6qxcnx"></a>
+### &#x20;<a href="#id-2tpt1w6qxcnx" id="id-2tpt1w6qxcnx"></a>
 
 <figure><img src="../../../../.gitbook/assets/iww-0160-tr-1.png" alt=""><figcaption></figcaption></figure>
 
@@ -83,15 +83,13 @@ Table: UI Automation
 
 <figure><img src="../../../../.gitbook/assets/iww-0160-tr-2.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Automation INJI Web API Mimoto <a href="#qj9jw0u6zc4i" id="qj9jw0u6zc4i"></a>
 
 Table: API Automation Result
 
 <table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Total</td><td valign="top">Pass</td><td valign="top">Fail</td><td valign="top">Known Issues</td><td valign="top">Ignored</td></tr><tr><td valign="top">349</td><td valign="top">312</td><td valign="top">0</td><td valign="top">4</td><td valign="top">33</td></tr><tr><td valign="top">Test Rate: 100% With Pass Rate: 100%</td><td valign="top"></td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
-
-&#x20;
 
 <figure><img src="../../../../.gitbook/assets/iww-0160-tr-3.png" alt=""><figcaption></figcaption></figure>
 
@@ -106,8 +104,6 @@ The following table depicts only the bugs which are found and not addressed in t
 Table: Defect Metrics for the Release
 
 <table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Blocker</td><td valign="top">Critical</td><td valign="top">Major</td><td valign="top">Minor</td><td valign="top">Total</td></tr><tr><td valign="top">0</td><td valign="top">0</td><td valign="top">1</td><td valign="top">5</td><td valign="top">6</td></tr></tbody></table>
-
-
 
 ### Known Issues Metrics <a href="#id-4f2a86b7dycj" id="id-4f2a86b7dycj"></a>
 
@@ -134,7 +130,7 @@ The build has successfully met the defined exit criteria and is recommended for 
 
 **Table**: Report is signed off details
 
-<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Name</td><td valign="top">Functional Role</td><td valign="top">Responsibilities</td></tr><tr><td valign="top">Chaitanya K</td><td valign="top">QA Manager</td><td valign="top"> </td></tr><tr><td valign="top">Ragini Krishna</td><td valign="top">Senior QA Manager</td><td valign="top"> </td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Name</td><td valign="top">Functional Role</td><td valign="top">Responsibilities</td></tr><tr><td valign="top">Chaitanya K</td><td valign="top">QA Manager</td><td valign="top"></td></tr><tr><td valign="top">Ragini Krishna</td><td valign="top">Senior QA Manager</td><td valign="top"></td></tr></tbody></table>
 
 ## Appendix <a href="#yn78otslfu9" id="yn78otslfu9"></a>
 
@@ -142,6 +138,6 @@ This includes additional reference information for the report. It contains a his
 
 ### Appendix A: Versions <a href="#e8xuorwd149d" id="e8xuorwd149d"></a>
 
-<table data-header-hidden><thead><tr><th width="111.70703125"></th><th></th><th></th><th valign="top"></th></tr></thead><tbody><tr><td> Version</td><td>Date</td><td>Author</td><td valign="top">Reviewers</td></tr><tr><td>V1.0</td><td>10/12/2025</td><td>Santosh</td><td valign="top"><p>Chaitanya K</p><p>Ragini Krishna</p></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="111.70703125"></th><th></th><th></th><th valign="top"></th></tr></thead><tbody><tr><td>Version</td><td>Date</td><td>Author</td><td valign="top">Reviewers</td></tr><tr><td>V1.0</td><td>10/12/2025</td><td>Santosh</td><td valign="top"><p>Chaitanya K</p><p>Ragini Krishna</p></td></tr></tbody></table>
 
 The GitHub link to the detailed report is [**here**](https://github.com/mosip/test-management/tree/master/inji-web/inji%20web%200.16.0).

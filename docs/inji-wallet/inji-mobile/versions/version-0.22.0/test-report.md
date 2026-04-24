@@ -44,7 +44,7 @@ The Functional verification of the Inji Mobile Wallet application is performed o
 
 * Functionality
 * Combination
-* Configurability &#x20;
+* Configurability
 * Customizability
 * Library verification (vc-verifier)
 * Sample application verification
@@ -63,9 +63,9 @@ The Functional verification of the Inji Mobile Wallet application is performed o
 
 ### Test Devices
 
-&#x20;**Table 2: Test Devices**
+**Table 2: Test Devices**
 
-<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Device Model</td><td valign="top">OS and BLE version</td></tr><tr><td valign="top">iPhone 7</td><td valign="top">iOS 15.8 BLE 4.2</td></tr><tr><td valign="top">iPhone 11</td><td valign="top">iOS 26.3 BLE 5.0</td></tr><tr><td valign="top">iPhone 13</td><td valign="top">iOS 26.2.1 BLE 5.0</td></tr><tr><td valign="top">iPhone 14</td><td valign="top">iOS 26.2 BLE 5.3</td></tr><tr><td valign="top">SS Galaxy A03 core</td><td valign="top">Android 11 BLE 4.2</td></tr><tr><td valign="top">Vivo Y73</td><td valign="top">Android 13 BLE 5.0</td></tr><tr><td valign="top">Redmi 6A</td><td valign="top">Android 9 BLE 4.2</td></tr><tr><td valign="top">Techno POVA 6 NEO</td><td valign="top">Android 14 BLE 5.0</td></tr><tr><td valign="top">OPPO A59 5G</td><td valign="top">Android 13 BLE 5.3</td></tr><tr><td valign="top">ONE PLUS 12R</td><td valign="top">Android 15 BLE 5.3</td></tr><tr><td valign="top">Infinix NOTE 50X 5G</td><td valign="top">Android 15 BLE 5.4</td></tr><tr><td valign="top">Redmi 7A</td><td valign="top">Android 10 BLE 4.2</td></tr><tr><td valign="top">iTel</td><td valign="top">Android 14 BLE 5.0</td></tr><tr><td valign="top">Xiaomi Redmi NOTE 13 Pro</td><td valign="top">Android 15 BLE 5.2</td></tr><tr><td valign="top">iPhone XR </td><td valign="top">IOS 18 BLE 5.0</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Device Model</td><td valign="top">OS and BLE version</td></tr><tr><td valign="top">iPhone 7</td><td valign="top">iOS 15.8 BLE 4.2</td></tr><tr><td valign="top">iPhone 11</td><td valign="top">iOS 26.3 BLE 5.0</td></tr><tr><td valign="top">iPhone 13</td><td valign="top">iOS 26.2.1 BLE 5.0</td></tr><tr><td valign="top">iPhone 14</td><td valign="top">iOS 26.2 BLE 5.3</td></tr><tr><td valign="top">SS Galaxy A03 core</td><td valign="top">Android 11 BLE 4.2</td></tr><tr><td valign="top">Vivo Y73</td><td valign="top">Android 13 BLE 5.0</td></tr><tr><td valign="top">Redmi 6A</td><td valign="top">Android 9 BLE 4.2</td></tr><tr><td valign="top">Techno POVA 6 NEO</td><td valign="top">Android 14 BLE 5.0</td></tr><tr><td valign="top">OPPO A59 5G</td><td valign="top">Android 13 BLE 5.3</td></tr><tr><td valign="top">ONE PLUS 12R</td><td valign="top">Android 15 BLE 5.3</td></tr><tr><td valign="top">Infinix NOTE 50X 5G</td><td valign="top">Android 15 BLE 5.4</td></tr><tr><td valign="top">Redmi 7A</td><td valign="top">Android 10 BLE 4.2</td></tr><tr><td valign="top">iTel</td><td valign="top">Android 14 BLE 5.0</td></tr><tr><td valign="top">Xiaomi Redmi NOTE 13 Pro</td><td valign="top">Android 15 BLE 5.2</td></tr><tr><td valign="top">iPhone XR</td><td valign="top">IOS 18 BLE 5.0</td></tr></tbody></table>
 
 ### Test Environment
 
@@ -83,9 +83,9 @@ Manual Test Execution was completed across both Android and iOS platforms, achie
 
 **Table 4: Test Execution Summary**
 
-<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Platform</td><td valign="top">Total</td><td valign="top">Pass</td><td valign="top">Fail</td><td valign="top">Skip</td></tr><tr><td valign="top">Android</td><td valign="top">2295</td><td valign="top">2065</td><td valign="top">230</td><td valign="top">0</td></tr><tr><td valign="top">iOS</td><td valign="top">2104</td><td valign="top">1892</td><td valign="top">212</td><td valign="top">0</td></tr><tr><td valign="top">Total</td><td valign="top">4399</td><td valign="top">3957</td><td valign="top">442</td><td valign="top">0</td></tr><tr><td valign="top"><p>Test cases: 4399 Passed: 3957 Failed: 442 Skipped: 0</p><p>                                                 Test Rate: 100%, With Pass Rate: 89%</p></td><td valign="top"></td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Platform</td><td valign="top">Total</td><td valign="top">Pass</td><td valign="top">Fail</td><td valign="top">Skip</td></tr><tr><td valign="top">Android</td><td valign="top">2295</td><td valign="top">2065</td><td valign="top">230</td><td valign="top">0</td></tr><tr><td valign="top">iOS</td><td valign="top">2104</td><td valign="top">1892</td><td valign="top">212</td><td valign="top">0</td></tr><tr><td valign="top">Total</td><td valign="top">4399</td><td valign="top">3957</td><td valign="top">442</td><td valign="top">0</td></tr><tr><td valign="top"><p>Test cases: 4399 Passed: 3957 Failed: 442 Skipped: 0</p><p>Test Rate: 100%, With Pass Rate: 89%</p></td><td valign="top"></td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
 
-<figure><img src="../../../../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
 
 ### Combination Testing with device components
 
@@ -105,7 +105,7 @@ VC-Verifier is a backend library that cryptographically checks if a Verifiable C
 
 <figure><img src="../../../../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
 
-### Automation Result Mimoto API&#x20;
+### Automation Result Mimoto API
 
 Mimoto is the Backend for Frontend (BFF) service for Inji Wallet, acting as a secure proxy to orchestrate critical workflows like request validation, Verifiable Credential (VC) downloads, and wallet binding. The Mimoto API automation validates these BFF endpoints to ensure seamless integration and reliable data exchange between the Inji mobile application and the underlying services.
 
@@ -115,11 +115,11 @@ Mimoto is the Backend for Frontend (BFF) service for Inji Wallet, acting as a se
 
 <figure><img src="../../../../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
 
-### &#x20;Defect Metrics
+### Defect Metrics
 
 **Defect Metrics for the Release 0.22.0**
 
-The following table depicts only the bugs that are found and not addressed in the current release.&#x20;
+The following table depicts only the bugs that are found and not addressed in the current release.
 
 **Table 8: Defect Metrics for the Release**
 
@@ -135,9 +135,9 @@ Table 9: Defect Metrics for the known issues
 
 Known Issues Table Representation Chart
 
-<figure><img src="../../../../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
 
-## &#x20;Conclusion
+## Conclusion
 
 This section summarizes the key findings of test execution. It also provides a final QA recommendation on the build's readiness for release. The functional verification for Inji Mobile Wallet version 0.22.0 has been successfully completed across Android and iOS platforms. The testing cycle achieved a 100% execution rate with an 89% pass rate across a total of 4399 test cases. Additionally, API automation via Mimoto achieved a 100% pass rate.
 

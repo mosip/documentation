@@ -84,7 +84,7 @@ On Android Device:
 
 On iOS Device:
 
-<figure><img src="../../../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Test execution statistics
 

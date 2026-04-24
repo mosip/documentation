@@ -2,7 +2,7 @@
 
 ## Testing Scope
 
-The scope of testing is to verify fitment to the specification from the perspective of&#x20;
+The scope of testing is to verify fitment to the specification from the perspective of
 
 * Functionality
 * Deployability
@@ -46,7 +46,7 @@ Verification is performed on configurations as mentioned below
 
 ## Feature Health <a href="#heading-h.x0otrgbx4r9y" id="heading-h.x0otrgbx4r9y"></a>
 
-<figure><img src="../../../.gitbook/assets/ix-0-13-0-tr-features-health.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/ic-0131-feature-health.png" alt=""><figcaption></figcaption></figure>
 
 **Note**: For Esignet compatibility
 
@@ -61,7 +61,7 @@ Below are the test metrics by performing functional testing. The process followe
 
 <table><thead><tr><th width="318.59765625" valign="top">Total</th><th valign="top">Passed</th><th valign="top">Failed</th><th valign="top">NA</th></tr></thead><tbody><tr><td valign="top">783</td><td valign="top">772</td><td valign="top">9</td><td valign="top">0</td></tr><tr><td valign="top">Test Rate: 100%, With Pass Rate: 98.5% and Fail Rate: 2%</td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
 
-**Automation Statistics**&#x20;
+**Automation Statistics**
 
 * Sunbird use case
 
@@ -75,7 +75,7 @@ Below are the test metrics by performing functional testing. The process followe
 
 <table><thead><tr><th width="279.9375" valign="top">Total</th><th valign="top">Passed</th><th valign="top">Failed</th><th valign="top">Ignored</th><th valign="top">Known Issues</th></tr></thead><tbody><tr><td valign="top">560</td><td valign="top">199</td><td valign="top">0</td><td valign="top">199</td><td valign="top">35</td></tr><tr><td valign="top">Test Rate: 100%, With Pass Rate: 93.4% and Fail Rate: 6.6%</td><td valign="top"></td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
 
-&#x20;**MosipId Use case**&#x20;
+**MosipId Use case**
 
 **Note** - Ignored scenarios are not related to particular use cases and 35 scenarios are known issues can be tracked from INJICERT-681, INJICERT-1118, INJICERT-1176
 
@@ -90,6 +90,4 @@ The various metrics that assist in test tracking and efficiency are as follows:
 
 ## Tested with Components <a href="#heading-h.a2n0wcl6po9x" id="heading-h.a2n0wcl6po9x"></a>
 
-<table data-header-hidden><thead><tr><th width="140.8359375" valign="top"></th><th valign="top"></th><th width="124.95703125" valign="top"></th><th width="193.625" valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Module/Repo</td><td valign="top">Image</td><td valign="top">POM version</td><td valign="top">Dependent artifactID</td><td valign="top">Comments</td></tr><tr><td valign="top">Inji-certify-mosipid</td><td valign="top">mosipqa/inji-certify-with-plugins:0.13.x</td><td valign="top"> </td><td valign="top">Digital-credential-plugin - 0.5.0</td><td valign="top"> </td></tr><tr><td valign="top">Inji-certify-mock</td><td valign="top">mosipqa/inji-certify-with-plugins:0.13.x</td><td valign="top"> </td><td valign="top">Digital-credential-plugin - 0.5.0</td><td valign="top"> </td></tr><tr><td valign="top">Inji-certify-Insurance</td><td valign="top">mosipqa/inji-certify-with-plugins:0.13.x</td><td valign="top"> </td><td valign="top">Digital-credential-plugin - 0.5.0</td><td valign="top"><p> </p><p> </p></td></tr><tr><td valign="top">Inji-certify- landregistry</td><td valign="top">mosipqa/inji-certify-with-plugins:0.13.x</td><td valign="top"> </td><td valign="top">Digital-credential-plugin - 0.5.0</td><td valign="top"> </td></tr><tr><td valign="top">Mdoc-mdl</td><td valign="top">mosipqa/inji-certify-with-plugins:0.13.x</td><td valign="top"> </td><td valign="top">Digital-credential-plugin - 0.5.0</td><td valign="top"> </td></tr><tr><td valign="top">Inji-config</td><td valign="top">Releasing from release-0.12.x branch</td><td valign="top"> </td><td valign="top">Digital-credential-plugin - 0.5.0</td><td valign="top"><a href="https://github.com/mosip/inji-config/tree/release-0.8.x">https://github.com/mosip/inji-config/tree/release-0.12.x</a></td></tr><tr><td valign="top">eSignet</td><td valign="top">eSignet-1.6.2</td><td valign="top"> </td><td valign="top"> </td><td valign="top"> </td></tr><tr><td valign="top">Keymanager</td><td valign="top">As a library</td><td valign="top"><p>1.3.0-beta.5(1.3.0-SNAPSHOT)</p><p> </p></td><td valign="top"> </td><td valign="top">Getting release with branch name release-1.3.x</td></tr></tbody></table>
-
-&#x20;
+<table data-header-hidden><thead><tr><th width="140.8359375" valign="top"></th><th valign="top"></th><th width="124.95703125" valign="top"></th><th width="193.625" valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top">Module/Repo</td><td valign="top">Image</td><td valign="top">POM version</td><td valign="top">Dependent artifactID</td><td valign="top">Comments</td></tr><tr><td valign="top">Inji-certify-mosipid</td><td valign="top">mosipqa/inji-certify-with-plugins:0.13.x</td><td valign="top"></td><td valign="top">Digital-credential-plugin - 0.5.0</td><td valign="top"></td></tr><tr><td valign="top">Inji-certify-mock</td><td valign="top">mosipqa/inji-certify-with-plugins:0.13.x</td><td valign="top"></td><td valign="top">Digital-credential-plugin - 0.5.0</td><td valign="top"></td></tr><tr><td valign="top">Inji-certify-Insurance</td><td valign="top">mosipqa/inji-certify-with-plugins:0.13.x</td><td valign="top"></td><td valign="top">Digital-credential-plugin - 0.5.0</td><td valign="top"></td></tr><tr><td valign="top">Inji-certify- landregistry</td><td valign="top">mosipqa/inji-certify-with-plugins:0.13.x</td><td valign="top"></td><td valign="top">Digital-credential-plugin - 0.5.0</td><td valign="top"></td></tr><tr><td valign="top">Mdoc-mdl</td><td valign="top">mosipqa/inji-certify-with-plugins:0.13.x</td><td valign="top"></td><td valign="top">Digital-credential-plugin - 0.5.0</td><td valign="top"></td></tr><tr><td valign="top">Inji-config</td><td valign="top">Releasing from release-0.12.x branch</td><td valign="top"></td><td valign="top">Digital-credential-plugin - 0.5.0</td><td valign="top"><a href="https://github.com/mosip/inji-config/tree/release-0.8.x">https://github.com/mosip/inji-config/tree/release-0.12.x</a></td></tr><tr><td valign="top">eSignet</td><td valign="top">eSignet-1.6.2</td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr><tr><td valign="top">Keymanager</td><td valign="top">As a library</td><td valign="top">1.3.0-beta.5(1.3.0-SNAPSHOT)</td><td valign="top"></td><td valign="top">Getting release with branch name release-1.3.x</td></tr></tbody></table>
