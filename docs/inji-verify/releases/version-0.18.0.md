@@ -1,12 +1,12 @@
 # Version 0.18.0
 
-**Coming Soon!**
+<mark style="color:$danger;">**Coming Soon!**</mark>
 
 **Release Name**: Inji Verify v0.18.0
 
 **Support**: Developer Release
 
-**Release Date**: **Coming Soon!**
+**Release Date**: <mark style="color:$danger;">**Coming Soon!**</mark>
 
 ### **Overview**
 
