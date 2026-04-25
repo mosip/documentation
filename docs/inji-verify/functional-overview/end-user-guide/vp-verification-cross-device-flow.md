@@ -121,7 +121,7 @@ all over again (by displaying the popup window to select the credentials and res
 
 ***
 
-
+<!--
 
 Upcoming Release Crude Content:
 
@@ -150,6 +150,8 @@ Step #7: After that, the user will be automatically redirected to Inji Verify.
 Step #8: Once the user lands on Inji Verify, verification result of the shared VC will be displayed.
 
 Alternate Flow: In case the requested VCs are not already available in Web Wallet, the user will be prompted to download the corresponding credentials and will be requested to reinitiate the sharing process.
+
+-->
 
 
 
