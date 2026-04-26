@@ -13,9 +13,9 @@
 We are excited to announce the release of **Inji Verify v0.18.0.** This version introduces **the below features:**
 
 1.  **Support Server Side VP Verification: ECC - R1:**
-
     This feature introduces server-side verification of Verifiable Presentations (VPs) using Elliptic Curve Cryptography (ECC) based on the R1 curve. It enables a more robust and centralized verification mechanism, reduces client-side complexity, and aligns with modern decentralized identity standards, enhancing trust in the verification ecosystem.
-2. **Open ID for Verifiable Presentation via Inji Web Wallet:** This feature enables OpenID for Verifiable Presentations (OpenID4VP) integration between Inji Verify and the Inji Web Wallet, allowing seamless and standardized credential sharing and verification. It establishes a secure, interoperable flow where the verifier (Inji Verify) can request specific credentials, and the holder (via Inji Web Wallet) can present them in a compliant and privacy-preserving manner.
+2. **Open ID for Verifiable Presentation via Inji Web Wallet:** 
+    This feature enables OpenID for Verifiable Presentations (OpenID4VP) integration between Inji Verify and the Inji Web Wallet, allowing seamless and standardized credential sharing and verification. It establishes a secure, interoperable flow where the verifier (Inji Verify) can request specific credentials, and the holder (via Inji Web Wallet) can present them in a compliant and privacy-preserving manner.
 
 **Note:** The Inji Verify UI is a _reference implementation_ to demonstrate orchestration. Developers can selectively embed SDK components in the verifier applications as per their needs.
 
@@ -48,7 +48,6 @@ The following table outlines the tested and certified compatibility of Inji Veri
 | Pixel-Pass library  | [0.8.0](https://docs.inji.io/inji-verify/releases/version-0.17.0)              |
 | vc-verifier library | [1.7.0](https://docs.inji.io/inji-verify/releases/version-0.17.0)              |
 
-&#x20;
 
 ### **Bug Fixes**
 
