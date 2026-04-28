@@ -67,7 +67,7 @@ Table: Test Environment
 
 Table: Test Execution Summary
 
-<table><thead><tr><th width="278.04296875" valign="top">Platform</th><th valign="top">Total</th><th valign="top">Pass</th><th valign="top">Fail</th><th valign="top">Skip</th></tr></thead><tbody><tr><td valign="top">INJI WEB</td><td valign="top">1197</td><td valign="top">1098</td><td valign="top">92</td><td valign="top">0</td></tr><tr><td valign="top">Test Rate: 100% With Pass Rate: 92%</td><td valign="top"></td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
+<table><thead><tr><th width="278.04296875" valign="top">Platform</th><th valign="top">Total</th><th valign="top">Pass</th><th valign="top">Fail</th><th valign="top">Skip</th></tr></thead><tbody><tr><td valign="top">INJI WEB</td><td valign="top">1197</td><td valign="top">1005</td><td valign="top">92</td><td valign="top">0</td></tr><tr><td valign="top">Test Rate: 100% With Pass Rate: 92%</td><td valign="top"></td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
 
 ### Automation INJI Web UI
 
@@ -81,9 +81,7 @@ Table: API Automation Result
 
 <table><thead><tr><th width="270.52734375" valign="top">Total</th><th valign="top">Pass</th><th valign="top">Fail</th><th valign="top">Known Issues</th><th valign="top">Ignored</th></tr></thead><tbody><tr><td valign="top">357</td><td valign="top">320</td><td valign="top">0</td><td valign="top">4</td><td valign="top">33</td></tr><tr><td valign="top">Test Rate: 100% With Pass Rate: 100%</td><td valign="top"></td><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr></tbody></table>
 
-## Defect
-
-## Metrics
+### Defect Metrics
 
 Defect Metrics for the Release 0.17.0
 
