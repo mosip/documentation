@@ -134,4 +134,5 @@ It outlines the strategy used to ensure a comprehensive evaluation.
 
 <table data-header-hidden><thead><tr><th>Version</th><th>Author</th><th>Date</th><th valign="top">Review</th><th valign="top">Affected Sections</th></tr></thead><tbody><tr><td>V1.0</td><td>Mrudula</td><td>24/4/2026</td><td valign="top"><ol start="1"><li>Chaitanya Kesiraju</li><li>Ragini Krishna</li></ol></td><td valign="top">New Document</td></tr></tbody></table>
 
-&#x20;
+&#x20;The GitHub link to the detailed report is [**here**](https://github.com/mosip/test-management/tree/master/inji-web/inji%20web%200.17.0).
+
