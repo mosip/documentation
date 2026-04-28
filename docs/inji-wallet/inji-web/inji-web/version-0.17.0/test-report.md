@@ -89,7 +89,7 @@ The following table depicts only the bugs which are found and not addressed in t
 
 Table: Defect Metrics for the Release
 
-<table><thead><tr><th width="199.69921875" valign="top">Blocker</th><th valign="top">Critical</th><th valign="top">Major</th><th valign="top">Minor</th><th valign="top">Total</th></tr></thead><tbody><tr><td valign="top">0</td><td valign="top">0</td><td valign="top">52</td><td valign="top">31</td><td valign="top">83</td></tr></tbody></table>
+<table><thead><tr><th width="199.69921875" valign="top">Blocker</th><th valign="top">Critical</th><th valign="top">Major</th><th valign="top">Minor</th><th valign="top">Total</th></tr></thead><tbody><tr><td valign="top">0</td><td valign="top">0</td><td valign="top">2</td><td valign="top">4</td><td valign="top">6</td></tr></tbody></table>
 
 ### Known Issues Metrics
 
@@ -97,7 +97,7 @@ This section focuses on a separate category of issues that are known but not add
 
 Table: Defect Metrics for the known issues
 
-<table><thead><tr><th valign="top">Blocker</th><th valign="top">Critical</th><th valign="top">Major</th><th valign="top">Minor</th><th valign="top">Total</th></tr></thead><tbody><tr><td valign="top">0</td><td valign="top">0</td><td valign="top">53</td><td valign="top">31</td><td valign="top">84</td></tr></tbody></table>
+<table><thead><tr><th valign="top">Blocker</th><th valign="top">Critical</th><th valign="top">Major</th><th valign="top">Minor</th><th valign="top">Total</th></tr></thead><tbody><tr><td valign="top">0</td><td valign="top">0</td><td valign="top">52</td><td valign="top">31</td><td valign="top">83</td></tr></tbody></table>
 
 ## Conclusion
 
