@@ -31,6 +31,7 @@ Inji Verify adheres to industry standards for interoperable and trustworthy cred
 | Ed25519 Verification Key 2018 | Supported |
 | Ed25519 Verification Key 2020 | Supported |
 | RSA Verification Key 2018 | Supported |
+| ECC R1 (P-256 / secp256r1) | Supported |
 
 ### Verification Methods
 
@@ -71,6 +72,7 @@ Verify Verifiable Presentations securely using OpenID4VP standards for both cros
 - **Cross-Device Flow**: Generate authorization requests as QR codes that users scan with their mobile wallet (Inji Web or any OpenID4VP-compliant wallet), receive signed Verifiable Presentations, and display validated results
 - **Same-Device Flow**: Initiate verification on the same mobile device via deep links, enabling seamless app-to-app credential sharing without a second device
 - **Streamlined Online Sharing**: Embed URLs instead of dense VCs in QR codes, reducing complexity while maintaining secure credential retrieval from designated storage locations
+- **Inji Web Wallet OpenID4VP Integration**: Establish a secure, standards-compliant credential exchange between Inji Verify (verifier) and Inji Web Wallet (holder), enabling privacy-preserving presentation and verification flows
 
 ### SD-JWT Credential Verification
 
@@ -165,6 +167,7 @@ Robust server-side verification with persistent data storage.
 - **VC-Verifier Library Integration**: Server-side verification supporting Ed25519 and RSA cryptographic standards
 - **PostgreSQL Database**: Durable data storage replacing in-memory solutions, ensuring verification continuity and audit trails
 - **VP Proof Verification**: Validate both Verifiable Credentials and Verifiable Presentations server-side
+- **Server-Side VP Verification with ECC R1**: Verify Verifiable Presentations on the server using R1-curve cryptography, centralizing trust decisions, reducing client-side complexity, and aligning with modern decentralized identity standards
 
 ### API Documentation
 
