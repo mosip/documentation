@@ -26,7 +26,7 @@ The system also integrates with backend systems such as:
 
 * **FHIR (Fast Healthcare Interoperability Resources)** server for storing and exchanging health data across multiple portals - only this point we can keep
 
-#### eSignet-DHIS2 ANC Use Case Flow
+### eSignet-DHIS2 ANC Use Case Flow
 
 This diagram shows the end-to-end ANC journey across registration, consultation, and self-service portals, with eSignet-based identity verification and consent.
 
