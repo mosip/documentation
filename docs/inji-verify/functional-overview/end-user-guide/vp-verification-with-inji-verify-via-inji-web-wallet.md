@@ -4,42 +4,38 @@ This feature enables OpenID for Verifiable Presentations (OpenID4VP) integration
 
 This feature enhances user experience through a smooth and consent-driven interaction model, ensures adherence to global OpenID standards, and strengthens interoperability across identity ecosystems while maintaining strong privacy and security guarantees.
 
+1\. Go to Inji Verify Home page, choose VP Verification option to proceed.
 
-Step #1: Once you choose Inji Verify Home page, choose VP Verification option to proceed.
-
-Step #2: Click on Request Verifiable Credentials
-
+2\. Click on Request Verifiable Credentials.
 
 ![Image](../../../.gitbook/assets/iv0180-image-1.png)
 
-
-Step #3: From the list of VCs, choose the VC/VCs that you want to request from the holder and click on “Open Web Wallets” button.
+3\. From the list of VCs, choose the VC/VCs that you want to request from the holder and click on 'Open Web Wallets' button.
 
 ![Image](../../../.gitbook/assets/iv0180-image-2.png)
 
-Step #4: Choose the wallet that you want to open and click on Proceed.
+4\. Choose the wallet that you want to open and click on Proceed.
 
 ![Image](../../../.gitbook/assets/iv0180-image-3.png)
 
-Step #5: The user will be redirected to Inji Web Wallet Login page. The user can then login using their  valid credentials.
+5\. The user will be redirected to Inji Web Wallet Login page. You can then login using their valid credentials.
 
 ![Image](../../../.gitbook/assets/iv0180-image-4.png)
 
-![Image](../../../.gitbook/assets/iv0180-image-5.png)
-![Image](../../../.gitbook/assets/iv0180-image-6.png)
+![Image](../../../.gitbook/assets/iv0180-image-5.png) ![Image](../../../.gitbook/assets/iv0180-image-6.png)
 
-Step #6: Upon successfully login, the user will have to select the VCs that they would want to share and then click on “I consent & share”.
+6\. Upon successfully login, the user will have to select the VCs that they would want to share and then click on 'I consent & share'.
 
 ![Image](../../../.gitbook/assets/iv0180-image-7.png)
 
+7\. After that, the user will be automatically redirected to Inji Verify.&#x20;
 
-Step #7: After that, the user will be automatically redirected to Inji Verify.
 ![Image](../../../.gitbook/assets/iv0180-image-8.png)
 
-Step #8: Once the user lands on Inji Verify, verification result of the shared VC will be displayed.
-![Image](../../../.gitbook/assets/iv0180-image-9.png)
-![Image](../../../.gitbook/assets/iv0180-image-10.png)
-![Image](../../../.gitbook/assets/iv0180-image-11.png)
+8\. Once the user lands on Inji Verify, verification result of the shared VC will be displayed. ![Image](../../../.gitbook/assets/iv0180-image-9.png) ![Image](../../../.gitbook/assets/iv0180-image-10.png) ![Image](../../../.gitbook/assets/iv0180-image-11.png)
 
-Alternate Flow: In case the requested VCs are not already available in Web Wallet, the user will be prompted to download the corresponding credentials and will be requested to reinitiate the sharing process.
-![Image](../../../.gitbook/assets/iv0180-image-12.png)
+
+
+**Alternate Flow**: In case the requested VCs are not already available in Web Wallet, the user will be prompted to download the corresponding credentials and will be requested to reinitiate the sharing process.
+
+&#x20;![Image](../../../.gitbook/assets/iv0180-image-12.png)
