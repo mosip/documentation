@@ -26,7 +26,7 @@ We are excited to announce the release of **Inji Verify** [**v0.18.0**](https://
 | Repositories | Tags: Released/Dependent                                        |
 | ------------ | --------------------------------------------------------------- |
 | Inji Verify  | [**v0.18.0**](https://github.com/inji/inji-verify/tree/v0.18.0) |
-| vc-verifer   | [v1.8.0](https://github.com/inji/vc-verifier/tree/v1.8.0)       |
+| vc-verifer   | [**v1.8.0**](https://github.com/inji/vc-verifier/tree/v1.8.0)   |
 
 ### **Compatible Modules**
 
