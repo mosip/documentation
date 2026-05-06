@@ -126,6 +126,8 @@
   * [API](inji-wallet/inji-mobile/api.md)
   * [Deploy](readme/setup/deploy.md#deploying-mimoto-backend-for-inji-wallet)
   * [Releases](inji-wallet/inji-mobile/versions/README.md)
+    * [Version 0.22.1](inji-wallet/inji-mobile/versions/version-0.22.1/README.md)
+      * [Test Report](inji-wallet/inji-mobile/versions/version-0.22.1/test-report.md)
     * [Version 0.22.0](inji-wallet/inji-mobile/versions/version-0.22.0/README.md)
       * [Test Report](inji-wallet/inji-mobile/versions/version-0.22.0/test-report.md)
     * [Version 0.21.0](inji-wallet/inji-mobile/versions/version-0.21.0/README.md)
