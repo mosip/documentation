@@ -30,7 +30,7 @@ This feature enhances user experience through a smooth and consent-driven intera
 
 7\. After that, the user will be automatically redirected to Inji Verify.&#x20;
 
-![Image](../../../.gitbook/assets/iv0180-image-8.png)
+<img src="../../../.gitbook/assets/iv0180-image-8.png" alt="Image" data-size="original">
 
 8\. Once the user lands on Inji Verify, verification result of the shared VC will be displayed. ![Image](../../../.gitbook/assets/iv0180-image-9.png) ![Image](../../../.gitbook/assets/iv0180-image-10.png) ![Image](../../../.gitbook/assets/iv0180-image-11.png)
 

@@ -54,4 +54,4 @@ Below is the list of fixes as part of the **0.18.0** release:
 * [Integration Guide](https://docs.inji.io/inji-verify/technical-overview/integration-guides)
 * [API Documentation](https://mosip.stoplight.io/studio/inji-verify)
 * [Collab Guide](https://mosip.atlassian.net/wiki/spaces/PROD/pages/1306984580)
-* QA Report
+* [QA Report](test-report.md)
