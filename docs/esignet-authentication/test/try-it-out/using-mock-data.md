@@ -2,12 +2,12 @@
 
 While you want to explore eSignet you can use the following deployment in our 'Collab-Environment'.
 
-* MOSIP Deployment in Collab Environment
-* Mock-Data based Deployment in Environment
+* Collab MOSIP Deployment
+* Collab Mock-Data based Deployment
 
 ### Exploring eSignet with MOSIP Deployment in Collab Environment
 
-#### Personas
+#### Personas - MOSIP Foundational ID
 
 You can use one of following personas and UINs on the respective cards
 
@@ -33,3 +33,15 @@ To simplify exploring it with a 'Collab MOSIP Identity Deployment' eSignet suppo
 * The default OTP for testing is "111111" (six ones).
 
 For a step-by-step guide on logging in with OTP using eSignet, refer to [this detailed guide](../end-user-guide/health-portal/login-with-otp.md).
+
+
+
+
+<!--
+
+### Exploring eSignet with Mock Data based Deployment in Collab Environment
+
+#### Personas - Mock Data
+
+-->
+
