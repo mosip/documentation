@@ -31,9 +31,9 @@ You will need UIN (Unique identification number) as a demo credential whic will 
 
 For sample Insurance Credentials, please provide the below details in the eSignet authentication page:
 
-* Policy id: 7070
-* Name: aswin
-* DOB: 19/02/2025
+   * Policy Name: insuranceCredentials
+   * DOB: 2000-01-01
+   * Policy Number: 12345
 
 ### Inji Web Wallet
 
