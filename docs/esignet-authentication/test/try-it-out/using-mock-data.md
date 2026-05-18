@@ -25,7 +25,7 @@ Individual images are included to facilitate **selfie authentication** for the I
 **Note:** The data used for these Virtual IDs (VIDs) is entirely fictitious, and the images displayed are AI-generated from an [external website](https://this-person-does-not-exist.com/en).
 {% endhint %}
 
-#### Personas - MOCK IDs
+#### Personas - MOCK IDs and UINs
 
 Name: Dr. William Anderson -&#x20;
 
