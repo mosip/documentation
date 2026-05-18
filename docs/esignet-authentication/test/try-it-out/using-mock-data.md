@@ -11,6 +11,12 @@ While you want to explore eSignet you can use the following deployment in our 'C
 
 You can use one of following personas and UINs on the respective cards
 
+<table><thead><tr><th width="133.12109375">Name</th><th width="135.40234375">UIN</th><th width="111.59375">Gender</th><th width="142.11328125">DOB</th><th>Address</th></tr></thead><tbody><tr><td>Maria Powell</td><td>3519657608</td><td>Female</td><td>30/10/1991</td><td>26/C, IIIT-B, ABC Region, ABC City, ABC Zone, 10106</td></tr><tr><td>James Rodrigious</td><td>2760459465</td><td>Male</td><td>29/04/1992</td><td>26/C, IIIT-B, ABC Region, ABC City, ABC Zone, 10106</td></tr><tr><td>George Cooper</td><td>2018502367</td><td>Male</td><td>29/04/1985</td><td>26/C, IIIT-B, ABC Region, ABC City, ABC Zone, 10106</td></tr><tr><td>Jane Thompson</td><td>3473541796</td><td>Female</td><td>29/04/1985</td><td>26/C, IIIT-B, ABC Region, ABC City, ABC Zone, 10106</td></tr></tbody></table>
+
+
+
+
+
 ![](../../../.gitbook/assets/maria-powell.png) ![](../../../.gitbook/assets/james-rodrigious.png)
 
 ![](../../../.gitbook/assets/george-cooper.png) ![](../../../.gitbook/assets/jane-thompson.png)
@@ -33,15 +39,3 @@ To simplify exploring it with a 'Collab MOSIP Identity Deployment' eSignet suppo
 * The default OTP for testing is "111111" (six ones).
 
 For a step-by-step guide on logging in with OTP using eSignet, refer to [this detailed guide](../end-user-guide/health-portal/login-with-otp.md).
-
-
-
-
-<!--
-
-### Exploring eSignet with Mock Data based Deployment in Collab Environment
-
-#### Personas - Mock Data
-
--->
-
