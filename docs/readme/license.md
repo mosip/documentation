@@ -12,7 +12,7 @@ The documentation is licensed under a Creative Commons Attribution 4.0 Internati
 
 All eSignet's [core](https://github.com/mosip) repositories are licensed under the terms of [Mozilla Public License 2.0](https://github.com/mosip/commons/blob/master/LICENSE).
 
-All eSugnet code is owned and maintained by International Institute of Information Technology, Bangalore, on behalf of eSignet.
+All eSignet code is owned and maintained by International Institute of Information Technology, Bangalore, on behalf of eSignet.
 
 ⚠️ **Trademark Notice:**
 
