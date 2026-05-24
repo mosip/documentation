@@ -154,7 +154,7 @@ Performance data load has been populated before the run to ensure realistic resu
 
 **Table of eSignet endpoint metrics**
 
-<figure><img src="../../../.gitbook/assets/Metrics Perfromance Report (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Metrics Perfromance Report.png" alt=""><figcaption></figcaption></figure>
 
 **Time chart of 90th percentile response time for eSignet services**
 

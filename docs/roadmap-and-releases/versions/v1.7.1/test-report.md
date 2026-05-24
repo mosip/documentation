@@ -2,7 +2,7 @@
 
 ## Testing Scope
 
-The scope of testing is to verify fitment to the specification from the perspective of&#x20;
+The scope of testing is to verify fitment to the specification from the perspective of
 
 * Functionality
 * Deployability
@@ -60,7 +60,7 @@ Verification is performed on various configurations as mentioned below
 
 ## Feature Health
 
-<figure><img src="../../../.gitbook/assets/es-171-tr-feature-health.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/es-170-features-health.png" alt=""><figcaption></figcaption></figure>
 
 ## Test execution statistics
 
@@ -169,6 +169,3 @@ Key tracking metrics:
 |   esignet-plugins (sunbird-rc-plugin)   |  release-1.3.x |  release-1.3.4 |       83.0      |      0      |     0    |     0    |         0%         |
 
 Refer to the github link for more on reports [**here**](https://github.com/mosip/test-management/tree/master/e-signet/1.7.1).
-
-
-

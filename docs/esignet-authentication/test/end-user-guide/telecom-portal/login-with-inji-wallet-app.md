@@ -49,9 +49,7 @@ Within the INJI Wallet, the resident is prompted to choose a **verifiable creden
 
 <figure><img src="../../../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 
-
-
-#### Step 5:  Select MOSIP ID Credential
+#### Step 5: Select MOSIP ID Credential
 
 1. The resident selects the **National ID credential** to be shared for authentication and clicks Verify in INJI wallet App.
 2. Before sharing the credential, the INJI Wallet prompts the resident to complete **local face authentication** on the device.
@@ -62,7 +60,7 @@ Within the INJI Wallet, the resident is prompted to choose a **verifiable creden
    * **Voluntary claims** are shown as optional and can be selected by the resident.
    * The resident selects the required user claims and clicks **Allow** to provide consent.
 
-<div align="center" data-full-width="false"><figure><img src="../../../../.gitbook/assets/image (20).png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../../.gitbook/assets/image (21).png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../../.gitbook/assets/Screenshot_20260207_025107_Inji Wallet Collab (1).jpg" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../../.gitbook/assets/Screenshot_20260207_024044_Inji Wallet Collab (1).jpg" alt="" width="188"><figcaption></figcaption></figure></div>
+<div align="center" data-full-width="false"><figure><img src="../../../../.gitbook/assets/image (20).png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../../.gitbook/assets/image (21).png" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../../.gitbook/assets/Screenshot_20260207_025107_Inji Wallet Collab.jpg" alt="" width="188"><figcaption></figcaption></figure> <figure><img src="../../../../.gitbook/assets/Screenshot_20260207_024044_Inji Wallet Collab.jpg" alt="" width="188"><figcaption></figcaption></figure></div>
 
 #### Step 8: Select eSIM Plan
 
@@ -101,4 +99,3 @@ Upon successful submission:
 <figure><img src="../../../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
 This completes the **eSIM allocation process using National ID authentication via eSignet**.
-

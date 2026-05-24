@@ -9,7 +9,7 @@
 
 1\. Resident launches the relying party's portal and clicks on _**Sign In with eSignet**_.
 
-<figure><img src="../../../../.gitbook/assets/Health services home page (1).png" alt=""><figcaption><p>Health Portal Home Page</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Health services home page.png" alt=""><figcaption><p>Health Portal Home Page</p></figcaption></figure>
 
 2\. Resident selects the _**Login with Inji Mobile App**_ option.
 
@@ -37,4 +37,4 @@ As seen below, the authentication is in progress.
 
 7. The resident can log into the relying party portal and view their details on the user profile page.
 
-<figure><img src="../../../../.gitbook/assets/new8-healthServices-user-profile (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/new8-healthservices-user-profile.png" alt=""><figcaption></figcaption></figure>

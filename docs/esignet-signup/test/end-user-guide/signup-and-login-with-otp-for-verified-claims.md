@@ -40,7 +40,7 @@ Clicking **Continue** redirects the user to a page where they can enter basic pe
 
 9. The login screen appears, displaying the available login options for the user. To proceed, the user selects the **Login with OTP** option.
 
-<figure><img src="../../../.gitbook/assets/signup_auth_factor_screen_end_user_guide_rck (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/signup_auth_factor_screen_end_user_guide_rck.png" alt=""><figcaption></figcaption></figure>
 
 10. Enter the mobile number used during account setup in the previous steps and click **Get OTP**.
 

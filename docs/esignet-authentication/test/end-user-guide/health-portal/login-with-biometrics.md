@@ -4,7 +4,7 @@ The login with biometrics is illustrated with the help of a demo health portal.
 
 1\. On the portal, the resident clicks on _**Sign In with eSignet**_.
 
-<figure><img src="../../../../.gitbook/assets/Health services home page (1).png" alt=""><figcaption><p>Health Portal login page</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Health services home page.png" alt=""><figcaption><p>Health Portal login page</p></figcaption></figure>
 
 2\. To get started with login using biometrics, the resident clicks _**Login with Biometrics**_.
 
@@ -24,7 +24,7 @@ The resident clicks on the _**Scan and Verify**_ button.
 
 5\. The resident is then navigated to the Consent page. On this page, the **Essential** and **Voluntary** claims are displayed.
 
-![](../../../../.gitbook/assets/new6-esignetConsent.png)
+![](../../../../.gitbook/assets/new6-esignetconsent.png)
 
 {% hint style="info" %}
 The consent screen is presented solely to the resident if consent has not previously been obtained. Additionally, a timer is incorporated into the consent screen, allowing the resident to respond within the designated time frame. If the allotted time elapses, residents will be redirected to the relying party user interface.
@@ -36,4 +36,4 @@ The consent screen is presented solely to the resident if consent has not previo
 
 7\. The resident clicks on the _**Allow**_ button. The system navigates the resident to the User Profile page and the page displays their details based on the consent provided.
 
-![Profile page](<../../../../.gitbook/assets/new8-healthServices-user-profile (1).png>)
+![Profile page](../../../../.gitbook/assets/new8-healthservices-user-profile.png)

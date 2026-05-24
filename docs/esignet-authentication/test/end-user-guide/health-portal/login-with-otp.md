@@ -7,7 +7,7 @@ The resident is issued with a unique virtual ID for a country's foundation ID. I
 
 1\. On the portal, the resident clicks on the button _**Sign In with eSignet**_.
 
-<figure><img src="../../../../.gitbook/assets/Health services home page (1).png" alt=""><figcaption><p>Sign in with eSignet</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Health services home page.png" alt=""><figcaption><p>Sign in with eSignet</p></figcaption></figure>
 
 The login screen appears and the resident is displayed with the options they can choose for login.
 
