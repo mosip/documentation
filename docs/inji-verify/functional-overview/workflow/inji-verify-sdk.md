@@ -316,6 +316,8 @@ sequenceDiagram
 
 ***
 
+<!-- Hold uptill release
+
 ## New Content
 
 ## INJI VERIFY SDK
@@ -1005,6 +1007,6 @@ If summariseResults = false, the response will be:
 **Related content**
 
 
-
+-->
 
 
