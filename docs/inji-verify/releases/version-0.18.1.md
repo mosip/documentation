@@ -28,30 +28,27 @@ This release improves stability, correctness, and reliability of existing functi
 
 &#x20;
 
-### **Projects: Released**
+### **Repositories Released**
 
-**Inji Verify Repo** → 4 projects (all these projects are of same version) as below:
+| Repositories                        | Tags Released/Dependency |
+| ----------------------------------- | ------------------------ |
+| inji-verify-service                 |                          |
+| inji-verify-ui (ref implementation) |                          |
+| SDK                                 |                          |
+| API-Test                            |                          |
 
-i) inji-verify-service - \<Insert Link Here>
 
-ii) inji-verify-ui (ref implementation) - \<Insert Link Here>
-
-iii) SDK - \<Insert Link Here>
-
-iv) API-Test - \<Insert Link Here>
-
-&#x20;
 
 ### **Compatible modules**
 
 The following table outlines the tested and certified compatibility of Inji Verify 0.18.1 with other modules.
 
-| **Module**          | **Version**                                                                    |
-| ------------------- | ------------------------------------------------------------------------------ |
-| Inji Wallet         | [0.22.](https://docs.inji.io/inji-wallet/inji-mobile/versions/version-0.22.0)1 |
-| Inji Web            | [0.](https://docs.inji.io/inji-wallet/inji-web/inji-web/version-0.16.0)17.0    |
-| Pixel-Pass library  | [0.8.0](https://docs.inji.io/inji-verify/releases/version-0.17.0)              |
-| vc-verifier library | 1.8.1                                                                          |
+| **Module**          | **Version** |
+| ------------------- | ----------- |
+| Inji Wallet         | 0.22.1      |
+| Inji Web            | 0.17.0      |
+| Pixel-Pass library  | 0.8.0       |
+| vc-verifier library | 1.8.1       |
 
 &#x20;
 
