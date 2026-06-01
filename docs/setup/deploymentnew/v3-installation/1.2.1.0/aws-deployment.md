@@ -99,7 +99,7 @@
       * publicKeyName
     * update the details of the subnets to be used from vpc
   * Execute `eksctl` command to create cluster
-  ```
+  ```sh
   eksctl create cluster -f rancher.cluster.config
   ``` 
   * Wait for the cluster creation to complete, generally it takes around 30 minutes to create or update cluster.
@@ -109,7 +109,7 @@
   * Change file permission using below command:`chmod 400 ~/.kube/obs-cluster.config`
   * Set the `KUBECONFIG` properly so that you can access the cluster.`export KUBECONFIG=~/.kube/obs-cluster.config`
   * Test cluster access:
-    * `kubect get nodes`
+    * `kubectl get nodes`
       * Command will result in details of the nodes of the rancher cluster.
 
 ## 3. Observation K8s Cluster’s Ingress and Storage class setup
@@ -240,7 +240,7 @@ Once the rancher cluster is ready we need ingress and storage class to be set fo
 
     * `cd $K8_ROOT/k8-cluster/csp/aws`
     * Copy `cluster.config.sample` to `mosip.cluster.config`.
-    * Review and update the below mentioned parameters of `rancher.cluster.config` carefully.
+    * Review and update the below mentioned parameters of `mosip.cluster.config` carefully.
       * name : cluster name.
       * region : AWS region for EKS cluster.
       * version : "1.24"
@@ -266,7 +266,7 @@ Once the rancher cluster is ready we need ingress and storage class to be set fo
     * Set the `KUBECONFIG` properly so that you can access the cluster.\
       `export KUBECONFIG=~/.kube/mosip-cluster.config`
     * Test cluster access:
-      * `kubect get nodes`
+      * `kubectl get nodes`
         * Command will result in details of the nodes of the MOSIP cluster.
 
 ## 7. Import Mosip Cluster into Rancher UI
@@ -427,7 +427,7 @@ kubectl apply -f https://rancher.e2e.mosip.net/v3/import/pdmkx6b4xxtpcd699gzwdtt
     * [04-insight.ndjson](https://github.com/mosip/k8s-infra/blob/main/logging/dashboards/04-insight.ndjson) contains dashboards which show insights into MOSIP processes, like the number of UINs generated (total and per hr), the number of Biometric deduplications processed, number of packets uploaded etc, called `MOSIP Insight` dashboard.
     * [05-response-time.ndjson](https://github.com/mosip/k8s-infra/blob/main/logging/dashboards/05-response-time.ndjson) contains dashboards which show how quickly different MOSIP Services are responding to different APIs, over time, called `Response Time` dashboard.
   * Import dashboards:
-    * `cd K8_ROOT/logging/dashboard`
+    * `cd $K8_ROOT/logging/dashboard`
     * `./load_kibana_dashboards.sh ./dashboards <cluster-kube-config-file>`
   * View dashbords
     * Open kibana dashboard from: `https://kibana.sandbox.xyz.net`.

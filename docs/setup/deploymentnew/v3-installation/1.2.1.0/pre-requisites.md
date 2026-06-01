@@ -35,10 +35,10 @@ As only secured https connections are allowed via nginx server will need below m
 > * Please ensure the following tools with the specified versions are installed on your personal computer.
 
 * [git](https://github.com/git-guides/install-git) - version 2.25.1 or higher.
-* [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)- version 2.12.4 or higher
+* [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)- version 1.23.6 or higher
 * [helm](https://helm.sh/docs/intro/install/)- any client version above 3.0.0 and add below repos as well:
 
-```
+```bash
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo add mosip https://mosip.github.io/mosip-helm
 ```
@@ -48,11 +48,11 @@ helm repo add mosip https://mosip.github.io/mosip-helm
 * [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html) -  version > 2.12.4
 * Openssl Need openssl version 1.1.1 specifically for regclient installation.
   * Check the current OpenSSL version:
-    ```
+    ```bash
     openssl version
     ```
    * If it's not OpenSSL 1.1.1f, remove the existing OpenSSL
-     ```
+     ```bash
      sudo apt remove openssl 
      ```
    * Manually install OpenSSL 1.1.1f by following this [guide](https://learnubuntu.com/install-openssl/#install-openssl-manually-in-ubuntu): 
@@ -60,11 +60,11 @@ helm repo add mosip https://mosip.github.io/mosip-helm
      > * While following the guide:
      >   * Replace all instances of openssl-1.1.1s with openssl-1.1.1f.
      >   * Skip the commands that create backups of binaries:
-     >     ```
+     >     ```bash
      >     sudo mv /usr/bin/c_rehash /usr/bin/c_rehash.backup   sudo mv /usr/bin/openssl /usr/bin/openssl.backup
      >     ```
      >   * After completing the installation, verify the OpenSSL version again:
-     >     ```
+     >     ```bash
      >     openssl version
      >     ```
      >      * It should show: OpenSSL 1.1.1f
