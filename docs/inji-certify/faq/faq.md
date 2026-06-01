@@ -4,7 +4,7 @@
 
 <summary>Why and what was the segregation of eSignet VCI Component to Inji Certify?</summary>
 
-#### Segregation of eSignet VCI Component to Inji Certify
+**Segregation of eSignet VCI Component to Inji Certify**
 
 Inji Certify, a platform for issuing and managing verifiable credentials (VCs), has enhanced its system by segregating the eSignet VCI component. This strategic move optimizes functionality and scalability.
 
