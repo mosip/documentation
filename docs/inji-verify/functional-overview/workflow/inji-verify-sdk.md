@@ -10,40 +10,46 @@ Inji Verify SDK is a library which exposes React components for integrating Inji
 ### Local Publishing Guide
 
 Install the dependencies\
-npm install
+`npm install`
 
 Build the project\
-npm run build
+`npm run build`
 
 Publish the npm package using Verdaccio\
 We use [verdaccio](https://verdaccio.org/docs/what-is-verdaccio). npm link or yarn link won't work as we have peer dependencies. Follow the docs to setup Verdaccio. Then run\
-npm publish --registry \<http://localhost:\<VERADACCIO\_PORT>>
+`npm publish --registry <http://localhost:<VERADACCIO_PORT>>`
 
 **Prerequisites**
 
 * Ract Project Setup
 * Proper permissions for camera access (mobile/web) (QRCodeVerification)
 
-> **NOTE**\
-> The component does not support other frontend frameworks like Angular, Vue, or React Native.\
-> The component is written in React + TypeScript
+{% hint style="info" %}
+**NOTE**\
+The component does not support other frontend frameworks like Angular, Vue, or React Native.\
+The component is written in React + TypeScript
+{% endhint %}
 
 **Backend Requirements**
 
 To use the component, you must host a verification backend that implements the OpenID4VP protocol. This backend is referred to as the inji-verify-service. It also needs to adehere to the OpenAPI spec defined here in case if the backend service is not inji-verify-service.
 
-> ⚠️ Important: The component expects these endpoints to be accessible via a base URL (verifyServiceUrl).\
-> Example:\
-> If you deploy the inji-verify/verify-service at:\
-> ”[https://your-backend.com/v1/verify](https://your-backend.com/v1/verify)”\
-> Then use this as the verifyServiceUrl in the component:\
-> verifyServiceUrl="[https://your-backend.com/v1/verify](https://your-backend.com/v1/verify)"
+{% hint style="info" %}
+⚠️ Important: The component expects these endpoints to be accessible via a base URL (verifyServiceUrl).\
+Example:\
+If you deploy the inji-verify/verify-service at:\
+”[https://your-backend.com/v1/verify](https://your-backend.com/v1/verify)”\
+Then use this as the verifyServiceUrl in the component:\
+verifyServiceUrl="[https://your-backend.com/v1/verify](https://your-backend.com/v1/verify)"
+{% endhint %}
 
-> **Note**
->
-> * The SDK uses a session-based verification flow internally.
-> * Session handling, redirects, and result fetching are managed by the SDK.
-> * No manual handling of transactionId or browser storage is required.
+{% hint style="info" %}
+**Note**
+
+* The SDK uses a session-based verification flow internally.
+* Session handling, redirects, and result fetching are managed by the SDK.
+* No manual handling of transactionId or browser storage is required.
+{% endhint %}
 
 ### Integration Guide
 
@@ -139,11 +145,17 @@ If summariseResults = true, the response will be:
 }
 ```
 
-> **Security Recommendation**
->
-> Avoid consuming results directly from VPProcessed or VCProcessed.\
-> Instead, use VPReceived or VCReceived events to capture the transactionId, then retrieve the verification results securely from your backend's verification service endpoint.\
-> This ensures data integrity and prevents reliance on client-side verification data for final decisions.
+
+
+{% hint style="info" %}
+**Security Recommendation**
+
+Avoid consuming results directly from VPProcessed or VCProcessed.\
+Instead, use VPReceived or VCReceived events to capture the transactionId, then retrieve the verification results securely from your backend's verification service endpoint.\
+This ensures data integrity and prevents reliance on client-side verification data for final decisions.
+{% endhint %}
+
+
 
 ### Detailed Component Guide
 
