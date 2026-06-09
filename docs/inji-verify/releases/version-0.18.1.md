@@ -18,35 +18,24 @@ This release improves stability, correctness, and reliability of existing functi
 
 ### **Repositories: Released/Dependent**
 
-| Repositories | Tags: Released/Dependent |
-| ------------ | ------------------------ |
-| Inji Verify  | **v0.18.1**              |
-
-### **Repositories Released**
-
-| Repositories                        | Tags Released/Dependency |
-| ----------------------------------- | ------------------------ |
-| inji-verify-service                 |                          |
-| inji-verify-ui (ref implementation) |                          |
-| SDK                                 |                          |
-| API-Test                            |                          |
+| Repositories         | Tags Released/Dependency                                                                         |
+| -------------------- | ------------------------------------------------------------------------------------------------ |
+| inji-verify-service  | [0.18.1](https://github.com/inji/inji-verify/tree/release-0.18.x)                                |
+| vc-verifier library  | [1.8.1](https://github.com/inji/vc-verifier/tree/release-1.8.x#from-version-release-18x-onwards) |
 
 ### **Compatible modules**
 
 The following table outlines the tested and certified compatibility of Inji Verify 0.18.1 with other modules.
 
-| Module              | Version |
-| ------------------- | ------- |
-| Inji Wallet         | 0.22.1  |
-| Inji Web            | 0.17.0  |
-| Pixel-Pass library  | 0.8.0   |
-| vc-verifier library | 1.8.1   |
+| Module             | Version                                                    |
+| ------------------ | ---------------------------------------------------------- |
+| Inji Wallet        | 0.22.1 (Yet to release)                                    |
+| Inji Web           | [0.17.0](https://github.com/inji/inji-verify/tree/v0.17.0) |
+| Pixel-Pass library | [0.8.0](https://github.com/inji/pixelpass/tree/v0.8.0)     |
 
 ### **Bug Fixes**
 
-Below is the list of fixes as part of the **0.18.1** release: <i class="fa-github">:github:</i>
-
-**Query**: [https://github.com/orgs/inji/projects/3/views/7?filterQuery=milestone%3A0.18.1](https://github.com/orgs/inji/projects/3/views/7?filterQuery=milestone%3A0.18.1)
+Below is the list of fixes as part of the **0.18.1** release, For the complete list you can refer [here](https://github.com/orgs/inji/projects/3/views/7?filterQuery=milestone%3A0.18.1).
 
 <table><thead><tr><th width="167.1796875">Issue ID</th><th>Summary</th></tr></thead><tbody><tr><td><i class="fa-github">:github:</i> <a href="https://github.com/inji/inji-verify/issues/1972">1972</a></td><td>Incorrect Status and Number of Credentials in Verify UI when one credential is Expired</td></tr><tr><td><i class="fa-github">:github:</i> <a href="https://github.com/inji/inji-verify/issues/1976">1976</a></td><td>Incorrect Error Handling for VP Holder Mismatch in 0.18.0</td></tr><tr><td><i class="fa-github">:github:</i> <a href="https://github.com/inji/inji-verify/issues/1977">1977</a></td><td>InjiVerify API Automation - 8 failures in API testreport in released env for 0.18.0</td></tr><tr><td><i class="fa-github">:github:</i> <a href="https://github.com/inji/inji-verify/issues/1984">1984</a></td><td>Fix Holder Binding Validation Handling in vc-verifier 1.8.0</td></tr></tbody></table>
 
