@@ -27,11 +27,11 @@ This release improves stability, correctness, and reliability of existing functi
 
 The following table outlines the tested and certified compatibility of Inji Verify 0.18.1 with other modules.
 
-| Module             | Version                                                    |
-| ------------------ | ---------------------------------------------------------- |
-| Inji Wallet        | 0.22.1 (Yet to release)                                    |
-| Inji Web           | [0.17.0](https://github.com/inji/inji-verify/tree/v0.17.0) |
-| Pixel-Pass library | [0.8.0](https://github.com/inji/pixelpass/tree/v0.8.0)     |
+| Module             | Version                                                            |
+| ------------------ | ------------------------------------------------------------------ |
+| Inji Wallet        | [0.22.1](https://github.com/inji/inji-wallet/releases/tag/v0.22.1) |
+| Inji Web           | [0.17.0](https://github.com/inji/inji-verify/tree/v0.17.0)         |
+| Pixel-Pass library | [0.8.0](https://github.com/inji/pixelpass/tree/v0.8.0)             |
 
 ### **Bug Fixes**
 
@@ -51,4 +51,4 @@ Below is a list of some key known issues. For a detailed overview and the comple
 * [Integration Guide](https://docs.inji.io/inji-verify/technical-overview/integration-guides)
 * [API Documentation](https://mosip.stoplight.io/studio/inji-verify)
 * [Collab Guide](https://mosip.atlassian.net/wiki/spaces/PROD/pages/1306984580)
-* QA Report
+* [QA Report](https://github.com/inji/test-management/tree/master/inji-verify/0.18.1)
