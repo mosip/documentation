@@ -274,6 +274,8 @@
 * [API](inji-verify/api.md)
 * [Deploy](readme/setup/deploy.md#deploying-inji-verify)
 * [Releases](inji-verify/releases/README.md)
+  * [Version 0.18.1](inji-verify/releases/version-0.18.1/README.md)
+    * [Test Report](inji-verify/releases/version-0.18.1/test-report.md)
   * [Version 0.18.0](inji-verify/releases/version-0.18.0/README.md)
     * [Test Report](inji-verify/releases/version-0.18.0/test-report.md)
   * [Version 0.17.0](inji-verify/releases/version-0.17.0/README.md)
@@ -303,7 +305,6 @@
   * [Version 0.8.1](inji-verify/releases/version-0.8.1.md)
   * [Version 0.8.0](inji-verify/releases/release-notes/README.md)
     * [Test Report](inji-verify/releases/release-notes/test-report.md)
-  * [Version 0.18.1](inji-verify/releases/version-0.18.1.md)
 
 ***
 

@@ -4,6 +4,11 @@ icon: rocket-launch
 
 # Releases
 
+**Version**: **0.18.1**
+
+* 5th June, 2026
+* [Release Notes](version-0.18.1/)
+
 **Version**: **0.18.0**
 
 * Name: Inji Verify v0.18.0
