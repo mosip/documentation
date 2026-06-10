@@ -12,6 +12,12 @@
 
 This release improves stability, correctness, and reliability of existing functionality in the Inji Verify module.
 
+#### **Key Highlights and Enhancements**
+
+1. Improved 'Holder Binding Validation' handling.
+2. Enhanced error handling for 'VP Holder Mismatch' scenarios.
+3. Correct display of credential status and credential count in the 'Verify UI' when one of the credentials has expired.
+
 {% hint style="info" %}
 **Note:** The Inji Verify UI is a _reference implementation_ to demonstrate orchestration. Developers can selectively embed SDK components in the verifier applications as per their needs.
 {% endhint %}
