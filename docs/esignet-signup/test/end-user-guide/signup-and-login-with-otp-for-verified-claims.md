@@ -1,6 +1,6 @@
 # Signup and Login with OTP for Verified Claims
 
-### Sign up and Try Video eKYC <a href="#sign-up-and-try-video-ekyc" id="sign-up-and-try-video-ekyc"></a>
+### Signup and Try Video eKYC <a href="#sign-up-and-try-video-ekyc" id="sign-up-and-try-video-ekyc"></a>
 
 Use the eSignet Signup service to register and create your user profile.\
 Follow the steps below to complete registration and experience the **video eKYC** verification flow.
