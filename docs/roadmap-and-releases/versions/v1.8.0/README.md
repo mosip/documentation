@@ -6,7 +6,7 @@
 
 ### **Overview**
 
-eSignet v1.8.0 introduces significant infrastructure modernization and enhanced data privacy. This release upgrades the entire eSignet ecosystem from **Java 11 to** [**Java 21**](../../readme/technology/technology-stack-j21.md) , delivering improved performance, better resource management via virtual threads, and long-term support. Additionally, the implementation of [**RFC 7516**](https://www.rfc-editor.org/rfc/rfc7516.html) adds support for encrypted UserInfo responses, ensuring robust protection of sensitive user data in compliance with OIDC standards.
+eSignet v1.8.0 introduces significant infrastructure modernization and enhanced data privacy. This release upgrades the entire eSignet ecosystem from **Java 11 to** [**Java 21**](../../../readme/technology/technology-stack-j21.md) , delivering improved performance, better resource management via virtual threads, and long-term support. Additionally, the implementation of [**RFC 7516**](https://www.rfc-editor.org/rfc/rfc7516.html) adds support for encrypted UserInfo responses, ensuring robust protection of sensitive user data in compliance with OIDC standards.
 
 ### **Major Highlights**
 
@@ -21,7 +21,7 @@ We have upgraded eSignet and its core modules from Java 11 to Java 21. This upgr
 
 #### **2. Encrypted UserInfo Support (RFC 7516)**
 
-To further secure PII (Personally Identifiable Information), eSignet now supports returning the [**UserInfo response as an encrypted JSON (JWE)**.](../../readme/standards.md#id-2.-supported-standards-and-rfcs)
+To further secure PII (Personally Identifiable Information), eSignet now supports returning the [**UserInfo response as an encrypted JSON (JWE)**.](../../../readme/standards.md#id-2.-supported-standards-and-rfcs)
 
 * **Enhanced Privacy:** Ensures that user attributes are only readable by the intended client application.
 * **Standard Compliance:** Implements **RFC 7516 (JSON Web Encryption)**, aligning eSignet with global security best practices for OpenID Connect (OIDC) providers.
