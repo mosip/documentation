@@ -44,9 +44,7 @@ For a full list of identified issues currently being tracked, please refer to th
 
 <table><thead><tr><th width="177.12109375">ID</th><th>Summary</th></tr></thead><tbody><tr><td><a href="https://github.com/mosip/esignet/issues/1847">ES-2914</a></td><td>Hardcoded khm language during verify-challenge in reset-password (signup-ui).</td></tr><tr><td><a href="https://github.com/mosip/esignet/issues/1848">ES-2911</a></td><td>eSignet &#x26; Plugin Pods Failing to Start – KER-KMA-001 PKCS11 Initialization Error (ProgressDeadlineExceeded)</td></tr><tr><td><a href="https://github.com/mosip/esignet/issues/1849">ES-2905</a></td><td>eSignet Mock Services – Deployment Fails Due to Missing active_profile_env Property</td></tr><tr><td><a href="https://github.com/mosip/esignet/issues/1751">ES-2877</a></td><td>eSignet-MOSIP &#x26; MOCK: User Login Fails When Global OpenID Profile is Set to FAPI 2.0 Due to Mandatory PKCE Requirement</td></tr><tr><td><a href="https://github.com/mosip/esignet/issues/1790">ES-2874</a></td><td>Sunbird KBI Login – CAPTCHA Not Displayed and Login Fails with invalid_transaction Error</td></tr><tr><td><a href="https://github.com/mosip/esignet/issues/1794">ES-2873</a></td><td>eSignet Signup – Registration Fails Even When UI Renders Correctly as Per Updated Schema</td></tr><tr><td><a href="https://github.com/mosip/esignet/issues/1768">ES-2836</a></td><td>eSignet: JWE automation fails when client encryption public key is missing or invalid</td></tr></tbody></table>
 
-### **Technical Release Details**
-
-#### **Repositories Released**
+### **Repositories Released**
 
 | Repository            | Version/Tag                                                            |
 | --------------------- | ---------------------------------------------------------------------- |
@@ -81,33 +79,33 @@ For a full list of identified issues currently being tracked, please refer to th
 | kernel-notification-service | [1.2.0.1](https://github.com/mosip/commons/tree/v1.2.0.1/kernel/kernel-notification-service)                                           |
 | auditmanager                | [1.2.0.1](https://github.com/mosip/audit-manager/tree/v1.2.0.1)                                                                        |
 
-### **System Changes**
-
-#### **Database Changes**
+### **Database Changes**
 
 **eSignet**
 
-* [Upgrade Scripts](https://github.com/mosip/esignet/blob/master/db_upgrade_script/mosip_esignet/sql/1.7.1_to_1.8.0_upgrade.sql)&#x20;
-* [Rollback Scripts](https://github.com/mosip/esignet/blob/master/db_upgrade_script/mosip_esignet/sql/1.7.1_to_1.8.0_rollback.sql)
+* Please [refer here](https://github.com/mosip/esignet/blob/master/db_upgrade_script/mosip_esignet/sql/1.7.1_to_1.8.0_upgrade.sql) for DB upgrade script
+* Please [refer here](https://github.com/mosip/esignet/blob/master/db_upgrade_script/mosip_esignet/sql/1.7.1_to_1.8.0_rollback.sql) for DB rollback script
 
 **eSignet-mock-services**
 
-* [Upgrade Scripts](https://github.com/mosip/esignet-mock-services/blob/master/db_upgrade_script/mosip_mockidentitysystem/sql/0.12.0_to_0.13.0_upgrade.sql)
-* [Rollback Scripts](https://github.com/mosip/esignet-mock-services/blob/master/db_upgrade_script/mosip_mockidentitysystem/sql/0.12.0_to_0.13.0_rollback.sql)
+* Please [refer here](https://github.com/mosip/esignet-mock-services/blob/master/db_upgrade_script/mosip_mockidentitysystem/sql/0.12.0_to_0.13.0_upgrade.sql) for DB upgrade script
+* Please [refer here](https://github.com/mosip/esignet-mock-services/blob/master/db_upgrade_script/mosip_mockidentitysystem/sql/0.12.0_to_0.13.0_rollback.sql) for DB rollback script
 
-#### **Configuration Changes**&#x20;
+### **Configuration Changes**&#x20;
 
 **eSignet**
 
-* Below property are added to the [default properties](https://github.com/mosip/esignet/blob/v1.8.0/esignet-service/src/main/resources/application-default.properties):
+* The properties listed below are newly added to the eSignet default configuration:
   * `mosip.esignet.public-key-hash.fields={ 'RSA': { 'n' }, 'EC': { 'x', 'y' } } ## which fields to hash for uniqueness`
-* Updated the below properties names:
+* The property names are updated as listed below:&#x20;
 
 | Previous Name           | Current Name                 |
 | ----------------------- | ---------------------------- |
 | `spring.redis.host`     | `spring.data.redis.host`     |
 | `spring.redis.port`     | `spring.data.redis.port`     |
 | `spring.redis.password` | `spring.data.redis.password` |
+
+For a comprehensive view of all configuration properties in eSignet, please [refer here](https://github.com/mosip/esignet/blob/v1.8.0/esignet-service/src/main/resources/application-default.properties).
 
 ### Documentation
 
