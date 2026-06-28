@@ -2,7 +2,7 @@
 
 **Release Number:** v1.7.1 (Patch)
 
-**Release Date:** Coming Soon
+**Release Date:** 19th December, 2025
 
 ### **Overview** <a href="#overview" id="overview"></a>
 

@@ -2,11 +2,11 @@
 
 **Release Number:** v1.8.0
 
-**Release Date:&#x20;**<mark style="color:red;">**Coming Soon!**</mark>
+**Release Date:** 19th May, 2026
 
 ### **Overview**
 
-eSignet v1.8.0 introduces significant infrastructure modernization and enhanced data privacy. This release upgrades the entire eSignet ecosystem from **Java 11 to** [**Java 21**](../../../readme/technology/technology-stack-j21.md) , delivering improved performance, better resource management via virtual threads, and long-term support. Additionally, the implementation of [**RFC 7516**](https://www.rfc-editor.org/rfc/rfc7516.html) adds support for encrypted UserInfo responses, ensuring robust protection of sensitive user data in compliance with OIDC standards.
+eSignet v1.8.0 introduces significant infrastructure modernization and enhanced data privacy. This release upgrades the entire eSignet ecosystem from **Java 11 to** **Java 21** , delivering improved performance, better resource management via virtual threads, and long-term support. Additionally, the implementation of **RFC 7516** adds support for encrypted UserInfo responses, ensuring robust protection of sensitive user data in compliance with OIDC standards.
 
 ### **Major Highlights**
 
@@ -34,13 +34,13 @@ The following functional requirements and stories were completed in this release
 
 #### **Bug Fixes**
 
-Several known issues from the previous release have been addressed to improve platform stability and performance. Please refer to the link here for the complete list of resolved issues.
+Several known issues from the previous release have been addressed to improve platform stability and performance. Please refer to the [link here](https://mosip.atlassian.net/issues?jql=%22Release%20Number%5BLabels%5D%22%20%3D%20eSignet_v1.8.0%20and%20issuetype%20%3D%20Bug) for the complete list of resolved issues.
 
 <table><thead><tr><th width="172.515625">ID</th><th>Summary</th></tr></thead><tbody><tr><td><a href="https://mosip.atlassian.net/browse/ES-2891">ES-2891</a></td><td>eSignet Signup (Docker Compose) – Authorization/OAuth Details Fails with “Unable to Connect to Redis”</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/ES-2887">ES-2887</a></td><td>eSignet Signup – Client Creation Fails Due to DB Schema Mismatch (additional_config jsonb Error)</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/ES-2800">ES-2800</a></td><td>eSignet-Sunbird: DOB value is altered during challenge validation, preventing user login to KBI</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/ES-2716">ES-2716</a></td><td>In Ui schema when email is marked as optional field by default its taking as mandatory field</td></tr></tbody></table>
 
 #### **Known Issues**
 
-For a full list of identified issues currently being tracked, please refer to this link.
+For a full list of identified issues currently being tracked, please refer to this [link](https://github.com/mosip/esignet/issues?q=label%3Aknown_issue_eSignet_1-8-0).
 
 <table><thead><tr><th width="177.12109375">ID</th><th>Summary</th></tr></thead><tbody><tr><td><a href="https://mosip.atlassian.net/browse/ES-2914">ES-2914</a></td><td>Hardcoded khm language during verify-challenge in reset-password (signup-ui).</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/ES-2911">ES-2911</a></td><td>eSignet &#x26; Plugin Pods Failing to Start – KER-KMA-001 PKCS11 Initialization Error (ProgressDeadlineExceeded)</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/ES-2905">ES-2905</a></td><td>eSignet Mock Services – Deployment Fails Due to Missing active_profile_env Property</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/ES-2877">ES-2877</a></td><td>eSignet-MOSIP &#x26; MOCK: User Login Fails When Global OpenID Profile is Set to FAPI 2.0 Due to Mandatory PKCE Requirement</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/ES-2874">ES-2874</a></td><td>Sunbird KBI Login – CAPTCHA Not Displayed and Login Fails with invalid_transaction Error</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/ES-2873">ES-2873</a></td><td>eSignet Signup – Registration Fails Even When UI Renders Correctly as Per Updated Schema</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/ES-2836">ES-2836</a></td><td>eSignet: JWE automation fails when client encryption public key is missing or invalid</td></tr></tbody></table>
 
@@ -55,7 +55,7 @@ For a full list of identified issues currently being tracked, please refer to th
 | eSignet-mock-services | [v0.13.0](https://github.com/mosip/esignet-mock-services/tree/v0.13.0) |
 | eSignet-Plugin        | [v1.4.0](https://github.com/mosip/esignet-plugins/tree/v1.4.0)         |
 | mosip-sdk             | [0.10.2](https://github.com/mosip/mosip-sdk/tree/v0.10.2)              |
-| mosip-onboarding      | [v1.3.0](https://github.com/mosip/mosip-onboarding/tree/v1.3.1)        |
+| mosip-onboarding      | [v1.3.1](https://github.com/mosip/mosip-onboarding/tree/v1.3.1)        |
 
 ### **Compatible Modules**
 
@@ -63,7 +63,7 @@ For a full list of identified issues currently being tracked, please refer to th
 
 | Module/Repo | Compatible Version                                                                                                                  |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| PMS         | [1.2.2.1](https://github.com/mosip/partner-management-services/tree/v1.2.2.1)                                                       |
+| PMS         | [1.2.2.3](https://github.com/mosip/partner-management-services/tree/v1.2.2.3)                                                       |
 | IDA         | <p><a href="https://github.com/mosip/id-authentication/tree/v1.2.1.0">1.2.1.0</a><br>1.3.x (for identity assurance 1.0 support)</p> |
 
 **eSignet compatibility with Sunbird**
@@ -87,26 +87,27 @@ For a full list of identified issues currently being tracked, please refer to th
 
 **eSignet**
 
-* [Upgrade Scripts](https://github.com/mosip/esignet/blob/release-1.8.x/db_upgrade_script/mosip_esignet/sql/1.7.1_to_1.8.0_upgrade.sql)&#x20;
-* [Rollback Scripts](https://github.com/mosip/esignet/blob/release-1.8.x/db_upgrade_script/mosip_esignet/sql/1.7.1_to_1.8.0_rollback.sql)
+* [Upgrade Scripts](https://github.com/mosip/esignet/blob/master/db_upgrade_script/mosip_esignet/sql/1.7.1_to_1.8.0_upgrade.sql)&#x20;
+* [Rollback Scripts](https://github.com/mosip/esignet/blob/master/db_upgrade_script/mosip_esignet/sql/1.7.1_to_1.8.0_rollback.sql)
 
 **eSignet-mock-services**
 
-* [Upgrade Scripts](http://github.com/mosip/esignet-mock-services/blob/release-0.13.x/db_upgrade_script/mosip_mockidentitysystem/sql/0.12.0_to_0.13.0_upgrade.sql)
-* [Rollback Scripts](https://github.com/mosip/esignet-mock-services/blob/release-0.13.x/db_upgrade_script/mosip_mockidentitysystem/sql/0.12.0_to_0.13.0_rollback.sql)
+* [Upgrade Scripts](https://github.com/mosip/esignet-mock-services/blob/master/db_upgrade_script/mosip_mockidentitysystem/sql/0.12.0_to_0.13.0_upgrade.sql)
+* [Rollback Scripts](https://github.com/mosip/esignet-mock-services/blob/master/db_upgrade_script/mosip_mockidentitysystem/sql/0.12.0_to_0.13.0_rollback.sql)
 
 #### **Configuration Changes**&#x20;
 
 **eSignet**
 
-* **New Properties:**
-  * mosip.esignet.public-key-hash.fields={ 'RSA': { 'n' }, 'EC': { 'x', 'y' } } ## which fields to hash for uniqueness
-* **Updated Properties:**
-  *   spring.redis.host → spring.data.redis.host
+* Below property are added to the [default properties](https://github.com/mosip/esignet/blob/v1.8.0/esignet-service/src/main/resources/application-default.properties):
+  * `mosip.esignet.public-key-hash.fields={ 'RSA': { 'n' }, 'EC': { 'x', 'y' } } ## which fields to hash for uniqueness`
+* Updated the below properties names:
 
-      spring.redis.port → spring.data.redis.port
-
-      spring.redis.password → spring.data.redis.password
+| Previous Name           | Current Name                 |
+| ----------------------- | ---------------------------- |
+| `spring.redis.host`     | `spring.data.redis.host`     |
+| `spring.redis.port`     | `spring.data.redis.port`     |
+| `spring.redis.password` | `spring.data.redis.password` |
 
 ### Documentation
 
@@ -125,4 +126,4 @@ For a full list of identified issues currently being tracked, please refer to th
 * [**eSignet End User Guide**](https://docs.esignet.io/esignet-authentication/test/end-user-guide)
 * [**Signup End User Guide**](https://docs.esignet.io/esignet-signup/test/end-user-guide)
 
-**QA Report**
+[**QA Report**](../../)
