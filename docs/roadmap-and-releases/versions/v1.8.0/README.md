@@ -99,11 +99,11 @@ For a full list of identified issues currently being tracked, please refer to th
   * `mosip.esignet.public-key-hash.fields={ 'RSA': { 'n' }, 'EC': { 'x', 'y' } } ## which fields to hash for uniqueness`
 * The property names are updated as listed below:&#x20;
 
-| Previous Name           | Current Name                 |
-| ----------------------- | ---------------------------- |
-| `spring.redis.host`     | `spring.data.redis.host`     |
-| `spring.redis.port`     | `spring.data.redis.port`     |
-| `spring.redis.password` | `spring.data.redis.password` |
+| Deprecated Property Name | Updated Property Name        |
+| ------------------------ | ---------------------------- |
+| `spring.redis.host`      | `spring.data.redis.host`     |
+| `spring.redis.port`      | `spring.data.redis.port`     |
+| `spring.redis.password`  | `spring.data.redis.password` |
 
 For a comprehensive view of all configuration properties in eSignet, please [refer here](https://github.com/mosip/esignet/blob/v1.8.0/esignet-service/src/main/resources/application-default.properties).
 
