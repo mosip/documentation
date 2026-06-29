@@ -236,4 +236,4 @@ It outlines the strategy used to ensure a comprehensive evaluation.
 
 <table><thead><tr><th width="110.4140625">Version</th><th>Author</th><th>Date</th><th valign="top">Review</th><th valign="top">Affected Sections</th></tr></thead><tbody><tr><td>V1.0</td><td>Prathmesh Jadhav</td><td>07/05/2026</td><td valign="top">Ragini Krishnamurthy</td><td valign="top"><br></td></tr></tbody></table>
 
-To get more on details of the reports please refere [**here**](https://github.com/mosip/test-management/tree/master/e-signet/1.8.0).<br>
+Refer [**here**](https://github.com/mosip/test-management/tree/master/e-signet/1.8.0) to get more details on reports.<br>
