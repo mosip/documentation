@@ -46,7 +46,7 @@ The below diagram depicts the various building blocks of the module level suite.
 
 The individual module level test suites and the end to end suite are triggered via the CI/CD pipeline and run post application deployment
 
-![Automation Design Framework](\_images/test\_rig\_automation/AutomationDesignFrameworks.jpg)
+![Automation Design Framework](.gitbook/assets/AutomationDesignFrameworks.jpg)
 
 ####
 
@@ -64,7 +64,7 @@ End to end system level Test Rig covers the functionality across the modules sta
 
 The below diagram depicts the overall design of the end to end suite.
 
-![Test Rig Design](\_images/test\_rig\_automation/E2ETestRigDesign.drawio.jpg)
+![Test Rig Design](.gitbook/assets/E2ETestRigDesign.drawio.jpg)
 
 ####
 

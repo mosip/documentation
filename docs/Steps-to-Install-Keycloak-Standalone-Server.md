@@ -41,7 +41,7 @@ sudo tar xzf keycloak-6.0.1.tar.gz
 
 We have installed postgres as the database for keycloak; you can use any database supported by Keycloak.
 
-Documentation for Keycloak Database Setup is available [here](https://www.keycloak.org/docs/latest/server\_installation/index.html#\_database).
+Documentation for Keycloak Database Setup is available [here](https://www.keycloak.org/docs/latest/server_installation/index.html#_database).
 
 Install Postgres in your VM. Guide to install PostgreSQL is available [here](Steps-to-Install-and-use-PostgreSql-Version-10.2-on-RHEL-7.5.md).
 
@@ -49,7 +49,7 @@ Within the `…​/modules/` directory of your Keycloak distribution, you need t
 
 **Module Directory**
 
-![](https://www.keycloak.org/docs/latest/server\_installation/keycloak-images/db-module.png)
+![](https://www.keycloak.org/docs/latest/server_installation/keycloak-images/db-module.png)
 
 After you have done this, open up the `module.xml` file and create the following XML:
 
@@ -190,7 +190,7 @@ Add Keycload admin user from keycloak bin directory run
 * Create clients for every module (i.e. ida, pre-registration, registration-processor, registration-client, auth, resident, mosip-client).
 * Enable authorization and service account for every client and provide valid redirect uri. These clients will be used by all modules to get client tokens.
 
-![](\_images/kernel/keycloak/clients.jpg)
+![](.gitbook/assets/clients.jpg)
 
 ### Configure User Federation
 
@@ -202,9 +202,9 @@ For this example we will be configuring LDAP as user federation
 * Configure field based on your LDAP(There are many vendors for ldap you can connect to any ldap vendor based on configurations).
 * Go to Mappers and Create mappers for each field you want keycloak to take from LDAP.
 
-![](\_images/kernel/keycloak/userfed.jpg)
+![](.gitbook/assets/userfed.jpg)
 
-![](\_images/kernel/keycloak/userfed1.jpg)
+![](.gitbook/assets/userfed1.jpg)
 
 ```
 isActive : user-attribute-ldap-mapper
@@ -220,7 +220,7 @@ first name : user-attribute-ldap-mapper
 email : user-attribute-ldap-mapper
 ```
 
-![](\_images/kernel/keycloak/rolemapper.jpg)
+![](.gitbook/assets/rolemapper.jpg)
 
 * Sync Users and Roles from LDAP .
 * Create INDIVIDUAL, RESIDENT Role from Keycloak in Realm Roles
@@ -251,7 +251,7 @@ If you find that a particular service will take more time to complete the proces
 SSL in keycloak is enabled by default but it can be toggled for all request, external request, and none.
 {% endhint %}
 
-![](\_images/kernel/keycloak/keycloak\_ssl.jpg)
+![](.gitbook/assets/keycloak_ssl.jpg)
 
 ### Update of configuration for keycloak
 

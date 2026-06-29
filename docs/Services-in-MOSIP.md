@@ -6,124 +6,124 @@ This document defines the public and private services of MOSIP.
 
 **Private Services**: MOSIP services available for service to service call and should be accessed by service token or restricted user.
 
-| MOSIP Service                                          |               Private Service              |               Public Service               |
-| ------------------------------------------------------ | :----------------------------------------: | :----------------------------------------: |
-| Admin   /Bulk Upload                                   | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Admin   /Login                                         | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Admin   /AuditManager                                  | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Admin   /PacketUpdateStatus                            | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Commons   /PacketReader-Writer                         | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /AuditManager                                 | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /AuthManager                                  | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /Login                                        | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /Refresh                                      |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
-| Kernel   /Jasperreport                                 | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /ClientCrypto                                 | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /CryptoManager                                | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /KeyManager                                   | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /LicenceKey                                   | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /PartnerCertManager                           | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /Signature                                    | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /TokenIDGenerator                             | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /ZKCryptoManager                              | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /ApplicantType                                | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /ApplicantValidDocument                       | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /Application                                  | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /BiometricAttribute                           | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /BiometricType                                | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /BlacklistedWords                             | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /Device                                       | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /DeviceHistory                                | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /DeviceProvider                               | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /DeviceProviderManagement                     | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /DeviceRegister                               | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /DeviceSpecification                          | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /DeviceType                                   | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /DocumentCategory                             | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /DocumentType                                 | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /DynamicField                                 | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /ExceptionalHoliday                           | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /FoundationalTrustProvider                    | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /GenderType                                   |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
-| Kernel   /Holiday                                      |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
-| Kernel   /IdType                                       | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /IndividualType                               |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
-| Kernel   /Language                                     |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
-| Kernel   /Location                                     |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
-| Kernel   /LocationHierarchy                            | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /Machine                                      | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /MachineHistory                               | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /MachineSpecification                         | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /MachineType                                  | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /Module                                       | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /MOSIPDeviceService                           | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /PacketRejectionReason                        | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /RegisteredDevice                             | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /RegistrationCenter                           | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /RegistrationCenterDevice                     | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /RegistrationCenterHistory                    | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /RegistrationCenterType                       | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /RegistrationCenterUserMachineHistory         | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /Schema                                       | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /Template                                     |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
-| Kernel   /TemplateFileFormat                           | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /TemplateType                                 |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
-| Kernel   /Title                                        |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
-| Kernel   /UserDetailsHistory                           | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /ValidDocument                                | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /WorkingDay                                   | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /Zone                                         | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /EmailNotification                            | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /SmsNotification                              | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /OtpGenerator                                 | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /OtpValidator                                 | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /RidGenerator                                 | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Kernel   /SyncData                                     | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| ID Authentication   /AuditTest                         | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| ID Authentication   /Test                              | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| ID Authentication   /CredentialIssueanceCallback       | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| ID Authentication   /Cryptomanager                     | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| ID Authentication   /InternalAuth                      | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| ID Authentication   /InternalAuthTxn                   | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| ID Authentication   /InternalOTP                       | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| ID Authentication   /InternalUpdateAuthType            | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| ID Authentication   /Keymanager                        | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| ID Authentication   /Signature                         | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| ID Authentication   /WebSub                            | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| ID Authentication   /KycAuth                           |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
-| ID Authentication   /OTP                               |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
-| ID Authentication   /Auth                              |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
-| ID Authentication   /StaticPin                         |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
-| ID Authentication   /VID                               |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
-| ID Repository   /BiometricExtractor                    | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| ID Repository   /CredentialRequestGenerator            | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| ID Repository   /CredentialStore                       | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| ID Repository   /ID Repository                         | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| ID Repository   /Vid                                   | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Partner Management Service   /Misp                     |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
-| Partner Management Service   /PartnerManagement        |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
-| Partner Management Service   /DeviceDetail             |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
-| Partner Management Service   /FTPChipDetail            |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
-| Partner Management Service   /RegisteredDevice         |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
-| Partner Management Service   /SecureBiometricInterface | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Partner Management Service   /PartnerService           |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
-| Partner Management Service   /PolicyManagement         |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
-| Pre Registration   /Demographic                        |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
-| Pre Registration   /Document                           |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
-| Pre Registration   /GenerateQRcode                     |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
-| Pre Registration   /Login                              |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
-| Pre Registration  /Notification                        |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
-| Pre Registration   /Transliteration                    |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
-| Pre Registration   /Booking                            |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
-| Pre Registration   /Captcha                            |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
-| Pre Registration   /DataSync                           | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Registration Processor   /BioDedupe                    | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Registration Processor   /RegistrationStatus           | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Registration Processor   /RegistrationSync             | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Registration Processor   /PrintApi                     |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
-| Registration Processor   /RegistrationTransaction      | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Registration Processor   /External                     |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
-| Registration Processor   /QCUsers                      | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Registration Processor   /QualityChecker               | ![](<\_images/tick (10) (1) (1) (96).png>) |                                            |
-| Resident Services  /Resident                           |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
-| Resident Services  /ResidentVid                        |                                            | ![](<\_images/tick (10) (1) (1) (96).png>) |
+| MOSIP Service                                          |            Private Service           |            Public Service            |
+| ------------------------------------------------------ | :----------------------------------: | :----------------------------------: |
+| Admin   /Bulk Upload                                   | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Admin   /Login                                         | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Admin   /AuditManager                                  | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Admin   /PacketUpdateStatus                            | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Commons   /PacketReader-Writer                         | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /AuditManager                                 | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /AuthManager                                  | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /Login                                        | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /Refresh                                      |                                      | ![](<.gitbook/assets/tick (97).png>) |
+| Kernel   /Jasperreport                                 | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /ClientCrypto                                 | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /CryptoManager                                | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /KeyManager                                   | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /LicenceKey                                   | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /PartnerCertManager                           | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /Signature                                    | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /TokenIDGenerator                             | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /ZKCryptoManager                              | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /ApplicantType                                | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /ApplicantValidDocument                       | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /Application                                  | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /BiometricAttribute                           | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /BiometricType                                | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /BlacklistedWords                             | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /Device                                       | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /DeviceHistory                                | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /DeviceProvider                               | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /DeviceProviderManagement                     | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /DeviceRegister                               | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /DeviceSpecification                          | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /DeviceType                                   | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /DocumentCategory                             | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /DocumentType                                 | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /DynamicField                                 | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /ExceptionalHoliday                           | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /FoundationalTrustProvider                    | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /GenderType                                   |                                      | ![](<.gitbook/assets/tick (97).png>) |
+| Kernel   /Holiday                                      |                                      | ![](<.gitbook/assets/tick (97).png>) |
+| Kernel   /IdType                                       | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /IndividualType                               |                                      | ![](<.gitbook/assets/tick (97).png>) |
+| Kernel   /Language                                     |                                      | ![](<.gitbook/assets/tick (97).png>) |
+| Kernel   /Location                                     |                                      | ![](<.gitbook/assets/tick (97).png>) |
+| Kernel   /LocationHierarchy                            | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /Machine                                      | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /MachineHistory                               | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /MachineSpecification                         | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /MachineType                                  | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /Module                                       | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /MOSIPDeviceService                           | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /PacketRejectionReason                        | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /RegisteredDevice                             | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /RegistrationCenter                           | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /RegistrationCenterDevice                     | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /RegistrationCenterHistory                    | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /RegistrationCenterType                       | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /RegistrationCenterUserMachineHistory         | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /Schema                                       | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /Template                                     |                                      | ![](<.gitbook/assets/tick (97).png>) |
+| Kernel   /TemplateFileFormat                           | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /TemplateType                                 |                                      | ![](<.gitbook/assets/tick (97).png>) |
+| Kernel   /Title                                        |                                      | ![](<.gitbook/assets/tick (97).png>) |
+| Kernel   /UserDetailsHistory                           | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /ValidDocument                                | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /WorkingDay                                   | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /Zone                                         | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /EmailNotification                            | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /SmsNotification                              | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /OtpGenerator                                 | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /OtpValidator                                 | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /RidGenerator                                 | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Kernel   /SyncData                                     | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| ID Authentication   /AuditTest                         | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| ID Authentication   /Test                              | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| ID Authentication   /CredentialIssueanceCallback       | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| ID Authentication   /Cryptomanager                     | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| ID Authentication   /InternalAuth                      | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| ID Authentication   /InternalAuthTxn                   | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| ID Authentication   /InternalOTP                       | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| ID Authentication   /InternalUpdateAuthType            | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| ID Authentication   /Keymanager                        | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| ID Authentication   /Signature                         | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| ID Authentication   /WebSub                            | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| ID Authentication   /KycAuth                           |                                      | ![](<.gitbook/assets/tick (97).png>) |
+| ID Authentication   /OTP                               |                                      | ![](<.gitbook/assets/tick (97).png>) |
+| ID Authentication   /Auth                              |                                      | ![](<.gitbook/assets/tick (97).png>) |
+| ID Authentication   /StaticPin                         |                                      | ![](<.gitbook/assets/tick (97).png>) |
+| ID Authentication   /VID                               |                                      | ![](<.gitbook/assets/tick (97).png>) |
+| ID Repository   /BiometricExtractor                    | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| ID Repository   /CredentialRequestGenerator            | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| ID Repository   /CredentialStore                       | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| ID Repository   /ID Repository                         | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| ID Repository   /Vid                                   | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Partner Management Service   /Misp                     |                                      | ![](<.gitbook/assets/tick (97).png>) |
+| Partner Management Service   /PartnerManagement        |                                      | ![](<.gitbook/assets/tick (97).png>) |
+| Partner Management Service   /DeviceDetail             |                                      | ![](<.gitbook/assets/tick (97).png>) |
+| Partner Management Service   /FTPChipDetail            |                                      | ![](<.gitbook/assets/tick (97).png>) |
+| Partner Management Service   /RegisteredDevice         |                                      | ![](<.gitbook/assets/tick (97).png>) |
+| Partner Management Service   /SecureBiometricInterface | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Partner Management Service   /PartnerService           |                                      | ![](<.gitbook/assets/tick (97).png>) |
+| Partner Management Service   /PolicyManagement         |                                      | ![](<.gitbook/assets/tick (97).png>) |
+| Pre Registration   /Demographic                        |                                      | ![](<.gitbook/assets/tick (97).png>) |
+| Pre Registration   /Document                           |                                      | ![](<.gitbook/assets/tick (97).png>) |
+| Pre Registration   /GenerateQRcode                     |                                      | ![](<.gitbook/assets/tick (97).png>) |
+| Pre Registration   /Login                              |                                      | ![](<.gitbook/assets/tick (97).png>) |
+| Pre Registration  /Notification                        |                                      | ![](<.gitbook/assets/tick (97).png>) |
+| Pre Registration   /Transliteration                    |                                      | ![](<.gitbook/assets/tick (97).png>) |
+| Pre Registration   /Booking                            |                                      | ![](<.gitbook/assets/tick (97).png>) |
+| Pre Registration   /Captcha                            |                                      | ![](<.gitbook/assets/tick (97).png>) |
+| Pre Registration   /DataSync                           | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Registration Processor   /BioDedupe                    | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Registration Processor   /RegistrationStatus           | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Registration Processor   /RegistrationSync             | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Registration Processor   /PrintApi                     |                                      | ![](<.gitbook/assets/tick (97).png>) |
+| Registration Processor   /RegistrationTransaction      | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Registration Processor   /External                     |                                      | ![](<.gitbook/assets/tick (97).png>) |
+| Registration Processor   /QCUsers                      | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Registration Processor   /QualityChecker               | ![](<.gitbook/assets/tick (97).png>) |                                      |
+| Resident Services  /Resident                           |                                      | ![](<.gitbook/assets/tick (97).png>) |
+| Resident Services  /ResidentVid                        |                                      | ![](<.gitbook/assets/tick (97).png>) |

@@ -41,7 +41,7 @@ This API receives a registration packet from the reg-client. Before moving the p
 
 ### Request
 
-![](\_images/reg\_processor/packet\_receiver\_sample\_input.PNG)
+![](.gitbook/assets/packet_receiver_sample_input.PNG)
 
 ### Response
 

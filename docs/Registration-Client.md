@@ -20,43 +20,43 @@ Registration client must provide the following :
 
 ### Registration officer Onboarding
 
-![Registration Officer Onboarding](\_images/registration/reg\_client\_registration\_officer\_onboarding.jpg)
+![Registration Officer Onboarding](.gitbook/assets/reg_client_registration_officer_onboarding.jpg)
 
 ### Registration preparation
 
-![Registration Preparation](\_images/registration/reg\_client\_registration\_prep.jpg)
+![Registration Preparation](.gitbook/assets/reg_client_registration_prep.jpg)
 
 ### Individual registration
 
-![Registration](\_images/registration/reg\_client\_registration.jpg)
+![Registration](.gitbook/assets/reg_client_registration.jpg)
 
 ### Packet upload
 
-![Packet Upload](\_images/registration/reg\_client\_registration\_packet\_upload.jpg)
+![Packet Upload](.gitbook/assets/reg_client_registration_packet_upload.jpg)
 
 ### End of day (EOD) process
 
-![EOD process](\_images/registration/reg\_client\_eod\_process.jpg)
+![EOD process](.gitbook/assets/reg_client_eod_process.jpg)
 
 ### UIN update
 
-![UIN Update](\_images/registration/reg\_client\_uin\_update.jpg)
+![UIN Update](.gitbook/assets/reg_client_uin_update.jpg)
 
 ### Lost UIN
 
-![Lost UIN](\_images/registration/reg\_client\_lost\_uin.jpg)
+![Lost UIN](.gitbook/assets/reg_client_lost_uin.jpg)
 
 ### Software update
 
-![Software Update](\_images/registration/reg\_client\_software\_update.jpg)
+![Software Update](.gitbook/assets/reg_client_software_update.jpg)
 
 ### Logical view
 
-![Registration client logical view](\_sources/registration/reg\_client\_architecture\_v0.1.png)
+![Registration client logical view](.gitbook/assets/reg_client_logical_architecture.png)
 
 ### Component architecture
 
-![Registration client component architecture](\_images/registration/reg\_client\_component\_architecture.png)
+![Registration client component architecture](.gitbook/assets/reg_client_component_architecture.png)
 
 ## Registration packet structure
 

@@ -16,7 +16,7 @@ To download the card,
 6. If the face does not match then the request for downloading the card is rejected.
 7. The card downloaded here can be printed and a physical copy of the same can be shared with the resident.
 
-![](\_images/admin/download-card-new.png)
+![](.gitbook/assets/download-card-new.png)
 
 ### Restrictions and auditing
 
@@ -199,8 +199,8 @@ INSERT INTO pms.partner_policy_credential_type
 VALUES('mpartner-default-digitalcard', 'mpolicy-default-PDFCard', 'PDFCard', true, 'service-account-mosip-regproc-client', '2022-04-04 13:29:10.383', NULL, NULL, false, NULL);
 ```
 
-* A new database "mosip\_digitalcard" has to be created to store the details of the digital cards that are getting generated. The details for the same are [available here](https://github.com/mosip/digital-card-service/tree/1.1.5.6/db\_scripts/mosip\_digitalcard).
-* A new table has been created in "mosip\_master" called "applicant\_login\_details" to track the details of number of times the admin is performing a search. The details for the same are [available here](https://github.com/mosip/commons/blob/1.1.5.6/db\_release\_scripts/mosip\_master/ddl/master-applicant\_login\_detail.sql)
+* A new database "mosip\_digitalcard" has to be created to store the details of the digital cards that are getting generated. The details for the same are [available here](https://github.com/mosip/digital-card-service/tree/1.1.5.6/db_scripts/mosip_digitalcard).
+* A new table has been created in "mosip\_master" called "applicant\_login\_details" to track the details of number of times the admin is performing a search. The details for the same are [available here](https://github.com/mosip/commons/blob/1.1.5.6/db_release_scripts/mosip_master/ddl/master-applicant_login_detail.sql)
 
 #### Configuration Changes
 

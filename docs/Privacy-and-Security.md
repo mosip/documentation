@@ -6,7 +6,7 @@ In MOSIP, privacy and security are the highest priorities and this document deta
 
 ## Governing Principles
 
-MOSIP's approach to privacy and security is determined by the [framework principles](https://www.mosip.io/uploads/resources/5cc84b0a08284Country%20Engagement%20Principles\_v2.pdf) under which it operates.
+MOSIP's approach to privacy and security is determined by the [framework principles](https://www.mosip.io/uploads/resources/5cc84b0a08284Country%20Engagement%20Principles_v2.pdf) under which it operates.
 
 ## MOSIP Security Design Key Features
 
@@ -109,4 +109,4 @@ In MOSIP Authorization falls into the below categories:
 
 A country will have its own hierarchy of system users especially the Registration staff and system administration staff. So, instead of defining a fixed hierarchy, by default MOSIP will depend on an LDAP implementation to manage users, organizational hierarchy and roles for users in the hierarchy. MOSIP will use an open-source LDAP server as the LDAP implementation. Administrators can create a hierarchy and users using Apache Directory Studio.
 
-![Authentication](\_images/auth/authn\_authz.png)
+![Authentication](.gitbook/assets/authn_authz.png)

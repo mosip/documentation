@@ -41,7 +41,7 @@ MOSIP deals with sensitive information pertaining to the identity of people. It 
 
 ### Logical view of MOSIP data system
 
-![](\_images/arch\_diagrams/mosip\_data\_architecture\_v1.jpg)
+![](.gitbook/assets/mosip_data_architecture_v1.jpg)
 
 ### Access Control to Data
 

@@ -14,4 +14,4 @@ Pillars of a Digital Future
 
 National ID systems can leverage MOSIP as the base platform and configure, customize, and extend it to build their systems just the way they need it. The picture below depicts how mosip is visualized as a national id platform.
 
-![](\_images/arch\_diagrams/layers.png)
+![](.gitbook/assets/layers.png)

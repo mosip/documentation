@@ -1,12 +1,17 @@
-# Overview
+# Resident Services
+
+## Overview
+
 Resident services are the self services which is used by the resident themselves via a portal. Functionalities such as lock/unlock authentication types, reprint UIN, view authentication history etc. are available. The services use OTP method of authentication.
 
 The back-end is a set of services with REST API interface (provided by MOSIP) and front end is a portal to be developed by the adopter according to their requirements.
 
-# Detailed functionality
+## Detailed functionality
+
 [Resident Services Functionality](Resident-Services-Functionality.md)
 
-# Process flow
+## Process flow
+
 * [Lock UIN](_images/resident_services/resident_services_lock_uin_flow.jpg)
 * [Unlock UIN](_images/resident_services/resident_services_unlock_uin_flow.jpg)
 * [Update UIN](_images/resident_services/resident_services_initiate_uin_update_flow.jpg)
@@ -19,15 +24,18 @@ The back-end is a set of services with REST API interface (provided by MOSIP) an
 * [Reprint e-UIN](_images/resident_services/resident_services_reprint_euin_flow.jpg)
 * [Retrieve lost RID](_images/resident_services/resident_services_retrieve_lost_rid_flow.jpg)
 
-# Logical view
+## Logical view
 
-![Logical diagram](_images/resident_services/resident_services_logical_diagram.jpg)
+![Logical diagram](.gitbook/assets/resident_services_logical_diagram.jpg)
 
-# Services
-For detailed description of Resident Services, code and design refer to [resident services repo](https://github.com/mosip/resident-services). 
+## Services
 
-# Build and deploy
-Refer to build and deploy instructions in [resident services repo](https://github.com/mosip/resident-services). 
+For detailed description of Resident Services, code and design refer to [resident services repo](https://github.com/mosip/resident-services).
 
-# APIs
+## Build and deploy
+
+Refer to build and deploy instructions in [resident services repo](https://github.com/mosip/resident-services).
+
+## APIs
+
 [Resident Services APIs](Resident-Service-APIs.md)

@@ -1,6 +1,6 @@
 # Home
 
-![](\_images/mosip\_logo.png)
+![](.gitbook/assets/mosip_logo.png)
 
 ## The MOSIP Program
 

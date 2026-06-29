@@ -34,7 +34,7 @@ Refer ISO 19794-4:2011 Specifications.
 
 {% hint style="info" %}
 \* MOSIP adopters can change this if needed.\
-\*\* Please refer [SBI specification documentation](broken-reference).
+\*\* Please refer [SBI specification documentation](/broken/pages/-MQrs4fU2j_hVIXun-BX).
 {% endhint %}
 
 ### Iris
@@ -64,7 +64,7 @@ RRefer to ISO 19794-6:2011 Specifications.
 
 {% hint style="info" %}
 \* MOSIP adopters can change this if needed.\
-\*\* Please refer [SBI specification documentation](broken-reference).
+\*\* Please refer [SBI specification documentation](/broken/pages/-MQrs4fU2j_hVIXun-BX).
 {% endhint %}
 
 ### Face Capture
@@ -86,7 +86,7 @@ Refer ISO 19794-5:2011 Specifications.
 
 {% hint style="info" %}
 \* MOSIP adopters can change this if needed.\
-\*\* Please refer [SBI specification documentation](broken-reference).
+\*\* Please refer [SBI specification documentation](/broken/pages/-MQrs4fU2j_hVIXun-BX).
 {% endhint %}
 
 {% hint style="info" %}

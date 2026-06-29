@@ -25,27 +25,27 @@ For detailed functionality of partner management please view our page, [Parter M
 
 ### Device Provider
 
-![](\_images/partner\_management/PMP-device\_provider-flow\_diagram.png)
+![](.gitbook/assets/PMP-device_provider-flow_diagram.png)
 
 ### Foundational Trust Provider
 
-![](\_images/partner\_management/PMP-ftp-flow\_diagram.png)
+![](.gitbook/assets/PMP-ftp-flow_diagram.png)
 
 ### Authentication Partner
 
-![](\_images/partner\_management/PMP-authentication\_partner-flow\_diagram.png)
+![](.gitbook/assets/PMP-authentication_partner-flow_diagram.png)
 
 ### Credential Partner
 
-![](\_images/partner\_management/PMP-credential\_partner-flow\_diagram.png)
+![](.gitbook/assets/PMP-credential_partner-flow_diagram.png)
 
 ### MISP (MOSIP Infrastructure Service Provider)
 
-![](\_images/partner\_management/PMP-misp-flow\_diagram.png)
+![](.gitbook/assets/PMP-misp-flow_diagram.png)
 
 ### Policy Management
 
-![](\_images/partner\_management/PMP-policy\_manager-flow\_diagram.png)
+![](.gitbook/assets/PMP-policy_manager-flow_diagram.png)
 
 ## Policy and Policy Group
 
@@ -272,7 +272,7 @@ For a partner to opt for an authentication policy, they have to generate Partner
 
 ### Logical View
 
-![Partner Management Logical View](\_images/partner\_management/partner\_management\_logical\_diagram.png)
+![Partner Management Logical View](.gitbook/assets/partner_management_logical_diagram.png)
 
 ## Services
 

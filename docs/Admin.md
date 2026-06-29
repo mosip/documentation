@@ -18,7 +18,7 @@ Admin application contains UI layer and Service layer. All the components in bot
 
 ## Logical view
 
-![Logical Diagram](<\_images/admin/admin\_logical\_diagram (1).jpg>)
+![Logical Diagram](.gitbook/assets/admin_logical_diagram.jpg)
 
 ## Backend Services
 

@@ -31,7 +31,7 @@ This release is with **real biometrics**. This means that MOSIP Platform is now 
   * Resident Services
   * Reference GUI implementation of Administration
 
-Module-wise features released as part of this release can be found [here](\_files/release/1.0.0/MOSIP\_Feature\_Release\_v1.0.0.xlsx)
+Module-wise features released as part of this release can be found [here](_files/release/1.0.0/MOSIP_Feature_Release_v1.0.0.xlsx)
 
 ### Documentation [**\[↑\]**](Release-Notes-1.0.0.md#table-of-contents)
 
@@ -87,39 +87,39 @@ The code and [automation tests](https://github.com/mosip/mosip-functional-tests/
 
 **1. In scope** [**\[↑\]**](Release-Notes-1.0.0.md#table-of-contents)
 
-| Title                               | Description                                                                                                                                                                                                                                                                                                                  |
-| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Modules Tested                      | <ul><li>Pre-registration (UI &#x26; Server)</li></ul><ul><li>Registration Client (UI &#x26; APIs)</li></ul><ul><li>Kernel (APIs)</li></ul><ul><li>Registration Processor (Server)</li></ul><ul><li>ID Authentication (APIs)</li></ul><ul><li>ID Repository (APIs)</li></ul><ul><li>Administration (UI &#x26; APIs)</li></ul> |
-| Version Tag Tested                  | 1.0.0                                                                                                                                                                                                                                                                                                                        |
-| Test Methodology                    | <ul><li>Manual</li></ul><ul><li>Test Automation</li></ul>                                                                                                                                                                                                                                                                    |
-| Types of testing                    | <ul><li>Smoke</li></ul><ul><li>Functional</li></ul><ul><li>Integration</li></ul><ul><li>Regression</li></ul>                                                                                                                                                                                                                 |
-| Testing Levels                      | ![](<\_images/test\_rig\_automation/image1 (1).jpg>)                                                                                                                                                                                                                                                                         |
-| Configuration Parameters tested for | Refer to properties file at [**Link**](https://github.com/mosip/mosip-config/tree/1.0.0)                                                                                                                                                                                                                                     |
-| Browser Support                     | <p><strong>Pre-Registration</strong></p><ul><li>Chrome – 78.0.3904.108</li></ul>                                                                                                                                                                                                                                             |
-| OS Support                          | <p><strong>Registration Client</strong></p><ul><li>Windows 10</li></ul>                                                                                                                                                                                                                                                      |
-| Language Support                    | French, Arabic, English                                                                                                                                                                                                                                                                                                      |
+| Title                               | Description                                                                                                                                                                                                                                                            |
+| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Modules Tested                      | <ul><li>Pre-registration (UI &#x26; Server)</li><li>Registration Client (UI &#x26; APIs)</li><li>Kernel (APIs)</li><li>Registration Processor (Server)</li><li>ID Authentication (APIs)</li><li>ID Repository (APIs)</li><li>Administration (UI &#x26; APIs)</li></ul> |
+| Version Tag Tested                  | 1.0.0                                                                                                                                                                                                                                                                  |
+| Test Methodology                    | <ul><li>Manual</li><li>Test Automation</li></ul>                                                                                                                                                                                                                       |
+| Types of testing                    | <ul><li>Smoke</li><li>Functional</li><li>Integration</li><li>Regression</li></ul>                                                                                                                                                                                      |
+| Testing Levels                      | ![](.gitbook/assets/Testing_levels.jpg)                                                                                                                                                                                                                                |
+| Configuration Parameters tested for | Refer to properties file at [**Link**](https://github.com/mosip/mosip-config/tree/1.0.0)                                                                                                                                                                               |
+| Browser Support                     | <p><strong>Pre-Registration</strong></p><ul><li>Chrome – 78.0.3904.108</li></ul>                                                                                                                                                                                       |
+| OS Support                          | <p><strong>Registration Client</strong></p><ul><li>Windows 10</li></ul>                                                                                                                                                                                                |
+| Language Support                    | French, Arabic, English                                                                                                                                                                                                                                                |
 
 **2. Not in scope** [**\[↑\]**](Release-Notes-1.0.0.md#table-of-contents)
 
-| Title                 | Description                                                                                                                                                                                                                                                                            |
-| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| NFR Testing           | <ul><li>Scalability Testing</li></ul><ul><li>Performance Testing</li></ul><ul><li>Security Testing</li></ul>                                                                                                                                                                           |
-| Configuration Testing | <ul><li>Testing is done for one set of approved production configuration</li></ul><ul><li>Changing the configuration parameters for various values (boundary values) and testing the impact of each such value on the platform code will be taken up in subsequent releases.</li></ul> |
+| Title                 | Description                                                                                                                                                                                                                                                                   |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| NFR Testing           | <ul><li>Scalability Testing</li><li>Performance Testing</li><li>Security Testing</li></ul>                                                                                                                                                                                    |
+| Configuration Testing | <ul><li>Testing is done for one set of approved production configuration</li><li>Changing the configuration parameters for various values (boundary values) and testing the impact of each such value on the platform code will be taken up in subsequent releases.</li></ul> |
 
 **3. Executive Summary – Consolidated Quality Status** [**\[↑\]**](Release-Notes-1.0.0.md#table-of-contents)
 
-| Sl. No. | Module / Activity                                                 | Test Methodology                                                   | Test Status |
-| ------- | ----------------------------------------------------------------- | ------------------------------------------------------------------ | ----------- |
-| 1       | Kernel                                                            | <ul><li>Test Automation</li></ul>                                  | PASS        |
-| 2       | Pre-Registration                                                  | <ul><li>Test Automation</li></ul>                                  | PASS        |
-| 3       | Registration Client                                               | <ul><li>Tested Manually</li></ul><ul><li>Test Automation</li></ul> | PASS        |
-| 4       | Registration Processor                                            | <ul><li>Tested Manually</li></ul><ul><li>Test Automation</li></ul> | PASS        |
-| 5       | ID Authentication                                                 | <ul><li>Test Automation</li></ul>                                  | PASS        |
-| 6       | ID Repo                                                           | <ul><li>Test Automation</li></ul>                                  | PASS        |
-| 7       | Pre-Registration to Registration Client integration testing       | <ul><li>Tested Manually</li></ul>                                  | PASS        |
-| 8       | Registration Client to Registration Processor integration testing | <ul><li>Tested Manually</li></ul>                                  | PASS        |
-| 9       | Registration Processor to IDA integration testing                 | <ul><li>Tested Manually</li></ul>                                  | PASS        |
-| 10      | IDA to ID Repo                                                    | <ul><li>Tested Manually</li></ul>                                  | PASS        |
+| Sl. No. | Module / Activity                                                 | Test Methodology                                          | Test Status |
+| ------- | ----------------------------------------------------------------- | --------------------------------------------------------- | ----------- |
+| 1       | Kernel                                                            | <ul><li>Test Automation</li></ul>                         | PASS        |
+| 2       | Pre-Registration                                                  | <ul><li>Test Automation</li></ul>                         | PASS        |
+| 3       | Registration Client                                               | <ul><li>Tested Manually</li><li>Test Automation</li></ul> | PASS        |
+| 4       | Registration Processor                                            | <ul><li>Tested Manually</li><li>Test Automation</li></ul> | PASS        |
+| 5       | ID Authentication                                                 | <ul><li>Test Automation</li></ul>                         | PASS        |
+| 6       | ID Repo                                                           | <ul><li>Test Automation</li></ul>                         | PASS        |
+| 7       | Pre-Registration to Registration Client integration testing       | <ul><li>Tested Manually</li></ul>                         | PASS        |
+| 8       | Registration Client to Registration Processor integration testing | <ul><li>Tested Manually</li></ul>                         | PASS        |
+| 9       | Registration Processor to IDA integration testing                 | <ul><li>Tested Manually</li></ul>                         | PASS        |
+| 10      | IDA to ID Repo                                                    | <ul><li>Tested Manually</li></ul>                         | PASS        |
 
 **4. Types of Testing** [**\[↑\]**](Release-Notes-1.0.0.md#table-of-contents)
 
@@ -132,11 +132,11 @@ The code and [automation tests](https://github.com/mosip/mosip-functional-tests/
 
 **5. Test Execution Summary** [**\[↑\]**](Release-Notes-1.0.0.md#table-of-contents)
 
-![](<\_images/release/1.0.0/ExecutionSummary\_1.0.0 (1).jpg>)
+![](.gitbook/assets/ExecutionSummary_1.0.0.jpg)
 
 ### Known Issues [**\[↑\]**](Release-Notes-1.0.0.md#table-of-contents)
 
-![](<\_images/release/1.0.0/KnownIssues\_1.0.0 (1).jpg>)
+![](.gitbook/assets/KnownIssues_1.0.0.jpg)
 
 ### List Of Acronyms [**\[↑\]**](Release-Notes-1.0.0.md#table-of-contents)
 

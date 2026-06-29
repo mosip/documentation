@@ -18,7 +18,7 @@ In demographic de-duplication the MOSIP system compares some of the demographic 
 4. Now the list of Potential Matches for Person A (here, we only have Person D as the only potential match, there can be a scenario where there are multiple potential matches for Person A) are sent to ABIS to perform de-duplication against the potential matches.
 5. Here, we ask ABIS to just perform match of Person A's biometrics with Person D's biometrics, we call this process a Gallery Match in ABIS. As we are asking ABIS to perform biometric de-duplication of Person A against the gallery that we have sent. i. If the ABIS confirms that Person D's biometrics matches with Person A's biometrics, MOSIP would REJECT Person A's packet. ii. If the ABIS says that Person A's and Person D's biometrics are different, we move the packet for biometric deduplication.
 
-![](\_images/biometrics/deduplication-deographic\_deduplication.png)
+![](.gitbook/assets/deduplication-deographic_deduplication.png)
 
 ### Biometric De-Duplication
 
@@ -38,7 +38,7 @@ Any Packet irrespective of it has gone through demographic de-duplication or ABI
 6. Let's say the ABIS system has found duplicates against three records - Person B, Person C and Person D. i. If Person B's registration has been REJECTED, we consider Person B not to be a potential match for Person A. ii. If Person C's registration is under processing, we consider Person C to be a potential match for Person A. iii. If Person D's registration is completed and a UIN is associated, we consider Person D to be a potential match for Person A.
 7. Now the list of Potential Matches for Person A (here, we have Person C and Person D as the potential matches) are sent to Manual Adjudication System to take the final decision.
 
-![](\_images/biometrics/deduplication-biometric\_deduplication.png)
+![](.gitbook/assets/deduplication-biometric_deduplication.png)
 
 ## Manual Adjudication
 
@@ -101,4 +101,4 @@ The data sent to the Manual Adjudication system is driven by a policy defined in
 
 ## Process Flow for Biometric Deduplication
 
-![](\_images/biometrics/abis\_middleware-process\_flow.png)
+![](.gitbook/assets/abis_middleware-process_flow.png)

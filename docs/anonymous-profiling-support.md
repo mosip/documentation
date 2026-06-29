@@ -90,4 +90,4 @@ JSON structure of the identity issuance profile is given below:
 
 Below is the image for the Anonymous profile table created in the ID repository schema
 
-![Anonymous profile table created in ID repository schema](\_images/ap-identity-issuance.png)
+![Anonymous profile table created in ID repository schema](.gitbook/assets/ap-identity-issuance.png)

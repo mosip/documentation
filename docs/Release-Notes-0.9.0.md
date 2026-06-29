@@ -72,44 +72,44 @@ The code and [automation tests](https://github.com/mosip/mosip-functional-tests/
 
 #### In Scope
 
-| Title                               | Description                                                                                                                                                                                                                                                           |
-| ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Modules Tested                      | <ul><li>Pre-registration (UI &#x26; Server)</li></ul><ul><li>Registration Client (UI &#x26; APIs)</li></ul><ul><li>Kernel (APIs)</li></ul><ul><li>Registration Processor (Server)</li></ul><ul><li>ID Authentication (APIs)</li></ul><ul><li>ID Repo (APIs)</li></ul> |
-| Version Tag Tested                  | 0.9.0                                                                                                                                                                                                                                                                 |
-| Test Methodology                    | <ul><li>Manual</li></ul><ul><li>Test Automation</li></ul>                                                                                                                                                                                                             |
-| Types of testing                    | <ul><li>Smoke</li></ul><ul><li>Functional</li></ul><ul><li>Integration</li></ul><ul><li>Regression</li></ul>                                                                                                                                                          |
-| Testing Levels                      | ![Image](<\_images/test\_rig\_automation/image1 (2) (1).jpg>)                                                                                                                                                                                                         |
-| Configuration Parameters tested for | Refer to QA env properties file with suffix ‘qa’ in the filename, at [**Link**](https://github.com/mosip/mosip-config/tree/0.9.1\_23092019)                                                                                                                           |
-| Browser Support                     | <p><strong>Pre-Registration</strong></p><ul><li>Chrome – 74.0.3729.169</li></ul>                                                                                                                                                                                      |
-| OS Support                          | <p><strong>Registration Client</strong></p><ul><li>Windows 10</li></ul>                                                                                                                                                                                               |
-| Language Support                    | French, Arabic, English                                                                                                                                                                                                                                               |
+| Title                               | Description                                                                                                                                                                                                              |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Modules Tested                      | <ul><li>Pre-registration (UI &#x26; Server)</li><li>Registration Client (UI &#x26; APIs)</li><li>Kernel (APIs)</li><li>Registration Processor (Server)</li><li>ID Authentication (APIs)</li><li>ID Repo (APIs)</li></ul> |
+| Version Tag Tested                  | 0.9.0                                                                                                                                                                                                                    |
+| Test Methodology                    | <ul><li>Manual</li><li>Test Automation</li></ul>                                                                                                                                                                         |
+| Types of testing                    | <ul><li>Smoke</li><li>Functional</li><li>Integration</li><li>Regression</li></ul>                                                                                                                                        |
+| Testing Levels                      | ![Image](<.gitbook/assets/image1 (1).jpg>)                                                                                                                                                                               |
+| Configuration Parameters tested for | Refer to QA env properties file with suffix ‘qa’ in the filename, at [**Link**](https://github.com/mosip/mosip-config/tree/0.9.1_23092019)                                                                               |
+| Browser Support                     | <p><strong>Pre-Registration</strong></p><ul><li>Chrome – 74.0.3729.169</li></ul>                                                                                                                                         |
+| OS Support                          | <p><strong>Registration Client</strong></p><ul><li>Windows 10</li></ul>                                                                                                                                                  |
+| Language Support                    | French, Arabic, English                                                                                                                                                                                                  |
 
 #### Not in Scope
 
-| Title                 | Description                                                                                                                                                                                                                                                                            |
-| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| NFR Testing           | <ul><li>Scalability Testing</li></ul><ul><li>Performance Testing</li></ul><ul><li>Security Testing</li></ul>                                                                                                                                                                           |
-| Configuration Testing | <ul><li>Testing is done for one set of approved production configuration</li></ul><ul><li>Changing the configuration parameters for various values (boundary values) and testing the impact of each such value on the platform code will be taken up in subsequent releases.</li></ul> |
+| Title                 | Description                                                                                                                                                                                                                                                                   |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| NFR Testing           | <ul><li>Scalability Testing</li><li>Performance Testing</li><li>Security Testing</li></ul>                                                                                                                                                                                    |
+| Configuration Testing | <ul><li>Testing is done for one set of approved production configuration</li><li>Changing the configuration parameters for various values (boundary values) and testing the impact of each such value on the platform code will be taken up in subsequent releases.</li></ul> |
 
 #### Executive Summary – Consolidated Quality Status
 
-| Sl. No. | Module / Activity                                                 | Test Methodology                                                   | Test Status |
-| ------- | ----------------------------------------------------------------- | ------------------------------------------------------------------ | ----------- |
-| 1       | Kernel                                                            | <ul><li>Test Automation</li></ul>                                  | PASS        |
-| 2       | Pre-Registration                                                  | <ul><li>Tested Manually</li></ul><ul><li>Test Automation</li></ul> | PASS        |
-| 3       | Registration Client                                               | <ul><li>Tested Manually</li></ul><ul><li>Test Automation</li></ul> | PASS        |
-| 4       | Registration Processor                                            | <ul><li>Tested Manually</li></ul><ul><li>Test Automation</li></ul> | PASS        |
-| 5       | ID Authentication                                                 | <ul><li>Test Automation</li></ul>                                  | PASS        |
-| 6       | ID Repo                                                           | <ul><li>Test Automation</li></ul>                                  | PASS        |
-| 7       | Pre-Registration to Registration Client integration testing       | <ul><li>Tested Manually</li></ul>                                  | PASS        |
-| 8       | Registration Client to Registration Processor integration testing | <ul><li>Tested Manually</li></ul>                                  | PASS        |
-| 9       | Registration Processor to Pre-Registration integration testing    | <ul><li>Tested Manually</li></ul>                                  | PASS        |
-| 10      | Registration Processor to Registration Client integration testing | <ul><li>Tested Manually</li></ul>                                  | PASS        |
-| 11      | Registration Client to IDA integration testing                    | <ul><li>Tested Manually</li></ul>                                  | PASS        |
-| 12      | Registration Processor to IDA integration testing                 | <ul><li>Tested Manually</li></ul>                                  | PASS        |
-| 13      | IDA to ID Repo                                                    | <ul><li>Tested Manually</li></ul>                                  | PASS        |
-| 14      | Kernel API integration                                            | <ul><li>Tested Manually</li></ul><ul><li>Test Automation</li></ul> | PASS        |
-| 15      | End to end functional testing                                     | <ul><li>Tested Manually</li></ul>                                  | PASS        |
+| Sl. No. | Module / Activity                                                 | Test Methodology                                          | Test Status |
+| ------- | ----------------------------------------------------------------- | --------------------------------------------------------- | ----------- |
+| 1       | Kernel                                                            | <ul><li>Test Automation</li></ul>                         | PASS        |
+| 2       | Pre-Registration                                                  | <ul><li>Tested Manually</li><li>Test Automation</li></ul> | PASS        |
+| 3       | Registration Client                                               | <ul><li>Tested Manually</li><li>Test Automation</li></ul> | PASS        |
+| 4       | Registration Processor                                            | <ul><li>Tested Manually</li><li>Test Automation</li></ul> | PASS        |
+| 5       | ID Authentication                                                 | <ul><li>Test Automation</li></ul>                         | PASS        |
+| 6       | ID Repo                                                           | <ul><li>Test Automation</li></ul>                         | PASS        |
+| 7       | Pre-Registration to Registration Client integration testing       | <ul><li>Tested Manually</li></ul>                         | PASS        |
+| 8       | Registration Client to Registration Processor integration testing | <ul><li>Tested Manually</li></ul>                         | PASS        |
+| 9       | Registration Processor to Pre-Registration integration testing    | <ul><li>Tested Manually</li></ul>                         | PASS        |
+| 10      | Registration Processor to Registration Client integration testing | <ul><li>Tested Manually</li></ul>                         | PASS        |
+| 11      | Registration Client to IDA integration testing                    | <ul><li>Tested Manually</li></ul>                         | PASS        |
+| 12      | Registration Processor to IDA integration testing                 | <ul><li>Tested Manually</li></ul>                         | PASS        |
+| 13      | IDA to ID Repo                                                    | <ul><li>Tested Manually</li></ul>                         | PASS        |
+| 14      | Kernel API integration                                            | <ul><li>Tested Manually</li><li>Test Automation</li></ul> | PASS        |
+| 15      | End to end functional testing                                     | <ul><li>Tested Manually</li></ul>                         | PASS        |
 
 #### Types of Testing
 
@@ -122,11 +122,11 @@ The code and [automation tests](https://github.com/mosip/mosip-functional-tests/
 
 #### Test Execution Summary
 
-![Image](<\_images/release/0.9.0/ExecutionSummary\_0.9.0 (1).jpg>)
+![Image](<.gitbook/assets/ExecutionSummary_0.9.0 (1).jpg>)
 
 ### Known Issues [**\[↑\]**](Release-Notes-0.9.0.md#table-of-contents)
 
-![Image](<\_images/release/0.9.0/KnownIssues\_0.9.0 (1).jpg>)
+![Image](<.gitbook/assets/KnownIssues_0.9.0 (1).jpg>)
 
 ### List Of Acronyms [**\[↑\]**](Release-Notes-0.9.0.md#table-of-contents)
 

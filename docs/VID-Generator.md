@@ -21,7 +21,7 @@ A pool of the VIDs are maintained for the faster dispatch of the VIDs to the req
 
 **Flowchart diagram for fetcher**
 
-![Flowchart diagram for fetcher](\_images/kernel/VIDGenerator\_flowchart\_fetcher.jpg)
+![Flowchart diagram for fetcher](.gitbook/assets/VIDGenerator_flowchart_fetcher.jpg)
 
 1. VID Revoke Service
    * This service revokes the VID and allocates the VID in the free pool.
@@ -31,7 +31,7 @@ A pool of the VIDs are maintained for the faster dispatch of the VIDs to the req
 
 **Flowchart diagram for revoker**
 
-![Flowchart diagram for revoker](\_images/kernel/VIDGenerator\_flowchart\_revoker.jpg)
+![Flowchart diagram for revoker](.gitbook/assets/VIDGenerator_flowchart_revoker.jpg)
 
 * Vert.x Verticles: Following are the various verticles which are available,
 
@@ -52,7 +52,7 @@ A pool of the VIDs are maintained for the faster dispatch of the VIDs to the req
 
 **Flowchart diagram for expirer**
 
-![Flowchart Diagram](\_images/kernel/VIDGenerator\_flowchart\_expirer.jpg)
+![Flowchart Diagram](.gitbook/assets/VIDGenerator_flowchart_expirer.jpg)
 
 * Database:
 
@@ -61,4 +61,4 @@ A pool of the VIDs are maintained for the faster dispatch of the VIDs to the req
 
 **Module diagram**
 
-![Module Diagram](\_images/kernel/VID\_generator.jpg)
+![Module Diagram](.gitbook/assets/VID_generator.jpg)

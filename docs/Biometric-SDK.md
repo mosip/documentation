@@ -58,11 +58,11 @@ Converts images in all segments in the biometric record.
 
 ## Biometric SDK integration points
 
-![](\_images/biometrics/biometric\_sdk\_integration\_points.png)
+![](.gitbook/assets/biometric_sdk_integration_points.png)
 
 &#x20; &#x20;
 
-![](\_images/biometrics/biometric\_sdk\_integration\_points\_table.png)
+![](.gitbook/assets/biometric_sdk_integration_points_table.png)
 
 ## Biometric SDK API Specification
 

@@ -31,7 +31,7 @@ This release is with **real biometrics**. This means that MOSIP Platform is now 
   * Resident Services
 * IAM - The Identity and Access Management(IAM) had been changed from custom implementation to Keycloak.
 
-Module-wise features released as part of this release can be found [here](\_files/release/1.0.5/MOSIP\_Feature\_Release\_v1.0.5.xlsx)
+Module-wise features released as part of this release can be found [here](_files/release/1.0.5/MOSIP_Feature_Release_v1.0.5.xlsx)
 
 ### Documentation [**\[↑\]**](Release-Notes-1.0.5.md#table-of-contents)
 
@@ -81,7 +81,7 @@ The code and [automation tests](https://github.com/mosip/mosip-functional-tests/
 | Version Tag Tested                  | 1.0.5                                                                                                                                                                                                                                                            |
 | Test Methodology                    | <ul><li>Manual</li><li>Test Automation</li></ul>                                                                                                                                                                                                                 |
 | Types of testing                    | <ul><li>Smoke</li><li>Functional</li><li>Integration</li><li>Regression</li></ul>                                                                                                                                                                                |
-| Testing Levels                      | ![Image](<\_images/test\_rig\_automation/image1 (2) (1).jpg>)                                                                                                                                                                                                    |
+| Testing Levels                      | ![Image](<.gitbook/assets/image1 (1).jpg>)                                                                                                                                                                                                                       |
 | Configuration Parameters tested for | Refer to properties file at [**Link**](https://github.com/mosip/mosip-config/tree/1.0.5)                                                                                                                                                                         |
 | Browser Support                     | <p><strong>Pre-Registration</strong></p><ul><li>Chrome – 78.0.3904.108</li></ul>                                                                                                                                                                                 |
 | OS Support                          | <p><strong>Registration Client</strong></p><ul><li>Windows 10</li></ul>                                                                                                                                                                                          |
@@ -96,18 +96,18 @@ The code and [automation tests](https://github.com/mosip/mosip-functional-tests/
 
 **3. Executive Summary – Consolidated Quality Status** [**\[↑\]**](Release-Notes-1.0.5.md#table-of-contents)
 
-| Sl. No. | Module / Activity                                                 | Test Methodology                                                   | Test Status |
-| ------- | ----------------------------------------------------------------- | ------------------------------------------------------------------ | ----------- |
-| 1       | Kernel                                                            | <ul><li>Test Automation</li></ul>                                  | PASS        |
-| 2       | Pre-Registration                                                  | <ul><li>Test Automation</li></ul>                                  | PASS        |
-| 3       | Registration Client                                               | \* Tested Manually \* Test Automation                              | PASS        |
-| 4       | Registration Processor                                            | <ul><li>Tested Manually</li></ul><ul><li>Test Automation</li></ul> | PASS        |
-| 5       | ID Authentication                                                 | <ul><li>Test Automation</li></ul>                                  | PASS        |
-| 6       | ID Repo                                                           | <ul><li>Test Automation</li></ul>                                  | PASS        |
-| 7       | Pre-Registration to Registration Client integration testing       | <ul><li>Tested Manually</li></ul>                                  | PASS        |
-| 8       | Registration Client to Registration Processor integration testing | <ul><li>Tested Manually</li></ul>                                  | PASS        |
-| 9       | Registration Processor to IDA integration testing                 | <ul><li>Tested Manually</li></ul>                                  | PASS        |
-| 10      | IDA to ID Repo                                                    | <ul><li>Tested Manually</li></ul>                                  | PASS        |
+| Sl. No. | Module / Activity                                                 | Test Methodology                                          | Test Status |
+| ------- | ----------------------------------------------------------------- | --------------------------------------------------------- | ----------- |
+| 1       | Kernel                                                            | <ul><li>Test Automation</li></ul>                         | PASS        |
+| 2       | Pre-Registration                                                  | <ul><li>Test Automation</li></ul>                         | PASS        |
+| 3       | Registration Client                                               | \* Tested Manually \* Test Automation                     | PASS        |
+| 4       | Registration Processor                                            | <ul><li>Tested Manually</li><li>Test Automation</li></ul> | PASS        |
+| 5       | ID Authentication                                                 | <ul><li>Test Automation</li></ul>                         | PASS        |
+| 6       | ID Repo                                                           | <ul><li>Test Automation</li></ul>                         | PASS        |
+| 7       | Pre-Registration to Registration Client integration testing       | <ul><li>Tested Manually</li></ul>                         | PASS        |
+| 8       | Registration Client to Registration Processor integration testing | <ul><li>Tested Manually</li></ul>                         | PASS        |
+| 9       | Registration Processor to IDA integration testing                 | <ul><li>Tested Manually</li></ul>                         | PASS        |
+| 10      | IDA to ID Repo                                                    | <ul><li>Tested Manually</li></ul>                         | PASS        |
 
 **4. Types of Testing** [**\[↑\]**](Release-Notes-1.0.5.md#table-of-contents)
 
@@ -120,11 +120,11 @@ The code and [automation tests](https://github.com/mosip/mosip-functional-tests/
 
 **5. Test Execution Summary** [**\[↑\]**](Release-Notes-1.0.5.md#table-of-contents)
 
-![](<\_images/release/1.0.5/ExecutionSummary\_1.0.5 (1).jpg>)
+![](<.gitbook/assets/ExecutionSummary_1.0.5 (1).jpg>)
 
 ### Known Issues [**\[↑\]**](Release-Notes-1.0.5.md#table-of-contents)
 
-![](<\_images/release/1.0.5/KnownIssues\_1.0.5 (1).jpg>)
+![](.gitbook/assets/KnownIssues_1.0.5.jpg)
 
 ### List Of Acronyms [**\[↑\]**](Release-Notes-1.0.5.md#table-of-contents)
 

@@ -47,7 +47,7 @@ The partner who is requesting for these authentications must make sure that all 
 
 1. The authentication request should have a defined set of parameters as mentioned in the [Authentication API Specification](ID-Authentication-APIs.md#authentication-service-public).
 2. The authentication request should have signature of the request in the header signed by the authentication partner.
-3. The biometric data should be sent in as a JWT token where the payload [base64URL encoded](https://en.wikipedia.org/wiki/Base64) and the signature is signed using the device key. More details of the biometric data block is available in the [Secure Biometric Interface](broken-reference) document.
+3. The biometric data should be sent in as a JWT token where the payload [base64URL encoded](https://en.wikipedia.org/wiki/Base64) and the signature is signed using the device key. More details of the biometric data block is available in the [Secure Biometric Interface](/broken/pages/-MQrs4fU2j_hVIXun-BX) document.
 4. The request should be sent to the authentication server, within a set time period in the configurations (i.e. time period between the current time stamp and the request time stamp is <= time period set in configurations).
 
 ## e-KYC Service

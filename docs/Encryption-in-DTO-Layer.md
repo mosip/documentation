@@ -32,7 +32,7 @@ The data level encryption is handled in the DTO layer in the application.
 
 **Encryption**
 
-![Encryption](\_images/security/admin-encryption-flow.jpg)
+![Encryption](.gitbook/assets/admin-encryption-flow.jpg)
 
 * Decryption:
   * When a request is received, the DTO fields are checked for sensitivity, from the config server.
@@ -42,7 +42,7 @@ The data level encryption is handled in the DTO layer in the application.
 
 **Decryption**
 
-![Decryption](\_images/security/admin-decryption-flow.jpg)
+![Decryption](.gitbook/assets/admin-decryption-flow.jpg)
 
 * Key rotation
   * On-Demand:
@@ -52,5 +52,5 @@ The data level encryption is handled in the DTO layer in the application.
   * Bulk:
     * There are times, that the total encrypted data are re-encrypted again. A scheduler is maintained to oversee this. During the scheduled time, the encrypted data is read and re-encrypted once again and saved. The newly encrypted data will have the new index in front of the encrypted content separated by a delimiter.
     * Bulk mode is used to remove the expired keys and data is encrypted with the new key.
-* [TODO:](https://todo) How do we handle failures during the bulk re-encryption?
-* [TODO:](https://todo) How to handle the load, if it is extremely high?
+* [TODO:](TODO:) How do we handle failures during the bulk re-encryption?
+* [TODO:](TODO:) How to handle the load, if it is extremely high?

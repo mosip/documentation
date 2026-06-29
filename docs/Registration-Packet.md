@@ -8,7 +8,7 @@ Once a resident visits the registration center and provides their demographic & 
 
 The below diagram depicts the packet creation flow using the packet manager.
 
-![](\_images/registration/packet\_creation\_using\_packet\_manager.png)
+![](.gitbook/assets/packet_creation_using_packet_manager.png)
 
 ### Packet Structure
 
@@ -16,13 +16,13 @@ The packet is created using the Commons Packet Manager, which creates a packet i
 
 #### Encrypted ZIP File
 
-![](\_images/registration/packet\_zip\_format.png)
+![](.gitbook/assets/packet_zip_format.png)
 
 The packet name here is also the request ID that is generated for a request created when a resident enrolls into MOSIP, requests for updating data or request for finding his/her lost id. The request ID is a 29 digit number derived from the Center ID (5 digits), Machine ID (5 digits), sequence number (5 digits), timestamp (14 digits).
 
 #### Folder Structure
 
-![](\_images/registration/mosip\_packet\_structure.png)
+![](.gitbook/assets/mosip_packet_structure.png)
 
 * **Container**: The container is the base folder in which the sub-packets are stored with their respective JSON files containing meta information.
 * **Sub-Packets**: Inside the container we ideally have three packets named as ID Packet, Evidence Packet and Optional Packet. Data inside each packet is stored based on a property in ID Schema called "Field Category".
