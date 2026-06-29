@@ -124,4 +124,4 @@ For a comprehensive view of all configuration properties in eSignet, please [ref
 * [**eSignet End User Guide**](https://docs.esignet.io/esignet-authentication/test/end-user-guide)
 * [**Signup End User Guide**](https://docs.esignet.io/esignet-signup/test/end-user-guide)
 
-[**QA Report**](../../)
+[**QA Report**](test-report.md)

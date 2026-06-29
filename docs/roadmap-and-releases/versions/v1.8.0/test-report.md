@@ -10,14 +10,14 @@ The scope of testing defines the boundaries, functionalities, and features that 
 
 Functional Features: Signup Portal with Mock Plugin, MOSIP ID – QABASE, and MOSIP ID – CRE, Login with OTP using Phone Number, UIN/VID, and Email, Login with Password Authentication, Forgot Password Functionality, Login with Biometrics Authentication, Login with KBI (Knowledge-Based Identification), Identity Verification Process for L1 and L2 Flows, Sunbird Plugin Integration, DPoP (Demonstration of Proof-of-Possession) Validation, PAR (Pushed Authorization Request) Validation, Dynamic Signup Schema Validation, Deployment Testing for eSignet and Signup Modules, FAPI 2.0 Compliance Validation, Docker Compose Compatibility Testing across Windows, macOS, and Linux Operating Systems, OIDC Authorization Flow with PKCE, Token Generation & Validation, Consent Management, Claims Management, User info API Validation, Session Management, API Security Validation, Logout Flow, Audit Logging, Verified Claims Support, and Multi-factor Authentication workflows.
 
-### Cross-Platform Support:
+### Cross-Platform Support
 
 * Multilingual: eSignet with 6 languages (English/Khmer/Hindi/Kannada/Arabic/Tamil)
 * Multilingual: Signup with 2 languages (English/Khmer)
 * Multi-Browser: Edge, Firefox, Chrome
-* Devices: Windows, Mac, Tablet, Mobile.
+* Devices: Windows, Mac, Tablet, Mobile
 * Testing Types: Sanity, Regression Testing and Integration Testing
-* Cross-browser and cross-device compatibility testing.
+* Cross-browser and cross-device compatibility testing
 
 ### Test Approach
 
@@ -33,11 +33,7 @@ The scope of testing is to verify fitment to the specification from the perspect
 
 **Table**: Test Organization
 
-| Name                                   | Functional Role | Responsibilities                                                                                                                                                                                                                                                                                                                                     |
-| -------------------------------------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ragini Krishnamurthy                   | Manager         | Defining test strategy, managing QA activities, and ensuring overall product quality.                                                                                                                                                                                                                                                                |
-| Chandra Sekhar                         | Lead            | Leading the test team, planning and executing tests, and ensuring timely delivery of quality results.                                                                                                                                                                                                                                                |
-| <p>Prathmesh Jadhav<br>Rohith Goud</p> | Test engineers  | <p>Designing and executing test cases, performing functional and regression testing, validating eSignet authentication and signup workflows, verifying login and identity verification functionalities, logging and tracking defects, validating fixes, and ensuring overall application quality, security, and compliance standards.</p><p><br></p> |
+<table><thead><tr><th width="161.0859375">Name</th><th width="142.81640625">Functional Role</th><th>Responsibilities</th></tr></thead><tbody><tr><td>Ragini Krishnamurthy</td><td>Manager</td><td>Defining test strategy, managing QA activities, and ensuring overall product quality.</td></tr><tr><td>Chandra Sekhar</td><td>Lead</td><td>Leading the test team, planning and executing tests, and ensuring timely delivery of quality results.</td></tr><tr><td>Prathmesh Jadhav<br>Rohith Goud</td><td>Test engineers</td><td><p>Designing and executing test cases, performing functional and regression testing, validating eSignet authentication and signup workflows, verifying login and identity verification functionalities, logging and tracking defects, validating fixes, and ensuring overall application quality, security, and compliance standards.</p><p><br></p></td></tr></tbody></table>
 
 ### Test Planning <a href="#toc229478250" id="toc229478250"></a>
 
@@ -88,19 +84,13 @@ Below are the test metrics by performing functional testing. The process followe
 
 The Test Case Execution Summary section provides a detailed overview of the total test cases executed across platforms, including pass, fail, and skip counts. It includes a table summarizing results and observations on execution pass rates.
 
-Table: Test Case - UI based verification
+**Table**: Test Case - UI based verification
 
-| Total                                  | Passed | Failed | Skipped (N/A) |
-| -------------------------------------- | ------ | ------ | ------------- |
-| 1341                                   | 1320   | 21     | 0             |
-| Test Rate: 100% with Pass Rate: 98.43% |        |        |               |
+<table><thead><tr><th width="319.203125">Total</th><th>Passed</th><th>Failed</th><th>Skipped (N/A)</th></tr></thead><tbody><tr><td>1341</td><td>1320</td><td>21</td><td>0</td></tr><tr><td>Test Rate: 100% with Pass Rate: 98.43%</td><td></td><td></td><td></td></tr></tbody></table>
 
-Table: Test Case – API based verification (API):
+**Table**: Test Case – API based verification (API):
 
-| Total                                    | Passed | Failed | Skipped (N/A) |
-| ---------------------------------------- | ------ | ------ | ------------- |
-| 2215                                     | 2140   | 18     | 57            |
-| Test Rate: 97.43% with Pass Rate: 99.17% |        |        |               |
+<table><thead><tr><th width="329.90234375">Total</th><th>Passed</th><th>Failed</th><th>Skipped (N/A)</th></tr></thead><tbody><tr><td>2215</td><td>2140</td><td>18</td><td>57</td></tr><tr><td>Test Rate: 97.43% with Pass Rate: 99.17%</td><td></td><td></td><td></td></tr></tbody></table>
 
 {% hint style="info" %}
 Note: NA - 57 Test Cases which are descoped scenarios/not developed feature
@@ -110,25 +100,25 @@ Note: NA - 57 Test Cases which are descoped scenarios/not developed feature
 
 This section provides a summary of the automated test execution. It shows the pass, fail, and known issues from the automated test suite.
 
-Table: Automation Execution Result -API Testrig – mockid environment
+**Table**: Automation Execution Result -API Testrig – mockid environment
 
-<table><thead><tr><th valign="top">Module</th><th>Total</th><th>Passed</th><th>Failed</th><th>Skipped (N/A)</th><th>Ignored</th><th></th></tr></thead><tbody><tr><td valign="top">eSignet</td><td>1339</td><td>791</td><td>0</td><td>0</td><td>548</td><td>0</td></tr><tr><td valign="top">Signup</td><td>670</td><td>640</td><td>0</td><td>0</td><td>30</td><td>0</td></tr><tr><td valign="top">Test Rate: 100% with Pass Rate: 100%</td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
+<table><thead><tr><th width="161.72265625" valign="top">Module</th><th>Total</th><th>Passed</th><th>Failed</th><th>Skipped (N/A)</th><th>Ignored</th><th></th></tr></thead><tbody><tr><td valign="top">eSignet</td><td>1339</td><td>791</td><td>0</td><td>0</td><td>548</td><td>0</td></tr><tr><td valign="top">Signup</td><td>670</td><td>640</td><td>0</td><td>0</td><td>30</td><td>0</td></tr><tr><td valign="top">Test Rate: 100% with Pass Rate: 100%</td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
 
 {% hint style="info" %}
 Note: 548 test cases in esignet and 30 test cases in signup related to the MOSIP ID plug-in are currently being ignored.
 {% endhint %}
 
-Table: Automation Execution Result -API Testrig – mosipid-qabase environment
+**Table**: Automation Execution Result -API Testrig – mosipid-qabase environment
 
-<table><thead><tr><th valign="top">Module</th><th>Total</th><th>Passed</th><th>Failed</th><th>Skipped (N/A)</th><th>Ignored</th><th></th></tr></thead><tbody><tr><td valign="top">eSignet</td><td>1339</td><td>1098</td><td>0</td><td>0</td><td>171</td><td>21</td></tr><tr><td valign="top">Signup</td><td>670</td><td>653</td><td>0</td><td>0</td><td>17</td><td>0</td></tr><tr><td valign="top">Test Rate: 100% with Pass Rate: 100%</td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
+<table><thead><tr><th width="156.265625" valign="top">Module</th><th>Total</th><th>Passed</th><th>Failed</th><th>Skipped (N/A)</th><th>Ignored</th><th></th></tr></thead><tbody><tr><td valign="top">eSignet</td><td>1339</td><td>1098</td><td>0</td><td>0</td><td>171</td><td>21</td></tr><tr><td valign="top">Signup</td><td>670</td><td>653</td><td>0</td><td>0</td><td>17</td><td>0</td></tr><tr><td valign="top">Test Rate: 100% with Pass Rate: 100%</td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
 
 {% hint style="info" %}
 Note: 171 test cases in esignet and 17 test cases in signup related to the mock plug-in are currently being ignored.
 {% endhint %}
 
-Table: Automation Execution Result -API Testrig – mosipid-CRE environment
+**Table**: Automation Execution Result -API Testrig – mosipid-CRE environment
 
-<table><thead><tr><th valign="top">Module</th><th>Total</th><th>Passed</th><th>Failed</th><th>Skipped (N/A)</th><th>Ignored</th><th></th></tr></thead><tbody><tr><td valign="top">eSignet</td><td>1339</td><td>1098</td><td>32</td><td>10</td><td>171</td><td>21</td></tr><tr><td valign="top">Signup</td><td>670</td><td>398</td><td>60</td><td>195</td><td>17</td><td>0</td></tr><tr><td valign="top">Test Rate: 89.80% with Pass Rate: 94.2%</td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
+<table><thead><tr><th width="162.1953125" valign="top">Module</th><th>Total</th><th>Passed</th><th>Failed</th><th>Skipped (N/A)</th><th>Ignored</th><th></th></tr></thead><tbody><tr><td valign="top">eSignet</td><td>1339</td><td>1098</td><td>32</td><td>10</td><td>171</td><td>21</td></tr><tr><td valign="top">Signup</td><td>670</td><td>398</td><td>60</td><td>195</td><td>17</td><td>0</td></tr><tr><td valign="top">Test Rate: 89.80% with Pass Rate: 94.2%</td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
 
 {% hint style="info" %}
 Note: Failures in esignet and signup are due to L2 flow is not supported in esignet and signup and some test cases are failing due to credential movement is taking longer time.
@@ -138,12 +128,9 @@ Note: Failures in esignet and signup are due to L2 flow is not supported in esig
 Note- API flow is tested through automation for both positive and negative scenarios, while test cases that are not automated are tested manually.
 {% endhint %}
 
-Table: Automation Execution Result - UI Automation
+**Table**: Automation Execution Result - UI Automation
 
-| Total                                | Passed | Failed | Skipped (N/A) | Ignored | Known issues |
-| ------------------------------------ | ------ | ------ | ------------- | ------- | ------------ |
-| 17                                   | 9      | 0      | 0             | 0       | 8            |
-| Test Rate: 100% with Pass Rate: 100% |        |        |               |         |              |
+<table><thead><tr><th width="159.50390625">Total</th><th>Passed</th><th>Failed</th><th>Skipped (N/A)</th><th>Ignored</th><th>Known issues</th></tr></thead><tbody><tr><td>17</td><td>9</td><td>0</td><td>0</td><td>0</td><td>8</td></tr><tr><td>Test Rate: 100% with Pass Rate: 100%</td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
 
 ### Detailed Test metrics <a href="#toc213752875" id="toc213752875"></a>
 
@@ -164,14 +151,13 @@ Verification is performed on various configurations as mentioned below
 
 **Table**: Browser versions tested on desktop/laptop
 
-| Sl.No | Browser | Versions                      |
-| ----- | ------- | ----------------------------- |
-| 1     | Chrome  | Version 147.0.7727.138        |
-| 2     | Firefox | Version 150.0.2 (64-bit)      |
-| 3     | Edge    | Version 147.0.3912.72         |
-| 4     | Safari  | Version 18.6 (20621.3.11.11.3 |
+<table><thead><tr><th width="154.23046875">Sl.No</th><th>Browser</th><th>Versions</th></tr></thead><tbody><tr><td>1</td><td>Chrome</td><td>Version 147.0.7727.138</td></tr><tr><td>2</td><td>Firefox</td><td>Version 150.0.2 (64-bit)</td></tr><tr><td>3</td><td>Edge</td><td>Version 147.0.3912.72</td></tr><tr><td>4</td><td>Safari</td><td>Version 18.6 (20621.3.11.11.3</td></tr></tbody></table>
 
 ## Feature Health <a href="#toc229478259" id="toc229478259"></a>
+
+<figure><img src="../../../.gitbook/assets/es-180_feature-health.png" alt=""><figcaption></figcaption></figure>
+
+
 
 ### Known Issues Metrics <a href="#toc229478260" id="toc229478260"></a>
 
@@ -185,12 +171,31 @@ Critical: 1 critical bug will be coming up as story in 1.8.1 release.
 
 ## Sonar Report <a href="#toc229478261" id="toc229478261"></a>
 
-* esignet:
-* &#x20;esignet-signup:
-* esignet-mock-service:
-* esignet-plugins(mock):
-* esignet-plugins(mosipid):
-* esignet-plugins(sunbird):
+* **esignet**:
+
+<figure><img src="../../../.gitbook/assets/180_summary-overall.png" alt=""><figcaption></figcaption></figure>
+
+
+
+* &#x20;**esignet-signup**:
+
+<figure><img src="../../../.gitbook/assets/es-180-signup-service.png" alt=""><figcaption></figcaption></figure>
+
+* **esignet-mock-service**:
+
+<figure><img src="../../../.gitbook/assets/es-180-mock-service.png" alt=""><figcaption></figcaption></figure>
+
+* **esignet-plugins(mock)**:
+
+<figure><img src="../../../.gitbook/assets/es-180-mock-plugin.png" alt=""><figcaption></figcaption></figure>
+
+* **esignet-plugins(mosipid)**:
+
+<figure><img src="../../../.gitbook/assets/es-180-mosip-id-plugin.png" alt=""><figcaption></figcaption></figure>
+
+* **esignet-plugins(sunbird)**:
+
+<figure><img src="../../../.gitbook/assets/es-180-sunbird-rc-plugin.png" alt=""><figcaption></figcaption></figure>
 
 ### Conclusion <a href="#toc229478262" id="toc229478262"></a>
 
@@ -229,9 +234,6 @@ This includes additional reference information for the report. It contains a his
 
 It outlines the strategy used to ensure a comprehensive evaluation.
 
-<table data-header-hidden><thead><tr><th></th><th></th><th></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td>Version</td><td>Author</td><td>Date</td><td valign="top">Review</td><td valign="top">Affected Sections</td></tr><tr><td>V1.0</td><td>Prathmesh Jadhav</td><td>07/05/2026</td><td valign="top">Ragini Krishnamurthy</td><td valign="top"><br></td></tr></tbody></table>
+<table><thead><tr><th width="110.4140625">Version</th><th>Author</th><th>Date</th><th valign="top">Review</th><th valign="top">Affected Sections</th></tr></thead><tbody><tr><td>V1.0</td><td>Prathmesh Jadhav</td><td>07/05/2026</td><td valign="top">Ragini Krishnamurthy</td><td valign="top"><br></td></tr></tbody></table>
 
-<br>
-
-<br>
-
+To get more on details of the reports please refere [**here**](https://github.com/mosip/test-management/tree/master/e-signet/1.8.0).<br>

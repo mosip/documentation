@@ -7,7 +7,7 @@ description: Please refer below for all the latest release details ✨
 ## Version: 1.8.0
 
 * **Name**: eSignet
-* **Date:** 19th May, 2026 <mark style="color:red;">**Coming Soon**</mark>!
+* **Date:** 19th May, 2026
 * [**Release Notes**](v1.8.0/)
 
 ## Version: 1.7.0
