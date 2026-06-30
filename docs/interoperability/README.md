@@ -1,6 +1,6 @@
 ---
 description: >-
-  Seamlessly integrate with MOSIP, Inji, and OpenCRVS for enhanced digital
+  Seamlessly integrate with MOSIP, Inji, OpenCRVS and DHIS2 for enhanced digital
   services.
 icon: right-left
 ---
