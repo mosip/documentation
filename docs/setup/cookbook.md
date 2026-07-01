@@ -4,6 +4,142 @@ hidden: true
 
 # CookBook
 
+
+
+# proposed IA 
+
+My recommendation: MOSIP Functional Pilot Guide — it's unambiguous, professional, and will sit naturally alongside the other guides in the MOSIP docs navigation.
+
+✻ Worked for 32s
+
+❯ Now, as per docs information architecture principles and also as per topic based authoring ways suggest me some better logical segregation for this large content page such that I break this further into logical units/topics/pages
+
+Let me analyze the full 25-section document against information architecture and topic-based authoring principles before making recommendations.
+
+  Searched for 2 patterns, ran 1 shell command
+
+Now I have full context — the content, the existing docs/setup/ structure, and the MOSIP navigation patterns. Let me map the 25 sections against IA and topic-based authoring principles.
+
+Analysis: Problems with the Current Structure
+
+Before recommendations, here's what the current flat page violates:
+
+┌────────────────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│     Principle      │                                                   Problem                                                   │
+├────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ One topic = one    │ Single page mixes concept, task, and reference topics — e.g., hardware specs (reference) sits next to       │
+│ purpose            │ governance cadence (reference) sits next to registration workflow (task)                                    │
+├────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ Audience alignment │ A program manager, technical lead, and field operator all need different parts — currently forced to scroll │
+│                    │  past irrelevant content                                                                                    │
+├────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ Progressive        │ No hierarchy — everything is at the same depth                                                              │
+│ disclosure         │                                                                                                             │
+├────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ Reusability        │ Appendix A (Center Checklist) and Appendix B (Run Sheet) are buried and can't be linked to independently    │
+├────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ Findability        │ 25 sections in one page means zero left-nav discoverability in GitBook                                      │
+└────────────────────┴─────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+```
+Proposed Structure: 1 Page → 19 Pages
+
+Organized by pilot lifecycle phase (the reader's mental model), with topic type labeled for each page.
+
+📁 MOSIP Functional Pilot Guide        ← parent section in GitBook nav
+│
+├── README.md  — Overview              [CONCEPT] Merge §1+2+3+4
+│   What is a MOSIP Pilot, objectives,
+│   scope, assumptions, lifecycle at a glance
+│
+├── 📁 Planning
+│   ├── execution-plan.md              [TASK]      §7 — Week-by-Week Plan
+│   ├── roles-and-responsibilities.md  [REFERENCE] §8 — RACI across Country + MOSIP
+│   ├── team-resourcing.md             [REFERENCE] §9 — Country team staffing table
+│   └── governance.md                 [REFERENCE] §23 — Meeting cadence
+│
+├── 📁 Infrastructure and Requirements
+│   ├── hardware-requirements.md       [REFERENCE] §5 — VMs, laptops, devices, scanners
+│   └── software-requirements.md       [REFERENCE] §6 — Platform components, owners
+│
+├── 📁 Pilot Design
+│   └── participant-mix.md             [TASK]      §10 — Demographic distribution
+│
+├── 📁 Training
+│   └── training-and-scenarios.md      [TASK]      §14 — Training streams + real-life scenarios
+│
+├── 📁 Platform Readiness
+│   ├── functional-capabilities.md     [REFERENCE] §15 — Capability checklist
+│   └── sandbox-hardening.md           [TASK]      §16 — Clean + tighten before go-live
+│
+├── 📁 Field Operations
+│   ├── registration-center-setup.md   [TASK+REF]  §17 — Center layout, staff, per-kit config
+│   ├── registration-workflow.md       [TASK]      §18 — Step-by-step operator script
+│   ├── online-offline-registration.md [CONCEPT]   §11 — Modes and trade-offs
+│   └── biometric-capture.md           [TASK]      §19 — Best practices per modality
+│
+├── 📁 Authentication and Credentials
+│   ├── esignet-authentication.md      [TASK]      §12 — OTP + biometric flows
+│   └── inji-wallet.md                 [TASK]      §13 — Credential issuance + edge cases
+│
+├── 📁 Go-Live
+│   ├── user-acceptance-testing.md     [TASK]      §20 — UAT exit criteria + scenarios
+│   ├── pre-golive-readiness.md        [TASK]      §21 — Readiness sweep
+│   └── golive-strategy.md             [TASK]      §22 — Internal then external, ramp
+│
+├── 📁 Closure
+│   └── pilot-closure.md               [TASK]      §25 — Formal closure + deliverables
+│
+└── 📁 Reference
+    ├── critical-success-factors.md    [REFERENCE] §24 — Risks + mitigations
+    ├── registration-center-checklist.md [REFERENCE] Appendix A — Print-ready checklist
+    ├── operator-run-sheet.md          [REFERENCE] Appendix B — Day-of run sheet
+    └── security-and-privacy.md        [CONCEPT]   Appendix C — Security principles observed
+
+Key Decisions Explained
+
+Merge §1+2+3+4 → single Overview page
+All four are conceptual background that a reader needs once. Splitting them creates unnecessary navigation hops before they reach actionable content.
+
+Split §5 (Hardware) from §6 (Software)
+Different audiences read these at different times — procurement reads hardware specs in Week 0; the technical team reads software requirements later. Keeping them separate also lets you link directly to hardware-requirements.md from the Infrastructure section.
+
+Separate §23 (Governance) into Planning, not Go-Live
+Governance structure is defined at pilot kick-off, not at go-live. Placing it in Planning aligns with when the reader actually needs it.
+
+Elevate Appendices to first-class Reference pages
+Appendix A (Center Checklist) and Appendix B (Run Sheet) are operationally critical documents. Field supervisors need to link to them directly — not scroll to the bottom of a 2,000-line page. As standalone pages they're also printable and linkable.
+
+Split "Authentication + Credentials" from "Field Operations"
+Sections 12 and 13 (eSignet, INJI Wallet) cover the authentication and credentialing phase of the resident journey — distinct from the registration phase covered in 17/18/19. Keeping them separate clarifies the sequence: register → process → authenticate → issue credential.
+
+§24 (Critical Success Factors) → Reference, not Closure
+A program manager reads this at the start of planning to avoid known pitfalls, and refers back to it throughout. Burying it at §24 (near the end) in the current doc means it's read too late.
+
+Audience Map (who reads which section)
+
+┌─────────────────────────────┬──────────────────────────────────────────────────────────────────────────┐
+│          Audience           │                       Sections they primarily need                       │
+├─────────────────────────────┼──────────────────────────────────────────────────────────────────────────┤
+│ Program Manager             │ Overview, Planning, Governance, Critical Success Factors, Closure        │
+├─────────────────────────────┼──────────────────────────────────────────────────────────────────────────┤
+│ Technical Lead              │ Infrastructure, Platform Readiness, Sandbox Hardening, UAT               │
+├─────────────────────────────┼──────────────────────────────────────────────────────────────────────────┤
+│ Field Operator / Supervisor │ Registration Center, Registration Workflow, Biometric Capture, Run Sheet │
+├─────────────────────────────┼──────────────────────────────────────────────────────────────────────────┤
+│ Country Procurement         │ Hardware Requirements, Software Requirements                             │
+├─────────────────────────────┼──────────────────────────────────────────────────────────────────────────┤
+│ Trainer                     │ Training and Scenarios, Participant Mix                                  │
+└─────────────────────────────┴──────────────────────────────────────────────────────────────────────────┘
+
+This structure lets each audience navigate directly to their section without scrolling through irrelevant content.
+
+```
+
+
+# Earlier TOC 
+
 For merge check
 Pilot Cook Book
 
@@ -11,6 +147,7 @@ Pilot Cook Book
 MOSIP functional pilot in any country*
 
 Prepared for the Country Implementation Team
+
 
 **Table of Contents**
 
@@ -71,7 +208,12 @@ Appendix B -- Day-of-Pilot Operator Run Sheet
 Appendix C -- Experiencing Security and Privacy during the
 Pilot...................................................................
 
-**1. About this Cook Book**
+
+
+
+
+
+## About this Functional Pilot Guide
 
 This cook book is a practical, step-by-step recipe for running a rapid
 MOSIP functional pilot in any country, end to end, in 3 to 4 months. It
@@ -96,14 +238,14 @@ into the INJI Wallet.
 | "the Pilot Authority", replace it with your local equivalent.         |
 +=======================================================================+
 
-**2. Pilot Objectives**
+### Pilot Objectives**
 
 The pilot is a hands-on, end-to-end functional run-through of MOSIP. It
 is deliberately scoped to be small enough to complete in 3 to 4 months
 and large enough to surface the operational, technical and policy
 questions the country will face at national rollout.
 
-## **Primary objectives**
+### Primary objectives
 
 - Experience the full MOSIP lifecycle --- pre-registration,
   registration, ID processing, ID issuance and authentication for up to
@@ -152,9 +294,9 @@ questions the country will face at national rollout.
 | confident it can run MOSIP independently."                            |
 +=======================================================================+
 
-**3. Scope and Assumptions**
+## Scope and Assumptions
 
-## **In scope**
+### In scope
 
 - Registration of up to 3,000 residents (representative sample of the
   population).
@@ -180,7 +322,7 @@ questions the country will face at national rollout.
 
 - Functional training for the country team during the pilot.
 
-## **Key assumptions**
+### Key assumptions
 
 - Biometric devices, ABIS and the biometric SDKs are provided by MOSIP
   through its biometric partner ecosystem.
@@ -215,7 +357,7 @@ questions the country will face at national rollout.
 | configuration specifications for either option --- see Section 5.     |
 +=======================================================================+
 
-**4. Pilot Lifecycle at a Glance**
+## Pilot Lifecycle at a Glance
 
 The pilot moves through eight overlapping stages. The lifecycle is
 engineered so that the long-lead items biometric device shipment,
@@ -285,13 +427,13 @@ run in parallel with the build phase.
 | operator/supervisor training.                                         |
 +=======================================================================+
 
-**5. Hardware Specifications and Requirements**
+# Hardware Specifications and Requirements 
 
 MOSIP supplies the full hardware specification for the pilot so that the
 country team can provision exactly what is needed. The list below is the
 minimum footprint to run the pilot end to end.
 
-# **5.1 Server and infrastructure footprint**
+## Server and infrastructure footprint
 
 The MOSIP pilot can be deployed on a public cloud or on the country's
 on-prem environment. Either way, the following virtual machine footprint
@@ -343,7 +485,7 @@ is recommended.
                                                                      LTS]{.mark}
   -----------------------------------------------------------------------------------------
 
-**Aggregate footprint:**
+### Aggregate footprint
 
 - [Total RAM: ~600 GB]{.mark}
 
@@ -362,7 +504,7 @@ is recommended.
 | target is cloud, run the pilot on the same cloud provider.            |
 +=======================================================================+
 
-# **5.2 Registration kit -- laptop specification**
+## Registration kit -- laptop specification
 
   -----------------------------------------------------------------------
   **Specification**                   **Recommended value**
@@ -396,7 +538,7 @@ is recommended.
                                       kit
   -----------------------------------------------------------------------
 
-# **5.3 Biometric devices and authentication devices**
+## Biometric devices and authentication devices
 
   -----------------------------------------------------------------------
   **Device**              **Source**              **Quantity**
@@ -427,11 +569,10 @@ is recommended.
 | team should pre-clear the customs process to avoid delays.           |
 +======================================================================+
 
-****
 
-# **5.4 Document scanners, printers and photo booths**
+## Document scanners, printers and photo booths
 
-## **Printer with scanner (per registration station)**
+### Printer with scanner (per registration station)
 
 +-------------------------------------+-------------------------------------+
 | **Specification**                   | **Value**                           |
@@ -458,7 +599,7 @@ is recommended.
 | Canon etc                                                                 |
 +---------------------------------------------------------------------------+
 
-## **Photo booth (per registration station)**
+### Photo booth (per registration station)
 
   -----------------------------------------------------------------------
   **Specification**                   **Value**
@@ -474,7 +615,7 @@ is recommended.
                                       pilot
   -----------------------------------------------------------------------
 
-# **5.5 Mobile phones for INJI Wallet**
+## Mobile phones for INJI Wallet
 
 Residents and operators need a small fleet of phones to exercise INJI
 Wallet on both ecosystems. Country team typically provisions:
@@ -483,7 +624,7 @@ Wallet on both ecosystems. Country team typically provisions:
 
 - Approximately 10 iPhones (iPhone 12 or above)
 
-# **5.6 Helpdesk, administration and adjudication terminals**
+## Helpdesk, administration and adjudication terminals**
 
   -----------------------------------------------------------------------
   **Terminal**            **Purpose /             **Source**
@@ -517,7 +658,7 @@ Wallet on both ecosystems. Country team typically provisions:
                           and master data.        
   -----------------------------------------------------------------------
 
-**6. Software and Platform Requirements**
+# Software and Platform Requirements
 
 MOSIP supplies the platform and integrates the third-party components.
 The country team is responsible for the operating environment, gateways
@@ -583,7 +724,7 @@ party portal connect.*
                           pilot environment.      
   -----------------------------------------------------------------------
 
-**7. Project Execution Plan (Week-by-Week)**
+# Project Execution Plan (Week-by-Week)
 
 The plan below compresses the pilot into approximately 14 weeks.
 Pre-week 0 activities --- particularly biometric device procurement and
@@ -674,7 +815,7 @@ approved.
 | National ID from a legacy system by migrating the ID data into MOSIP.*      |
 +-----------------------------------------------------------------------------+
 
-## **Critical dependencies**
+## Critical dependencies
 
 - On-prem or cloud infrastructure and the necessary access for
   installation must be ready before the start of Week 1 or 2.
@@ -704,7 +845,7 @@ approved.
 MOSIP-led / shared streams (teal) and critical-path / gate items
 (orange).*
 
-**8. Roles and Responsibilities**
+# Roles and Responsibilities
 
 Responsibilities are split between the country program and the MOSIP
 team. The matrix below covers technical resources, setup, rollout,
@@ -779,7 +920,7 @@ management and procurement.
                       scanners                         
   -------------------------------------------------------------------------
 
-**9. Resourcing the Country Team**
+# Resourcing the Country Team
 
 The country team is the Center of gravity of the pilot. They run the
 deployment, register residents, and inherit the system at sign-off ---
@@ -831,14 +972,14 @@ so resourcing them well is the single biggest predictor of success.
 | part-time.                                                            |
 +=======================================================================+
 
-**10. Designing the Participant Mix**
+# Designing the Participant Mix
 
 The point of the pilot is to feel what MOSIP behaves like for real
 residents, not for an idealised, average user. Aim for a participant
 pool that mirrors the country's population mix, with deliberate
 inclusion of harder edge cases.
 
-## **Recommended demographic distribution**
+## Recommended demographic distribution
 
 The following distribution is recommended as a starting point. The
 country team owns the final mix and can adjust to reflect the local
@@ -894,13 +1035,13 @@ pilot.
 | continue to work after pilot closure.                                 |
 +=======================================================================+
 
-**11. Online and Offline Registration**
+# Online and Offline Registration
 
 MOSIP supports registration in both connected (online) and disconnected
 (offline) modes. The pilot exercises both so the country team
 understands the trade-offs before national rollout.
 
-## **Online registration**
+## Online registration
 
 - The Registration Client communicates with the central MOSIP
   environment in real time over the country network or VPN.
@@ -911,7 +1052,7 @@ understands the trade-offs before national rollout.
 - Used at Centers that have reliable, high-speed internet for the
   duration of the registration window.
 
-## **Offline registration**
+## Offline registration
 
 - The Registration Client captures demographics and biometrics locally;
   packets are synced to the central system once connectivity returns.
@@ -931,13 +1072,13 @@ understands the trade-offs before national rollout.
 | real.                                                                 |
 +=======================================================================+
 
-**12. Authentication with eSignet (OTP and Biometrics)**
+# Authentication with eSignet (OTP and Biometrics)
 
 eSignet is the authentication front door for residents. The pilot uses a
 mock relying-party (RP) portal --- typically a sample health portal
 bundled with eSignet to demonstrate authentication flows end to end.
 
-## **OTP authentication**
+## OTP authentication
 
 1.  Resident enters their ID at the mock RP portal.
 
@@ -952,7 +1093,7 @@ bundled with eSignet to demonstrate authentication flows end to end.
 5.  RP receives an authentication assertion and grants access to the
     demo service.
 
-## **Biometric authentication**
+## Biometric authentication
 
 6.  Resident enters their ID at the mock RP portal.
 
@@ -977,14 +1118,14 @@ bundled with eSignet to demonstrate authentication flows end to end.
 | cases the country team will see at scale.                             |
 +=======================================================================+
 
-**13. Issuing and Using INJI Wallet**
+# Issuing and Using INJI Wallet
 
 INJI Wallet is the resident-side companion to MOSIP. It allows the
 resident to download a verifiable credential of their ID and present it
 back to relying parties without having to repeat the registration
 process. The pilot exercises both INJI Wallet (mobile) and INJI Web.
 
-## **Method**
+## Method
 
 - Resident installs INJI Wallet on Android or iPhone (or opens INJI
   Web).
@@ -997,7 +1138,7 @@ process. The pilot exercises both INJI Wallet (mobile) and INJI Web.
 - Resident presents the credential to the mock health portal; the portal
   verifies the credential cryptographically and grants the demo service.
 
-## **Edge cases worth rehearsing**
+## Edge cases worth rehearsing
 
 - Resident loses the phone and re-issues the credential on a new device.
 
@@ -1006,13 +1147,13 @@ process. The pilot exercises both INJI Wallet (mobile) and INJI Web.
 - Credential is revoked centrally and the wallet refuses presentation at
   the Relying Party.
 
-**14. Functional Training and Real-Life Scenarios**
+# Functional Training and Real-Life Scenarios
 
 Training is the heart of the pilot. The country team is functionally
 trained through hands-on sessions, and they go through real-life
 examples during the pilot and how to deal with them.
 
-## **Training streams**
+## Training streams
 
   --------------------------------------------------------------
   **Stream**        **Topics**                 **Audience**
@@ -1045,9 +1186,8 @@ examples during the pilot and how to deal with them.
                     logging.                   
   --------------------------------------------------------------
 
-## 
 
-## **Real-life scenarios to walk through**
+## Real-life scenarios to walk through
 
 1.  A senior citizen with worn fingerprints --- fall back to iris, then
     to OTP authentication.
@@ -1081,7 +1221,7 @@ examples during the pilot and how to deal with them.
 | volunteering). Theory alone never produces confident operators.       |
 +=======================================================================+
 
-**15. Platform Readiness --- Functional Capabilities to Verify**
+# Platform Readiness --- Functional Capabilities to Verify
 
 Before the country team puts a real resident in front of the
 registration kit, the platform must be exercised end to end on every
@@ -1090,7 +1230,7 @@ is shared between the country team and the MOSIP team. The objective is
 not to test exhaustively --- that is UAT --- but to be certain that
 every flow the pilot will hit has been seen working at least once.
 
-## **Pre-registration and registration flows**
+## Pre-registration and registration flows
 
 - Operator onboarding and login.
 
@@ -1106,7 +1246,7 @@ every flow the pilot will hit has been seen working at least once.
 
 - Biometric correction for an in-flight registration.
 
-## **ID processing and issuance**
+## ID processing and issuance
 
 - Demographic and biometric deduplication via ABIS.
 
@@ -1122,7 +1262,7 @@ every flow the pilot will hit has been seen working at least once.
 
 - Lost ID re-issuance flow.
 
-## **Authentication and notifications**
+## Authentication and notifications
 
 - Biometric authentication via fingerprint through eSignet.
 
@@ -1134,7 +1274,7 @@ every flow the pilot will hit has been seen working at least once.
 
 - Notifications to residents over WhatsApp (where supported in country).
 
-## **Reporting and administration**
+## Reporting and administration
 
 - Registration dashboard --- daily volumes, success rates, exception
   rates.
@@ -1168,7 +1308,7 @@ every flow the pilot will hit has been seen working at least once.
 | uploaded.                                                             |
 +=======================================================================+
 
-**16. Sandbox Hardening Before the Pilot**
+# Sandbox Hardening Before the Pilot
 
 The pilot environment is built up incrementally during demos, training
 and UAT. By the time real residents arrive, that same environment is
@@ -1177,7 +1317,7 @@ Before go-live the MOSIP team with country support performs a structured
 hardening pass so that the pilot runs on a clean, narrowly-scoped
 platform.
 
-## **Cleaning the runtime**
+## Cleaning the runtime
 
 - Clear the Kafka cache so no test events are reprocessed during the
   pilot.
@@ -1186,7 +1326,7 @@ platform.
 
 - Clear ActiveMQ queues to avoid replaying dummy notifications.
 
-## **Tightening access**
+## Tightening access
 
 - Audit Wireguard (or equivalent VPN) access --- every client machine
   should be deliberately authorised, not inherited from a demo phase.
@@ -1209,7 +1349,7 @@ platform.
 | been completed and signed off, the pilot does not start.              |
 +=======================================================================+
 
-**17. Registration Center --- Operations and Logistics**
+# Registration Center --- Operations and Logistics
 
 A registration Center is more than a room with laptops. It is a small
 operations environment that has to receive residents, route them through
@@ -1223,7 +1363,7 @@ at every Center, scaled to the expected daily throughput.
 Adjust to the building you actually have, but keep the flow: entry →
 reception → registration → print → exit.*
 
-## **What a registration Center comprises**
+## What a registration Center comprises
 
 - One or more registration stations --- typically three registration
   kits --- with one extra laptop available as a hot standby.
@@ -1265,7 +1405,7 @@ reception → registration → print → exit.*
 - Staff identification through a uniform or badge, so residents always
   know who to ask.
 
-## **Registration staff per Center**
+## Registration staff per Center
 
   -----------------------------------------------------------------------
   **Role**             **Coverage**
@@ -1293,13 +1433,13 @@ reception → registration → print → exit.*
                        operator and supervisor.
   -----------------------------------------------------------------------
 
-## **Per-kit configuration**
+## Per-kit configuration
 
 Each registration kit must be prepared and locked down before the Center
 opens. The supervisor walks the kit checklist with the operator at the
 start of each day.
 
-### **Workstation**
+### Workstation
 
 - Laptop matches the specification in Section 5.2.
 
@@ -1313,7 +1453,7 @@ start of each day.
 
 - External monitor for the resident is connected and tested.
 
-### **Biometric devices**
+### Biometric devices
 
 - Fingerprint slap scanner connected and recognised by the kit.
 
@@ -1326,7 +1466,7 @@ start of each day.
 - Each device is registered with its vendor and the registration is not
   scheduled to expire during the pilot window.
 
-### **SBI software**
+### SBI software
 
 - SBI L0 (registration) software installed and running on each
   registration workstation; device drivers installed.
@@ -1337,7 +1477,7 @@ start of each day.
   workstations dedicated to authentication, with the corresponding
   drivers in place.
 
-### **Printer and scanner**
+### Printer and scanner
 
 - Each workstation has its own printer/scanner, never shared.
 
@@ -1348,7 +1488,7 @@ start of each day.
 
 - Toner or ink stock checked; a spare cartridge is on site.
 
-### **Photo booth**
+### Photo booth
 
 - White background --- a stand with white cloth, or a clean white
   standee.
@@ -1361,13 +1501,13 @@ start of each day.
 - Standby laptop is fully provisioned and ready to take over from any
   kit that fails during the day.
 
-### **Operator tooling**
+### Operator tooling
 
 - Each operator is given a notepad to record the Registration ID (RID),
   resident name and phone number --- a manual back-pocket reference if a
   resident has to be called back.
 
-## **Print station for ID cards**
+## Print station for ID cards
 
 - A dedicated desk away from the registration queue.
 
@@ -1383,14 +1523,14 @@ start of each day.
 | separate, exclusive printer for ID cards.                             |
 +=======================================================================+
 
-**18. The Registration Workflow, Step by Step**
+# The Registration Workflow, Step by Step
 
 Operators do not invent the flow on the spot, they follow a consistent
 script. The steps below are the country-agnostic recipe for one resident
 moving through one registration station, from greeting to
 acknowledgment.
 
-## **Greeting and consent**
+## Greeting and consent
 
 - Receive the resident at the kit; explain the process briefly in their
   preferred language.
@@ -1401,7 +1541,7 @@ acknowledgment.
 - Verify the proof of identity documents and confirm that the
   demographic data on the evidence matches what will be entered.
 
-## **Demographic and document capture**
+## Demographic and document capture
 
 - Capture demographics into the agreed schema; read each entry back to
   the resident for confirmation.
@@ -1409,7 +1549,7 @@ acknowledgment.
 - Scan the supporting documents; check on screen that the scanned image
   is legible before saving.
 
-## **Biometric capture**
+## Biometric capture
 
 - Capture fingerprints, iris and face following the best-practice
   guidelines in Section 19.
@@ -1423,7 +1563,7 @@ acknowledgment.
 - Ask the resident whether they are satisfied with the captures before
   moving on.
 
-## **Preview, submit and acknowledge**
+## Preview, submit and acknowledge
 
 - Walk the resident through the preview page; ask them to look for any
   errors in spelling, dates or contact information.
@@ -1439,7 +1579,7 @@ acknowledgment.
 - If the resident has a smartphone, suggest taking a photo of the slip
   as a back-up.
 
-## **Closing the visit**
+## Closing the visit
 
 - Make a manual entry in the operator notebook --- RID, name, phone ---
   for fall-back reference.
@@ -1456,7 +1596,7 @@ acknowledgment.
 - Inform the supervisor that the registration is complete; invite the
   next person in the queue.
 
-## **Supervisor responsibilities during the day**
+## Supervisor responsibilities during the day
 
 - Review every registration packet before approval.
 
@@ -1486,7 +1626,7 @@ supervisor approval.*
 | the kit saves an hour in adjudication later.                          |
 +=======================================================================+
 
-**19. Best Practices for Biometric Capture**
+# Best Practices for Biometric Capture
 
 Biometric quality is the single largest determinant of authentication
 success later in the resident's life with the credential. The minute
@@ -1495,7 +1635,7 @@ authentication, every issuance and every adjudication. The practices
 below should be drilled into every operator during training and
 reinforced by supervisors on the floor.
 
-## **General hygiene**
+## General hygiene
 
 - Clean the biometric device before every capture.
 
@@ -1518,7 +1658,7 @@ reinforced by supervisors on the floor.
 - Watch out for smudged fingerprints, light fingerprints, half closed or
   3/4th open eyes etc
 
-## **Fingerprint capture**
+## Fingerprint capture
 
 - Ask the resident to press the fingers gently and evenly on the
   scanner.
@@ -1529,7 +1669,7 @@ reinforced by supervisors on the floor.
 - If a finger is damaged, note the exception clearly and capture the
   remaining fingers.
 
-## **Iris capture**
+## Iris capture
 
 - Confirm the iris scanner is held the right way up --- operators
   sometimes hand a binocular device to the resident upside down and it
@@ -1538,7 +1678,7 @@ reinforced by supervisors on the floor.
 - Ask the resident to open their eyes wide and not to blink during
   capture.
 
-## **Face capture**
+## Face capture
 
 - Look straight into the camera, not at the screen.
 
@@ -1561,7 +1701,7 @@ reinforced by supervisors on the floor.
 - The result should be ICAO-compliant photo quality --- train operators
   against ICAO references during training.
 
-## **Capturing exceptions**
+## Capturing exceptions
 
 - When recording a biometric exception, show the resident which
   biometric type is being marked as an exception, in their language.
@@ -1589,14 +1729,14 @@ reinforced by supervisors on the floor.
 | prominent place.                                                      |
 +=======================================================================+
 
-**20. User Acceptance Testing**
+# User Acceptance Testing
 
 User Acceptance Testing is the country team's formal sign-off that the
 platform is ready for the field. It is led by the country team,
 supported by MOSIP, and runs in the dedicated UAT window before training
 and go-live.
 
-## **Exit criteria**
+## Exit criteria
 
 - Every planned test scenario has been executed.
 
@@ -1610,7 +1750,7 @@ and go-live.
 - The country team has given a successful demo back to the MOSIP team
   showing they can run the platform, not just operate it.
 
-## **Test scenarios to cover**
+## Test scenarios to cover
 
 - All flows listed in Section 15 (Platform Readiness).
 
@@ -1629,14 +1769,14 @@ and go-live.
 | platform without MOSIP at the wheel, UAT is not done.                 |
 +=======================================================================+
 
-**21. Pre Go-Live Readiness**
+# Pre Go-Live Readiness
 
 In the one to two weeks before residents start arriving, the program
 runs a structured readiness sweep. The objective is to make sure that
 every moving part --- platform, Center, communications, logistics,
 safety is in place and visible to the country leadership.
 
-## **Platform and end-to-end sanity**
+## Platform and end-to-end sanity
 
 - End-to-end sanity test successful from a fresh kit through to
   credential in INJI Wallet.
@@ -1645,7 +1785,7 @@ safety is in place and visible to the country leadership.
 
 - Sandbox hardening (Section 16) completed and signed off.
 
-## **Communications and public relations**
+## Communications and public relations
 
 - Notifications sent to residents about appointment slots, what to bring
   and what to expect.
@@ -1662,7 +1802,7 @@ safety is in place and visible to the country leadership.
 
 - Media engagement plan agreed with the country authority.
 
-## **Center logistics and safety**
+## Center logistics and safety
 
 - Posters, handouts and consent forms re-stocked at every Center.
 
@@ -1692,7 +1832,7 @@ safety is in place and visible to the country leadership.
 | issues that a platform UAT cannot.                                    |
 +=======================================================================+
 
-**22. Go-Live Strategy --- Internal Then External**
+# Go-Live Strategy --- Internal Then External
 
 Going live is staged. The pilot starts with a small, internal go-live to
 confirm the platform is stable in real conditions. Only when that is
@@ -1700,7 +1840,7 @@ signed off does the Center open to the public --- and even then, the
 first days deliberately ramp volume so issues surface while the audience
 is small.
 
-## **Internal go-live**
+## Internal go-live
 
 - Country registers a small number of internal staff members.
 
@@ -1715,7 +1855,7 @@ is small.
   based on the platform's observed stability. Jointly decide with the
   MOSIP team.
 
-## **External go-live --- phased ramp**
+## External go-live --- phased ramp
 
   -----------------------------------------------------------------------
   **Day**    **Audience and approach**
@@ -1735,9 +1875,7 @@ is small.
   onwards    ramps to plan; daily reports go to the steering committee.
   -----------------------------------------------------------------------
 
-## 
-
-## **Daily reporting during go-live**
+## Daily reporting during go-live
 
 - Volumes by Center --- registered, in flight, failed.
 
@@ -1762,7 +1900,7 @@ is small.
 | while the audience is still small enough to fix things gracefully.    |
 +=======================================================================+
 
-**23. Governance and Review Cadence**
+# Governance and Review Cadence
 
 A lightweight, predictable governance structure keeps decisions moving
 without burying the technical team in meetings.
@@ -1800,9 +1938,9 @@ without burying the technical team in meetings.
 | the pilot.                                                            |
 +=======================================================================+
 
-**24. Critical Success Factors and Risks**
+# Critical Success Factors and Risks**
 
-## **Success factors**
+## Success factors
 
 - Country infrastructure (on-prem or cloud) is available at the earliest
   possible time, with the access and security approvals MOSIP needs to
@@ -1828,7 +1966,7 @@ without burying the technical team in meetings.
   goes to the field untested. Some countries have even conducted
   examinations and grading to operators.
 
-## **Top risks and mitigations**
+## Top risks and mitigations
 
   -----------------------------------------------------------------------
   **Risk**                **Impact**              **Mitigation**
@@ -1873,7 +2011,7 @@ without burying the technical team in meetings.
                                                   weekends.
   -----------------------------------------------------------------------
 
-**25. Pilot Closure and Hand-Off**
+# Pilot Closure and Hand-Off
 
 Closure is not just turning the lights off. It is the moment the country
 team formally takes ownership of MOSIP and decides what to keep, what to
@@ -1881,7 +2019,7 @@ redo and what to scale. The closure activities below are a structured
 way to make sure no lesson learned in the pilot is lost in the
 transition.
 
-## **Formal closure**
+## Formal closure
 
 - Inform the country authorities, in writing, that the pilot has been
   completed.
@@ -1889,7 +2027,7 @@ transition.
 - Generate the formal pilot reports from the reporting console ---
   registration, authentication, exceptions, dashboards.
 
-## **Capturing field experience**
+## Capturing field experience
 
 - Interview every registration field operator and supervisor; record
   their experience in their own words.
@@ -1901,7 +2039,7 @@ transition.
 
 - Send a formal pilot closure report to the MOSIP team.
 
-## **Closure deliverables**
+## Closure deliverables
 
 - Registration metrics: total registered, breakdown by demographic
   group, on-line vs off-line split, biometric exception rates, average
@@ -1928,7 +2066,10 @@ transition.
 | exercise and is not represented by the pilot footprint.               |
 +=======================================================================+
 
-**Appendix A**
+
+
+
+# Appendix A
 
 **Registration Center Setup Checklist**
 
@@ -2004,7 +2145,7 @@ registration. Tick everything before opening to residents.
 |                            | operators                               |
 +----------------------------+-----------------------------------------+
 
-**Appendix B**
+# Appendix B
 
 **Day-of-Pilot Operator Run Sheet**
 
@@ -2046,7 +2187,7 @@ for your Center.
                      kit. Hand the daily metrics sheet to the supervisor.
   ------------------------------------------------------------------------
 
-**Appendix C**
+# Appendix C
 
 **Experiencing Security and Privacy during the Pilot**
 
@@ -2057,7 +2198,7 @@ authentication --- is an opportunity for the country team to build the
 operational instincts needed to govern a national identity system
 responsibly at scale.
 
-## **What the Team Experiences** 
+## What the Team Experiences
 
   ----------------------------------------------------------------------------
   **Layer**          **What you experience /      **Security / privacy
@@ -2113,7 +2254,7 @@ responsibly at scale.
                      approves what is shared.     
   ----------------------------------------------------------------------------
 
-## **Key privacy behaviors observed during Registration**
+## Key privacy behaviors observed during Registration
 
 +-----------------------------------------------------------------------+
 | **During the pilot, specifically observe and discuss the following    |
@@ -2145,7 +2286,7 @@ responsibly at scale.
 |   scan.                                                               |
 +=======================================================================+
 
-## **Questions to guide your team's security discussion**
+## Questions to guide your team's security discussion
 
 +---+---------------------------------+---------------------------------+
 |   | **FOR THE TECHNICAL TEAM**      | **FOR THE POLICY TEAM**         |
