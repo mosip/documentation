@@ -230,13 +230,15 @@ disabilities), issued unique IDs, and exercised authentication using
 both OTP and biometrics through eSignet, with credentials downloaded
 into the INJI Wallet.
 
-+-----------------------------------------------------------------------+
-| **Before you start**                                                  |
-|                                                                       |
-| This cook book is intentionally country-agnostic. Wherever you see a  |
-| placeholder such as "the Country Program", "the Country IT Team" or   |
-| "the Pilot Authority", replace it with your local equivalent.         |
-+=======================================================================+
+
+{% hint style="info" %}
+
+**Before you start**                                                  
+
+This cook book is intentionally country-agnostic. Wherever you see a
+placeholder such as "the Country Program", "the Country IT Team" or "the Pilot Authority", replace it with your local equivalent.       
+
+{% endhint %}
 
 ### Pilot Objectives**
 
@@ -285,14 +287,16 @@ questions the country will face at national rollout.
 - Permanent data retention --- pilot data is treated as test data and is
   not migrated into production systems
 
-+-----------------------------------------------------------------------+
+{% hint style="info" %}
+
 | **Success Criteria**                                                  |
 |                                                                       |
 | "Up to 3,000 residents --- a representative cross-section of the      |
 | population --- were registered, issued an ID and successfully         |
 | authenticated using eSignet and INJI Wallet, and the country team is  |
 | confident it can run MOSIP independently."                            |
-+=======================================================================+
+
+{% endhint %}
 
 ## Scope and Assumptions
 
@@ -348,14 +352,19 @@ questions the country will face at national rollout.
 - All training, documentation and UIs run in official language of the
   country.
 
-+-----------------------------------------------------------------------+
+
+{% hint style="info" %}
+
+
 | **Decision needed early**                                             |
 |                                                                       |
 | Choose whether to host the pilot on a public cloud (faster to         |
 | provision) or on a country on-prem environment (closer to the         |
 | production footprint). MOSIP supplies the same hardware and           |
 | configuration specifications for either option --- see Section 5.     |
-+=======================================================================+
+
+
+{% endhint %}
 
 ## Pilot Lifecycle at a Glance
 
@@ -419,13 +428,18 @@ run in parallel with the build phase.
                           scale; pilot sign-off.  
   -----------------------------------------------------------------------
 
-+-----------------------------------------------------------------------+
+{% hint style="info" %}
+
+
 | **Total elapsed time**                                                |
 |                                                                       |
 | 3 to 4 months from kick-off to sign-off, assuming biometric device    |
 | shipment and country infrastructure both come online before UAT and   |
 | operator/supervisor training.                                         |
-+=======================================================================+
+
+
+
+{% endhint %}
 
 # Hardware Specifications and Requirements 
 
@@ -495,14 +509,20 @@ is recommended.
   cores) × processors per host. As a reference, an Intel Xeon E-2288G
   with 8 cores / 16 threads on one socket exposes 128 vCPUs.]{.mark}
 
-+-----------------------------------------------------------------------+
+
+{% hint style="info" %}
+
 | **Cloud or on-prem?**                                                 |
 |                                                                       |
 | If the country plans to run the future production system on-prem,     |
 | exercise the on-prem footprint here so that operations, networking    |
 | and security teams rehearse the real run-book. If the production      |
 | target is cloud, run the pilot on the same cloud provider.            |
-+=======================================================================+
+
+
+{% endhint %}
+
+
 
 ## Registration kit -- laptop specification
 
@@ -561,6 +581,8 @@ is recommended.
                           ecosystem.              
   -----------------------------------------------------------------------
 
+{% hint style="info" %}
+
 +----------------------------------------------------------------------+
 | **Plan for shipping lead time**                                      |
 |                                                                      |
@@ -568,6 +590,9 @@ is recommended.
 | typically takes 6 to 8 weeks. Start this on day one. The country     |
 | team should pre-clear the customs process to avoid delays.           |
 +======================================================================+
+
+{% endhint %}
+
 
 
 ## Document scanners, printers and photo booths
@@ -831,13 +856,19 @@ approved.
 
 - 
 
-+-----------------------------------------------------------------------+
+
+{% hint style="info" %}
+
+
 | **If you only do one thing in week 0**                                |
 |                                                                       |
 | Place the biometric device order and lock the infrastructure          |
 | environment. Everything downstream depends on these two long-lead     |
 | items.                                                                |
-+=======================================================================+
+
+
+{% endhint %}
+
 
 ![](.gitbook/assets/media/image3.png)
 
@@ -963,14 +994,21 @@ so resourcing them well is the single biggest predictor of success.
                                         email.
   ------------------------------------------------------------------------
 
-+-----------------------------------------------------------------------+
+
+{% hint style="info" %}
+
+
 | **Identify operators and supervisors early**                          |
 |                                                                       |
 | Operators and supervisors must be identified by the country team well |
 | before the training window. Onboarding is hands-on and assumes        |
 | participants are available for a continuous training block, not       |
 | part-time.                                                            |
-+=======================================================================+
+
+
+
+{% endhint %}
+
 
 # Designing the Participant Mix
 
@@ -1026,14 +1064,22 @@ pilot.
                       and operator scripts.           
   -----------------------------------------------------------------------
 
-+-----------------------------------------------------------------------+
+
+{% hint style="info" %}
+
+
 | **Consent and ethics**                                                |
 |                                                                       |
 | Residents participating in the pilot must give informed consent. Make |
 | sure the consent form makes clear that this is a pilot, what data is  |
 | collected, how long it is retained and whether the credential will    |
 | continue to work after pilot closure.                                 |
-+=======================================================================+
+
+
+
+{% endhint %}
+
+
 
 # Online and Offline Registration
 
@@ -1063,14 +1109,19 @@ understands the trade-offs before national rollout.
 - Operators must understand sync windows, packet status and the helpdesk
   steps for stuck packets.
 
-+-----------------------------------------------------------------------+
+{% hint style="info" %}
+
+
 | **Exercise both modes deliberately**                                  |
 |                                                                       |
 | Schedule at least one full day of offline registration at one Center, |
 | even if connectivity is good. The point is to build muscle memory for |
 | the offline run-book before scale-up exposes the country to it for    |
 | real.                                                                 |
-+=======================================================================+
+
+
+
+{% endhint %}
 
 # Authentication with eSignet (OTP and Biometrics)
 
@@ -1109,14 +1160,18 @@ bundled with eSignet to demonstrate authentication flows end to end.
 10. RP receives an authentication assertion and grants access to the
     demo service.
 
-+-----------------------------------------------------------------------+
+
+{% hint style="info" %}
+
 | **Real-life scenarios to rehearse**                                   |
 |                                                                       |
 | Run at least one OTP-only flow (resident has no fingerprint), one     |
 | biometric flow, one fingerprint failure that falls back to OTP, and   |
 | one deliberate impersonation attempt that should fail. These are the  |
 | cases the country team will see at scale.                             |
-+=======================================================================+
+
+
+{% endhint %}
 
 # Issuing and Using INJI Wallet
 
@@ -1213,13 +1268,20 @@ examples during the pilot and how to deal with them.
 8.  An impersonation attempt at the relying-party portal --- biometric
     authentication fails and the helpdesk logs the incident.
 
-+-----------------------------------------------------------------------+
+{% hint style="info" %}
+
+
 | **Make training stick**                                               |
 |                                                                       |
 | Pair every classroom session with a live registration of a real       |
 | participant (operator, supervisor or technical team member            |
 | volunteering). Theory alone never produces confident operators.       |
-+=======================================================================+
+
+
+
+{% endhint %}
+
+
 
 # Platform Readiness --- Functional Capabilities to Verify
 
@@ -1288,16 +1350,22 @@ every flow the pilot will hit has been seen working at least once.
 
 - Admin console with packet upload status and queue health.
 
-+-----------------------------------------------------------------------+
+
+{% hint style="info" %}
+
 | **Sign off as you go**                                                |
 |                                                                       |
 | Treat each capability above as a small gate. The country technical    |
 | lead and the MOSIP deployment lead jointly tick it off the readiness  |
 | register. No capability is allowed to be 'probably working' on        |
 | go-live day.                                                          |
-+=======================================================================+
 
-+-----------------------------------------------------------------------+
+
+{% endhint %}
+
+
+{% hint style="info" %}
+
 | **Pre-registration inside registration center**                       |
 |                                                                       |
 | It may be pertinent, but not mandatory, to have a pre-registration    |
@@ -1306,7 +1374,7 @@ every flow the pilot will hit has been seen working at least once.
 | prior to actual registration. This can reduce the time to register a  |
 | resident by capturing only biometrics and verifying the documents     |
 | uploaded.                                                             |
-+=======================================================================+
+
 
 # Sandbox Hardening Before the Pilot
 
@@ -1342,12 +1410,16 @@ platform.
 - Capture and file the revocation list --- it becomes part of the pilot
   audit trail.
 
-+-----------------------------------------------------------------------+
+
+{% hint style="info" %}
+
 | **Treat hardening as a gate**                                         |
 |                                                                       |
 | Hardening is a prerequisite for the internal go-live. If it has not   |
 | been completed and signed off, the pilot does not start.              |
-+=======================================================================+
+
+
+{% endhint %}
 
 # Registration Center --- Operations and Logistics
 
@@ -1516,12 +1588,17 @@ start of each day.
 - A colour printer connected to the workstation, exclusively for ID card
   printing on A4 sheets.
 
-+-----------------------------------------------------------------------+
+
+{% hint style="info" %}
+
 | **One printer per kit**                                               |
 |                                                                       |
 | Plan one printer/scanner per registration workstation, plus one       |
 | separate, exclusive printer for ID cards.                             |
-+=======================================================================+
+
+
+{% endhint %}
+
 
 # The Registration Workflow, Step by Step
 
@@ -1618,13 +1695,20 @@ acknowledgment.
 the quality threshold loop back; everything else flows through to
 supervisor approval.*
 
-+-----------------------------------------------------------------------+
+{% hint style="info" %}
+
+
 | **One thing every operator should remember**                          |
 |                                                                       |
 | If anything feels off during a capture --- quality score, fingerprint |
 | placement, face framing --- stop and redo it. A few extra seconds at  |
 | the kit saves an hour in adjudication later.                          |
-+=======================================================================+
+
+
+
+{% endhint %}
+
+
 
 # Best Practices for Biometric Capture
 
@@ -1712,22 +1796,33 @@ reinforced by supervisors on the floor.
 - Get a supervisor to co-sign exception captures so the audit trail is
   clean.
 
-+-----------------------------------------------------------------------+
+
+{% hint style="info" %}
+
 | **Quality over throughput**                                           |
 |                                                                       |
 | It is always better to spend an extra two minutes at the kit than to  |
 | send a low-quality packet downstream. Low-quality biometrics          |
 | translate directly into ABIS false positives, manual adjudication     |
 | backlogs and authentication failures after issuance.                  |
-+=======================================================================+
 
-+-----------------------------------------------------------------------+
+
+{% endhint %}
+
+
+{% hint style="info" %}
+
+
 | **Display aample good and bad biometrics posters**                    |
 |                                                                       |
 | MOSIP team can generate synthetic biometrics (good, bad ugly) that    |
 | can be printed and displayed in the registration center at a          |
 | prominent place.                                                      |
-+=======================================================================+
+
+
+{% endhint %}
+
+
 
 # User Acceptance Testing
 
@@ -1762,12 +1857,18 @@ and go-live.
 - End-to-end happy path: pre-register → register → ABIS → UIN → ID print
   → notification → eSignet auth → INJI Wallet credential download.
 
-+-----------------------------------------------------------------------+
+
+{% hint style="info" %}
+
 | **Demo back, don't just watch**                                       |
 |                                                                       |
 | The country team gives the demo at UAT exit. If they cannot drive the |
 | platform without MOSIP at the wheel, UAT is not done.                 |
-+=======================================================================+
+
+
+{% endhint %}
+
+
 
 # Pre Go-Live Readiness
 
@@ -1824,13 +1925,19 @@ safety is in place and visible to the country leadership.
 - All logistics --- power, network, transport, security --- re-checked
   the day before opening.
 
-+-----------------------------------------------------------------------+
+
+{% hint style="info" %}
+
 | **Run a dry day**                                                     |
 |                                                                       |
 | The day before external go-live, run a half-day dry run with internal |
 | staff playing residents. It surfaces queue, signage and logistics     |
 | issues that a platform UAT cannot.                                    |
-+=======================================================================+
+
+
+{% endhint %}
+
+
 
 # Go-Live Strategy --- Internal Then External
 
@@ -1892,13 +1999,17 @@ is small.
 *Figure 8 --- The phased go-live: internal first, then a deliberate Day
 1 → Day N ramp into the public.*
 
-+-----------------------------------------------------------------------+
+
+{% hint style="info" %}
+
 | **Don't skip Day 1**                                                  |
 |                                                                       |
 | It is tempting to compress the phased ramp on a 3 to 4 month pilot.   |
 | Don't. The phased ramp exists to find the issue you missed in UAT,    |
 | while the audience is still small enough to fix things gracefully.    |
-+=======================================================================+
+
+
+{% endhint %}
 
 # Governance and Review Cadence
 
@@ -1929,14 +2040,21 @@ without burying the technical team in meetings.
                                                      sign-off.
   -----------------------------------------------------------------------
 
-+-----------------------------------------------------------------------+
+
+{% hint style="info" %}
+
 | **Always close with lessons learned**                                 |
 |                                                                       |
 | Block the last 30 minutes of each weekly review for 'what surprised   |
 | us this week'. The compiled list becomes the lessons-learned annex of |
 | the closure report. It also helps in mid-course corrections during    |
 | the pilot.                                                            |
-+=======================================================================+
+
+
+{% endhint %}
+
+
+
 
 # Critical Success Factors and Risks**
 
@@ -2057,16 +2175,18 @@ transition.
 
 - Final sign-off from the Pilot Governance Committee.
 
-+-----------------------------------------------------------------------+
+
+{% hint style="info" %}
+
 | **Cost note**                                                         |
 |                                                                       |
 | The pilot platform is provided at no cost (open source). The country  |
 | invests in infrastructure, country-side hardware, gateways, personnel |
 | and travel. Production costing for a national rollout is a separate   |
 | exercise and is not represented by the pilot footprint.               |
-+=======================================================================+
 
 
+{% endhint %}
 
 
 # Appendix A
@@ -2256,7 +2376,7 @@ responsibly at scale.
 
 ## Key privacy behaviors observed during Registration
 
-+-----------------------------------------------------------------------+
+
 | **During the pilot, specifically observe and discuss the following    |
 | with your team:**                                                     |
 |                                                                       |
@@ -2284,7 +2404,7 @@ responsibly at scale.
 |   verifier's QR scan returns only a cryptographic validity result --- |
 |   the verifier cannot harvest and store the resident's data from the  |
 |   scan.                                                               |
-+=======================================================================+
+
 
 ## Questions to guide your team's security discussion
 
