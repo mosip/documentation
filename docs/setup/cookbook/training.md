@@ -6,27 +6,13 @@ Training is the heart of the pilot. The country team is functionally trained thr
 
 ### Training streams
 
-***
-
-**Stream** **Topics** **Audience**
-
-***
-
-Technical Architecture, deployment, Country technical training configuration, monitoring team and incident response.
-
-Functional Pre-registration, Program managers training registration packet flow, and tech leads ID processing, ID\
-issuance, Lost ID\
-issuance, ID update,\
-eSignet, INJI Wallet,\
-admin console.
-
-Operator and End-to-end registration on Field operators supervisor the kit, exception and supervisors training handling, daily run-sheet, device hygiene.
-
-Adjudicator Manual adjudication Adjudicators training console, decision\
-rationale, escalation\
-paths.
-
-### Helpdesk training Stuck packets, lost Backoffice and credentials, biometric Helpdesk staff exceptions, complaint logging.
+| Stream | Topics | Audience |
+|---|---|---|
+| Technical training | Architecture, deployment, configuration, monitoring and incident response. | Country technical team |
+| Functional training | Pre-registration, registration packet flow, ID processing, ID issuance, Lost ID issuance, ID update, eSignet, INJI Wallet, admin console. | Program managers and tech leads |
+| Operator and supervisor training | End-to-end registration on the kit, exception handling, daily run-sheet, device hygiene. | Field operators and supervisors |
+| Adjudicator training | Manual adjudication console, decision rationale, escalation paths. | Adjudicators |
+| Helpdesk training | Stuck packets, lost credentials, biometric exceptions, complaint logging. | Backoffice and Helpdesk staff |
 
 ### Real-life scenarios to walk through
 

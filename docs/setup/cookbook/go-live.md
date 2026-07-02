@@ -68,19 +68,12 @@ Going live is staged. The pilot starts with a small, internal go-live to confirm
 
 ### External go-live --- phased ramp
 
-***
-
-**Day** **Audience and approach**
-
-***
-
-Day 1 A small number of internal staff registrations, in a public setting, to surface any issues that only occur with the Center fully opened.
-
-Day 2 Another small batch of registrations to confirm that the issues seen on Day 1 do not recur.
-
-Day 3 Senior staff, country bureaucrats and visible community figures --- the audience is still controlled, but the credential begins to circulate beyond the project team.
-
-### Day 4 Open to residents in line with the appointment plan. Volume onwards ramps to plan; daily reports go to the steering committee.
+| Day | Audience and approach |
+|---|---|
+| Day 1 | A small number of internal staff registrations, in a public setting, to surface any issues that only occur with the Center fully opened. |
+| Day 2 | Another small batch of registrations to confirm that the issues seen on Day 1 do not recur. |
+| Day 3 | Senior staff, country bureaucrats and visible community figures --- the audience is still controlled, but the credential begins to circulate beyond the project team. |
+| Day 4 onwards | Open to residents in line with the appointment plan. Volume ramps to plan; daily reports go to the steering committee. |
 
 ### Daily reporting during go-live
 
