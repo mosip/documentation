@@ -45,25 +45,18 @@ _Figure 6 --- Indicative top-down layout of a registration Center. Adjust to the
 
 ### Registration staff per Center
 
-***
+| Role | Coverage |
+|---|---|
+| Registration operator | One trained operator per registration workstation. |
+| Standby registration operator | At least one extra operator on shift to absorb absences and breaks. |
+| Supervisor | One trained supervisor present whenever the Center is open. |
+| Standby supervisor | One additional supervisor available, particularly for the first weeks of go-live. |
+| Helpdesk officer | One or two officers --- first line for resident queries; escalates to the supervisor. |
+| Print-station operator | One operator dedicated to ID card printing and handover. |
 
-**Role** **Coverage**
+### Documentation
 
-***
-
-Registration One trained operator per registration workstation. operator
-
-Standby registration At least one extra operator on shift to absorb operator absences and breaks.
-
-Supervisor One trained supervisor present whenever the Center is open.
-
-Standby supervisor One additional supervisor available, particularly for the first weeks of go-live.
-
-Helpdesk officer One or two officers --- first line for resident queries; escalates to the supervisor.
-
-Print-station One operator dedicated to ID card printing and operator handover.
-
-### Documentation A printed copy of the Registration Client Operations handbook is distributed to every operator and supervisor.
+A printed copy of the Registration Client Operations handbook is distributed to every operator and supervisor.
 
 ### Per-kit configuration
 
