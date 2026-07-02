@@ -21,7 +21,7 @@ eSignet is the authentication front door for residents. The pilot uses a mock re
 10. RP receives an authentication assertion and grants access to the demo service.
 
 {% hint style="info" %}
-**Real-life scenarios to rehearse** Run at least one OTP-only flow (resident has no fingerprint), one biometric flow, one fingerprint failure that falls back to OTP, and one deliberate impersonation attempt that should fail. These are the cases the country team will see at scale.
+**Real-life scenarios to rehearse** Run at least one OTP-only flow (resident has no fingerprint), one | | biometric flow, one fingerprint failure that falls back to OTP, and | | one deliberate impersonation attempt that should fail. These are the | | cases the country team will see at scale. |
 {% endhint %}
 
 ## Issuing and Using INJI Wallet
