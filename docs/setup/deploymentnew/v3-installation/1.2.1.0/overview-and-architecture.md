@@ -22,8 +22,8 @@
 
 **MOSIP cluster** - This cluster runs all the MOSIP components and certain third-party components like the kafka, keycloak etc.
 
-* [MOSIP External Components](https://github.com/mosip/mosip-infra/blob/v1.2.0.1-B1/deployment/v3/external/README.md#mosip-external-components)
-* [MOSIP Services](https://github.com/mosip/mosip-infra/blob/v1.2.0.1-B1/deployment/v3/mosip/README.md#mosip-services)
+* [MOSIP External Components](https://github.com/mosip/mosip-infra/blob/v1.2.1.0/deployment/v3/external/README.md)
+* [MOSIP Services](https://github.com/mosip/mosip-infra/blob/v1.2.1.0/deployment/v3/mosip/README.md)
 
 ### Architecture diagram
 
@@ -31,7 +31,7 @@
 
 These are the repos that we would use for installing and configuring the MOSIP deployment. For detailed steps, please follow the guide. This section is for reference.
 
-* [k8s-infra](https://github.com/mosip/k8s-infra/tree/v1.2.0.2) : contains the scripts to install and configure a Kubernetes cluster with required monitoring, logging, and alerting tools.
-* [mosip-infra](https://github.com/mosip/mosip-infra/tree/v1.2.0.2/deployment/v3) : contains the deployment scripts to run charts in a defined sequence.
-* [mosip-config](https://github.com/mosip/mosip-config/tree/v1.2.0.1) : contains all the configuration files required by the MOSIP modules.
-* [mosip-helm](https://github.com/mosip/mosip-helm/tree/v1.2.0.2) : contains packaged Helm charts for all the MOSIP modules.
+* [k8s-infra](https://github.com/mosip/k8s-infra/tree/v1.2.1.0) : contains the scripts to install and configure a Kubernetes cluster with required monitoring, logging, and alerting tools.
+* [mosip-infra](https://github.com/mosip/mosip-infra/tree/v1.2.1.0/deployment/v3) : contains the deployment scripts to run charts in a defined sequence.
+* [mosip-config](https://github.com/mosip/mosip-config/tree/v1.3.0) : contains all the configuration files required by the MOSIP modules.
+* [mosip-helm](https://github.com/mosip/mosip-helm/tree/v1.3.0) : contains packaged Helm charts for all the MOSIP modules.
