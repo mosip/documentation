@@ -90,6 +90,12 @@ The machines are grouped below by the capability they power.
 
 The **root** machine. On start it first spawns `store`, checks/generates cryptographic key pairs, fetches remote configuration (cache TTL and other properties via Mimoto's `allProperties` API), loads the credential‑registry and eSignet host from storage, and only then spawns the remaining service actors and moves to the `ready` (parallel) state. In `ready` it continuously tracks **app focus** and **network** status and broadcasts them to all children. It also handles deep links for QR login, OpenID4VP, and credential offers.
 
+**Flows covered:**
+
+* Cold‑start boot sequence: storage → key pairs → config → service actors → `ready`.
+* App lifecycle broadcasting (focus/blur, online/offline) to every child machine.
+* Deep‑link routing for QR login, OpenID4VP requests, and credential offers.
+
 #### `store.ts`
 
 The single gateway for all persistence. It exposes `GET`/`SET`/`APPEND`/`REMOVE`/`CLEAR` style events to the rest of the app and performs the **encryption/decryption** for data at rest. It abstracts the underlying storage engines:
@@ -133,21 +139,45 @@ Owns the **entire OpenID4VCI download journey**. It calls Mimoto's `/issuers` an
 
 It also handles **credential offers received via deep link** and reacts to network changes. This is the primary machine to extend when adding a new issuance capability. See also the [Credential Provider](credential_providers.md) customization.
 
+**Flows covered:**
+
+* Authorization‑code flow — user authenticates with the issuer/eSignet, then the credential is requested and downloaded.
+* Pre‑authorized / credential‑offer flow — including `tx_code` (transaction code) prompts and consent screens.
+* Credential offer opened via deep link, guarded so it is only accepted when the machine is in a safe state.
+
 ### Credential lifecycle
 
 #### `VerifiableCredential/VCMetaMachine`
 
 Manages the **metadata for all credentials** — the "My VCs" list on Home and the "Received VCs" list. It tracks download progress/success/failure and, for each stored credential, **spawns a `VCItemMachine`** to manage that credential individually.
 
+**Flows covered:**
+
+* Loading and maintaining the My VCs and Received VCs lists from `store`.
+* Tracking in‑progress downloads and surfacing download success/failure banners.
+* Spawning and tearing down a per‑credential `VCItemMachine` as VCs are added/removed.
+
 #### `VerifiableCredential/VCItemMachine`
 
 Spawned **once per credential**, this machine tracks a single VC's lifecycle: loading it from memory or from the server, fetching the issuer `.well-known`, verifying the credential, pinning/unpinning, activating for online login, showing QR/details, and deletion. Any new per‑credential feature belongs here. It is a `parallel` machine so utility state (load/refresh) and feature state can progress independently.
+
+**Flows covered:**
+
+* Load a VC from memory, or (re)download and store it from the issuer when missing.
+* Verify the credential and refresh the issuer `.well-known` metadata.
+* Per‑card actions — pin/unpin, view QR/details, and delete.
 
 ### Online sharing — OpenID4VP
 
 #### `openID4VP/openID4VPMachine`
 
 Drives **online credential presentation** using OpenID4VP (via the [OpenID4VP SDK](../integration-guide/openid4vp.md)). It receives the authorization request (scanned or via deep link), lets the user select which VC(s) to present, optionally performs **face authentication** (share‑with‑selfie) through `faceScanner`, constructs and sends the Verifiable Presentation to the verifier, and logs the activity.
+
+**Flows covered:**
+
+* Simple presentation — select VC(s) and share the Verifiable Presentation with the verifier.
+* Share‑with‑selfie — the same flow gated behind a face‑authentication consent + capture step.
+* Requests arriving from a full scan vs. the Home mini‑view vs. an OpenID4VP deep link.
 
 ### Offline sharing — BLE (Tuvali)
 
@@ -157,15 +187,33 @@ Offline sharing uses the [Tuvali BLE SDK](../integration-guide/tuvali/) and the 
 
 Instantiated when the user opens the **scanner** to share a credential. It scans the verifier's QR code, discovers and connects to the verifier device over BLE, lets the user pick which downloaded VC(s) to share, optionally runs selfie/face verification, and transmits the credential.
 
+**Flows covered:**
+
+* Scan verifier QR → BLE device discovery → secure connection handshake.
+* Select VC(s), optional selfie/face verification, then transmit over BLE.
+* Connection/transfer error and retry handling (e.g. Bluetooth off, verifier out of range).
+
 #### `bleShare/request/requestMachine.ts`
 
 The receiving side (spawned on **Android only**). Instantiated when a device acts as a verifier: it displays the QR code, accepts the incoming BLE connection, receives the shared VC, and lets the user view/verify the received credential.
+
+**Flows covered:**
+
+* Generate and display the QR code that a wallet scans to initiate sharing.
+* Accept the incoming BLE connection and receive the shared VC.
+* Show and verify the received credential, then store it under Received VCs.
 
 ### Login with QR — OpenID Connect
 
 #### `QrLogin/QrLoginMachine.ts`
 
 Powers **"Login with QR code"** on portals that support OpenID Connect with Inji Wallet. After scanning the login QR, the user reviews the mandatory claims and selects any voluntary claims, and on successful submission the portal logs the user in and redirects automatically.
+
+**Flows covered:**
+
+* Scan a portal login QR and resolve the requested essential vs. voluntary claims.
+* Consent capture — user confirms essential claims and opts into voluntary ones.
+* Optional face‑verification consent before submitting, then automatic portal redirect on success.
 
 ### Face authentication
 
@@ -181,9 +229,19 @@ Backup/restore protect the wallet's credentials to the user's own cloud (Google 
 
 Handles backing up the encrypted credentials to cloud storage.
 
+**Flows covered:**
+
+* Trigger a backup (manual or automatic), package the encrypted VCs, and upload to the user's cloud.
+* Report progress and last‑backup status back to the Settings screen.
+
 #### `backupAndRestore/restore`
 
 Handles fetching, decrypting, and verifying the backed‑up credentials during restore.
+
+**Flows covered:**
+
+* Locate and download the latest backup from the user's cloud.
+* Decrypt, verify, and re‑import the credentials into local storage.
 
 #### `backupAndRestore/backupAndRestoreSetup`
 
