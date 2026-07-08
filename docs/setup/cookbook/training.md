@@ -25,6 +25,10 @@ Training is the heart of the pilot. The country team is functionally trained thr
 7. A lost or damaged ID --- physical re-issuance at the registration center and re-download into a new INJI Wallet device.
 8. An impersonation attempt at the relying-party portal --- biometric authentication fails and the helpdesk logs the incident.
 
+<!-- 
+This list can expand with more of the scenarios which are typically encountered with foundational ID syestems. 
+-->
+
 {% hint style="info" %}
 **Make training stick** Pair every classroom session with a live registration of a real participant (operator, supervisor or technical team member volunteering). Theory alone never produces confident operators.
 {% endhint %}

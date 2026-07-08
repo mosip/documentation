@@ -17,7 +17,7 @@ The plan below compresses the pilot into approximately 14 weeks. Pre-week 0 acti
 
 _This is just an indicative execution plan. The actual execution plan with dates to be prepared based understanding and agreement between the country and MOSIP team._
 
-_\*For brown-field pilots only; a brown-field pilot re-uses issued National ID from a legacy system by migrating the ID data into MOSIP._
+_*For brown-field pilots only; a brown-field pilot re-uses issued National ID from a legacy system by migrating the ID data into MOSIP._
 
 ### Critical dependencies
 
@@ -29,6 +29,8 @@ _\*For brown-field pilots only; a brown-field pilot re-uses issued National ID f
 {% hint style="info" %}
 **If you only do one thing in week 0** Place the biometric device order and lock the infrastructure environment. Everything downstream depends on these two long-lead items.
 {% endhint %}
+
+![](../../.gitbook/assets/fpg-figure-3.png)
 
 _Figure 3 --- Indicative 14-week schedule. Country-led streams (navy), MOSIP-led / shared streams (teal) and critical-path / gate items (orange)._
 

@@ -40,3 +40,10 @@ INJI Wallet is the resident-side companion to MOSIP. It allows the resident to d
 * Resident loses the phone and re-issues the credential on a new device.
 * Resident has no smartphone --- INJI Web is used from a shared kiosk.
 * Credential is revoked centrally and the wallet refuses presentation at the Relying Party.
+
+
+<!--
+
+Put Releated Reading all across and here as well, linking to eSignet and may be wallet documentation.
+
+-->

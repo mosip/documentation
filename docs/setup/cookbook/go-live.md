@@ -83,6 +83,9 @@ Going live is staged. The pilot starts with a small, internal go-live to confirm
 * Authentication success rate at the mock relying party portal.
 * Incident log --- what happened, what was done, what is still open.
 
+![](../../.gitbook/assets/fpg-figure-8.png)
+
+
 _Figure 8 --- The phased go-live: internal first, then a deliberate Day 1 → Day N ramp into the public._
 
 {% hint style="info" %}

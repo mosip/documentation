@@ -27,8 +27,8 @@ The MOSIP pilot can be deployed on a public cloud or on the country's on-prem en
 
 #### Aggregate footprint
 
-* Total RAM: \~600 GB
-* Total SSD storage: \~2 TB
+* Total RAM: ~600 GB
+* Total SSD storage: ~2 TB
 * vCPU sizing on physical servers can be calculated as (threads × cores) × processors per host. As a reference, an Intel Xeon E-2288G with 8 cores / 16 threads on one socket exposes 128 vCPUs.
 
 {% hint style="info" %}
@@ -70,7 +70,7 @@ The MOSIP pilot can be deployed on a public cloud or on the country's on-prem en
 
 | Specification | Value |
 |---|---|
-| Type | Colour |
+| Type | Color |
 | Print resolution | 600 dpi |
 | Scan resolution | 300 dpi |
 | Paper size | A4 |
@@ -108,6 +108,8 @@ Residents and operators need a small fleet of phones to exercise INJI Wallet on 
 ## Software and Platform Requirements
 
 MOSIP supplies the platform and integrates the third-party components. The country team is responsible for the operating environment, gateways and identity-related accounts.
+
+![](../../.gitbook/assets/fpg-figure-2.png)
 
 _Figure 2 --- Pilot system components and how the resident, registration client, MOSIP core, ABIS, eSignet, INJI Wallet and the mock relying party portal connect._
 
