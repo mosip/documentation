@@ -57,7 +57,7 @@ The pilot environment is built up incrementally during demos, training and UAT. 
 
 ### Tightening access
 
-* Audit Wireguard (or equivalent VPN) access --- every client machine should be deliberately authorised, not inherited from a demo phase.
+* Audit Wireguard (or equivalent VPN) access --- every client machine should be deliberately authorized, not inherited from a demo phase.
 * Remove Wireguard access from people who no longer need it.
 * Audit Keycloak users; remove demo accounts and any user no longer participating in the pilot.
 * Reduce admin role membership in Keycloak to one or two named individuals; everyone else is moved to a least-privilege role.
@@ -66,3 +66,8 @@ The pilot environment is built up incrementally during demos, training and UAT. 
 {% hint style="info" %}
 **Treat hardening as a gate** Hardening is a prerequisite for the internal go-live. If it has not been completed and signed off, the pilot does not start.
 {% endhint %}
+
+
+<!--
+There should be a checklist against the 'Readiness' (Platform, sandbox hardening etc.).
+-->

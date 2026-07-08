@@ -24,6 +24,9 @@ MOSIP supports registration in both connected (online) and disconnected (offline
 
 A registration Center is more than a room with laptops. It is a small operations environment that has to receive residents, route them through a queue, capture their data accurately, manage exceptions and end the visit with a printed credential. The components below should be in place at every Center, scaled to the expected daily throughput.
 
+
+![](../../.gitbook/assets/fpg-figure-6.png)
+
 _Figure 6 --- Indicative top-down layout of a registration Center. Adjust to the building you actually have, but keep the flow: entry → reception → registration → print → exit._
 
 ### What a registration Center comprises
@@ -31,7 +34,7 @@ _Figure 6 --- Indicative top-down layout of a registration Center. Adjust to the
 * One or more registration stations --- typically three registration kits --- with one extra laptop available as a hot standby.
 * Biometric devices and printer/scanner attached to each registration workstation.
 * A trained registration operator, and a registration supervisor, present at all times.
-* A dedicated print station for ID cards, with its own colour printer (not shared with the registration stations).
+* A dedicated print station for ID cards, with its own color printer (not shared with the registration stations).
 * Sufficient seating in a waiting area for residents and their accompanying family members.
 * A tokenisation mechanism for batching walk-in residents into registration slots.
 * Handouts that explain the flow of activities so residents know what to expect.
@@ -72,8 +75,8 @@ Each registration kit must be prepared and locked down before the Center opens. 
 
 #### Biometric devices
 
-* Fingerprint slap scanner connected and recognised by the kit.
-* Iris scanner connected and recognised.
+* Fingerprint slap scanner connected and recognized by the kit.
+* Iris scanner connected and recognized.
 * Face camera connected, framed correctly with the photo booth.
 * If devices are connected through a USB hub, the hub is a powered hub.
 * Each device is registered with its vendor and the registration is not scheduled to expire during the pilot window.
@@ -106,7 +109,7 @@ Each registration kit must be prepared and locked down before the Center opens. 
 
 * A dedicated desk away from the registration queue.
 * A laptop or desktop with adequate configuration for PDF rendering.
-* A colour printer connected to the workstation, exclusively for ID card printing on A4 sheets.
+* A color printer connected to the workstation, exclusively for ID card printing on A4 sheets.
 
 {% hint style="info" %}
 **One printer per kit** Plan one printer/scanner per registration workstation, plus one separate, exclusive printer for ID cards.
@@ -157,6 +160,8 @@ Operators do not invent the flow on the spot, they follow a consistent script. T
 * Compare successful registrations against total registrations attempted at end of day.
 * Collect operator feedback on the difficulties they faced and address them before the next day.
 * Upload registration data at regular intervals --- typically twice a day --- so back-end processing has time to keep up.
+
+![](../../.gitbook/assets/fpg-figure-7.png)
 
 _Figure 7 --- The operator workflow as a flowchart. Captures that miss the quality threshold loop back; everything else flows through to supervisor approval._
 
@@ -214,3 +219,11 @@ Biometric quality is the single largest determinant of authentication success la
 {% hint style="info" %}
 **Display aample good and bad biometrics posters** MOSIP team can generate synthetic biometrics (good, bad ugly) that can be printed and displayed in the registration center at a prominent place.
 {% endhint %}
+
+
+<!--
+This section again can have an exact checklist and at the same time an SOP can be be there for the 'Field Operations'
+
+The sub sections already mentions it as - Registration Client Operations handbook
+
+-->

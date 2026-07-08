@@ -43,7 +43,7 @@ Print this page and do an audit with a supervisor before the first registration.
 
 **Day-of-Pilot Operator Run Sheet**
 
-A condensed run sheet for an operator on a registration day. Localise it for your Center.
+A condensed run sheet for an operator on a registration day. Localize it for your Center.
 
 | Phase | What the operator does |
 |---|---|
