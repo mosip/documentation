@@ -17,7 +17,9 @@ The login screen appears and the resident is displayed with the options they can
 
 3\. The resident needs to enter a valid VID in the _**Enter Your VID**_ text field and check the box 'I'm not a robot'.
 
-The OTP-based authentication is now secured with a captcha.
+{% hint style="info" %}
+**Note:** The OTP-based authentication is now secured with a captcha.
+{% endhint %}
 
 <figure><img src="../../../../.gitbook/assets/enter your vid.png" alt=""><figcaption><p>Enter your UIN/VID</p></figcaption></figure>
 
