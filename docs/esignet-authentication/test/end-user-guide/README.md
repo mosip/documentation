@@ -4,7 +4,7 @@ description: Fast, secure authentication for residents made easy.
 
 # End User Guide
 
-### Getting Started: Seamless Access with eSignet
+### Use Case Overview:
 
 In this user guide, we take the example of a **health services portal** acting as a Relying Party with eSignet. Residents can quickly and securely identify themselves using their country’s foundation ID system (here, **MOSIP**), avoiding the hassle of repeatedly filling out account or personal information. This streamlined process ensures faster access to services and benefits while maintaining security and privacy.
 
