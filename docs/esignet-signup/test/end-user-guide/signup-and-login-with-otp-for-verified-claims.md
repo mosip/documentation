@@ -2,6 +2,10 @@
 
 ### Signup and Try Video eKYC <a href="#sign-up-and-try-video-ekyc" id="sign-up-and-try-video-ekyc"></a>
 
+{% hint style="warning" %}
+**Note**: The Signup service is not available in the MOSIP Collab as of now for self experience.
+{% endhint %}
+
 Use the eSignet Signup service to register and create your user profile.\
 Follow the steps below to complete registration and experience the **video eKYC** verification flow.
 
