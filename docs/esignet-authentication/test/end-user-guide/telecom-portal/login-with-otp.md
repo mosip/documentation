@@ -30,6 +30,14 @@ The resident enters a valid **UIN**/**VID** in the _Enter UIN/VID_ field.
 
 The resident clicks **Get OTP**. An OTP is sent to the resident’s registered mobile number or email address.
 
+{% hint style="info" %}
+**Note: OTP Delivery Update for eSignet Login**\
+Previously, the eSignet login flow in the MOSIP Collab (Sandbox) environment used a static OTP (`111111`) for easy self-experience by the community. As per the latest MOSIP platform deployment, OTP delivery now works as follows:
+
+* If you registered with a **valid, accessible email address**, the **OTP will be sent to that email**. Please ensure you use a valid, accessible email ID during self-registration to receive it directly.
+* If you did not add a valid email during registration, **you can still get an OTP!** Go to [smtp.collab.mosip.net](http://smtp.collab.mosip.net) **(public mailbox) to get the OTP.**  (**Important:** You must refresh/reload the public mailbox ([smtp.collab.mosip.net](http://smtp.collab.mosip.net)) to clear any previous OTPs and then click Get OTP and use the newly received one to complete login.
+{% endhint %}
+
 <figure><img src="../../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 #### Step 5: Verify OTP

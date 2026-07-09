@@ -27,6 +27,14 @@ The OTP-based authentication is now secured with a captcha.
 
 5\. The resident receives the OTP on the registered channel (either by phone or email).
 
+{% hint style="info" %}
+**Note: OTP Delivery Update for eSignet Login**\
+Previously, the eSignet login flow in the MOSIP Collab (Sandbox) environment used a static OTP (`111111`) for easy self-experience by the community. As per the latest MOSIP platform deployment, OTP delivery now works as follows:
+
+* If you registered with a **valid, accessible email address**, the **OTP will be sent to that email**. Please ensure you use a valid, accessible email ID during self-registration to receive it directly.
+* If you did not add a valid email during registration, **you can still get an OTP!** Go to [smtp.collab.mosip.net](http://smtp.collab.mosip.net) **(public mailbox) to get the OTP.**  (**Important:** You must refresh/reload the public mailbox ([smtp.collab.mosip.net](http://smtp.collab.mosip.net)) to clear any previous OTPs and then click Get OTP and use the newly received one to complete login.
+{% endhint %}
+
 6\. The resident needs to enter the valid OTP received and click on the _**Verify**_ button.
 
 <figure><img src="../../../../.gitbook/assets/Verify OTP.png" alt=""><figcaption><p>Verify OTP</p></figcaption></figure>

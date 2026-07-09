@@ -50,7 +50,9 @@ Clicking **Continue** redirects the user to a page where they can enter basic pe
 **Note:** On the screen, the label for the text field is displayed as **‘UIN/VID’**. Enter your mobile number in the text box to proceed.
 {% endhint %}
 
-11. The user receives the OTP through their registered channel (either via phone or email). Enter the valid OTP in the provided field and click **Verify** to proceed.
+11. The user receives the OTP through their registered channel (either via phone or email). Enter the valid OTP in the provided field and click **Verify** to proceed.<br>
+
+    <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>Note: OTP Delivery Update for eSignet Login</strong><br>Previously, the eSignet login flow in the MOSIP Collab (Sandbox) environment used a static OTP (<code>111111</code>) for easy self-experience by the community. As per the latest MOSIP platform deployment, OTP delivery now works as follows:</p><ul><li>If you registered with a <strong>valid, accessible email address</strong>, the <strong>OTP will be sent to that email</strong>. Please ensure you use a valid, accessible email ID during self-registration to receive it directly.</li><li>If you did not add a valid email during registration, <strong>you can still get an OTP!</strong> Go to <a href="http://smtp.collab.mosip.net">smtp.collab.mosip.net</a> <strong>(public mailbox) to get the OTP.</strong>  (<strong>Important:</strong> You must refresh/reload the public mailbox (<a href="http://smtp.collab.mosip.net">smtp.collab.mosip.net</a>) to clear any previous OTPs and then click Get OTP and use the newly received one to complete login.</li></ul></div>
 
 <figure><img src="../../../.gitbook/assets/eSignet_OTP_Verify.png" alt=""><figcaption><p>Enter OTP Page</p></figcaption></figure>
 
