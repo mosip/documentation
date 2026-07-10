@@ -217,9 +217,9 @@ helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 helm repo update
 helm install ingress-nginx ingress-nginx/ingress-nginx \
 --namespace ingress-nginx \
---version 4.0.18 \
---create-namespace  \
--f ingress-nginx.values.yaml
+--version 4.10.0 \
+--create-namespace \
+-f ingress-nginx-np.values.yaml
 ```
 
 > Note:
@@ -447,7 +447,7 @@ kubectl -n cattle-system create secret generic tls-ca --from-file=cacerts.pem=<t
 * USe below command to install Rancher UI:
 
 ```
-helm install rancher rancher/rancher --version 2.6.9 \
+helm install rancher rancher/rancher --version 2.8.3 \
 --namespace cattle-system \
 --create-namespace \
 --set privateCA=true \

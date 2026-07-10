@@ -242,9 +242,9 @@ helm repo update
 helm install \
   ingress-nginx ingress-nginx/ingress-nginx \
   --namespace ingress-nginx \
-  --version 4.0.18 \
+  --version 4.10.0 \
   --create-namespace \
-  -f ingress-nginx.values.yaml
+  -f ingress-nginx-lb.values.yaml
 ```
 
 > **Note:**
@@ -464,7 +464,7 @@ cd $K8_ROOT/observation/rancher-ui
 helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
 helm repo update
 helm install rancher rancher-latest/rancher \
-  --version 2.6.9 \
+  --version 2.8.3 \
   --namespace cattle-system \
   --create-namespace \
   -f rancher-values.yaml
