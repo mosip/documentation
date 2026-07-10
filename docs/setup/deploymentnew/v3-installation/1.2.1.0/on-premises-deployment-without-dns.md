@@ -219,7 +219,7 @@ helm install ingress-nginx ingress-nginx/ingress-nginx \
 --namespace ingress-nginx \
 --version 4.10.0 \
 --create-namespace \
--f ingress-nginx-np.values.yaml
+-f ingress-nginx.values.yaml
 ```
 
 > Note:

@@ -10,12 +10,12 @@
   * Reverse Proxy
   * CDN/Cache management
   * Load balancing
-* Kubernetes cluster is administered using the [Rancher](https://rancher.com/docs/rancher/v1.3/en/kubernetes/#rancher-ui) and [rke](https://www.rancher.com/products/rke) tools.
+* Kubernetes cluster is administered using the [Rancher](https://www.rancher.com) and [rke](https://docs.rke2.io) tools.
 * We have two Kubernetes clusters:
 
 **Observation cluster** - This cluster is part of the observation plane and assists with administrative tasks. By design, this is kept independent from the actual cluster as a good security practice and to ensure clear segregation of roles and responsibilities. As a best practice, this cluster or its services should be internal and should never be exposed to the external world.
 
-* [Rancher](https://rancher.com/docs/rancher/v1.3/en/kubernetes/#rancher-ui) is used for managing the MOSIP cluster.
+* [Rancher](https://www.rancher.com) is used for managing the MOSIP cluster.
 * [Keycloak](https://www.keycloak.org/) in this cluster is used to manage user access and rights for the observation plane.
 * It is recommended to configure log monitoring and network monitoring in this cluster.
 * In case you have an internal container registry, then it should run here.

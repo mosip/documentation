@@ -11,7 +11,7 @@
 
 #### Setup Wireguard VM and Wireguard Bastion Server
 
-* Create a Wireguard server VM as per the [**Hardware and Network Requirements**](../1.2.0.2/pre-requisites.md).
+* Create a Wireguard server VM as per the [**Hardware and Network Requirements**](../1.2.1.0/pre-requisites.md).
 * Open the required ports on the bastion server VM:
 
 ```bash
@@ -133,9 +133,9 @@ sudo systemctl status wg-quick@wg0
 
 > **Note:** Cluster creation uses **RKE2** (RKE1 is EOL). The recommended approach is the Ansible-based automated setup from `$K8_ROOT/k8-cluster/on-prem/rke2/ansible`. See the [RKE2 documentation](https://docs.rke2.io/) for full reference.
 
-* Install all the required tools listed in the [Personal Computer Setup](../1.2.0.2/pre-requisites.md#personal-computer-requirements) section.
+* Install all the required tools listed in the [Personal Computer Setup](../1.2.1.0/pre-requisites.md#personal-computer-requirements) section.
 * Ensure the following are installed on all cluster VMs and the client machine: `ufw`, `wget`, `curl`, `kubectl`, `istioctl`, `helm`, `jq`, `ansible` (version > 2.12.4).
-* Set up Observation Cluster node VMs per the [hardware and network requirements](../1.2.0.2/pre-requisites.md#hardware-requirements).
+* Set up Observation Cluster node VMs per the [hardware and network requirements](../1.2.1.0/pre-requisites.md#hardware-requirements).
 * Set up passwordless SSH to the cluster nodes via PEM keys (skip if VMs are already accessible via PEM):
   * Generate keys on your PC: `ssh-keygen -t rsa`
   * Copy the keys to remote observation node VMs: `ssh-copy-id <remote-user>@<remote-ip>`
@@ -244,7 +244,7 @@ helm install \
   --namespace ingress-nginx \
   --version 4.10.0 \
   --create-namespace \
-  -f ingress-nginx-lb.values.yaml
+  -f ingress-nginx.values.yaml
 ```
 
 > **Note:**
@@ -606,7 +606,7 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo add mosip https://mosip.github.io/mosip-helm
 ```
 
-* Set up MOSIP K8s Cluster node VMs per the [Hardware and Network Requirements](../1.2.0.2/pre-requisites.md).
+* Set up MOSIP K8s Cluster node VMs per the [Hardware and Network Requirements](../1.2.1.0/pre-requisites.md).
 * Set up passwordless SSH to the cluster nodes via PEM keys (skip if VMs are already accessible via PEM):
   * Generate keys on your PC: `ssh-keygen -t rsa`
   * Copy keys to remote cluster node VMs: `ssh-copy-id <remote-user>@<remote-ip>`
