@@ -12,11 +12,11 @@ This guide covers a scenario where a user does **not** have a pre-existing digit
 
 #### 1. Creating a New ID via the Signup Portal
 
-When a user does not have an existing ID, they can use the **eSignet Signup Portal** to create one. The Signup Portal uses the **Profile Registry plugin**, integrated with a National ID system (or any other trusted ID system), to register the user and create a new digital ID with minimal information.
+When a user does not have an existing ID, they can use the **eSignet Signup Portal** to create one. The Signup Portal uses the [**Profile Registry plugin**](../../develop/integration-guide-signup-portal/profile-registry-plugin.md), integrated with a National ID system (or any other trusted ID system), to register the user and create a new digital ID with minimal information.
 
 #### 2. Logging in to a Service Using the New ID
 
-Once the ID is created, the user can log in using this newly created ID through **eSignet** to access a service. This flow is demonstrated in this guide using a **dummy Health Portal** integrated with eSignet as an example relying party.
+Once the ID is created, the user can log in using this newly created ID through **eSignet** to access a service. This flow is demonstrated in this guide using a dummy **Health Portal** integrated with eSignet as an example relying party.
 
 #### 3. Identity Verification Requested by the Service
 
