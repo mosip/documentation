@@ -85,7 +85,7 @@ helm repo add mosip https://mosip.github.io/mosip-helm
 
 * [rke](https://rancher.com/docs/rke/latest/en/installation/) : version: [1.3.10](https://github.com/rancher/rke/releases/tag/v1.3.10)
 * [Istioctl](https://istio.io/latest/docs/setup/getting-started/#download) : version: 1.15.0
-* Wireguard Client - Refer to the [Setup Wireguard Client on your PC](../../readme/setup/deploy.md#setup-wireguard-client-on-your-pc) section for the instructions.
+* Wireguard Client - Refer to the [Setup Wireguard Client on your PC](https://github.com/mosip/documentation/blob/esignet/readme/setup/deploy.md#setup-wireguard-client-on-your-pc) section for the instructions.
 
 ### Cloud Environment Profile
 
@@ -474,4 +474,3 @@ kubectl get pods -n esignet
   * [Relying Party Onboarding](../esignet-authentication/develop/integration/relying-party/relying-party-onboarding.md)
   * [Integration Options and Discovery Endpoints](../esignet-authentication/develop/integration/relying-party/integration-options-and-discovery-endpoints.md)
   * [Development and Integration with eSignet](../esignet-authentication/develop/integration/relying-party/development-and-integration-with-esignet.md)
-

@@ -8,13 +8,13 @@
 
 We are excited to announce the release of eSignet v1.5.0, featuring the key implementation of Identity Assurance 1.0 (Draft). This open standard enhances eSignet’s ability to verify and authenticate identities more assuredly, laying the foundation for the newly supported video-based eKYC verification plugin. In addition to this core feature, the release includes security fixes and several architectural updates to streamline workflows and enhance the overall user and developer experience.
 
-### **Features**&#x20;
+### **Features**
 
-1. [**Identity Assurance Implementation**](broken-reference)
-   * Implemented Identity Assurance 1.0 (Draft), aligning with open standards for higher identity verification assurance, laying the foundation for video eKYC support.&#x20;
-2. [**Signup and Login with OTP for Verified Claims**](broken-reference)
+1. [**Identity Assurance Implementation**](https://github.com/mosip/documentation/blob/esignet/docs/roadmap-and-releases/versions/v1.5.0/broken-reference/README.md)
+   * Implemented Identity Assurance 1.0 (Draft), aligning with open standards for higher identity verification assurance, laying the foundation for video eKYC support.
+2. [**Signup and Login with OTP for Verified Claims**](https://github.com/mosip/documentation/blob/esignet/docs/roadmap-and-releases/versions/v1.5.0/broken-reference/README.md)
    * Added video eKYC via WebSocket in the signup portal, enabling secure, real-time video verification during registration.
-3. [**Well-Informed Claim Details**](broken-reference)
+3. [**Well-Informed Claim Details**](https://github.com/mosip/documentation/blob/esignet/docs/roadmap-and-releases/versions/v1.5.0/broken-reference/README.md)
    * Users now receive clear consent requests before starting eKYC, ensuring transparency on data usage.
 4. **Clickable QR Code for INJI Wallet Login**
    * A clickable QR code now appears for INJI Wallet login, with an embedded deeplink for seamless access within the same device.
@@ -22,7 +22,7 @@ We are excited to announce the release of eSignet v1.5.0, featuring the key impl
 ### Major Highlights
 
 1. [**Local Deployment with Docker-Compose**](../../../build-and-deploy/local-deployment/)
-   * Removed artifactory and config Server dependencies, enabling local eSignet deployment via docker-compose for easier setup and environment management.&#x20;
+   * Removed artifactory and config Server dependencies, enabling local eSignet deployment via docker-compose for easier setup and environment management.
 2. [**eSignet-Plugins Repository Updates**](https://github.com/mosip/esignet-plugins/tree/develop)
    * eSignet-plugins repository for better compatibility and functionality.
 3. [**Captcha Validation Improvements**](https://github.com/mosip/captcha)
@@ -57,13 +57,13 @@ Please refer to [this link](https://mosip.atlassian.net/issues/?filter=11689) fo
 
 ### **Repositories Released**
 
-| Repository Released   | Tags                                                                           |
-| --------------------- | ------------------------------------------------------------------------------ |
-| esignet               | [ v1.5.0](https://github.com/mosip/esignet/tree/v1.5.0)                        |
-| esignet-signup        | [ v1.1.0](https://github.com/mosip/esignet-signup/tree/v1.1.0)                 |
-| esignet-mock-services |  [v0.10.0](https://github.com/mosip/esignet-mock-services/tree/v0.10.0)        |
-| esignet-plugins       |  [v1.3.0](https://github.com/mosip/esignet-plugins/tree/v1.3.0)                |
-| mosip-onboarding      | [ v1.3.0-beta.1](https://github.com/mosip/mosip-onboarding/tree/v1.3.0-beta.1) |
+| Repository Released   | Tags                                                                          |
+| --------------------- | ----------------------------------------------------------------------------- |
+| esignet               | [v1.5.0](https://github.com/mosip/esignet/tree/v1.5.0)                        |
+| esignet-signup        | [v1.1.0](https://github.com/mosip/esignet-signup/tree/v1.1.0)                 |
+| esignet-mock-services | [v0.10.0](https://github.com/mosip/esignet-mock-services/tree/v0.10.0)        |
+| esignet-plugins       | [v1.3.0](https://github.com/mosip/esignet-plugins/tree/v1.3.0)                |
+| mosip-onboarding      | [v1.3.0-beta.1](https://github.com/mosip/mosip-onboarding/tree/v1.3.0-beta.1) |
 
 ### **Compatible Modules**
 
@@ -78,5 +78,5 @@ Please refer to [this link](https://mosip.atlassian.net/issues/?filter=11689) fo
 
 1. [API Documentation](https://mosip.stoplight.io/docs/identity-provider/branches/1.5.0/7oz4lmhu3pf6b-e-signet)
 2. [Integration Guides](../../../esignet-authentication/develop/integration/relying-party/development-and-integration-with-esignet.md)
-3. [End User Guide](../../../esignet-authentication/test/end-user-guide/README.md)
+3. [End User Guide](../../../esignet-authentication/test/end-user-guide/)
 4. [QA Report](test-report.md)

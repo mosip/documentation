@@ -11,7 +11,7 @@ Effortlessly deploy and configure eSignet with comprehensive guides, architectur
 
 The eSignet solution is designed to be:
 
-[**Easily deployed and tested locally**](local-deployment.md) using a Docker Compose–based setup for each module, allowing services to be brought up seamlessly on your machine.
+[**Easily deployed and tested locally**](https://github.com/mosip/documentation/blob/esignet/docs/build-and-deploy/local-deployment.md) using a Docker Compose–based setup for each module, allowing services to be brought up seamlessly on your machine.
 
 [**Deployed on-premise**](deployment-guide.md), with full flexibility to configure eSignet as per your organization’s use cases and requirements.
 

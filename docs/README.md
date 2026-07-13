@@ -115,6 +115,8 @@ The use cases listed above are illustrative and not exhaustive, eSignet can be a
 
 Refer below to know more.
 
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-type="content-ref">Cover image</th><th data-hidden data-card-cover data-type="image">Cover image</th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><a href="readme/principles.md">Principles</a></td><td><a href="readme/principles.md">principles.md</a></td><td><a href=".gitbook/assets/Principles Card.png">Principles Card.png</a></td><td><a href="readme/principles.md">principles.md</a></td></tr></tbody></table>
+
 
 
 * [Explore eSignet’s principles of privacy, security, and flexibility](https://docs.esignet.io/readme/principles).

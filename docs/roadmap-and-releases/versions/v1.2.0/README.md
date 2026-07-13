@@ -8,7 +8,7 @@
 
 ## Overview
 
-The 1.2.0 version of eSignet focuses on the [**VC Issuance**](broken-reference) feature.
+The 1.2.0 version of eSignet focuses on the [**VC Issuance**](https://github.com/mosip/documentation/blob/esignet/docs/roadmap-and-releases/versions/v1.2.0/broken-reference/README.md) feature.
 
 * **Verifiable Credentials Issuance**: eSignet is an OAuth 2.0 and OIDC-based solution that has been enhanced to support OID4VCI flows. Integrating the eSignet VCI solution into a traditional issuer, allows the issuer application to become compliant with OID4VCI standards, ensuring interoperability with all OID4VCI compatible wallets.
 * **Signed Consent**: eSignet securely saves the consent in a dedicated consent registry that is specifically designed to store user consent for claims and scopes requested during the initial login to a relying party's application using eSignet.
@@ -50,6 +50,6 @@ For details on deployment, go through the [helm charts](https://github.com/mosip
 
 * [Feature Documentation](../../../esignet-authentication/features.md)
 * [Integration Guides](../../../esignet-authentication/develop/integration/relying-party/development-and-integration-with-esignet.md)
-* [End User Guide](../../../esignet-authentication/test/end-user-guide/README.md)
+* [End User Guide](../../../esignet-authentication/test/end-user-guide/)
 * [API Documentation](https://github.com/mosip/esignet/blob/v1.2.0/docs/idp-oidc-service-openapi.yaml)
 * [QA Report](test-report.md)

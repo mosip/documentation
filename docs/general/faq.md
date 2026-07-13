@@ -22,9 +22,9 @@ To know more eSignet please refer [here](../).
 
 <summary><strong>How can I use eSignet?</strong></summary>
 
-You can integrate with eSignet based on the type of entity, such as an ID system, a relying party, or a digital wallet. For more details, please go through our [integration guide](broken-reference/).
+You can integrate with eSignet based on the type of entity, such as an ID system, a relying party, or a digital wallet. For more details, please go through our [integration guide](https://github.com/mosip/documentation/blob/esignet/docs/general/broken-reference/README.md).
 
-If you are interested in trying out eSignet right away, you can use our sandbox for testing. Please go through our [Try it out section](broken-reference/) for more details.
+If you are interested in trying out eSignet right away, you can use our sandbox for testing. Please go through our [Try it out section](https://github.com/mosip/documentation/blob/esignet/docs/general/broken-reference/README.md) for more details.
 
 </details>
 
@@ -155,7 +155,7 @@ eSignet will be deployed across various platforms, focusing on secure authentica
 
 <summary><strong>Which version of eSignet can be used?</strong></summary>
 
-* Currently, eSignet uses[ v1.4.1](../roadmap-and-releases/versions/v1.4.1).
+* Currently, eSignet uses[ v1.4.1](https://github.com/mosip/documentation/blob/esignet/docs/roadmap-and-releases/versions/v1.4.1).
 * Please refer [here ](../roadmap-and-releases/versions/)for all the latest releases.
 
 </details>

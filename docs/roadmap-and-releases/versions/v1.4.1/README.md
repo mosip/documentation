@@ -1,6 +1,6 @@
 # v1.4.1
 
-**Release Number:** v.1.4.1&#x20;
+**Release Number:** v.1.4.1
 
 **Release Date**: 15th July, 2024
 
@@ -14,15 +14,15 @@ This release introduces new features centered on Verifiable Credentials (VC) iss
 
 We have developed two new plugins to support the issuance of verifiable credentials (VC) by authenticating users through Knowledge-Based Identification (KBI) using the Authenticator plugin. These enhancements are detailed below:
 
-a. [Authenticator plugin implementation for KBI with Sunbird RC.](broken-reference)
+a. [Authenticator plugin implementation for KBI with Sunbird RC.](https://github.com/mosip/documentation/blob/esignet/docs/roadmap-and-releases/versions/v1.4.1/broken-reference/README.md)
 
 * Implementation of the Authenticator plugin to enable Knowledge-Based Identification (KBI) within Sunbird RC.
 
-b. [VC Issuance plugin implementation for Sunbird RC.](broken-reference)
+b. [VC Issuance plugin implementation for Sunbird RC.](https://github.com/mosip/documentation/blob/esignet/docs/roadmap-and-releases/versions/v1.4.1/broken-reference/README.md)
 
 * Implementation of the VC Issuance plugin to facilitate the issuance of verifiable credentials within Sunbird RC.
 
-c. [eSignet UI to support KBI form configuration](broken-reference).
+c. [eSignet UI to support KBI form configuration](https://github.com/mosip/documentation/blob/esignet/docs/roadmap-and-releases/versions/v1.4.1/broken-reference/README.md).
 
 * eSignet UI now supports KBI form configuration, making it easier to set up and manage KBI-based identification.
 
@@ -48,7 +48,7 @@ For a complete list of all bugs addressed in this release, please refer to the [
 
 ### **Known Issues**
 
-* Key Known Issue:&#x20;
+* Key Known Issue:
 
 | Jira Issue                                          | Issue Description                                                                                      |
 | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
@@ -78,6 +78,6 @@ For details on deployment, refer to the [helm charts](https://github.com/mosip/e
 
 * [Feature Documentation](../../../esignet-authentication/features.md)
 * [Integration Guides](../../../esignet-authentication/develop/integration/relying-party/development-and-integration-with-esignet.md)
-* [End User Guide](../../../esignet-authentication/test/end-user-guide/README.md)
+* [End User Guide](../../../esignet-authentication/test/end-user-guide/)
 * [API Documentation](https://github.com/mosip/esignet/blob/v1.4.0/docs/esignet-openapi.yaml)
-* [QA Report ](../v1.4.1/test-report.md)
+* [QA Report](test-report.md)
