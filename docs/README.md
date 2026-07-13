@@ -113,7 +113,9 @@ eSignet is engineered to ensure inclusive access to digital identity verificatio
 
 The use cases listed above are illustrative and not exhaustive, eSignet can be adapted to support a wide range of additional applications across both public and private sectors.
 
-Refer below to know more about eSignet principles, standards and tech:
+Refer below to know more.
+
+
 
 * [Explore eSignet’s principles of privacy, security, and flexibility](https://docs.esignet.io/readme/principles).
 * [Explore eSignet’s standards and secure authentication flows](https://docs.esignet.io/readme/standards).
