@@ -1,0 +1,6 @@
+- tag: deployment-guide
+  label: DeploymentGuide
+  color: $primary
+- tag: mosip-1.2.1.0
+  label: MOSIP-1.2.1.0
+  color: $info

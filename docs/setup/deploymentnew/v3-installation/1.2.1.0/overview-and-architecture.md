@@ -1,3 +1,9 @@
+---
+tags:
+  - deployment-guide
+  - mosip-1.2.1.0
+---
+
 # Overview and Architecture
 
 ### Overview
