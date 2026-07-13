@@ -46,42 +46,12 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo add mosip https://mosip.github.io/mosip-helm
 ```
 
-* [Istioctl](https://istio.io/latest/docs/setup/getting-started/#download) : version: 1.15.0
-* [rke](https://rancher.com/docs/rke/latest/en/installation/) : version: [1.3.10](https://github.com/rancher/rke/releases/tag/v1.3.10)
+* [Istioctl](https://istio.io/latest/docs/setup/getting-started/#download) : version: 1.22.0
 * [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html) - version > 2.12.4
-* Openssl Need openssl version 1.1.1 specifically for regclient installation.
-  *   Check the current OpenSSL version:
-
-      ```bash
-      openssl version
-      ```
-  *   If it's not OpenSSL 1.1.1f, remove the existing OpenSSL
-
-      ```bash
-      sudo apt remove openssl 
-      ```
-  *   Manually install OpenSSL 1.1.1f by following this [guide](https://learnubuntu.com/install-openssl/#install-openssl-manually-in-ubuntu):
-
-      > Note :
-      >
-      > * While following the guide:
-      >   * Replace all instances of openssl-1.1.1s with openssl-1.1.1f.
-      >   *   Skip the commands that create backups of binaries:
-      >
-      >       ```bash
-      >       sudo mv /usr/bin/c_rehash /usr/bin/c_rehash.backup   sudo mv /usr/bin/openssl /usr/bin/openssl.backup
-      >       ```
-      >   *   After completing the installation, verify the OpenSSL version again:
-      >
-      >       ```bash
-      >       openssl version
-      >       ```
-      >
-      >       * It should show: OpenSSL 1.1.1f
 *   Once the above tools are installed, create a directory named `mosip` on your PC and follow the steps below:
 
-    * clone k8’s infra repo with tag : 1.2.0.2 (**whichever is the latest version**) inside mosip directory. `git clone https://github.com/mosip/k8s-infra -b v1.2.0.2`
-    * clone mosip-infra with tag : 1.2.0.2 (**whichever is the latest version**) inside mosip directory. `git clone https://github.com/mosip/mosip-infra -b v1.2.0.2`
+    * clone k8’s infra repo with tag : 1.2.1.0 (**whichever is the latest version**) inside mosip directory. `git clone https://github.com/mosip/k8s-infra -b v1.2.1.0`
+    * clone mosip-infra with tag : 1.2.1.0 (**whichever is the latest version**) inside mosip directory. `git clone https://github.com/mosip/mosip-infra -b v1.2.1.0`
     * Set below mentioned variables in bashrc
 
     ```
