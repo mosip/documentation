@@ -6,7 +6,7 @@
 
 **Release Type:** Minor Release
 
-**Release Date:** <mark style="color:red;">**Coming Soon!**</mark>
+**Release Date:** 5th June, 2026
 
 ### Overview
 
@@ -40,13 +40,13 @@ With these enhancements, the Android Registration Client provides a more secure 
 
 ### Story Progress & Updates
 
-<table><thead><tr><th width="206.640625">JIRA</th><th>Description</th></tr></thead><tbody><tr><td>MOSIP-44993</td><td>Android Registration Client now ensures Transaction ID and Capture Time are populated and sent correctly in biometric capture requests.</td></tr><tr><td>#828</td><td>Upgrade Java version from Java 11 to Java 21 for Android Registration Client services.</td></tr></tbody></table>
+<table><thead><tr><th width="206.640625">JIRA</th><th>Description</th></tr></thead><tbody><tr><td><a href="https://github.com/mosip/android-registration-client/issues/828">#828</a></td><td>Upgrade Java version from Java 11 to Java 21 for Android Registration Client services.</td></tr></tbody></table>
 
 ### Bugs Fixed
 
 Below is the list of bug fixes included as part of the Android Registration Client v1.1.0 release.
 
-<table><thead><tr><th width="202.1796875">JIRA</th><th>Description</th></tr></thead><tbody><tr><td>MOSIP-44993</td><td>Android Registration Client was sending null Transaction ID and Capture Time values in biometric capture requests.</td></tr><tr><td>MOSIP-42301</td><td>Security testing: ARC – Match SDK validation issue fixed.</td></tr><tr><td>MOSIP-42281</td><td>Security testing: ARC – Clear text traffic vulnerability fixed.</td></tr></tbody></table>
+<table><thead><tr><th width="202.1796875">JIRA</th><th>Description</th></tr></thead><tbody><tr><td><a href="https://mosip.atlassian.net/browse/MOSIP-44993">MOSIP-44993</a></td><td>Android Registration Client was sending null Transaction ID and Capture Time values in biometric capture requests.</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/MOSIP-42301">MOSIP-42301</a></td><td>Security testing: ARC – Match SDK validation issue fixed.</td></tr><tr><td><a href="https://mosip.atlassian.net/browse/MOSIP-42281">MOSIP-42281</a></td><td>Security testing: ARC – Clear text traffic vulnerability fixed.</td></tr></tbody></table>
 
 ### Known Issues
 
@@ -54,13 +54,13 @@ To view the list of known issues, refer [**here**](https://github.com/mosip/andr
 
 ### Repository Released
 
-<table><thead><tr><th width="535.453125">Repositories</th><th>Tags Released</th></tr></thead><tbody><tr><td>android-registration-client</td><td>v1.1.0</td></tr></tbody></table>
+<table><thead><tr><th width="535.453125">Repositories</th><th>Tags Released</th></tr></thead><tbody><tr><td>android-registration-client</td><td><a href="https://github.com/mosip/android-registration-client/tree/v1.1.0">v1.1.0</a></td></tr></tbody></table>
 
 ### Compatible Platform/Module
 
 The following table outlines the tested and certified compatibility of Android Registration Client v1.1.0 with other modules.
 
-<table><thead><tr><th width="543.37109375">Platform/Module</th><th>Version</th></tr></thead><tbody><tr><td>MOSIP</td><td>1.2.1.0</td></tr></tbody></table>
+<table><thead><tr><th width="543.37109375">Platform/Module</th><th>Version</th></tr></thead><tbody><tr><td>MOSIP</td><td><a href="v1.2.1.0/">v1.2.1.0</a></td></tr></tbody></table>
 
 ### Documentation
 

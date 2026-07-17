@@ -11,7 +11,7 @@ icon: book-open
 
 **Version**: Android Registration Client v1.1.0
 
-* Date: Coming Soon!
+* Date: 5th June, 2026
 * [Release Notes](android-registration-client-v1.1.0.md)
 
 **Version**: v1.2.1.1-RC.1
@@ -47,7 +47,7 @@ icon: book-open
 **Version**: Android Registration Client v1.0.1
 
 * Date: 10th April, 2026
-* [Release Notes](android-registration-client-v1.0.1)
+* [Release Notes](https://github.com/mosip/documentation/blob/1.2.0/docs/roadmap-and-releases/releases/android-registration-client-v1.0.1)
 
 **Version**: DSL Orchestrator & Packet Creator V1.4.0-DSL
 
@@ -67,7 +67,7 @@ icon: book-open
 **Version**: Partner Management System Revamp 1.3.0-beta.4
 
 * Date: 4th February, 2026
-* [Release Notes](partner-management-system-revamp-1.3.0-beta.4)
+* [Release Notes](https://github.com/mosip/documentation/blob/1.2.0/docs/roadmap-and-releases/releases/partner-management-system-revamp-1.3.0-beta.4)
 
 **Version**: Infra
 
@@ -87,7 +87,7 @@ icon: book-open
 **Version**: v1.2.1.0
 
 * Date: Coming Soon
-* [Release Notes](v1.2.1.0)
+* [Release Notes](https://github.com/mosip/documentation/blob/1.2.0/docs/roadmap-and-releases/releases/v1.2.1.0)
 
 **Version**: V1.3.0-DSL
 
@@ -97,17 +97,17 @@ icon: book-open
 **Version**: Android Registration Client v1.0.0
 
 * Date: 1st December, 2025
-* [Release Notes](android-registration-client-v1.0.0)
+* [Release Notes](https://github.com/mosip/documentation/blob/1.2.0/docs/roadmap-and-releases/releases/android-registration-client-v1.0.0)
 
 **Version**: v1.2.2.4 ID Repository & v1.2.1.2 ID Authentication
 
 * Date: 17th November, 2025
-* [Release Notes](1.2.2.4-id-repository-and-1.2.1.2-id-authentication)
+* [Release Notes](https://github.com/mosip/documentation/blob/1.2.0/docs/roadmap-and-releases/releases/1.2.2.4-id-repository-and-1.2.1.2-id-authentication)
 
 **Version**: Partner Management System Revamp 1.3.0-beta.3
 
 * Date: 13th November, 2025
-* [Release Notes](partner-management-system-revamp-1.3.0-beta.3)
+* [Release Notes](https://github.com/mosip/documentation/blob/1.2.0/docs/roadmap-and-releases/releases/partner-management-system-revamp-1.3.0-beta.3)
 
 **Version**: 1.2.0.4
 
@@ -142,12 +142,12 @@ icon: book-open
 **Version**: Partner Management System Revamp 1.3.0-beta.2
 
 * Date: 29th August, 2025
-* [Release Notes](partner-management-system-revamp-1.3.0-beta.2)
+* [Release Notes](https://github.com/mosip/documentation/blob/1.2.0/docs/roadmap-and-releases/releases/partner-management-system-revamp-1.3.0-beta.2)
 
 **Version**: Android Registration Client v0.12.0
 
 * Date: 8th August, 2025
-* [Release Notes](android-registration-client-0.12.0)
+* [Release Notes](https://github.com/mosip/documentation/blob/1.2.0/docs/roadmap-and-releases/releases/android-registration-client-0.12.0)
 
 **Version**: Partner Management System Revamp 1.3.0-beta.1
 
@@ -192,12 +192,12 @@ icon: book-open
 **Version**: **v1.2.2.1** - **Partner Management System Revamp (Patch)**
 
 * **Date**: 21st May, 2025
-* [Release Notes](pms-revamp-release-1.2.2.1-patch)
+* [Release Notes](https://github.com/mosip/documentation/blob/1.2.0/docs/roadmap-and-releases/releases/pms-revamp-release-1.2.2.1-patch)
 
 **Version: v1.2.1.0 - Registration Processor & Mosip Config**
 
 * **Date:** 16th April, 2025
-* [Release Notes](v1.2.1.0-registration-processor)
+* [Release Notes](https://github.com/mosip/documentation/blob/1.2.0/docs/roadmap-and-releases/releases/v1.2.1.0-registration-processor)
 
 **Version: v0.11.0 - Android Registration Client**
 
@@ -263,7 +263,7 @@ icon: book-open
 * Partner Management System v1.3.0-dp.1
 * Developer Preview Release1
 * Date: 3rd September, 2024
-* [Release Notes](partner-management-system-1.3.0-dp1)
+* [Release Notes](https://github.com/mosip/documentation/blob/1.2.0/docs/roadmap-and-releases/releases/partner-management-system-1.3.0-dp1)
 
 **Version:** **v1.2.2.0 (Mosip - Config)**
 
@@ -280,13 +280,13 @@ icon: book-open
 
 * **Support:** 0.10.0
 * **Date:** 14th June, 2024
-* [Release Notes](android-registration-client-v0.10.0)
+* [Release Notes](https://github.com/mosip/documentation/blob/1.2.0/docs/roadmap-and-releases/releases/android-registration-client-v0.10.0)
 
 **Version: 0.9.0 (Resident Services)**
 
 * **Support:** 0.9.0
 * **Date:** 30th May, 2024
-* [Release Notes](resident-services-0.9.0)
+* [Release Notes](https://github.com/mosip/documentation/blob/1.2.0/docs/roadmap-and-releases/releases/resident-services-0.9.0)
 
 ## Older Releases 📜
 
@@ -308,20 +308,20 @@ icon: book-open
 * Name: Patch on Asymmetric Amoeba
 * [![LTS](https://img.shields.io/badge/Support-Long%20Term%20Support-blue?style=plastic)](https://docs.mosip.io/1.2.0/releases/support-policy)
 * Date: 06th March, 2024
-* [Release Notes](release-notes-1.2.0.1)
+* [Release Notes](https://github.com/mosip/documentation/blob/1.2.0/docs/roadmap-and-releases/releases/release-notes-1.2.0.1)
 
 **Version: 0.9.0 (Android Registration Client)**
 
 * Support: Beta Release
 * Date: 26th February, 2024
-* [Release Notes](release-notes-android-reg-client-0.9.0)
+* [Release Notes](https://github.com/mosip/documentation/blob/1.2.0/docs/roadmap-and-releases/releases/release-notes-android-reg-client-0.9.0)
 
 **Version: 1.2.0.1 Beta 4**
 
 * Name: Beta release on Asymmetric Amoeba
 * [![LTS](https://img.shields.io/badge/Support-Long%20Term%20Support-blue?style=plastic)](https://docs.mosip.io/1.2.0/releases/support-policy)
 * Date: 12th January, 2024
-* [Release Notes](release-notes-1.2.0.1-b4)
+* [Release Notes](https://github.com/mosip/documentation/blob/1.2.0/docs/roadmap-and-releases/releases/release-notes-1.2.0.1-b4)
 
 **Version: vDP1 (Android Registration Client DP1)**
 
@@ -342,7 +342,7 @@ icon: book-open
 * Name: Beta release on Asymmetric Amoeba
 * [![LTS](https://img.shields.io/badge/Support-Long%20Term%20Support-blue?style=plastic)](https://docs.mosip.io/1.2.0/releases/support-policy)
 * Date: 14th April, 2023
-* [Release Notes](release-notes-1.2.0.1-b3)
+* [Release Notes](https://github.com/mosip/documentation/blob/1.2.0/docs/roadmap-and-releases/releases/release-notes-1.2.0.1-b3)
 
 **Version: 1.2.0.1 Beta 2**
 
@@ -356,7 +356,7 @@ icon: book-open
 * Name: Beta release on Asymmetric Amoeba
 * [![LTS](https://img.shields.io/badge/Support-Long%20Term%20Support-blue?style=plastic)](https://docs.mosip.io/1.2.0/releases/support-policy)
 * Date: 14th October, 2022
-* [Release Notes](release-notes-1.2.0.1-beta)
+* [Release Notes](https://github.com/mosip/documentation/blob/1.2.0/docs/roadmap-and-releases/releases/release-notes-1.2.0.1-beta)
 
 **Version: 1.2.0**
 
