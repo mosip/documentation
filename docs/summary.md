@@ -280,6 +280,7 @@
     * [Go-Live](setup/cookbook/go-live.md)
     * [Closure](setup/cookbook/closure.md)
     * [References](setup/cookbook/references.md)
+  * [Artifact Signing Keys](setup/artifact-signing-keys.md)
 * [Interoperability](interoperability/README.md)
   * [Integrations](interoperability/integrations/README.md)
     * [MOSIP - CRVS](interoperability/integrations/mosip-crvs-integration/README.md)
