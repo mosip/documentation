@@ -19,7 +19,7 @@ Below is a list of tools required for auditing:
 
 ### Software setup
 
-1\. Download [lombok.jar](https://projectlombok.org/download) and [settings.xml](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/commons/settings.xml).
+1\. Download [lombok.jar](https://projectlombok.org/download) and [settings.xml](../../../_files/commons/settings.xml).
 
 2\. Unzip Apache Maven and move `settings.xml` to the "conf" folder `<apache maven unzip path>\conf`.
 
@@ -61,7 +61,7 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 * Secrets can be encrypted using [config server](https://cloud.spring.io/spring-cloud-config/reference/html/#_encryption_and_decryption).
 * Update URL's in property files.(It can be either pointed to any remotely or locally deployed services)
 
-5\. Download [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav~~kernel-config-server~1.2.0-SNAPSHOT~~). For Windows, download [config-server-start.bat](../../../_files/commons/config-server-start.bat), linux users can run
+5\. Download [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav~~kernel-config-server~1.2.0-SNAPSHOT~~). For Windows, download [config-server-start.bat](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/commons/config-server-start.bat), linux users can run
 
 `java -jar -Dspring.profiles.active=native -Dspring.cloud.config.server.native.search-locations=file:{mosip-config-mt_folder_path}/config -Dspring.cloud.config.server.accept-empty=true -Dspring.cloud.config.server.git.force-pull=false -Dspring.cloud.config.server.git.cloneOnStart=false -Dspring.cloud.config.server.git.refreshRate=0 {jarName}` .
 

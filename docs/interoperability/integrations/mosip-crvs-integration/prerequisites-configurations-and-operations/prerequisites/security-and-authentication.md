@@ -110,13 +110,11 @@ Once the role is created and mapped to the client ID. As a follow-up step, below
 
 In the API above, the fields Client ID and Secret key are the values created in the previous steps, as mentioned above. Once the authentication is successful, in the response header, we will receive an access token, which is to be noted and used for the subsequent packet manager API request.
 
-
-
 ***
 
 ## Learn More
 
 * [**Partner Management Services**](../../../../../id-lifecycle-management/support-systems/partner-management-services/partners.md) - Learn about partner onboarding processes, policy management, and certificate lifecycle for Authentication Partners, MISP Partners, and credential partners who integrate with MOSIP.
-* [**eSignet Configuration**](../../../../../integrations/esignet/configuring-esignet.md) - Configure eSignet as an OIDC authentication provider, including MISP partner onboarding, ID Authentication integration, and authentication flow setup for CRVS identity verification.
-* [**ID Authentication Services**](../../../../../id-authentication-services.md) - Understand MOSIP's authentication architecture, including KYC authentication, OTP services, biometric verification, and internal authentication APIs used by partners.
+* [**eSignet Configuration**](https://github.com/mosip/documentation/blob/1.2.0/docs/integrations/esignet/configuring-esignet.md) - Configure eSignet as an OIDC authentication provider, including MISP partner onboarding, ID Authentication integration, and authentication flow setup for CRVS identity verification.
+* [**ID Authentication Services**](https://github.com/mosip/documentation/blob/1.2.0/docs/id-authentication-services.md) - Understand MOSIP's authentication architecture, including KYC authentication, OTP services, biometric verification, and internal authentication APIs used by partners.
 * [**Key Manager**](../../../../../id-lifecycle-management/supporting-components/keymanager/) - Explore key and certificate management, including partner certificate upload, encryption/decryption operations, and HSM integration for secure cryptographic operations.

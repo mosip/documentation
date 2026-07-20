@@ -493,7 +493,7 @@ Multiple storage classes options are available for onprem K8's cluster. In this 
   kubectl create ns cattle-system`
 ```
 
-* Create a secret containing the observation nginx self-signed public certificate (i.e. `tls.crt` ) generated in [openssl section](on-prem-without-dns.md#setting-up-nginx-server-for-observation-k8s-cluster).
+* Create a secret containing the observation nginx self-signed public certificate (i.e. `tls.crt` ) generated in [openssl section](https://github.com/mosip/documentation/blob/1.2.0/docs/setup/deploymentnew/v3-installation/1.2.0.2/on-prem-without-dns.md#setting-up-nginx-server-for-observation-k8s-cluster).
 
 ```
 kubectl -n cattle-system create secret generic tls-ca --from-file=cacerts.pem=<tls certificate path>
@@ -1185,7 +1185,7 @@ MOSIP uses [Rancher Fluentd](https://ranchermanager.docs.rancher.com/v2.0-v2.4/e
       * [02-error-only-logs.ndjson](https://github.com/mosip/k8s-infra/blob/main/logging/dashboards/03-service-logs.ndjson) contains a Search dashboard which shows only the error logs of the services, called `MOSIP Error Logs` dashboard.
       * [03-service-logs.ndjson](https://github.com/mosip/k8s-infra/blob/main/logging/dashboards/03-service-logs.ndjson) contains a Search dashboard which show all logs of a particular service, called MOSIP Service Logs dashboard.
       * [04-insight.ndjson](https://github.com/mosip/k8s-infra/blob/main/logging/dashboards/04-insight.ndjson) contains dashboards which show insights into MOSIP processes, like the number of UINs generated (total and per hr), the number of Biometric deduplications processed, number of packets uploaded etc, called `MOSIP Insight` dashboard.
-      * [05-response-time.ndjson](on-prem-installation-guidelines.md) contains dashboards which show how quickly different MOSIP Services are responding to different APIs, over time, called `Response Time` dashboard.
+      * [05-response-time.ndjson](https://github.com/mosip/documentation/blob/1.2.0/docs/setup/deploymentnew/v3-installation/1.2.0.2/on-prem-installation-guidelines.md) contains dashboards which show how quickly different MOSIP Services are responding to different APIs, over time, called `Response Time` dashboard.
 * Import dashboards:
   * `cd K8_ROOT/logging`
   * `./load_kibana_dashboards.sh ./dashboards <cluster-kube-config-file>`

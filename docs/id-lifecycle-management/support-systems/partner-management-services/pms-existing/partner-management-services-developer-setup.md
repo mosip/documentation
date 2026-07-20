@@ -27,7 +27,7 @@ Below are a list of tools required in Partner Management Services setup:
 
 Follow the steps below to set up Partner Management Services on your local system:
 
-* Download `lombok.jar` and `settings.xml` from [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/partner-management-services-config-files).
+* Download `lombok.jar` and `settings.xml` from [here](../../../../_files/partner-management-services-config-files).
 * Unzip Apache Maven and move the unzipped folder in `C:\Program Files` and `settings.xml` to `conf` folder `C:\Program Files\apache-maven-3.8.4\conf`.
 * Install Eclipse, open the `lombok.jar` file and wait for some time until it completes the scan for Eclipse IDE and then click `Install/Update`.
 
@@ -60,7 +60,7 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 
 * Clone [mosip-config repository](https://github.com/mosip/mosip-config).
 * Create an empty folder inside the `mosip-config` with `sandbox-local` name and then copy and paste all config files inside `sandbox-local` folder except `.gitignore, README and LICENSE`.
-* As Partner Management Services is using two properties files, `partner-management-default` and `application-default`, you will have to configure them according to your environment. The same files are available [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/partner-management-services-config-files) for reference.
+* As Partner Management Services is using two properties files, `partner-management-default` and `application-default`, you will have to configure them according to your environment. The same files are available [here](../../../../_files/partner-management-services-config-files) for reference.
 * To run the server, two files are required- [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav~~kernel-config-server~1.2.0-SNAPSHOT~~) and [config-server-start.bat](https://github.com/NagarjunaKuchi/documentation/blob/1.2.0/docs/_files/partner-management-services-config-files/config-server-start.bat).
 * Put both the files in the same folder and change the location attribute to `sandbox-local` folder in `config-server-start.bat` file and also check the version of `kernel-config-server.jar` towards the end of the command.
 

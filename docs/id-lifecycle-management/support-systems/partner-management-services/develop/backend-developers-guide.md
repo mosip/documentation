@@ -27,7 +27,7 @@ Below is a list of tools required in Partner Management Services:
 
 Follow the steps below to set up Partner Management Services on your local system:
 
-1. Download `lombok.jar`and `settings.xml` from [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/partner-management-services-config-files).
+1. Download `lombok.jar`and `settings.xml` from [here](../../../../_files/partner-management-services-config-files).
 2. Install Apache Maven.
 3. Copy the `settings.xml` to ".m2" folder `C:\Users\<username>\.m2`.
 4. Install Eclipse.

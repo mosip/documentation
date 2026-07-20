@@ -95,14 +95,6 @@ Common customization points:
 * [Notifications & Event Handling](../notifications-and-event-handling.md)
 * [Operational Considerations](operational-considerations/)
 
-
-
-
-
-
-
-
-
 ***
 
 Crude Content
@@ -135,15 +127,7 @@ eSignet is MOSIP's authentication service that enables secure identity verificat
 
 ### Audit & Compliance Requirements
 
-
-
-
-
-
-
 ***
-
-
 
 Crude Content -
 
@@ -250,23 +234,7 @@ Once the role is created and mapped to the client ID. As a follow-up step, below
 
 In the API above, the fields Client ID and Secret key are the values created in the previous steps, as mentioned above. Once the authentication is successful, in the response header, we will receive an access token, which is to be noted and used for the subsequent packet manager API request.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ***
-
-
 
 ### Prerequisites & System Setup
 
@@ -300,7 +268,7 @@ Before beginning integration, ensure the following are in place:
 
 #### **1. ID schema Configuration:** <a href="#id-schema-configuration" id="id-schema-configuration"></a>
 
-To initiate any registration request, the country must define an ID schema based on the specific requirements for CRVS integration. The sample ID schema can be referred to [here](../../../../_files/id-schema/id-schema-sample.json) and should be customized to include all required fields for packet generation per the country’s requirements. This schema governs the structure of the data submitted to MOSIP for processing and storage in the Identity Repository.
+To initiate any registration request, the country must define an ID schema based on the specific requirements for CRVS integration. The sample ID schema can be referred to [here](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/id-schema/id-schema-sample.json) and should be customized to include all required fields for packet generation per the country’s requirements. This schema governs the structure of the data submitted to MOSIP for processing and storage in the Identity Repository.
 
 {% hint style="info" %}
 **Note:** MOSIP advises adopting and customizing the latest released ID schema version to meet country-specific needs.

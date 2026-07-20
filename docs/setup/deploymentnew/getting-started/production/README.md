@@ -2,7 +2,7 @@
 
 ## Production installation
 
-[Production Grade Deployment V3](../../../../deployment/production/broken-reference/)
+[Production Grade Deployment V3](https://github.com/mosip/documentation/blob/1.2.0/docs/deployment/production/broken-reference/README.md)
 
 ## Hardware requirements
 

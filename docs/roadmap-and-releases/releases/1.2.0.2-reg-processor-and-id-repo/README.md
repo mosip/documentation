@@ -17,7 +17,7 @@ This release launches an enhancement in the Registration Processor to support th
 ### **New Features**
 
 * **Supporting Array DataType in packet processing** :\
-  With the custom handle feature enabled, the handle attribute is passed as an array datatype in the packet during packet creation. This change has modified the registration processor and packet manager to handle both string and array values.&#x20;
+  With the custom handle feature enabled, the handle attribute is passed as an array datatype in the packet during packet creation. This change has modified the registration processor and packet manager to handle both string and array values.
 
 ### **Bug Fixes**
 
@@ -36,11 +36,11 @@ This release launches an enhancement in the Registration Processor to support th
 
 ### **Compatible Modules**
 
-The following table outlines the tested and certified compatibility of [1.2.0.1](../release-notes-1.2.0.1/) with other modules.
+The following table outlines the tested and certified compatibility of [1.2.0.1](https://github.com/mosip/documentation/blob/1.2.0/docs/roadmap-and-releases/releases/release-notes-1.2.0.1) with other modules.
 
-| Module    | Version        |
-| --------- | -------------- |
-|  Platform |    v1.2.0.1 B3 |
+| Module   | Version     |
+| -------- | ----------- |
+| Platform | v1.2.0.1 B3 |
 
 ### Documentation
 

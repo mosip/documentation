@@ -37,9 +37,9 @@ Please refer to ISO 19794-4:2011 Specifications.
 | FTM\*\*                                      | SBI 1.0 - Use host based security (and above)                                    | SBI 2.0 - FTM supported security |
 
 {% hint style="info" %}
-Note: \
+Note:\
 MOSIP adopters can change this if needed.\
-Please refer to [SBI specification documentation](broken-reference).
+Please refer to [SBI specification documentation](https://github.com/mosip/documentation/blob/1.2.0/docs/id-lifecycle-management/supporting-components/biometrics/broken-reference/README.md).
 {% endhint %}
 
 ### Iris
@@ -72,7 +72,7 @@ Please refer to ISO 19794-6:2011 Specifications.
 {% hint style="info" %}
 **Note:**\
 MOSIP adopters can change this if needed.\
-Please refer [SBI specification documentation](broken-reference).
+Please refer [SBI specification documentation](https://github.com/mosip/documentation/blob/1.2.0/docs/id-lifecycle-management/supporting-components/biometrics/broken-reference/README.md).
 {% endhint %}
 
 ### Face Capture
@@ -97,7 +97,7 @@ Please refer to ISO 19794-5:2011 Specifications.
 {% hint style="info" %}
 **Note:**\
 MOSIP adopters can change this if needed.\
-Please refer [SBI specification documentation](broken-reference).
+Please refer [SBI specification documentation](https://github.com/mosip/documentation/blob/1.2.0/docs/id-lifecycle-management/supporting-components/biometrics/broken-reference/README.md).
 {% endhint %}
 
 {% hint style="info" %}
@@ -108,4 +108,4 @@ We recommend that countries look at ergonomics, accessibility, ease of usage, an
 
 ## XML Container
 
-The biometric data is wrapped in [CBEFF XML](broken-reference).
+The biometric data is wrapped in [CBEFF XML](https://github.com/mosip/documentation/blob/1.2.0/docs/id-lifecycle-management/supporting-components/biometrics/broken-reference/README.md).

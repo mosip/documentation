@@ -8,20 +8,20 @@ MOSIP uses [Postgres](https://www.postgresql.org) DB for all relational data sto
 
 Entity relationships diagrams for all databases used in MOSIP are given below.
 
-* [mosip\_audit](../../../_images/mosip-audit-er.png)
-* [mosip\_authdevice](../../../_images/mosip-authdevice-er.png)
-* [mosip\_credential](../../../_images/mosip-credential-er.png)
-* [mosip\_hotlist](../../../_images/mosip-hotlist-er.png)
-* [mosip\_ida](../../../_images/mosip-ida-er.png)
-* [mosip\_idmap](../../../_images/mosip-idmap-er.png)
-* [mosip\_idrepo](../../../_images/mosip-idrepo-er.png)
-* [mosip\_kernel](../../../_images/mosip-kernel-er.png)
-* [mosip\_keymgr](../../../_images/mosip-keymgr-er.png)
-* [mosip\_master](../../../_images/mosip-master-er.png)
-* [mosip\_pms](../../../_images/mosip-pms-er.png)
-* [mosip\_prereg](../../../_images/mosip-prereg-er.png)
-* [mosip\_regdevice](../../../_images/mosip-regdevice-er.png)
-* [mosip\_regprc](../../../_images/mosip-regprc-er.png)
+* [mosip\_audit](https://github.com/mosip/documentation/blob/1.2.0/docs/_images/mosip-audit-er.png)
+* [mosip\_authdevice](https://github.com/mosip/documentation/blob/1.2.0/docs/_images/mosip-authdevice-er.png)
+* [mosip\_credential](https://github.com/mosip/documentation/blob/1.2.0/docs/_images/mosip-credential-er.png)
+* [mosip\_hotlist](https://github.com/mosip/documentation/blob/1.2.0/docs/_images/mosip-hotlist-er.png)
+* [mosip\_ida](https://github.com/mosip/documentation/blob/1.2.0/docs/_images/mosip-ida-er.png)
+* [mosip\_idmap](https://github.com/mosip/documentation/blob/1.2.0/docs/_images/mosip-idmap-er.png)
+* [mosip\_idrepo](https://github.com/mosip/documentation/blob/1.2.0/docs/_images/mosip-idrepo-er.png)
+* [mosip\_kernel](https://github.com/mosip/documentation/blob/1.2.0/docs/_images/mosip-kernel-er.png)
+* [mosip\_keymgr](https://github.com/mosip/documentation/blob/1.2.0/docs/_images/mosip-keymgr-er.png)
+* [mosip\_master](https://github.com/mosip/documentation/blob/1.2.0/docs/_images/mosip-master-er.png)
+* [mosip\_pms](https://github.com/mosip/documentation/blob/1.2.0/docs/_images/mosip-pms-er.png)
+* [mosip\_prereg](https://github.com/mosip/documentation/blob/1.2.0/docs/_images/mosip-prereg-er.png)
+* [mosip\_regdevice](https://github.com/mosip/documentation/blob/1.2.0/docs/_images/mosip-regdevice-er.png)
+* [mosip\_regprc](https://github.com/mosip/documentation/blob/1.2.0/docs/_images/mosip-regprc-er.png)
 
 ## Configuration parameters
 

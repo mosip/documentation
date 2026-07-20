@@ -60,11 +60,11 @@ To view the list of known issues, refer [**here**](https://github.com/mosip/andr
 
 The following table outlines the tested and certified compatibility of Android Registration Client v1.1.0 with other modules.
 
-<table><thead><tr><th width="543.37109375">Platform/Module</th><th>Version</th></tr></thead><tbody><tr><td>MOSIP</td><td><a href="v1.2.1.0/">v1.2.1.0</a></td></tr></tbody></table>
+<table><thead><tr><th width="543.37109375">Platform/Module</th><th>Version</th></tr></thead><tbody><tr><td>MOSIP</td><td><a href="../v1.2.1.0/">v1.2.1.0</a></td></tr></tbody></table>
 
 ### Documentation
 
-* **Java Upgrade**: [Java Upgrade](../../id-lifecycle-management/identity-issuance/android-registration-client/develop/j11-to-j21.md)
+* **Java Upgrade**: [Java Upgrade](../../../id-lifecycle-management/identity-issuance/android-registration-client/develop/j11-to-j21.md)
 * **Build and Deploy**: To access the build and deployment instructions, refer to the [Developer Guide](https://docs.mosip.io/1.2.0/modules/android-registration-client/android-registration-client-developer-guide).
 * **Configurations**: For details related to Android Registration Client configurations, refer to the [Configuration Guide](https://docs.mosip.io/1.2.0/modules/android-registration-client/android-registration-client-configuration).
 * **User Guide**: To learn more about the available features, workflows, and user interface, refer to the [Android Registration Client User Guide](https://docs.mosip.io/1.2.0/modules/android-registration-client/android-registration-client-user-guide).

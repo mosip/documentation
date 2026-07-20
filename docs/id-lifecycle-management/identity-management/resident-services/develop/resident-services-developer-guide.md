@@ -22,7 +22,7 @@ Below is a list of tools required in Resident Services:
 
 Follow the steps below to set up Resident Services on your local system:
 
-1. Download `lombok.jar` and `settings.xml` from [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/resident-services-config-files).
+1. Download `lombok.jar` and `settings.xml` from [here](../../../../_files/resident-services-config-files).
 2. Install Apache Maven.
 3. Copy the `settings.xml` to ".m2" folder `C:\Users\<username>\.m2`.
 4. Install Eclipse.
@@ -135,7 +135,7 @@ For instance,
 * The APIs can be tested with the help of Postman or Swagger-UI.
 * Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster. It is a widely used tool for API testing. Below you will find the APIs postman collection of resident-services.
 * Swagger is an interface description language for describing restful APIs expressed using JSON. You can access Swagger-UI of resident-services for the dev-environment from `https://api-internal.dev.mosip.net/resident/v1/swagger-ui.html` and localhost from `http://localhost:8099/resident/v1/swagger-ui.html`.
-* Download the JSON collection available below and import it to your postman. [Resident-Service-APIs.postman\_collection-latest.json](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/resident-services-config-files).
+* Download the JSON collection available below and import it to your postman. [Resident-Service-APIs.postman\_collection-latest.json](../../../../_files/resident-services-config-files).
 
 ![](../../../../.gitbook/assets/resident-dev-img4.png)
 

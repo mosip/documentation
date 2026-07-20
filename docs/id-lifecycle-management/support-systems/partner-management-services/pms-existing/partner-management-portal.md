@@ -106,4 +106,4 @@ To know more about each of the partners, click:
 
 1. [Auth partner/ Credential partner](auth-credential-partner.md)
 2. [Device Provide](device-provider-partner.md)
-3. [FTM Provider](../../../../ftm-provider-partner.md)
+3. [FTM Provider](https://github.com/mosip/documentation/blob/1.2.0/docs/ftm-provider-partner.md)

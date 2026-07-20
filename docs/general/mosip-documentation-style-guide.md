@@ -71,8 +71,8 @@ To link the content or provide references, write the content to be displayed on 
 To provide links to other pages, you may use:
 
 1. Learn more.
-2. See [title of other document](../link/).
-3. Refer [title of other document](../link/) for ….
+2. See [title of other document](https://github.com/mosip/documentation/blob/1.2.0/docs/link/README.md).
+3. Refer [title of other document](https://github.com/mosip/documentation/blob/1.2.0/docs/link/README.md) for ….
 
 Example: For more information on Packet Manager, see [Packet Manager](../id-lifecycle-management/supporting-components/packet-manager/).
 
@@ -184,5 +184,5 @@ To know more, refer [here](../id-lifecycle-management/identity-issuance/registra
 
 Templates for some standard pages are available as below:
 
-* [README template](../../templates/readme-template.md): For READMEs in repositories. Make sure this file is called `README.md`.
-* [Module template](../../templates/module-service-template.md): Template for landing page of a MOSIP module or service.
+* [README template](https://github.com/mosip/documentation/blob/1.2.0/templates/readme-template.md): For READMEs in repositories. Make sure this file is called `README.md`.
+* [Module template](https://github.com/mosip/documentation/blob/1.2.0/templates/module-service-template.md): Template for landing page of a MOSIP module or service.

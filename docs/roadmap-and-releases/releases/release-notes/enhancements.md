@@ -3,7 +3,7 @@
 ### Commons
 
 * The reference ID object validator now supports the validation of dynamic field data.
-* The [WebSub](../../../release/1.2.0/websub.md) has been upgraded
+* The [WebSub](https://github.com/mosip/documentation/blob/1.2.0/docs/release/1.2.0/websub.md) has been upgraded
   * to support multiple ballerina servers.
   * to have authentication and authorization for all subscribers and publishers.
   * it also has a health check feature now.
@@ -12,7 +12,7 @@
 
 ### Admin Services
 
-* Using the [Admin portal](../../../release/1.2.0/admin-portal-user-guide.md), the administrator can now enter master data in multiple languages (more than two). Earlier, we had a restriction to run only with two languages.
+* Using the [Admin portal](https://github.com/mosip/documentation/blob/1.2.0/docs/release/1.2.0/admin-portal-user-guide.md), the administrator can now enter master data in multiple languages (more than two). Earlier, we had a restriction to run only with two languages.
 * For Fetch APIs of some of the non-sensitive master data, authentication has been disabled and caching has been enabled. The master data APIs that are changed: applicant type, blocklisted words, document categories, document types, dynamic fields, exception holidays, gender types, id types, individual types, languages, locations, location hierarchy levels, templates, template type codes, title, valid documents, weekdays, working days, and zones.
 * Using the admin portal, the administrator can
   * map or unmap a user in Keycloak with a center and zone.
@@ -23,7 +23,7 @@
   * map the users to a registration center and to a zone.
   * create and update dynamic fields such as Gender, Blood Type, Residence Status, Marital Status etc.
   * configure the number of kiosks in a particular registration center during the process of creating the registration center.
-* The [UI specification](../../../release/1.2.0/pre-registration-ui-specifications.md) and [ID schema](../../../release/1.2.0/id-schema.md) are now stored separately in different database tables as well new API has been created to store the UI spec for pre-registration and registration client
+* The [UI specification](https://github.com/mosip/documentation/blob/1.2.0/docs/release/1.2.0/pre-registration-ui-specifications.md) and [ID schema](https://github.com/mosip/documentation/blob/1.2.0/docs/release/1.2.0/id-schema.md) are now stored separately in different database tables as well new API has been created to store the UI spec for pre-registration and registration client
   * UI spec version and ID schema version are independent.
   * If any new version of UI spec is published, then it will not affect the ID schema version.
   * If any new version of ID schema is published, the corresponding version of UI spec needs to be republished or updated.
@@ -32,7 +32,7 @@
 ### Pre-registration
 
 * Using the pre-registration, the resident can provide demographic data in multiple languages (more than two). Earlier there was a restriction for only two languages.
-* In the [UI specifications](../../../release/1.2.0/pre-registration-ui-specifications.md),
+* In the [UI specifications](https://github.com/mosip/documentation/blob/1.2.0/docs/release/1.2.0/pre-registration-ui-specifications.md),
   * “alignmentGroup” property has been added to align multiple UI components horizontally.
   * “changeAction” property has been added to handle custom change actions between two or more UI components.
   * “containerStyle” and “headerStyle” properties have been added to override the default CSS.
@@ -58,16 +58,16 @@
 
 ### Registration Client \[RC]
 
-* Using the [Registration Client](../../../release/1.2.0/registration-client.md), the operator can collect demographic data of residents in multiple languages (more than two). Earlier there was a restriction for only two languages.
-* Using the [UI specifications](../../../release/1.2.0/registration-client-ui-specifications.md), the order of the screens and in which screen what data needs to be captured can be controlled.
+* Using the [Registration Client](https://github.com/mosip/documentation/blob/1.2.0/docs/release/1.2.0/registration-client.md), the operator can collect demographic data of residents in multiple languages (more than two). Earlier there was a restriction for only two languages.
+* Using the [UI specifications](https://github.com/mosip/documentation/blob/1.2.0/docs/release/1.2.0/registration-client-ui-specifications.md), the order of the screens and in which screen what data needs to be captured can be controlled.
 * In the UI spec,
   * the sub-type can be set to RID, UIN or VID to perform validation for RID, UIN and VID using the in-build validator libraries.
   * regex validation for different languages can be added.
   * support for multiple age groups has been added.
-* During [operator onboarding](../../../release/1.2.0/operator-onboarding.md), the operator’s VID should be stored in Keycloak instead of RID for authentication.
+* During [operator onboarding](https://github.com/mosip/documentation/blob/1.2.0/docs/release/1.2.0/operator-onboarding.md), the operator’s VID should be stored in Keycloak instead of RID for authentication.
 * A control panel has been added in the registration client for biometric devices, non-biometric devices, configurable settings, registration client jobs have been added.
   * If multiple devices are connected, we can set a particular device as the default.
-  * For some of the local configurations, they can be modified by the operator using the [Settings](../../../release/1.2.0/registration-client-settings-page.md) page.
+  * For some of the local configurations, they can be modified by the operator using the [Settings](https://github.com/mosip/documentation/blob/1.2.0/docs/release/1.2.0/registration-client-settings-page.md) page.
   * All of the job schedules can be locally modified and the jobs can also be triggered individually.
 * All operations on the registration client are now performed based on the local time zone.
 * Any anti-virus or transliteration implementation can be plugged in during the registration client packaging.
@@ -83,7 +83,7 @@
 * Packets can be auto-uploaded to the server based on a configuration.
 * There is a regular expression validation in place for multiple languages (earlier the system was able to validate data only for English).
 * We now have a configurable antivirus that is being used during registration client packaging. This virus scanner will be able to run based on the configuration frequency in the background.
-* There is a [Settings page](../../../release/1.2.0/registration-client-settings-page.md) in Registration Client which can be treated as a control panel window page that manages various kinds of settings such as:
+* There is a [Settings page](https://github.com/mosip/documentation/blob/1.2.0/docs/release/1.2.0/registration-client-settings-page.md) in Registration Client which can be treated as a control panel window page that manages various kinds of settings such as:
   1. Device selection settings
   2. Sync Settings
   3. Global configuration settings
@@ -168,7 +168,7 @@
 * Every time there is any changes made to the template or title in master data, it will be notified to IDA using web-sub hence updating the cache in IDA.
 * IDA will now verify the device details when the biometric authentication request is received. It will validate the trust of the device provider & FTM partner, the timestamp in the digital ID, and the status of the device (whether it is active, de-active or hot listed).
 * The system (IDA/ID repo) will have the ability to set an expiry date on a resident's identity record. This expiry date will control if the resident can perform authentication or not.
-* An ID issuer will now be able to store the anonymous profile information of a resident in the [ID repository](../../../release/1.2.0/id-repository.md). This data will be stored in JSON format. No PII resident data will be stored as a part of this.
+* An ID issuer will now be able to store the anonymous profile information of a resident in the [ID repository](https://github.com/mosip/documentation/blob/1.2.0/docs/release/1.2.0/id-repository.md). This data will be stored in JSON format. No PII resident data will be stored as a part of this.
 
 ### Resident Services
 

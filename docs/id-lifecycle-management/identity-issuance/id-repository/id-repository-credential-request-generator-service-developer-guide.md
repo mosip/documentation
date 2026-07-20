@@ -27,7 +27,7 @@ Below are a list of tools required in ID Repository (Credential Request Generato
 
 Follow the steps below to set up ID Repository Services on your local system:
 
-1\. Download `lombok.jar` and `settings.xml` from [**here**](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/id-repository-config-files).
+1\. Download `lombok.jar` and `settings.xml` from [**here**](../../../_files/id-repository-config-files).
 
 2\. Unzip Apache Maven and move the unzipped folder in `C:\Program Files` and `settings.xml` to "conf" folder `C:\Program Files\apache-maven-3.8.4\conf`.
 
@@ -65,7 +65,7 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 
 3\. Create an empty folder inside the `mosip-config` with `sandbox-local` name and then copy and paste all config files inside `sandbox-local` folder except `.gitignore, README and LICENSE`.
 
-4\. As ID Repository is using two properties files, `id-repository-default` and `application-default`, you will have to configure them according to your environment. The same files are available [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/id-repository-config-files) for reference.
+4\. As ID Repository is using two properties files, `id-repository-default` and `application-default`, you will have to configure them according to your environment. The same files are available [here](../../../_files/id-repository-config-files) for reference.
 
 Properties to be updated:
 
@@ -82,7 +82,7 @@ Properties to be updated:
 * `mosip.credential.service.database.hostname`
 * `mosip.credential.service.database.port`
 
-5\. To run the server, two files are required- [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav~~kernel-config-server~1.2.0-SNAPSHOT~~) and [config-server-start.bat](../../../_files/id-repository-config-files/config-server-start.bat).
+5\. To run the server, two files are required- [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav~~kernel-config-server~1.2.0-SNAPSHOT~~) and [config-server-start.bat](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/id-repository-config-files/config-server-start.bat).
 
 6\. Put both the files in the same folder and change the location attribute to `sandbox-local` folder in `config-server-start.bat` file and also check the version of `kernel-config-server.jar` towards the end of the command.
 

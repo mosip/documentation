@@ -72,7 +72,7 @@ Once initiated, MOSIP initiates certain validations before processing the packet
 3. Requests outside the allowed window are not processed via the integration and must be handled through alternative grievance or legal channels.
 
 {% hint style="info" %}
-**Note:** The time window for accepting infant  MOSIP ID deactivation requests is configurable and determined by country-specific policy requirements. MOSIP suggests that requests be received through the integration only within this defined window.
+**Note:** The time window for accepting infant MOSIP ID deactivation requests is configurable and determined by country-specific policy requirements. MOSIP suggests that requests be received through the integration only within this defined window.
 {% endhint %}
 
 #### **Step 5: Manual Verification & Review**
@@ -91,7 +91,7 @@ Once initiated, MOSIP initiates certain validations before processing the packet
 
 After manual verification, the responsible administrators or legally authorized country authorities review the submitted documentation and the original packet details. Based on this review, they decide whether to **approve** or **reject** the deactivation request:
 
-* **If approved:** The MOSIP ID (UIN) is deactivated with in MOSIP.&#x20;
+* **If approved:** The MOSIP ID (UIN) is deactivated with in MOSIP.
 * **If rejected:** The request is closed, and no changes are made to the MOSIP ID.
 * A notification is sent to the registered email or phone number informing the resident of the update outcome.
 
@@ -125,6 +125,6 @@ After manual verification, the responsible administrators or legally authorized 
 ## Learn More
 
 * [Birth Registration & UIN Issuance](../integration-flows/birth-registration-and-uin-issuance.md) - Understand the standard birth registration workflow in CRVS-MOSIP integration. This provides essential context for how National IDs are initially issued to infants, which is the baseline process before fraud detection triggers deactivation requests.
-* [Manual Adjudication and Verification](../../../../../manual-adjudication-and-verification.md) - Learn about MOSIP's manual verification system that reviews fraudulent birth deactivation requests. This document details how packets are routed to manual verification queues, the decision-making workflow, and integration with external verification systems.
+* [Manual Adjudication and Verification](https://github.com/mosip/documentation/blob/1.2.0/docs/manual-adjudication-and-verification.md) - Learn about MOSIP's manual verification system that reviews fraudulent birth deactivation requests. This document details how packets are routed to manual verification queues, the decision-making workflow, and integration with external verification systems.
 * [Reactivation of Deactivated National ID](reactivation-of-deactivated-national-id.md) - Explore the reverse scenario where a deactivated National ID needs to be reactivated (e.g., after wrongful deactivation). This complements the deactivation workflow and shows the complete lifecycle management of rare fraud cases.
 * [Registration Processor Configurations Details](../../prerequisites-configurations-and-operations/prerequisites/configurations-details.md) - Discover the Camel route configurations (`CRVS_fraud_birth`) and packet processing workflows that enable fraud detection handling. This technical reference explains how deactivation requests are routed and processed within MOSIP's registration processor.

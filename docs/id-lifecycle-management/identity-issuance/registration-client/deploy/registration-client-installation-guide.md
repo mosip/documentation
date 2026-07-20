@@ -68,7 +68,7 @@ The client always launches with the pre-loader screen which displays the informa
 
 For more details on operator onboarding, refer to [Operator onboarding guide](operator-onboarding.md).
 
-For more details on Home page, refer to [Registration client home page](../../../../registration-client-home-page.md).
+For more details on Home page, refer to [Registration client home page](https://github.com/mosip/documentation/blob/1.2.0/docs/registration-client-home-page.md).
 
 ### Modes of operation
 

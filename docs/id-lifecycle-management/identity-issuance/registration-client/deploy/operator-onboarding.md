@@ -41,7 +41,7 @@ Once the operator is registered:
     _Note_- The threshold values are configurable and can be set as per the ID issuer.
 
     <img src="../../../../.gitbook/assets/reg-client-biometric-page.png" alt="" data-size="original">
-* After successful onboarding, the operator is automatically re-directed to the [registration client home page](../../../../broken-reference/).
+* After successful onboarding, the operator is automatically re-directed to the [registration client home page](https://github.com/mosip/documentation/blob/1.2.0/docs/broken-reference/README.md).
 
 _Note_:
 

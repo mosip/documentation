@@ -443,7 +443,7 @@ helm install rancher rancher-latest/rancher \
 
 ### Keycloak
 
-* [Keycloak](../../../deploymentnew/\(https:/www.keycloak.org/\)/) is an OAuth 2.0 compliant Identity Access Management (IAM) system used to manage the access to Rancher for cluster controls.
+* [Keycloak](https://github.com/mosip/documentation/blob/1.2.0/docs/deploymentnew/\(https:/www.keycloak.org/\)/README.md) is an OAuth 2.0 compliant Identity Access Management (IAM) system used to manage the access to Rancher for cluster controls.
 
 ```
 cd $K8_ROOT/rancher/keycloak

@@ -14,7 +14,7 @@ This is a guide to implement MOSIP for a country. It is advised that Government 
 6. [ID schema](../../id-lifecycle-management/identity-management/id-schema.md) (as prescribed by the country's regulatory authority).
 7. Hardware requirements estimate.
    * [Server side](https://github.com/mosip/documentation/tree/develop/docs/_files)
-   * [Devices](../../_files/mosip-devices-calculator.xlsx)
+   * [Devices](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/mosip-devices-calculator.xlsx)
 8. [Credential choices](../../id-lifecycle-management/identity-issuance/id-repository/#credential-types).
 9. ID Card print design.
 10. MOSIP versions.

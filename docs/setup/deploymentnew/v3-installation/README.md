@@ -1,7 +1,7 @@
 # V3 installation
 
 {% hint style="warning" %}
-**Note**:&#x20;
+**Note**:
 
 This version of the guide is currently under revision and enhancement. For any support, please reach out to us on [community.mosip.io](http://community.mosip.io/).
 {% endhint %}
@@ -9,7 +9,7 @@ This version of the guide is currently under revision and enhancement. For any s
 **Version**: 1.2.0.1 (Latest stable release)
 
 * Release date: 19th March 2024
-* [Release notes](../../../roadmap-and-releases/releases/release-notes-1.2.0.1/)
+* [Release notes](https://github.com/mosip/documentation/blob/1.2.0/docs/roadmap-and-releases/releases/release-notes-1.2.0.1)
 * [On-Prem Installation Guidelines](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/on-prem-installation-guidelines)
 * [On-Prem without DNS Installation Guidelines](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/on-prem-without-dns)
 * [AWS Installation Guidelines](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/aws-installation-guidelines-new)
@@ -17,7 +17,7 @@ This version of the guide is currently under revision and enhancement. For any s
 **Version**: 1.2.0.1-B4
 
 * Release date: 12th January 2024
-* [Release notes](../../../roadmap-and-releases/releases/release-notes-1.2.0.1-b4/)
+* [Release notes](https://github.com/mosip/documentation/blob/1.2.0/docs/roadmap-and-releases/releases/release-notes-1.2.0.1-b4)
 * [On-Prem Installation Guidelines](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/on-prem-installation-guidelines)
 * [On-Prem without DNS Installation Guidelines](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/on-prem-without-dns)
 * [AWS Installation Guidelines](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/aws-installation-guidelines-new)

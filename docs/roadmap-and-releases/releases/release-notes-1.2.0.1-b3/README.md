@@ -10,7 +10,7 @@
 
 **Release Date**: 14th April 2023
 
-The **1.2.0.1 Beta3** release of MOSIP is a patch release on top of the [Long-Term Support (LTS) release 1.2.0](../release-notes/). This patch release mainly contains all the fixes for bugs, security and performance given as part of the [1.2.0.1-B1 patch](../release-notes-1.2.0.1-beta) and additional integrations modification for the [Inji](https://app.gitbook.com/s/aY8BQ4hdzhSchZV814Ev/inji-wallet/inji-mobile/versions/version-0.9.0) and [e-Signet](../../../release/1.2.0.1/broken-reference/).
+The **1.2.0.1 Beta3** release of MOSIP is a patch release on top of the [Long-Term Support (LTS) release 1.2.0](../release-notes/). This patch release mainly contains all the fixes for bugs, security and performance given as part of the [1.2.0.1-B1 patch](https://github.com/mosip/documentation/blob/1.2.0/docs/roadmap-and-releases/releases/release-notes-1.2.0.1-beta) and additional integrations modification for the [Inji](https://app.gitbook.com/s/aY8BQ4hdzhSchZV814Ev/inji-wallet/inji-mobile/versions/version-0.9.0) and [e-Signet](https://github.com/mosip/documentation/blob/1.2.0/docs/release/1.2.0.1/broken-reference/README.md).
 
 ## Repository Released
 

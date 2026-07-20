@@ -43,7 +43,7 @@ For the code setup, clone the [Registration Client](https://github.com/mosip/reg
 
 Once the software is installed, you will be prompted to restart your IDE.
 
-3\. Download `openjfx-11.0.2_windows-x64_bin-sdk.zip` from [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/registration-client-config-files), unzip and place it in your local file system. This folder contains list of javafx related jars that are necessary for running Registration Client UI.
+3\. Download `openjfx-11.0.2_windows-x64_bin-sdk.zip` from [here](../../../../_files/registration-client-config-files), unzip and place it in your local file system. This folder contains list of javafx related jars that are necessary for running Registration Client UI.
 
 4\. We can change the application environment in the file `registration-services\src\main\resources\props\mosip-application.properties` by modifying the property `mosip.hostname`
 

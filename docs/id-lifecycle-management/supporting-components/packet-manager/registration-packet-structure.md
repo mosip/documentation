@@ -77,4 +77,4 @@ optional
 
 ## Sample packet
 
-See [sample packet](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/packet-structure).
+See [sample packet](../../../_files/packet-structure).

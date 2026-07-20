@@ -4,7 +4,7 @@ This section outlines the technical requirements for integrating a Civil Registr
 
 #### **ID schema Configuration:** <a href="#id-schema-configuration" id="id-schema-configuration"></a>
 
-To initiate any registration request, the country must define an ID schema based on the specific requirements for CRVS integration. The sample ID schema can be referred to [here](../../../../_files/id-schema/id-schema-sample.json) and should be customized to include all required fields for packet generation per the country’s requirements. This schema governs the structure of the data submitted to MOSIP for processing and storage in the Identity Repository.
+To initiate any registration request, the country must define an ID schema based on the specific requirements for CRVS integration. The sample ID schema can be referred to [here](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/id-schema/id-schema-sample.json) and should be customized to include all required fields for packet generation per the country’s requirements. This schema governs the structure of the data submitted to MOSIP for processing and storage in the Identity Repository.
 
 {% hint style="info" %}
 **Note:** MOSIP advises adopting and customizing the latest released ID schema version to meet country-specific needs.
@@ -68,7 +68,7 @@ Once the client is created, please update the properties in the locations below:
 * Navigate to the **Credentials** tab.
 * If you selected the **confidential** access type, keycloak will generate a **Secret Key**. Note this secret as it will be used for authentication in subsequent API calls.
 
-**Creating the Role**&#x20;
+**Creating the Role**
 
 * **Go to the Roles Section**
   * In the Keycloak Admin Console, under your realm, navigate to **Roles**.
@@ -113,7 +113,7 @@ Once the role is created and mapped to the client ID. As a follow-up step, below
 
 In the API above, the fields Client ID and Secret key are the values created in the previous steps, as mentioned above. Once the authentication is successful, in the response header, we will receive an access token, which is to be noted and used for the subsequent packet manager API request.
 
-#### 3. Create the Default Officer  <a href="#id-3.-create-the-default-officer" id="id-3.-create-the-default-officer"></a>
+#### 3. Create the Default Officer <a href="#id-3.-create-the-default-officer" id="id-3.-create-the-default-officer"></a>
 
 To process the request coming from CRVS, a default officer is to be registered and assigned to the CRVS. The officer is to be added from keycloak by the admin.
 
@@ -143,7 +143,7 @@ To process the request coming from CRVS, a default officer is to be registered a
   * After saving, the officer's **username** from step 3 will serve as the **Officer ID**.
   * This **Officer ID** will be used in the subsequent create packet API request. Ensure you pass this ID correctly in the request.
 
-#### 4. Create Centre  <a href="#id-4.-create-centre" id="id-4.-create-centre"></a>
+#### 4. Create Centre <a href="#id-4.-create-centre" id="id-4.-create-centre"></a>
 
 A unique default centre will be assigned to the CRVS to process requests. This centre can be created through the Admin Portal. For detailed instructions on how to create a centre, refer to the [**Admin Portal Center Creation Guide**.](https://docs.mosip.io/1.2.0/id-lifecycle-management/support-systems/administration/test/admin-portal-user-guide#create-center)
 
@@ -156,7 +156,7 @@ As of now, there is no direct support for fetching the specific centre ID in MOS
 \
 Once the **Centre ID** is identified, ensure it is saved securely for future reference. This **Centre ID** will be required in subsequent interactions with the CRVS system for processing requests.
 
-#### 5. Create Machine  <a href="#id-5.-create-machine" id="id-5.-create-machine"></a>
+#### 5. Create Machine <a href="#id-5.-create-machine" id="id-5.-create-machine"></a>
 
 A unique default machine will be assigned to the CRVS to process requests. This machine can be created through the Admin Portal.
 
@@ -208,7 +208,7 @@ As of now, there is no direct support for fetching the specific machine ID in MO
 
 Once the **Machine ID** is identified, ensure it is saved securely for future reference. This **Machine ID** will be required in subsequent interactions with the CRVS system for processing requests.
 
-#### 6. Map Officer to Centre and Machine  <a href="#id-6.-map-officer-to-centre-and-machine" id="id-6.-map-officer-to-centre-and-machine"></a>
+#### 6. Map Officer to Centre and Machine <a href="#id-6.-map-officer-to-centre-and-machine" id="id-6.-map-officer-to-centre-and-machine"></a>
 
 Once the officer, centre, and machine are created for CRVS, the next step is to map the user to the centre. This ensures the user is properly associated with the correct zone and centre for their operations.
 

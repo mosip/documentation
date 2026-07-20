@@ -42,7 +42,7 @@ This guide is intended for adopters who would customize the default ID Schema to
 * `subType`
   * For every `documentType` field, `document category code` must be the value of this key. This document category code is used to validate the provided document types in the ID object.
 
-Refer to the [sample ID Schema](../../_files/id-schema/id-schema-sample.json). A guide to customising the same is given below.
+Refer to the [sample ID Schema](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/id-schema/id-schema-sample.json). A guide to customising the same is given below.
 
 ID schema is loaded as a part of master data to `identity_schema` table in `mosip_masterdata` DB.
 

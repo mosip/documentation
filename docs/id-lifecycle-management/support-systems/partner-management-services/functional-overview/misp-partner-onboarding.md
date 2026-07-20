@@ -14,7 +14,7 @@ Partner Admins with the appropriate credentials can onboard MISP Partners in PMS
 
 * You should be logged in with **Partner Admin** credentials (Role: Partner Admin).
 * Root and Intermediate CA certificates should have already been uploaded to the PMS **Certificate Trust Store** (these are required before uploading partner CA Signed Certificates).
-* Policy Manager should already have created the required **Policy Group** and **MISP policies** (such that they can be selected later). See the Policy Group & MISP Policy creation docs- [Policy Manager](policy-manager/#policies)
+* Policy Manager should already have created the required **Policy Group** and **MISP policies** (such that they can be selected later). See the Policy Group & MISP Policy creation docs- [Policy Manager](https://github.com/mosip/documentation/blob/1.2.0/docs/id-lifecycle-management/support-systems/partner-management-services/functional-overview/policy-manager/README.md#policies)
 
 ## Interface Overview
 
@@ -82,7 +82,7 @@ Either you can upload the partner certificate right after MISP partner creation 
 
 > **Note**:
 
-* If Root/Intermediate CA is missing, the system will reject the upload. Therefore ensure that the CA certificates are uploaded first. [Certificate Trust Store](partner-administration/#certificate-trust-store)
+* If Root/Intermediate CA is missing, the system will reject the upload. Therefore ensure that the CA certificates are uploaded first. [Certificate Trust Store](https://github.com/mosip/documentation/blob/1.2.0/docs/id-lifecycle-management/support-systems/partner-management-services/functional-overview/partner-administration/README.md#certificate-trust-store)
 
 ### Re-Upload Partner Certificate (Replacing an existing certificate)
 
@@ -149,12 +149,12 @@ You can generate the MISP License Key for a selected policy and partner. The lic
    * Choose **Policy Name** (only approved & active policies show).
    * Enter **MISP License Key Name** (Unique, 1--128 chars).
 
-> ![](../../../../.gitbook/assets/misp-image18.png)
+> <img src="../../../../.gitbook/assets/misp-image18.png" alt="" data-size="original">
 
 3. Click **Submit**. A popup displays the newly generated MISP License Key (visible only once).
    * Copy the key (Use **Copy** button). The UI may show "Copied" briefly.
 
-> ![](../../../../.gitbook/assets/misp-image19.png)
+> <img src="../../../../.gitbook/assets/misp-image19.png" alt="" data-size="original">
 
 4. Close popup → 'Success Message' screen appears. Use **Go Back** to view the list view.
 
@@ -166,11 +166,11 @@ You can review, sort, filter, and act on existing license keys.
 
 1. Go to **MISP Services → List View**.
 
-> ![](../../../../.gitbook/assets/misp-image20.png)
+> <img src="../../../../.gitbook/assets/misp-image20.png" alt="" data-size="original">
 
 2. Use **Filters** (Partner ID, Policy Group, Policy Name, Name, Status) to narrow results; **Reset Filter** clears filters.
 
-> ![](../../../../.gitbook/assets/misp-image21.png)
+> <img src="../../../../.gitbook/assets/misp-image21.png" alt="" data-size="original">
 
 ![](../../../../.gitbook/assets/misp-image22.png)
 
@@ -183,15 +183,15 @@ You can create a new license key in place of an existing one.
 
 1. Go to **MISP Services → List View**, From the tabular view select the target license key and choose **Regenerate**.
 
-> ![](../../../../.gitbook/assets/misp-image23.png)
+> <img src="../../../../.gitbook/assets/misp-image23.png" alt="" data-size="original">
 
 2. A regeneration form opens with read-only fields and editable **Name** and **Validity**.
 
-> ![](../../../../.gitbook/assets/misp-image24.png)
+> <img src="../../../../.gitbook/assets/misp-image24.png" alt="" data-size="original">
 
 3. Submit → popup shows the new key (visible only once). Copy and store securely.
 
-> ![](../../../../.gitbook/assets/misp-image25.png)
+> <img src="../../../../.gitbook/assets/misp-image25.png" alt="" data-size="original">
 
 ### Deactivate License Key
 
@@ -199,11 +199,11 @@ You can deactivate an active license key such that it can no longer be used for 
 
 1. Go to **MISP Services → List View**, From the tabular view select the target license key and choose **Deactivate**.
 
-> ![](../../../../.gitbook/assets/misp-image26.png)
+> <img src="../../../../.gitbook/assets/misp-image26.png" alt="" data-size="original">
 
 2. Confirm the deactivation on the popup.
 
-> ![](../../../../.gitbook/assets/misp-image27.png)
+> <img src="../../../../.gitbook/assets/misp-image27.png" alt="" data-size="original">
 
 3. On success, the row becomes **Deactivated** and is greyed out; only **View** remains in the action menu.
 
@@ -213,6 +213,6 @@ You can deactivate the entire MISP Partner (prevents future requests & license g
 
 1. Go to **Partners**. From Partners list, open the action menu → **Deactivate Partner**.
 
-> ![](../../../../.gitbook/assets/misp-image28.png)
+> <img src="../../../../.gitbook/assets/misp-image28.png" alt="" data-size="original">
 
 2. Confirm and note the consequences (partner cannot request policies or generate license keys).

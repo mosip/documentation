@@ -6,7 +6,7 @@ MOSIP version 1.2.1.0 (Platform version) has been released with significant impr
 
 ## Intended Audience
 
-This runbook is designed for countries, system integrators, and organizations currently running MOSIP version 1.2.0.1 who wish to upgrade to the latest version of the MOSIP Identity Platform i.e [1.2.1.0.](adopting-lts-1.2.0/link/)
+This runbook is designed for countries, system integrators, and organizations currently running MOSIP version 1.2.0.1 who wish to upgrade to the latest version of the MOSIP Identity Platform i.e [1.2.1.0.](https://github.com/mosip/documentation/blob/1.2.0/docs/setup/upgrade/adopting-lts-1.2.0/link/README.md)
 
 ## What This Guide Covers
 
@@ -22,7 +22,7 @@ Following these procedures ensures a smooth transition from version 1.2.0.1 to 1
 
 ## Pre-Upgrade Checklist
 
-* Base version of MOSIP platform should be 1.2.0.1. If the base version is older than 1.2.0.1 (For example MOSIP version 1.1.5.5 is installed), Please make sure to migrate to 1.2.0.1 by following guidance mentioned in [this run book](https://docs.mosip.io/1.2.0/setup/upgrade/adopting-lts-1.2.0/upgrade-runbook). You can refer to [MOSIP Versioning Principle](adopting-lts-1.2.0/link/) to understand how does platform versioning and repository versioning works and follow different schemes.
+* Base version of MOSIP platform should be 1.2.0.1. If the base version is older than 1.2.0.1 (For example MOSIP version 1.1.5.5 is installed), Please make sure to migrate to 1.2.0.1 by following guidance mentioned in [this run book](https://docs.mosip.io/1.2.0/setup/upgrade/adopting-lts-1.2.0/upgrade-runbook). You can refer to [MOSIP Versioning Principle](https://github.com/mosip/documentation/blob/1.2.0/docs/setup/upgrade/adopting-lts-1.2.0/link/README.md) to understand how does platform versioning and repository versioning works and follow different schemes.
 * In case of customizations, the customized code must be updated and merged with the upgraded platform code. Refer to this [runbook](https://docs.mosip.io/1.2.0/setup/upgrade/java-21-migration-guide) as a guide for migrating from Java 11 to Java 21.
 
 ## Upgrade Procedure
@@ -41,8 +41,6 @@ Following these procedures ensures a smooth transition from version 1.2.0.1 to 1
       * Make sure to backup all the schema along with roles , users and password.
   * [SoftHSM](https://github.com/mosip/mosip-infra/tree/release-1.2.1.x/deployment/v3/external/hsm/softhsm#backup-softhsm) (this applies only to sandbox or testing environment upgrades and must not be used in production. For RealHSM, the upgrade process should be guided by the HSM administrator or the vendor.)
   * [minio](https://github.com/mosip/mosip-infra/tree/release-1.2.1.x/deployment/v3/external/object-store/minio)
-
-
 
 ### **Upgrade Sequence**
 
