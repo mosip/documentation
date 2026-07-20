@@ -86,8 +86,8 @@ icon: book-open
 
 **Version**: v1.2.1.0
 
-* Date: Coming Soon
-* [Release Notes](https://github.com/mosip/documentation/blob/1.2.0/docs/roadmap-and-releases/releases/v1.2.1.0)
+* Date: 26th December, 2025
+* [Release Notes](v1.2.1.0/)
 
 **Version**: V1.3.0-DSL
 
@@ -181,7 +181,7 @@ icon: book-open
 
 **Version**: Partner Management System Revamp 1.2.2.2 (Patch)
 
-* **Date:** Coming Soon
+* **Date:** 5th July, 2025
 * [Release Notes](pms-revamp-v1.2.2.2.md)
 
 **Version**: Registration v1.2.1.1 (Patch)

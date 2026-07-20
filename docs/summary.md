@@ -477,6 +477,7 @@
       * [Test Report](roadmap-and-releases/releases/partner-management-system-1.2.2.3/test-report.md)
     * [Versioning Policy](roadmap-and-releases/releases/versioning-policy.md)
     * [V1.5.0-DSL](roadmap-and-releases/releases/v1.5.0-dsl.md)
+    * [Android Registration Client v1.1.1](roadmap-and-releases/releases/android-registration-client-v1.1.1.md)
 * [General](general/README.md)
   * [Glossary](glossary.md)
   * [Resources](general/resources.md)
