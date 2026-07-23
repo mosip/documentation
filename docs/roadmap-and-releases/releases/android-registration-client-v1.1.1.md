@@ -12,19 +12,19 @@ Android Registration Client v1.1.1 is a patch release focused on improving code 
 
 The release also addresses static code analysis findings to improve long-term maintainability and platform readiness.
 
-## 1. Code Quality Improvements
+#### 1. Code Quality Improvements
 
 This release addresses reliability issues and code hotspots identified during static code analysis.
 
 The identified reliability findings have been resolved to improve application stability, while hotspot recommendations have been reviewed and addressed to strengthen code quality and maintainability. These improvements reduce technical debt and help ensure the codebase adheres to MOSIP development standards.
 
-## 2. Build Configuration Improvements
+#### 2. Build Configuration Improvements
 
 Build configuration has been refined by replacing developer machine-specific absolute paths with relative paths.
 
 Previously, certain build configurations depended on local machine paths, making builds less portable across development environments. This enhancement enables consistent project setup and improves build reproducibility across developer workstations and CI/CD environments.
 
-## 3. **Match SDK Integration**
+#### 3. Match SDK Integration
 
 This release introduces Match SDK support into the Android Registration Client, enabling biometric matching capabilities as part of the registration workflow.
 
@@ -36,7 +36,7 @@ By incorporating the Match SDK into the Android Registration Client, the release
 
 Below is the list of bug fixes included as part of the Android Registration Client v1.1.0 release.
 
-| Git Issue                                                                       | Description                                                                                                        |
+| Bug ID                                                                          | Description                                                                                                        |
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
 | [issues-1101](https://github.com/mosip/android-registration-client/issues/1101) | Android Registration Client was sending null Transaction ID and Capture Time values in biometric capture requests. |
 
@@ -55,18 +55,12 @@ To view the list of known issues, refer [**here**](https://github.com/mosip/andr
 
 The following table outlines the tested and certified compatibility of Android Registration Client v1.1.0 with other modules.
 
-| Platform/Module | Version |
-| --------------- | ------- |
-| MOSIP           | 1.2.1.0 |
+| Platform/Module | Version               |
+| --------------- | --------------------- |
+| MOSIP           | [v1.2.1.0](v1.2.1.0/) |
 
-### Build and Deploy
+### Documentation
 
-To access the build and deployment instructions, refer to the [Developer Guide](https://docs.mosip.io/1.2.0/modules/android-registration-client/android-registration-client-developer-guide).
-
-### Configurations
-
-For details related to Android Registration Client configurations, refer to the [Configuration Guide](https://docs.mosip.io/1.2.0/modules/android-registration-client/android-registration-client-configuration).
-
-### User Guide
-
-To learn more about the available features, workflows, and user interface, refer to the [Android Registration Client User Guide](https://docs.mosip.io/1.2.0/modules/android-registration-client/android-registration-client-user-guide).
+* Build and Develop - [Developer Guide](https://docs.mosip.io/1.2.0/modules/android-registration-client/android-registration-client-developer-guide) (To access the build and deployment instructions, refer to the).
+* Configurations - [Configuration Guide](https://docs.mosip.io/1.2.0/modules/android-registration-client/android-registration-client-configuration) (For details related to Android Registration Client configurations).
+* User Guide - [Android Registration Client User Guide](https://docs.mosip.io/1.2.0/modules/android-registration-client/android-registration-client-user-guide) (To learn more about the available features, workflows, and user interface).
