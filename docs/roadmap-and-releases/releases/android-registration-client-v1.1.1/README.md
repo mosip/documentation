@@ -1,10 +1,10 @@
 # Android Registration Client v1.1.1
 
-**Release Version:** 1.1.1
+**Release Version:** v1.1.1
 
 **Release Type:** Patch Release
 
-**Release Date:** <mark style="color:red;">**Coming Soon!**</mark>
+**Release Date:** 28th July, 2026
 
 ### Overview
 
@@ -46,18 +46,18 @@ To view the list of known issues, refer [**here**](https://github.com/mosip/andr
 
 ### Repository Released
 
-| Repositories                                                              | Tags Released |
-| ------------------------------------------------------------------------- | ------------- |
-| android-registration-client                                               | v1.1.1        |
-| [mock-android-match-sdk](https://github.com/mosip/mock-android-match-sdk) | v0.1.0        |
+| Repositories                | Tags Released                                                              |
+| --------------------------- | -------------------------------------------------------------------------- |
+| android-registration-client | [v1.1.1](https://github.com/mosip/android-registration-client/tree/v1.1.1) |
+| mock-android-match-sdk      | [v0.1.0](https://github.com/mosip/mock-android-match-sdk/tree/v0.1.0)      |
 
 ### Compatible Platform/Module
 
 The following table outlines the tested and certified compatibility of Android Registration Client v1.1.0 with other modules.
 
-| Platform/Module | Version               |
-| --------------- | --------------------- |
-| MOSIP           | [v1.2.1.0](v1.2.1.0/) |
+| Platform/Module | Version                  |
+| --------------- | ------------------------ |
+| MOSIP           | [v1.2.1.0](../v1.2.1.0/) |
 
 ### Documentation
 

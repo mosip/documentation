@@ -9,6 +9,11 @@ icon: book-open
 
 ## Latest Releases
 
+**Version**: Android Registration Client v1.1.1
+
+* Date: 28th July, 2026
+* [Release Notes](android-registration-client-v1.1.1/)
+
 **Version**: Android Registration Client v1.1.0
 
 * Date: 5th June, 2026
