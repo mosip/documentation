@@ -44,6 +44,10 @@ Below is the list of bug fixes included as part of the Android Registration Clie
 
 To view the list of known issues, refer [**here**](https://github.com/mosip/android-registration-client/issues?q=is%3Aissue%20state%3Aopen%20label%3Abug).
 
+| Git Issue                                                                      | Description                                       |
+| ------------------------------------------------------------------------------ | ------------------------------------------------- |
+| [issue-1099](https://github.com/mosip/android-registration-client/issues/1099) | Incorrect Password Shows Different Error Messages |
+
 ### Repository Released
 
 | Repositories                | Tags Released                                                              |
