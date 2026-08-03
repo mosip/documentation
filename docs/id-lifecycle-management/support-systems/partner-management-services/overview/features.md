@@ -14,14 +14,16 @@ PMS supports multiple partner types and enforces role-based access through integ
 
 PMS allows partners to [self-register](../functional-overview/end-user-guide.md#partner-self-registration) through a guided and partially automated process, reducing the need for manual intervention. During registration, users provide organizational and contact details and explicitly consent to Terms and Conditions, which clearly describe how personal and organizational data will be used within PMS. Self Registration can be done for below partners:
 
-1. \[Authentication Partner]\(Link to the Respective User Guide)
-2. \[Credential Partner]\(Link to the Respective User Guide)
-3. \[FTM Partner]\(Link to the Respective User Guide)
-4. \[Device Provider Partner]\(Link to the Respective User Guide)
+1. [Authentication Partner](../functional-overview/end-user-guide.md)
+2. [Credential Partner](../functional-overview/onboard-credential-partner.md)
+3. [FTM Partner](../functional-overview/ftm-chip-provider.md)
+4. [Device Provider Partner](../functional-overview/device-provider.md)
 
 Once registered, partners can log in using their email or username and password. Password recovery is supported through the “Forgot Password” option, enabling secure credential reset without administrative involvement.
 
+{% hint style="info" %}
 **Note:** From PMS version **1.3.0 – beta 4 onward**, Partner Admin users are no longer required to self-register via the PMS UI. Instead, they are created directly in Keycloak and assigned the appropriate Partner Admin role.
+{% endhint %}
 
 ### Interface and User Experience
 
