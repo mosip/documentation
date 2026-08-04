@@ -48,6 +48,12 @@ To view the list of known issues, refer [**here**](https://github.com/mosip/andr
 | ------------------------------------------------------------------------------ | ------------------------------------------------- |
 | [issue-1099](https://github.com/mosip/android-registration-client/issues/1099) | Incorrect Password Shows Different Error Messages |
 
+|                                                                                 |                                                                                                                    |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| [issues-1101](https://github.com/mosip/android-registration-client/issues/1101) | Android Registration Client was sending null Transaction ID and Capture Time values in biometric capture requests. |
+
+
+
 ### Repository Released
 
 | Repositories                | Tags Released                                                              |
