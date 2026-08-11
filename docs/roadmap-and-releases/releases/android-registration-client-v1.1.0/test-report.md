@@ -63,7 +63,7 @@ Verification is performed on various configurations as mentioned below
 
 ## Feature Health <a href="#toc17829893" id="toc17829893"></a>
 
-<figure><img src="../../../.gitbook/assets/arc-v1.0.0-tr-feature-health.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/arc-111-tr-feature-health.png" alt=""><figcaption></figcaption></figure>
 
 ARC APK Git Commit ID: 37f3a80d0920d2a29dd7072c5518b0fdcc45849b
 
@@ -76,8 +76,6 @@ This part lists the team members involved in the testing process and their respo
 **Table**: Test Organization
 
 <table><thead><tr><th width="183.2421875">Name</th><th width="219.20703125">Functional Role</th><th>Responsibilities</th></tr></thead><tbody><tr><td>Ragini Krishna</td><td>Manager</td><td>Defining test strategy, managing QA activities, and ensuring overall product quality.</td></tr><tr><td>Chandra Sekhar</td><td>Lead</td><td>Leading the test team, planning and executing tests, and ensuring timely delivery of quality results.</td></tr><tr><td>G Famuda Mubashira</td><td>Test engineer</td><td>Developing and executing test cases, logging defects, and verifying software quality.</td></tr><tr><td>Damodar Guru</td><td>Automation Test engineer</td><td>Developing and executing test cases, logging defects, and verifying software quality.</td></tr></tbody></table>
-
-
 
 ### Test Planning <a href="#toc17829895" id="toc17829895"></a>
 
@@ -169,4 +167,3 @@ It outlines the strategy used to ensure a comprehensive evaluation.
 <table><thead><tr><th>Version</th><th>Author</th><th>Date</th><th valign="top">Review</th><th valign="top">Affected Sections</th></tr></thead><tbody><tr><td>V1.1</td><td>G Famuda Mubashira</td><td>04/06/2026</td><td valign="top">Ragini Krishna Murthy</td><td valign="top"><br></td></tr></tbody></table>
 
 <br>
-

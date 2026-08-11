@@ -7,7 +7,7 @@ icon: people-group
 
 MOSIP thrives on the collective efforts of its global community. Contributions from developers, designers, researchers, and organizations play a vital role in enhancing the platform’s capabilities and ensuring scalability, security, and interoperability.
 
-## 🙌 Ways The Community Contributes
+### 🙌 Ways The Community Contributes
 
 * Direct code contributions.
 * Design and architecture reviews.
@@ -30,8 +30,8 @@ MOSIP thrives on the collective efforts of its global community. Contributions f
 * **Become a Contributor**: Once your contribution is approved and merged, you're officially a MOSIP contributor. Track your contributions on the [Contributor's Leaderboard](https://github.com/mosip/mosip/wiki/Contributor's-Leaderboard).
 * **Need Help?**: Engage with us on our [Community Forum](https://community.mosip.io/) and collaborate with fellow contributors.
 
-### 👉 Explore more
+### 👉 Explore More
 
 * [Contributors](https://docs.mosip.io/1.2.0/community/contributions) - See the organizations and community members contributing to MOSIP.
-* Documentation Credits - View acknowledgements for contributors who have helped create and improve MOSIP documentation.
+* [Documentation Credits](documentation-credits.md) - View acknowledgements for contributors who have helped create and improve MOSIP documentation.
 * [Code of Conduct](https://docs.mosip.io/1.2.0/community/code-contributions/code-of-conduct) - Understand the principles and expectations for participating in the MOSIP community.
