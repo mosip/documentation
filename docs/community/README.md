@@ -34,7 +34,7 @@ MOSIP thrives on the collective efforts of its global community. Contributions f
 ***
 
 
-
+<!-- 
 
 
 How Do I Contribute?<br>
@@ -72,7 +72,7 @@ Remove these pages from docs, as they exist in GitHub, and have been linked from
 
 
 
-
+-->
 
 
 
