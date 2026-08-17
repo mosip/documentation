@@ -2,6 +2,7 @@
 
 * [Overview](README.md)
 * [Releases](versions.md)
+  * [Version 1.4.4](versions/version-1.4.4.md)
   * [Version 1.4.3](versions/version-1.4.3.md)
   * [Version 1.4.2](versions/version-1.4.2.md)
   * [Version 1.4.1](versions/version-1.4.1.md)
@@ -17,7 +18,6 @@
     * [Test Report](test-report-1.0.0.md)
   * [Version 0.0.9](version-0.0.9.md)
     * [Test Report](test-report-0.0.9.md)
-  * [Version 1.4.4](versions/version-1.4.4.md)
 * [User Guide](user-guide.md)
 * [Android App User Guide](android-user-guide.md)
 * [CTK Setup](how-to-guides/README.md)
