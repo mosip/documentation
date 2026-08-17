@@ -1,10 +1,10 @@
-# How to setup ABIS for testing
+# Steps to set up ABIS for testing
 
 A partner can test their biometric ABIS’s with MOSIP’s Compliance Toolkit. In this document, we have provided the steps that can be followed by the partner to enable the ABIS testing.
 
 The diagram below illustrates the CTK deployment architecture.
 
-![](\_images/ctk-deployment-architecture-abis.png)
+![](.gitbook/assets/ctk-deployment-architecture-abis.png)
 
 ## Test using a Mock ABIS
 
@@ -14,7 +14,8 @@ Below is a quick demonstration followed by steps to set up ABIS for testing.
 
 * Checkout MOSIP’s Mock Services from `https://github.com/mosip/mosip-mock-services`. Make sure to checkout the code from **develop** branch.
 * Go to `REPO_ROOT/mock-abis`.
-* For setting ABIS queue configuration, follow the steps below:
+*   For setting ABIS queue configuration, follow the steps below:
+
     * Step 1: Create `registration-processor-abis.json` in the resources folder with the below details.
 
     ```
@@ -61,8 +62,7 @@ Below is a quick demonstration followed by steps to set up ABIS for testing.
     analytics.key2=value2
     ```
 
-    * Step 4: Build the code with the command  `mvn clean install -Dmaven.test.skip=true -Dgpg.skip=true`.
-      
+    * Step 4: Build the code with the command `mvn clean install -Dmaven.test.skip=true -Dgpg.skip=true`.
 * If you are testing with newer queues, then you need to first create them manually in `active mq` console.
 
 ```
@@ -79,6 +79,7 @@ Create Address > abis-to-ctk >  anycast > save
 ```
 
 Here `LOCAL_PATH` is the installation folder path for the mosip-mock-service.
+
 * Once the mock ABIS service is running, check if the JAR is working using the Swagger available at URL: `http://localhost:8081/v1/mock-abis-service/swagger-ui.html`
 * In CTK ,for the ABIS project configure the below details:
 

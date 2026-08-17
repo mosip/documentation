@@ -1,4 +1,4 @@
-# How to set up CTK
+# 0.0.9
 
 ## Pre-requisites
 
@@ -24,14 +24,14 @@ Dependent Service (dockers)
 _**Note**_:
 
 * Ensure that in the `kernel-default.properties`, the value of `mosip-toolkit-client` is set in `auth.server.admin.allowed.audience`. If this was not set by default, then set it and restart `kernel-auth-service` and `compliance-toolkit-service`.
-* Check if the roles given to `mosip-pms-client` should match with any of the roles for following config property.
+*   Check if the roles given to `mosip-pms-client` should match with any of the roles for following config property.
 
-    ``` 
+    ```
         mosip.role.keymanager.postverifycertificatetrust=XXX
     ```
-    This config property is available in:
-    https://github.com/mosip/mosip-config/blob/${ENV_NAME}/kernel-default.properties
-    
+
+    This config property is available in: https://github.com/mosip/mosip-config/blob/${ENV\_NAME}/kernel-default.properties
+
     _For Example_:
 
     mosip.role.keymanager.postverifycertificatetrust=`ZONAL_ADMIN`, `GLOBAL_ADMIN`, `PMS_ADMIN`, `PMS_USER`
@@ -44,7 +44,7 @@ _**Note**_:
 
 2\. The resources folder would contain schemas, test data and test cases that need to be added to MinIO and DB.
 
-![](\_images/ctk-resources-folder.png)
+![](.gitbook/assets/ctk-resources-folder.png)
 
 ## Steps to upload resources to MinIO
 

@@ -12,11 +12,13 @@ The Android Compliance tool kit App v1.1.0 was tested with the below specificati
 The Windows Compliance Tool kit was tested with the below specifications:
 
 Secure Biometric Interface (SBI)
- > SDK
-   * Quality Check
-   * Match
-   * Extraction
-   * Conversion 
+
+> SDK
+
+* Quality Check
+* Match
+* Extraction
+* Conversion
 
 ## Test Execution Statistics
 
@@ -97,30 +99,29 @@ The Windows CTK v1.1.0 with `MOSIP windows Mock SBI` has been tested for complia
 
 The SDK implementation has been tested to support quality check, match, extraction, and conversion of biometrics. Test cases have been tested with MOSIP mock SDK.
 
-| **Scenarios**     | **With Mock SDK** | 
-| ----------------- | ----------- | 
-| Total             |  76           | 
-| Passed            |   65          | 
-| Pending           |    0        | 
-| Failed            |  0           | 
-| N/A          |  11           | 
-| **Test Rate (%)** | 86%        | 
-| **Pass Rate (%)** | 86%        |
+| **Scenarios**     | **With Mock SDK** |
+| ----------------- | ----------------- |
+| Total             | 76                |
+| Passed            | 65                |
+| Pending           | 0                 |
+| Failed            | 0                 |
+| N/A               | 11                |
+| **Test Rate (%)** | 86%               |
+| **Pass Rate (%)** | 86%               |
 
 **Out of scope**: Segmentation testing and Real SDK testing
 
-### Known Issues 
+### Known Issues
 
-
-| **Issue**         | **Description** | 
-| ----------------- | ----------- | 
-| MOSIP-26898      |	After login to CTK android app, the previous browser tab is not killed.|
-| MOSIP-26762      |	Newly registered user not landing into CTK android home page (intermittent issue)|
-| MOSIP-27044      |	In CTK Android app, UI elements are overlapping with each other.|
-| MOSIP-27257      |	While initial launch, Android mock SBI is not landing into home page.|
-| MOSIP-27304      |	In Android CTK -'Encryption Key' button is not appearing for Auth projects (Workaround: Partners can download 'Encryption Key' from web application)|
-| MOSIP-27391      |	CTK - UI and Buttons not aligned properly|
-| MOSIP-27440      |CTK UI Reliability bugs reported in SonarCloud|
+| **Issue**   | **Description**                                                                                                                                      |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| MOSIP-26898 | After login to CTK android app, the previous browser tab is not killed.                                                                              |
+| MOSIP-26762 | Newly registered user not landing into CTK android home page (intermittent issue)                                                                    |
+| MOSIP-27044 | In CTK Android app, UI elements are overlapping with each other.                                                                                     |
+| MOSIP-27257 | While initial launch, Android mock SBI is not landing into home page.                                                                                |
+| MOSIP-27304 | In Android CTK -'Encryption Key' button is not appearing for Auth projects (Workaround: Partners can download 'Encryption Key' from web application) |
+| MOSIP-27391 | CTK - UI and Buttons not aligned properly                                                                                                            |
+| MOSIP-27440 | CTK UI Reliability bugs reported in SonarCloud                                                                                                       |
 
 ### Docker version (required for Compliance Test Kit)
 
@@ -160,20 +161,8 @@ mosipqa/keycloak-init: develop
 
 #### MOSIP CTK Service
 
-![](\_images/sonar-ctk-service.png)
+![](.gitbook/assets/sonar-ctk-service.png)
 
 #### MOSIP CTK UI Repository
 
-![](\_images/sonar-ctk-ui.png)
-
-
-
-
-
-
-
-
-
-
-
-
+![](.gitbook/assets/sonar-ctk-ui.png)

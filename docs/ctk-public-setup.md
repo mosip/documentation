@@ -1,4 +1,4 @@
-# How to make CTK publicly available
+# Steps to make CTK publicly available
 
 ## Prerequisite
 
@@ -40,7 +40,7 @@ _Note_: Replace “sandbox” appropriately.
 
     Change **spec.selector.istio: ingressgateway-internal** to **spec.selector.istio: ingressgateway** as shown in the image below.
 
-    ![](\_images/ctk-public-setup.png)
+    ![](.gitbook/assets/ctk-public-setup.png)
 
     * pmp-gateaway
     * compliance-toolkit-ui-gateway
@@ -48,7 +48,7 @@ _Note_: Replace “sandbox” appropriately.
     * landing-page
 2. Update below mentioned Istio virtualservice to add public gateway in spec.gateways:
 
-![](\_images/ctk-istio.png)
+![](.gitbook/assets/ctk-istio.png)
 
 ```
 * partnermanager

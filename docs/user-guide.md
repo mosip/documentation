@@ -23,15 +23,15 @@ Below are simple steps to use this portal:
 
 On the CTK landing page, partners can view the introduction of the CTK portal and watch a video about CTK. Additionally, they can login or register by clicking the respective buttons. The landing page also provides links to other resources such as the GitHub repository, documentation, and partner details.
 
-![CTK Landing Page1](\_images/ctk-landing-page1.png)
+![CTK Landing Page1](.gitbook/assets/ctk-landing-page1.png)
 
 Additionally, it showcases several robust features of CTK, including its pre-defined test cases, validation mechanisms, and comprehensive reporting.
 
-![CTK Landing Page2](\_images/ctk-landing-page2.png)
+![CTK Landing Page2](.gitbook/assets/ctk-landing-page2.png)
 
 The landing page offers details about the SBI, Android SBI, SDK, and ABIS specifications. Furthermore, partners have the option to download the compliance toolkit APK by choosing the download button.
 
-![CTK Landing Page3](\_images/ctk-landing-page3.png)
+![CTK Landing Page3](.gitbook/assets/ctk-landing-page3.png)
 
 ## Login
 
@@ -47,8 +47,7 @@ The partner can select the language of their preference from the dropdown in the
 
 _Note_: After registering, partners need to login the partner management portal to retrieve partner details.
 
-
-![CTK login page](\_images/ctk-toolkit-login.png)
+![CTK login page](.gitbook/assets/ctk-toolkit-login.png)
 
 ## Terms and Conditions Consent
 
@@ -56,7 +55,7 @@ After logging in, partners will encounter a Terms & Conditions popup window. Par
 
 Also, upon logging in, partners will be prompted with a popup if there have been any changes to the Terms & Conditions since their last consent.
 
- ![CTK consent window](\_images/ctk-consent-popup.png)
+![CTK consent window](.gitbook/assets/ctk-consent-popup.png)
 
 ## Dashboards
 
@@ -64,15 +63,15 @@ After accepting the Terms & Conditions, partners gain access to the `Project Das
 
 * `Project`: A project is a module that the partner wants to test. For example, if a device partner has developed a new version of their SBI for the fingerprint slap device, then, they can create a project in the compliance tool kit to verify this version of SBI.
 
-![CTK Project Dashboard](\_images/ctk-toolkit-dashboard.png)
+![CTK Project Dashboard](.gitbook/assets/ctk-toolkit-dashboard.png)
 
 * `Biometric Data`: As a part of the CTK, there is an option for the partner to upload their test data which can be used to verify the partner’s software. Currently, in MOSIP, we can upload test data for an SDK and ABIS.
 
-![CTK Biometric Data](\_images/ctk-toolkit-biometric-data.png)
+![CTK Biometric Data](.gitbook/assets/ctk-toolkit-biometric-data.png)
 
 * `My Reports`: Partners of CTK will be able to view the reports that they have submitted for review as well as the status of those reports.
 
-![CTK My Reports](\_images/ctk-toolkit-myreport.png)
+![CTK My Reports](.gitbook/assets/ctk-toolkit-myreport.png)
 
 ## Project dashboard
 
@@ -99,18 +98,18 @@ The project dashboard will display the following attributes of a project:
 * Last time a collection in the project was run
 * Status of the last run on the project
 
-![CTK Project Dashboard](\_images/ctk-toolkit-projectdashboard.png)
+![CTK Project Dashboard](.gitbook/assets/ctk-toolkit-projectdashboard.png)
 
 The filter option in the dashboard will filter based on the name of the project, project type and the creation date and time.
 
-![CTK filter](\_images/ctk-toolkit-filter.png)
+![CTK filter](.gitbook/assets/ctk-toolkit-filter.png)
 
 ### Create a project
 
 * On the Projects Dashboard, select the `+Add Project` button.
 * The page will redirect the partner to the ‘Add a new Project’ page as shown below.
 
-![CTK create a Project](\_images/ctk-toolkit-create-project.png)
+![CTK create a Project](.gitbook/assets/ctk-toolkit-create-project.png)
 
 * Enter a unique Project Name and select the Project Type. Currently, MOSIP supports three types of projects: SBI, SDK and ABIS
 * Based on the project type selected, the partner needs to enter the mandatory configurations before saving the project.
@@ -134,7 +133,7 @@ The filter option in the dashboard will filter based on the name of the project,
 | Authentication | Iris        | Double         |
 | Authentication | Face        | Full Face      |
 
-![](\_images/ctk-toolkit-create-sbi-project.png)
+![](.gitbook/assets/ctk-toolkit-create-sbi-project.png)
 
 * When the project type selected is SDK, the partner needs to provide the below configurations:
   * Base URL: URL where the SDK is deployed
@@ -144,7 +143,7 @@ The filter option in the dashboard will filter based on the name of the project,
   * _Website URL_: Partner website URL
   * Test Data: Input data needed for the run
 
-![](\_images/ctk-creating-sdk-project.png)
+![](.gitbook/assets/ctk-creating-sdk-project.png)
 
 * When the project type selected is ABIS, the partner needs to provide the below configurations:
   * Active MQ URL: URL where the ABIS is deployed
@@ -160,15 +159,15 @@ The filter option in the dashboard will filter based on the name of the project,
 
 _Note_: ABIS partner can only create ABIS project.
 
-![](\_images/ctk-creating-abis-project.png)
+![](.gitbook/assets/ctk-creating-abis-project.png)
 
 * After entering data, partners can click `Save Project`. Popup ask's partner to confirm the hash value and website URL before proceeding. Click on the `Save` again to confirm if values are correct.
 
-![](\_images/ctk-hash-verification.png)
+![](.gitbook/assets/ctk-hash-verification.png)
 
 * Once the project is saved, a successful message is displayed and a popup appears on the screen which when closed redirects the partner to the project dashboard (home).
 
-![](\_images/ctk-sdk-project-created.png)
+![](.gitbook/assets/ctk-sdk-project-created.png)
 
 Possible values for the Purpose attribute in SDK are:
 
@@ -182,7 +181,7 @@ Possible values for the Purpose attribute in SDK are:
 * Once the project is created by the partner, they can download the **encryption key**.
 * Partner can download encryption key for **Auth** devices.
 
-![](\_images/ctk-encryptionkey.png)
+![](.gitbook/assets/ctk-encryptionkey.png)
 
 ### View a specific project
 
@@ -191,7 +190,7 @@ Details of a specific project can be viewed
 * By clicking on the name of the project, or,
 * By clicking on the option `View` in the options section of the project row.
 
-![](\_images/ctk-view-specifi-project.png)
+![](.gitbook/assets/ctk-view-specifi-project.png)
 
 Once you click on the above-mentioned link, you will be redirected to the project details page of the specific project.
 
@@ -222,11 +221,11 @@ The biometric data dashboard should display the below attributes of a biometric 
 * The file name of the data
 * Creation date and time of the biometric data
 
-![](\_images/ctk-biometric-data-collected.png)
+![](.gitbook/assets/ctk-biometric-data-collected.png)
 
 Filter in the dashboard should be able to perform filter based on the name of the biometric data, type, purpose and creation date and time.
 
-![](\_images/ctk-filter-bio-data.png)
+![](.gitbook/assets/ctk-filter-bio-data.png)
 
 ### Upload new biometric data
 
@@ -236,10 +235,11 @@ Filter in the dashboard should be able to perform filter based on the name of th
 * When the project type SDK is selected, the partner needs to provide the below details:
   * Purpose: The purpose of the test (SDK test type)
   * Test Data: The test data is to be uploaded as a ZIP
-* When the project type ABIS is selected, the partner needs to provide the below details:
-  * Test Data: The test data is to be uploaded as a ZIP
-  
-  _Note_: ABIS partner can only upload an ABIS biometric test data.
+*   When the project type ABIS is selected, the partner needs to provide the below details:
+
+    * Test Data: The test data is to be uploaded as a ZIP
+
+    _Note_: ABIS partner can only upload an ABIS biometric test data.
 
 The Test Data section has two options `Browse` and `Download Sample File`.
 
@@ -247,7 +247,7 @@ The `Browse` button will be the file explorer in the system for the partner to s
 
 The `Download Sample File` button will download a blank ZIP file with instructions in the README of the test case so that the partner can prepare and add biometric test data.
 
-![](\_images/ctk-upload-bio-data.png)
+![](.gitbook/assets/ctk-upload-bio-data.png)
 
 ### Download test data
 
@@ -255,7 +255,7 @@ The `Download Sample File` button will download a blank ZIP file with instructio
   * Clicking on the name of the biometric data in the biometric data, or,
   * Clicking on the `Download Zip` in the options menu of the biometric data.
 
-![](\_images/ctk-dowload-testdata.png)
+![](.gitbook/assets/ctk-dowload-testdata.png)
 
 ### My Reports Dashboard
 
@@ -272,19 +272,19 @@ The My Reports Dashboard will display the following attributes of a report:
 * Download or view the report document
 * Current status of the report
 
-![CTK My Report Dashboard](\_images/ctk-myReportsDashboard.png)
+![CTK My Report Dashboard](.gitbook/assets/ctk-myReportsDashboard.png)
 
 The filter option in the dashboard will filter based on the name of the project, project type and the creation date and time.
 
-![CTK My Report Dashboard](\_images/ctk-myReports-filter.png)
+![CTK My Report Dashboard](.gitbook/assets/ctk-myReports-filter.png)
 
 Users have the option to click on the `Project Name`, allowing them to navigate directly to the view project dashboard for the respective project.
 
-![CTK My Report Dashboard](\_images/ctk-myReportsDashboard.png)
+![CTK My Report Dashboard](.gitbook/assets/ctk-myReportsDashboard.png)
 
 Users can simply click on the `Download` button to retrieve the report submitted for the respective project.
 
-![CTK My Report Dashboard](\_images/ctk-myReports-downloadReport.png)
+![CTK My Report Dashboard](.gitbook/assets/ctk-myReports-downloadReport.png)
 
 ## Collections
 
@@ -303,7 +303,7 @@ A collection is a group of test cases selected by the partner for a particular p
 
     * Navigate to the project details page by clicking on the project name or View option in the options list.
 
-    ![](\_images/ctk-add-collection.png)
+    ![](.gitbook/assets/ctk-add-collection.png)
 
     * By default, application will create a `Compliance Collection` for the project, and it includes all the test cases that are based on project details.
     * `Quality Assessment Collection` will only be added by default for **SBI** projects, and it includes only quality assessment testcases.
@@ -313,13 +313,13 @@ A collection is a group of test cases selected by the partner for a particular p
   * The test cases will be displayed in a tabular format with ID, Name, Description and Validator details.
   * Beside every test case, there will be a check box which needs to be selected by the partner.
 
-![](\_images/ctk-create-collection.png)
+![](.gitbook/assets/ctk-create-collection.png)
 
 * After selecting the test cases, the partner can click on the **Save Collection** button to save the collection.
 * Once a collection is successfully created, there is a success popup shown and the partner is redirected to the Project details page.
 * Once a collection is created it is displayed on the Collection Dashboard which is available on the Project details page.
 
-![](\_images/ctk-collection-details.png)
+![](.gitbook/assets/ctk-collection-details.png)
 
 **Few points to note**:
 
@@ -331,34 +331,34 @@ A collection is a group of test cases selected by the partner for a particular p
 
 Once the partner creates a collection, they can view the collection details by clicking on the collection name.
 
-![](\_images/ctk-view-collection.png)
+![](.gitbook/assets/ctk-view-collection.png)
 
 ### Run an SBI Collection
 
 * Before running a collection in SBI, the partner needs to connect to a device without which they cannot proceed with testing.
 * The partner should click on the `Scan Device` button in the Collection Dashboard as shown below.
 
-![](\_images/ctk-scan-device.png)
+![](.gitbook/assets/ctk-scan-device.png)
 
 * This triggers a scan of all the configured ports in the system where the SBI is connected.
 * If any device connected with an SBI is found, the application asks the partner to select an available port and the device for running the test.
 
-![](\_images/ctk-scan-device-selection.png)
+![](.gitbook/assets/ctk-scan-device-selection.png)
 
 * If any device is not found, an error popup is displayed to the partner with an option to `Scan Again`.
 
-![](\_images/ctk-scan-failed.png)
+![](.gitbook/assets/ctk-scan-failed.png)
 
 * Once the device is selected, the partner can click on the `Save` button.
 * After the device is selected and saved in memory, the `Run` button for the collections is enabled.
 
-![](\_images/ctk-run-button.png)
+![](.gitbook/assets/ctk-run-button.png)
 
 * If a device is already scanned and selected before running the collection, the partner can choose to re-scan and select another device for running the test case.
 * If a device is selected, the partner can click on the `Run` button to run the test case.
 * If the partner selects a Fingerprint Slap device but the collection is for a Double Iris device, then the test case is not executed. The partner will be shown an error message and asked to re-select the correct device. The combination validated here is for Purpose, Device Type and Sub Type as displayed below.
 
-![](\_images/ctk-combination-validation.png)
+![](.gitbook/assets/ctk-combination-validation.png)
 
 * If the correct device is selected and the partner initiates the test run, the test case execution should start.
 * During the test run,
@@ -367,7 +367,7 @@ Once the partner creates a collection, they can view the collection details by c
   * Option to close or cancel the test run
   * Option to initiate capture for a test case or resume run after completing the operation.
 
-![](\_images/ctk-test-run.png)
+![](.gitbook/assets/ctk-test-run.png)
 
 * The test run also shows,
   * The total test cases getting executed for that run
@@ -376,47 +376,47 @@ Once the partner creates a collection, they can view the collection details by c
 * Once the test execution is completed, the partner can see,
   * A high-level result with the number of test cases executed- with the number of test cases failed and the number of test cases passed in the run.
 
-![](\_images/ctk-run-result.png)
+![](.gitbook/assets/ctk-run-result.png)
 
 * The partner can also see the time elapsed
 * They can also view the detailed test run report
 
-![](\_images/ctk-run-details.png)
+![](.gitbook/assets/ctk-run-details.png)
 
 ### Run an SDK Collection
 
 Before running the SDK collection, the partner can change the `Test Data`, the `Base URL` and the `SDK Hash` in the project settings
 
-![](\_images/ctk-sdk-change-url-testdata.png)
+![](.gitbook/assets/ctk-sdk-change-url-testdata.png)
 
 * Click the `Run` button of the specific collection.
 * The application now checks if the URL shared by the partner is accessible or not. If not accessible, the application shows an error message to the partner.
 
-![](\_images/ctk-sdk-url-notaccessible.png)
+![](.gitbook/assets/ctk-sdk-url-notaccessible.png)
 
 * Once the run initiates with the proper URL, the execution should complete on its own and during the run, the partner can see:
   * A progress bar with the percentage of test execution completed.
   * A timer to show the time elapsed during the execution.
   * Option to close or cancel the test run.
 
-![](\_images/ctk-sdk-run.png)
+![](.gitbook/assets/ctk-sdk-run.png)
 
 * Once the test execution is completed, the partner can see:
   * A high-level result with the number of test cases executed- with the number of test cases failed and the number of test cases passed in the run.
   * They can also see the time elapsed.
   * They also have the option to view the detailed `Test Run` report.
 
-![](\_images/ctk-sdk-run-result.png)
+![](.gitbook/assets/ctk-sdk-run-result.png)
 
 _Note_: For a test run, the partner can select their data or MOSIP’s default data. But let us assume that the partner chooses their data, but in the ZIP file, they have missed adding data for a particular test case, then the system should take MOSIP’s data for the test case' execution.
 
-![](\_images/ctk-testdata-selecting.png)
+![](.gitbook/assets/ctk-testdata-selecting.png)
 
 ### Run an ABIS Collection
 
 Before running the ABIS collection, the partner can change the `Username`, `Password`, `Queue names`, `Test Data`, `ABIS Hash` and the `Actice MQ URL` in the project settings
 
-![](\_images/ctk-abis-change-project-settings.png)
+![](.gitbook/assets/ctk-abis-change-project-settings.png)
 
 * Click the `Run` button of the specific collection.
 * Once the run initiates with the proper URL, the execution should complete on its own and during the run, the partner can see:
@@ -424,18 +424,18 @@ Before running the ABIS collection, the partner can change the `Username`, `Pass
   * A timer to show the time elapsed during the execution.
   * Option to close or cancel the test run.
 
-![](\_images/ctk-abis-run.png)
+![](.gitbook/assets/ctk-abis-run.png)
 
 * Once the test execution is completed, the partner can see:
   * A high-level result with the number of test cases executed- with the number of test cases failed and the number of test cases passed in the run.
   * They can also see the time elapsed.
   * They also have the option to view the detailed `Test Run` report.
 
-![](\_images/ctk-abis-run-result.png)
+![](.gitbook/assets/ctk-abis-run-result.png)
 
 _Note_: For a test run, the partner can select their data or MOSIP’s default data. But let us assume that the partner chooses their data, but in the ZIP file, they have missed adding data for a particular test case, then the system should take MOSIP’s data for the test case' execution.
 
-![](\_images/ctk-ABIS-testdata-selecting.png)
+![](.gitbook/assets/ctk-ABIS-testdata-selecting.png)
 
 ### View the run history of the Collection
 
@@ -443,19 +443,19 @@ The partner after completing a successful test run can view the detailed run by,
 
 * Clicking on the `View Test Run` button once the test execution is completed.
 
-![](\_images/ctk-sdk-run-result.png)
+![](.gitbook/assets/ctk-sdk-run-result.png)
 
-![](\_images/ctk-test-results.png)
+![](.gitbook/assets/ctk-test-results.png)
 
 * Clicking on the `View Last Test Run` option in the options section of the collection as shown below.
 
-![](\_images/ctk-viewlast-testrun.png)
+![](.gitbook/assets/ctk-viewlast-testrun.png)
 
 Once the partner selects the `View Last Test Run` option, the application will redirect the partner to display the test run details as shown.
 
 * Clicking on the `Test Run History` option in the options section of the collection and then click on the `Details` button of the test run that they want to view
 
-![](\_images/ctk-testrun-history.png)
+![](.gitbook/assets/ctk-testrun-history.png)
 
 Once the partner clicks on `Details`, it redirects the partner to the test details as shown above.
 
@@ -480,7 +480,7 @@ The partner will be able to view the details of any test run they wish.
   * The response that was received
   * The detailed status of validators that ran in the test case
 
-![](\_images/ctk-testcase-details.png)
+![](.gitbook/assets/ctk-testcase-details.png)
 
 ### Generate Draft Report for Compliance Collection
 
@@ -488,33 +488,33 @@ The partner can only generate a Draft Report after running `Compliance Collectio
 
 * By default, `Compliance Collection` will be added when the project was created.
 
-![](\_images/ctk-compliance-collection-created.png)
+![](.gitbook/assets/ctk-compliance-collection-created.png)
 
 * Click the `Run` button of the Compliance Collection.
 
-![](\_images/ctk-compliance-collection-run.png)
+![](.gitbook/assets/ctk-compliance-collection-run.png)
 
 * Once the test execution is completed, the partner can see,
   * A high-level result with the number of test cases executed- with the number of test cases failed and the number of test cases passed in the run.
   * They also have the option to view the detailed `Test Run` report.
 
-![](\_images/ctk-compliance-collection-testrun.png)
+![](.gitbook/assets/ctk-compliance-collection-testrun.png)
 
 * Partner can create a Draft Report by clicking the `Generate Draft Report` button.
 * Once the report is downloaded, the partner can view:
   * The downloaded draft report, which uses the project name as its filename.
   * A popup will appear to submit the report for review.
 
-![](\_images/ctk-download-report.png)
+![](.gitbook/assets/ctk-download-report.png)
 
 * Partners need to check the downloaded Draft Report, which contains their details, project specifics, test cases, and the complete test run results. These results include the number of test cases executed, passed, and failed.
 * After reviewing the downloaded report, the partner can submit it for review by checking the checkbox in the popup window. They can then proceed by clicking the `Send For Review` button to finalize the submission.
 
-![](\_images/ctk-send-for-review.png)
+![](.gitbook/assets/ctk-send-for-review.png)
 
 * Once submitted the report, the `Compliance Collection` cannot be rerun for the project. The partner can download the submitted report by clicking on the download icon.
 
-![](\_images/ctk-report-submitted.png)
+![](.gitbook/assets/ctk-report-submitted.png)
 
 ### Generate Quality Assessment Draft Report for Quality Assessment Collection
 
@@ -522,37 +522,37 @@ The partner can only generate a QA Draft Report after running `Quality Assessmen
 
 * By default, `Quality Assessment Collection` will be added when the SBI project was created.
 
-![](\_images/ctk-qa-collection-created.png)
+![](.gitbook/assets/ctk-qa-collection-created.png)
 
 * Click the `Run` button of the Quality Assessment Collection.
 
-![](\_images/ctk-qa-collection-run.png)
+![](.gitbook/assets/ctk-qa-collection-run.png)
 
 * After completing the test execution, the partner will be able to view the below mentioned results
   * A high-level result with the number of test cases executed- with the number of test cases failed and the number of test cases passed in the run.
   * They also have the option to view the detailed `Test Run` report.
 
-![](\_images/ctk-qa-collection-testrun.png)
+![](.gitbook/assets/ctk-qa-collection-testrun.png)
 
 * Partner can create a Quality Assessment Draft Report by clicking the `Generate Draft Report` button.
 * Once the report is downloaded, the partner can view:
   * The downloaded QA draft report, which uses the project name as its filename.
   * A popup will appear to submit the report for review.
 
-![](\_images/ctk-download-qa-report.png)
+![](.gitbook/assets/ctk-download-qa-report.png)
 
 * After downloading the report, partners can review the QA Draft Report. This report includes their details, project specifics, test cases, and a comprehensive summary of the test run results, including the number of test cases executed, passed, and failed.
 * This report also includes the biometric scores classification for each **SDK** and **SBI**.
 * After reviewing the downloaded report, the partner can submit it for review by checking the checkbox in the popup window. Following that, they can click the `Send For Review` button to finalize the submission.
 * Once the report has been submitted, the ability to re-execute the `Quality Assessment Collection` for the project is no longer available. Partners can retrieve the submitted report by clicking on the download icon.
 
-![](\_images/ctk-qa-report-submitted.png)
+![](.gitbook/assets/ctk-qa-report-submitted.png)
 
 ## Partner Reports Dashboard
 
 When users with the special CTK Admin role access the application, they are granted access to the Partner Reports Dashboard. This dashboard serves as a centralized hub, offering a comprehensive overview of partner reports.
 
-![CTK Partner Report Dashboard](\_images/ctk-partnerReportsDashboard.png)
+![CTK Partner Report Dashboard](.gitbook/assets/ctk-partnerReportsDashboard.png)
 
 Below are the possible activities as a part of Partner Reports Tab of the Admin Dashboard.
 
@@ -580,7 +580,7 @@ The Partner Reports Dashboard will display the following attributes of a report:
 * Approve the report.
 * Reject the report.
 
-![CTK Partner Report Dashboard](\_images/ctk-partnerReportsDashboard.png)
+![CTK Partner Report Dashboard](.gitbook/assets/ctk-partnerReportsDashboard.png)
 
 ### Filter Reports for Efficient Navigation
 
@@ -590,49 +590,49 @@ The dropdown option in the tab allows you to filter reports based on their curre
 * `Approved`: Shows reports that have been approved.
 * `Rejected`: Displays reports that have been rejected.
 
-![CTK Partner Report Dashboard](\_images/ctk-partnerReports-dropdown.png)
+![CTK Partner Report Dashboard](.gitbook/assets/ctk-partnerReports-dropdown.png)
 
 The filter option in the dashboard will filter based on the name of the project, project type and the creation date and time.
 
-![CTK Partner Report Dashboard](\_images/ctk-partnerReports-filter.png)
+![CTK Partner Report Dashboard](.gitbook/assets/ctk-partnerReports-filter.png)
 
 ### Download reports
 
 When you click on the download icon, the report will be downloaded. Admins can then view the downloaded report and make decisions based on the information it contains.
 
-![CTK Partner Report Dashboard](\_images/ctk-partnerReports-downloadReport.png)
+![CTK Partner Report Dashboard](.gitbook/assets/ctk-partnerReports-downloadReport.png)
 
 ### Preview test run details
 
 Admin can click on the `View Test Run` link to access detailed information about the test run associated with the report.
 
-![CTK Partner Report Dashboard](\_images/ctk-partnerReportsDashboard.png)
+![CTK Partner Report Dashboard](.gitbook/assets/ctk-partnerReportsDashboard.png)
 
 ### Approve/Reject Report
 
 After reviewing the downloaded report and verifying its content, the admin can choose to either approve or reject the report. Optionally, comments can be added to provide additional context or feedback during the decision-making process.
 
-![CTK Partner Report Dashboard](\_images/ctk-partnerReportsDashboard.png)
+![CTK Partner Report Dashboard](.gitbook/assets/ctk-partnerReportsDashboard.png)
 
 `Approve Report`: After reviewing the downloaded report, if it meets the criteria and is deemed satisfactory, the admin can proceed to click on the `Approve` button.
 
 * After selecting the `Approve` button, a confirmation popup will be displayed to verify the approval action. Admins should review the information provided and, if satisfied, proceed by selecting the checkbox within the popup to finalize the approval.
 
-![CTK Partner Report Dashboard](\_images/ctk-partnerReports-approvePopup.png)
+![CTK Partner Report Dashboard](.gitbook/assets/ctk-partnerReports-approvePopup.png)
 
 * After selecting the checkbox, the admin will be presented with an option to add optional comments, if needed, after that the admin can proceed by clicking the `Approve` button to officially approve the report.
 
-![CTK Partner Report Dashboard](\_images/ctk-partnerReports-approve.png)
+![CTK Partner Report Dashboard](.gitbook/assets/ctk-partnerReports-approve.png)
 
 `Reject Report`: After reviewing the downloaded report, if it does not meet the criteria, the admin can initiate the rejection process by clicking on the `Reject` button.
 
 * After clicking the `Reject` button, a popup will appear to confirm the rejection action. After reviewing the information, and once satisfied with the decision, the admin can proceed by checking the checkbox within the popup to finalize the rejection.
 
-![CTK Partner Report Dashboard](\_images/ctk-partnerReports-rejectPopup.png)
+![CTK Partner Report Dashboard](.gitbook/assets/ctk-partnerReports-rejectPopup.png)
 
 * After selecting the checkbox, the admin will be presented with a comment box to add mandatory comments, specifying the reason for rejection. After providing the required comments, the admin can proceed by clicking the `Reject` button to officially reject the report.
 
-![CTK Partner Report Dashboard](\_images/ctk-partnerReports-reject.png)
+![CTK Partner Report Dashboard](.gitbook/assets/ctk-partnerReports-reject.png)
 
 ### Test Runs Archival Batch Job
 
@@ -640,4 +640,4 @@ Compliance Toolkit has a batch job process that archives X number of test runs f
 
 Consider this scenario: If there are 15 test runs, with an offset of 10, the most recent 10 will be retained, while the remaining 5 will be moved to an archival table. In the test-run-history, only the last 10 test run records are visible to partners.
 
-![](\_images/ctk-archivaljob.png)
+![](.gitbook/assets/ctk-archivaljob.png)

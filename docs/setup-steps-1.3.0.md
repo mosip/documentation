@@ -32,7 +32,6 @@ To deploy Compliance Toolkit, we require the below mandatory services:
 ### Configuration checks
 
 1. Ensure that in the `kernel-default.properties`, the value of `mosip-toolkit-client` and `mosip-toolkit-android-client` is set in `auth.server.admin.allowed.audience`. If this was not set by default, then set it and restart `kernel-auth-service` and `compliance-toolkit-service`.
-   
 2.  Ensure that in `compliance-toolkit-default.properties`, CORS is enabled to allow access to `mosip-toolkit-android-client`:
 
     ```
@@ -42,25 +41,20 @@ To deploy Compliance Toolkit, we require the below mandatory services:
     ```
 
     If this was not set by default, then set it and restart `compliance-toolkit-service`.
-    
 3.  Check if the roles given to `mosip-pms-client` match with any of the roles for the following config property: `mosip.role.keymanager.postverifycertificatetrust=XXX`
 
-    This config property is available [here](https://github.com/mosip/mosip-config/blob/$%7BENV\_NAME%7D/kernel-default.properties).
+    This config property is available [here](https://github.com/mosip/mosip-config/blob/$%7BENV_NAME%7D/kernel-default.properties).
 
     _For Example_:
 
     mosip.role.keymanager.postverifycertificatetrust=`ZONAL_ADMIN`, `GLOBAL_ADMIN`, `PMS_ADMIN`, `PMS_USER`
 
     Then `mosip-pms-client` should have any of the above roles.
-    
 4. Check that `mosip-pms-client` has the role `REGISTRATION_PROCESSOR`, `PARTNER_ADMIN`, `PMS_ADMIN` in Key Cloak. If this was not set by default, then set it and restart `keymanager` and `compliance-toolkit-service`.
-   
 5. It is also needed to generate an encryption key for CTK.
-   
    *   Create a new app id by directly inserting the below row.
 
        `INSERT INTO keymgr.key_policy_def(app_id, key_validity_duration, is_active,pre_expire_days, access_allowed, cr_by, cr_dtimes, upd_by, upd_dtimes, is_deleted, del_dtimes) VALUES ('COMPLIANCE_TOOLKIT', 1095, true, 60, 'NA', 'mosipadmin', '2022-11-28 09:00:40.822625', null, null, false, null);`
-       
    *   Using the auth manager swagger URL, obtain the client token.
 
        Swagger URL:
@@ -106,12 +100,10 @@ To deploy Compliance Toolkit, we require the below mandatory services:
 
        Request:
 
-       ![](\_images/ctk-generateMasterkey.png)
-       
+       ![](.gitbook/assets/ctk-generateMasterkey.png)
    *   Directly download the certificate via key manager swagger URL and `getCertificate` endpoint, with App Id as `COMPLIANCE_TOOLKIT` and Ref Id as `COMP-FIR`.
 
-       ![](\_images/ctk-getCertificate.png)
-       
+       ![](.gitbook/assets/ctk-getCertificate.png)
    *   This certificate is to be used by **SBI** devices as the encryption key.
 
        For Mock **MDS**, when running in **Auth** mode: update the below values in the `application.properties` file.
@@ -126,8 +118,7 @@ To deploy Compliance Toolkit, we require the below mandatory services:
 
        For real MDS/SBI, the vendors can download the new encryption key from the UI and test with the updated **SBI** which uses this encryption key.It can be downloaded for **Auth SBI** projects from UI.
 
-       ![](\_images/ctk-encryptionkey.png)
-       
+       ![](.gitbook/assets/ctk-encryptionkey.png)
 6. Ensure that `reporting` module is deployed from the `develop` branch. This is required for the **Kibana Dashboard**.
 
 ### Steps to load testdata, schemas in MINIO
@@ -136,11 +127,11 @@ To deploy Compliance Toolkit, we require the below mandatory services:
 
 2\. Project structure will be as shown below.
 
-![](\_images/ctk-project-structure.png)
+![](.gitbook/assets/ctk-project-structure.png)
 
 3\. The resources folder has schemas, test data and testcases that need to be added to MinIO and DB.
 
-![](\_images/ctk-resources-folder.png)
+![](.gitbook/assets/ctk-resources-folder.png)
 
 #### Steps to load testdata and schemas directly in MinIO
 
@@ -178,13 +169,13 @@ To deploy Compliance Toolkit, we require the below mandatory services:
 
 7\. Select the type of required file which you want to upload from `resources` folder in project.
 
-![](\_images/ctk-upload-resources.png)
+![](.gitbook/assets/ctk-upload-resources.png)
 
 8\. After execution you can see the response.
 
 9\. Check inside the Minio, in dev environment, whether the files have been uploaded into it.
 
-![](\_images/ctk-minIO.png)
+![](.gitbook/assets/ctk-minIO.png)
 
 #### Steps to upload test cases to the Database
 
@@ -214,14 +205,14 @@ To deploy Compliance Toolkit, we require the below mandatory services:
 
 6\. Then, execute it.
 
-![](\_images/ctk-testcases-upload.png)
+![](.gitbook/assets/ctk-testcases-upload.png)
 
 7\. The same should be done for `compliance_test_definitions_sdk.json` and `compliance_test_definitions_abis.json`.
 
 ### Steps to generate Android APK
 
-* Once all the steps mentioned above are completed, you can trigger the Android APK build for your environment.  https://github.com/mosip/mosip-compliance-toolkit-ui/actions/workflows/android.yml
+* Once all the steps mentioned above are completed, you can trigger the Android APK build for your environment. https://github.com/mosip/mosip-compliance-toolkit-ui/actions/workflows/android.yml
 * You may need GitHub repository write access.
 * Add values for the URL’s according to your deployment env.
 
-![](\_images/ctk-android-apk1.png)
+![](.gitbook/assets/ctk-android-apk1.png)

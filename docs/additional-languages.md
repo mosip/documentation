@@ -1,19 +1,19 @@
-# Language Support in Compliance Toolkit (CTK)
+# Create resource bundles for a new language
 
 * Partners can select their preferred language while logging into CTK. By default, CTK supports three languages namely- English, French and Arabic.
 
-![](\_images/ctk-lang1.png)
+![](.gitbook/assets/ctk-lang1.png)
 
 * To add support for an additional language, below are the steps to be followed:
-    * Step 1: Add an additional language to the CTK login page.
-    * Step 2: Add a new resource bundle (i18n JSON) file for the new language.
-    * Step 3: Translate each page label.
-    * Step 4: Translate validator description.
-    * Step 5: Translate every testcase in the resource bundle.
-    * Step 6: Translate all the service-generated validator messages.
-    * Step 7: Translate all the service errors.
-    * Step 8: Build and deploy the code.
- 
+  * Step 1: Add an additional language to the CTK login page.
+  * Step 2: Add a new resource bundle (i18n JSON) file for the new language.
+  * Step 3: Translate each page label.
+  * Step 4: Translate validator description.
+  * Step 5: Translate every testcase in the resource bundle.
+  * Step 6: Translate all the service-generated validator messages.
+  * Step 7: Translate all the service errors.
+  * Step 8: Build and deploy the code.
+
 Let us understand the steps mentioned above with more details.
 
 ### Step 1: Add an additional language to the CTK login page.
@@ -24,8 +24,7 @@ Let us understand the steps mentioned above with more details.
 
 For example: New locale `es` for Spanish language.
 
-![](\_images/ctk-lang2.png)
-
+![](.gitbook/assets/ctk-lang2.png)
 
 * It will be added to the CTK login page once the changes have been saved.
 
@@ -33,7 +32,7 @@ For example: New locale `es` for Spanish language.
 
 The i18n folder is available under assets folder in UI codebase.
 
-![](\_images/ctk-lang3.png)
+![](.gitbook/assets/ctk-lang3.png)
 
 * Create a new JSON file in the folder.
 * For example: In Spanish language, the file name should be `es.json`.
@@ -42,7 +41,7 @@ The i18n folder is available under assets folder in UI codebase.
 ### Step 3: Translate each page label.
 
 * When translating into a new language, we should solely translate only the right-side values using a translation service (such as Google Translate).
-  
+
 For example: Take the first page (Project Dashboard)
 
 In each page, the labels are on the left and values are on the right.
@@ -68,7 +67,7 @@ In each page, the labels are on the left and values are on the right.
 
 The figure below highlights the page labels along with their values.
 
-![](\_images/ctk-lang4.png)
+![](.gitbook/assets/ctk-lang4.png)
 
 * Also translate the labels on all pages.
 
@@ -84,6 +83,7 @@ Here is an example of validator description added in resource bundle.
     "SignatureValidator": "Validates the response signature"
 }
 ```
+
 * Translate only the right-side values.
 * If a new validator is added, a resource bundle must be added as well.
 
@@ -120,6 +120,7 @@ All the service-generated validator messages have been added based on the below 
 For example:
 
 case 1:
+
 * There are no arguments in this case.
 
 Example of validator message in a resource bundle:
@@ -138,9 +139,10 @@ Example code for setDescriptionKey:
 validationResultDto.setDescription("Timeout validation is successful");
 validationResultDto.setDescriptionKey("TIMEOUT_VALIDATOR_001");
 ```
+
 case 3:
 
-* This case contains more than one argument in the validator message. 
+* This case contains more than one argument in the validator message.
 
 Example of validator message in a resource bundle:
 
@@ -151,7 +153,7 @@ Example of validator message in a resource bundle:
 ```
 
 * {} – This will represents the arguments value.
-    
+
 Example code for setDescriptionKey:
 
 ```
@@ -160,7 +162,7 @@ validationResultDto.setDescription("Timeout validation failed. Timeout given: " 
 validationResultDto.setDescriptionKey("TIMEOUT_VALIDATOR_002" + AppConstants.ARGUMENTS_DELIMITER + timeout + AppConstants.ARGUMENTS_SEPARATOR + diff);
 ```
 
-Here ARGUMENTS_DELIMITER is `::` and ARGUMENTS_SEPARATOR is `;`
+Here ARGUMENTS\_DELIMITER is `::` and ARGUMENTS\_SEPARATOR is `;`
 
 ### Step 7: Translate all service errors.
 

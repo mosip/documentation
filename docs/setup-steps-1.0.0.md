@@ -24,33 +24,32 @@ Dependent Service (dockers)
 _**Note**_:
 
 * Ensure that in the `kernel-default.properties`, the value of `mosip-toolkit-client` is set in `auth.server.admin.allowed.audience`.If this was not set by default, then set it and restart `kernel-auth-service` and `compliance-toolkit-service`.
-* Check if the roles given to `mosip-pms-client` should match with any of the roles for following config property.
+*   Check if the roles given to `mosip-pms-client` should match with any of the roles for following config property.
 
-    ``` 
+    ```
         mosip.role.keymanager.postverifycertificatetrust=XXX
     ```
-    This config property is available in:
-    https://github.com/mosip/mosip-config/blob/${ENV_NAME}/kernel-default.properties
-    
+
+    This config property is available in: https://github.com/mosip/mosip-config/blob/${ENV\_NAME}/kernel-default.properties
+
     _For Example_:
 
     mosip.role.keymanager.postverifycertificatetrust=`ZONAL_ADMIN`, `GLOBAL_ADMIN`, `PMS_ADMIN`, `PMS_USER`
 
     Then `mosip-pms-client` should have any of the above roles.
 * Check that `mosip-pms-client` has the role `REGISTRATION_PROCESSOR`, `PARTNER_ADMIN`, `PMS_ADMIN` in Key Cloak.If this was not set by default, then set it and restart `key manager` and `compliance-toolkit-service`.
-* From the 1.0.0 version onwards, we need to generate an encryption key for CTK.
+*   From the 1.0.0 version onwards, we need to generate an encryption key for CTK.
 
-    * Create a new app id by directly inserting the below row.
+    *   Create a new app id by directly inserting the below row.
 
         ```
             INSERT INTO keymgr.key_policy_def(app_id, key_validity_duration, is_active,pre_expire_days, 
-		    access_allowed, cr_by, cr_dtimes, upd_by, upd_dtimes, is_deleted, del_dtimes)
-		    VALUES ('COMPLIANCE_TOOLKIT', 1095, true, 60, 'NA', 'mosipadmin', '2022-11-28 09:00:40.822625', 
-		    null, null, false, null);
+            access_allowed, cr_by, cr_dtimes, upd_by, upd_dtimes, is_deleted, del_dtimes)
+            VALUES ('COMPLIANCE_TOOLKIT', 1095, true, 60, 'NA', 'mosipadmin', '2022-11-28 09:00:40.822625', 
+            null, null, false, null);
         ```
+    *   Get the client token using auth manager swagger by calling endpoint.
 
-    * Get the client token using auth manager swagger by calling endpoint. 
-    
         `https://api-internal.dev.mosip.net/v1/authmanager/authenticate/clientidsecretkey`
 
         ```
@@ -66,17 +65,16 @@ _**Note**_:
         	}
         }
         ```
-
     * Use `generateMasterKey` endpoint to generate module-level certificate.
 
-    ![](\_images/ctk-generateMasterkey.png)
+    ![](.gitbook/assets/ctk-generateMasterkey.png)
 
     * Directly download the certificate via key manager swagger `getCertificate` with App Id as `COMPLIANCE_TOOLKIT` and Ref Id as `COMP-FIR`.
 
-    ![](\_images/ctk-getCertificate.png)
+    ![](.gitbook/assets/ctk-getCertificate.png)
 
     * This certificate is to be used by **SBI** devices as the encryption key.
-    * For Mock **MDS**, when running in **Auth** mode, update the below values in the application.properties file.
+    *   For Mock **MDS**, when running in **Auth** mode, update the below values in the application.properties file.
 
         ```
             mosip.auth.appid=regproc
@@ -86,12 +84,12 @@ _**Note**_:
             mosip.ida.server.url=https://api-internal.dev.mosip.net/v1/keymanager/
             getCertificate?applicationId=COMPLIANCE_TOOLKIT&referenceId=COMP-FIR
         ```
+*   For REAL MDS/SBI.
 
-* For REAL MDS/SBI.
     * You must communicate to the vendors to download the new encryption key from UI and give us an updated **SBI** which uses this encryption key.
     * It can be downloaded for **Auth SBI** projects from UI.
 
-    ![](_images/ctk-encryptionkey.png)
+    ![](.gitbook/assets/ctk-encryptionkey.png)
 
 ## Steps to load testdata and schemas
 
@@ -99,7 +97,7 @@ _**Note**_:
 
 2\. The resources folder would contain schemas, test data and test cases that need to be added to MinIO and DB.
 
-![](\_images/ctk-resources-folder.png)
+![](.gitbook/assets/ctk-resources-folder.png)
 
 ## Steps to upload resources to MinIO
 
@@ -131,11 +129,11 @@ _Note_: _There is no need to upload `compliance_test_definitions_sbi.json` and `
 
 7\. Upload the **schema** and **test data** files from the resources folder in the project.
 
-![](\_images/ctk-upload-resources.png)
+![](.gitbook/assets/ctk-upload-resources.png)
 
 8\. You can see the uploaded **schema** and **test data** files in the MinIO dev environment.
 
-![](\_images/ctk-minIO.png)
+![](.gitbook/assets/ctk-minIO.png)
 
 ## Steps to upload test cases to the Database
 
@@ -162,6 +160,6 @@ _Note_: _There is no need to upload `compliance_test_definitions_sbi.json` and `
 }
 ```
 
-![](\_images/ctk-testcases-upload.png)
+![](.gitbook/assets/ctk-testcases-upload.png)
 
 9\. The same should be done for `compliance_test_definitions_sdk.json`.

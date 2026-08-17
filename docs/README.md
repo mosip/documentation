@@ -23,11 +23,11 @@ Currently, CTK supports testing of compliance with the below specifications:
 
 The diagram below illustrates the architecture of Compliance Tool Kit.
 
-![CTK Architecture](\_images/ctk-architecture.png)
+![CTK Architecture](.gitbook/assets/ctk-architecture.png)
 
 ### Default Collections for CTK
 
-* When a new project is created, two new collections will be automatically added to the project.&#x20;
+* When a new project is created, two new collections will be automatically added to the project.
 * The first collection is the **Compliance Collection**, which is applicable for all project types. The second collection is the **Quality Assessment Collection**, specifically for SBI projects.
 
 ### Compliance Collection Reporting Process (for all project types)
@@ -47,7 +47,7 @@ Summarizing as below:
 ### Quality Assessment Collection Reporting Process (only for SBI)
 
 * The Quality Assessment Collection reporting procedure is very similar to the Compliance Collection process.
-* Using this collection,  partner can collect biometric scores for various groups of individuals (age wise, gender wise, occupation wise etc.).
+* Using this collection, partner can collect biometric scores for various groups of individuals (age wise, gender wise, occupation wise etc.).
 * BQAT SDK provides biometric score.
 * This biometric score serves as the basis for evaluating the quality of the SBI partner..
 
