@@ -5,7 +5,7 @@
 ### Version: 1.4.4
 
 * Name: CTK 1.4.4(Patch)
-* Date: Coming Soon
+* Date: 17th August, 2026
 * [Release Notes](https://docs.mosip.io/compliance-tool-kit/versions/version-1.4.4)
 
 ### Version: 1.4.3
