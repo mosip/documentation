@@ -4,7 +4,7 @@
 
 **Support:** Patch Release
 
-**Release Date:** Coming Soon
+**Release Date:** 17th August, 2026
 
 #### Overview <a href="#overview" id="overview"></a>
 
