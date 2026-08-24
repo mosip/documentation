@@ -10,7 +10,7 @@ The scope of testing revolved around verifying the compliance of the product as 
 *   **Secure Biometric Interface (SBI)** with Compliance testcases collection and Quality Assessment test cases collection on below modalities&#x20;
 
     * Registration devices for Iris, Face and Fingerprint
-    * Authentication devices for Iris, Face and Fingerprin
+    * Authentication devices for Iris, Face and Fingerprint
 
     **Biometric SDK**
 
