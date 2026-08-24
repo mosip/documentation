@@ -2,7 +2,8 @@
 
 * [Overview](README.md)
 * [Releases](versions.md)
-  * [Version 1.4.4](versions/version-1.4.4.md)
+  * [Version 1.4.4](versions/version-1.4.4/README.md)
+    * [Test Report](versions/version-1.4.4/test-report.md)
   * [Version 1.4.3](versions/version-1.4.3.md)
   * [Version 1.4.2](versions/version-1.4.2.md)
   * [Version 1.4.1](versions/version-1.4.1.md)
