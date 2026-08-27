@@ -471,7 +471,7 @@
       * [Performance Test Report](roadmap-and-releases/releases/release-notes/performance-test-report.md)
       * [Security Test Report](roadmap-and-releases/releases/release-notes/security-test-report.md)
       * [Feature Health Report](roadmap-and-releases/releases/release-notes/feature-health-report.md)
-    * [Partner Management System 1.2.2.3(Patch)](roadmap-and-releases/releases/partner-management-system-1.2.2.3-patch.md)
+    * [Partner Management System 1.2.2.4 (Patch)](roadmap-and-releases/releases/partner-management-system-1.2.2.4-patch.md)
     * [Partner Management System 1.2.2.3(Patch)](roadmap-and-releases/releases/partner-management-system-1.2.2.3/README.md)
       * [Test Report](roadmap-and-releases/releases/partner-management-system-1.2.2.3/test-report.md)
     * [Versioning Policy](roadmap-and-releases/releases/versioning-policy.md)
