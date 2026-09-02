@@ -1,6 +1,6 @@
 # Partner Management System 1.2.2.4 (Patch)
 
-**Release Name**: Partner Management System Revamp
+**Release Name**: Partner Management System
 
 **Release Number**: 1.2.2.4
 
@@ -8,7 +8,7 @@
 
 ## Overview
 
-Partner Management System (PMS) Revamp 1.2.2.4 is a patch release focused on stability and reliability improvements. This release strengthens the PMS automation test framework, streamlines database upgrade and rollback scripts, and resolves outstanding SonarCloud findings across the PMS UI and Service, resulting in a more robust and maintainable codebase.
+Partner Management System (PMS) 1.2.2.4 is a patch release focused on stability and reliability improvements. This release strengthens the PMS automation test framework, streamlines database upgrade and rollback scripts, and resolves outstanding SonarCloud findings across the PMS UI and Service, resulting in a more robust and maintainable codebase.
 
 ## Key Features & Enhancements
 
