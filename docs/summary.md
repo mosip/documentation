@@ -96,6 +96,7 @@
       * [Telecom Portal](esignet-authentication/test/end-user-guide/telecom-portal.md)
         * [Login with OTP](esignet-authentication/test/end-user-guide/telecom-portal/login-with-otp.md)
         * [Login with INJI Wallet App](esignet-authentication/test/end-user-guide/telecom-portal/login-with-inji-wallet-app.md)
+      * [Patient Registration Portal](esignet-authentication/test/end-user-guide/patient-registration-portal.md)
 * [eSignet Signup](esignet-signup/README.md)
   * [Signup Portal](esignet-signup/signup-portal.md)
   * [Features](esignet-signup/features.md)
