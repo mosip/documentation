@@ -2,7 +2,7 @@
 
 #### Experience eSignet in Action Through the eSIM Allocation Demo Portal <a href="#experience-esignet-in-action-through-the-esim-allocation-demo-portal" id="experience-esignet-in-action-through-the-esim-allocation-demo-portal"></a>
 
-Experience eSignet in action with a demo eSIM allocation on the **Fyntel Telecom** portal, illustrating secure National ID-based authentication before eSIM issuance.
+Experience eSignet in action with a demo eSIM allocation on the [**Fyntel Telecom**](https://esim-mosipid.collab.mosip.net/) portal, illustrating secure National ID-based authentication before eSIM issuance.
 
 Hosted on the [**MOSIP Collab Sandbox**](https://collab.mosip.net/), this portal acts as a relying party application and allows you to experience how eSignet integrates seamlessly into service workflows that require trusted identity authentication. Using a **National ID (UIN)**, you can authenticate and login to proceed with eSIM allocation using the following authentication methods:
 
