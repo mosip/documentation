@@ -320,7 +320,7 @@ cd $K8_ROOT/storage-class/nfs/
 > **Note:** The script will prompt for:
 >
 > * NFS Server: IP of the NFS server.
-> * NFS Path: Path for persisted data. e.g. `/srv/nfs/mosip/`
+> * NFS Path: Path for persisted data. e.g. `/srv/nfs/`
 
 * Post-installation checks:
   * Check the status of the NFS Client Provisioner:
@@ -776,14 +776,6 @@ cd /home/ubuntu/k8s-infra/storage-class/nfs/
 sudo ./install-nfs-server.sh
 ```
 
-> **Note:** The script will prompt for an environment name:
->
-> ```
-> Please Enter Environment Name: <envName>
-> ```
->
-> where `envName` is the environment name e.g. `dev`, `qa`, `uat`. The NFS share will be exported at `/srv/nfs/mosip/<envName>`.
-
 * Switch back to your personal computer and run the NFS client provisioner:
 
 ```bash
@@ -794,7 +786,7 @@ cd $K8_ROOT/storage-class/nfs/
 > **Note:** The script will prompt for:
 >
 > * NFS Server: IP of the NFS server.
-> * NFS Path: Path for persisted data. e.g. `/srv/nfs/mosip/`
+> * NFS Path: Path for persisted data. e.g. `/srv/nfs/`
 
 * Post-installation checks:
   * Check the status of the NFS Client Provisioner:
@@ -1130,7 +1122,6 @@ cd $INFRA_ROOT/deployment/v3/mosip/all
 >
 > * If `install-all.sh` fails at any point, follow the [MOSIP Modules Deployment](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/mosip-modules-deployment) guide from the point of failure.
 >
-> ```
 
 ***
 
