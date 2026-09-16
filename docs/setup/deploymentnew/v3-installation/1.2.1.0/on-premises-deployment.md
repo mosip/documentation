@@ -1118,31 +1118,7 @@ cd $INFRA_ROOT/deployment/v3/mosip/all
 > **Note:**
 >
 > * If `install-all.sh` fails at any point, follow the [MOSIP Modules Deployment](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/mosip-modules-deployment) guide from the point of failure.
-> * The config-server and admin service may experience startup delays in this version. Apply the following fixes if needed:
 >
-> **For config-server** — increase `failureThreshold` for `startupProbe` to 60:
->
-> ```bash
-> kubectl -n config-server edit deployment config-server
-> ```
->
-> **For admin-service** — increase `failureThreshold` for `startupProbe` to 60:
->
-> ```bash
-> kubectl -n admin edit deployment admin-service
-> ```
->
-> Once admin-service is running, re-execute `install.sh` after commenting out the following lines:
->
-> ```bash
-> #echo Installing Admin-Proxy into Masterdata and Keymanager.
-> #kubectl -n $NS apply -f admin-proxy.yaml
-> #echo Installing admin hotlist service.
-> #helm -n $NS install admin-hotlist mosip/admin-hotlist --version $CHART_VERSION
-> #echo Installing admin service. Will wait till service gets installed.
-> #helm -n $NS install admin-service mosip/admin-service \
-> #  --set istio.corsPolicy.allowOrigins\[0\].prefix=https://$ADMIN_HOST \
-> #  --wait --version $CHART_VERSION
 > ```
 
 ***
