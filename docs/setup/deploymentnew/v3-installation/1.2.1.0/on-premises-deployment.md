@@ -194,7 +194,7 @@ This provisions the RKE2 cluster — installing the binary, distributing config 
 
 #### Step 5 — Securely Store the Kubeconfig File
 
-After the cluster is successfully created, the kubeconfig file is saved in the `ansible/playbook/` directory as `{{ cluster_domain }}-{{ inventory_hostname }}.yaml`. Copy it to your `.kube` directory:
+After the cluster is successfully created, the kubeconfig file is saved in the `playbook/kubeconfig` directory as `{{ cluster_domain }}-{{ inventory_hostname }}.yaml`. Copy it to your `.kube` directory:
 
 ```bash
 cp {{ cluster_domain }}-{{ inventory_hostname }}.yaml $HOME/.kube/<cluster_name>_config
@@ -663,7 +663,7 @@ This provisions the RKE2 cluster — installing the binary, distributing config 
 
 #### Step 5 — Securely Store the Kubeconfig File
 
-After the cluster is successfully created, the kubeconfig file is saved in the `ansible/playbook/` directory as `{{ cluster_domain }}-{{ inventory_hostname }}.yaml`. Copy it to your `.kube` directory:
+After the cluster is successfully created, the kubeconfig file is saved in the `playbook/kubeconfig` directory as `{{ cluster_domain }}-{{ inventory_hostname }}.yaml`. Copy it to your `.kube` directory:
 
 ```bash
 cp {{ cluster_domain }}-{{ inventory_hostname }}.yaml $HOME/.kube/<cluster_name>_config
