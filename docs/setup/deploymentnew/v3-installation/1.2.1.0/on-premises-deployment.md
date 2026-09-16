@@ -1110,6 +1110,17 @@ See the [detailed installation instructions](https://docs.mosip.io/1.2.0/deploym
 
 With the Kubernetes cluster and all external dependencies in place, proceed with MOSIP service deployment.
 
+> **Note:** Deploy the additional Artifactory service with the 1.2.0.2 release for Regclient. Ensure that the artifactory-server-share ConfigMap in Regclient is updated to point to the newly deployed Artifactory service running version 1.2.0.2.
+
+* Artifactory
+
+```
+nano install.sh
+###update NS=artifactory-1202 & CHART_VERSION=12.0.2
+cd $INFRA_ROOT/deployment/v3/mosip/artifactory
+./install.sh
+```
+
 ```bash
 cd $INFRA_ROOT/deployment/v3/mosip/all
 ./install-all.sh
