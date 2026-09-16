@@ -472,10 +472,10 @@ Keycloak is an OAuth 2.0-compliant Identity and Access Management (IAM) system u
 
 ```bash
 cd $K8_ROOT/observation/keycloak
-./install.sh <iam.host.name>
+./install.sh <keycloak.host.name>
 ```
 
-After installation, access Keycloak at `iam.mosip.net` and retrieve credentials as per the post-installation steps.
+After installation, access Keycloak at `keycloak.mosip.net` and retrieve credentials as per the post-installation steps.
 
 #### 5.c. Keycloak — Rancher UI Integration
 
