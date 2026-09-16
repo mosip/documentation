@@ -310,19 +310,11 @@ cd /home/ubuntu/k8s-infra/storage-class/nfs/
 sudo ./install-nfs-server.sh
 ```
 
-> **Note:** The script will prompt for an environment name:
->
-> ```
-> Please Enter Environment Name: <envName>
-> ```
->
-> where `envName` is the environment name e.g. `dev`, `qa`, `uat`. The NFS share will be exported at `/srv/nfs/mosip/<envName>`.
-
 * Switch back to your personal computer and run the NFS client provisioner:
 
 ```bash
 cd $K8_ROOT/storage-class/nfs/
-./install-nfs-client-provisioner.sh
+./install-nfs-csi.sh
 ```
 
 > **Note:** The script will prompt for:
@@ -334,7 +326,7 @@ cd $K8_ROOT/storage-class/nfs/
   * Check the status of the NFS Client Provisioner:
 
 ```bash
-kubectl -n nfs get deployment.apps/nfs-client-provisioner
+kubectl -n nfs get deployment.apps/csi-nfs-controller
 ```
 
 * Check the storage class is registered:
@@ -346,15 +338,8 @@ kubectl get storageclass
 Expected output:
 
 ```
-NAME                 PROVISIONER                            RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
-longhorn (default)   driver.longhorn.io                     Delete          Immediate           true                   57d
-nfs-client           cluster.local/nfs-client-provisioner   Delete          Immediate           true                   40s
-```
-
-* Set `nfs-client` as the default storage class:
-
-```bash
-kubectl patch storageclass nfs-client -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
+NAME                       PROVISIONER                            RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
+nfs-csi (default)          cluster.local/csi-nfs-controller       Delete          Immediate           true                   40s
 ```
 
 ***
@@ -803,7 +788,7 @@ sudo ./install-nfs-server.sh
 
 ```bash
 cd $K8_ROOT/storage-class/nfs/
-./install-nfs-client-provisioner.sh
+./install-nfs-csi.sh
 ```
 
 > **Note:** The script will prompt for:
@@ -815,7 +800,7 @@ cd $K8_ROOT/storage-class/nfs/
   * Check the status of the NFS Client Provisioner:
 
 ```bash
-kubectl -n nfs get deployment.apps/nfs-client-provisioner
+kubectl -n nfs get deployment.apps/csi-nfs-controller
 ```
 
 * Check the storage class is registered:
