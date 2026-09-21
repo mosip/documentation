@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eSignet Documentation Blueprint</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        /* 
+           🎨 GITBOOK CONFIGURATION NOTE:
+           You can replicate this exact clean theme inside GitBook by going to:
+           Space Settings -> Customization -> Theme Colors & Typography
+        */
+        :root {
+            --brand-primary: #2563eb;
+            --brand-gradient: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --bg-light: #f8fafc;
+            --border-color: #e2e8f0;
+            --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* GitBook Header Block simulation */
+        .hero {
+            background: var(--brand-gradient);
+            color: white;
+            padding: 3.5rem 2rem;
+            border-radius: 12px;
+            margin-bottom: 3rem;
+            text-align: left;
+            position: relative;
+        }
+
+        /* Simulated Version Dropdown Selector UI */
+        .version-badge-container {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .version-dropdown {
+            background: transparent;
+            color: white;
+            border: none;
+            font-family: inherit;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            outline: none;
+        }
+        .version-dropdown option {
+            color: #000;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin: 0 0 0.5rem 0;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            margin: 0;
+            opacity: 0.9;
+            max-width: 700px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1.25rem;
+            font-weight: 600;
+            color: #0f172a;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        /* GitBook Multi-Column Card Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background: var(--bg-light);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--card-shadow);
+            border-color: #cbd5e1;
+        }
+
+        .card-icon {
+            font-size: 1.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .card h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.15rem;
+            color: #0f172a;
+        }
+
+        .card p {
+            margin: 0 0 1rem 0;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .card .link-text {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--brand-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        /* GitBook Callout / Hint Block Style */
+        .callout-box {
+            background-color: #eff6ff;
+            border-left: 4px solid var(--brand-primary);
+            padding: 1.25rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 3rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .callout-icon {
+            font-size: 1.25rem;
+            line-height: 1.4;
+        }
+
+        .callout-content p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #1e40af;
+        }
+
+        /* GitBook Code / API Blocks */
+        .api-preview {
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            border: 1px solid #1e293b;
+        }
+
+        .api-preview span.method { color: #38bdf8; font-weight: bold; }
+        .api-preview span.url { color: #34d399; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- 🚀 Hero Section (Map this to a GitBook Header Image/Gradient Block) -->
+        <header class="hero">
+            <div class="version-badge-container">
+                🌐 Docs Version: 
+                <select class="version-dropdown" onchange="toggleVersion(this.value)">
+                    <option value="v1">v1.x Stable (OIDC Core)</option>
+                    <option value="v2">v2.x Advanced (Biometrics & FAPI)</option>
+                </select>
+            </div>
+            <h1>eSignet Documentation</h1>
+            <p>Deploy a highly accessible, standard-compliant identity gateway to power secure digital onboarding and authentication ecosystems.</p>
+        </header>
+
+        <!-- 🧭 Role-Based Developer Tracks (Map to GitBook Cards Block Grid) -->
+        <h2>Choose Your Integration Track</h2>
+        <div class="grid">
+            <a href="#" class="card">
+                <div class="card-icon">🔌</div>
+                <h3>Relying Parties / Apps</h3>
+                <p>Integrate your application via standard OpenID Connect (OIDC) client libraries. Configure login prompts, handles, and scopes.</p>
+                <div class="link-text">View Integration Guide →</div>
+            </a>
+            <a href="#" class="card">
+                <div class="card-icon">🏗️</div>
+                <h3>Identity Providers & Registries</h3>
+                <p>Connect core baseline identity systems or national registries to eSignet using standard runtime plugins.</p>
+                <div class="link-text">Configure Plugins →</div>
+            </a>
+            <a href="#" class="card">
+                <div class="card-icon">🐳</div>
+                <h3>System Operators</h3>
+                <p>Spin up local test instances effortlessly via custom containerized configurations and native DB scripts.</p>
+                <div class="link-text">Read Deployment Docs →</div>
+            </a>
+        </div>
+
+        <!-- 💎 Inclusive Ecosystem Highlights (Map to GitBook "Hint" Blocks or Bulleted Icons) -->
+        <h2>Core Architectural Pillars</h2>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
+            <div class="card" style="pointer-events: none;">
+                <div class="card-icon">📶</div>
+                <h3>Low-Barrier Access</h3>
+                <p>Built intentionally for progressive KYC, accommodating areas with restricted network infrastructure.</p>
+            </div>
+            <div class="card" style="pointer-events: none;">
+                <div class="card-icon">📱</div>
+                <h3>Device Agnostic</h3>
+                <p>Simultaneously accommodates feature phone OTP verification alongside modern biometric standard workflows.</p>
+            </div>
+            <div class="card" style="pointer-events: none;">
+                <div class="card-icon">🆓</div>
+                <h3>Zero Vendor Lock-In</h3>
+                <p>Containerized open-source standard codebase deployable on any virtualized host environment.</p>
+            </div>
+        </div>
+
+        <!-- 🔍 Dynamic Version Content (Map to conditional text blocks or child pages in GitBook) -->
+        <div id="v1-content">
+            <h2>Standard Protocol Configuration</h2>
+            <div class="callout-box">
+                <div class="callout-icon">💡</div>
+                <div class="callout-content">
+                    <p><strong>OIDC Compliance:</strong> eSignet exposes regular discovery pathways. Relying parties can pull keys automatically from the public signature endpoint.</p>
+                </div>
+            </div>
+            <div class="api-preview">
+                <span class="method">GET</span> <span class="url">https://esignet.io</span><br>
+                <span class="method">GET</span> <span class="url">https://esignet.io</span>
+            </div>
+        </div>
+
+        <div id="v2-content" style="display: none;">
+            <h2>High-Assurance Infrastructure (v2.x)</h2>
+            <div class="callout-box" style="background-color: #f0fdf4; border-left-color: #22c55e;">
+                <div class="callout-icon" style="color: #15803d;">🛡️</div>
+                <div class="callout-content" style="color: #15803d;">
+                    <p><strong>Advanced Security:</strong> This version introduces hard FAPI 2.0 security constraints, dynamic UI onboarding schemas, and SBI 2.0 capture layers.</p>
+                </div>
+            </div>
+            <div class="api-preview">
+
+                POST esignet.io
+
+GET esignet.io
+
+function toggleVersion(version) {
+const v1Block = document.getElementById('v1-content');
+const v2Block = document.getElementById('v2-content');
+if(version === 'v2') {
+v1Block.style.display = 'none';
+v2Block.style.display = 'block';
+} else {
+v1Block.style.display = 'block';
+v2Block.style.display = 'none';
+}
+}
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleVersion(version) {
+            const v1Block = document.getElementById('v1-content');
+            const v2Block = document.getElementById('v2-content');
+            if(version === 'v2') {
+                v1Block.style.display = 'none';
+                v2Block.style.display = 'block';
+            } else {
+                v1Block.style.display = 'block';
+                v2Block.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
