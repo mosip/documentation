@@ -1,9 +1,10 @@
 ---
 description: A Modern and Inclusive Digital Identity Authentication Solution
+hidden: true
 icon: house
 coverY: 0
 layout:
-  width: wide
+  width: default
   cover:
     visible: true
     size: background
