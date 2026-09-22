@@ -3,10 +3,10 @@
 ### Hardware requirements
 
 * VM’s required can be with any OS as per convenience.
-* Here, we are referting to **Ubuntu OS (22.0.4)** throughout this installation guide.
+* Here, we are refering to **Ubuntu OS (22.0.4)** throughout this installation guide.
 * Ensure to create Ubuntu user with its directory `/home/ubuntu` as the same user is referenced throughout the document. Else, change the user related commands as and when needed throughout the installation.
 
-<table><thead><tr><th width="74.77560424804688">Sl no.</th><th>Purpose</th><th width="68.37286376953125">vCPU's</th><th width="88.87359619140625">RAM</th><th width="93.69598388671875">Storage (HDD)</th><th width="81.78265380859375">no. ofVM's</th><th>HA</th></tr></thead><tbody><tr><td>1.</td><td>Wireguard Bastion Host</td><td>2</td><td>4 GB</td><td>8 GB</td><td>1</td><td>(ensure to setup active-passive)</td></tr><tr><td>2.</td><td>Observation Cluster nodes</td><td>2</td><td>8 GB</td><td>32 GB</td><td>2</td><td>2</td></tr><tr><td>3.</td><td>Observation Nginx server (use Loadbalancer if required)</td><td>2</td><td>4 GB</td><td>16 GB</td><td>1</td><td>Nginx+</td></tr><tr><td>4.</td><td>MOSIP Cluster nodes</td><td>12</td><td>32 GB</td><td>128 GB</td><td>6</td><td>6</td></tr><tr><td>5.</td><td>MOSIP Nginx server ( use Loadbalancer if required)</td><td>2</td><td>4 GB</td><td>16 GB</td><td>1</td><td>Nginx+</td></tr></tbody></table>
+<table><thead><tr><th width="74.77560424804688">Sl no.</th><th>Purpose</th><th width="68.37286376953125">vCPU's</th><th width="88.87359619140625">RAM</th><th width="93.69598388671875">Storage (HDD)</th><th width="81.78265380859375">no. ofVM's</th><th>HA</th></tr></thead><tbody><tr><td>1.</td><td>Wireguard Bastion Host</td><td>2</td><td>4 GB</td><td>8 GB</td><td>1</td><td>(ensure to setup active-passive)</td></tr><tr><td>2.</td><td>Observation Cluster nodes</td><td>2</td><td>8 GB</td><td>32 GB</td><td>2</td><td>2</td></tr><tr><td>3.</td><td>Observation Nginx server (use Loadbalancer if required)</td><td>2</td><td>4 GB</td><td>500 GB</td><td>1</td><td>Nginx+</td></tr><tr><td>4.</td><td>MOSIP Cluster nodes</td><td>8</td><td>32 GB</td><td>64 GB</td><td>8</td><td>6</td></tr><tr><td>5.</td><td>MOSIP Nginx server ( use Loadbalancer if required)</td><td>2</td><td>4 GB</td><td>16 GB</td><td>1</td><td>Nginx+</td></tr></tbody></table>
 
 ### Network requirements
 
