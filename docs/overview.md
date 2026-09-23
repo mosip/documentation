@@ -2,19 +2,20 @@
 description: A Modern and Inclusive Digital Identity Authentication Solution
 hidden: true
 icon: house
-coverY: 0
+cover: .gitbook/assets/esignet-docs-banner.png
+coverY: 14.521017999276392
 layout:
-  width: default
+  width: wide
   cover:
     visible: true
-    size: background
+    size: full
     mask: none
   title:
     visible: true
   description:
     visible: true
   tableOfContents:
-    visible: true
+    visible: false
   outline:
     visible: false
   pagination:
@@ -29,7 +30,7 @@ layout:
     visible: false
 ---
 
-# Overview
+# eSignet
 
 A modern, standards-compliant identity gateway for building secure digital onboarding and authentication experiences — deployable against any identity system, and built to work even in low-connectivity environments.
 
@@ -39,11 +40,11 @@ A modern, standards-compliant identity gateway for building secure digital onboa
 
 ## Choose your integration track
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Relying Parties / Apps</strong></td><td>Integrate your application via standard OpenID Connect (OIDC) client libraries. Configure login prompts, scopes, and claims.</td><td><a href="esignet-authentication/develop/integration/relying-party/relying-party-onboarding.md">relying-party-onboarding.md</a></td></tr><tr><td><strong>Identity Providers &#x26; Registries</strong></td><td>Connect core identity systems or national registries to eSignet using standard runtime plugins.</td><td><a href="esignet-authentication/develop/integration/authenticator.md">authenticator.md</a></td></tr><tr><td><strong>System Operators</strong></td><td>Deploy eSignet on Kubernetes, from a single mock-plugin sandbox up to a full MOSIP-integrated production cluster.</td><td><a href="build-and-deploy/deployment-guide.md">deployment-guide.md</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td><strong>Relying Parties / Apps</strong></td><td>Integrate your application via standard OpenID Connect (OIDC) client libraries. Configure login prompts, scopes, and claims.</td><td>Text Field 2</td><td><a href="esignet-authentication/develop/integration/relying-party/relying-party-onboarding.md">relying-party-onboarding.md</a></td><td><a href=".gitbook/assets/Roadmap Card.png">Roadmap Card.png</a></td></tr><tr><td><strong>Identity Providers &#x26; Registries</strong></td><td>Connect core identity systems or national registries to eSignet using standard runtime plugins.</td><td></td><td><a href="esignet-authentication/develop/integration/authenticator.md">authenticator.md</a></td><td><a href=".gitbook/assets/Releases Card.png">Releases Card.png</a></td></tr><tr><td><strong>System Operators</strong></td><td>Deploy eSignet on Kubernetes, from a single mock-plugin sandbox up to a full MOSIP-integrated production cluster.</td><td></td><td><a href="build-and-deploy/deployment-guide.md">deployment-guide.md</a></td><td><a href=".gitbook/assets/Technology card.png">Technology card.png</a></td></tr></tbody></table>
 
 ## Why eSignet
 
-<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Low-Barrier Access</strong></td><td>Built for progressive KYC, accommodating areas with restricted network infrastructure.</td></tr><tr><td><strong>Device Agnostic</strong></td><td>Supports feature-phone OTP verification alongside modern biometric workflows.</td></tr><tr><td><strong>Zero Vendor Lock-In</strong></td><td>Open-source, containerized codebase deployable on any host environment.</td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td><strong>Low-Barrier Access</strong></td><td>Built for progressive KYC, accommodating areas with restricted network infrastructure.</td><td><a href=".gitbook/assets/Principles Card.png">Principles Card.png</a></td></tr><tr><td><strong>Device Agnostic</strong></td><td>Supports feature-phone OTP verification alongside modern biometric workflows.</td><td><a href=".gitbook/assets/DHIS2 Card.png">DHIS2 Card.png</a></td></tr><tr><td><strong>Zero Vendor Lock-In</strong></td><td>Open-source, containerized codebase deployable on any host environment.</td><td><a href=".gitbook/assets/S&#x26;S Card.png">S&#x26;S Card.png</a></td></tr><tr><td>Hello</td><td></td><td><a href=".gitbook/assets/Principles Card.png">Principles Card.png</a></td></tr><tr><td>Hello</td><td></td><td><a href=".gitbook/assets/License Card.png">License Card.png</a></td></tr><tr><td>Hello</td><td></td><td><a href=".gitbook/assets/Technology card.png">Technology card.png</a></td></tr></tbody></table>
 
 ## Protocol reference
 
@@ -78,3 +79,8 @@ The current stable line — OIDC Core, MOSIP/Sunbird RC/Mock identity plugins, a
 The next generation of eSignet, being rewritten in Go. Deployment-side documentation for the 2.x release line is being added under [Deployment Guide](build-and-deploy/deployment-guide.md) as it stabilizes — check there for the latest release-branch-specific instructions.
 
 </details>
+
+
+
+
+
