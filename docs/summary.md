@@ -480,6 +480,7 @@
     * [V1.5.0-DSL](roadmap-and-releases/releases/v1.5.0-dsl.md)
     * [1.2.1.1](roadmap-and-releases/releases/1.2.1.1/README.md)
       * [Test Report](roadmap-and-releases/releases/1.2.1.1/test-report.md)
+    * [1.3.2 Resident Automation Fix](roadmap-and-releases/releases/1.3.2-resident-automation-fix.md)
 * [General](general/README.md)
   * [Glossary](glossary.md)
   * [Resources](general/resources.md)
