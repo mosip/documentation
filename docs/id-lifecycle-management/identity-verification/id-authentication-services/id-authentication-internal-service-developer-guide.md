@@ -12,7 +12,7 @@ The documentation here will guide you through the prerequisites required for the
 
 Below is a list of tools required in ID Repository Services:
 
-1. JDK 11
+1. JDK 11 OR JDK 21
 2. Any IDE (like Eclipse or IntelliJ IDEA)
 3. Apache Maven (zip folder)
 4. pgAdmin
