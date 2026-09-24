@@ -9,6 +9,11 @@ icon: book-open
 
 ## Latest Releases
 
+**Version**: API Test Commons v1.7.0
+
+* Date: 21st September, 2026
+* [Release Notes](api-test-commons-releases/v1.7.0.md)
+
 **Version**: Android Registration Client v1.1.1
 
 * Date: 28th July, 2026
