@@ -9,6 +9,16 @@ icon: book-open
 
 ## Latest Releases
 
+**Version**: Resident Services v1.3.2
+
+* Date: 28th September, 2026
+* [Release Notes](resident-services-v1.3.2.md)
+
+**Version**: v1.2.1.1
+
+* Date: 23rd September, 2026
+* [Release Notes](v1.2.1.1/)
+
 **Version**: API Test Commons v1.7.0
 
 * Date: 21st September, 2026

@@ -1,10 +1,10 @@
-# 1.2.1.1
+# v1.2.1.1
 
 **Release Version:** v1.2.1.1
 
 **Release Type:** Major Release
 
-**Release Date:** <mark style="color:red;">**Coming Soon**</mark>!
+**Release Date:** 23rd September, 2026
 
 ### Overview
 
@@ -91,14 +91,13 @@ Below are the key bugs marked as known issues for this release. Please refer to 
 
 ### Compatible Modules
 
-|                             |                    |
-| --------------------------- | ------------------ |
-| Module/Repo                 | Compatible Version |
-| partner-management-services | v1.2.2.3           |
-| resident-ui                 | v0.9.0             |
-| eSignet                     | v1.4.1             |
-| registration-client         | v1.2.0.2           |
-| mosip-automation-test       | v1.4.0             |
+| Module/Repo                 | Compatible Version                                                             |
+| --------------------------- | ------------------------------------------------------------------------------ |
+| partner-management-services | [v1.2.2.3](https://github.com/mosip/partner-management-services/tree/v1.2.2.3) |
+| resident-ui                 | [v0.9.0](https://github.com/mosip/resident-ui/releases/tag/v0.9.0)             |
+| eSignet                     | [v1.4.1](https://github.com/mosip/esignet/tree/v1.4.1)                         |
+| registration-client         | [v1.2.0.2](https://github.com/mosip/registration-client/tree/v1.2.0.2)         |
+| mosip-automation-test       | [v1.4.0](https://github.com/mosip/mosip-automation-tests/tree/v1.4.0)          |
 
 ### Dependency Matrix
 
