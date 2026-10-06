@@ -116,4 +116,4 @@ Below are the key bugs marked as known issues for this release. Please refer to 
 
 ### Documentation
 
-* [QA Report](https://docs.mosip.io/1.2.0/roadmap-and-releases/releases/v1.2.1.1-rc.1/test-report)
+* [QA Report](https://docs.mosip.io/1.2.0/roadmap-and-releases/releases/v1.2.1.1/test-report)

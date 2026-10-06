@@ -55,10 +55,10 @@ To view the list of known issues, refer [here](https://github.com/mosip/resident
 
 The following table outlines the tested and certified compatibility of Android Registration Client v1.1.0 with other modules.
 
-| Platform/Module | Version                                                |
-| --------------- | ------------------------------------------------------ |
-| MOSIP           | 1.2.1.1                                                |
-| eSignet         | [v1.4.1](https://github.com/mosip/esignet/tree/v1.4.1) |
+| Platform/Module | Version                                                                       |
+| --------------- | ----------------------------------------------------------------------------- |
+| MOSIP           | [1.2.1.1](https://docs.mosip.io/1.2.0/roadmap-and-releases/releases/v1.2.1.1) |
+| eSignet         | [v1.4.1](https://github.com/mosip/esignet/tree/v1.4.1)                        |
 
 ### **Documentation**
 
