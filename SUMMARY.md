@@ -2,7 +2,6 @@
 
 * [Overview](README.md)
   * [What is eSignet?](readme/what-is-esignet.md)
-  * [Migration to Go](readme/migration-to-go.md)
   * [Features](readme/features.md)
   * [Principles](readme/principles.md)
   * [License](readme/license.md)
