@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="An application window with a sign-in button plugging into eSignet">
+<rect width="800" height="450" fill="#FFF7EA"/>
+<circle cx="400" cy="225" r="185" fill="#FFE4B8"/>
+<rect x="85" y="105" width="290" height="240" rx="20" fill="#FFFFFF" stroke="#024191" stroke-width="6"/>
+<path d="M85,155 H375" stroke="#024191" stroke-width="6"/>
+<circle cx="115" cy="130" r="7" fill="#FD9300"/><circle cx="139" cy="130" r="7" fill="#FD9300"/><circle cx="163" cy="130" r="7" fill="#FD9300"/>
+<rect x="125" y="182" width="210" height="28" rx="14" fill="#FFE4B8"/>
+<rect x="125" y="224" width="210" height="28" rx="14" fill="#FFE4B8"/>
+<rect x="125" y="278" width="210" height="38" rx="19" fill="#03A2FA"/>
+<rect x="195" y="293" width="70" height="8" rx="4" fill="#FFFFFF"/>
+<path d="M378,225 H420" stroke="#FD9300" stroke-width="6" stroke-linecap="round"/>
+<rect x="418" y="201" width="26" height="48" rx="7" fill="#FD9300"/>
+<rect x="452" y="211" width="16" height="8" rx="3" fill="#024191"/><rect x="452" y="231" width="16" height="8" rx="3" fill="#024191"/>
+<rect x="466" y="201" width="26" height="48" rx="7" fill="#024191"/>
+<path d="M490,225 H520" stroke="#024191" stroke-width="6" stroke-linecap="round"/>
+<g transform="translate(605,222) scale(1)"><path d="M0,-105 L90,-75 V10 C90,65 50,100 0,120 C-50,100 -90,65 -90,10 V-75 Z" fill="#FD9300" stroke-linejoin="round"/><path d="M-40,7 L-10,37 L45,-25" fill="none" stroke="#FFFFFF" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/></g>
+</svg>

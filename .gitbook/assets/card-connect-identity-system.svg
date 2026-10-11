@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="eSignet connected to an identity provider, a registry and an authentication source">
+<rect width="800" height="450" fill="#FFF7EA"/>
+<circle cx="400" cy="225" r="185" fill="#FFE4B8"/>
+<path d="M318,225 H400" stroke="#FD9300" stroke-width="6" stroke-linecap="round"/>
+<path d="M400,225 C470,225 470,105 540,105 M400,225 H540 M400,225 C470,225 470,345 540,345" fill="none" stroke="#FD9300" stroke-width="6"/>
+<rect x="540" y="50" width="120" height="110" rx="20" fill="#FFFFFF" stroke="#024191" stroke-width="6"/><rect x="540" y="170" width="120" height="110" rx="20" fill="#FFFFFF" stroke="#024191" stroke-width="6"/><rect x="540" y="290" width="120" height="110" rx="20" fill="#FFFFFF" stroke="#024191" stroke-width="6"/>
+<circle cx="540" cy="105" r="9" fill="#024191"/><circle cx="540" cy="225" r="9" fill="#024191"/><circle cx="540" cy="345" r="9" fill="#024191"/>
+<rect x="566" y="79" width="76" height="52" rx="8" fill="#FFE4B8" stroke="#024191" stroke-width="5"/>
+<circle cx="586" cy="97" r="7" fill="#024191"/><path d="M574,120 a12,11 0 0 1 24,0 Z" fill="#024191"/>
+<path d="M608,95 H630 M608,109 H624" stroke="#FD9300" stroke-width="5" stroke-linecap="round"/>
+<path d="M576,207 V243 A28,10 0 0 0 632,243 V207" fill="#FD9300" stroke="#024191" stroke-width="5" stroke-linejoin="round"/>
+<ellipse cx="604" cy="207" rx="28" ry="10" fill="#FFE4B8" stroke="#024191" stroke-width="5"/>
+<path d="M576,225 A28,10 0 0 0 632,225" fill="none" stroke="#024191" stroke-width="5"/>
+<circle cx="586" cy="345" r="13" fill="none" stroke="#024191" stroke-width="7"/>
+<path d="M599,345 H636 M622,345 V359 M634,345 V356" fill="none" stroke="#024191" stroke-width="7" stroke-linecap="round"/>
+<circle cx="400" cy="225" r="14" fill="#03A2FA" stroke="#FFFFFF" stroke-width="5"/>
+<g transform="translate(230,222) scale(1)"><path d="M0,-105 L90,-75 V10 C90,65 50,100 0,120 C-50,100 -90,65 -90,10 V-75 Z" fill="#FD9300" stroke-linejoin="round"/><path d="M-40,7 L-10,37 L45,-25" fill="none" stroke="#FFFFFF" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/></g>
+</svg>

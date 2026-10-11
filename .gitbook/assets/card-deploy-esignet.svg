@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="A server stack running eSignet with a health pulse and a settings gear">
+<rect width="800" height="450" fill="#FFF7EA"/>
+<circle cx="400" cy="225" r="185" fill="#FFE4B8"/>
+<rect x="255" y="92" width="290" height="74" rx="16" fill="#FFFFFF" stroke="#024191" stroke-width="6"/><circle cx="289" cy="129" r="8" fill="#FD9300"/><circle cx="315" cy="129" r="8" fill="#FFE4B8"/><path d="M372,120 H452 M372,138 H452" stroke="#024191" stroke-width="5" stroke-linecap="round"/>
+<rect x="255" y="188" width="290" height="74" rx="16" fill="#FFFFFF" stroke="#024191" stroke-width="6"/><circle cx="289" cy="225" r="8" fill="#FD9300"/><circle cx="315" cy="225" r="8" fill="#FFE4B8"/><path d="M352,225 H398 L416,200 L440,250 L462,207 L478,225 H517" fill="none" stroke="#03A2FA" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="255" y="284" width="290" height="74" rx="16" fill="#FFFFFF" stroke="#024191" stroke-width="6"/><circle cx="289" cy="321" r="8" fill="#FD9300"/><circle cx="315" cy="321" r="8" fill="#FFE4B8"/><path d="M430,312 H517 M430,330 H517" stroke="#024191" stroke-width="5" stroke-linecap="round"/>
+<path d="M278.0,363.2 L291.5,364.8 L291.5,379.2 L278.0,380.8 L273.1,392.7 L281.5,403.3 L271.3,413.5 L260.7,405.1 L248.8,410.0 L247.2,423.5 L232.8,423.5 L231.2,410.0 L219.3,405.1 L208.7,413.5 L198.5,403.3 L206.9,392.7 L202.0,380.8 L188.5,379.2 L188.5,364.8 L202.0,363.2 L206.9,351.3 L198.5,340.7 L208.7,330.5 L219.3,338.9 L231.2,334.0 L232.8,320.5 L247.2,320.5 L248.8,334.0 L260.7,338.9 L271.3,330.5 L281.5,340.7 L273.1,351.3 Z" fill="#FD9300" stroke="#FFFFFF" stroke-width="14" stroke-linejoin="round" paint-order="stroke"/>
+<circle cx="240" cy="372" r="16" fill="#FFFFFF"/>
+<g transform="translate(560,100) scale(0.55)"><path d="M0,-105 L90,-75 V10 C90,65 50,100 0,120 C-50,100 -90,65 -90,10 V-75 Z" fill="#FD9300" stroke-linejoin="round" stroke="#FFFFFF" stroke-width="29" paint-order="stroke"/><path d="M-40,7 L-10,37 L45,-25" fill="none" stroke="#FFFFFF" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/></g>
+</svg>
