@@ -8,7 +8,7 @@ hidden: true
 
 Latest releases at the top. Platform releases are consolidation milestones. Component releases are independent updates, listed under the platform release they follow. See the [versioning policy](versioning-policy.md) for how releases are named.
 
-<i class="fa-layer-group">:layer-group:</i> **Platform release**: consolidated platform version <i class="fa-cube">:cube:</i> **Component release**: individual or grouped component update
+<i class="fa-layer-group">:layer-group:</i> **Platform release**: consolidated platform version <i class="fa-cube">:cube:</i> **Component release**: individual or grouped component update <i class="fa-flask">:flask:</i> **Pre-release**: beta or release candidate of a platform release
 
 {% hint style="success" icon="cube" %}
 **Resident Services v1.3.2**
@@ -27,14 +27,16 @@ Fixes OTP handling in the API test rig and adds 43 automated test cases.
 
 Performance, stability and resource optimisation across the Registration Processor pipeline.
 
-Pre-release: [v1.2.1.1-RC.1](v1.2.1.1-rc.1/) (1 Jun 2026)
-
 <a href="v1.2.1.1/" class="button primary">View platform release</a>
+{% endhint %}
+
+{% hint style="warning" icon="flask" %}
+**Pre-release** · [v1.2.1.1-RC.1](v1.2.1.1-rc.1/) (1 Jun 2026)
 {% endhint %}
 
 <details>
 
-<summary>Component releases after v1.2.1.1 (1 release) · 23 Sep 2026 – Present</summary>
+<summary>Component releases after v1.2.1.1 (<mark style="background-color:green;">1 release</mark>) · 23 Sep 2026 – Present</summary>
 
 | Date | Component | Version | Type | Description | |
 | --- | --- | --- | --- | --- | --- |
@@ -75,9 +77,11 @@ Pre-release: [v1.2.1.1-RC.1](v1.2.1.1-rc.1/) (1 Jun 2026)
 
 Stable, production-ready migration from Java 11 to Java 21, consolidating the 1.2.1.0 beta cycle.
 
-Pre-releases: 1.2.1.0-beta.1 [Part 1](1.3.0-beta.1-mock-service-and-converters.md) (26 Nov 2024) · [Part 2](1.2.1.0-beta.1-part-2/) (16 Dec 2024) · [Part 3](1.2.1.0-beta.1-part-3.md) (18 Mar 2025) · [Part 4](1.2.1.0-beta.1-part-4/) (10 Jul 2025)
-
 [View platform release →](v1.2.1.0/)
+{% endhint %}
+
+{% hint style="warning" icon="flask" %}
+**Pre-releases** · 1.2.1.0-beta.1 [Part 1](1.3.0-beta.1-mock-service-and-converters.md) (26 Nov 2024) · [Part 2](1.2.1.0-beta.1-part-2/) (16 Dec 2024) · [Part 3](1.2.1.0-beta.1-part-3.md) (18 Mar 2025) · [Part 4](1.2.1.0-beta.1-part-4/) (10 Jul 2025)
 {% endhint %}
 
 <details>
@@ -182,9 +186,11 @@ Fixes critical reported bugs to improve stability and usability.
 
 Brings together everything released in beta, including the upgrade to V3 architecture, DSL automation scripts and the Credential Requestor Stage.
 
-Pre-releases: [Beta 1](release-notes-1.2.0.1-beta/) (14 Oct 2022) · [Beta 2](release-notes-1.2.0.1-b2.md) (8 Jan 2023) · [Beta 3](release-notes-1.2.0.1-b3/) (14 Apr 2023) · [Beta 4](release-notes-1.2.0.1-b4/) (12 Jan 2024)
-
 [View platform release →](release-notes-1.2.0.1/)
+{% endhint %}
+
+{% hint style="warning" icon="flask" %}
+**Pre-releases** · [Beta 1](release-notes-1.2.0.1-beta/) (14 Oct 2022) · [Beta 2](release-notes-1.2.0.1-b2.md) (8 Jan 2023) · [Beta 3](release-notes-1.2.0.1-b3/) (14 Apr 2023) · [Beta 4](release-notes-1.2.0.1-b4/) (12 Jan 2024)
 {% endhint %}
 
 <details>
