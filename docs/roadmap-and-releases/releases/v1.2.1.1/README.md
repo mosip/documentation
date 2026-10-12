@@ -76,7 +76,7 @@ Building on the improvements introduced and validated during the Release Candida
 | biosdk-services     | [v1.3.1](https://github.com/mosip/biosdk-services/tree/v1.3.1)      |
 | websub              | [v1.3.2](https://github.com/mosip/websub/tree/v1.3.2)               |
 | artifactory         | [v1.3.2](https://github.com/mosip/artifactory-ref-impl/tree/v1.3.2) |
-| infra               | [v0.3.0](https://github.com/mosip/infra/tree/0.3.0)                 |
+| infra               | [v0.3.1](https://github.com/mosip/infra/tree/v0.3.1)                |
 | k8s-infra           | [v1.2.1.3](https://github.com/mosip/k8s-infra/tree/v1.2.1.3)        |
 | mosip-infra         | [v1.2.1.1](https://github.com/mosip/mosip-infra/tree/v1.2.1.1)      |
 
@@ -84,10 +84,10 @@ Building on the improvements introduced and validated during the Release Candida
 
 Below are the key bugs marked as known issues for this release. Please refer to the complete list of known issues for this release in the MOSIP issue tracker.
 
-| Issue      | Description                                                                                                            |
-| ---------- | ---------------------------------------------------------------------------------------------------------------------- |
-| MOSIP-1827 | Composite repo environment variables are hardcoded in deployment instead of being configured through ConfigMap/Secret. |
-| MOSIP-1951 | Hardcoding in DSL for checking configuration parameters using actuator/environment values.                             |
+| Issue                                                                      | Description                                                                                                            |
+| -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| [issues-1827](https://github.com/mosip/commons/issues/1827)                | Composite repo environment variables are hardcoded in deployment instead of being configured through ConfigMap/Secret. |
+| [issues-1951](https://github.com/mosip/mosip-functional-tests/issues/1951) | Hardcoding in DSL for checking configuration parameters using actuator/environment values.                             |
 
 ### Compatible Modules
 
