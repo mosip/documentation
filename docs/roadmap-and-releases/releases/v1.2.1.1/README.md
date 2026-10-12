@@ -84,7 +84,7 @@ Building on the improvements introduced and validated during the Release Candida
 
 Below are the key bugs marked as known issues for this release. Please refer to the complete list of known issues for this release in the MOSIP issue tracker.
 
-| Issue                                                                      | Description                                                                                                            |
+| Issues                                                                     | Description                                                                                                            |
 | -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | [issues-1827](https://github.com/mosip/commons/issues/1827)                | Composite repo environment variables are hardcoded in deployment instead of being configured through ConfigMap/Secret. |
 | [issues-1951](https://github.com/mosip/mosip-functional-tests/issues/1951) | Hardcoding in DSL for checking configuration parameters using actuator/environment values.                             |
@@ -116,4 +116,6 @@ Below are the key bugs marked as known issues for this release. Please refer to 
 
 ### Documentation
 
+* [Feature Documentation](https://docs.mosip.io/1.2.0/)
+* [Versioning Policy](../versioning-policy.md)
 * [QA Report](https://docs.mosip.io/1.2.0/roadmap-and-releases/releases/v1.2.1.1/test-report)
