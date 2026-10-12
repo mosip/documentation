@@ -481,6 +481,7 @@
     * [v1.2.1.1](roadmap-and-releases/releases/v1.2.1.1/README.md)
       * [Test Report](roadmap-and-releases/releases/v1.2.1.1/test-report.md)
     * [Resident Services v1.3.2](roadmap-and-releases/releases/resident-services-v1.3.2.md)
+    * [Releases](roadmap-and-releases/releases/releases.md)
 * [General](general/README.md)
   * [Glossary](glossary.md)
   * [Resources](general/resources.md)
