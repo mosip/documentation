@@ -48,4 +48,4 @@ type ObservabilityProvider interface {
 
 ### Further Details
 
-The [Audit Plugin Deep Dive](https://claude.ai/cowork/audit-plugin-deep-dive.md) has the full event payload and field reference, the complete list of event types the flow engine emits, and the full MOSIP reference implementation.
+The [Audit Plugin Deep Dive](https://github.com/mosip/esignet/blob/master/docs/audit-plugin-integration.md) has the full event payload and field reference, the complete list of event types the flow engine emits, and the full MOSIP reference implementation.

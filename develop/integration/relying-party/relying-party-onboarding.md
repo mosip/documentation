@@ -26,7 +26,7 @@ eSignet supports only confidential clients, authenticated using the `private_key
 
 #### What Is JWK Format?
 
-JWK (JSON Web Key) is a JSON data structure representing a set of public keys, using either the Elliptic Curve or RSA family of algorithms. It's the format eSignet expects when you share your public key during registration. [Learn more about JWK](https://claude.ai/cowork/TODO-link).
+JWK (JSON Web Key) is a JSON data structure representing a set of public keys, using either the Elliptic Curve or RSA family of algorithms. It's the format eSignet expects when you share your public key during registration.
 
 #### Converting a Public Key to JWK
 

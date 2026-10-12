@@ -4,13 +4,13 @@ description: Connecting secure components for seamless identity verification.
 
 # eSignet Building Blocks
 
-esignet-service is composed of a small composition root, the external ThunderID engine it plugs into, and a set of MOSIP-specific modules underneath. The diagram below is the map — each piece is explained briefly underneath it, with a link through to the full detail in the [Architecture Deep Dive](https://claude.ai/cowork/architecture-deep-dive.md) for anything you need to go deeper on.
+esignet-service is composed of a small composition root, the external ThunderID engine it plugs into, and a set of MOSIP-specific modules underneath. The diagram below is the map — each piece is explained briefly underneath it, with a link through to the full detail in the [Architecture Deep Dive](https://github.com/mosip/esignet/blob/master/docs/architecture.md) for anything you need to go deeper on.
 
 <figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 ### cmd/esignet (Composition Root)
 
-`main.go` is where everything gets wired together at startup: it opens the Postgres and Redis connections, builds the client-management HTTP handler, and passes roughly twenty functional options into the ThunderID engine to plug in every MOSIP-specific piece below. See [esignet-service (Backend)](https://claude.ai/cowork/architecture-deep-dive.md#2-esignet-service-backend) for the full startup sequence.
+`main.go` is where everything gets wired together at startup: it opens the Postgres and Redis connections, builds the client-management HTTP handler, and passes roughly twenty functional options into the ThunderID engine to plug in every MOSIP-specific piece below. See [esignet-service (Backend)](https://github.com/mosip/esignet/blob/master/docs/architecture.md) for the full startup sequence.
 
 ### ThunderID Engine (External Module)
 

@@ -5,7 +5,7 @@ icon: square-terminal
 
 # Developer Guide
 
-This section is for anyone building with eSignet directly, rather than just running it: engineers standing up an instance, integrating a relying party, writing a custom authenticator or audit plugin, or tuning a deployment's configuration for their environment. If [Quickstart](https://claude.ai/cowork/quickstart.md) got you a working login on your own machine, this is where you go next to understand how eSignet is actually put together and how to shape it around your own system.
+This section is for anyone building with eSignet directly, rather than just running it: engineers standing up an instance, integrating a relying party, writing a custom authenticator or audit plugin, or tuning a deployment's configuration for their environment. If [Quickstart](../local-deployment/) got you a working login on your own machine, this is where you go next to understand how eSignet is actually put together and how to shape it around your own system.
 
 The pages here are grouped by what you're trying to do, not just by topic — start with **Understand eSignet** if you're getting oriented, jump to **Configure Your Deployment** if you already know eSignet and need to tune a specific setting, or go straight to **Integrate With eSignet** if you're connecting a relying party or writing a plugin today.
 
