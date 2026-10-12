@@ -159,9 +159,8 @@ eSignet will be deployed across various platforms, focusing on secure authentica
 
 <summary><strong>What is ThunderID and how does it relate to eSignet?</strong></summary>
 
-[ThunderID](https://github.com/thunder-id/thunderid) is an open-source Go-based OAuth 2.1 / OpenID Connect engine that eSignet embeds as a Go module dependency. It handles all protocol endpoints (authorize, token, JWKS, discovery, introspect, userinfo, PAR, DPoP, etc.) and the flow execution engine.
-
-eSignet acts as a MOSIP-specific embedder: it injects MOSIP-aware providers (identity authentication, key management, consent storage, client registry) into the ThunderID engine via functional options, and registers its own client management API on top. This means eSignet benefits from ThunderID's protocol correctness and standards coverage while retaining full control over identity verification logic.
+[ThunderID](https://thunderid.dev/) is an open-source identity product developed by [WSO2](https://wso2.com/) and contributed to [LF Decentralized Trust](https://www.lfdecentralizedtrust.org/) (Linux Foundation Decentralized Trust). \
+eSignet uses the ThunderID engine as its foundation and builds on top of it to meet global standards and its own feature requirements. eSignet embeds the engine as a Go module dependency and plugs MOSIP-specific providers into it: identity authentication, key management, consent storage and the client registry. It also retains its own client management API as well.
 
 </details>
 
@@ -227,16 +226,16 @@ The [ThunderID](https://github.com/thunder-id/thunderid) engine is embedded as a
 
 <summary><strong>What changed from the Java version to the Go version?</strong></summary>
 
-| Dimension           | Java eSignet                             | Go eSignet                                                               |
-| ------------------- | ---------------------------------------- | ------------------------------------------------------------------------ |
-| Language / runtime  | Java 11 / Spring Boot                    | Go 1.26, single binary                                                   |
-| Protocol logic      | Internal Java services                   | Delegated to [ThunderID](https://github.com/thunder-id/thunderid) engine |
-| Key management      | MOSIP keymanager (Java microservice)     | Embedded Go keymanager (`KEYMANAGER_*` env vars)                         |
-| Configuration       | `application.properties` / Spring Config | `data/deployment.yaml` + environment variables                           |
-| Authentication flow | Hard-coded Java controllers              | Declarative YAML flow graphs                                             |
-| Database access     | Spring Data JPA / Hibernate              | Raw SQL via `pgx/v5` + `sqlc`                                            |
-| Metrics             | Spring Actuator / Micrometer             | [Prometheus](https://prometheus.io/) endpoint                            |
-| Transaction store   | Redis or in-memory                       | Redis or in-memory                                                       |
+| Dimension           | Java eSignet                             | Go eSignet                                       |
+| ------------------- | ---------------------------------------- | ------------------------------------------------ |
+| Language / runtime  | Java 11 / Spring Boot                    | Go 1.26, single binary                           |
+| Protocol logic      | Internal Java services                   | Leverages the ThunderID engine.                  |
+| Key management      | MOSIP keymanager (Java microservice)     | Embedded Go keymanager (`KEYMANAGER_*` env vars) |
+| Configuration       | `application.properties` / Spring Config | `data/deployment.yaml` + environment variables   |
+| Authentication flow | Hard-coded Java controllers              | Declarative YAML flow graphs                     |
+| Database access     | Spring Data JPA / Hibernate              | Raw SQL via `pgx/v5` + `sqlc`                    |
+| Metrics             | Spring Actuator / Micrometer             | [Prometheus](https://prometheus.io/) endpoint    |
+| Transaction store   | Redis or in-memory                       | Redis or in-memory                               |
 
 </details>
 

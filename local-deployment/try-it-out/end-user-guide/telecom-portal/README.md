@@ -6,8 +6,7 @@ Experience eSignet in action with a demo eSIM allocation on the **Fyntel Telecom
 
 Hosted on the [**MOSIP Collab Sandbox**](https://collab.mosip.net/), this portal acts as a relying party application and allows you to experience how eSignet integrates seamlessly into service workflows that require trusted identity authentication. Using a **National ID (UIN)**, you can authenticate and login to proceed with eSIM allocation using the following authentication methods:
 
-* [**OTP-based authentication**](/broken/pages/9CmUG8MeLXU792Xv339m)
-* [**INJI Wallet–based authentication**](/broken/pages/JQF2VdqcALtMxHx0W9AT)
+* [**OTP-based authentication**](login-with-otp.md)
 
 The portal supports **real MOSIP IDs** , enabling easy exploration without prerequisites. In just a few steps, you can experience a secure and smooth authentication flow that culminates in the allocation of an eSIM linked to the authenticated National ID.
 
@@ -15,7 +14,7 @@ This demo portal serves as a hands-on environment to understand how eSignet can 
 
 ### Prerequisites
 
-The resident is registered in the national identity system and holds a valid [MOSIP ID (UIN) or Virtual ID (VID).](https://app.gitbook.com/s/4EyCrLbFom7vj7UcMIUZ/id-lifecycle-management/identity-management/identifiers)
+The resident is registered in the national identity system and holds a valid [MOSIP ID (UIN) or Virtual ID (VID).](https://docs.mosip.io/1.2.0/id-lifecycle-management/identity-management/identifiers)
 
 {% hint style="info" %}
 Note: To generate the MOSIP ID(UIN) please visit the [Self Registration Portal](https://self-register.collab.mosip.net/) hosted on MOSIP collab.

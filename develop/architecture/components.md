@@ -14,7 +14,7 @@ esignet-service is composed of a small composition root, the external ThunderID 
 
 ### ThunderID Engine (External Module)
 
-The generic, external engine esignet-service builds on. It supplies the flow runtime, token issuance, JWKS/JWT handling, consent orchestration, and the OIDC/OAuth HTTP endpoints themselves — the protocol machinery that every MOSIP-specific module below plugs into. See Architecture for how this fits into the bigger picture. Please refer the [Thunder ID](https://thunderid.dev/) to explore it in details.
+The generic, external engine esignet-service builds on. It supplies the flow runtime, token issuance, JWKS/JWT handling, consent orchestration, and the OIDC/OAuth HTTP endpoints themselves — the protocol machinery that every MOSIP-specific module below plugs into. See [Architecture](https://github.com/mosip/esignet/blob/master/docs/architecture.md) for how this fits into the bigger picture. Please refer the [Thunder ID](https://thunderid.dev/) to explore it in details.
 
 ### internal/engine — MOSIP Provider Implementations
 

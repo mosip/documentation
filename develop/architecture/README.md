@@ -2,16 +2,14 @@
 
 eSignet is MOSIP's OpenID Connect (OIDC) / OAuth2 identity provider. It lets a relying party — a government or private-sector application — authenticate an end user against a national or foundational identity system and receive standard OIDC tokens and claims back, without the relying party ever having to handle the user's raw identity credentials itself.
 
-This page covers the shape of the system: what eSignet is made of, how a login actually flows through it end to end, and why it's built the way it is. For the full technical breakdown, module-by-module internals, the flow engine's YAML model, identity-provider implementations, security middleware, and the data model, see the Architecture Deep Dive _(Link to be added)_.
+This page covers the shape of the system: what eSignet is made of, how a login actually flows through it end to end, and why it's built the way it is. For the full technical breakdown, module-by-module internals, the flow engine's YAML model, identity-provider implementations, security middleware, and the data model, see the [Architecture Deep Dive](https://github.com/mosip/esignet/blob/master/docs/architecture.md).
 
 ### What eSignet Is Made Of
 
-eSignet is built from two components, sitting on top of a shared, external protocol engine rather than implementing OIDC/OAuth2 from scratch:
+eSignet is built from below two components, sitting on top of [**Thunder ID engine**](../../general/glossary.md)
 
-* **esignet-service** — the Go backend. It implements client management, consent management, and the MOSIP-specific pieces of the OIDC engine: identity-provider plugins, authentication flows, and screen/security configuration.
-* **oidc-ui** — the React single-page application that renders the login, OTP/biometric/KBI, and consent screens the end user actually interacts with.
-
-Both are built on [**ThunderID**,](https://github.com/thunder-id/thunderid) a generic external OIDC/OAuth engine that supplies the protocol machinery: token issuance, PKCE/DPoP/PAR, JWKS signing, the flow-execution runtime, and the login/consent UI rendering surface. esignet-service and oidc-ui are the MOSIP-specific configuration, provider implementations, and theming layered on top of that engine — which is what keeps the MOSIP-specific codebase small and lets the underlying protocol engine be upgraded independently of MOSIP's own code.
+* [**esignet-service**](https://github.com/mosip/esignet/tree/master/esignet-service) — the Go backend. It implements client management, consent management, and the MOSIP-specific pieces of the OIDC engine: identity-provider plugins, authentication flows, and screen/security configuration.
+* [**oidc-ui**](https://github.com/mosip/esignet/tree/master/oidc-ui) — the React single-page application that renders the login, OTP/biometric/KBI, and consent screens the end user actually interacts with.
 
 | Component        | Technology                    | Responsibility                                                                                                                                   |
 | ---------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -38,7 +36,6 @@ A relying party never talks to eSignet's backend directly for the login itself �
 
 ### Why It's Built This Way
 
-* **Engine-and-plugin separation.** Protocol mechanics — token issuance, JWKS, PKCE/DPoP/PAR, the flow-execution runtime, the UI-rendering surface — live in the shared, external ThunderID engine. esignet-service and oidc-ui contribute only MOSIP-specific providers, screen theming, and identity-backend integrations, keeping the MOSIP-specific codebase small and letting the protocol core evolve independently.
 * **Flow-as-configuration.** Authentication and consent journeys are declarative configuration on the backend, rendered generically by a single component on the frontend. New login methods or screen orders can be introduced without new app routes or backend endpoints.
 * **Swappable identity backend.** MOSIP IDA, Sunbird RC, and a mock provider all satisfy the same authenticator interface, selected by a single setting — so the same UI and flow layer runs unchanged against production identity systems or a local mock for testing.
 * **Defence in depth on the API surface.** Client-management APIs are protected independently by scope-checked bearer tokens and request-time validation, in addition to the OIDC/OAuth security the engine enforces on the protocol endpoints themselves.
@@ -47,4 +44,4 @@ A relying party never talks to eSignet's backend directly for the login itself �
 
 ### Want the Full Technical Breakdown?
 
-The Architecture Deep Dive _(Link to be added)_. covers esignet-service's internal module structure, the flow engine's YAML/state-machine model, each pluggable identity provider, oidc-ui's component structure and build pipeline, the data model, and reference tables for endpoints and environment configuration.
+The [Architecture Deep Dive](https://github.com/mosip/esignet/blob/master/docs/architecture.md), covers esignet-service's internal module structure, the flow engine's YAML/state-machine model, each pluggable identity provider, oidc-ui's component structure and build pipeline, the data model, and reference tables for endpoints and environment configuration.
