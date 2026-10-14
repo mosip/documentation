@@ -2,7 +2,7 @@
 
 **Release Version:** v1.2.1.1
 
-**Release Type:** Major Release
+**Release Type:** Minor Release
 
 **Release Date:** 23rd September, 2026
 
