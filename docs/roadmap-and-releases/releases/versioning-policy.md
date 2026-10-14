@@ -53,7 +53,7 @@ A component release does not automatically create a new platform release or chan
 
 * [Resident Services v1.3.2](resident-services-v1.3.2.md) — a single component.
 * [MOSIP Component Release v1.3.1](mosip-component-release-v1.3.1.md) — a coordinated group of components released together.
-* [Registration Processor 1.2.1.3 & ID Repository 1.2.3.0](registration-processor-1.2.1.3-and-id-repository-1.2.3.0/) — a group of components targeting an older platform line.
+* [Registration Processor 1.2.1.3 & ID Repository 1.2.3.0](registration-processor-1.2.1.3-and-id-repository-1.2.3.0/) — a group of components targeting an older platform version.
 
 ### 2.3 Relationship Between Platform and Component Releases
 
@@ -61,7 +61,7 @@ Platform releases and component releases serve different purposes and follow dif
 
 A platform release establishes a consolidated baseline. Component releases published afterward may provide new capabilities or fixes for specific components without changing that baseline.
 
-When a new platform release is published, it typically consolidates the component releases published on that platform line since the preceding platform release, after validating them together. In some cases, a component version may be held back or replaced by a later version, for example when it does not pass consolidated validation or when it targets an older platform line.
+When a new platform release is published, it typically consolidates the component releases published for that platform version since the preceding platform release, after validating them together. In some cases, a component version may be held back or replaced by a later version, for example when it does not pass consolidated validation or when it targets an older platform version.
 
 The published platform release documentation identifies the exact component versions included in that release.
 
@@ -83,7 +83,9 @@ Under SemVer, a version follows the format:
 
 Prerelease identifiers and build metadata follow the SemVer 2.0.0 specification, for example `1.3.0-beta.5`.
 
-Repository releases made before 1.3.0, and maintenance releases that continue to target the older Java 11 platform line, use the earlier four-part format. For example, `id-repository` v1.2.3.0 and `registration` v1.2.1.3 are maintenance releases for the 1.2.0.x platform line, while `id-repository` v1.3.1 and `registration` v1.3.1 belong to the 1.2.1.x platform line.
+Repository releases made before 1.3.0, and maintenance releases that continue to target the older Java 11 platform versions, use the earlier four-part format. For example, `id-repository` v1.2.3.0 and `registration` v1.2.1.3 are maintenance releases for platform v1.2.0.x, while `id-repository` v1.3.1 and `registration` v1.3.1 target platform v1.2.1.x.
+
+**Exception for infrastructure repositories:** Infrastructure and deployment repositories, such as `mosip-infra` and `k8s-infra`, are generally released along with the platform and provide its deployment path. These repositories therefore retain the four-part platform-style version format. For example, platform release v1.2.1.1 includes `mosip-infra` v1.2.1.1 and `k8s-infra` v1.2.1.3.
 
 Individual repository versions are maintained independently. Consequently, different components may have different version numbers and may release new versions at different times. For example, platform release v1.2.1.1 includes `keymanager` v1.4.1 alongside `registration` v1.3.1.
 
@@ -93,7 +95,7 @@ A component's version number must not be interpreted as the platform version or 
 
 MOSIP currently retains a four-part numeric versioning convention for platform releases, for example `1.2.1.1`.
 
-This convention was retained to preserve continuity with the existing MOSIP 1.2.x platform line, which serves as a Long-Term Support (LTS) baseline. Moving the platform immediately to a conventional three-part SemVer scheme would change the versioning progression and could create confusion around the existing platform line and its maintenance releases.
+This convention was retained to preserve continuity with the existing MOSIP 1.2.x platform versions. All platform versions from v1.2.0 onward (1.2.x), including v1.2.0.x, v1.2.1.0 and v1.2.1.1, are releases within the same 1.2.x Long-Term Support (LTS) release and are covered by its LTS support. A new platform version within 1.2.x does not start a new LTS support period. Moving the platform immediately to a conventional three-part SemVer scheme would change the versioning progression and could create confusion around the existing platform versions and their maintenance releases.
 
 Starting from platform release v1.2.1.0, the last three segments of the platform version are used in a SemVer-like manner:
 
@@ -102,7 +104,7 @@ Starting from platform release v1.2.1.0, the last three segments of the platform
 | 1.2.1.0 | 1         | 2                 | 1                 | 0                 |
 | 1.2.1.1 | 1         | 2                 | 1                 | 1                 |
 
-* **Segment 1** identifies the MOSIP platform generation and is not expected to change within the current LTS line.
+* **Segment 1** identifies the MOSIP platform generation and is not expected to change within the current 1.2.x LTS release.
 * **Segment 2** changes for a new major platform baseline.
 * **Segment 3** changes for a platform release that introduces significant new functionality or a platform-wide change, such as the Java 21 migration in v1.2.1.0.
 * **Segment 4** changes for a platform release that delivers fixes, performance improvements and other incremental changes on the same baseline, such as v1.2.1.1.
@@ -111,12 +113,12 @@ Platform releases before v1.2.1.0 (for example, 1.2.0.1 and 1.2.0.2) did not str
 
 For practical purposes:
 
-* Repositories from version 1.3.0 onward follow SemVer 2.0.0.
+* Repositories from version 1.3.0 onward follow SemVer 2.0.0, except infrastructure repositories, which retain the four-part format.
 * The platform retains its established four-part version format.
 * A platform release consolidates the required component versions into a validated baseline.
-* Platform version numbers and repository version numbers represent different things and must not be used interchangeably. For example, platform v1.2.1.1 does not contain any repository tagged v1.2.1.1 other than `mosip-infra`.
+* Platform version numbers and repository version numbers represent different things and must not be used interchangeably. Even infrastructure repositories, which use the four-part format, are versioned on their own: platform v1.2.1.1 includes `k8s-infra` v1.2.1.3, not v1.2.1.1.
 
-**Future direction:** As the repositories already follow SemVer, MOSIP is considering moving the platform version itself to SemVer 2.0.0 as well, for example with a future new LTS platform line. No decision has been made yet. If such a change is adopted, it will be communicated explicitly to the community and implementing countries, including its implications for version identification, release history, compatibility and upgrade planning.
+**Future direction:** As the repositories already follow SemVer, MOSIP is considering moving the platform version itself to SemVer 2.0.0 as well, for example with a future new LTS platform release. No decision has been made yet. If such a change is adopted, it will be communicated explicitly to the community and implementing countries, including its implications for version identification, release history, compatibility and upgrade planning.
 
 Until then, users should follow the published platform versioning convention and the version information in the relevant release notes.
 
@@ -136,10 +138,12 @@ Release names indicate the release type and the version being published. The fol
 
 #### DSL releases
 
-DSL releases cover the DSL Orchestrator and Packet Creator, which are used for scenario-based end-to-end testing of MOSIP. They are released independently of the platform and follow the component versioning conventions above:
+DSL releases cover the DSL Orchestrator and Packet Creator, which are used for scenario-based end-to-end testing of MOSIP. A DSL release is treated like a component release. It can be published on its own, or combined with a platform release. When combined, the platform release notes list the DSL (`mosip-automation-tests`) version validated with that baseline, for example v1.3.0 with platform v1.2.1.0 and v1.4.0 with platform v1.2.1.1.
+
+DSL releases follow the component versioning conventions above:
 
 * DSL versions from 1.3.0 onward follow SemVer and target the Java 21 codebase, for example v1.4.0.
-* Where a DSL release is also required for Java 11 environments, it is published with a four-part version on the older line, for example v1.2.2.0, which provides functionality equivalent to v1.4.0 for Java 11.
+* Where a DSL release is also required for Java 11 environments, it is published with a four-part version, for example v1.2.2.0, which provides functionality equivalent to v1.4.0 for Java 11.
 
 Each DSL release lists the component versions it is compatible with in its release notes.
 
@@ -205,20 +209,20 @@ The applicable test scope and compatibility constraints should be documented in 
 
 ## 6. Patches, Hotfixes and Maintenance Releases
 
-A patch or hotfix may be published independently of a platform release to address a bug, security vulnerability or other urgent requirement.
+A patch, hotfix or **critical patch** may be published independently of a platform release to address a bug, security vulnerability or other urgent requirement. A critical patch is a component release that delivers an urgent fix, such as a fix for a critical bug or security vulnerability, for an older platform version that is still supported. It contains fixes only, no new features, and is identified as a critical patch in its release notes and in the release history.
 
-Each critical patch targets one particular platform version or platform line. Where the same issue affects more than one supported platform line, a separate patch is published for each line, with its own version number on that line.
+Each component release, including a critical patch release, targets one particular platform version. Where the same issue affects more than one supported platform version, a separate patch is published for each platform version, with its own version number.
 
-New features are delivered only on the latest platform line. Older platform lines receive critical bug fixes and security patches only, for as long as they are supported.
+New features are delivered only for the latest platform version. Older platform versions receive critical bug fixes and security patches only, for as long as they are supported.
 
 The publication date determines where the release appears in the release history. Its target platform and compatibility information determine which deployments can use it.
 
-**Example:** [Registration Processor 1.2.1.3 & ID Repository 1.2.3.0](registration-processor-1.2.1.3-and-id-repository-1.2.3.0/) was published in April 2026, after platform release v1.2.1.0 (December 2025). It is a critical patch for the Java 11 platform line (1.2.0.x) and is compatible with that line's components, such as `id-authentication` v1.2.1.2 and `resident-services` v1.2.1.2. It does not apply to deployments on v1.2.1.0 or v1.2.1.1, even though it was published later. Those deployments use the `registration` and `id-repository` 1.3.x versions.
+**Example:** [Registration Processor 1.2.1.3 & ID Repository 1.2.3.0](registration-processor-1.2.1.3-and-id-repository-1.2.3.0/) was published in April 2026, after platform release v1.2.1.0 (December 2025). It is a critical patch for the Java 11 platform version v1.2.0.x and is compatible with that platform's components, such as `id-authentication` v1.2.1.2 and `resident-services` v1.2.1.2. It does not apply to deployments on v1.2.1.0 or v1.2.1.1, even though it was published later. Those deployments use the `registration` and `id-repository` 1.3.x versions. See the illustration in [Section 7](#id-7.-release-history-and-documentation).
 
 Maintenance releases must identify:
 
 * The affected component and its new version.
-* The target platform version or maintenance line.
+* The target platform version.
 * Compatibility constraints and required dependencies.
 * Security or bug-fix details, where appropriate.
 * Required database migrations and upgrade instructions.
@@ -226,7 +230,7 @@ Maintenance releases must identify:
 
 The publication of a component patch does not change the component versions recorded in an existing platform release manifest. A subsequent platform release may incorporate a later component version after the required validation.
 
-Support availability and the duration of maintenance for each platform line are governed by the [MOSIP Support Policy](../../general/support-policy.md).
+Support availability and the duration of maintenance for each platform version are governed by the [MOSIP Support Policy](../../general/support-policy.md).
 
 ## 7. Release History and Documentation
 
@@ -248,7 +252,11 @@ For a platform release, the published component-version manifest identifies the 
 
 For a component release, the release notes identify its applicability and any additional upgrades required.
 
-Because the release history is ordered by publication date, a patch for an older platform line can appear above a newer platform release. Always check the target platform stated in the release notes before applying it.
+Because the release history is ordered by publication date, a patch for an older platform version can appear above a newer platform release. Always check the target platform stated in the release notes before applying it.
+
+The following illustration shows how platform and component releases are organized in the release history. Component releases are grouped under the platform version they apply to. For example, the critical patch Registration Processor 1.2.1.3 & ID Repository 1.2.3.0 was published after platform v1.2.1.0, but it is listed under platform v1.2.0.x because it applies only to that platform version.
+
+<figure><img src="../../.gitbook/assets/mosip-release-history-example.svg" alt="Illustrative MOSIP release history showing platform releases v1.2.1.1, v1.2.1.0, v1.2.0.4 and v1.2.0.3, with component releases grouped under the platform version they apply to, including a critical patch for platform v1.2.0.x"><figcaption><p>Illustrative example based on published releases. See <a href="README.md">Releases</a> for the complete and current list.</p></figcaption></figure>
 
 ## 8. Why MOSIP Publishes Both Types of Release
 
