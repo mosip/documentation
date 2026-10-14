@@ -1,7 +1,5 @@
 # Development and Integration with eSignet
 
-## Development and Integration with eSignet
-
 This page explains what it actually takes to connect an application to eSignet as a relying party — what has to be built, who builds it (frontend team, backend team, or nobody, since eSignet handles it), and how the pieces fit together. It's meant to give a clear picture of the integration effort at a glance, whether you're the one writing the code or just need to know what to plan for. For exact parameters, error codes, and the full API specification, see the [Development and Integration Deep Dive](https://github.com/mosip/esignet/blob/master/docs/relying-party-integration.md).
 
 > **Migrating from the Java-based eSignet?** Several endpoint paths and behaviors have changed in the Go version — see [Changes from the Java Implementation](https://github.com/mosip/esignet/blob/master/docs/relying-party-integration.md) in the Deep Dive.
