@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="Three identity cards fanned out, for working with any identity system">
+<rect width="800" height="450" fill="#FFF7EA"/>
+<circle cx="400" cy="225" r="185" fill="#FFE4B8"/>
+<rect x="280" y="150" width="240" height="150" rx="18" fill="#FD9300" stroke="#024191" stroke-width="6" transform="rotate(-12 400 225) translate(-34 -22)"/>
+<rect x="280" y="150" width="240" height="150" rx="18" fill="#03A2FA" stroke="#024191" stroke-width="6" transform="rotate(-4 400 225) translate(-17 -11)"/>
+<g transform="rotate(5 400 225) translate(12 10)"><rect x="280" y="150" width="240" height="150" rx="18" fill="#FFFFFF" stroke="#024191" stroke-width="6"/>
+<circle cx="335" cy="208" r="22" fill="#024191"/><path d="M303,262 a32,28 0 0 1 64,0 Z" fill="#024191"/>
+<path d="M395,205 H485 M395,235 H465" stroke="#FD9300" stroke-width="10" stroke-linecap="round"/></g>
+</svg>

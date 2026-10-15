@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="An eye, for seeing the login flow from the user side">
+<rect width="800" height="450" fill="#FFF7EA"/>
+<circle cx="400" cy="225" r="185" fill="#FFE4B8"/>
+<path d="M230,225 Q400,85 570,225 Q400,365 230,225 Z" fill="#FFFFFF" stroke="#024191" stroke-width="8" stroke-linejoin="round"/>
+<circle cx="400" cy="225" r="62" fill="#03A2FA" stroke="#024191" stroke-width="8"/>
+<circle cx="400" cy="225" r="26" fill="#024191"/>
+<circle cx="414" cy="211" r="9" fill="#FFFFFF"/>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="A container cube, for deploying anywhere">
+<rect width="800" height="450" fill="#FFF7EA"/>
+<circle cx="400" cy="225" r="185" fill="#FFE4B8"/>
+<path d="M400,105 L504,165 L400,225 L296,165 Z" fill="#FFFFFF" stroke="#024191" stroke-width="8" stroke-linejoin="round"/>
+<path d="M296,165 L400,225 V345 L296,285 Z" fill="#FD9300" stroke="#024191" stroke-width="8" stroke-linejoin="round"/>
+<path d="M400,225 L504,165 V285 L400,345 Z" fill="#024191" stroke="#024191" stroke-width="8" stroke-linejoin="round"/>
+</svg>
