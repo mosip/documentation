@@ -149,7 +149,7 @@ Release names indicate the release type and the version being published. The ver
 | DSL release | `DSL Orchestrator & Packet Creator v<version>` | [v1.4.0 DSL](v1.4.0-dsl.md) (Java 21), [v1.2.2.0 DSL](v1.2.2.0-dsl.md) (Java 11) |
 | Test library release | `<Library Name> v<version>` | [API Test Commons v1.7.0](api-test-commons-releases/v1.7.0.md) |
 
-A grouped component release always names its major components with their versions, even when they share the same version. A single shared version in the name, such as `MOSIP Component Release - v1.3.1`, is not used because it can be confused with a platform version. The release notes list every repository included in the release.
+New grouped component releases name each major component with its version, even when they share the same version. Existing release-history titles, such as `MOSIP Component Release - v1.3.1`, may keep their earlier format, which can be confused with a platform version. The release notes list every repository included in the release.
 
 #### DSL releases
 
