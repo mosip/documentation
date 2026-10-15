@@ -144,10 +144,12 @@ Release names indicate the release type and the version being published. The ver
 | Platform release | `v<platform version>` | [v1.2.1.0](v1.2.1.0/), [v1.2.1.1](v1.2.1.1/) |
 | Platform release candidate | `v<platform version>-RC.<n>` | [v1.2.1.1-RC.1](v1.2.1.1-rc.1/) |
 | Single component release | `<Component Name> v<component version>` | [Resident Services v1.3.2](resident-services-v1.3.2.md), [Android Registration Client v1.1.1](android-registration-client-v1.1.1/) |
-| Grouped component release | `MOSIP Component Release - v<version>` when all components share a version, or `<Component A> v<version> & <Component B> v<version>` otherwise | [MOSIP Component Release - v1.3.1](mosip-component-release-v1.3.1.md), [Registration Processor 1.2.1.3 & ID Repository 1.2.3.0](registration-processor-1.2.1.3-and-id-repository-1.2.3.0/) |
+| Grouped component release | `<Component A> v<version> & <Component B> v<version>`, naming each major component with its version | [Registration Processor 1.2.1.3 & ID Repository 1.2.3.0](registration-processor-1.2.1.3-and-id-repository-1.2.3.0/) |
 | Component prerelease | `<Component Name> v<version>-beta.<n>` | [Partner Management System Revamp 1.3.0-beta.5](partner-management-system-revamp-1.3.0-beta.5/) |
 | DSL release | `DSL Orchestrator & Packet Creator v<version>` | [v1.4.0 DSL](v1.4.0-dsl.md) (Java 21), [v1.2.2.0 DSL](v1.2.2.0-dsl.md) (Java 11) |
 | Test library release | `<Library Name> v<version>` | [API Test Commons v1.7.0](api-test-commons-releases/v1.7.0.md) |
+
+A grouped component release always names its major components with their versions, even when they share the same version. A single shared version in the name, such as `MOSIP Component Release - v1.3.1`, is not used because it can be confused with a platform version. The release notes list every repository included in the release.
 
 #### DSL releases
 
