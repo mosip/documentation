@@ -235,9 +235,9 @@ However, implementers must follow the release-specific compatibility and depende
 
 The applicable test scope and compatibility constraints should be documented in the release notes.
 
-## 6. Patches, Hotfixes and Maintenance Releases
+## 6. Patches, Critical Patches and Maintenance Releases
 
-A patch, hotfix or **critical patch** may be published independently of a platform release to address a bug, security vulnerability or other urgent requirement. A critical patch is a component release that delivers an urgent fix, such as a fix for a critical bug or security vulnerability, for an older platform version that is still supported. It contains fixes only, no new features, and is identified as a critical patch in its release notes and in the release history.
+A patch or **critical patch** may be published independently of a platform release to address a bug, security vulnerability or other urgent requirement. A critical patch is a component release that delivers an urgent fix, such as a fix for a critical bug or security vulnerability, for an older platform version that is still supported. It contains fixes only, no new features, and is identified as a critical patch in its release notes and in the release history.
 
 Each component release, including a critical patch release, targets one particular platform version. Where the same issue affects more than one supported platform version, a separate patch is published for each platform version, with its own version number.
 
