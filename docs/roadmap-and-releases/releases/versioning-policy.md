@@ -122,7 +122,7 @@ Starting from platform release v1.2.1.0, the last three segments of the platform
 * **Segment 3** changes for a platform release that introduces significant new functionality or a platform-wide change, such as the Java 21 migration in v1.2.1.0.
 * **Segment 4** changes for a platform release that delivers fixes, performance improvements and other incremental changes on the same baseline, such as v1.2.1.1.
 
-Platform releases before v1.2.1.0 (for example, 1.2.0.1 and 1.2.0.2) did not strictly follow this interpretation, so their version numbers should not be read in the same way.
+Platform releases before v1.2.1.0 did not strictly follow this interpretation, so their version numbers should not be read in the same way.
 
 For practical purposes:
 
