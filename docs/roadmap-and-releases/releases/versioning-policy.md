@@ -96,7 +96,7 @@ Public Java interfaces that implementers use to extend or integrate with MOSIP s
 
 Changes outside the REST APIs, such as database schema updates, configuration changes or a change of Java runtime, do not by themselves require a MAJOR version. When a release includes such changes, its release notes must describe them along with the required migration, configuration and upgrade steps. For example, the repositories moved from Java 11 to Java 21 in version 1.3.0, a MINOR version, because the REST APIs remained backward compatible.
 
-Repository releases made before repository version v1.3.0, and maintenance releases that continue to target the older Java 11 platform versions, use the earlier four-part format. For example, `id-repository` v1.2.3.0 and `registration` v1.2.1.3 are maintenance releases for platform v1.2.0.x, while `id-repository` v1.3.1 and `registration` v1.3.1 target platform v1.2.1.x.
+Repository releases made before repository version v1.3.0, and patch or critical patch releases that continue to target the older Java 11 platform versions, use the earlier four-part format. For example, `id-repository` v1.2.3.0 and `registration` v1.2.1.3 are critical patch releases for platform v1.2.0.x, while `id-repository` v1.3.1 and `registration` v1.3.1 target platform v1.2.1.x.
 
 **Exception for infrastructure repositories:** Infrastructure and deployment repositories, such as `mosip-infra` and `k8s-infra`, are generally released along with the platform and provide its deployment path. These repositories therefore retain the four-part platform-style version format. For example, platform release v1.2.1.1 includes `mosip-infra` v1.2.1.1 and `k8s-infra` v1.2.1.3.
 
@@ -108,7 +108,7 @@ A component's version number must not be interpreted as the platform version or 
 
 MOSIP currently retains a four-part numeric versioning convention for platform releases, for example `1.2.1.1`.
 
-This convention was retained to preserve continuity with the existing MOSIP 1.2.x platform versions. All platform versions from v1.2.0 onward (1.2.x), including v1.2.0.x, v1.2.1.0 and v1.2.1.1, are releases within the same 1.2.x Long-Term Support (LTS) release and are covered by its LTS support. A new platform version within 1.2.x does not start a new LTS support period. Moving the platform immediately to a conventional three-part SemVer scheme would change the versioning progression and could create confusion around the existing platform versions and their maintenance releases.
+This convention was retained to preserve continuity with the existing MOSIP 1.2.x platform versions. All platform versions from v1.2.0 onward (1.2.x), including v1.2.0.x, v1.2.1.0 and v1.2.1.1, are releases within the same 1.2.x Long-Term Support (LTS) release and are covered by its LTS support. A new platform version within 1.2.x does not start a new LTS support period. Moving the platform immediately to a conventional three-part SemVer scheme would change the versioning progression and could create confusion around the existing platform versions and their patch releases.
 
 Starting from platform release v1.2.1.0, the last three segments of the platform version are used in a SemVer-like manner:
 
@@ -235,7 +235,7 @@ However, implementers must follow the release-specific compatibility and depende
 
 The applicable test scope and compatibility constraints should be documented in the release notes.
 
-## 6. Patches, Critical Patches and Maintenance Releases
+## 6. Patches and Critical Patches
 
 A patch or **critical patch** may be published independently of a platform release to address a bug, security vulnerability or other urgent requirement. A critical patch is a component release that delivers an urgent fix, such as a fix for a critical bug or security vulnerability, for an older platform version that is still supported. It contains fixes only, no new features, and is identified as a critical patch in its release notes and in the release history.
 
@@ -247,7 +247,7 @@ The publication date determines where the release appears in the release history
 
 **Example:** [Registration Processor 1.2.1.3 & ID Repository 1.2.3.0](registration-processor-1.2.1.3-and-id-repository-1.2.3.0/) was published in April 2026, after platform release v1.2.1.0 (December 2025). It is a critical patch for the Java 11 platform version v1.2.0.x and is compatible with that platform's components, such as `id-authentication` v1.2.1.2 and `resident-services` v1.2.1.2. It does not apply to deployments on v1.2.1.0 or v1.2.1.1, even though it was published later. Those deployments use the `registration` and `id-repository` 1.3.x versions.
 
-Maintenance releases must identify:
+Patch and critical patch releases must identify:
 
 * The affected component and its new version.
 * The target platform version.
