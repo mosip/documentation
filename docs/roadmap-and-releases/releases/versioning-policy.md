@@ -52,7 +52,7 @@ A component release does not automatically create a new platform release or chan
 **Examples:**
 
 * [Resident Services v1.3.2](resident-services-v1.3.2.md) — a single component.
-* [MOSIP Component Release v1.3.1](mosip-component-release-v1.3.1.md) — a coordinated group of components released together.
+* [ID Authentication 1.2.1.3 and Resident 1.2.1.3](id-authentication-1.2.1.3-and-resident-1.2.1.3.md) — a coordinated group of components released together, each named with its version.
 * [Registration Processor 1.2.1.3 & ID Repository 1.2.3.0](registration-processor-1.2.1.3-and-id-repository-1.2.3.0/) — a group of components targeting an older platform version.
 
 ### 2.3 Relationship Between Platform and Component Releases
