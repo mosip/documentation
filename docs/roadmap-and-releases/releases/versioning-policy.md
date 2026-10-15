@@ -158,7 +158,12 @@ DSL releases follow the component versioning conventions above:
 * DSL versions from 1.3.0 onward follow SemVer and target the Java 21 codebase, for example v1.4.0.
 * Where a DSL release is also required for Java 11 environments, it is published with a four-part version, for example v1.2.2.0, which provides functionality equivalent to v1.4.0 for Java 11.
 
-Each DSL release lists the component versions it is compatible with in its release notes.
+Because DSL scenarios test specific component behavior, a DSL release identifies both the platform version it targets and, where its scenarios depend on newer component releases, the minimum versions of those components. For example, if platform v1.2.1.0 is followed by a Registration Processor v1.4.0 component release, and a new DSL release adds scenarios for that component, the DSL release notes state "Platform v1.2.1.0 with Registration Processor v1.4.0" rather than only "Platform v1.2.1.0". The compatibility table in each DSL release lists these component versions.
+
+A DSL release can be published:
+
+* **Independently**, for example to add scenarios or improve the framework for an already released platform version and its components.
+* **Together with the component release it validates**, as a grouped component release, when the DSL changes exist mainly to test that component.
 
 #### Automation releases
 
