@@ -243,7 +243,7 @@ New features are delivered only for the latest platform version. Older platform 
 
 The publication date determines where the release appears in the release history. Its target platform and compatibility information determine which deployments can use it.
 
-**Example:** [Registration Processor 1.2.1.3 & ID Repository 1.2.3.0](registration-processor-1.2.1.3-and-id-repository-1.2.3.0/) was published in April 2026, after platform release v1.2.1.0 (December 2025). It is a critical patch for the Java 11 platform version v1.2.0.x and is compatible with that platform's components, such as `id-authentication` v1.2.1.2 and `resident-services` v1.2.1.2. It does not apply to deployments on v1.2.1.0 or v1.2.1.1, even though it was published later. Those deployments use the `registration` and `id-repository` 1.3.x versions. See the illustration in [Section 7](#id-7.-release-history-and-documentation).
+**Example:** [Registration Processor 1.2.1.3 & ID Repository 1.2.3.0](registration-processor-1.2.1.3-and-id-repository-1.2.3.0/) was published in April 2026, after platform release v1.2.1.0 (December 2025). It is a critical patch for the Java 11 platform version v1.2.0.x and is compatible with that platform's components, such as `id-authentication` v1.2.1.2 and `resident-services` v1.2.1.2. It does not apply to deployments on v1.2.1.0 or v1.2.1.1, even though it was published later. Those deployments use the `registration` and `id-repository` 1.3.x versions.
 
 Maintenance releases must identify:
 
@@ -279,10 +279,6 @@ For a platform release, the published component-version manifest identifies the 
 For a component release, the release notes identify its applicability and any additional upgrades required.
 
 Because the release history is ordered by publication date, a patch for an older platform version can appear above a newer platform release. Always check the target platform stated in the release notes before applying it.
-
-The following illustration shows how platform and component releases are organized in the release history. Component releases are grouped under the platform version they apply to. For example, the critical patch Registration Processor 1.2.1.3 & ID Repository 1.2.3.0 was published after platform v1.2.1.0, but it is listed under platform v1.2.0.x because it applies only to that platform version.
-
-<figure><img src="../../.gitbook/assets/mosip-release-history-example.svg" alt="Illustrative MOSIP release history showing platform releases v1.2.1.1, v1.2.1.0, v1.2.0.4 and v1.2.0.3, with component releases grouped under the platform version they apply to, including a critical patch for platform v1.2.0.x"><figcaption><p>Illustrative example based on published releases. See <a href="README.md">Releases</a> for the complete and current list.</p></figcaption></figure>
 
 ## 8. Why MOSIP Publishes Both Types of Release
 
