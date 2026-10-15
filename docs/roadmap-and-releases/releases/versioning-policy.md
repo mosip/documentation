@@ -92,6 +92,8 @@ MOSIP is a microservice-based application. Its services work with each other thr
 
 For example, removing or renaming an endpoint or a field, changing a field's data type, making an optional field mandatory, or changing the behavior of an existing API breaks backward compatibility and requires a MAJOR version. Adding a new endpoint or a new optional field does not.
 
+Public Java interfaces that implementers use to extend or integrate with MOSIP should likewise keep their structure and behavior unchanged in MINOR and PATCH releases.
+
 Changes outside the REST APIs, such as database schema updates, configuration changes or a change of Java runtime, do not by themselves require a MAJOR version. When a release includes such changes, its release notes must describe them along with the required migration, configuration and upgrade steps. For example, the repositories moved from Java 11 to Java 21 in version 1.3.0, a MINOR version, because the REST APIs remained backward compatible.
 
 Repository releases made before 1.3.0, and maintenance releases that continue to target the older Java 11 platform versions, use the earlier four-part format. For example, `id-repository` v1.2.3.0 and `registration` v1.2.1.3 are maintenance releases for platform v1.2.0.x, while `id-repository` v1.3.1 and `registration` v1.3.1 target platform v1.2.1.x.
