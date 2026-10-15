@@ -71,7 +71,7 @@ MOSIP uses different versioning conventions for individual repositories and cons
 
 ### 3.1 Component and Repository Versioning
 
-Starting from version **1.3.0**, MOSIP repositories follow **Semantic Versioning 2.0.0 (SemVer)** for component-level releases. Version 1.3.0 of the repositories coincides with the migration of the MOSIP codebase from Java 11 to Java 21, delivered in platform release [v1.2.1.0](v1.2.1.0/).
+Starting from repository version **v1.3.0**, MOSIP repositories follow **Semantic Versioning 2.0.0 (SemVer)** for component-level releases. This is a repository version, not a platform version. Repository version v1.3.0 coincides with the migration of the MOSIP codebase from Java 11 to Java 21, delivered in platform release [v1.2.1.0](v1.2.1.0/).
 
 Under SemVer, a version follows the format:
 
@@ -96,7 +96,7 @@ Public Java interfaces that implementers use to extend or integrate with MOSIP s
 
 Changes outside the REST APIs, such as database schema updates, configuration changes or a change of Java runtime, do not by themselves require a MAJOR version. When a release includes such changes, its release notes must describe them along with the required migration, configuration and upgrade steps. For example, the repositories moved from Java 11 to Java 21 in version 1.3.0, a MINOR version, because the REST APIs remained backward compatible.
 
-Repository releases made before 1.3.0, and maintenance releases that continue to target the older Java 11 platform versions, use the earlier four-part format. For example, `id-repository` v1.2.3.0 and `registration` v1.2.1.3 are maintenance releases for platform v1.2.0.x, while `id-repository` v1.3.1 and `registration` v1.3.1 target platform v1.2.1.x.
+Repository releases made before repository version v1.3.0, and maintenance releases that continue to target the older Java 11 platform versions, use the earlier four-part format. For example, `id-repository` v1.2.3.0 and `registration` v1.2.1.3 are maintenance releases for platform v1.2.0.x, while `id-repository` v1.3.1 and `registration` v1.3.1 target platform v1.2.1.x.
 
 **Exception for infrastructure repositories:** Infrastructure and deployment repositories, such as `mosip-infra` and `k8s-infra`, are generally released along with the platform and provide its deployment path. These repositories therefore retain the four-part platform-style version format. For example, platform release v1.2.1.1 includes `mosip-infra` v1.2.1.1 and `k8s-infra` v1.2.1.3.
 
@@ -126,7 +126,7 @@ Platform releases before v1.2.1.0 did not strictly follow this interpretation, s
 
 For practical purposes:
 
-* Repositories from version 1.3.0 onward follow SemVer 2.0.0, except infrastructure repositories, which retain the four-part format.
+* Repositories from repository version v1.3.0 onward follow SemVer 2.0.0, except infrastructure repositories, which retain the four-part format.
 * The platform retains its established four-part version format.
 * A platform release consolidates the required component versions into a validated baseline.
 * Platform version numbers and repository version numbers represent different things and must not be used interchangeably. Even infrastructure repositories, which use the four-part format, are versioned on their own: platform v1.2.1.1 includes `k8s-infra` v1.2.1.3, not v1.2.1.1.
@@ -155,7 +155,7 @@ DSL releases cover the DSL Orchestrator and Packet Creator, which are used for s
 
 DSL releases follow the component versioning conventions above:
 
-* DSL versions from 1.3.0 onward follow SemVer and target the Java 21 codebase, for example v1.4.0.
+* DSL versions from v1.3.0 onward follow SemVer and target the Java 21 codebase, for example v1.4.0.
 * Where a DSL release is also required for Java 11 environments, it is published with a four-part version, for example v1.2.2.0, which provides functionality equivalent to v1.4.0 for Java 11.
 
 Because DSL scenarios test specific component behavior, a DSL release identifies both the platform version it targets and, where its scenarios depend on newer component releases, the minimum versions of those components. For example, if platform v1.2.1.0 is followed by a Registration Processor v1.4.0 component release, and a new DSL release adds scenarios for that component, the DSL release notes state "Platform v1.2.1.0 with Registration Processor v1.4.0" rather than only "Platform v1.2.1.0". The compatibility table in each DSL release lists these component versions.
