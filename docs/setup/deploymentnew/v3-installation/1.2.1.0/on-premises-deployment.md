@@ -194,7 +194,7 @@ This provisions the RKE2 cluster — installing the binary, distributing config 
 
 #### Step 5 — Securely Store the Kubeconfig File
 
-After the cluster is successfully created, the kubeconfig file is saved in the `ansible/playbook/` directory as `{{ cluster_domain }}-{{ inventory_hostname }}.yaml`. Copy it to your `.kube` directory:
+After the cluster is successfully created, the kubeconfig file is saved in the `playbook/kubeconfig` directory as `{{ cluster_domain }}-{{ inventory_hostname }}.yaml`. Copy it to your `.kube` directory:
 
 ```bash
 cp {{ cluster_domain }}-{{ inventory_hostname }}.yaml $HOME/.kube/<cluster_name>_config
@@ -244,7 +244,7 @@ helm install \
   --namespace ingress-nginx \
   --version 4.10.0 \
   --create-namespace \
-  -f ingress-nginx.values.yaml
+  -f ingress-nginx-np.values.yaml
 ```
 
 > **Note:**
@@ -310,31 +310,23 @@ cd /home/ubuntu/k8s-infra/storage-class/nfs/
 sudo ./install-nfs-server.sh
 ```
 
-> **Note:** The script will prompt for an environment name:
->
-> ```
-> Please Enter Environment Name: <envName>
-> ```
->
-> where `envName` is the environment name e.g. `dev`, `qa`, `uat`. The NFS share will be exported at `/srv/nfs/mosip/<envName>`.
-
 * Switch back to your personal computer and run the NFS client provisioner:
 
 ```bash
 cd $K8_ROOT/storage-class/nfs/
-./install-nfs-client-provisioner.sh
+./install-nfs-csi.sh
 ```
 
 > **Note:** The script will prompt for:
 >
 > * NFS Server: IP of the NFS server.
-> * NFS Path: Path for persisted data. e.g. `/srv/nfs/mosip/`
+> * NFS Path: Path for persisted data. e.g. `/srv/nfs/`
 
 * Post-installation checks:
   * Check the status of the NFS Client Provisioner:
 
 ```bash
-kubectl -n nfs get deployment.apps/nfs-client-provisioner
+kubectl -n nfs get deployment.apps/csi-nfs-controller
 ```
 
 * Check the storage class is registered:
@@ -346,15 +338,8 @@ kubectl get storageclass
 Expected output:
 
 ```
-NAME                 PROVISIONER                            RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
-longhorn (default)   driver.longhorn.io                     Delete          Immediate           true                   57d
-nfs-client           cluster.local/nfs-client-provisioner   Delete          Immediate           true                   40s
-```
-
-* Set `nfs-client` as the default storage class:
-
-```bash
-kubectl patch storageclass nfs-client -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
+NAME                       PROVISIONER                            RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
+nfs-csi (default)          cluster.local/csi-nfs-controller       Delete          Immediate           true                   40s
 ```
 
 ***
@@ -487,10 +472,10 @@ Keycloak is an OAuth 2.0-compliant Identity and Access Management (IAM) system u
 
 ```bash
 cd $K8_ROOT/observation/keycloak
-./install.sh <iam.host.name>
+./install.sh <keycloak.host.name>
 ```
 
-After installation, access Keycloak at `iam.mosip.net` and retrieve credentials as per the post-installation steps.
+After installation, access Keycloak at `keycloak.mosip.net` and retrieve credentials as per the post-installation steps.
 
 #### 5.c. Keycloak — Rancher UI Integration
 
@@ -663,7 +648,7 @@ This provisions the RKE2 cluster — installing the binary, distributing config 
 
 #### Step 5 — Securely Store the Kubeconfig File
 
-After the cluster is successfully created, the kubeconfig file is saved in the `ansible/playbook/` directory as `{{ cluster_domain }}-{{ inventory_hostname }}.yaml`. Copy it to your `.kube` directory:
+After the cluster is successfully created, the kubeconfig file is saved in the `playbook/kubeconfig` directory as `{{ cluster_domain }}-{{ inventory_hostname }}.yaml`. Copy it to your `.kube` directory:
 
 ```bash
 cp {{ cluster_domain }}-{{ inventory_hostname }}.yaml $HOME/.kube/<cluster_name>_config
@@ -791,31 +776,23 @@ cd /home/ubuntu/k8s-infra/storage-class/nfs/
 sudo ./install-nfs-server.sh
 ```
 
-> **Note:** The script will prompt for an environment name:
->
-> ```
-> Please Enter Environment Name: <envName>
-> ```
->
-> where `envName` is the environment name e.g. `dev`, `qa`, `uat`. The NFS share will be exported at `/srv/nfs/mosip/<envName>`.
-
 * Switch back to your personal computer and run the NFS client provisioner:
 
 ```bash
 cd $K8_ROOT/storage-class/nfs/
-./install-nfs-client-provisioner.sh
+./install-nfs-csi.sh
 ```
 
 > **Note:** The script will prompt for:
 >
 > * NFS Server: IP of the NFS server.
-> * NFS Path: Path for persisted data. e.g. `/srv/nfs/mosip/`
+> * NFS Path: Path for persisted data. e.g. `/srv/nfs/`
 
 * Post-installation checks:
   * Check the status of the NFS Client Provisioner:
 
 ```bash
-kubectl -n nfs get deployment.apps/nfs-client-provisioner
+kubectl -n nfs get deployment.apps/csi-nfs-controller
 ```
 
 * Check the storage class is registered:
@@ -1125,6 +1102,17 @@ See the [detailed installation instructions](https://docs.mosip.io/1.2.0/deploym
 
 With the Kubernetes cluster and all external dependencies in place, proceed with MOSIP service deployment.
 
+> **Note:** Deploy the additional Artifactory service with the 1.2.0.2 release for Regclient. Ensure that the artifactory-server-share ConfigMap in Regclient is updated to point to the newly deployed Artifactory service running version 1.2.0.2.
+
+* Artifactory
+
+```
+nano install.sh
+###update NS=artifactory-1202 & CHART_VERSION=12.0.2
+cd $INFRA_ROOT/deployment/v3/mosip/artifactory
+./install.sh
+```
+
 ```bash
 cd $INFRA_ROOT/deployment/v3/mosip/all
 ./install-all.sh
@@ -1133,32 +1121,7 @@ cd $INFRA_ROOT/deployment/v3/mosip/all
 > **Note:**
 >
 > * If `install-all.sh` fails at any point, follow the [MOSIP Modules Deployment](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/mosip-modules-deployment) guide from the point of failure.
-> * The config-server and admin service may experience startup delays in this version. Apply the following fixes if needed:
 >
-> **For config-server** — increase `failureThreshold` for `startupProbe` to 60:
->
-> ```bash
-> kubectl -n config-server edit deployment config-server
-> ```
->
-> **For admin-service** — increase `failureThreshold` for `startupProbe` to 60:
->
-> ```bash
-> kubectl -n admin edit deployment admin-service
-> ```
->
-> Once admin-service is running, re-execute `install.sh` after commenting out the following lines:
->
-> ```bash
-> #echo Installing Admin-Proxy into Masterdata and Keymanager.
-> #kubectl -n $NS apply -f admin-proxy.yaml
-> #echo Installing admin hotlist service.
-> #helm -n $NS install admin-hotlist mosip/admin-hotlist --version $CHART_VERSION
-> #echo Installing admin service. Will wait till service gets installed.
-> #helm -n $NS install admin-service mosip/admin-service \
-> #  --set istio.corsPolicy.allowOrigins\[0\].prefix=https://$ADMIN_HOST \
-> #  --wait --version $CHART_VERSION
-> ```
 
 ***
 
