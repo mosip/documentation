@@ -203,6 +203,14 @@ Before upgrading a component, implementers must:
 5. Follow the configuration, deployment and upgrade instructions, including the upgrade runbook or guides if available.
 6. Perform appropriate integration and regression testing in the target environment.
 
+**Upgrade responsibility:** An implementer who adopts component releases between platform releases is responsible for the additional upgrade effort this creates. In particular:
+
+* Keep a record of the component versions, database migrations and configuration changes applied on top of the deployed platform version.
+* When moving to the next platform release, adapt the official upgrade runbook to the deployment's actual starting point. For example, skip or verify migrations that were already applied, and check whether any adopted component is newer than the version included in the target platform release.
+* Perform the integration and regression testing needed to confirm the combined deployment works as expected.
+
+MOSIP's upgrade runbooks and guides describe the path from one platform release to the next; they do not cover every combination of component releases.
+
 Component releases offer flexibility, but they require implementers to understand the dependencies and upgrade implications of the selected release.
 
 A component release should not be assumed to have undergone the same full-platform validation as a consolidated platform release.
