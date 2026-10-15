@@ -99,12 +99,6 @@ eSignet enables applications to authenticate users using trusted identity system
 
 [FAQ](https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/general/faq) | [Glossary](https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/general/glossary) | [Resources](https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/general/resources) | [Contribute](https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/contribution) | [GitHub](https://github.com/mosip/esignet) | [Contact / Support](https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/general/contact-us)
 
-
-
-
-
-
-
 ***
 
 {% hint style="warning" %}
@@ -161,7 +155,7 @@ eSignet is MOSIP's open-source authentication platform. It lets any application 
 <table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td><h4>eSignet 2.x (Go)</h4></td><td>The new Go engine. Recommended for new implementations.</td><td><a href="https://app.gitbook.com/o/-M1FyzBr-VmticWYm8QI/s/GLWCTe02ubJM6M7TcHlg/">Home eSignet-2.0.0</a></td><td><a href=".gitbook/assets/card-version-go.svg">card-version-go.svg</a></td></tr><tr><td><h4>eSignet 1.x (Java)</h4></td><td>Maintained for existing deployments, and for features not yet in 2.x, such as Signup and wallet login.</td><td><a href="https://app.gitbook.com/o/-M1FyzBr-VmticWYm8QI/s/ylzvZHp30DQ3rNCClELV/">Home eSignet</a></td><td><a href=".gitbook/assets/card-version-java.svg">card-version-java.svg</a></td></tr><tr><td><h4>Release notes and roadmap</h4></td><td>Every release so far, and what's coming next.</td><td><a href="https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/roadmap-and-releases">Roadmap and Releases</a></td><td><a href=".gitbook/assets/card-version-roadmap.svg">card-version-roadmap.svg</a></td></tr></tbody></table>
 
 {% hint style="info" %}
-**Coming from eSignet Java?** eSignet 2.0.0 does not include the **Signup** product or **wallet-based login** yet. Wallet login is planned for a future release using OpenID4VP.
+**Coming from eSignet Java?** eSignet 2.0.0 does not include the **Signup** product or **wallet-based login** yet. Wallet login is planned for a future release using OpenID4VP..
 
 * [Signup documentation (eSignet 1.x)](https://app.gitbook.com/o/-M1FyzBr-VmticWYm8QI/s/ylzvZHp30DQ3rNCClELV/)
 * [Planned functionality](https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/roadmap-and-releases/roadmap/roadmap-2026)
@@ -169,4 +163,4 @@ eSignet is MOSIP's open-source authentication platform. It lets any application 
 
 ### Resources and support
 
-[FAQ](https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/general/faq) | [Glossary](https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/general/glossary) | [Resources](https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/general/resources) | [Contribute](https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/contribution) | [GitHub](https://github.com/mosip/esignet) | [Contact and support](https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/general/contact-us)
+[FAQ](https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/general/faq) | [Glossary](https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/general/glossary) | [Resources](https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/general/resources) | [Contribute](https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/contribution) | [GitHub](https://github.com/mosip/esignet) | [Contact and support](https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/general/contact-us) |
