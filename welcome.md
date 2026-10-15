@@ -2,9 +2,35 @@
 description: Authenticate users with trusted digital identities through open standards.
 hidden: true
 icon: hand-wave
+cover: .gitbook/assets/es-docs-home-banner-1.jpg
+coverY: 0
+layout:
+  width: default
+  cover:
+    visible: true
+    size: full
+    mask: none
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: false
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# eSignet
+# Welcome
 
 ### What is eSignet?
 
@@ -17,7 +43,7 @@ eSignet enables applications to authenticate users using trusted identity system
 
 <details>
 
-<summary><i class="fa-video" style="color:$danger;">:video:</i>  <mark style="color:$primary;"><strong>Watch it here!</strong></mark></summary>
+<summary><i class="fa-video" style="color:$danger;">:video:</i> <mark style="color:$primary;"><strong>Watch it here!</strong></mark></summary>
 
 {% embed url="https://youtu.be/ZfUPRv71s_0?si=cr_Q8mFmad93kFS6" %}
 
