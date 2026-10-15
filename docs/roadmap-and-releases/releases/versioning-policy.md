@@ -77,11 +77,22 @@ Under SemVer, a version follows the format:
 
 `MAJOR.MINOR.PATCH`
 
-* **MAJOR:** Introduces incompatible API changes.
-* **MINOR:** Introduces backward-compatible functionality.
-* **PATCH:** Introduces backward-compatible bug fixes.
+* **MAJOR:** Introduces changes that break REST API backward compatibility.
+* **MINOR:** Introduces new functionality while keeping REST APIs backward compatible.
+* **PATCH:** Introduces bug fixes while keeping REST APIs backward compatible.
 
 Prerelease identifiers and build metadata follow the SemVer 2.0.0 specification, for example `1.3.0-beta.5`.
+
+#### What backward compatibility means in MOSIP
+
+MOSIP is a microservice-based application. Its services work with each other through REST APIs, and implementers and adopters build their own solutions on top of these REST APIs. In MOSIP, backward compatibility therefore refers to the **structure and behavior of the REST APIs** that a component exposes.
+
+* **MINOR and PATCH releases** must keep the structure and behavior of existing REST APIs backward compatible, so that other MOSIP services and solutions built on these APIs continue to work without changes.
+* **MAJOR releases** are required whenever a change breaks this compatibility.
+
+For example, removing or renaming an endpoint or a field, changing a field's data type, making an optional field mandatory, or changing the behavior of an existing API breaks backward compatibility and requires a MAJOR version. Adding a new endpoint or a new optional field does not.
+
+Changes outside the REST APIs, such as database schema updates, configuration changes or a change of Java runtime, do not by themselves require a MAJOR version. When a release includes such changes, its release notes must describe them along with the required migration, configuration and upgrade steps. For example, the repositories moved from Java 11 to Java 21 in version 1.3.0, a MINOR version, because the REST APIs remained backward compatible.
 
 Repository releases made before 1.3.0, and maintenance releases that continue to target the older Java 11 platform versions, use the earlier four-part format. For example, `id-repository` v1.2.3.0 and `registration` v1.2.1.3 are maintenance releases for platform v1.2.0.x, while `id-repository` v1.3.1 and `registration` v1.3.1 target platform v1.2.1.x.
 
