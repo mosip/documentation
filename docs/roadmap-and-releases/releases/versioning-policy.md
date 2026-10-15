@@ -203,7 +203,7 @@ Before upgrading a component, implementers must:
 3. Review any dependent component upgrades that are required.
 4. Review database schema changes and execute the documented migration steps, where applicable.
 5. Follow the configuration, deployment and upgrade instructions, including the upgrade runbook or guides if available.
-6. Perform appropriate integration and regression testing in the target environment.
+6. Perform integration and regression testing in a non-production environment that mirrors the deployment, such as staging or pre-production, before applying the release to production.
 
 **Upgrade responsibility:** An implementer who adopts component releases between platform releases is responsible for the additional upgrade effort this creates. In particular:
 
