@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="A pointer clicking a sign-in button, for trying the live demo">
+<rect width="800" height="450" fill="#FFF7EA"/>
+<circle cx="400" cy="225" r="185" fill="#FFE4B8"/>
+<rect x="230" y="150" width="340" height="90" rx="45" fill="#03A2FA" stroke="#024191" stroke-width="6"/>
+<rect x="315" y="187" width="130" height="16" rx="8" fill="#FFFFFF"/>
+<path d="M470,205 L470,325 L498,297 L520,345 L542,335 L520,289 L560,289 Z" fill="#024191" stroke="#FFFFFF" stroke-width="8" stroke-linejoin="round" paint-order="stroke"/>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="A person inside a dashed frame, for a test identity">
+<rect width="800" height="450" fill="#FFF7EA"/>
+<circle cx="400" cy="225" r="185" fill="#FFE4B8"/>
+<rect x="285" y="110" width="230" height="230" rx="36" fill="#FFFFFF" stroke="#024191" stroke-width="8" stroke-dasharray="22 16"/>
+<circle cx="400" cy="195" r="42" fill="#FD9300"/>
+<path d="M326,305 a74,62 0 0 1 148,0 Z" fill="#024191"/>
+</svg>

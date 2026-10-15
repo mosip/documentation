@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="A switch turned on with a check mark, for user consent">
+<rect width="800" height="450" fill="#FFF7EA"/>
+<circle cx="400" cy="225" r="185" fill="#FFE4B8"/>
+<rect x="250" y="150" width="300" height="150" rx="75" fill="#03A2FA" stroke="#024191" stroke-width="8"/>
+<circle cx="475" cy="225" r="55" fill="#FFFFFF" stroke="#024191" stroke-width="8"/>
+<path d="M452,226 L469,243 L499,210" fill="none" stroke="#FD9300" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

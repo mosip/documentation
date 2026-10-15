@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="A certified badge with a check mark, for standards-based login">
+<rect width="800" height="450" fill="#FFF7EA"/>
+<circle cx="400" cy="225" r="185" fill="#FFE4B8"/>
+<path d="M345,280 L320,375 L352,362 L372,392 L392,300 Z M455,280 L480,375 L448,362 L428,392 L408,300 Z" fill="#03A2FA" stroke="#024191" stroke-width="6" stroke-linejoin="round"/>
+<circle cx="400" cy="205" r="100" fill="#FFFFFF" stroke="#024191" stroke-width="8"/>
+<path d="M355,207 L388,240 L448,175" fill="none" stroke="#FD9300" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
