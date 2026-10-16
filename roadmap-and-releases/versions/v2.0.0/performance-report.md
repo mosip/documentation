@@ -16,7 +16,9 @@ No major performance degradation or bottlenecks were observed throughout the tes
 
 ## **Performance Improvements**
 
-In this release the core authentication engine has been migrated from Java to Go, for better long-term sustainability, performance and efficiency. Go, as a runtime, has been judged to be better suited to the kind of high-throughput, low-latency authentication workloads that a national identity backend needs to sustain. Improvements have been made in caching, connection management. Go configs have also been tuned to match varying possible auth response times.
+With this release, the core authentication engine has been migrated from Java to Go. The change brings in lower hardware requirements and improved overall response times.&#x20;
+
+Enhancements has also come to caching and connection management. In addition, Go configurations have been tuned to accommodate varying authentication response times. The new Go implementation is based on the ‘ThunderID engine’ from WSO2.
 
 ## **Test Environment**
 
