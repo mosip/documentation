@@ -15,23 +15,23 @@ Once an eSignet instance is up and running, tuning its behavior happens across a
 
 The full list of environment variables and `deployment.yaml` settings for `esignet-service` and `oidc-ui`. Refer to it whenever you need an exact variable name, default value, or precedence rule.
 
-See the full reference here _(Link TBA)_ for every property and detail.
+See the full reference [here](https://github.com/mosip/esignet/blob/master/docs/configuration.md) for every property and detail.
 
 #### ACR: Which Authentication Methods a Client Can Request
 
 Defines the fixed `mosip:idp:acr:*` values a client's `authContextRefs` can request, the ACR-to-AMR mapping advertised in discovery, and how each ACR value maps to an actual login screen (OTP, password, biometrics, KBI) in the flow YAML.
 
-See the full reference here _(Link TBA)_ for every property and detail.
+See the full reference [here](https://github.com/mosip/esignet/blob/master/docs/configuration/acr.md) for every property and detail.
 
 #### Claims: What Personal Data a Client Can Receive
 
 Defines the two-plane claim model — a per-client claims allow-list and a deployment-wide scope-to-claims mapping, with a claim released only if it appears in both — plus how ID token and userinfo delivery (signed vs. encrypted) is configured per client.
 
-See the full reference here _(Link TBA)_ for every property and detail.
+See the full reference [here](https://github.com/mosip/esignet/blob/master/docs/configuration/claims.md)  for every property and detail.
 
 #### Login ID: What Identifiers Users Can Log In With
 
 Defines the shipped login-ID types — UIN/VID, mobile number, email, and NRC ID, plus a fifth KBI-only identifier — and each one's validation rule. Configured directly in the flow YAML, not `deployment.yaml`.
 
-See the full reference here _(Link TBA)_ for every property and detail.
+See the full reference [here](https://github.com/mosip/esignet/blob/master/docs/configuration/login-id.md) for every property and detail.
 
