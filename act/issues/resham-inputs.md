@@ -1,3 +1,28 @@
+# Issues
+
+## Keshav's
+
+- eSignet 1.x JAVA and eSignet 2.x Go stream debate
+    - Versions and migration (3 cards and here too the version name calling here should be defined).
+- Why eSignet? - (A little smaller icon) - Links will not be here
+- Identify which card does not have links (Which it should have)
+    - 4. Connect your first app
+- Get the content reviewed by Rachik as well once.
+
+
+## Iteration - 2 
+- The statement on the banner about eSignet Docs needs to be revisited. We can avoid the word Modern. (A modern and inclusive Digital Identity Authentication Solution)
+- Understand eSignet > Make it "Understand More About eSignet".
+
+- The statement on the banner about eSignet Docs needs to be revisited. We can avoid the word Modern.
+- Understand eSignet > Make it "Understand More About eSignet"
+
+Why eSignet? - Second approach with icons/images on the cards is nice if we can have smaller icons, otherwise first one with maybe some highlights around the card to bring some indication these are clickable cards..
+
+
+
+
+## Iteration - 1
 The current eSignet home page has most of the right content, but the
 sequence feels slightly inverted. A first-time visitor currently
 encounters **version selection → integration tracks → what's new → quick
