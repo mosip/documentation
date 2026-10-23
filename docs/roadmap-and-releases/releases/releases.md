@@ -42,6 +42,10 @@ Performance, stability and resource optimisation across the Registration Process
 {% endhint %}
 
 {% tabs %}
+{% tab title="Prerelease" icon="flask" %}
+* [v1.2.1.1-RC.1](v1.2.1.1-rc.1/) (1 Jun 2026)
+{% endtab %}
+
 {% tab title="Included in This Release" icon="cubes" %}
 **Repositories shipped with v1.2.1.1 (19)**
 
@@ -86,9 +90,6 @@ Performance, stability and resource optimisation across the Registration Process
 | 28 Sep 2026 | [Resident Services v1.3.2](resident-services-v1.3.2.md) | <mark style="background-color:green;">Patch</mark> | Platform module | Fixes OTP handling in the API test rig and adds 43 automated test cases. |
 {% endtab %}
 
-{% tab title="Pre-Releases (1)" icon="flask" %}
-* [v1.2.1.1-RC.1](v1.2.1.1-rc.1/) (1 Jun 2026)
-{% endtab %}
 {% endtabs %}
 
 ***
@@ -104,6 +105,13 @@ Stable, production-ready migration from Java 11 to Java 21, consolidating the 1.
 {% endhint %}
 
 {% tabs %}
+{% tab title="Prerelease" icon="flask" %}
+* [1.2.1.0-beta.1 Part 4](1.2.1.0-beta.1-part-4/) (10 Jul 2025)
+* [1.2.1.0-beta.1 Part 3](1.2.1.0-beta.1-part-3.md) (18 Mar 2025)
+* [1.2.1.0-beta.1 Part 2](1.2.1.0-beta.1-part-2/) (16 Dec 2024)
+* [1.2.1.0-beta.1 Part 1](1.3.0-beta.1-mock-service-and-converters.md) (26 Nov 2024)
+{% endtab %}
+
 {% tab title="Included in This Release" icon="cubes" %}
 **Repositories shipped with v1.2.1.0 (37)**
 
@@ -182,12 +190,6 @@ Stable, production-ready migration from Java 11 to Java 21, consolidating the 1.
 | 22 Jan 2026 | [API Test Commons v1.3.6](api-test-commons-releases/v1.3.6.md)                                                        | <mark style="background-color:green;">Patch</mark>  | Tooling         |                                                                                         | Fixes a configuration issue found after v1.3.5.                                             |
 {% endtab %}
 
-{% tab title="Pre-Releases (4)" icon="flask" %}
-* [1.2.1.0-beta.1 Part 4](1.2.1.0-beta.1-part-4/) (10 Jul 2025)
-* [1.2.1.0-beta.1 Part 3](1.2.1.0-beta.1-part-3.md) (18 Mar 2025)
-* [1.2.1.0-beta.1 Part 2](1.2.1.0-beta.1-part-2/) (16 Dec 2024)
-* [1.2.1.0-beta.1 Part 1](1.3.0-beta.1-mock-service-and-converters.md) (26 Nov 2024)
-{% endtab %}
 {% endtabs %}
 
 ***
@@ -203,6 +205,10 @@ Aligns MOSIP components with the new infrastructure repository for the rapid dep
 {% endhint %}
 
 {% tabs %}
+{% tab title="Prerelease" icon="flask" %}
+N/A
+{% endtab %}
+
 {% tab title="Included in This Release" icon="cubes" %}
 **Repositories shipped with 1.2.0.4 (5)**
 
@@ -243,6 +249,10 @@ Patch update that improves platform performance and resolves critical bugs.
 {% endhint %}
 
 {% tabs %}
+{% tab title="Prerelease" icon="flask" %}
+N/A
+{% endtab %}
+
 {% tab title="Included in This Release" icon="cubes" %}
 **Repositories shipped with 1.2.0.3 (12)**
 
@@ -287,6 +297,10 @@ Fixes critical reported bugs to improve stability and usability.
 {% endhint %}
 
 {% tabs %}
+{% tab title="Prerelease" icon="flask" %}
+N/A
+{% endtab %}
+
 {% tab title="Included in This Release" icon="cubes" %}
 **Repositories shipped with 1.2.0.2 (7)**
 
@@ -349,6 +363,13 @@ Brings together everything released in beta, including the upgrade to V3 archite
 {% endhint %}
 
 {% tabs %}
+{% tab title="Prerelease" icon="flask" %}
+* [Beta 4](release-notes-1.2.0.1-b4/) (12 Jan 2024)
+* [Beta 3](release-notes-1.2.0.1-b3/) (14 Apr 2023)
+* [Beta 2](release-notes-1.2.0.1-b2.md) (8 Jan 2023)
+* [Beta 1](release-notes-1.2.0.1-beta/) (14 Oct 2022)
+{% endtab %}
+
 {% tab title="Included in This Release" icon="cubes" %}
 **Repositories shipped with 1.2.0.1 (44)**
 
@@ -404,12 +425,6 @@ Brings together everything released in beta, including the upgrade to V3 archite
 No separate component releases between 1.2.0.1 and 1.2.0.2 (19 Mar 2024 – 4 Apr 2024).
 {% endtab %}
 
-{% tab title="Pre-Releases (4)" icon="flask" %}
-* [Beta 4](release-notes-1.2.0.1-b4/) (12 Jan 2024)
-* [Beta 3](release-notes-1.2.0.1-b3/) (14 Apr 2023)
-* [Beta 2](release-notes-1.2.0.1-b2.md) (8 Jan 2023)
-* [Beta 1](release-notes-1.2.0.1-beta/) (14 Oct 2022)
-{% endtab %}
 {% endtabs %}
 
 ***
@@ -425,6 +440,10 @@ The Long Term Support release: manageability, usability, performance, security a
 {% endhint %}
 
 {% tabs %}
+{% tab title="Prerelease" icon="flask" %}
+N/A
+{% endtab %}
+
 {% tab title="Included in This Release" icon="cubes" %}
 **Repositories shipped with 1.2.0 (35)**
 
@@ -643,4 +662,3 @@ Fixes a configuration issue found after v1.3.5.
 {% endhint %}
 
 </details>
-
