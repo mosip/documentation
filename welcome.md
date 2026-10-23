@@ -38,7 +38,7 @@ layout:
 
 ### What is eSignet?
 
-eSignet is an open-source authentication platform. It lets any application log users in with a trusted digital identity over OpenID Connect, without tying the application to a single identity provider.
+eSignet is an open-source authentication platform MOSIP. It lets any application log users in with a trusted digital identity over OpenID Connect, without tying the application to a single identity provider.
 
 * **Standards-based**: Acts as an OpenID Connect (OIDC) provider, so applications log users in through a standard protocol.
 * **Identity-system agnostic**: Works with any identity system that can verify a person and return their details, not just MOSIP.
@@ -75,7 +75,7 @@ eSignet is an open-source authentication platform. It lets any application log u
 
 ### Get started locally
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td><h4>1. Run eSignet locally</h4></td><td>Set up eSignet on your machine.</td><td><a href="https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/local-deployment/local-setup">Local Setup</a></td><td><a href=".gitbook/assets/card-local-run.svg">card-local-run.svg</a></td></tr><tr><td><h4>2. Set up the mock identity system</h4></td><td>Load test identities before connecting a real identity system.</td><td><a href="https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/local-deployment/local-setup/mock-id-system">Mock Identity System</a></td><td><a href=".gitbook/assets/card-local-mock-id.svg">card-local-mock-id.svg</a></td></tr><tr><td><h4>3. Configure eSignet</h4></td><td>Change key settings to match your environment.</td><td><a href="https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/develop/configuration">Configure eSignet</a></td><td><a href=".gitbook/assets/card-local-configure.svg">card-local-configure.svg</a></td></tr><tr><td><h4>4. Connect your first app</h4></td><td>Integrate a relying party application with your local eSignet.</td><td></td><td><a href=".gitbook/assets/card-local-connect-app.svg">card-local-connect-app.svg</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td><h4>1. Run eSignet locally</h4></td><td>Set up eSignet on your machine.</td><td><a href="https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/local-deployment/local-setup">Local Setup</a></td><td><a href=".gitbook/assets/card-local-run.svg">card-local-run.svg</a></td></tr><tr><td><h4>2. Set up the mock identity system</h4></td><td>Load test identities before connecting a real identity system.</td><td><a href="https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/local-deployment/local-setup/mock-id-system">Mock Identity System</a></td><td><a href=".gitbook/assets/card-local-mock-id.svg">card-local-mock-id.svg</a></td></tr><tr><td><h4>4. Onboard your relying party</h4></td><td>Integrate a relying party application with your local eSignet.</td><td></td><td><a href=".gitbook/assets/card-local-connect-app.svg">card-local-connect-app.svg</a></td></tr></tbody></table>
 
 ### Understand eSignet
 
@@ -83,7 +83,7 @@ eSignet is an open-source authentication platform. It lets any application log u
 
 ### Versions and migration
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td><h4>eSignet 2.x</h4></td><td>Recommended for new implementations. Built in Go.</td><td>Get started with eSignet 2.x</td><td><a href="https://app.gitbook.com/o/-M1FyzBr-VmticWYm8QI/s/GLWCTe02ubJM6M7TcHlg/">Home eSignet-2.0.0</a></td><td><a href=".gitbook/assets/card-version-go.svg">card-version-go.svg</a></td></tr><tr><td><h4>eSignet 1.x</h4></td><td>For organizations operating an existing Java-based deployment. Review feature<br>availability and migration guidance before choosing this version.</td><td>View eSignet 1.x documentation</td><td><a href="https://app.gitbook.com/o/-M1FyzBr-VmticWYm8QI/s/ylzvZHp30DQ3rNCClELV/">Home eSignet</a></td><td><a href=".gitbook/assets/card-version-java.svg">card-version-java.svg</a></td></tr><tr><td><strong>Migrating from eSignet 1.x?</strong></td><td>Compare capabilities, understand changes, and plan your transition to<br>eSignet 2.x.</td><td>Read the migration guide</td><td></td><td><a href=".gitbook/assets/card-version-migration.svg">card-version-migration.svg</a></td></tr><tr><td><h4>Release notes and roadmap</h4></td><td>Every release so far, and what's coming next.</td><td></td><td><a href="https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/roadmap-and-releases">Roadmap and Releases</a></td><td><a href=".gitbook/assets/card-version-roadmap.svg">card-version-roadmap.svg</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td><h4>eSignet 2.x</h4></td><td>Recommended for new implementations. Built in Go.</td><td>Get started with eSignet 2.x</td><td><a href="https://app.gitbook.com/o/-M1FyzBr-VmticWYm8QI/s/GLWCTe02ubJM6M7TcHlg/">Home eSignet-2.0.0</a></td><td><a href=".gitbook/assets/card-version-go.svg">card-version-go.svg</a></td></tr><tr><td><h4>eSignet 1.x</h4></td><td>For organizations operating an existing Java-based deployment. Review feature<br>availability and migration guidance before choosing this version.</td><td>View eSignet 1.x documentation</td><td><a href="https://app.gitbook.com/o/-M1FyzBr-VmticWYm8QI/s/ylzvZHp30DQ3rNCClELV/">Home eSignet</a></td><td><a href=".gitbook/assets/card-version-java.svg">card-version-java.svg</a></td></tr><tr><td><h4>Migrating from eSignet 1.x?</h4></td><td>Compare capabilities, understand changes, and plan your transition to<br>eSignet 2.x.</td><td>Read the migration guide</td><td></td><td><a href=".gitbook/assets/card-version-migration.svg">card-version-migration.svg</a></td></tr><tr><td><h4>Release notes and roadmap</h4></td><td>Every release so far, and what's coming next.</td><td></td><td><a href="https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/roadmap-and-releases">Roadmap and Releases</a></td><td><a href=".gitbook/assets/card-version-roadmap.svg">card-version-roadmap.svg</a></td></tr></tbody></table>
 
 {% hint style="info" %}
 **Coming from eSignet Java?** eSignet 2.0.0 does not include the **Signup** product or **wallet-based login** yet. Wallet login is planned for a future release using OpenID4VP..
@@ -95,20 +95,6 @@ eSignet is an open-source authentication platform. It lets any application log u
 ### Resources and support
 
 [FAQ](https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/general/faq) | [Glossary](https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/general/glossary) | [Resources](https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/general/resources) | [Contribute](https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/contribution) | [GitHub](https://github.com/mosip/esignet) | [Contact and support](https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/general/contact-us) |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ***
 
@@ -180,5 +166,3 @@ eSignet enables applications to authenticate users using trusted identity system
 [FAQ](https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/general/faq) | [Glossary](https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/general/glossary) | [Resources](https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/general/resources) | [Contribute](https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/contribution) | [GitHub](https://github.com/mosip/esignet) | [Contact / Support](https://app.gitbook.com/s/GLWCTe02ubJM6M7TcHlg/general/contact-us)
 
 ***
-
-
