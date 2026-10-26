@@ -1,7 +1,7 @@
 # v2.0.0
 
 **Release Number:** v2.0.0\
-**Release Date:** Coming Soon!
+**Release Date:** 24th Sep, 2026
 
 ### Overview
 
@@ -33,7 +33,7 @@ Performance testing for this release is complete: the Go-based engine delivers b
 
 #### 5. New eSignet (Go) Documentation
 
-A complete documentation set for the Go-based eSignet is now available, covering architecture, the developer guide, relying party onboarding, and end-to-end integration — replacing what was previously just a raw API specification. See Documentation below.
+A complete documentation set for the Go-based eSignet is now available, covering architecture, the developer guide, relying party onboarding, and end-to-end integration. See [Documentation](./#documentation) below.
 
 #### 6. Reference Plugin Implementations Retained
 
@@ -85,7 +85,7 @@ The following remain **not supported** in this release:
 
 ### Story Development
 
-Please [refer here](https://github.com/mosip/esignet/issues?q=milestone%3AeSignet_thunder_2.0.0%20and%20type%3AFeature) for the full list of stories implemented for this release.
+Please [refer here](https://github.com/orgs/mosip/projects/22/views/6?filterQuery=milestone%3AeSignet_v2.0.0%2CeSignet_thunder_2.0.0_beta.1+and+type%3AFeature) for the full list of stories implemented for this release.
 
 ### Known Issues
 
@@ -136,13 +136,17 @@ For a comprehensive view of all configuration properties in eSignet (Go) please 
 
 #### API Documentation
 
-* [eSignet (Go) API](https://github.com/mosip/esignet/blob/release-2.0.x/docs/esignet-openapi.yaml)
+* [eSignet v2.0.0 API](https://github.com/mosip/esignet/blob/release-2.0.x/docs/esignet-openapi.yaml)
 
 #### eSignet Documentation
 
-* [eSignet Go](../../../)
+* [eSignet v2.0.0 ](../../../)
 
 #### QA Report
 
 * [Test report](test-report.md)
+
+#### Performance Report
+
+* [Performance report](performance-report.md)
 
