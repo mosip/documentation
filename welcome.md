@@ -38,10 +38,10 @@ layout:
 
 ### What is eSignet?
 
-eSignet is an open-source authentication platform MOSIP. It lets any application log users in with a trusted digital identity over OpenID Connect, without tying the application to a single identity provider.
+eSignet is an open-source authentication platform from MOSIP. It lets any application log users in with a trusted digital identity over OpenID Connect, without tying the application to a single identity provider.
 
 * **Standards-based**: Acts as an OpenID Connect (OIDC) provider, so applications log users in through a standard protocol.
-* **Identity-system agnostic**: Works with any identity system that can verify a person and return their details, not just MOSIP.
+* **Identity-system agnostic**: Works with any identity system that can verify a person and return their details.
 * **Open source**: The code is public, so anyone can inspect it, audit it, and contribute to it.
 * **Deployable independently**: Runs as a standalone identity layer for citizen portals, financial services, and other digital services.
 
