@@ -1,5 +1,5 @@
 ---
-cover: .gitbook/assets/es-docs-home-banner-2.jpg
+cover: .gitbook/assets/es-docs-home-banner-1.jpg
 coverY: 0
 layout:
   width: wide
