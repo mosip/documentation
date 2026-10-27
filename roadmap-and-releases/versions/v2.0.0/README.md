@@ -5,7 +5,7 @@
 
 ### Overview
 
-[eSignet v2.0.0](https://github.com/mosip/esignet/tree/v2.0.0) is the GA release of eSignet's Go-based authentication engine, built on the Thunder ID engine. It builds on [v1.0.1 ](https://github.com/thunder-id/thunderid/tree/v1.0.1)tagged version of thunderId engine and carries forward full feature parity with eSignet (Java) [v1.8.0](https://github.com/mosip/esignet/tree/v1.8.0), unless explicitly called out as out of scope below. As with the beta, no end-user-facing behavior has changed as part of this migration — what's changed is the engine running underneath, along with the structural improvements described below.
+[eSignet v2.0.0](https://github.com/mosip/esignet/tree/v2.0.0) is the GA release of eSignet's Go-based authentication engine, built on the [Thunder ID engine](https://github.com/thunder-id/thunderid/tree/v1.0.1). It builds on [v1.0.1 ](https://github.com/thunder-id/thunderid/tree/v1.0.1)tagged version of [ThunderId engine](https://github.com/thunder-id/thunderid/tree/v1.0.1) and carries forward full feature parity with eSignet (Java) [v1.8.0](https://github.com/mosip/esignet/tree/v1.8.0), unless explicitly called out as out of scope below. As with the beta, no end-user-facing behavior has changed as part of this migration — what's changed is the engine running underneath, along with the structural improvements described below.
 
 {% hint style="warning" %}
 This release does not include the eSignet Signup module. eKYC and Identity Assurance 1.0 capabilities remain on the Java-based Signup module for now and have not yet been migrated to Go.
@@ -17,7 +17,7 @@ This release does not include the eSignet Signup module. eKYC and Identity Assur
 
 #### 1. Go-Based Core Engine
 
-eSignet's authentication engine has been rebuilt on **Go**, using the [**Thunder ID engine**](https://github.com/thunder-id/thunderid/tree/v1.0.1) — a Go-based identity provider engine from WSO2. This is the foundational change behind this release and everything else below builds on it.
+eSignet's authentication engine has been rebuilt on **Go**, using the [**Thunder ID engine**](https://github.com/thunder-id/thunderid/tree/v1.0.1)**.** This is the foundational change behind this release and everything else below builds on it.
 
 #### 2. Flow-Graph Driven Authentication
 
