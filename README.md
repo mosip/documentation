@@ -1,11 +1,12 @@
 ---
+cover: .gitbook/assets/es-docs-home-banner-2.jpg
 coverY: 0
 layout:
   width: wide
   cover:
     visible: true
-    size: background
-    mask: radial
+    size: full
+    mask: none
   title:
     visible: true
   description:
