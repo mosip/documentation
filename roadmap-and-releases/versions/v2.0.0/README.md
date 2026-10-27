@@ -121,14 +121,14 @@ Please [refer here](https://github.com/mosip/esignet/issues?q=label%3Aknown_issu
 
 **eSignet**
 
-* Please refer the [link here](https://github.com/mosip/esignet/blob/release-2.0.x/db_upgrade_script/mosip_esignet/sql/1.8.0_to_2.0.0_upgrade.sql) for the DB upgrade script
-* Please refer the [link here](https://github.com/mosip/esignet/blob/release-2.0.x/db_upgrade_script/mosip_esignet/sql/1.8.0_to_2.0.0_rollback.sql) for the DB rollback script
+* Please refer the [link here](https://github.com/mosip/esignet/blob/v2.0.0/db_upgrade_script/mosip_esignet/sql/1.8.0_to_2.0.0_upgrade.sql) for the DB upgrade script
+* Please refer the [link here](https://github.com/mosip/esignet/blob/v2.0.0/db_upgrade_script/mosip_esignet/sql/1.8.0_to_2.0.0_rollback.sql) for the DB rollback script
 
 ***
 
 ### Configuration Changes
 
-For a comprehensive view of all configuration properties in eSignet (Go) please [refer here](https://github.com/mosip/esignet/blob/release-2.0.x/esignet-service/.env.example).
+For a comprehensive view of all configuration properties in eSignet (Go) please [refer here](https://github.com/mosip/esignet/blob/v2.0.0/esignet-service/.env.example).
 
 ***
 
@@ -136,7 +136,7 @@ For a comprehensive view of all configuration properties in eSignet (Go) please 
 
 #### API Documentation
 
-* [eSignet v2.0.0 API](https://github.com/mosip/esignet/blob/release-2.0.x/docs/esignet-openapi.yaml)
+* [eSignet v2.0.0 API](https://github.com/mosip/esignet/blob/v2.0.0/docs/esignet-openapi.yaml)
 
 #### eSignet Documentation
 
