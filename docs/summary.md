@@ -482,6 +482,7 @@
     * [Versioning Policy](roadmap-and-releases/releases/versioning-policy.md)
     * [V1.5.0-DSL](roadmap-and-releases/releases/v1.5.0-dsl.md)
     * [Releases](roadmap-and-releases/releases/releases.md)
+    * [ID Repository v1.3.2](roadmap-and-releases/releases/id-repository-v1.3.2.md)
 * [General](general/README.md)
   * [Glossary](glossary.md)
   * [Resources](general/resources.md)
