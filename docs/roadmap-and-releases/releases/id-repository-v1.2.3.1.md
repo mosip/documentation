@@ -1,10 +1,10 @@
-# ID Repository v1.3.2.1
+# ID Repository v1.2.3.1
 
 **Release Version:** ID Repository v1.2.3.1
 
 **Release Type:** Patch Release
 
-**Release Date:** Coming Soon!
+**Release Date:** <mark style="color:red;">**Coming Soon!**</mark>
 
 ### Overview
 

@@ -67,7 +67,7 @@ All individual test scenarios from the modules are listed below.
 | Masterdata       | Get Templates By Lang & Temp Code | v1/masterdata/templates/{lang\&TempTypeCode}                                     |
 | Masterdata       | Get Latest ID Schema              | v1/masterdata/idschema/latest?schemaVersion={schemaVersion}                      |
 | Masterdata       | Get Dynamic Fields                | v1/masterdata/dynamicfields?pageNumber=0\&pageSize=10\&sortBy=name\&orderBy=desc |
-| Masterdata       | Get Users                         | v1/masterdata/users/{userID}/{time(yyyy-MM-dd'T'HH:mm:ss.sss'Z',)}               |
+| Masterdata       | Get Users                         | v1/masterdata/users/{userID}/{time(yyyy-MM-dd'T'HH:flag\_mm:ss.sss'Z',)}         |
 | Keymanager       | Encrypt Data                      | v1/keymanager/encrypt                                                            |
 | Keymanager       | Encrypt Data With Pin             | v1/keymanager/encryptWithPin                                                     |
 | Keymanager       | Generate JWT Signature            | v1/keymanager/jwtSign                                                            |
