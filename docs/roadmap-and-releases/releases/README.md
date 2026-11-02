@@ -11,6 +11,11 @@ icon: book-open
 
 ### Latest Releases
 
+**Version**: ID Repository v1.3.2
+
+* Date: <mark style="color:red;">**Coming Soon!**</mark>
+* [Release Notes](id-repository-v1.3.2.md)
+
 **Version**: Resident Services v1.3.2
 
 * Date: 28th September, 2026
