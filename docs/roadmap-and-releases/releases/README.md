@@ -11,6 +11,11 @@ icon: book-open
 
 ### Latest Releases
 
+Version: ID Repository v1.2.3.1
+
+* Date: <mark style="color:red;">**Coming Soon**</mark>!
+* [Release Notes](id-repository-v1.2.3.1.md)
+
 **Version**: ID Repository v1.3.2
 
 * Date: <mark style="color:red;">**Coming Soon!**</mark>
