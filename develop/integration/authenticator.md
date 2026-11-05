@@ -31,8 +31,6 @@ SendOTP           →  Authenticate        →  GetEntityReference   →  GetAtt
 
 `Authenticate` can return either an opaque token (for `GetEntityReference` or `GetAttributes` to resolve later) or the resolved value directly — if you return the value directly, the engine skips the corresponding `Get*` call entirely.
 
-_TBA - Sequence Diagram_
-
 ### The Interface
 
 A provider is a Go package implementing `shared.ConsolidatedAuthnProvider`, which embeds the engine-level `providers.AuthnProviderInterface` and adds two eSignet-specific methods:
@@ -69,4 +67,4 @@ Which provider actually runs at startup is chosen by the `MOSIP_ESIGNET_AUTHN_PR
 
 ### Further Details
 
-The Authn Provider Deep Dive _(Link TBA)_ has the full interface and supporting-type definitions, the error-handling conventions, the exact `identifiers`/`credentials` field split per auth factor, configuration conventions, and the full reference-implementation comparison table for Mock, MOSIP IDA, and SunbirdRC.
+The [Authn Provider Deep Dive](https://github.com/mosip/esignet/blob/master/docs/authn-provider-integration.md) has the full interface and supporting-type definitions, the error-handling conventions, the exact `identifiers`/`credentials` field split per auth factor, configuration conventions, and the full reference-implementation comparison table for Mock, MOSIP IDA, and SunbirdRC.
