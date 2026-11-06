@@ -484,6 +484,7 @@
     * [Releases](roadmap-and-releases/releases/releases.md)
     * [ID Repository v1.3.2](roadmap-and-releases/releases/id-repository-v1.3.2.md)
     * [ID Repository v1.2.3.1](roadmap-and-releases/releases/id-repository-v1.2.3.1.md)
+    * [Android Registration Client v1.2.0](roadmap-and-releases/releases/android-registration-client-v1.2.0.md)
 * [General](general/README.md)
   * [Glossary](glossary.md)
   * [Resources](general/resources.md)
