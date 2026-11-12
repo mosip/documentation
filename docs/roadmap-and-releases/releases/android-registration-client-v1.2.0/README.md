@@ -41,19 +41,20 @@ To view the list of known issues, refer [here](https://github.com/mosip/android-
 
 ### Repository Released
 
-| Repository                  | Tag    |
-| --------------------------- | ------ |
-| android-registration-client | v1.2.0 |
+| Repository                  | Tag                                                                        |
+| --------------------------- | -------------------------------------------------------------------------- |
+| android-registration-client | [v1.2.0](https://github.com/mosip/android-registration-client/tree/v1.2.0) |
 
 ### Compatible Platform/Module
 
 The following table outlines the tested and certified compatibility of Android Registration Client v1.2.0 with other modules.
 
-| Platform/Module | Version  |
-| --------------- | -------- |
-| MOSIP           | v1.2.1.1 |
+| Platform/Module | Version                  |
+| --------------- | ------------------------ |
+| MOSIP           | [v1.2.1.1](../v1.2.1.1/) |
 
 ### Documentation
 
 * [Feature documentation](https://docs.mosip.io/1.2.0/id-lifecycle-management/identity-issuance/android-registration-client/overview)
-* Test report
+* [Test report](test-report.md)
+
