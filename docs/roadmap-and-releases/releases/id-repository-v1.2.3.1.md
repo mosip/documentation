@@ -4,7 +4,7 @@
 
 **Release Type:** Patch Release
 
-**Release Date:** <mark style="color:red;">**Coming Soon!**</mark>
+**Release Date:** 12th November, 2026
 
 ### Overview
 
@@ -28,9 +28,9 @@ For countries and community users with affected anonymous profile records, we wi
 
 ### Repositories Released
 
-| Repository    | Tags     |
-| ------------- | -------- |
-| ID Repository | v1.2.3.1 |
+| Repository    | Tags                                                             |
+| ------------- | ---------------------------------------------------------------- |
+| ID Repository | [v1.2.3.1](https://github.com/mosip/id-repository/tree/v1.2.3.1) |
 
 ### Compatible Platform/Module
 
