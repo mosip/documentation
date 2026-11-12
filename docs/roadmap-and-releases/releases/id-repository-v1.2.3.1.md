@@ -13,18 +13,14 @@ This release addresses an issue in the [ID Repository](../../id-lifecycle-manage
 ### Major Highlights/ Features
 
 * **Anonymous Profile Data Fix:** Ensures anonymous profile data is correctly stored in IDRepo.
-
-{% hint style="info" %}
-**Note**:
-
-For countries and community users with affected anonymous profile records, we will be sharing the approach in the upcoming release to follow.
-{% endhint %}
+* **UIN History Data Fix:** Ensures UIN history data is correctly populated and maintained across biometric and document history tables during UIN creation, activation, and updates.
 
 ### Bug Fixes
 
-| JIRA                                                                                                                                                        | Description                                       |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
-| [MOSIP-45189](https://mosip.atlassian.net/browse/MOSIP-45189?xpis=eyJicmlkZ2UiOiJzbWFydExpbmtzIiwiaWQiOiIxNzkxODcxMTU1MDE1Iiwic291cmNlIjoiY29uZmx1ZW5jZSJ9) | Anonymous profile data is null in IDRepo database |
+| JIRA                                                                                                                                                        | Description                                                     |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| [MOSIP-45189](https://mosip.atlassian.net/browse/MOSIP-45189?xpis=eyJicmlkZ2UiOiJzbWFydExpbmtzIiwiaWQiOiIxNzkxODcxMTU1MDE1Iiwic291cmNlIjoiY29uZmx1ZW5jZSJ9) | Anonymous profile data is null in IDRepo database               |
+| [issue-1712](https://github.com/mosip/id-repository/issues/1712)                                                                                            | UIN History Data Missing in biometric\_h and document\_h Tables |
 
 ### Repositories Released
 
