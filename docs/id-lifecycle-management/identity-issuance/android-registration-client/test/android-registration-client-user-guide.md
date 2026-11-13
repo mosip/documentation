@@ -329,6 +329,42 @@ And click on the “Allow” button.
 
 <figure><img src="../../../../.gitbook/assets/Resident_Services.png" alt=""><figcaption><p>Resident Services</p></figcaption></figure>
 
+
+## Registration Center Reassignment
+
+Use these instructions to download pre-registration data and synchronize a registration machine after a registration center reassignment. For related documentation, see the [Android Registration Client User Guide](https://docs.mosip.io/1.2.0/id-lifecycle-management/identity-issuance/android-registration-client/test/android-registration-client-user-guide).
+
+### Download Pre-registration Data
+
+Download pre-registration data to the Registration Client.
+
+![](../../../../.gitbook/assets/arc-120-1.png)
+
+1. Select **Pre-Registration Data** to start the pre-registration sync. A backend job downloads the pre-registration data to the Registration Client.
+
+![](../../../../.gitbook/assets/arc-120-2.png)
+
+### Synchronize a Center Remap
+
+Use Center Remap Sync after an administrator assigns a new registration center to an already registered operator.
+
+1. When the machine detects the assignment, select the alert to open **Center Remap Sync**. Alternatively, select **Operational Tasks**, then select **Center Remap Sync**.
+2. Select **Center Remap Sync** to start synchronization.
+
+![](../../../../.gitbook/assets/arc-120-3.png)
+
+A confirmation screen appears after synchronization completes successfully. The operator's registration center details are updated in their profile, and the operator can resume normal registration activities.
+
+![](../../../../.gitbook/assets/arc-120-4.png)
+![](../../../../.gitbook/assets/arc-120-5.png)
+![](../../../../.gitbook/assets/arc-120-6.png)
+![](../../../../.gitbook/assets/arc-120-7.png)
+![](../../../../.gitbook/assets/arc-120-8.png)
+
+#### Restrictions While Sync Is Pending
+
+While Center Remap Sync is pending, the operator cannot perform regular registration activities. The alert remains visible until synchronization completes successfully. This restriction ensures that the machine is mapped to the correct registration center before further registration operations.
+
 ## Forgot Password
 
 In a scenario where the Operator has forgotten their password, this feature enables the Operator to set a new password to be able to login using the new password and continue with registration tasks.
