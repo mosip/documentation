@@ -8,7 +8,7 @@
 
 ### Overview
 
-This release addresses an issue in the [ID Repository](../../id-lifecycle-management/identity-issuance/id-repository/) where anonymous profile data was stored as null in the database. The fix ensures that anonymous profile data is correctly populated in IDRepo, improving the reliability and consistency of anonymous profile data storage.
+This release addresses an issue in the [ID Repository](../../../id-lifecycle-management/identity-issuance/id-repository/) where anonymous profile data was stored as null in the database. The fix ensures that anonymous profile data is correctly populated in IDRepo, improving the reliability and consistency of anonymous profile data storage.
 
 ### Major Highlights/ Features
 
@@ -41,4 +41,4 @@ The following table outlines the tested and certified compatibility of ID Reposi
 
 * [Feature Documentation - Anonymous Profiling Support](https://docs.mosip.io/1.2.0/id-lifecycle-management/support-systems/reporting/anonymous-profiling-support)
 * [Feature Documentation - ID Repository](https://docs.mosip.io/1.2.0/id-lifecycle-management/identity-issuance/id-repository)
-* QA Report
+* [QA Report](test-report.md)

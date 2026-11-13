@@ -11,10 +11,15 @@ icon: book-open
 
 ### Latest Releases
 
-Version: ID Repository v1.2.3.1
+**Version**: ID Repository v1.2.3.1
 
-* Date: <mark style="color:red;">**Coming Soon**</mark>!
-* [Release Notes](id-repository-v1.2.3.1.md)
+* Date: 12th November, 2026
+* [Release Notes](id-repository-v1.2.3.1/)
+
+**Version**: Android Registration Client v1.2.0
+
+* Date: 11th November, 2026
+* [Release Notes](android-registration-client-v1.2.0/)
 
 **Version**: ID Repository v1.3.2
 

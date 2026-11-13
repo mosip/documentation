@@ -1,10 +1,10 @@
 # Android Registration Client v1.2.0
 
+**Release Version:** Android Registration Client v1.2.0
 
+**Release Type:** Developer Release
 
-<mark style="color:red;">**Coming Soon!**</mark>
-
-
+**Release Date:** 11th November, 2026
 
 ### Overview
 
@@ -56,5 +56,6 @@ The following table outlines the tested and certified compatibility of Android R
 ### Documentation
 
 * [Feature documentation](https://docs.mosip.io/1.2.0/id-lifecycle-management/identity-issuance/android-registration-client/overview)
+* [End User Guide](../../../id-lifecycle-management/identity-issuance/android-registration-client/test/android-registration-client-user-guide.md)
 * [Test report](test-report.md)
 
