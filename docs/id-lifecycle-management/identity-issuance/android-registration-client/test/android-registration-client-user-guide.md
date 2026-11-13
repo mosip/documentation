@@ -327,13 +327,12 @@ And click on the “Allow” button.
 
 <figure><img src="../../../../.gitbook/assets/Resident_Services.png" alt=""><figcaption><p>Resident Services</p></figcaption></figure>
 
-## Registration Center Reassignment
-
-Use these instructions to download pre-registration data and synchronize a registration machine after a registration center reassignment. For related documentation, see the [Android Registration Client User Guide](https://docs.mosip.io/1.2.0/id-lifecycle-management/identity-issuance/android-registration-client/test/android-registration-client-user-guide).
 
 ### Download Pre-registration Data
 
-Download pre-registration data to the Registration Client.
+Use **Pre-Registration Data** to download pre-registration applications to the Android Registration Client before you begin registration. This prepares the device with the information needed for upcoming registrations, reducing delays at the registration center.
+
+When you start the sync, ARC downloads and securely stores the available pre-registration data on the device. This allows operators to access the applications during registration, including when a reliable internet connection is not available
 
 <img src="../../../../.gitbook/assets/arc-120-1.png" alt="" width="375">
 
@@ -342,6 +341,9 @@ Download pre-registration data to the Registration Client.
 <img src="../../../../.gitbook/assets/arc-120-2.png" alt="" width="375">
 
 ### Synchronize a Center Remap
+Use **Center Remap Sync** when an administrator moves an operator to a different registration center. This process updates the registration machine so that it works with the new center’s settings and information.
+
+The sync first ensures that pending activities for the previous center are completed. ARC then removes the previous center’s data, downloads the new center’s configuration, and restarts the application in a controlled way. This keeps the machine correctly mapped before the operator resumes registration work.
 
 Use Center Remap Sync after an administrator assigns a new registration center to an already registered operator.
 
@@ -351,8 +353,6 @@ Use Center Remap Sync after an administrator assigns a new registration center t
 <img src="../../../../.gitbook/assets/arc-120-3.png" alt="" width="375">
 
 <figure><img src="../../../../.gitbook/assets/arc-120-2.png" alt="" width="375"><figcaption></figcaption></figure>
-
-
 
 A confirmation screen appears after synchronization completes successfully. The operator's registration center details are updated in their profile, and the operator can resume normal registration activities.
 
