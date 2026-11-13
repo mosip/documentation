@@ -158,3 +158,11 @@ The Android Registration Client now fully supports landscape orientation across 
 ### 25. Adaptive Small Screen (Phone) Experience
 
 We’ve optimised the Android Registration Client for smaller screens to ensure a clean, intuitive, and efficient experience on mobile phones. Layouts, forms, and action buttons are now adaptive, automatically adjusting to the constraints of smaller displays without compromising functionality. This enhancement enables field officers and mobile registration teams to operate the client comfortably on compact devices, ensuring consistent performance across a wider range of Android form factors.
+
+### 26. Pre-Registration Data Management
+
+Pre-Registration Data Management enables the Android Registration Client (ARC) to securely download, store, and manage pre-registration applications for faster and more reliable registration. ARC supports scheduled and on-demand batch downloads of pre-registration data and stores it securely in encrypted local storage for offline use. It allows operators to access any valid pre-registration application regardless of the originally booked registration center and automatically cleans up locally stored data through configurable background jobs to optimize device storage.
+
+### 27. Center Remapping
+
+Center Remapping Support enables the Android Registration Client (ARC) to seamlessly transition a registration machine from one registration center to another while maintaining operational integrity. ARC ensures that all pending center-specific activities are completed before remapping, securely removes data associated with the previous center, synchronizes the device with the new center’s configuration and performs a controlled restart to complete the transition. It also tracks critical activities such as packet approvals, uploads, confirmations, and deletions throughout the remapping process.
