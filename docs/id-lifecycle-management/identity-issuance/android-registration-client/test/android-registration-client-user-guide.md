@@ -283,8 +283,6 @@ a. The user will be taken to the Biometrics Capture Homepage where he will be ab
 
 <figure><img src="../../../../.gitbook/assets/update-operator-biometric-temp.png" alt="" width="375"><figcaption></figcaption></figure>
 
-
-
 b. The user will then have to capture all the above-listed biometrics one by one.
 
 c. Steps to capture the biometrics are given [**here**](https://docs.mosip.io/1.2.0/modules/android-registration-client/android-registration-client-user-guide#face-photo-capture-process)**.**
@@ -329,7 +327,6 @@ And click on the “Allow” button.
 
 <figure><img src="../../../../.gitbook/assets/Resident_Services.png" alt=""><figcaption><p>Resident Services</p></figcaption></figure>
 
-
 ## Registration Center Reassignment
 
 Use these instructions to download pre-registration data and synchronize a registration machine after a registration center reassignment. For related documentation, see the [Android Registration Client User Guide](https://docs.mosip.io/1.2.0/id-lifecycle-management/identity-issuance/android-registration-client/test/android-registration-client-user-guide).
@@ -338,11 +335,11 @@ Use these instructions to download pre-registration data and synchronize a regis
 
 Download pre-registration data to the Registration Client.
 
-![](../../../../.gitbook/assets/arc-120-1.png)
+<img src="../../../../.gitbook/assets/arc-120-1.png" alt="" width="375">
 
 1. Select **Pre-Registration Data** to start the pre-registration sync. A backend job downloads the pre-registration data to the Registration Client.
 
-![](../../../../.gitbook/assets/arc-120-2.png)
+<img src="../../../../.gitbook/assets/arc-120-2.png" alt="" width="375">
 
 ### Synchronize a Center Remap
 
@@ -351,19 +348,21 @@ Use Center Remap Sync after an administrator assigns a new registration center t
 1. When the machine detects the assignment, select the alert to open **Center Remap Sync**. Alternatively, select **Operational Tasks**, then select **Center Remap Sync**.
 2. Select **Center Remap Sync** to start synchronization.
 
-![](../../../../.gitbook/assets/arc-120-3.png)
+<img src="../../../../.gitbook/assets/arc-120-3.png" alt="" width="375">
+
+<figure><img src="../../../../.gitbook/assets/arc-120-2.png" alt="" width="375"><figcaption></figcaption></figure>
+
+
 
 A confirmation screen appears after synchronization completes successfully. The operator's registration center details are updated in their profile, and the operator can resume normal registration activities.
 
-![](../../../../.gitbook/assets/arc-120-4.png)
-![](../../../../.gitbook/assets/arc-120-5.png)
-![](../../../../.gitbook/assets/arc-120-6.png)
-![](../../../../.gitbook/assets/arc-120-7.png)
-![](../../../../.gitbook/assets/arc-120-8.png)
+![](../../../../.gitbook/assets/arc-120-5.png) ![](../../../../.gitbook/assets/arc-120-6.png) ![](../../../../.gitbook/assets/arc-120-7.png)
 
 #### Restrictions While Sync Is Pending
 
 While Center Remap Sync is pending, the operator cannot perform regular registration activities. The alert remains visible until synchronization completes successfully. This restriction ensures that the machine is mapped to the correct registration center before further registration operations.
+
+<figure><img src="../../../../.gitbook/assets/arc-120-8.png" alt="" width="375"><figcaption></figcaption></figure>
 
 ## Forgot Password
 
