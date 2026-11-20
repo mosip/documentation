@@ -56,6 +56,7 @@ The supported algorithm and curves are listed [here](ftm.md#cryptography)
 * One of the following Common Criteria (CC) certification
   * https://www.commoncriteriaportal.org/files/ppfiles/pp0035a.pdf
   * https://www.commoncriteriaportal.org/files/ppfiles/pp0084a\_pdf.pdf
+* SESIP Level 3 or above
 
 **System/Device Level Tamper (optional)**
 
