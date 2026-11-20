@@ -56,7 +56,11 @@ The supported algorithm and curves are listed [here](ftm.md#cryptography)
 * One of the following Common Criteria (CC) certification
   * https://www.commoncriteriaportal.org/files/ppfiles/pp0035a.pdf
   * https://www.commoncriteriaportal.org/files/ppfiles/pp0084a\_pdf.pdf
-* SESIP Level 3 or above
+* Global Platform SESIP Level 3 or above
+  *   Scope: certificate shall cover, at a minimum, the security functionality required by this specification, including secure boot, hardware root of trust, protection of cryptographic keys, secure storage, cryptographic services, lifecycle management, protection against unauthorized firmware modification, and resistance to the applicable software and physical attacks.&#x20;
+
+      Products whose SESIP evaluation does not cover these requirements shall not be considered\
+      compliant
 
 **System/Device Level Tamper (optional)**
 
