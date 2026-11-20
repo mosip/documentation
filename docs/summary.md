@@ -487,6 +487,7 @@
       * [Test Report](roadmap-and-releases/releases/partner-management-system-1.2.2.3/test-report.md)
     * [Releases](roadmap-and-releases/releases/releases.md)
     * [ID Repository v1.3.2](roadmap-and-releases/releases/id-repository-v1.3.2.md)
+    * [Partner Management Service 1.3.0](roadmap-and-releases/releases/partner-management-service-1.3.0.md)
 * [General](general/README.md)
   * [Glossary](glossary.md)
   * [Resources](general/resources.md)
