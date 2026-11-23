@@ -33,6 +33,7 @@ All devices that collect biometric data for MOSIP should operate within the spec
 | 0.9.5   | Draft  | 04-Apr-2022 | Register and De-register of devices have been removed from MOSIP. Device validation in MOSIP will be done via cryptography. Here onwards, registering a device will mean a device obtaining a certificate from the management server.                                                                                                                                                                                                                                                   |
 | 0.9.5   | Draft  | 27-Jul-2022 | Added the section on [Android SBI Specification](https://file+.vscode-resource.vscode-cdn.net/Users/keshavsingh/Downloads/MOSIP-Device-Service-Specification.md#android-sbi-specification)                                                                                                                                                                                                                                                                                              |
 | 0.9.5   | Draft  | 24-Oct-2023 | Added error code for devices in busy or not ready state. Also added validation for transactionID in request parameters.                                                                                                                                                                                                                                                                                                                                                                 |
+| 0.9.6   | Draft  | 23-Nov-2026 | Added SESIP certification to the list of permitted certificates for FTM Partners                                                                                                                                                                                                                                                                                                                                                                                                        |
 
 ### Glossary of Terms <a href="#glossary-of-terms" id="glossary-of-terms"></a>
 
@@ -139,6 +140,10 @@ The FTM should have at least one of the following certifications in each categor
 * One of the following Common Criteria (CC) certification
   * [https://www.commoncriteriaportal.org/files/ppfiles/pp0035a.pdf](https://www.commoncriteriaportal.org/files/ppfiles/pp0035a.pdf)
   * [https://www.commoncriteriaportal.org/files/ppfiles/pp0084a\_pdf.pdf](https://www.commoncriteriaportal.org/files/ppfiles/pp0084a_pdf.pdf)
+* Global Platform SESIP Level 3 or above
+  *   The scope of the SESIP evaluation shall cover certificate shall cover, at a minimum, the security functionality required by this specification, including secure boot, hardware root of trust, protection of cryptographic keys, secure storage, cryptographic services, lifecycle management, protection against unauthorised firmware modification, and resistance to the applicable software and physical attacks.
+
+      Products whose SESIP evaluation does not cover these requirements shall not be considered compliant.
 
 **System/Device Level Tamper (optional)**
 
@@ -610,7 +615,7 @@ NFIQ v1.0 on a scale of 0-100 (quality score).
 | data.domainUri            | <ul><li>URI of the authentication server.</li><li>This can be used to federate across multiple providers or countries or unions.</li></ul>                                                                                                                                                                                                                                           |
 | data.bioValue             | Biometric data is encrypted with a random symmetric (AES GCM) key and base-64-URL encoded. For symmetric key encryption of bioValue, (biometrics.data.timestamp XOR transactoinId) is computed and the last 16 bytes and the last 12 bytes of the results are set as the aad and the IV(salt) respectively. Look at the Authentication document to understand more about encryption. |
 | data.transactionId        | Same transactionId shared in the request should be used.                                                                                                                                                                                                                                                                                                                             |
-| data.timestamp            | <ul><li>Time as per the biometric device.</li></ul><ul><li>Note: The biometric device is expected to sync its time from the management server at regular intervals so accurate time could be maintained on the device.</li></ul>                                                                                                                                                     |
+| data.timestamp            | <ul><li>Time as per the biometric device.</li><li>Note: The biometric device is expected to sync its time from the management server at regular intervals so accurate time could be maintained on the device.</li></ul>                                                                                                                                                              |
 | data.requestedScore       | Floating point number to represent the minimum required score for the capture. This value will be scaled from 0 - 100 for NFIQ v1.0. The logic for scaling is mentioned above.                                                                                                                                                                                                       |
 | data.qualityScore         | The floating point number represents the score for the current capture. This value will be scaled from 0 - 100 for NFIQ v1.0. The logic for scaling is mentioned above.                                                                                                                                                                                                              |
 | hash                      | sha256 in hex format in upper case (previous "hash" + sha256 hash of the current biometric ISO data before encryption)                                                                                                                                                                                                                                                               |
@@ -840,7 +845,7 @@ The API is used by devices that are compatible with the registration module. Thi
 | data.purpose              | <ul><li>The purpose of the device in the MOSIP ecosystem.</li><li>Allowed values are "Auth" or "Registration".</li></ul>                                                                                                                                                                                                    |
 | data.bioValue             | Base64-URL-encoded biometrics (in ISO format)                                                                                                                                                                                                                                                                               |
 | data.transactionId        | Same transactionId shared in the request should be used.                                                                                                                                                                                                                                                                    |
-| data.timestamp            | <ul><li>Time as per the biometric device.</li></ul><ul><li>Note: The biometric device is expected to sync its time from the management server at regular intervals so accurate time could be maintained on the device.</li></ul>                                                                                            |
+| data.timestamp            | <ul><li>Time as per the biometric device.</li><li>Note: The biometric device is expected to sync its time from the management server at regular intervals so accurate time could be maintained on the device.</li></ul>                                                                                                     |
 | data.requestedScore       | Floating point number to represent the minimum required score for the capture.                                                                                                                                                                                                                                              |
 | data.qualityScore         | Floating point number representing the score for the current capture.                                                                                                                                                                                                                                                       |
 | hash                      | sha256 in hex format in upper case (previous "hash" + sha256 hash of the current biometric ISO data).                                                                                                                                                                                                                       |
@@ -1048,46 +1053,46 @@ Discovery will return the appId of the discovered items. Users will be given a c
 #### Device Discovery <a href="#device-discovery-1" id="device-discovery-1"></a>
 
 _Request_: io.sbi.device\
-&#xNAN;_&#x61;ction_: io.sbi.device\
-&#xNAN;_&#x64;ata_: no change\
-&#xNAN;_&#x74;ype_: application/json\
-&#xNAN;_&#x52;equest Schema_: No change in the data structure. The serialized request data as byte array is set in the intent extras with the key as “input”.\
-&#xNAN;_&#x52;esponse Schema_: No change in the data structure. The serialized response data (byte array) is set in the intent extras with the key as “response”.
+\&#xNAN;_action_: io.sbi.device\
+\&#xNAN;_data_: no change\
+\&#xNAN;_type_: application/json\
+\&#xNAN;_Request Schema_: No change in the data structure. The serialized request data as byte array is set in the intent extras with the key as “input”.\
+\&#xNAN;_Response Schema_: No change in the data structure. The serialized response data (byte array) is set in the intent extras with the key as “response”.
 
 _callbackId_ should be set to the appId, and can not be empty in android.
 
 #### Device Info <a href="#device-info-1" id="device-info-1"></a>
 
 _Request_: appId.Info\
-&#xNAN;_&#x61;ction_: appId.Info\
-&#xNAN;_&#x64;ata_: no change\
-&#xNAN;_&#x74;ype_: application/json\
-&#xNAN;_&#x52;equest Schema_: No change in the data structure. The serialized request data as a byte array is set in the intent extras with the key as “input”.\
-&#xNAN;_&#x52;esponse Schema_: No change in the data structure. The serialized response data as a byte array is set in the intent extras with the key as “response”.
+\&#xNAN;_action_: appId.Info\
+\&#xNAN;_data_: no change\
+\&#xNAN;_type_: application/json\
+\&#xNAN;_Request Schema_: No change in the data structure. The serialized request data as a byte array is set in the intent extras with the key as “input”.\
+\&#xNAN;_Response Schema_: No change in the data structure. The serialized response data as a byte array is set in the intent extras with the key as “response”.
 
 _deviceInfo_: _callbackId_ should be set to the appId, can not be empty in android.
 
 #### Capture <a href="#capture-1" id="capture-1"></a>
 
 _Request_: appId.Capture\
-&#xNAN;_&#x61;ction_: appId.Capture\
-&#xNAN;_&#x64;ata_: no change\
-&#xNAN;_&#x74;ype_: application/json\
-&#xNAN;_&#x66;lag_: FLAG\_GRANT\_READ\_URI\_PERMISSION\
-&#xNAN;_&#x52;equest Schema_: No change in the data structure. The serialized request data as a byte array is set in the intent extras with the key as “input”.\
-&#xNAN;_&#x52;esponse Schema_: No change in the data structure. The response content is set as content URI “content://authority/path/id” in the intent extras as a string with the key as “response”.
+\&#xNAN;_action_: appId.Capture\
+\&#xNAN;_data_: no change\
+\&#xNAN;_type_: application/json\
+\&#xNAN;_flag_: FLAG\_GRANT\_READ\_URI\_PERMISSION\
+\&#xNAN;_Request Schema_: No change in the data structure. The serialized request data as a byte array is set in the intent extras with the key as “input”.\
+\&#xNAN;_Response Schema_: No change in the data structure. The response content is set as content URI “content://authority/path/id” in the intent extras as a string with the key as “response”.
 
 URI must be invalidated right after the read.
 
 #### rCapture <a href="#rcapture" id="rcapture"></a>
 
 _Request_: appId.rCapture\
-&#xNAN;_&#x61;ction_: appId.rCapture\
-&#xNAN;_&#x64;ata_: no change\
-&#xNAN;_&#x74;ype_: application/json\
-&#xNAN;_&#x66;lag_: FLAG\_GRANT\_READ\_URI\_PERMISSION\
-&#xNAN;_&#x52;equest Schema_: No change in the data structure. The serialized request data as a byte array is set in the intent extras with the key as “input”.\
-&#xNAN;_&#x52;esponse Schema_: No change in the data structure. The response content is set as content URI “content://authority/path/id” in the intent extras as a string with the key as “response”.
+\&#xNAN;_action_: appId.rCapture\
+\&#xNAN;_data_: no change\
+\&#xNAN;_type_: application/json\
+\&#xNAN;_flag_: FLAG\_GRANT\_READ\_URI\_PERMISSION\
+\&#xNAN;_Request Schema_: No change in the data structure. The serialized request data as a byte array is set in the intent extras with the key as “input”.\
+\&#xNAN;_Response Schema_: No change in the data structure. The response content is set as content URI “content://authority/path/id” in the intent extras as a string with the key as “response”.
 
 The content provider should not support insert, update, delete
 
@@ -1123,4 +1128,4 @@ Android 9 (API Level 28) and above with hardware-backed key store.
 | 112  | Invalid Transaction ID                                                                  |
 | 5xx  | Custom errors. The device provider is free to choose his error code and error messages. |
 
-\
+\\
