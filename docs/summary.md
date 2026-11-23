@@ -152,6 +152,7 @@
         * [ABIS Partner Onboarding](id-lifecycle-management/support-systems/partner-management-services/functional-overview/abis-partner-onboarding-by-partner-admin.md)
         * [Manual Adjudication Partner Onboarding](id-lifecycle-management/support-systems/partner-management-services/functional-overview/onboard-manual-adjudication-partner.md)
         * [Credential Partner Onboarding](id-lifecycle-management/support-systems/partner-management-services/functional-overview/onboard-credential-partner.md)
+        * [Online Verification Partner Onboarding](id-lifecycle-management/support-systems/partner-management-services/functional-overview/online-verification-partner-onboarding.md)
       * [Deploy](id-lifecycle-management/support-systems/partner-management-services/deploy/README.md)
         * [PMS Configuration Guide](id-lifecycle-management/support-systems/partner-management-services/deploy/pms-configuration-guide.md)
         * [API changes with PMS Revamp](id-lifecycle-management/support-systems/partner-management-services/deploy/api-changes-with-pms-revamp.md)

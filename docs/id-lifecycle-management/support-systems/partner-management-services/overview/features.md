@@ -55,7 +55,12 @@ PMS supports onboarding and lifecycle management for multiple partner types, inc
 
 Partners can be viewed in both [list and detailed views](../functional-overview/partner-administration.md#view-partners). Depending on the partner type and onboarding mode, Partner Admins can deactivate partners, download original and MOSIP-signed certificates, and manage policy associations.
 
-For **self-registered partners**, PMS supports certificate download and lifecycle management. For [**MISP Partners**](../functional-overview/misp-partner-onboarding.md) , [**ABIS Partners**](../functional-overview/abis-partner-onboarding-by-partner-admin.md) and [**Manual Adjudication Partners**](../functional-overview/onboard-manual-adjudication-partner.md) onboarding and management are handled exclusively by Partner Admins through the PMS UI.
+For **self-registered partners**, PMS supports certificate download and lifecycle management. For below partners, onboarding and management are handled exclusively by Partner Admins through the PMS UI.
+
+1. [**MISP Partners**](../functional-overview/misp-partner-onboarding.md)
+2. [**ABIS Partners**](../functional-overview/abis-partner-onboarding-by-partner-admin.md)&#x20;
+3. [**Manual Adjudication Partners**](../functional-overview/onboard-manual-adjudication-partner.md)&#x20;
+4. [**Online Verification Partners**](../functional-overview/online-verification-partner-onboarding.md)
 
 ## Policy Management and Governance
 
@@ -71,7 +76,9 @@ Once a Policy Group is assigned, partners can request policies through the [Part
 
 Enhancements are available for MISP Partners, allowing Partner Admins to manage MISP-specific policy associations through a dedicated tabular interface.
 
-**Note:** For [**ABIS Partners**](../functional-overview/abis-partner-onboarding-by-partner-admin.md#abis-partner-policy-linking), [**Manual Adjudication Partners**](../functional-overview/onboard-manual-adjudication-partner.md) **and** [**Credential Partners**](../functional-overview/onboard-credential-partner.md) only **Data Share Policies** must be selected during policy linking.
+{% hint style="info" %}
+**Note:** For [**ABIS Partners**](../functional-overview/abis-partner-onboarding-by-partner-admin.md#abis-partner-policy-linking), [**Manual Adjudication Partners**](../functional-overview/onboard-manual-adjudication-partner.md) , [**Credential Partners**](../functional-overview/onboard-credential-partner.md) **and** [**Online Verification Partner**](/broken/pages/KXCQctlLGERrqazUl8RQ) only **Data Share Policies** must be selected during policy linking.
+{% endhint %}
 
 ## Authentication Services
 
@@ -81,7 +88,9 @@ PMS enables Authentication Partners to [create, manage, and associate OIDC Clien
 
 Partner Admins and authorized Partner Users can access a **read-only view** of OIDC Client details to review mandatory and additional information without modifying configurations.
 
+{% hint style="info" %}
 **Note:** For PMS deployments using eSignet versions **1.6.1 and higher**, OIDC Client creation includes additional information fields to support enhanced customization for relying parties.
+{% endhint %}
 
 ### API Key Management
 
@@ -91,13 +100,15 @@ API Keys automatically deactivate upon expiry. By default, newly generated API K
 
 ## Device and Biometric Ecosystem Management
 
-### SBI and Device Management
+#### SBI and Device Management
 
 [Device Providers](../functional-overview/device-provider.md) can register SBIs and associate devices under them. SBIs and devices must be submitted for [Partner Admin approval](../functional-overview/partner-administration.md#sbi-approval) before activation. PMS supports viewing, approving, rejecting, and deactivating SBIs and devices.
 
+{% hint style="info" %}
 **Note:** Orphaned devices (devices without an associated SBI) can only be rejected by Partner Admins. SBIs and associated devices are automatically deactivated upon expiry.
+{% endhint %}
 
-### FTM Chip Management
+#### FTM Chip Management
 
 [FTM Chip Providers](../functional-overview/ftm-chip-provider.md) can add, view, and deactivate FTM chip details and manage FTM chip certificates. [Partner Admins review and approve or reject](../functional-overview/partner-administration.md#ftm-chip-approval) submitted FTM chip requests.
 
@@ -107,7 +118,17 @@ PMS includes a dedicated [MISP Services](../functional-overview/misp-partner-onb
 
 If multiple license keys are generated for the same Partner ID, only the latest key remains active in the ID Authentication (IDA) module. License keys automatically deactivate upon expiry.
 
+{% hint style="info" %}
 **Note:** Selecting a Policy Group and linking policies is optional for MISP Partners, but it is strongly recommended before generating a MISP License Key.
+{% endhint %}
+
+## Credential Partner Services <a href="#credential-partner-services" id="credential-partner-services"></a>
+
+PMS also includes a dedicated Credential Partner module for managing the onboarding and authorization of entities that need to receive and consume identity credentials for their designated purpose. Credential Partners can self-register on the PMS portal, upload their CA-signed certificate, and submit a policy request by mapping a biometric extractor provider configuration and a credential type. Once the Partner Admin approves the policy request, the Credential Partner is authorized to securely receive citizen data packets following successful UIN generation and use them as per their configured credential type and policy.
+
+## Online Verification Partner Services <a href="#online-verification-partner" id="online-verification-partner"></a>
+
+The Partner Management System also facilitates the onboarding and lifecycle management of Online Verification Partners — entities authorised to host the ID Authentication (IDA) module and deliver authentication services to relying parties. Online Verification Partners can self-register on the PMS portal, upload their CA-signed certificate, and select a policy group and policy that define the authentication types and KYC fields they are permitted to access. Once the Partner Admin approves the request, the Online Verification Partner can generate an API key which, along with the MISP license key, is used to authenticate and interact with the IDA system on behalf of the Authentication Partners it serves.
 
 ## Notifications and Alerts
 
@@ -119,7 +140,9 @@ Email notifications are delivered in the language selected during user registrat
 
 Please refer [here](../functional-overview/pms-notification.md) for more details
 
+{% hint style="info" %}
 **Note:** Portal notifications older than 60 days are automatically deleted.
+{% endhint %}
 
 ## Audit Logging and Traceability
 
