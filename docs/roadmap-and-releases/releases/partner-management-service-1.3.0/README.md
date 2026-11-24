@@ -83,12 +83,12 @@ Added a new API to fetch credential type(s) mapped to a partner for a given poli
 
 ## Known Issues <a href="#known-issues" id="known-issues"></a>
 
-Please refer here for the full list of known issues.
+Please refer [here](https://github.com/mosip/partner-management-services/issues?q=label%3Aknown_issue) for the full list of known issues.
 
-| Issue ID                                                      | Summary                                                                                                                     |
-| ------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| [MOSIP-44815](https://mosip.atlassian.net/browse/MOSIP-44815) | PMS-Revamp - Policy Group Selection Fails for Authentication partner with long Organization name and username.              |
-| [MOSIP-44680](https://mosip.atlassian.net/browse/MOSIP-44680) | PMS Revamp- Partner ID/Username allows more than 36 characters during registration but fails at login with validation error |
+| Issue ID                                                                 | Summary                                                                                                                     |
+| ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------- |
+| [2105](https://github.com/mosip/partner-management-services/issues/2105) | PMS-Revamp - Policy Group Selection Fails for Authentication partner with long Organization name and username.              |
+| [1773](https://github.com/mosip/partner-management-services/issues/1773) | PMS Revamp- Partner ID/Username allows more than 36 characters during registration but fails at login with validation error |
 
 ### Repositories Released <a href="#repositories-released" id="repositories-released"></a>
 
@@ -107,12 +107,7 @@ Please refer here for the full list of known issues.
 | ID Authentication (IDA) | [v1.3.1](https://github.com/mosip/id-authentication/tree/v1.3.1) |
 | Registration            | [v1.3.1](https://github.com/mosip/registration/tree/v1.3.1)      |
 | ID Repo                 | [v1.3.1](https://github.com/mosip/id-repository/tree/v1.3.1)     |
-| Notifier (Kernel)       | v1.3.1                                                           |
-| Audit manager           | v1.3.2                                                           |
-| masterdata              | v.1.3.1                                                          |
-| datashare               | v1.3.1                                                           |
 | Keycloak                | [v1.3.0](https://github.com/mosip/keycloak/tree/v1.3.0)          |
-| config-server           | v1.3.1                                                           |
 | Resident service        | [v1.3.0](https://github.com/mosip/resident-services/tree/v1.3.0) |
 | Websub                  | [v1.3.2](https://github.com/mosip/websub/tree/v1.3.2)            |
 
@@ -145,11 +140,11 @@ For a comprehensive view of all configuration properties in mosip-config, please
 ## Learn More <a href="#learn-more" id="learn-more"></a>
 
 * [Services](https://github.com/mosip/partner-management-services/tree/master)
-* [Partner Management Portal](https://github.com/mosip/partner-management-portal/tree/master): For code and implementation of Partner Management Portal (revamp),
+* [Partner Management Portal](https://github.com/mosip/partner-management-portal/tree/master)
 * [Features](https://docs.mosip.io/1.2.0/id-lifecycle-management/support-systems/partner-management-services/overview/features)
 * [End User Guides](https://docs.mosip.io/1.2.0/id-lifecycle-management/support-systems/partner-management-services/functional-overview)
 * [Technical Guide](https://docs.mosip.io/1.2.0/id-lifecycle-management/support-systems/partner-management-services/develop)
 
 #### Test Report <a href="#test-report" id="test-report"></a>
 
-For details on the test results, [refer here](./#test-report).<br>
+For details on the test results, [refer here](test-report.md).<br>
